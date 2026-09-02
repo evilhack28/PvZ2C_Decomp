@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-02T14:47:24+00:00",
+  "generated": "2026-09-02T16:56:46+00:00",
   "measures": {
-    "total_functions": 61423,
-    "matched_functions": 190,
-    "matched_functions_percent": 0.31,
-    "total_code": 11194652,
-    "matched_code": 17044,
-    "matched_code_percent": 0.15,
-    "fuzzy_match_percent": 0.17,
-    "started_units": 8,
+    "total_functions": 61436,
+    "matched_functions": 253,
+    "matched_functions_percent": 0.41,
+    "total_code": 11195384,
+    "matched_code": 25704,
+    "matched_code_percent": 0.23,
+    "fuzzy_match_percent": 0.25,
+    "started_units": 9,
     "total_units": 2745,
-    "started_code": 21340,
-    "started_matched_code": 17044,
-    "started_percent": 79.87,
+    "started_code": 30156,
+    "started_matched_code": 25704,
+    "started_percent": 85.24,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -3287,19 +3287,19 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "RealObject::RealObject",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::RealObject",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "RealObject::ShouldDrawShadow",
-          "size": 92,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "RealObject::RealObject",
-          "size": 92,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "RealObject::RealObject",
           "size": 92,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -3317,13 +3317,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RealObject::CalcGridPosition",
+          "name": "RealObject::operator=",
           "size": 76,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RealObject::operator=",
+          "name": "RealObject::CalcGridPosition",
           "size": 76,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -3347,13 +3347,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RealObject::GetGridExtents",
+          "name": "RealObject::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RealObject::StaticNew",
+          "name": "RealObject::GetGridExtents",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -3397,6 +3397,12 @@
         {
           "name": "RealObject::SetDisableSnapToGround",
           "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::SetPosition",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -3455,18 +3461,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RealObject::SetPosition",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "RealObject::GetClass",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "RealObject::onDrawShadow",
           "size": 4,
           "matched": true,
@@ -3486,6 +3480,12 @@
         },
         {
           "name": "RealObject::onDraw",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -4588,13 +4588,399 @@
     },
     {
       "name": "src/PvZ2/board/BoardEntity.cpp",
-      "total_code": 8084,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 51,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 8816,
+      "matched_code": 8660,
+      "matched_code_percent": 98.23,
+      "total_functions": 64,
+      "matched_functions": 63,
+      "matched_functions_percent": 98.44,
+      "fuzzy_match_percent": 99.86,
+      "functions": [
+        {
+          "name": "BoardEntity::IsOnScreen",
+          "size": 156,
+          "matched": false,
+          "fuzzy_match_percent": 92.31
+        },
+        {
+          "name": "BoardEntity::StaticClassInit",
+          "size": 3876,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::Update",
+          "size": 1064,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CalcRenderOrderFromPosition",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::BoardEntity",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::BoardEntity",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::operator=",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::GetCollisionRect",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::~BoardEntity",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::~BoardEntity",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::BoardEntity",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::BoardEntity",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CalcGridFootprint",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::IntersectsGrid",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::IsInCol",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::IsInRow",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::BoardEntityLeftToRightSortFunc",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::BoardEntityRightToLeftSortFunc",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::HealByAmount",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::MovePosition",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::LevelUp",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::onInitialized",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::HasBeHitted",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::OverrideProjectileCollision",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::Draw",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::PlaceOnBoard",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CalcGridPosition",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::onPostLoad",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::SetPosition",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::~BoardEntity",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::GetRenderOrder",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::SetHasPlayedImpactSound",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::invalidateCollisionRect",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CanLevelUp",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::HasGravity",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CanBeShoveled",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::SetHoloParent",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::SetCurrentLevel",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::GetBoardEntityType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::GetComponentRunner",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::NeutralizeSplashDamage",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::TryApplyDamageToEntity",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::BlocksGravestoneSpawning",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::Shovel",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::SetHitted",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CalcRenderOrder",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CalcRowPosition",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::GetEntityHeight",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CollidesWithType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CalcColumnPosition",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::TakeDamage",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::onPlaceOnBoard",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::TakeFatalDamage",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::onLevelUpFailed",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CreateLevelEffect",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::NotifyDamagedEntity",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::NotifyComponentOwner",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::TakeDamageNoInvincible",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::onUpdate",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::onLevelUp",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/board/BoardEntityPusher.cpp",
