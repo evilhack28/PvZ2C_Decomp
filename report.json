@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-02T02:17:27+00:00",
+  "generated": "2026-09-02T13:09:00+00:00",
   "measures": {
-    "total_functions": 61408,
-    "matched_functions": 98,
-    "matched_functions_percent": 0.16,
-    "total_code": 11194268,
-    "matched_code": 10736,
-    "matched_code_percent": 0.1,
-    "fuzzy_match_percent": 0.11,
-    "started_units": 5,
+    "total_functions": 61423,
+    "matched_functions": 145,
+    "matched_functions_percent": 0.24,
+    "total_code": 11194652,
+    "matched_code": 14044,
+    "matched_code_percent": 0.13,
+    "fuzzy_match_percent": 0.14,
+    "started_units": 6,
     "total_units": 2745,
-    "started_code": 15032,
-    "started_matched_code": 10736,
-    "started_percent": 71.42,
+    "started_code": 18340,
+    "started_matched_code": 14044,
+    "started_percent": 76.58,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -3200,13 +3200,297 @@
     },
     {
       "name": "src/PvZ2/RealObject.cpp",
-      "total_code": 2924,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 32,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 3308,
+      "matched_code": 3308,
+      "matched_code_percent": 100.0,
+      "total_functions": 47,
+      "matched_functions": 47,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "RealObject::AddToRenderQueue",
+          "size": 280,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::calcTideDepth",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::GetDrawClipRect",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::CalcGroundZHeight",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::JoinTeam",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::PlayPositionalSound",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::SnapToGround",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::onApplyDrawClipRect",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::RealObject",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::RealObject",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::calcCollisionRect",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::RealObject",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::RealObject",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::ShouldDrawShadow",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::LeaveTeam",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::SetHidden",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::operator=",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::CalcGridPosition",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::~RealObject",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::~RealObject",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::SendPositionalAudioValue",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::GetGridExtents",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::getTideDepthHeightMaxPct",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::~RealObject",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::DrawShadow",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::Draw",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::IsOnWaterTile",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::SetUseGroundClipRect",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::SetDisableSnapToGround",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::SetPosition",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::GetPosition",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::GetRenderOrder",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::CollidesWithType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::IsOnOpposingTeam",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::IsOnOpposingTeam",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::GetCollisionFlags",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::ShouldClipWithWater",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::IsOnTeam",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::onDrawShadow",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::onChangeTeams",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::onHiddenChanged",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::onDraw",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/RedPacketRewardInfo.cpp",
@@ -15342,13 +15626,13 @@
       "total_functions": 22,
       "matched_functions": 20,
       "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 98.35,
+      "fuzzy_match_percent": 98.24,
       "functions": [
         {
           "name": "PlantJalapeno::UpdateActions",
           "size": 1288,
           "matched": false,
-          "fuzzy_match_percent": 99.07
+          "fuzzy_match_percent": 98.76
         },
         {
           "name": "PlantJalapeno::stopSpecialEffect",
@@ -15435,18 +15719,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantJalapeno::CanBeShoveled",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantJalapeno::CanBeTargeted",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "PlantJalapeno::IsAbstract",
           "size": 8,
           "matched": true,
@@ -15459,6 +15731,24 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PlantJalapeno::CanBeShoveled",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantJalapeno::CanBeTargeted",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantJalapeno::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PlantJalapeno::onBeThrown",
           "size": 4,
           "matched": true,
@@ -15466,12 +15756,6 @@
         },
         {
           "name": "PlantJalapeno::onAnimStoppedCallback",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantJalapeno::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
