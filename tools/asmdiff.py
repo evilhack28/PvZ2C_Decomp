@@ -108,7 +108,12 @@ def listing(elf, name, symbolise=True):
                 ops = f'<{tag}{_empty_tag_addr(elf, target)}>'
 
         elif m.startswith('b.') or m in ('cbz', 'cbnz', 'tbz', 'tbnz'):
-            ops = _ADDR.sub(lambda x: f'.{int(x.group(1), 0) - ins.address:+d}', ops)
+            # only the final operand is a branch target; a tbz/tbnz bit index
+            # (#0..#63) must be left alone or it turns into a bogus .-offset
+            # that depends on the function's address.
+            head, sep, tgt = ops.rpartition(',')
+            tgt = _ADDR.sub(lambda x: f'.{int(x.group(1), 0) - ins.address:+d}', tgt)
+            ops = f'{head}{sep}{tgt}' if sep else tgt
 
         else:
             if rel:

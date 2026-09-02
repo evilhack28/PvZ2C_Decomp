@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-02T13:09:00+00:00",
+  "generated": "2026-09-02T14:47:24+00:00",
   "measures": {
     "total_functions": 61423,
-    "matched_functions": 145,
-    "matched_functions_percent": 0.24,
+    "matched_functions": 190,
+    "matched_functions_percent": 0.31,
     "total_code": 11194652,
-    "matched_code": 14044,
-    "matched_code_percent": 0.13,
-    "fuzzy_match_percent": 0.14,
-    "started_units": 6,
+    "matched_code": 17044,
+    "matched_code_percent": 0.15,
+    "fuzzy_match_percent": 0.17,
+    "started_units": 8,
     "total_units": 2745,
-    "started_code": 18340,
-    "started_matched_code": 14044,
-    "started_percent": 76.58,
+    "started_code": 21340,
+    "started_matched_code": 17044,
+    "started_percent": 79.87,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -3287,19 +3287,19 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RealObject::RealObject",
-          "size": 92,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "RealObject::RealObject",
-          "size": 92,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "RealObject::ShouldDrawShadow",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::RealObject",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::RealObject",
           "size": 92,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -3317,13 +3317,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RealObject::operator=",
+          "name": "RealObject::CalcGridPosition",
           "size": 76,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RealObject::CalcGridPosition",
+          "name": "RealObject::operator=",
           "size": 76,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -3347,13 +3347,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RealObject::StaticNew",
+          "name": "RealObject::GetGridExtents",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RealObject::GetGridExtents",
+          "name": "RealObject::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -3397,12 +3397,6 @@
         {
           "name": "RealObject::SetDisableSnapToGround",
           "size": 16,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "RealObject::SetPosition",
-          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -3461,6 +3455,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "RealObject::SetPosition",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RealObject::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "RealObject::onDrawShadow",
           "size": 4,
           "matched": true,
@@ -3480,12 +3486,6 @@
         },
         {
           "name": "RealObject::onDraw",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "RealObject::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -4535,12 +4535,56 @@
     {
       "name": "src/PvZ2/board/BoardConstants.cpp",
       "total_code": 256,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 256,
+      "matched_code_percent": 100.0,
       "total_functions": 7,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 7,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "BoardConstants::NUMBER_OF_ROWS",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardConstants::GRIDSQUARE_WIDTH",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardConstants::GRIDSQUARE_HEIGHT",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardConstants::NUMBER_OF_COLUMNS",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardConstants::NUMBER_OF_SQUARES",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardConstants::IsNewPVPScale",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardConstants::IsCardGameScale",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/board/BoardEntity.cpp",
@@ -4605,12 +4649,242 @@
     {
       "name": "src/PvZ2/board/BoardTransforms.cpp",
       "total_code": 2744,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2744,
+      "matched_code_percent": 100.0,
       "total_functions": 38,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 38,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "BoardTransforms::BoardSpaceToGrid",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGrid",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridToBoardSpaceRect",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::PlantingBoardSpaceToGridY",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridXKeepOnBoard",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridXKeepOnBoard",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridYKeepOnBoard",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridYKeepOnBoard",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridToBoardSpacePos",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::PlantingBoardSpaceToGridY",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGrid",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGrid",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::ClampGridCoords",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::OffsetYForPlanting",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::IsGridCoordinateOnBoard",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridUnbounded",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridToBoardSpaceUnbounded",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridX",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridX",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridY",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridY",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridToBoardSpaceRect",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridToBoardSpaceRect",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridRectToBoardSpaceRect",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridToBoardSpaceYUnbounded",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridToBoardSpaceXUnbounded_Float",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridXUnbounded",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridYUnbounded",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridToBoardSpaceXUnbounded",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridXUnboundedFloat",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridYUnboundedFloat",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridXUnbounded",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::BoardSpaceToGridYUnbounded",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridToBoardSpace",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridToBoardSpaceX",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::GridToBoardSpaceY",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::PlantingBoardSpaceToGridX",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardTransforms::PlantingBoardSpaceToGridX",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/board/BoardZombieAlmanacUI.cpp",
@@ -12117,44 +12391,20 @@
       "fuzzy_match_percent": 23.53,
       "functions": [
         {
-          "name": "S2C_PVP_BigMapInfo::operator=",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "S2C_PVP_BigMapInfo::operator=",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "S2C_PVP_BigMapPVPInfo::operator=",
           "size": 144,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
-          "size": 140,
+          "name": "S2C_PVP_BigMapInfo::operator=",
+          "size": 144,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
-          "size": 140,
+          "name": "S2C_PVP_BigMapInfo::operator=",
+          "size": 144,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -12178,6 +12428,30 @@
         },
         {
           "name": "S2C_PVP_BigMapPVPInfo::S2C_PVP_BigMapPVPInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
           "size": 140,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -12213,13 +12487,13 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "S2C_PVP_BigMapInfo::GetHouseID",
+          "name": "S2C_PVP_BigMapPVPInfo::GetHouseID",
           "size": 48,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "S2C_PVP_BigMapPVPInfo::GetHouseID",
+          "name": "S2C_PVP_BigMapInfo::GetHouseID",
           "size": 48,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -12279,18 +12553,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "S2C_PVP_BigMapInfo::~S2C_PVP_BigMapInfo",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "S2C_PVP_BigMapInfo::~S2C_PVP_BigMapInfo",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "S2C_PVP_BigMapPVPInfo::~S2C_PVP_BigMapPVPInfo",
           "size": 8,
           "matched": true,
@@ -12298,6 +12560,18 @@
         },
         {
           "name": "S2C_PVP_BigMapPVPInfo::~S2C_PVP_BigMapPVPInfo",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::~S2C_PVP_BigMapInfo",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::~S2C_PVP_BigMapInfo",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -15719,18 +15993,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantJalapeno::IsAbstract",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantJalapeno::IsInvincible",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "PlantJalapeno::CanBeShoveled",
           "size": 8,
           "matched": true,
@@ -15743,8 +16005,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantJalapeno::GetClass",
-          "size": 4,
+          "name": "PlantJalapeno::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantJalapeno::IsInvincible",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -15756,6 +16024,12 @@
         },
         {
           "name": "PlantJalapeno::onAnimStoppedCallback",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantJalapeno::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
