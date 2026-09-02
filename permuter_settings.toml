@@ -1,0 +1,16 @@
+# decomp-permuter (github.com/simonlindholm/decomp-permuter)
+
+compiler_type = "gcc"
+
+[compiler]
+command = "aarch64-linux-android-g++ -std=gnu++11 -O2 -fPIC -fno-inline -fno-exceptions -funwind-tables -fstack-protector-strong -DANDROID -DNDEBUG -DRELEASEFINAL -c"
+
+[assembler]
+command = "aarch64-linux-android-as -march=armv8-a"
+
+[preserve_macros]
+# Macros whose expansion must not be permuted (they generate real code).
+"RT_CLASS_IMPLEMENT.*" = "void"
+"REFLECTION_CLASSBUILDER.*" = "void"
+"STATEMACHINE_BUILDER.*" = "void"
+"PVZ_T|PVZ_EOT|PVZ_EOT_MAX" = "int"

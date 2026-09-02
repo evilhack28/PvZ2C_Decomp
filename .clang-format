@@ -1,0 +1,19 @@
+# tabs, Allman braces, 4-wide. `make format` applies it.
+---
+Language:        Cpp
+BasedOnStyle:    LLVM
+UseTab:          ForIndentation
+IndentWidth:     4
+TabWidth:        4
+ColumnLimit:     100
+BreakBeforeBraces: Allman
+AccessModifierOffset: -4
+IndentCaseLabels: false
+PointerAlignment: Left
+AlignAfterOpenBracket: Align
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+SpaceAfterCStyleCast: false
+SortIncludes:    false
+KeepEmptyLinesAtTheStartOfBlocks: false
