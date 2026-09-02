@@ -131,6 +131,8 @@ def _reloc_label(elf, rel):
     name, _rtype, addend = rel
     if name.startswith('.text'):
         return 'localfn'
+    if name in ('.bss', '.data') or name.startswith(('.bss.', '.data.')):
+        return 'localdata'
     if name.startswith(('.rodata', '.data.rel.ro')):
         raw = elf.section_read(name, addend, 64)
         if raw:
@@ -240,6 +242,16 @@ def _name(elf, addr):
     sec = elf.section('.text')
     if sec and sec[2] and sec[2] <= addr < sec[2] + sec[4]:
         return 'localfn'
+    # The same for a file-scope `static` object: the shipped library keeps no
+    # .symtab, so a data address the code takes lives in .bss/.data with no
+    # name at all, while our object names it (or its section). Both sides
+    # know only that it is a TU-local static -- the parallel of localfn. It
+    # is the one place a data reference is accepted without proof; it only
+    # ever covers a static the linker itself stripped.
+    for nm in ('.bss', '.data'):
+        s = elf.section(nm)
+        if s and s[2] and s[2] <= addr < s[2] + s[4]:
+            return 'localdata'
     return 'data'
 
 

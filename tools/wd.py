@@ -6,6 +6,7 @@ import difflib
 import glob
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -92,6 +93,29 @@ def build(source):
     return obj
 
 
+# --- annotation ----------------------------------------------------------
+
+_MEMREF = re.compile(r'\[x\d+, #(0x[0-9a-f]+)\]')
+
+
+def member_names(mangled):
+    """{offset: field} for the classes this symbol probably touches. Best effort."""
+    try:
+        import explain
+        m = re.match(r'^_ZNK?\d+(\w+?)\d+[A-Za-z_]', mangled)
+        classes = ([m.group(1)] if m else []) + ['BoardEntity', 'Plant', 'Zombie']
+        return explain.field_table(Elf(config.TARGET_LIB), classes)
+    except Exception:
+        return {}
+
+
+def annotate(line, members):
+    m = _MEMREF.search(line)
+    if m and int(m.group(1), 0) in members:
+        return f'{line:<40s} ; {members[int(m.group(1), 0)]}'
+    return line
+
+
 # --- the diff -------------------------------------------------------------
 
 def aligned(game_rows, our_rows):
@@ -166,18 +190,18 @@ def main():
     if ours is None:
         sys.exit(f'{mangled}: {rel} compiled but does not define it')
 
-    if args.asm:
-        rows = ours if args.ours else game
-        for line in asmdiff.render(rows):
-            print(f'  {asmdiff._short(line)}')
-        return 0
-
     same, total, _ = asmdiff.compare(game, ours)
     ok = same == total and len(game) == len(ours)
     tag = f'{GREEN}OK{OFF}' if ok else f'{RED}{same}/{total} ({100 * same // max(total, 1)}%){OFF}'
     countnote = '' if len(game) == len(ours) else f'  {RED}[game {len(game)} insns, ours {len(ours)}]{OFF}'
-    print(f'{BOLD}{mangled}{OFF}  {rel}')
-    print(f'  {tag}{countnote}')
+    print(f'{BOLD}{mangled}{OFF}  {rel}   {tag}{countnote}')
+
+    if args.asm:
+        members = member_names(mangled)
+        for line in asmdiff.render(ours if args.ours else game):
+            print(f'  {annotate(asmdiff._short(line), members)}')
+        return 0 if ok else 1
+
     if not ok:
         show(aligned(game, ours), args.context, args.all)
     return 0 if ok else 1

@@ -35,6 +35,7 @@ CXXFLAGS = [
     '-DANDROID', '-DNDEBUG', '-DRELEASEFINAL',
     '-DPRIME_FOR_PVZ2', '-DWANTS_PRIMETEXT', '-DWIDGETS_USE_PRIMETEXT',
     '-DSUPPORT_WWISE', '-DWANTS_WWISE_ENABLED',
+    '-D_USE_WIDE_STRING',
     '--sysroot', SYSROOT,
     '-isystem', f'{STL}/include',
     '-isystem', f'{STL}/libs/arm64-v8a/include',

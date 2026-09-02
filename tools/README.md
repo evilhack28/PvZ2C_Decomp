@@ -34,8 +34,9 @@ all of this — see the top-level `Makefile`.
 | `disas.py <symbol>` | disassemble one game function, strings and symbols named |
 | `explain.py <symbol>` | annotated disassembly: floats resolved, member offsets labelled, unnamed clones followed |
 | `guess.py <symbol>` / `--class <Name>` | match a function's shape against the recurring patterns (empty body, const return, accessor, flag get/set, tail-forwarder, single virtual, RT_CLASS boilerplate) and print the source line that shape has matched before, with a confidence. A draft for `diff.py`, never a finished answer. |
+| `genstage.py <Name>` | scaffold `src/PvZ2/stages/<Name>Stage.cpp` -- RT_CLASS boilerplate for the `<Name>Stage` / `<Name>StageProperties` pair, base-forwarding stubs for `void f()` overrides, TODO lines for the rest. Pure-boilerplate stages (IceAge) come out 100%; the others need their real methods filled in |
 | `fndiff.py <Name> <method>` | aligned game-vs-ours listing for one method; `--shape` compares mnemonics only |
-| `wd.py <symbol>` / `<Class> <method>` | terse game-vs-ours: finds and compiles the file, hides compiler warnings, prints the whole diff but only the instructions that actually differ (folded-name noise dropped). `--all` for every line, `-c N` for context, `--asm [--ours]` for a clean listing |
+| `wd.py <symbol>` / `<Class> <method>` | terse game-vs-ours: finds and compiles the file, hides compiler warnings, prints only the instructions that actually differ (folded-name noise dropped), with a match-% header. `--all` for every line, `-c N` for context, `--asm [--ours]` for a clean listing with member offsets named |
 | `rawdiff.py` | byte-level diff, no normalisation |
 | `asmdiff.py` | the normaliser the others call |
 
