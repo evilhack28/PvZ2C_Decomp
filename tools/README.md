@@ -35,6 +35,7 @@ all of this — see the top-level `Makefile`.
 | `explain.py <symbol>` | annotated disassembly: floats resolved, member offsets labelled, unnamed clones followed |
 | `guess.py <symbol>` / `--class <Name>` | match a function's shape against the recurring patterns (empty body, const return, accessor, flag get/set, tail-forwarder, single virtual, RT_CLASS boilerplate) and print the source line that shape has matched before, with a confidence. A draft for `diff.py`, never a finished answer. |
 | `fndiff.py <Name> <method>` | aligned game-vs-ours listing for one method; `--shape` compares mnemonics only |
+| `wd.py <symbol>` / `<Class> <method>` | terse game-vs-ours: finds and compiles the file, hides compiler warnings, prints the whole diff but only the instructions that actually differ (folded-name noise dropped). `--all` for every line, `-c N` for context, `--asm [--ours]` for a clean listing |
 | `rawdiff.py` | byte-level diff, no normalisation |
 | `asmdiff.py` | the normaliser the others call |
 
