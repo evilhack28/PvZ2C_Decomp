@@ -16,6 +16,20 @@ except ImportError:
     if not (NDK and TARGET_LIB):
         raise SystemExit('not configured -- run: py -3 tools/configure.py  (see INSTALL.md)')
 
+# Optional Ghidra oracle (used by tools/ghidra.py, tools/reflect.py). Set in
+# config_local.py or the PVZ2C_GHIDRA_* env vars; tools that need it say so.
+try:
+    from config_local import GHIDRA_HEADLESS, GHIDRA_PROJECT_DIR, GHIDRA_PROJECT, \
+        GHIDRA_PROGRAM, GHIDRA_SCRIPTS, GHIDRA_ADDR_BIAS
+except ImportError:
+    GHIDRA_HEADLESS = os.environ.get('PVZ2C_GHIDRA_HEADLESS')
+    GHIDRA_PROJECT_DIR = os.environ.get('PVZ2C_GHIDRA_PROJECT_DIR')
+    GHIDRA_PROJECT = os.environ.get('PVZ2C_GHIDRA_PROJECT')
+    GHIDRA_PROGRAM = os.environ.get('PVZ2C_GHIDRA_PROGRAM', 'libSrc.so')
+    GHIDRA_SCRIPTS = os.environ.get('PVZ2C_GHIDRA_SCRIPTS')
+    # Ghidra loads the .so at a nonzero base: ghidra_addr = ref_addr + BIAS.
+    GHIDRA_ADDR_BIAS = int(os.environ.get('PVZ2C_GHIDRA_ADDR_BIAS', '0x100000'), 0)
+
 _hosts = glob.glob(f'{NDK}/toolchains/aarch64-linux-android-4.9/prebuilt/*')
 TOOLCHAIN = _hosts[0] if _hosts else (
     f'{NDK}/toolchains/aarch64-linux-android-4.9/prebuilt/windows-x86_64')
@@ -31,7 +45,7 @@ BUILD = f'{HERE}/build'
 
 CXXFLAGS = [
     '-std=gnu++11', '-O2', '-fno-inline', '-fno-exceptions', '-fPIC',
-    '-funwind-tables', '-fstack-protector-strong',
+    '-funwind-tables', '-fstack-protector-strong', '-fno-math-errno',
     '-DANDROID', '-DNDEBUG', '-DRELEASEFINAL',
     '-DPRIME_FOR_PVZ2', '-DWANTS_PRIMETEXT', '-DWIDGETS_USE_PRIMETEXT',
     '-DSUPPORT_WWISE', '-DWANTS_WWISE_ENABLED',

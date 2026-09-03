@@ -115,6 +115,20 @@ def listing(elf, name, symbolise=True):
             tgt = _ADDR.sub(lambda x: f'.{int(x.group(1), 0) - ins.address:+d}', tgt)
             ops = f'{head}{sep}{tgt}' if sep else tgt
 
+        elif m == 'adr':
+            # `adr xN, #abs` -- the switch-table base. A relocation (to .rodata
+            # data) resolves like any other; a bare immediate is a PC-relative
+            # label (the in-function jump table), so compare it as a .+offset,
+            # not the raw address (which differs linked vs. not).
+            reg, imm = [x.strip() for x in ops.split(',', 1)]
+            if rel:
+                ops = f'{reg}, <{_reloc_label(elf, rel)}>'
+            else:
+                ops = _ADDR.sub(
+                    lambda x: f'.{int(x.group(1), 0) - ins.address:+d}', imm)
+                ops = f'{reg}, {ops}'
+            pages.pop(reg, None)
+
         else:
             if rel:
                 ops = _IMM.sub(f'<{rel[0]}{_tail(rel[2])}>', ops, count=1)
@@ -140,6 +154,12 @@ def _reloc_label(elf, rel):
             text = raw[:end if end >= 0 else len(raw)].decode("utf-8", "replace")
             if text and text.isprintable():
                 return f'str:{text}'
+        if name == '.rodata' or name.startswith('.rodata.'):
+            # non-string .rodata reached via a reloc: a compiler switch jump
+            # table -- the shipped library resolves the same address to
+            # 'localdata' (see _name). One accepted-without-proof case, like
+            # localfn: it only ever covers a TU-local jump table.
+            return 'localdata'
     return f'{name}{_tail(addend)}'
 
 
@@ -252,6 +272,12 @@ def _name(elf, addr):
         s = elf.section(nm)
         if s and s[2] and s[2] <= addr < s[2] + s[4]:
             return 'localdata'
+    # A non-string address the code reaches via adrp/add with nothing but
+    # `.rodata` under it is a compiler-emitted switch jump table -- TU-local,
+    # unnameable in the stripped library. The parallel of localfn/localdata.
+    s = elf.section('.rodata')
+    if s and s[2] and s[2] <= addr < s[2] + s[4]:
+        return 'localdata'
     return 'data'
 
 
