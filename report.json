@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-04T17:44:16+00:00",
+  "generated": "2026-09-04T17:59:33+00:00",
   "measures": {
-    "total_functions": 62113,
-    "matched_functions": 1278,
-    "matched_functions_percent": 2.06,
-    "total_code": 11226052,
-    "matched_code": 139128,
-    "matched_code_percent": 1.24,
-    "fuzzy_match_percent": 1.36,
-    "started_units": 41,
+    "total_functions": 62129,
+    "matched_functions": 1318,
+    "matched_functions_percent": 2.12,
+    "total_code": 11227144,
+    "matched_code": 141556,
+    "matched_code_percent": 1.26,
+    "fuzzy_match_percent": 1.38,
+    "started_units": 45,
     "total_units": 2745,
-    "started_code": 390696,
-    "started_matched_code": 139128,
-    "started_percent": 35.61,
+    "started_code": 394160,
+    "started_matched_code": 141556,
+    "started_percent": 35.91,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -4305,12 +4305,74 @@
     {
       "name": "src/PvZ2/Timer.cpp",
       "total_code": 444,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 444,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "PvZ2::Utilities::Timer::Timer",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PvZ2::Utilities::Timer::Timer",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PvZ2::Utilities::Timer::Reset",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PvZ2::Utilities::Timer::Update",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PvZ2::Utilities::Timer::triggerCallback",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PvZ2::Utilities::Timer::Timer",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PvZ2::Utilities::Timer::Timer",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PvZ2::Utilities::Timer::Clear",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PvZ2::Utilities::Timer::Reset",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PvZ2::Utilities::Timer::SetCallback",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/TimerBank.cpp",
@@ -4624,23 +4686,213 @@
     },
     {
       "name": "src/PvZ2/Ultra.cpp",
-      "total_code": 996,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 1036,
+      "matched_code": 940,
+      "matched_code_percent": 90.73,
+      "total_functions": 12,
+      "matched_functions": 8,
+      "matched_functions_percent": 66.67,
+      "fuzzy_match_percent": 90.73,
+      "functions": [
+        {
+          "name": "Ultra::~Ultra",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Ultra::PlatformSpecificInstance",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Ultra::~Ultra",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Ultra::~Ultra",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Ultra::Initialize",
+          "size": 372,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::GetNumAdvertisementsAvailable",
+          "size": 188,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::showAdProvider",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::Ultra",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::Ultra",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::HasAdvertisements",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::SuperSonicHasAdvertisements",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::showSuperSonic",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/UltraAndroid.cpp",
-      "total_code": 292,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 7,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 1328,
+      "matched_code": 388,
+      "matched_code_percent": 29.22,
+      "total_functions": 19,
+      "matched_functions": 11,
+      "matched_functions_percent": 57.89,
+      "fuzzy_match_percent": 29.22,
+      "functions": [
+        {
+          "name": "Ultra::Initialize",
+          "size": 372,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Ultra::GetNumAdvertisementsAvailable",
+          "size": 188,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Ultra::showAdProvider",
+          "size": 112,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Ultra::Ultra",
+          "size": 80,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Ultra::Ultra",
+          "size": 80,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Ultra::HasAdvertisements",
+          "size": 60,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Ultra::SuperSonicHasAdvertisements",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Ultra::showSuperSonic",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UltraAndroid::UltraAndroid",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UltraAndroid::UltraAndroid",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UltraAndroid::~UltraAndroid",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UltraAndroid::~UltraAndroid",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::~Ultra",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UltraAndroid::~UltraAndroid",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::PlatformSpecificInstance",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::~Ultra",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::~Ultra",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UltraAndroid::Show",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UltraAndroid::onInitialize",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/UnchartedBoost.cpp",
@@ -4704,13 +4956,81 @@
     },
     {
       "name": "src/PvZ2/VictoryOutro.cpp",
-      "total_code": 640,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 656,
+      "matched_code": 656,
+      "matched_code_percent": 100.0,
+      "total_functions": 11,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "VictoryOutroProperties::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "VictoryOutroProperties::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "VictoryOutroProperties::VictoryOutroProperties",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "VictoryOutroProperties::VictoryOutroProperties",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "VictoryOutroProperties::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "VictoryOutroProperties::~VictoryOutroProperties",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "VictoryOutroProperties::~VictoryOutroProperties",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "VictoryOutroProperties::~VictoryOutroProperties",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "VictoryOutroProperties::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "VictoryOutroProperties::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "VictoryOutroProperties::GetModuleClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Wave.cpp",
