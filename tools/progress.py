@@ -70,8 +70,10 @@ def sources():
 
 
 def _newest_input():
-    """Latest mtime of config.py + every header (a cached .o older than this is stale)."""
+    """Latest mtime of config.py, the compiler + every header (a cached .o older than this is stale)."""
     newest = os.path.getmtime(os.path.join(config.HERE, 'tools', 'config.py'))
+    if os.path.exists(config.GXX):
+        newest = max(newest, os.path.getmtime(config.GXX))
     for root, _dirs, files in os.walk(os.path.join(config.HERE, 'include')):
         for fn in files:
             if fn.endswith('.h'):
@@ -271,8 +273,10 @@ def main():
     ap.add_argument('--quiet', action='store_true', help='totals only')
     ap.add_argument('--all', action='store_true',
                     help='list functions for every unit, scaffold stubs included')
-    ap.add_argument('--cache', action='store_true',
+    ap.add_argument('--cache', action='store_true', default=True,
                     help='skip recompiling a file whose sources are older than its object')
+    ap.add_argument('--no-cache', dest='cache', action='store_false',
+                    help='recompile every unit from scratch')
     args = ap.parse_args()
 
     global _CACHE
