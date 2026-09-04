@@ -27,6 +27,9 @@ def _imm(text):
         return None
 
 
+_MEM = ('ldrb', 'ldrh', 'ldrsb', 'ldrsh', 'ldrsw', 'str', 'strb', 'strh')
+
+
 def listing(elf, name, symbolise=True):
     """[(mnemonic, normalised operands)] for one function."""
     found = elf.function(name)
@@ -56,8 +59,11 @@ def listing(elf, name, symbolise=True):
             ops = f'{reg}, <page>'
 
         elif m == 'add' and len(ops.split(',')) == 3:
+            # `add xD, xP, #lo12` off an adrp page names a symbol; the raw
+            # offset is 0 in an object and the real one once linked. xD and xP
+            # need not be the same register.
             p = [x.strip() for x in ops.split(',')]
-            if p[0] == p[1] and p[1] in pages and p[2].startswith('#'):
+            if p[1] in pages and p[2].startswith('#'):
                 kind, value, addend = pages[p[1]]
                 if rel:
                     ops = f'{p[0]}, {p[1]}, <{_reloc_label(elf, rel)}>'
@@ -66,9 +72,7 @@ def listing(elf, name, symbolise=True):
                     ops = f'{p[0]}, {p[1]}, <{_name(elf, target)}>'
                 else:
                     ops = f'{p[0]}, {p[1]}, <{value}{_tail(addend)}>'
-                pages.pop(p[0], None)
-            else:
-                pages.pop(p[0], None)
+            pages.pop(p[0], None)
 
         elif m == 'ldr' and '[' in ops:
             dst = ops.split(',')[0].strip()
@@ -128,6 +132,27 @@ def listing(elf, name, symbolise=True):
                     lambda x: f'.{int(x.group(1), 0) - ins.address:+d}', imm)
                 ops = f'{reg}, {ops}'
             pages.pop(reg, None)
+
+        elif m in _MEM and '[' in ops:
+            # A sized load/store straight off an adrp page: the `:lo12:` is a
+            # relocation here and a resolved offset in the shipped library, so
+            # compare the symbol, exactly as the adrp+add form does.
+            dst = ops[:ops.index('[')].rstrip(', ')
+            inner = ops[ops.index('[') + 1:ops.rindex(']')]
+            parts = [x.strip() for x in inner.split(',')]
+            base = parts[0]
+            if base in pages:
+                kind, value, addend = pages[base]
+                if rel:
+                    ops = f'{dst}, [{base}, <{_reloc_label(elf, rel)}>]'
+                elif kind == 'abs':
+                    target = value + (_imm(parts[1]) if len(parts) > 1 else 0 or 0)
+                    ops = f'{dst}, [{base}, <{_name(elf, target)}>]'
+                else:
+                    ops = f'{dst}, [{base}, <{value}{_tail(addend)}>]'
+            elif rel:
+                ops = _IMM.sub(f'<{rel[0]}{_tail(rel[2])}>', ops, count=1)
+            pages.pop(dst.split(',')[0].strip(), None)
 
         else:
             if rel:

@@ -45,6 +45,10 @@ BUILD = f'{HERE}/build'
 
 CXXFLAGS = [
     '-std=gnu++11', '-O2', '-fno-inline', '-fno-exceptions', '-fPIC',
+    # The shipped lib addresses every TU-local static as adrp+:lo12:sym,
+    # never through a shared anchor base: LostCityStage::renderForeground
+    # uses three adrp/add pairs for three statics one block apart.
+    '-fno-section-anchors',
     '-funwind-tables', '-fstack-protector-strong', '-fno-math-errno',
     '-DANDROID', '-DNDEBUG', '-DRELEASEFINAL',
     '-DPRIME_FOR_PVZ2', '-DWANTS_PRIMETEXT', '-DWIDGETS_USE_PRIMETEXT',

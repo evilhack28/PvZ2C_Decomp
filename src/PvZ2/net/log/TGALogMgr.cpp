@@ -7,15 +7,22 @@
 
 #include "SexyAppFramework/Common.h"
 
+#include <algorithm>
+#include <sstream>
+
 #include "TGALogMgr.h"
 
 #include "Cheats.h"
 #include "DNode/DString.h"
 #include "LawnApp.h"
+#include "NameMapper.h"
+#include "PlayerInfo.h"
+#include "ProfileMgr.h"
 #include "PVZDB.h"
 #include "ServerConfig.h"
 #include "TimeUtil.h"
 #include "TutorialMgr.h"
+#include "LogCollector/LogCollector.h"
 #include "logServer/LogServer.h"
 #include "SexyAppFramework/SexyAppBase.h"
 #include "SexyAppFramework/drivers/app/android/JavaInterface.h"
@@ -106,19 +113,19 @@ void TGALogMgr::sendMsg()
 
 void TGALogMgr::sendLog(const DValue& value)
 {
-	if (!value.isDValueVector() || CheatManager::GetInstancePtr()->GetToggleValue("DisableTGALog"))
-		return;
-
-	LogServer::Instance();
-
-	DValueVector v = value.asDValueVector();
-	for (int i = 0; i < v.size(); ++i)
+	if (value.isDValueVector() && !CheatManager::GetInstancePtr()->GetToggleValue("DisableTGALog"))
 	{
-		bool last = i == v.size() - 1;
-		appendMsg(v[i].asString(), last);
-	}
+		LogServer::Instance();
 
-	sendMsg();
+		DValueVector v = value.asDValueVector();
+		for (int i = 0; i < v.size(); ++i)
+		{
+			bool last = i == v.size() - 1;
+			appendMsg(v[i].asString(), last);
+		}
+
+		sendMsg();
+	}
 }
 
 void TGALogMgr::Log(const std::string& i_logId, const std::vector<std::string>& i_params)
@@ -129,6 +136,19 @@ void TGALogMgr::Log(const std::string& i_logId, const std::vector<std::string>& 
 	DValue value;
 	log.getLogInfo(m_logId, value).getBasicInfo(value).getOtherInfo(i_params, value);
 	sendLog(value);
+}
+
+void TGALogMgr::UseLevelItem(const std::string& i_item, int i_freeGem, int i_useGem)
+{
+	std::vector<std::string> params;
+	params.push_back(i_item);
+	DString level = ProfileMgr::GetInstance().GetCurrentProfile()->GetCurrentLevel();
+	params.push_back(level);
+	std::string mode = BehaviorLog::getModeString();
+	params.push_back(mode);
+	params.push_back(DString(abs(i_freeGem)));
+	params.push_back(DString(abs(i_useGem)));
+	Log("10005", params);
 }
 
 /////////////// online session ///////////////
@@ -158,29 +178,50 @@ void TGALogMgr::UpdateOnlineLog()
 
 void TGALogMgr::ServiceRequestCompleted(const Sexy::StructuredData* i_response, const void* i_context)
 {
-	if (needWriteLog() && this == i_context)
+	if (!needWriteLog() || this != i_context)
+		return;
+
+	Sexy::StructuredData::Integer code = i_response->IntegerForPath("$.statusCode", -1);
+	if (code == -1 || code == 200)
 	{
-		Sexy::StructuredData::Integer code = i_response->IntegerForPath("$.statusCode", -1);
-		if (code == 200 || code == -1)
-		{
-			std::string response;
-			response = i_response->StringForPath("$.code", "");
-			writeLog(response);
-		}
-		else
-		{
-			ServiceRequestFailed(i_response, i_context);
-		}
+		std::string response;
+		response = i_response->StringForPath("$.code", "");
+		writeLog(response);
+	}
+	else
+	{
+		ServiceRequestFailed(i_response, i_context);
 	}
 }
 
 void TGALogMgr::ServiceRequestFailed(const Sexy::StructuredData* i_response, const void* i_context)
 {
-	if (needWriteLog() && this == i_context)
+	if (!needWriteLog())
+		return;
+
+	if (this == i_context)
 		writeLog("failed response");
 }
 
 /////////////// segments ///////////////
+
+std::string TGALogMgr::GetSegForId(int i_logId, int i_index)
+{
+	std::vector<CustomSegment> segments;
+	std::map<int, std::vector<CustomSegment> >::iterator it = m_segments.find(i_logId);
+	if (it != m_segments.end())
+		segments = (*it).second;
+
+	if (segments.empty())
+		return "";
+
+	for (CustomSegment seg : segments)
+	{
+		if (seg.index == i_index)
+			return seg.value;
+	}
+	return "";
+}
 
 void TGALogMgr::clearSegments(int i_id)
 {
@@ -249,10 +290,8 @@ void TGALogMgr::LogPlayerSurvey(TGAPlayerSurveyData i_info)
 	std::vector<std::string> params;
 	params.push_back(i_info._step);
 
-	std::vector<std::string>::iterator it = i_info._answers.begin();
-	std::vector<std::string>::iterator end = i_info._answers.end();
-	for (; it != end; ++it)
-		params.push_back(*it);
+	for (const std::string& answer : i_info._answers)
+		params.push_back(answer);
 
 	params.push_back(i_info._rewards);
 	Log(DString(TGA_LOG_PLAYER_SURVEY), params);
@@ -842,6 +881,424 @@ void TGALogMgr::LogHappyVaseBreaker(TGAHappyVaseBreakerData i_info)
 	Log(DString(TGA_LOG_HAPPY_VASE_BREAKER_ID), params);
 }
 
+void TGALogMgr::LogIOSRealNameLogin()
+{
+	static bool s_logged = false;
+	if (s_logged)
+		return;
+
+	s_logged = true;
+	std::vector<std::string> params;
+	Log(DString(TGA_LOG_IOS_REAL_NAME_LOGIN), params);
+}
+
+void TGALogMgr::LogGiftCodeData(const std::string& i_code, const std::string& i_reward)
+{
+	std::vector<std::string> params;
+	params.push_back(i_code);
+	params.push_back(i_reward);
+	Log(DString(TGA_LOG_GIFT_CODE), params);
+}
+
+void TGALogMgr::LogExchangeAvatar(const TGAExchangeAvatarData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._avatarId);
+	params.push_back(i_info._avatarName);
+	params.push_back(i_info._costType);
+	params.push_back(i_info._costId);
+	params.push_back(i_info._costAmount);
+	params.push_back(i_info._ownedCount);
+	params.push_back(i_info._source);
+	params.push_back(i_info._result);
+	params.push_back(i_info._reward);
+	Log(DString(TGA_LOG_EXCHANGE_AVATAR), params);
+}
+
+void TGALogMgr::LogTreasurePavilion(const TGATreasurePavilionData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._activityId);
+	params.push_back(i_info._poolId);
+	params.push_back(i_info._drawType);
+	params.push_back(i_info._drawCount);
+	params.push_back(i_info._costType);
+	params.push_back(i_info._costAmount);
+	params.push_back(i_info._rewardId);
+	params.push_back(i_info._rewardAmount);
+	Log(DString(TGA_LOG_TREASURE_PAVILION), params);
+}
+
+void TGALogMgr::LogPennyGiftBox(const TGAPennyGiftBoxData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._boxId);
+	params.push_back(i_info._boxType);
+	params.push_back(i_info._costType);
+	params.push_back(i_info._costAmount);
+	params.push_back(i_info._rewardId);
+	params.push_back(i_info._rewardAmount);
+	params.push_back(i_info._openCount);
+	Log(DString(TGA_LOG_PENNY_GIFT_BOX), params);
+}
+
+void TGALogMgr::LogNFSLinkage(const TGANFSLinkageData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._taskId);
+	params.push_back(i_info._progress);
+	params.push_back(i_info._rewardId);
+	params.push_back(i_info._rewardAmount);
+	Log(DString(TGA_LOG_NFS_LINKAGE), params);
+}
+
+void TGALogMgr::LogAccumulatedLogin(const TGAAccumulatedLoginData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._day);
+	params.push_back(i_info._rewardId);
+	params.push_back(i_info._rewardAmount);
+	Log(DString(TGA_LOG_ACCUMULATED_LOGIN), params);
+}
+
+void TGALogMgr::LogLuckyChest(const TGALuckyChestData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._chestId);
+	params.push_back(i_info._costType);
+	params.push_back(i_info._costAmount);
+	params.push_back(i_info._rewardId);
+	params.push_back(i_info._rewardAmount);
+	params.push_back(i_info._drawCount);
+	Log(DString(TGA_LOG_LUCKY_CHEST), params);
+}
+
+void TGALogMgr::LogLuckyChestShop(const TGALuckyChestShopData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._goodsId);
+	params.push_back(i_info._costType);
+	params.push_back(i_info._costAmount);
+	Log(DString(TGA_LOG_LUCKY_CHEST_SHOP), params);
+}
+
+void TGALogMgr::LogPlantWars(const TGAPlantWarsData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._levelId);
+	params.push_back(i_info._result);
+	params.push_back(i_info._plantId);
+	params.push_back(i_info._plantLevel);
+	params.push_back(i_info._useTime);
+	params.push_back(i_info._score);
+	params.push_back(i_info._reward);
+	Log(DString(TGA_LOG_PLANT_WARS), params);
+}
+
+void TGALogMgr::LogAutumnHarvest(const TGAAutumnHarvestData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._taskId);
+	params.push_back(i_info._progress);
+	params.push_back(i_info._costType);
+	params.push_back(i_info._costAmount);
+	params.push_back(i_info._rewardId);
+	params.push_back(i_info._rewardAmount);
+	Log(DString(TGA_LOG_AUTUMN_HARVEST), params);
+}
+
+void TGALogMgr::LogTourismOctoberData(const TGATourismOctoberData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._taskId);
+	params.push_back(i_info._progress);
+	params.push_back(i_info._costType);
+	params.push_back(i_info._costAmount);
+	params.push_back(i_info._rewardId);
+	params.push_back(i_info._rewardAmount);
+	params.push_back(i_info._stageId);
+	params.push_back(i_info._result);
+	Log(DString(TGA_LOG_TOURISM_OCTOBER), params);
+}
+
+void TGALogMgr::LogToyNightData(const TGAToyNightData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._levelId);
+	params.push_back(i_info._result);
+	params.push_back(i_info._toyId);
+	params.push_back(i_info._toyLevel);
+	params.push_back(i_info._costType);
+	params.push_back(i_info._costAmount);
+	params.push_back(i_info._rewardId);
+	params.push_back(i_info._rewardAmount);
+	Log(DString(TGA_LOG_TOY_NIGHT), params);
+}
+
+void TGALogMgr::LogMiniGameCollectionData(const TGAMiniGameCollectionData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._gameId);
+	params.push_back(i_info._result);
+	params.push_back(i_info._score);
+	params.push_back(i_info._rewardId);
+	params.push_back(i_info._rewardAmount);
+	Log(DString(TGA_LOG_MINIGAME_COLLECTION), params);
+}
+
+void TGALogMgr::LogPlantPediaData(const TGAPlantPediaData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._plantId);
+	params.push_back(i_info._pageId);
+	params.push_back(i_info._reward);
+	Log(DString(TGA_LOG_PLANT_PEDIA), params);
+}
+
+void TGALogMgr::LogLuckBag(TGALuckBagData i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	for (int i = 0; i < 6; ++i)
+		params.push_back(i_info._plantSelect[i]);
+	params.push_back(i_info._plantReward[0]);
+	params.push_back(i_info._plantReward[1]);
+	params.push_back(i_info._price);
+	Log(DString(TGA_LOG_LUCKBAG), params);
+}
+
+void TGALogMgr::LogEndless(TGALogEndlessData i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._medalCost);
+	params.push_back(i_info._coinCost);
+	params.push_back(i_info._freeGems);
+	params.push_back(i_info._payGems);
+	params.push_back(i_info._purchaseID);
+	params.push_back(i_info._levelID);
+	params.push_back(i_info._levelResult);
+	if (i_info._usedPlants.empty())
+	{
+		for (int i = 0; i < 8; ++i)
+			params.push_back("");
+	}
+	else
+	{
+		for (std::string plant : i_info._usedPlants)
+			params.push_back(plant);
+	}
+	params.push_back(i_info._time);
+	params.push_back(i_info._artifactId);
+	Log(DString(TGA_LOG_ENDLESS_ID), params);
+}
+
+void TGALogMgr::LogTransGenosis(int i_step, TGALogTransGenosisData i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(DString(i_step));
+	for (int i = 0; i < 5; ++i)
+		params.push_back(i_info._slots[i]);
+	params.push_back(i_info._transCost);
+	params.push_back(i_info._freeGems);
+	params.push_back(i_info._payGems);
+	params.push_back(i_info._resultPieceID);
+	Log(DString(TGA_LOG_TRANSGENOSIS_ID), params);
+}
+
+void TGALogMgr::LogAD(std::string i_step, std::string i_level, int i_pos, std::string i_rewardType, std::string i_rewardQuantity)
+{
+	std::vector<std::string> params;
+	params.push_back(DString(i_step).c_str());
+	params.push_back(i_level);
+	params.push_back(DString(i_pos).c_str());
+	params.push_back(DString(i_rewardType).c_str());
+	params.push_back(DString(i_rewardQuantity).c_str());
+	Log(DString(TGA_LOG_AD_ID), params);
+}
+
+void TGALogMgr::LogAD(std::string i_step, std::string i_level, std::string placementID, std::string i_rewardType, std::string i_rewardQuantity)
+{
+	std::vector<std::string> params;
+	params.push_back(DString(i_step).c_str());
+	params.push_back(i_level);
+	params.push_back(placementID);
+	params.push_back(DString(i_rewardType).c_str());
+	params.push_back(DString(i_rewardQuantity).c_str());
+	Log(DString(TGA_LOG_AD_ID), params);
+}
+
+void TGALogMgr::LogPVZ1Mode(const TGAPVZ1ModeData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._level);
+	params.push_back(i_info._difficulty);
+	params.push_back(i_info._win);
+	params.push_back(i_info._time);
+	if (i_info._usedPlants.empty())
+	{
+		for (int i = 0; i < 8; ++i)
+			params.push_back("");
+	}
+	else
+	{
+		for (std::string plant : i_info._usedPlants)
+			params.push_back(plant);
+	}
+	params.push_back(i_info._levelReward);
+	params.push_back(i_info._shopReward);
+	Log(DString(TGA_LOG_PVZ1MODE), params);
+}
+
+void TGALogMgr::LogCustomLevel(const TGACustomLevelData& i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._playCoin);
+	params.push_back(i_info._createCoin);
+	params.push_back(i_info._playCoinChange);
+	params.push_back(i_info._createCoinChange);
+	params.push_back(i_info._worldsFilter);
+	params.push_back(i_info._levelModeFilter);
+	params.push_back(i_info._levelID);
+	params.push_back(i_info._zanCount);
+	params.push_back(i_info._caiCount);
+	params.push_back(i_info._createLevelAction);
+	params.push_back(i_info._createLevelMode);
+	params.push_back(i_info._shopItemBuy);
+	params.push_back(i_info._challengeResult);
+	if (i_info._usedPlants.empty())
+	{
+		for (int i = 0; i < 8; ++i)
+			params.push_back("");
+	}
+	else
+	{
+		for (std::string plant : i_info._usedPlants)
+			params.push_back(plant);
+	}
+	Log(DString(TGA_LOG_CUSTOMLEVEL), params);
+}
+
+void TGALogMgr::LogFirstRecharge(int i_step, const std::map<int, int>& i_rewards)
+{
+	DString reward;
+	std::vector<std::string> params;
+	int gemCount = 0;
+	params.push_back(DString(i_step));
+
+	for (const std::pair<const int, int>& kv : i_rewards)
+	{
+		int id = kv.first;
+		int count = kv.second;
+		if (NameMapperBase::GemServerID != id)
+			reward += DString(id);
+		else
+			gemCount = count;
+	}
+
+	params.push_back(reward);
+	params.push_back(GetSegForId(TGA_LOG_FIRSTRECHARGE, 0));
+	params.push_back(DString(gemCount));
+	Log(DString(TGA_LOG_FIRSTRECHARGE), params);
+	clearSegments(TGA_LOG_FIRSTRECHARGE);
+}
+
+void TGALogMgr::LogRechargeBundle(TGARechargeBundleData i_info)
+{
+	std::vector<std::string> params;
+	params.push_back(i_info._step);
+	params.push_back(i_info._rechargeAmt);
+	params.push_back(i_info._purchaseId);
+	params.push_back(i_info._purchasePrice);
+	params.push_back(i_info._coinsAmt);
+	params.push_back(i_info._gemsAmt);
+
+	for (int i = 0; i < 5; ++i)
+	{
+		if (i_info._plantBundles[i]._quantity != 0 && i_info._plantBundles[i]._objectId != 0)
+		{
+			params.push_back(DString(i_info._plantBundles[i]._objectId).c_str());
+			params.push_back(DString(i_info._plantBundles[i]._quantity).c_str());
+		}
+		else
+		{
+			params.push_back("");
+			params.push_back("");
+		}
+	}
+
+	for (int i = 0; i < 5; ++i)
+	{
+		if (i_info._itemBundles[i]._quantity != 0 && i_info._itemBundles[i]._objectId != 0)
+		{
+			params.push_back(DString(i_info._itemBundles[i]._objectId).c_str());
+			params.push_back(DString(i_info._itemBundles[i]._quantity).c_str());
+		}
+		else
+		{
+			params.push_back("");
+			params.push_back("");
+		}
+	}
+
+	Log(DString(TGA_LOG_RECHARGE_BUNDLE_ID), params);
+}
+
+void TGALogMgr::LogPlantAdventure(int i_step, PlantAdventureInfo i_info, int i_cd)
+{
+	std::vector<std::string> params;
+	params.push_back(DString(i_step));
+	params.push_back(DString(i_info.dungeonId));
+
+	std::string time = "";
+	if (i_cd != 0)
+		time = Sexy::StrFormat("%02d:%02d:00", (i_cd / 60) % 60, i_cd % 60);
+	params.push_back(time);
+
+	std::sort(i_info.plantIdList.begin(), i_info.plantIdList.end());
+	std::stringstream ss;
+	ss.str("");
+	for (size_t i = 0; i < i_info.plantIdList.size(); ++i)
+	{
+		if (i == i_info.plantIdList.size() - 1)
+			ss << DString(i_info.plantIdList[i]).c_str();
+		else
+			ss << DString(i_info.plantIdList[i]).c_str() << ",";
+	}
+	params.push_back(ss.str());
+	params.push_back("0");
+
+	int price = 0;
+	if (i_step == 3)
+		price = 20;
+	else if (i_step == 5)
+		price = i_info.surprisePrice;
+	params.push_back(DString(price));
+
+	std::string chip = "";
+	if (i_info.plantChipId != -1)
+		chip += DString(i_info.plantChipId).c_str();
+	params.push_back(chip);
+	params.push_back(DString(i_info.plantChipQuantity));
+	params.push_back(DString(i_info.coinBonus));
+	Log("10007", params);
+}
+
 void TGALogMgr::LogInvitationData(const TGAInvitationData& i_info)
 {
 	std::vector<std::string> params;
@@ -1388,85 +1845,3 @@ void TGALogMgr::LogWishingPoolData(const TGAWishingPoolData& i_info)
 	params.push_back(i_info._lotteryType);
 	Log(DString(TGA_LOG_WISHINGPOOL), params);
 }
-
-// TODO   1184 B  TGALogMgr::LogPlantAdventure                         _ZN9TGALogMgr17LogPlantAdventureEi18PlantAdventureInfoi
-// TODO    860 B  TGALogMgr::LogRechargeBundle                         _ZN9TGALogMgr17LogRechargeBundleE21TGARechargeBundleData
-// TODO    544 B  TGALogMgr::LogNewPVP                                 _ZN9TGALogMgr9LogNewPVPE13TGANewPVPData
-// TODO    540 B  TGALogMgr::LogCustomLevel                            _ZN9TGALogMgr14LogCustomLevelERK18TGACustomLevelData
-// TODO    536 B  TGALogMgr::LogFirstRecharge                          _ZN9TGALogMgr16LogFirstRechargeEiRKSt3mapIiiSt4lessIiESaISt4pairIKiiEEE
-// TODO    508 B  TGALogMgr::LogAD                                     _ZN9TGALogMgr5LogADESsSsiSsSs
-// TODO    496 B  TGALogMgr::LogEndless                                _ZN9TGALogMgr10LogEndlessE17TGALogEndlessData
-// TODO    460 B  TGALogMgr::LogPlantTrial                             _ZN9TGALogMgr13LogPlantTrialEiiiii
-// TODO    456 B  TGALogMgr::LogPVZ1Mode                               _ZN9TGALogMgr11LogPVZ1ModeERK15TGAPVZ1ModeData
-// TODO    448 B  TGALogMgr::LogAD                                     _ZN9TGALogMgr5LogADESsSsSsSsSs
-// TODO    432 B  TGALogMgr::UseLevelItem                              _ZN9TGALogMgr12UseLevelItemERKSsii
-// TODO    420 B  TGALogMgr::LogDiamond                                _ZN9TGALogMgr10LogDiamondESsiiii
-// TODO    400 B  TGALogMgr::LogJoust                                  _ZN9TGALogMgr8LogJoustEi15TGALogJoustData
-// TODO    388 B  TGALogMgr::LogUncharted                              _ZN9TGALogMgr12LogUnchartedE16TGAUnchartedData
-// TODO    384 B  TGALogMgr::GetSegForId                               _ZN9TGALogMgr11GetSegForIdEii
-// TODO    360 B  TGALogMgr::writeLog                                  _ZN9TGALogMgr8writeLogERKSs
-// TODO    340 B  TGALogMgr::LogCoin                                   _ZN9TGALogMgr7LogCoinEiii
-// TODO    328 B  TGALogMgr::LogPennyPursuit                           _ZN9TGALogMgr15LogPennyPursuitE19TGAPennyPursuitData
-// TODO    328 B  TGALogMgr::LogBossChallenge                          _ZN9TGALogMgr16LogBossChallengeE20TGABossChallengeData
-// TODO    324 B  TGALogMgr::sendLog                                   _ZN9TGALogMgr7sendLogERK6DValue
-// TODO    320 B  TGALogMgr::LogMinigame                               _ZN9TGALogMgr11LogMinigameEi18TGALogMinigameData
-// TODO    320 B  TGALogMgr::LogPlantLevelup                           _ZN9TGALogMgr15LogPlantLevelupEi22TGALogPlantLevelupData
-// TODO    320 B  TGALogMgr::LogNoviceSevenDays                        _ZN9TGALogMgr18LogNoviceSevenDaysE22TGANoviceSevenDaysData
-// TODO    320 B  TGALogMgr::LogDaveTreasure                           _ZN9TGALogMgr15LogDaveTreasureEi22TGALogDaveTreasureData
-// TODO    320 B  TGALogMgr::LogNewuserPresent                         _ZN9TGALogMgr17LogNewuserPresentEiSsSsi
-// TODO    316 B  TGALogMgr::LogTransGenosis                           _ZN9TGALogMgr15LogTransGenosisEi22TGALogTransGenosisData
-// TODO    308 B  TGALogMgr::LogRechargeReward                         _ZN9TGALogMgr17LogRechargeRewardEi24TGALogRechargeRewardData
-// TODO    300 B  TGALogMgr::LogDailySign                              _ZN9TGALogMgr12LogDailySignEiiSs
-// TODO    296 B  TGALogMgr::LogPennyTreasure                          _ZN9TGALogMgr16LogPennyTreasureEi23TGALogPennyTreasureData
-// TODO    296 B  TGALogMgr::LogTravelLog                              _ZN9TGALogMgr12LogTravelLogEi19TGALogTravelLogData
-// TODO    292 B  TGALogMgr::LogFoolChallenge                          _ZN9TGALogMgr16LogFoolChallengeE11TGAFoolData
-// TODO    292 B  TGALogMgr::LogExchangeAvatar                         _ZN9TGALogMgr17LogExchangeAvatarERK21TGAExchangeAvatarData
-// TODO    292 B  TGALogMgr::LogRichMan                                _ZN9TGALogMgr10LogRichManE14TGARichManData
-// TODO    292 B  TGALogMgr::LogMinorLottery                           _ZN9TGALogMgr15LogMinorLotteryE19TGAMinorLotteryData
-// TODO    292 B  TGALogMgr::LogBattleOrderInfo                        _ZN9TGALogMgr18LogBattleOrderInfoERK18TGABattleOrderData
-// TODO    292 B  TGALogMgr::LogAnniversaryTreasure                    _ZN9TGALogMgr22LogAnniversaryTreasureE26TGAAnniversaryTreasureData
-// TODO    284 B  TGALogMgr::LogPlayerSurvey                           _ZN9TGALogMgr15LogPlayerSurveyE19TGAPlayerSurveyData
-// TODO    280 B  TGALogMgr::LogDragonTreasure                         _ZN9TGALogMgr17LogDragonTreasureERK21TGADragonTreasureData
-// TODO    280 B  TGALogMgr::LogTreasurePavilion                       _ZN9TGALogMgr19LogTreasurePavilionERK23TGATreasurePavilionData
-// TODO    280 B  TGALogMgr::LogToyNightData                           _ZN9TGALogMgr15LogToyNightDataERK15TGAToyNightData
-// TODO    280 B  TGALogMgr::LogGoldenEgg                              _ZN9TGALogMgr12LogGoldenEggERK12TGAGoldenEgg
-// TODO    280 B  TGALogMgr::LogTourismOctoberData                     _ZN9TGALogMgr21LogTourismOctoberDataERK21TGATourismOctoberData
-// TODO    268 B  TGALogMgr::LogDecorateData                           _ZN9TGALogMgr15LogDecorateDataERK19TGALogPlantDecorate
-// TODO    268 B  TGALogMgr::LogFightZodiac                            _ZN9TGALogMgr14LogFightZodiacE14TGAFightZodiac
-// TODO    268 B  TGALogMgr::LogGroupBuy                               _ZN9TGALogMgr11LogGroupBuyE15TGAGroupBuyData
-// TODO    268 B  TGALogMgr::LogPennyGiftBox                           _ZN9TGALogMgr15LogPennyGiftBoxERK19TGAPennyGiftBoxData
-// TODO    268 B  TGALogMgr::LogPurchase                               _ZN9TGALogMgr11LogPurchaseE18TGALogPurchaseData
-// TODO    268 B  TGALogMgr::LogPlantWars                              _ZN9TGALogMgr12LogPlantWarsERK16TGAPlantWarsData
-// TODO    256 B  TGALogMgr::LogArborDay                               _ZN9TGALogMgr11LogArborDayERK11TGAArborDay
-// TODO    256 B  TGALogMgr::LogDailyRechargeReward                    _ZN9TGALogMgr22LogDailyRechargeRewardE22TGADailyRechargeReward
-// TODO    256 B  TGALogMgr::LogNewplayerCollectiontData               _ZN9TGALogMgr27LogNewplayerCollectiontDataERK26TGANewplayerCollectionData
-// TODO    256 B  TGALogMgr::LogAnniversaryNurturingData               _ZN9TGALogMgr27LogAnniversaryNurturingDataERK27TGAAnniversaryNurturingData
-// TODO    256 B  TGALogMgr::LogNewPVPPlus                             _ZN9TGALogMgr13LogNewPVPPlusE17TGANewPVPPlusData
-// TODO    256 B  TGALogMgr::LogGeneEnhancementData                    _ZN9TGALogMgr22LogGeneEnhancementDataERK22TGAGeneEnhancementData
-// TODO    256 B  TGALogMgr::LogLimitedLottery                         _ZN9TGALogMgr17LogLimitedLotteryE21TGALimitedLotteryData
-// TODO    256 B  TGALogMgr::LogCallofWishDraw                         _ZN9TGALogMgr17LogCallofWishDrawERK17TGACallofWishDraw
-// TODO    256 B  TGALogMgr::LogHappyVaseBreaker                       _ZN9TGALogMgr19LogHappyVaseBreakerE23TGAHappyVaseBreakerData
-// TODO    256 B  TGALogMgr::LogAutumnHarvest                          _ZN9TGALogMgr16LogAutumnHarvestERK20TGAAutumnHarvestData
-// TODO    256 B  TGALogMgr::LogLevelPackageData                       _ZN9TGALogMgr19LogLevelPackageDataERK19TGALevelPackageData
-// TODO    256 B  TGALogMgr::LogCornucopiaData                         _ZN9TGALogMgr17LogCornucopiaDataERK17TGACornucopiaData
-// TODO    256 B  TGALogMgr::LogPlantSpecialOffer                      _ZN9TGALogMgr20LogPlantSpecialOfferE24TGAPlantSpecialOfferData
-// TODO    256 B  TGALogMgr::LogVaseBreaker                            _ZN9TGALogMgr14LogVaseBreakerE18TGAVaseBreakerData
-// TODO    256 B  TGALogMgr::LogLuckyChest                             _ZN9TGALogMgr13LogLuckyChestERK17TGALuckyChestData
-// TODO    252 B  TGALogMgr::LogLuckBag                                _ZN9TGALogMgr10LogLuckBagE14TGALuckBagData
-// TODO    244 B  TGALogMgr::LogCarnivalData                           _ZN9TGALogMgr15LogCarnivalDataERK15TGACarnivalData
-// TODO    244 B  TGALogMgr::LogArtifactCultivation                    _ZN9TGALogMgr22LogArtifactCultivationERK21TGArtifactCultivation
-// TODO    244 B  TGALogMgr::LogRenaissanceChallenge                   _ZN9TGALogMgr23LogRenaissanceChallengeE27TGARenaissanceChallengeData
-// TODO    244 B  TGALogMgr::LogCustomLevelShare                       _ZN9TGALogMgr19LogCustomLevelShareERK23TGACustomLevelShareData
-// TODO    244 B  TGALogMgr::LogGiftReturnData                         _ZN9TGALogMgr17LogGiftReturnDataERK17TGAGiftReturnData
-// TODO    244 B  TGALogMgr::LogDaveKitchenData                        _ZN9TGALogMgr18LogDaveKitchenDataERK18TGADaveKitchenData
-// TODO    244 B  TGALogMgr::LogCardGame                               _ZN9TGALogMgr11LogCardGameE15TGACardGameData
-// TODO    244 B  TGALogMgr::LogMiniGameCollectionData                 _ZN9TGALogMgr25LogMiniGameCollectionDataERK25TGAMiniGameCollectionData
-// TODO    244 B  TGALogMgr::LogLimitedSummon                          _ZN9TGALogMgr16LogLimitedSummonERK20TGALimitedSummonData
-// TODO    244 B  TGALogMgr::LogConsumeReceiveExtra                    _ZN9TGALogMgr22LogConsumeReceiveExtraE21TGAConsumeReceiveData
-// TODO    244 B  TGALogMgr::LogGrowthPackage                          _ZN9TGALogMgr16LogGrowthPackageE16TGAGrowthPackage
-// TODO    244 B  TGALogMgr::LogPartyAssistData                        _ZN9TGALogMgr18LogPartyAssistDataERK18TGAPartyAssistData
-// TODO    244 B  TGALogMgr::LogConsumeReceive                         _ZN9TGALogMgr17LogConsumeReceiveE21TGAConsumeReceiveData
-// TODO    244 B  TGALogMgr::LogSecretStore                            _ZN9TGALogMgr14LogSecretStoreE14TGASecretStore
-// TODO    244 B  TGALogMgr::LogPennyClassroom                         _ZN9TGALogMgr17LogPennyClassroomERK21TGAPennyClassroomData
-// TODO    240 B  TGALogMgr::LogOneYuanRedPacket                       _ZN9TGALogMgr19LogOneYuanRedPacketE23TGAOneYuanRedPacketData
-// ... and 69 more (units.json)

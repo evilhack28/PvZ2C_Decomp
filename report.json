@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-04T03:17:03+00:00",
+  "generated": "2026-09-04T14:28:40+00:00",
   "measures": {
     "total_functions": 62113,
-    "matched_functions": 1230,
-    "matched_functions_percent": 1.98,
+    "matched_functions": 1261,
+    "matched_functions_percent": 2.03,
     "total_code": 11226052,
-    "matched_code": 127444,
-    "matched_code_percent": 1.14,
-    "fuzzy_match_percent": 1.26,
+    "matched_code": 138568,
+    "matched_code_percent": 1.23,
+    "fuzzy_match_percent": 1.36,
     "started_units": 38,
     "total_units": 2745,
     "started_code": 390136,
-    "started_matched_code": 127444,
-    "started_percent": 32.67,
+    "started_matched_code": 138568,
+    "started_percent": 35.52,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -4809,26 +4809,20 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BoardEntity::BoardEntity",
-          "size": 144,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BoardEntity::BoardEntity",
-          "size": 144,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "BoardEntity::CalcGridFootprint",
           "size": 144,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BoardEntity::IntersectsGrid",
-          "size": 140,
+          "name": "BoardEntity::BoardEntity",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::BoardEntity",
+          "size": 144,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -4840,6 +4834,12 @@
         },
         {
           "name": "BoardEntity::IsInRow",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::IntersectsGrid",
           "size": 140,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -4905,13 +4905,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BoardEntity::PlaceOnBoard",
+          "name": "BoardEntity::CalcGridPosition",
           "size": 72,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BoardEntity::CalcGridPosition",
+          "name": "BoardEntity::PlaceOnBoard",
           "size": 72,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -4955,6 +4955,42 @@
         {
           "name": "BoardEntity::invalidateCollisionRect",
           "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CalcRenderOrder",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CalcRowPosition",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::GetEntityHeight",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CollidesWithType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardEntity::CalcColumnPosition",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -5031,38 +5067,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BoardEntity::IsAbstract",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BoardEntity::CalcRenderOrder",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BoardEntity::CalcRowPosition",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BoardEntity::GetEntityHeight",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BoardEntity::CollidesWithType",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BoardEntity::CalcColumnPosition",
-          "size": 8,
+          "name": "BoardEntity::GetClass",
+          "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -5122,12 +5128,6 @@
         },
         {
           "name": "BoardEntity::onLevelUp",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BoardEntity::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -14275,198 +14275,30 @@
     {
       "name": "src/PvZ2/net/log/TGALogMgr.cpp",
       "total_code": 38332,
-      "matched_code": 27216,
-      "matched_code_percent": 71.0,
+      "matched_code": 38140,
+      "matched_code_percent": 99.5,
       "total_functions": 149,
-      "matched_functions": 118,
-      "matched_functions_percent": 79.19,
-      "fuzzy_match_percent": 73.25,
+      "matched_functions": 148,
+      "matched_functions_percent": 99.33,
+      "fuzzy_match_percent": 99.99,
       "functions": [
-        {
-          "name": "TGALogMgr::LogPlantAdventure",
-          "size": 1184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogRechargeBundle",
-          "size": 860,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogCustomLevel",
-          "size": 540,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogFirstRecharge",
-          "size": 536,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogAD",
-          "size": 508,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogEndless",
-          "size": 496,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogPVZ1Mode",
-          "size": 456,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogAD",
-          "size": 448,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::UseLevelItem",
-          "size": 432,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::GetSegForId",
-          "size": 384,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogTransGenosis",
-          "size": 316,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogExchangeAvatar",
-          "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogToyNightData",
-          "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogTreasurePavilion",
-          "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogTourismOctoberData",
-          "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogPlantWars",
-          "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogPennyGiftBox",
-          "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogLuckyChest",
-          "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogAutumnHarvest",
-          "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogLuckBag",
-          "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogMiniGameCollectionData",
-          "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogNFSLinkage",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogLuckyChestShop",
-          "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogPlantPediaData",
-          "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogAccumulatedLogin",
-          "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogMgr::LogGiftCodeData",
-          "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "TGALogMgr::LogIOSRealNameLogin",
           "size": 192,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 97.92
         },
         {
-          "name": "TGALogMgr::sendLog",
-          "size": 324,
-          "matched": false,
-          "fuzzy_match_percent": 92.59
+          "name": "TGALogMgr::LogPlantAdventure",
+          "size": 1184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "TGALogMgr::LogPlayerSurvey",
-          "size": 284,
-          "matched": false,
-          "fuzzy_match_percent": 80.82
-        },
-        {
-          "name": "TGALogMgr::ServiceRequestCompleted",
-          "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 83.33
-        },
-        {
-          "name": "TGALogMgr::ServiceRequestFailed",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 80.49
+          "name": "TGALogMgr::LogRechargeBundle",
+          "size": 860,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TGALogMgr::LogNewPVP",
@@ -14475,8 +14307,50 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "TGALogMgr::LogCustomLevel",
+          "size": 540,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogFirstRecharge",
+          "size": 536,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogAD",
+          "size": 508,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogEndless",
+          "size": 496,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "TGALogMgr::LogPlantTrial",
           "size": 460,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogPVZ1Mode",
+          "size": 456,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogAD",
+          "size": 448,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::UseLevelItem",
+          "size": 432,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -14495,6 +14369,12 @@
         {
           "name": "TGALogMgr::LogUncharted",
           "size": 388,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::GetSegForId",
+          "size": 384,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -14519,6 +14399,12 @@
         {
           "name": "TGALogMgr::LogBossChallenge",
           "size": 328,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::sendLog",
+          "size": 324,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -14549,6 +14435,12 @@
         {
           "name": "TGALogMgr::LogNoviceSevenDays",
           "size": 320,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogTransGenosis",
+          "size": 316,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -14595,6 +14487,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "TGALogMgr::LogExchangeAvatar",
+          "size": 292,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "TGALogMgr::LogBattleOrderInfo",
           "size": 292,
           "matched": true,
@@ -14607,13 +14505,37 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "TGALogMgr::LogPlayerSurvey",
+          "size": 284,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "TGALogMgr::LogGoldenEgg",
           "size": 280,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "TGALogMgr::LogToyNightData",
+          "size": 280,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "TGALogMgr::LogDragonTreasure",
+          "size": 280,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogTreasurePavilion",
+          "size": 280,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogTourismOctoberData",
           "size": 280,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -14631,6 +14553,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "TGALogMgr::LogPlantWars",
+          "size": 268,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "TGALogMgr::LogFightZodiac",
           "size": 268,
           "matched": true,
@@ -14643,7 +14571,19 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "TGALogMgr::LogPennyGiftBox",
+          "size": 268,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "TGALogMgr::LogArborDay",
+          "size": 256,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogLuckyChest",
           "size": 256,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -14656,6 +14596,12 @@
         },
         {
           "name": "TGALogMgr::LogVaseBreaker",
+          "size": 256,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogAutumnHarvest",
           "size": 256,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -14717,6 +14663,12 @@
         {
           "name": "TGALogMgr::LogNewplayerCollectiontData",
           "size": 256,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogLuckBag",
+          "size": 252,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -14805,6 +14757,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "TGALogMgr::LogMiniGameCollectionData",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "TGALogMgr::LogMysteryStore",
           "size": 240,
           "matched": true,
@@ -14813,6 +14771,18 @@
         {
           "name": "TGALogMgr::LogOneYuanRedPacket",
           "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::ServiceRequestCompleted",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogNFSLinkage",
+          "size": 228,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -14907,6 +14877,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "TGALogMgr::LogLuckyChestShop",
+          "size": 216,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogPlantPediaData",
+          "size": 216,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "TGALogMgr::LogCallofWishDaily",
           "size": 216,
           "matched": true,
@@ -14920,6 +14902,12 @@
         },
         {
           "name": "TGALogMgr::LogWishingPoolData",
+          "size": 216,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogAccumulatedLogin",
           "size": 216,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -15005,6 +14993,12 @@
         {
           "name": "TGALogMgr::LogMonthlyCardSpecial",
           "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogGiftCodeData",
+          "size": 200,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -15101,6 +15095,12 @@
         {
           "name": "TGALogMgr::LogSegments",
           "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::ServiceRequestFailed",
+          "size": 164,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -18046,13 +18046,13 @@
       "total_functions": 55,
       "matched_functions": 53,
       "matched_functions_percent": 96.36,
-      "fuzzy_match_percent": 97.45,
+      "fuzzy_match_percent": 99.23,
       "functions": [
         {
           "name": "PlantIceburg::ApplyPlantfood",
           "size": 400,
           "matched": false,
-          "fuzzy_match_percent": 63.0
+          "fuzzy_match_percent": 98.0
         },
         {
           "name": "PlantIceburg::Fire",
@@ -19682,7 +19682,7 @@
       "total_functions": 318,
       "matched_functions": 223,
       "matched_functions_percent": 70.13,
-      "fuzzy_match_percent": 31.0,
+      "fuzzy_match_percent": 31.05,
       "functions": [
         {
           "name": "Plant::NotifyApplyCondition",
@@ -19907,25 +19907,25 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "PlantType::GatherPlantingRestrictions",
-          "size": 436,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Plant::TakeCure",
           "size": 436,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "PlantType::GetPacketCoolDown",
-          "size": 432,
+          "name": "PlantType::GatherPlantingRestrictions",
+          "size": 436,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
           "name": "Plant::GetPlantPieceCountByLevel",
+          "size": 432,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PlantType::GetPacketCoolDown",
           "size": 432,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -20132,7 +20132,7 @@
           "name": "PlantType::StaticClassInit",
           "size": 5016,
           "matched": false,
-          "fuzzy_match_percent": 93.46
+          "fuzzy_match_percent": 94.02
         },
         {
           "name": "PlantPropertySheet::StaticClassInit",
@@ -20144,13 +20144,13 @@
           "name": "Plant::SetIsSleepping",
           "size": 640,
           "matched": false,
-          "fuzzy_match_percent": 88.82
+          "fuzzy_match_percent": 89.44
         },
         {
           "name": "Plant::PlaySongEffect",
           "size": 604,
           "matched": false,
-          "fuzzy_match_percent": 94.04
+          "fuzzy_match_percent": 96.03
         },
         {
           "name": "PlantType::HasPlantAdventureFlag",
@@ -20183,16 +20183,16 @@
           "fuzzy_match_percent": 58.33
         },
         {
-          "name": "Plant::GetExtraHitPointsmodifier",
-          "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 98.21
-        },
-        {
           "name": "PlantPropertySheet::GetCollisionRect",
           "size": 224,
           "matched": false,
           "fuzzy_match_percent": 42.86
+        },
+        {
+          "name": "Plant::GetExtraHitPointsmodifier",
+          "size": 224,
+          "matched": false,
+          "fuzzy_match_percent": 98.21
         },
         {
           "name": "Plant::GetMaxAffectZombieLevel",
@@ -20309,13 +20309,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantType::AddResourceRequirements",
+          "name": "Plant::ClearPvz1Sleep",
           "size": 264,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Plant::ClearPvz1Sleep",
+          "name": "PlantType::AddResourceRequirements",
           "size": 264,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -20399,13 +20399,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantType::IsSunProducer",
+          "name": "Plant::IsConvertedByCondition",
           "size": 188,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Plant::IsConvertedByCondition",
+          "name": "PlantType::IsSunProducer",
           "size": 188,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -20419,12 +20419,6 @@
         {
           "name": "Plant::SetFastCoolDownRatio",
           "size": 180,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantType::GetCanBeUsedOnStage",
-          "size": 176,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -20460,6 +20454,12 @@
         },
         {
           "name": "Plant::GetAdditionValue",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::GetCanBeUsedOnStage",
           "size": 176,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -20513,12 +20513,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantType::GetCurrentLevelSkillType",
-          "size": 136,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "Plant::DisablePlantfoodAnimation",
           "size": 136,
           "matched": true,
@@ -20526,6 +20520,12 @@
         },
         {
           "name": "Plant::ShouldDrawShadow",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::GetCurrentLevelSkillType",
           "size": 136,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -20543,14 +20543,20 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Plant::GetRelocationPosition",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PlantType::GetAvatarLayers",
           "size": 128,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Plant::GetRelocationPosition",
-          "size": 128,
+          "name": "PlantPropertySheet::StaticGetClass",
+          "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -20562,12 +20568,6 @@
         },
         {
           "name": "PlantType::StaticGetClass",
-          "size": 124,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantPropertySheet::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -20597,12 +20597,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantType::IsInHomeWorld",
-          "size": 112,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "Plant::onEndCondition",
           "size": 112,
           "matched": true,
@@ -20610,6 +20604,12 @@
         },
         {
           "name": "Plant::PlayAttackAnimation",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::IsInHomeWorld",
           "size": 112,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -20735,13 +20735,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantType::UpdateAvatar",
+          "name": "Plant::StartExternalRemoval",
           "size": 76,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Plant::StartExternalRemoval",
+          "name": "PlantType::UpdateAvatar",
           "size": 76,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -20797,12 +20797,6 @@
         {
           "name": "PlantType::IsInsideRestrictedArea",
           "size": 60,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantType::GetSaveCostInHomeWorld",
-          "size": 56,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -20892,6 +20886,12 @@
         },
         {
           "name": "Plant::IsIgnoreControlAndDmg",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::GetSaveCostInHomeWorld",
           "size": 56,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -21005,6 +21005,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PlantPropertySheet::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Plant::FullHealth",
           "size": 44,
           "matched": true,
@@ -21053,8 +21059,20 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantPropertySheet::StaticNew",
-          "size": 44,
+          "name": "Plant::GetGroundEffect",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::SetPlantAvatarShowIndex",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::GetType",
+          "size": 40,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -21071,20 +21089,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Plant::GetGroundEffect",
-          "size": 40,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "Plant::SetPlantAvatarShowIndex",
-          "size": 40,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "Plant::GetType",
-          "size": 40,
+          "name": "PlantPropertySheet::~PlantPropertySheet",
+          "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -21167,18 +21173,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantPropertySheet::~PlantPropertySheet",
-          "size": 36,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantType::GetCost",
-          "size": 32,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "Plant::IsWatering",
           "size": 32,
           "matched": true,
@@ -21191,8 +21185,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantType::GetExchangeAvatarCost",
-          "size": 28,
+          "name": "PlantType::GetCost",
+          "size": 32,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -21203,14 +21197,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantType::GetMaxHitpoints",
-          "size": 24,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantType::GetBeghouledCost",
-          "size": 24,
+          "name": "PlantType::GetExchangeAvatarCost",
+          "size": 28,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -21228,6 +21216,18 @@
         },
         {
           "name": "Plant::AddTag",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::GetMaxHitpoints",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::GetBeghouledCost",
           "size": 24,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -21287,55 +21287,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantType::IsAbstract",
+          "name": "PlantPropertySheet::IsAbstract",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantType::IsHeroPlant",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantType::GetHeroProps",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantType::IsDoubleBoard",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantType::GetRefundSunCount",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantType::CanPlantOnConvertedPlant",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantType::GetExchangeAvatarOpenFlag",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantType::IsVine",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "PlantType::GetProps",
+          "name": "PlantPropertySheet::GetPacketCoolDownTime",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -21521,25 +21479,61 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantPropertySheet::IsAbstract",
+          "name": "PlantType::IsAbstract",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantPropertySheet::GetPacketCoolDownTime",
+          "name": "PlantType::IsHeroPlant",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantType::CanPlantOnPlant",
-          "size": 4,
+          "name": "PlantType::GetHeroProps",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantType::GetClass",
+          "name": "PlantType::IsDoubleBoard",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::GetRefundSunCount",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::CanPlantOnConvertedPlant",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::GetExchangeAvatarOpenFlag",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::IsVine",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::GetProps",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantPropertySheet::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -21587,7 +21581,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PlantPropertySheet::GetClass",
+          "name": "PlantType::CanPlantOnPlant",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24011,25 +24011,19 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BeachStageEventZombieSpawner::GetZombies",
-          "size": 212,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "BeachStage::registerForEvents",
           "size": 212,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BeachStageEventZombieSpawner::WaveUpdate",
-          "size": 180,
+          "name": "BeachStageEventZombieSpawner::GetZombies",
+          "size": 212,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BeachStageEventZombieSpawner::StaticClassInit",
+          "name": "BeachStageEventZombieSpawnerProps::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24041,7 +24035,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BeachStageEventZombieSpawnerProps::StaticClassInit",
+          "name": "BeachStageEventZombieSpawner::WaveUpdate",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BeachStageEventZombieSpawner::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24077,18 +24077,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BeachStageEventZombieSpawner::StaticGetClass",
-          "size": 124,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BeachStage::StaticGetClass",
-          "size": 124,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "BeachStageEventZombieSpawnerProps::StaticGetClass",
           "size": 124,
           "matched": true,
@@ -24102,6 +24090,18 @@
         },
         {
           "name": "BeachStageEventZombieSpawnerProps::BeachStageEventZombieSpawnerProps",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BeachStage::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BeachStageEventZombieSpawner::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24203,7 +24203,7 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BeachStageEventZombieSpawner::StaticNew",
+          "name": "BeachStageEventZombieSpawnerProps::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24215,7 +24215,7 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BeachStageEventZombieSpawnerProps::StaticNew",
+          "name": "BeachStageEventZombieSpawner::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24233,7 +24233,7 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BeachStageEventZombieSpawner::~BeachStageEventZombieSpawner",
+          "name": "BeachStageEventZombieSpawnerProps::~BeachStageEventZombieSpawnerProps",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24245,7 +24245,7 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BeachStageEventZombieSpawnerProps::~BeachStageEventZombieSpawnerProps",
+          "name": "BeachStageEventZombieSpawner::~BeachStageEventZombieSpawner",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24287,6 +24287,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "BeachStage::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "BeachStageEventZombieSpawner::SetLoot",
           "size": 8,
           "matched": true,
@@ -24294,12 +24300,6 @@
         },
         {
           "name": "BeachStageEventZombieSpawner::IsAbstract",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BeachStage::IsAbstract",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24323,12 +24323,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BeachStageEventZombieSpawner::GetClass",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "BeachStage::onUpdate",
           "size": 4,
           "matched": true,
@@ -24336,6 +24330,12 @@
         },
         {
           "name": "BeachStage::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BeachStageEventZombieSpawner::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24377,25 +24377,25 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "DarkStageProperties::StaticClassInit",
-          "size": 180,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "DarkStage::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "DarkStageProperties::StaticGetClass",
-          "size": 124,
+          "name": "DarkStageProperties::StaticClassInit",
+          "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
           "name": "DarkStage::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DarkStageProperties::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24413,18 +24413,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "DarkStageProperties::~DarkStageProperties",
-          "size": 56,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "DarkStageProperties::~DarkStageProperties",
-          "size": 56,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "DarkStage::DarkStage",
           "size": 56,
           "matched": true,
@@ -24437,14 +24425,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "DarkStageProperties::DarkStageProperties",
-          "size": 52,
+          "name": "DarkStageProperties::~DarkStageProperties",
+          "size": 56,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "DarkStageProperties::DarkStageProperties",
-          "size": 52,
+          "name": "DarkStageProperties::~DarkStageProperties",
+          "size": 56,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24461,8 +24449,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "DarkStageProperties::StaticNew",
-          "size": 44,
+          "name": "DarkStageProperties::DarkStageProperties",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DarkStageProperties::DarkStageProperties",
+          "size": 52,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24473,8 +24467,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "DarkStageProperties::~DarkStageProperties",
-          "size": 36,
+          "name": "DarkStageProperties::StaticNew",
+          "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24485,8 +24479,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "DarkStageProperties::IsAbstract",
-          "size": 8,
+          "name": "DarkStageProperties::~DarkStageProperties",
+          "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24497,14 +24491,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "DarkStageProperties::GetModuleClass",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "DarkStageProperties::GetClass",
-          "size": 4,
+          "name": "DarkStageProperties::IsAbstract",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24516,6 +24504,18 @@
         },
         {
           "name": "DarkStage::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DarkStageProperties::GetModuleClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DarkStageProperties::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24545,25 +24545,25 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EgyptStageProperties::StaticClassInit",
-          "size": 180,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "EgyptStage::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EgyptStageProperties::StaticGetClass",
-          "size": 124,
+          "name": "EgyptStageProperties::StaticClassInit",
+          "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
           "name": "EgyptStage::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EgyptStageProperties::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24587,18 +24587,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EgyptStageProperties::EgyptStageProperties",
-          "size": 48,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "EgyptStageProperties::EgyptStageProperties",
-          "size": 48,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "EgyptStage::EgyptStage",
           "size": 48,
           "matched": true,
@@ -24611,8 +24599,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EgyptStageProperties::StaticNew",
-          "size": 44,
+          "name": "EgyptStageProperties::EgyptStageProperties",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EgyptStageProperties::EgyptStageProperties",
+          "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24623,8 +24617,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EgyptStageProperties::~EgyptStageProperties",
-          "size": 36,
+          "name": "EgyptStageProperties::StaticNew",
+          "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24636,6 +24630,18 @@
         },
         {
           "name": "EgyptStageProperties::~EgyptStageProperties",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EgyptStage::~EgyptStage",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EgyptStage::~EgyptStage",
           "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24647,14 +24653,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EgyptStage::~EgyptStage",
+          "name": "EgyptStageProperties::~EgyptStageProperties",
           "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EgyptStage::~EgyptStage",
-          "size": 20,
+          "name": "EgyptStage::IsAbstract",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24665,8 +24671,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EgyptStage::IsAbstract",
-          "size": 8,
+          "name": "EgyptStage::GetClass",
+          "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24678,12 +24684,6 @@
         },
         {
           "name": "EgyptStageProperties::GetClass",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "EgyptStage::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24707,18 +24707,6 @@
           "fuzzy_match_percent": 82.5
         },
         {
-          "name": "BassRainZombieSpawner::StaticClassInit",
-          "size": 180,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "EightiesStage::StaticClassInit",
-          "size": 180,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "EightiesStageProperties::StaticClassInit",
           "size": 180,
           "matched": true,
@@ -24731,20 +24719,20 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "EightiesStage::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BassRainZombieSpawner::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "BassRainZombieSpawner::PostSpawnZombieSetup",
           "size": 156,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BassRainZombieSpawner::StaticGetClass",
-          "size": 124,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "EightiesStage::StaticGetClass",
-          "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24756,6 +24744,18 @@
         },
         {
           "name": "BassRainZombieSpawnerProps::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EightiesStage::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BassRainZombieSpawner::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24803,18 +24803,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BassRainZombieSpawner::BassRainZombieSpawner",
-          "size": 48,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BassRainZombieSpawner::BassRainZombieSpawner",
-          "size": 48,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "EightiesStageProperties::EightiesStageProperties",
           "size": 48,
           "matched": true,
@@ -24827,14 +24815,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BassRainZombieSpawner::StaticNew",
-          "size": 44,
+          "name": "BassRainZombieSpawner::BassRainZombieSpawner",
+          "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EightiesStage::StaticNew",
-          "size": 44,
+          "name": "BassRainZombieSpawner::BassRainZombieSpawner",
+          "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24851,7 +24839,25 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BassRainZombieSpawner::~BassRainZombieSpawner",
+          "name": "EightiesStage::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BassRainZombieSpawner::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EightiesStageProperties::~EightiesStageProperties",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BassRainZombieSpawnerProps::~BassRainZombieSpawnerProps",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24863,14 +24869,32 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EightiesStageProperties::~EightiesStageProperties",
+          "name": "BassRainZombieSpawner::~BassRainZombieSpawner",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "EightiesStageProperties::~EightiesStageProperties",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EightiesStageProperties::~EightiesStageProperties",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "BassRainZombieSpawnerProps::~BassRainZombieSpawnerProps",
-          "size": 36,
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BassRainZombieSpawnerProps::~BassRainZombieSpawnerProps",
+          "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -24887,37 +24911,7 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EightiesStageProperties::~EightiesStageProperties",
-          "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "EightiesStageProperties::~EightiesStageProperties",
-          "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BassRainZombieSpawnerProps::~BassRainZombieSpawnerProps",
-          "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BassRainZombieSpawnerProps::~BassRainZombieSpawnerProps",
-          "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "BassRainZombieSpawner::IsAbstract",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "EightiesStage::IsAbstract",
+          "name": "EightiesStageProperties::IsAbstract",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24929,19 +24923,25 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EightiesStageProperties::IsAbstract",
+          "name": "EightiesStage::IsAbstract",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "BassRainZombieSpawner::GetClass",
+          "name": "BassRainZombieSpawner::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EightiesStageProperties::GetModuleClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EightiesStage::GetClass",
+          "name": "EightiesStageProperties::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24959,13 +24959,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EightiesStageProperties::GetModuleClass",
+          "name": "EightiesStage::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "EightiesStageProperties::GetClass",
+          "name": "BassRainZombieSpawner::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -24983,25 +24983,25 @@
       "fuzzy_match_percent": 100.0,
       "functions": [
         {
-          "name": "FrontLawnStage::StaticClassInit",
-          "size": 180,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "FrontLawnStageProperties::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "FrontLawnStage::StaticGetClass",
-          "size": 124,
+          "name": "FrontLawnStage::StaticClassInit",
+          "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
           "name": "FrontLawnStageProperties::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FrontLawnStage::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25013,18 +25013,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "FrontLawnStage::FrontLawnStage",
-          "size": 48,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "FrontLawnStage::FrontLawnStage",
-          "size": 48,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "FrontLawnStageProperties::FrontLawnStageProperties",
           "size": 48,
           "matched": true,
@@ -25037,8 +25025,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "FrontLawnStage::StaticNew",
-          "size": 44,
+          "name": "FrontLawnStage::FrontLawnStage",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FrontLawnStage::FrontLawnStage",
+          "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25049,8 +25043,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "FrontLawnStage::~FrontLawnStage",
-          "size": 36,
+          "name": "FrontLawnStage::StaticNew",
+          "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25062,6 +25056,18 @@
         },
         {
           "name": "FrontLawnStage::~FrontLawnStage",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FrontLawnStageProperties::~FrontLawnStageProperties",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FrontLawnStageProperties::~FrontLawnStageProperties",
           "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25073,20 +25079,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "FrontLawnStageProperties::~FrontLawnStageProperties",
+          "name": "FrontLawnStage::~FrontLawnStage",
           "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "FrontLawnStageProperties::~FrontLawnStageProperties",
-          "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "FrontLawnStage::IsAbstract",
-          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25097,14 +25091,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "FrontLawnStage::renderBackground",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "FrontLawnStage::GetClass",
-          "size": 4,
+          "name": "FrontLawnStage::IsAbstract",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25116,6 +25104,18 @@
         },
         {
           "name": "FrontLawnStageProperties::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FrontLawnStage::renderBackground",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FrontLawnStage::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25143,20 +25143,14 @@
       "fuzzy_match_percent": 100.0,
       "functions": [
         {
-          "name": "HeianStage::StaticClassInit",
-          "size": 180,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "HeianStageProperties::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "HeianStage::StaticGetClass",
-          "size": 124,
+          "name": "HeianStage::StaticClassInit",
+          "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25167,14 +25161,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "HeianStage::HeianStage",
-          "size": 48,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "HeianStage::HeianStage",
-          "size": 48,
+          "name": "HeianStage::StaticGetClass",
+          "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25191,8 +25179,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "HeianStage::StaticNew",
-          "size": 44,
+          "name": "HeianStage::HeianStage",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeianStage::HeianStage",
+          "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25203,8 +25197,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "HeianStage::~HeianStage",
-          "size": 36,
+          "name": "HeianStage::StaticNew",
+          "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25216,6 +25210,18 @@
         },
         {
           "name": "HeianStage::~HeianStage",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeianStageProperties::~HeianStageProperties",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeianStageProperties::~HeianStageProperties",
           "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25227,20 +25233,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "HeianStageProperties::~HeianStageProperties",
+          "name": "HeianStage::~HeianStage",
           "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "HeianStageProperties::~HeianStageProperties",
-          "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "HeianStage::IsAbstract",
-          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25251,7 +25245,19 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "HeianStage::GetClass",
+          "name": "HeianStage::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeianStageProperties::GetModuleClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeianStageProperties::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25269,13 +25275,7 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "HeianStageProperties::GetModuleClass",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "HeianStageProperties::GetClass",
+          "name": "HeianStage::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25443,13 +25443,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "KongFuStage::StaticClassInit",
+          "name": "KongFuStageProperties::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "KongFuStageProperties::StaticClassInit",
+          "name": "KongFuStage::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25461,13 +25461,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "KongFuStage::StaticGetClass",
+          "name": "KongFuStageProperties::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "KongFuStageProperties::StaticGetClass",
+          "name": "KongFuStage::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25479,6 +25479,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "KongFuStageProperties::KongFuStageProperties",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "KongFuStageProperties::KongFuStageProperties",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "KongFuStage::KongFuStage",
           "size": 48,
           "matched": true,
@@ -25491,14 +25503,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "KongFuStageProperties::KongFuStageProperties",
-          "size": 48,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "KongFuStageProperties::KongFuStageProperties",
-          "size": 48,
+          "name": "KongFuStageProperties::StaticNew",
+          "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25509,8 +25515,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "KongFuStageProperties::StaticNew",
-          "size": 44,
+          "name": "KongFuStageProperties::~KongFuStageProperties",
+          "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25528,7 +25534,13 @@
         },
         {
           "name": "KongFuStageProperties::~KongFuStageProperties",
-          "size": 36,
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "KongFuStageProperties::~KongFuStageProperties",
+          "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25541,24 +25553,6 @@
         {
           "name": "KongFuStage::~KongFuStage",
           "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "KongFuStageProperties::~KongFuStageProperties",
-          "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "KongFuStageProperties::~KongFuStageProperties",
-          "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "KongFuStage::IsAbstract",
-          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25569,14 +25563,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "KongFuStage::parseGearImages",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "KongFuStage::GetClass",
-          "size": 4,
+          "name": "KongFuStage::IsAbstract",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25591,25 +25579,31 @@
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "KongFuStage::parseGearImages",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "KongFuStage::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/stages/LostCityStage.cpp",
       "total_code": 2720,
-      "matched_code": 2448,
-      "matched_code_percent": 90.0,
+      "matched_code": 2648,
+      "matched_code_percent": 97.35,
       "total_functions": 46,
-      "matched_functions": 44,
-      "matched_functions_percent": 95.65,
-      "fuzzy_match_percent": 96.47,
+      "matched_functions": 45,
+      "matched_functions_percent": 97.83,
+      "fuzzy_match_percent": 99.85,
       "functions": [
-        {
-          "name": "LostCityStage::renderForeground",
-          "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 54.0
-        },
         {
           "name": "ParachuteRainZombieSpawner::PostSpawnZombieSetup",
           "size": 72,
@@ -25617,7 +25611,13 @@
           "fuzzy_match_percent": 94.44
         },
         {
-          "name": "LostCityStageProperties::StaticClassInit",
+          "name": "LostCityStage::renderForeground",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LostCityStage::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25629,13 +25629,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStage::StaticClassInit",
+          "name": "ParachuteRainZombieSpawnerProps::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "ParachuteRainZombieSpawnerProps::StaticClassInit",
+          "name": "LostCityStageProperties::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25653,7 +25653,7 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStageProperties::StaticGetClass",
+          "name": "LostCityStage::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25665,20 +25665,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStage::StaticGetClass",
-          "size": 124,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "ParachuteRainZombieSpawnerProps::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "ParachuteRainZombieSpawnerProps::ParachuteRainZombieSpawnerProps",
-          "size": 60,
+          "name": "LostCityStageProperties::StaticGetClass",
+          "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25689,13 +25683,19 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStageProperties::LostCityStageProperties",
+          "name": "ParachuteRainZombieSpawnerProps::ParachuteRainZombieSpawnerProps",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LostCityStage::LostCityStage",
           "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStageProperties::LostCityStageProperties",
+          "name": "LostCityStage::LostCityStage",
           "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25713,19 +25713,19 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStage::LostCityStage",
+          "name": "LostCityStageProperties::LostCityStageProperties",
           "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStage::LostCityStage",
+          "name": "LostCityStageProperties::LostCityStageProperties",
           "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStageProperties::StaticNew",
+          "name": "LostCityStage::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25737,31 +25737,25 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStage::StaticNew",
-          "size": 44,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "ParachuteRainZombieSpawnerProps::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStageProperties::~LostCityStageProperties",
+          "name": "LostCityStageProperties::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LostCityStage::~LostCityStage",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
           "name": "ParachuteRainZombieSpawner::~ParachuteRainZombieSpawner",
-          "size": 36,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "LostCityStage::~LostCityStage",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25774,12 +25768,18 @@
         },
         {
           "name": "LostCityStageProperties::~LostCityStageProperties",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LostCityStage::~LostCityStage",
           "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStageProperties::~LostCityStageProperties",
+          "name": "LostCityStage::~LostCityStage",
           "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25792,18 +25792,6 @@
         },
         {
           "name": "ParachuteRainZombieSpawner::~ParachuteRainZombieSpawner",
-          "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "LostCityStage::~LostCityStage",
-          "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "LostCityStage::~LostCityStage",
           "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -25821,14 +25809,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStageProperties::IsAbstract",
-          "size": 8,
+          "name": "LostCityStageProperties::~LostCityStageProperties",
+          "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "ParachuteRainZombieSpawner::IsAbstract",
-          "size": 8,
+          "name": "LostCityStageProperties::~LostCityStageProperties",
+          "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25845,20 +25833,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStageProperties::GetModuleClass",
-          "size": 4,
+          "name": "ParachuteRainZombieSpawner::IsAbstract",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "LostCityStageProperties::GetClass",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "ParachuteRainZombieSpawner::GetClass",
-          "size": 4,
+          "name": "LostCityStageProperties::IsAbstract",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25876,6 +25858,24 @@
         },
         {
           "name": "ParachuteRainZombieSpawnerProps::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParachuteRainZombieSpawner::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LostCityStageProperties::GetModuleClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LostCityStageProperties::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26013,13 +26013,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RaidingPartyZombieSpawnerProps::StaticClassInit",
+          "name": "PirateStage::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PirateStage::StaticClassInit",
+          "name": "RaidingPartyZombieSpawnerProps::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26031,13 +26031,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RaidingPartyZombieSpawner::StaticClassInit",
+          "name": "PirateStageProperties::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PirateStageProperties::StaticClassInit",
+          "name": "RaidingPartyZombieSpawner::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26061,13 +26061,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RaidingPartyZombieSpawnerProps::StaticGetClass",
+          "name": "PirateStage::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PirateStage::StaticGetClass",
+          "name": "RaidingPartyZombieSpawnerProps::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26079,13 +26079,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RaidingPartyZombieSpawner::StaticGetClass",
+          "name": "PirateStageProperties::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PirateStageProperties::StaticGetClass",
+          "name": "RaidingPartyZombieSpawner::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26205,13 +26205,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RaidingPartyZombieSpawnerProps::StaticNew",
+          "name": "PirateStage::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PirateStage::StaticNew",
+          "name": "RaidingPartyZombieSpawnerProps::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26223,13 +26223,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RaidingPartyZombieSpawner::StaticNew",
+          "name": "PirateStageProperties::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PirateStageProperties::StaticNew",
+          "name": "RaidingPartyZombieSpawner::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26241,13 +26241,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RaidingPartyZombieSpawnerProps::~RaidingPartyZombieSpawnerProps",
+          "name": "PirateStage::~PirateStage",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PirateStage::~PirateStage",
+          "name": "RaidingPartyZombieSpawnerProps::~RaidingPartyZombieSpawnerProps",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26259,13 +26259,13 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RaidingPartyZombieSpawner::~RaidingPartyZombieSpawner",
+          "name": "PirateStageProperties::~PirateStageProperties",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PirateStageProperties::~PirateStageProperties",
+          "name": "RaidingPartyZombieSpawner::~RaidingPartyZombieSpawner",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26301,12 +26301,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "RaidingPartyZombieSpawnerProps::IsAbstract",
-          "size": 8,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "PirateStage::ShowGuides",
           "size": 8,
           "matched": true,
@@ -26319,7 +26313,19 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "RaidingPartyZombieSpawnerProps::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "BoardRegionDeepWater::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PirateStageProperties::IsAbstract",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26337,8 +26343,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PirateStageProperties::IsAbstract",
-          "size": 8,
+          "name": "PirateStage::GetClass",
+          "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -26355,25 +26361,7 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PirateStage::GetClass",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "BoardRegionDeepWater::GetClass",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "RaidingPartyZombieSpawner::WaveEnd",
-          "size": 4,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "RaidingPartyZombieSpawner::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26386,6 +26374,18 @@
         },
         {
           "name": "PirateStageProperties::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RaidingPartyZombieSpawner::WaveEnd",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RaidingPartyZombieSpawner::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26595,25 +26595,25 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "WestStage::StaticClassInit",
-          "size": 180,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "WestStageProperties::StaticClassInit",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "WestStage::StaticGetClass",
-          "size": 124,
+          "name": "WestStage::StaticClassInit",
+          "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
           "name": "WestStageProperties::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WestStage::StaticGetClass",
           "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26625,18 +26625,6 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "WestStage::WestStage",
-          "size": 48,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "WestStage::WestStage",
-          "size": 48,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
           "name": "WestStageProperties::WestStageProperties",
           "size": 48,
           "matched": true,
@@ -26649,8 +26637,14 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "WestStage::StaticNew",
-          "size": 44,
+          "name": "WestStage::WestStage",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WestStage::WestStage",
+          "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -26661,8 +26655,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "WestStage::~WestStage",
-          "size": 36,
+          "name": "WestStage::StaticNew",
+          "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -26674,6 +26668,18 @@
         },
         {
           "name": "WestStage::~WestStage",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WestStageProperties::~WestStageProperties",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WestStageProperties::~WestStageProperties",
           "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -26685,20 +26691,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "WestStageProperties::~WestStageProperties",
+          "name": "WestStage::~WestStage",
           "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "WestStageProperties::~WestStageProperties",
-          "size": 20,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "WestStage::IsAbstract",
-          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -26709,8 +26703,8 @@
           "fuzzy_match_percent": 100.0
         },
         {
-          "name": "WestStage::GetClass",
-          "size": 4,
+          "name": "WestStage::IsAbstract",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -26722,6 +26716,12 @@
         },
         {
           "name": "WestStageProperties::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WestStage::GetClass",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
