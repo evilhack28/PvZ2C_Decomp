@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-04T18:34:17+00:00",
+  "generated": "2026-09-04T19:50:02+00:00",
   "measures": {
-    "total_functions": 63749,
-    "matched_functions": 1352,
-    "matched_functions_percent": 2.12,
-    "total_code": 11240312,
-    "matched_code": 143780,
-    "matched_code_percent": 1.28,
-    "fuzzy_match_percent": 1.4,
-    "started_units": 47,
+    "total_functions": 63761,
+    "matched_functions": 1452,
+    "matched_functions_percent": 2.28,
+    "total_code": 11240504,
+    "matched_code": 151344,
+    "matched_code_percent": 1.35,
+    "fuzzy_match_percent": 1.47,
+    "started_units": 59,
     "total_units": 2745,
-    "started_code": 409704,
-    "started_matched_code": 143780,
-    "started_percent": 35.09,
+    "started_code": 418016,
+    "started_matched_code": 151344,
+    "started_percent": 36.21,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -427,12 +427,38 @@
     {
       "name": "src/PvZ2/Connectivity.cpp",
       "total_code": 220,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 220,
+      "matched_code_percent": 100.0,
       "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "Connectivity::IsConnectedOnEthernet",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Connectivity::IsConnectedOnWWAN",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Connectivity::IsConnectedOnWifi",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Connectivity::IsConnected",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/ConsoleApp.cpp",
@@ -647,12 +673,68 @@
     {
       "name": "src/PvZ2/DNode/DRef.cpp",
       "total_code": 216,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 160,
+      "matched_code_percent": 74.07,
       "total_functions": 9,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 7,
+      "matched_functions_percent": 77.78,
+      "fuzzy_match_percent": 74.07,
+      "functions": [
+        {
+          "name": "DRef::DRef",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "DRef::DRef",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "DRef::unref",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DRef::~DRef",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DRef::DRef",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DRef::DRef",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DRef::ref",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DRef::~DRef",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DRef::~DRef",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/DNode/DScrollView.cpp",
@@ -979,12 +1061,68 @@
     {
       "name": "src/PvZ2/DebugLog.cpp",
       "total_code": 992,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 992,
+      "matched_code_percent": 100.0,
       "total_functions": 9,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 9,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "DebugLog::LogFile",
+          "size": 248,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DebugLog::ReadFile",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DebugLog::DebugLog",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DebugLog::DebugLog",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DebugLog::GetExternalFolder",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DebugLog::~DebugLog",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DebugLog::~DebugLog",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DebugLog::~DebugLog",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DebugLog::SendLog",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/DefaultWorldMapEditor.cpp",
@@ -1069,12 +1207,38 @@
     {
       "name": "src/PvZ2/FileUtil.cpp",
       "total_code": 612,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 532,
+      "matched_code_percent": 86.93,
       "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 3,
+      "matched_functions_percent": 75.0,
+      "fuzzy_match_percent": 99.38,
+      "functions": [
+        {
+          "name": "FileUtil::openFile",
+          "size": 80,
+          "matched": false,
+          "fuzzy_match_percent": 95.24
+        },
+        {
+          "name": "FileUtil::readFile",
+          "size": 284,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FileUtil::getTimeStr",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FileUtil::writeFile",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/FishingModuleEditor.cpp",
@@ -11027,12 +11191,32 @@
     {
       "name": "src/PvZ2/GameResourceUtil.cpp",
       "total_code": 492,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 92,
+      "matched_code_percent": 18.7,
       "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 1,
+      "matched_functions_percent": 33.33,
+      "fuzzy_match_percent": 78.05,
+      "functions": [
+        {
+          "name": "GameResourceUtil::GetFrameImageById",
+          "size": 204,
+          "matched": false,
+          "fuzzy_match_percent": 66.67
+        },
+        {
+          "name": "GameResourceUtil::GetImageById",
+          "size": 196,
+          "matched": false,
+          "fuzzy_match_percent": 79.59
+        },
+        {
+          "name": "GameResourceUtil::GetFrameImageByRare",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/GameStateTransitionController.cpp",
@@ -11087,12 +11271,32 @@
     {
       "name": "src/PvZ2/GuessRatio.cpp",
       "total_code": 52,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 52,
+      "matched_code_percent": 100.0,
       "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 3,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "GuessRatio::GetResult",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GuessRatio::GuessRatio",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GuessRatio::GuessRatio",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/HeroPlant.cpp",
@@ -11217,12 +11421,26 @@
     {
       "name": "src/PvZ2/InstallTracker.cpp",
       "total_code": 724,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 724,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "InstallTracker::SetInstallDate",
+          "size": 392,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "InstallTracker::GetDaysSinceInstall",
+          "size": 332,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/JamApplier.cpp",
@@ -11487,12 +11705,92 @@
     {
       "name": "src/PvZ2/OfflineDataPersistor.cpp",
       "total_code": 1660,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1448,
+      "matched_code_percent": 87.23,
       "total_functions": 13,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 12,
+      "matched_functions_percent": 92.31,
+      "fuzzy_match_percent": 96.63,
+      "functions": [
+        {
+          "name": "OfflineDataPersistor::IsFileExist",
+          "size": 212,
+          "matched": false,
+          "fuzzy_match_percent": 73.58
+        },
+        {
+          "name": "OfflineDataPersistor::Save",
+          "size": 472,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineDataPersistor::Load",
+          "size": 324,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineDataPersistor::OfflineDataPersistor",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineDataPersistor::OfflineDataPersistor",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineDataPersistor::getOfflineFilename",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineDataPersistor::LoadWithNotify",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineDataPersistor::loadTableFromFile",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineDataPersistor::saveTableToFile",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineDataPersistor::~OfflineDataPersistor",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineDataPersistor::notifyDataLoaded",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineDataPersistor::~OfflineDataPersistor",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineDataPersistor::~OfflineDataPersistor",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Outros.cpp",
@@ -12997,12 +13295,86 @@
     {
       "name": "src/PvZ2/PlayerList.cpp",
       "total_code": 212,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 212,
+      "matched_code_percent": 100.0,
       "total_functions": 12,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "PlayerList::Create",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerList::Get",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerList::IsBoundToFacebook",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerList::PlayerList",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerList::PlayerList",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerList::~PlayerList",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerList::~PlayerList",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerList::Load",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerList::LoadViaFacebook",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerList::LogoutFacebook",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerList::Remove",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerList::Rename",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/PneumaticSeedBank.cpp",
@@ -14155,12 +14527,62 @@
     {
       "name": "src/PvZ2/SuperSonicAdProviderAndroid.cpp",
       "total_code": 240,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 240,
+      "matched_code_percent": 100.0,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "SuperSonicAdProviderAndroid::SuperSonicAdProviderAndroid",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SuperSonicAdProviderAndroid::SuperSonicAdProviderAndroid",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SuperSonicAdProviderAndroid::~SuperSonicAdProviderAndroid",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SuperSonicAdProviderAndroid::~SuperSonicAdProviderAndroid",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SuperSonicAdProviderAndroid::~SuperSonicAdProviderAndroid",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SuperSonicAdProviderAndroid::Initialize",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SuperSonicAdProviderAndroid::doShowAdvertisements",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SuperSonicAdProviderAndroid::onAppResumeFocus",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/TargetInfoProps.cpp",
@@ -22106,23 +22528,261 @@
     },
     {
       "name": "src/PvZ2/managers/AndroidAchievementDriverMgr.cpp",
-      "total_code": 1080,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 12,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 1176,
+      "matched_code": 1176,
+      "matched_code_percent": 100.0,
+      "total_functions": 18,
+      "matched_functions": 18,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "AndroidAchievementDriverMgr::SetAchievement",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidAchievementDriverMgr::BindNativeMethods",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidAchievementDriverMgr::BindJavaMethods",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidAchievementDriverMgr::AndroidAchievementDriverMgr",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidAchievementDriverMgr::AndroidAchievementDriverMgr",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidAchievementDriverMgr::SetAchievementCallback",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidAchievementDriverMgr::QueryAllAchievement",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidAchievementDriverMgr::Initialize",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INewAchievementDriver::CreateNewAchievementDriver",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidAchievementDriverMgr::~AndroidAchievementDriverMgr",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidAchievementDriverMgr::~AndroidAchievementDriverMgr",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidAchievementDriverMgr::~AndroidAchievementDriverMgr",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidAchievementDriverMgr::QueryAllAchievementCallback",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INewAchievementDriver::INewAchievementDriver",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INewAchievementDriver::INewAchievementDriver",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INewAchievementDriver::~INewAchievementDriver",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INewAchievementDriver::~INewAchievementDriver",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INewAchievementDriver::~INewAchievementDriver",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/managers/AndroidShareDriverMgr.cpp",
-      "total_code": 1620,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 15,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 1716,
+      "matched_code": 1716,
+      "matched_code_percent": 100.0,
+      "total_functions": 21,
+      "matched_functions": 21,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "AndroidShareDriverMgr::SaveScreenImageToLocal",
+          "size": 276,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::ShareCallback",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::BindNativeMethods",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::BindJavaMethods",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::SaveScreenImageToGallery",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::Share",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::AndroidShareDriverMgr",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::AndroidShareDriverMgr",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::DeleteLocalImage",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::Initialize",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::SaveCallback",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IShareDriver::CreateShareDriver",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::~AndroidShareDriverMgr",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::~AndroidShareDriverMgr",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::~AndroidShareDriverMgr",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IShareDriver::IShareDriver",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IShareDriver::IShareDriver",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AndroidShareDriverMgr::IsClientInstalled",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IShareDriver::~IShareDriver",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IShareDriver::~IShareDriver",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IShareDriver::~IShareDriver",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/managers/AndroidViewContainerMgr.cpp",
