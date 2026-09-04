@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-04T15:44:49+00:00",
+  "generated": "2026-09-04T15:52:41+00:00",
   "measures": {
     "total_functions": 62113,
-    "matched_functions": 1265,
+    "matched_functions": 1268,
     "matched_functions_percent": 2.04,
     "total_code": 11226052,
-    "matched_code": 138808,
+    "matched_code": 138876,
     "matched_code_percent": 1.24,
     "fuzzy_match_percent": 1.36,
-    "started_units": 39,
+    "started_units": 40,
     "total_units": 2745,
-    "started_code": 390376,
-    "started_matched_code": 138808,
-    "started_percent": 35.56,
+    "started_code": 390444,
+    "started_matched_code": 138876,
+    "started_percent": 35.57,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -4533,12 +4533,32 @@
     {
       "name": "src/PvZ2/UUIDCreator.cpp",
       "total_code": 68,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 68,
+      "matched_code_percent": 100.0,
       "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 3,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "UUIDCreator::Create",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UUIDCreator::UUIDCreator",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UUIDCreator::UUIDCreator",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Ultra.cpp",
