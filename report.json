@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-04T15:52:41+00:00",
+  "generated": "2026-09-04T17:44:16+00:00",
   "measures": {
     "total_functions": 62113,
-    "matched_functions": 1268,
-    "matched_functions_percent": 2.04,
+    "matched_functions": 1278,
+    "matched_functions_percent": 2.06,
     "total_code": 11226052,
-    "matched_code": 138876,
+    "matched_code": 139128,
     "matched_code_percent": 1.24,
     "fuzzy_match_percent": 1.36,
-    "started_units": 40,
+    "started_units": 41,
     "total_units": 2745,
-    "started_code": 390444,
-    "started_matched_code": 138876,
-    "started_percent": 35.57,
+    "started_code": 390696,
+    "started_matched_code": 139128,
+    "started_percent": 35.61,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -3763,12 +3763,74 @@
     {
       "name": "src/PvZ2/RvsChecker.cpp",
       "total_code": 252,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 252,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "RvsChecker::ServiceRequestCompleted",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RvsChecker::RvsChecker",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RvsChecker::RvsChecker",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RvsChecker::~RvsChecker",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RvsChecker::ServiceRequestFailed",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RvsChecker::StartCheckRvsStat",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RvsChecker::ServiceRequestCompleted",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RvsChecker::ServiceRequestCompleted",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RvsChecker::~RvsChecker",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RvsChecker::~RvsChecker",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/ScaledApp.cpp",
