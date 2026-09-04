@@ -246,32 +246,27 @@ def _tail(addend):
     return f'+{addend}' if addend else ''
 
 
-_SYMCACHE = {}
-_OBJCACHE = {}
+def _addr_table(elf, attr, types):
+    """address -> names, cached on the Elf itself. Keying this by id() handed
+    one object file another's table once CPython reused the address."""
+    table = getattr(elf, attr, None)
+    if table is None:
+        table = {}
+        for n, v, s, shndx, t in elf.symbols():
+            if shndx and t in types:
+                table.setdefault(v, set()).add(n)
+        setattr(elf, attr, table)
+    return table
 
 
 def _syms_at(elf, addr):
     """Every function name at an address. Identical code folding gives one
     function many names, so a branch target compares as a set."""
-    table = _SYMCACHE.get(id(elf))
-    if table is None:
-        table = {}
-        for n, v, s, shndx, t in elf.symbols():
-            if shndx and t == 2:
-                table.setdefault(v, set()).add(n)
-        _SYMCACHE[id(elf)] = table
-    return table.get(addr, set())
+    return _addr_table(elf, '_asmdiff_funcs', (2,)).get(addr, set())
 
 
 def _any_sym_at(elf, addr):
-    table = _OBJCACHE.get(id(elf))
-    if table is None:
-        table = {}
-        for n, v, s, shndx, t in elf.symbols():
-            if shndx and t in (1, 2):
-                table.setdefault(v, set()).add(n)
-        _OBJCACHE[id(elf)] = table
-    return table.get(addr, set())
+    return _addr_table(elf, '_asmdiff_objs', (1, 2)).get(addr, set())
 
 
 def _name(elf, addr):
