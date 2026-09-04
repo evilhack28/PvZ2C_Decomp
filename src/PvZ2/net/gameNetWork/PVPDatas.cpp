@@ -1,7 +1,16 @@
+#include <ctime>
 #include <string>
+#include <utility>
 
 typedef long long int64;
 typedef int int32;
+
+class LawnApp
+{
+public:
+    time_t GetRealServerTime();
+};
+extern LawnApp *gLawnApp;
 
 struct DefenderInfo
 {
@@ -112,11 +121,48 @@ struct PVPCurrencyData
     int m_PVPCup = 0;
 };
 
+int S2C_PVP_BigMapPVPInfo::GetHouseID()
+{
+    if (zoneId == 1)
+        return zonePos - 1;
+    return (zoneId - 2) * 3 + zonePos + 4;
+}
+
+bool S2C_PVP_BigMapPVPInfo::IsEvilDavid()
+{
+    return iDavidMaxCompleteCount != 0;
+}
+
+bool S2C_PVP_BigMapPVPInfo::CheckTime()
+{
+    if (status == STATUS_ATK_SUC || status == STATUS_EVIL_DAVID)
+    {
+        time_t now = gLawnApp->GetRealServerTime();
+        int t = time;
+        if (now > 0 && t > 0 && now >= t)
+        {
+            time = 0;
+            return true;
+        }
+    }
+    return false;
+}
+
+int S2C_PVP_BigMapInfo::GetHouseID()
+{
+    if (zoneId == 1)
+        return zonePos - 1;
+    return (zoneId - 2) * 3 + zonePos + 4;
+}
+
 template <typename T>
 static void emit()
 {
     static T instance;
-    (void) instance;
+    static T copied(instance);
+    static T moved(std::move(copied));
+    instance = moved;
+    instance = std::move(moved);
 }
 
 void _pvpdatas_emit()
