@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-05T19:31:25+00:00",
+  "generated": "2026-09-05T22:47:48+00:00",
   "measures": {
-    "total_functions": 77074,
-    "matched_functions": 2156,
-    "matched_functions_percent": 2.8,
-    "total_code": 12170868,
-    "matched_code": 182804,
-    "matched_code_percent": 1.5,
-    "fuzzy_match_percent": 1.68,
-    "started_units": 135,
-    "total_units": 2745,
-    "started_code": 1383308,
-    "started_matched_code": 182804,
-    "started_percent": 13.21,
+    "total_functions": 77199,
+    "matched_functions": 2236,
+    "matched_functions_percent": 2.9,
+    "total_code": 12186588,
+    "matched_code": 187216,
+    "matched_code_percent": 1.54,
+    "fuzzy_match_percent": 1.72,
+    "started_units": 137,
+    "total_units": 2747,
+    "started_code": 1399028,
+    "started_matched_code": 187216,
+    "started_percent": 13.38,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -136588,6 +136588,780 @@
         },
         {
           "name": "TextureRestitchBuffer::~TextureRestitchBuffer",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/SexyAppFramework/Widget.cpp",
+      "total_code": 6916,
+      "matched_code": 2940,
+      "matched_code_percent": 42.51,
+      "total_functions": 72,
+      "matched_functions": 56,
+      "matched_functions_percent": 77.78,
+      "fuzzy_match_percent": 44.59,
+      "functions": [
+        {
+          "name": "Sexy::Widget::Layout",
+          "size": 808,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WriteCenteredLine",
+          "size": 424,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WidgetRemovedHelper",
+          "size": 364,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WriteCenteredLine",
+          "size": 332,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WriteWordWrapped",
+          "size": 308,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WriteNumberFromStrip",
+          "size": 284,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WriteString",
+          "size": 260,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WriteCenteredLine",
+          "size": 200,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WriteCenteredLine",
+          "size": 180,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::GetWordWrappedHeight",
+          "size": 128,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WriteWordWrapped",
+          "size": 124,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WriteString",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WriteWordWrapped",
+          "size": 112,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::WriteCenteredLine",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::KeyDown",
+          "size": 80,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Widget::GetColor",
+          "size": 148,
+          "matched": false,
+          "fuzzy_match_percent": 97.3
+        },
+        {
+          "name": "Sexy::Widget::SetColors",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::SetColors",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::MouseUp",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::Resize",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::SetDisabled",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::Widget",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::Widget",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::GetColor",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::SetColor",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::SetVisible",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::MouseDown",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::GetInsetRect",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::~Widget",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::~Widget",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::Contains",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::Translate",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::Resize",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::TouchBegan",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::TouchEnded",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::GetNumDigits",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::TouchMoved",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::Move",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::ShowFinger",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::~Widget",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::DrawOverlay",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::GetWordWrappedHeight",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::DeferOverlay",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::GotFocus",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::IsPointVisible",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::LostFocus",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::ShouldReceiveAllOverTouchEvents",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::WantsFocus",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::Draw",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::DrawOverlay",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::KeyChar",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::KeyUp",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::MouseDown",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::MouseDrag",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::MouseEnter",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::MouseLeave",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::MouseMove",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::MouseUp",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::MouseUp",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::MouseWheel",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::OnGestureFlick",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::OnGestureLongPress",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::OnGesturePinch",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::OrderInManagerChanged",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::TouchesCanceled",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::Update",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::UpdateF",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/SexyAppFramework/WidgetManager.cpp",
+      "total_code": 8804,
+      "matched_code": 1472,
+      "matched_code_percent": 16.72,
+      "total_functions": 53,
+      "matched_functions": 24,
+      "matched_functions_percent": 45.28,
+      "fuzzy_match_percent": 28.75,
+      "functions": [
+        {
+          "name": "Sexy::WidgetManager::DrawScreen",
+          "size": 568,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::TouchEnded",
+          "size": 552,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::TouchMoved",
+          "size": 528,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::DrawWidgetsTo",
+          "size": 448,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::FlushDeferredOverlayWidgets",
+          "size": 436,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::MouseDown",
+          "size": 428,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::TouchBegan",
+          "size": 416,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::MouseDrag",
+          "size": 292,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::RemoveBaseModal",
+          "size": 280,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::MouseUp",
+          "size": 276,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::OnGesturePinch",
+          "size": 164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::OnGestureFlick",
+          "size": 152,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::OnGestureLongPress",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::DeferOverlay",
+          "size": 136,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::LostFocus",
+          "size": 128,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::RehupMouse",
+          "size": 128,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::UpdateFrame",
+          "size": 128,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::GetAnyWidgetAt",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::SetFocus",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::UpdateFrameF",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::GotFocus",
+          "size": 56,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::MouseWheel",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::WidgetManager::WidgetManager",
+          "size": 404,
+          "matched": false,
+          "fuzzy_match_percent": 70.3
+        },
+        {
+          "name": "Sexy::WidgetManager::WidgetManager",
+          "size": 404,
+          "matched": false,
+          "fuzzy_match_percent": 70.3
+        },
+        {
+          "name": "Sexy::WidgetManager::DoMouseUps",
+          "size": 272,
+          "matched": false,
+          "fuzzy_match_percent": 37.5
+        },
+        {
+          "name": "Sexy::WidgetManager::SetBaseModal",
+          "size": 256,
+          "matched": false,
+          "fuzzy_match_percent": 62.5
+        },
+        {
+          "name": "Sexy::WidgetManager::AddBaseModal",
+          "size": 168,
+          "matched": false,
+          "fuzzy_match_percent": 76.19
+        },
+        {
+          "name": "Sexy::WidgetManager::KeyChar",
+          "size": 96,
+          "matched": false,
+          "fuzzy_match_percent": 41.67
+        },
+        {
+          "name": "Sexy::WidgetManager::KeyUp",
+          "size": 80,
+          "matched": false,
+          "fuzzy_match_percent": 76.19
+        },
+        {
+          "name": "Sexy::WidgetManager::MousePosition",
+          "size": 256,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::DisableWidget",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::RemapMouse",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::MouseEnter",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::MouseLeave",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::InitModalFlags",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::KeyDown",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::MouseMove",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::~WidgetManager",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::~WidgetManager",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::TouchesCanceled",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::DoMouseUps",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::MouseExit",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::Resize",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::RemovePopupCommandWidget",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::GetWidgetAt",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::~WidgetManager",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::GetWidgetFlags",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::SetPopupCommandWidget",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::IsLeftButtonDown",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::IsMiddleButtonDown",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::IsRightButtonDown",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::AddBaseModal",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetManager::FreeResources",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
