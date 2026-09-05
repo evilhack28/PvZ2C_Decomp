@@ -16,6 +16,11 @@ DRef::DRef()
 	m_refCount = 1;
 }
 
+DRef::DRef(const DRef &other)
+{
+	m_refCount = other.m_refCount;
+}
+
 DRef::~DRef()
 {
 }
