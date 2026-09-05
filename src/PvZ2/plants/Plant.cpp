@@ -8,6 +8,9 @@
 #include "Plant.h"
 
 #include "Board.h"
+#include "LawnApp.h"
+#include "LevelModuleManager.h"
+#include "ProtectThePlantChallenge.h"
 #include "BoardPropertySheet.h"
 #include "BoardConstants.h"
 #include "StageModule.h"
@@ -679,6 +682,13 @@ void Plant::registerForEvents()
 {
 }
 
+void Plant::constructAndSetFrameworkFromType()
+{
+	m_plantFramework = Sexy::RtClass::StaticGetClassNamed(((const PlantType*)m_type)->PlantFramework.c_str())->New()->Cast<PlantFramework>();
+	m_plantFramework->m_plant = this;
+	m_plantFramework->registerForEvents();
+}
+
 void Plant::UpdateDamageStates()
 {
 	if (m_damageStates != 0)
@@ -907,6 +917,12 @@ void Plant::SetDamageFlash(float i_duration)
 }
 
 /////////////// Plant -- misc small ///////////////
+
+float Plant::GetTotalDamageRate()
+{
+	float boostSum = m_uBoostInfo.m_uBoostDamageBySun + m_uBoostInfo.m_uBoostDamageGlobal + m_uBoostInfo.m_uBoostDamageTotal + m_extraNormalDamage;
+	return boostSum * m_extraSpecialDamage * GetExtraDPSmodifier() * m_awakenDamage;
+}
 
 float Plant::GetDamageConstValue()
 {
@@ -1309,6 +1325,108 @@ void Plant::CheckUBoost()
 		float total = m_uBoostInfo.m_uBoostDamagePerHit + m_uBoostInfo.m_uBoostDamageTotal;
 		m_uBoostInfo.m_uBoostDamageTotal = eastl::min_alt(total, m_uBoostInfo.m_uBoostDamageLimit);
 	}
+}
+
+void Plant::TakeArrowCure(int value)
+{
+	float newHealth = __builtin_fminf((float)value + m_PlantHealth, m_PlantMaxHealth);
+
+	m_PlantLastHealth = m_PlantHealth;
+	m_PlantHealth = newHealth;
+
+	AttachedEffect& effect = (AttachedEffect&)m_attachedEffects.FindOrCreate("cureup");
+	effect.InitializeWithAnimation(GetPAMByName("POPANIM_EFFECTS_PEACH_CURE_UP"));
+	effect.PlayAnimAndDestroy("peach_effect");
+	effect.Attach(this, Sexy::SexyVector3(0.0f, 0.0f, 0.0f), 1);
+
+	UpdateDamageStates();
+}
+
+void Plant::SetAvatarEnable(bool bAvatar)
+{
+	m_bAvatar = bAvatar;
+
+	if (!bAvatar)
+		m_avatarIndex = -1;
+
+	if (GetAvatarEnable())
+	{
+		m_pCachedPlantAnimRig->SetAvatarIndex(m_avatarIndex);
+		m_pCachedPlantAnimRig->ShowAvatarLayers(m_type, E_AVATAR_NORMAL);
+	}
+	else
+	{
+		m_pCachedPlantAnimRig->SetAvatarIndex(m_avatarIndex);
+		m_pCachedPlantAnimRig->ShowAvatarLayers(m_type, E_AVATAR_NONE);
+	}
+}
+
+void Plant::TakeSmashAttack(Sexy::RtWeakPtr<Zombie> i_srcZombie)
+{
+	m_plantFramework->TakeSmashAttack(i_srcZombie);
+
+	if (IsDestroyed())
+		gMessageRouter->Broadcast(Message::PlantSmashedToDeath, this);
+}
+
+void Plant::TakeGridItemSmashAttack(Sexy::RtWeakPtr<GridItem> i_srcGridItem)
+{
+	m_plantFramework->TakeGridItemSmashAttack(i_srcGridItem);
+
+	if (IsDestroyed())
+		gMessageRouter->Broadcast(Message::PlantSmashedToDeath, this);
+}
+
+bool Plant::IsInPlantDefence()
+{
+	if (!IsProtect())
+		return false;
+
+	ProtectThePlantChallengeModule* module = gLawnApp->m_board->m_levelModuleManager->GetModuleByClass<ProtectThePlantChallengeModule>();
+	if (!module)
+		return false;
+
+	ProtectThePlantChallengeProperties* props = module->GetPropsPtr()->Cast<ProtectThePlantChallengeProperties>();
+	return props->IsPlantDefenceMode;
+}
+
+void Plant::SetPlantAvatarValue(int iAvatar)
+{
+	if (m_iAvatar < -1 || m_iAvatar > 2)
+		return;
+
+	m_iAvatar = iAvatar;
+
+	bool isOneOrTwo = (iAvatar == 1 || iAvatar == 2);
+	if (isOneOrTwo || iAvatar == -1)
+	{
+		SetAvatarActive(true);
+		if (isOneOrTwo)
+			SetAvatarEnable(true);
+	}
+	else
+	{
+		SetAvatarActive(false);
+	}
+}
+
+void Plant::SetBombProjectile(const Projectile* i_projectile)
+{
+	m_BombProjectile = i_projectile->GetPtr();
+}
+
+void Plant::IsImpactedByObject(Sexy::RtWeakPtr<Sexy::RtObject> i_object)
+{
+	m_plantFramework->IsImpactedByObject(i_object);
+}
+
+void Plant::HidePlantfoodAnimationEffect()
+{
+	if (m_plantFoodShine)
+		m_plantFoodShine->CancelEffect();
+
+	if (m_starPlantFoodShine)
+		m_starPlantFoodShine->CancelEffect();
 }
 
 void Plant::DisablePlantfoodAnimation()
