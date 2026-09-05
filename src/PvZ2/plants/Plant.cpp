@@ -8,6 +8,7 @@
 #include "Plant.h"
 
 #include "Board.h"
+#include "BoardTransforms.h"
 #include "LawnApp.h"
 #include "LevelModuleManager.h"
 #include "ProtectThePlantChallenge.h"
@@ -1324,6 +1325,34 @@ void Plant::CheckUBoost()
 		m_uBoostInfo.m_uBoostDisabledTime = PVZ_T() + m_uBoostInfo.m_uBoostDamageDuration;
 		float total = m_uBoostInfo.m_uBoostDamagePerHit + m_uBoostInfo.m_uBoostDamageTotal;
 		m_uBoostInfo.m_uBoostDamageTotal = eastl::min_alt(total, m_uBoostInfo.m_uBoostDamageLimit);
+	}
+}
+
+Sexy::SexyVector3 Plant::CalcProjectileTargetLocation(float i_inTime)
+{
+	const Sexy::Rect& rect = GetCollisionRect();
+	const Sexy::SexyVector3& pos = GetPosition();
+	float z = (pos.y - (float)rect.mY) - 0.333333f * (float)rect.mHeight;
+	return Sexy::SexyVector3((float)rect.GetCenter().mX, pos.y, z);
+}
+
+void Plant::SetGridLocSilent(int i_gridX, int i_gridY)
+{
+	m_column = i_gridX;
+	m_row = i_gridY;
+
+	if (gLawnApp->m_board != NULL)
+	{
+		Sexy::Point p(i_gridX, i_gridY);
+		Sexy::Point boardPos = BoardTransforms::GridToBoardSpaceUnbounded(p);
+		SetPosition(Sexy::SexyVector3((float)boardPos.mX, (float)boardPos.mY - 10.0f, GetPosition().z));
+
+		if (gLawnApp->m_board->m_roofStage)
+		{
+			Sexy::SexyVector3 pos = GetPosition();
+			pos.z = gLawnApp->m_board->calculateRoofOffsetZ(pos.x);
+			SetPosition(pos);
+		}
 	}
 }
 
