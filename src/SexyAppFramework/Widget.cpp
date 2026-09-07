@@ -65,6 +65,23 @@ void Widget::Update()
 
 void Widget::UpdateF(float theFrac) {}
 void Widget::KeyChar(SexyChar theChar) {}
+
+void Widget::KeyDown(KeyCode theKey)
+{
+	if (theKey == KEYCODE_TAB)
+	{
+		if (mWidgetManager->mKeyDown[KEYCODE_SHIFT])
+		{
+			if (mTabPrev != NULL)
+				mWidgetManager->SetFocus(mTabPrev);
+		}
+		else
+		{
+			if (mTabNext != NULL)
+				mWidgetManager->SetFocus(mTabNext);
+		}
+	}
+}
 void Widget::MouseUp(int x, int y) {}
 void Widget::MouseUp(int x, int y, int theBtnNum, int theClickCount) {}
 void Widget::MouseDown(int x, int y, int theBtnNum, int theClickCount) {}
