@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-07T00:32:51+00:00",
+  "generated": "2026-09-07T01:29:48+00:00",
   "measures": {
-    "total_functions": 77199,
-    "matched_functions": 2254,
-    "matched_functions_percent": 2.92,
-    "total_code": 12186588,
-    "matched_code": 190056,
-    "matched_code_percent": 1.56,
-    "fuzzy_match_percent": 1.76,
-    "started_units": 137,
-    "total_units": 2747,
-    "started_code": 1399028,
-    "started_matched_code": 190056,
-    "started_percent": 13.58,
+    "total_functions": 77308,
+    "matched_functions": 2318,
+    "matched_functions_percent": 3.0,
+    "total_code": 12213264,
+    "matched_code": 195708,
+    "matched_code_percent": 1.6,
+    "fuzzy_match_percent": 1.8,
+    "started_units": 138,
+    "total_units": 2748,
+    "started_code": 1425704,
+    "started_matched_code": 195708,
+    "started_percent": 13.73,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -136513,6 +136513,672 @@
         {
           "name": "Reflection::CRefAttributeVariant::operator=",
           "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/SexyAppFramework/SexyGraphics.cpp",
+      "total_code": 26676,
+      "matched_code": 5652,
+      "matched_code_percent": 21.19,
+      "total_functions": 109,
+      "matched_functions": 64,
+      "matched_functions_percent": 58.72,
+      "fuzzy_match_percent": 23.76,
+      "functions": [
+        {
+          "name": "Sexy::Graphics::DrawImageBox",
+          "size": 3296,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::PolyFillAA",
+          "size": 2592,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::WriteWordWrapped",
+          "size": 1452,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::WriteString",
+          "size": 1336,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::PolyFill",
+          "size": 1300,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageBoxStretch",
+          "size": 1184,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::InitRenderInfo",
+          "size": 744,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageTransformHelper",
+          "size": 664,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImage",
+          "size": 616,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawLineClipHelper",
+          "size": 572,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawTrianglesTexStrip",
+          "size": 452,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageMirror",
+          "size": 424,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawRect",
+          "size": 424,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImage",
+          "size": 392,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageRotatedF",
+          "size": 316,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::Graphics",
+          "size": 296,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::Graphics",
+          "size": 296,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageRotatedAndStretched",
+          "size": 268,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawStringWordWrapped",
+          "size": 268,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageMirror",
+          "size": 256,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawLineAA",
+          "size": 252,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::GetWordWrappedHeight",
+          "size": 244,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::PFInsert",
+          "size": 224,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageRotated",
+          "size": 208,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawTriangleTex",
+          "size": 204,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageCel",
+          "size": 200,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageCel",
+          "size": 200,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageRotatedF",
+          "size": 168,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageMatrixOptimized",
+          "size": 156,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageTransform",
+          "size": 156,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageTransformF",
+          "size": 156,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::PFDelete",
+          "size": 132,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawTrianglesTex",
+          "size": 124,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageMatrix2",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawTrianglesTex",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawString",
+          "size": 92,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawTrianglesTexStrip",
+          "size": 80,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawStringColor",
+          "size": 56,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImage",
+          "size": 416,
+          "matched": false,
+          "fuzzy_match_percent": 86.54
+        },
+        {
+          "name": "Sexy::Graphics::DrawLine",
+          "size": 252,
+          "matched": false,
+          "fuzzy_match_percent": 40.62
+        },
+        {
+          "name": "Sexy::GraphicsState::CopyStateFrom",
+          "size": 196,
+          "matched": false,
+          "fuzzy_match_percent": 69.39
+        },
+        {
+          "name": "Sexy::Graphics::PFCompareInd",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 84.62
+        },
+        {
+          "name": "Sexy::Graphics::SetScale",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 77.78
+        },
+        {
+          "name": "Sexy::Graphics::PFCompareActive",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 66.67
+        },
+        {
+          "name": "Sexy::Graphics::CalcFinalColor",
+          "size": 424,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::FillRect",
+          "size": 248,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImage",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::SetClipRect",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageMatrix",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageMatrix2",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageF",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::GraphicsState::GraphicsState",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::GraphicsState::GraphicsState",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::GraphicsState::GraphicsState",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::GraphicsState::GraphicsState",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::ClearRect",
+          "size": 188,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::PushState",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::Graphics",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::Graphics",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageMirror",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageMatrix",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageMatrix2",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::ClipRect",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::ClearClipRect",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageBox",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageBoxStretch",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageF",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::GetImageColor",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::PopState",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::~Graphics",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::~Graphics",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::GetFinalColor",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::GraphicsState::GraphicsState",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::GraphicsState::GraphicsState",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::PushColorMult",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::PopColorMult",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::SetAsCurrentContext",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::CopyIntoImage",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::StringWidth",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::Translate",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::~Graphics",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageRotated",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::TranslateF",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::ClearRect",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::ClipRect",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawRect",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::FillRect",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::SetClipRect",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageCel",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageCel",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::SetColor",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageTransform",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageTransformF",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::Get3D",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::GetColor",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::GetColorizeImages",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::GetDrawMode",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::GetFastStretch",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::GetFont",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::GetLinearBlend",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::SetColorizeImages",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::SetDrawMode",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::SetFastStretch",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::SetFont",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::SetLinearBlend",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::GraphicsState::~GraphicsState",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::GraphicsState::~GraphicsState",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }

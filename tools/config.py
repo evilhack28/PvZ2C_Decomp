@@ -50,7 +50,7 @@ CXXFLAGS = [
     # uses three adrp/add pairs for three statics one block apart.
     '-fno-section-anchors',
     '-funwind-tables', '-fstack-protector-strong', '-fno-math-errno',
-    '-DANDROID', '-DNDEBUG', '-DRELEASEFINAL',
+    '-DANDROID', '-DNDEBUG', '-DRELEASEFINAL', '-DOPTIMIZE_ANIM_DRAW',
     '-DPRIME_FOR_PVZ2', '-DWANTS_PRIMETEXT', '-DWIDGETS_USE_PRIMETEXT',
     '-DSUPPORT_WWISE', '-DWANTS_WWISE_ENABLED',
     '-D_USE_WIDE_STRING',
