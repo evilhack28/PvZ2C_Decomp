@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-07T01:29:48+00:00",
+  "generated": "2026-09-07T02:56:35+00:00",
   "measures": {
-    "total_functions": 77308,
-    "matched_functions": 2318,
-    "matched_functions_percent": 3.0,
-    "total_code": 12213264,
-    "matched_code": 195708,
-    "matched_code_percent": 1.6,
-    "fuzzy_match_percent": 1.8,
-    "started_units": 138,
-    "total_units": 2748,
-    "started_code": 1425704,
-    "started_matched_code": 195708,
-    "started_percent": 13.73,
+    "total_functions": 77355,
+    "matched_functions": 2364,
+    "matched_functions_percent": 3.06,
+    "total_code": 12221968,
+    "matched_code": 202536,
+    "matched_code_percent": 1.66,
+    "fuzzy_match_percent": 1.9,
+    "started_units": 139,
+    "total_units": 2749,
+    "started_code": 1434408,
+    "started_matched_code": 202536,
+    "started_percent": 14.12,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -14463,18 +14463,18 @@
     {
       "name": "src/PvZ2/PuzzleTipUtil.cpp",
       "total_code": 428,
-      "matched_code": 428,
-      "matched_code_percent": 100.0,
+      "matched_code": 184,
+      "matched_code_percent": 42.99,
       "total_functions": 3,
-      "matched_functions": 3,
-      "matched_functions_percent": 100.0,
-      "fuzzy_match_percent": 100.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 66.67,
+      "fuzzy_match_percent": 98.13,
       "functions": [
         {
           "name": "PuzzleTipUtil::PopTip",
           "size": 244,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
+          "matched": false,
+          "fuzzy_match_percent": 96.72
         },
         {
           "name": "PuzzleTipUtil::CreateTipRect",
@@ -136521,12 +136521,12 @@
     {
       "name": "src/SexyAppFramework/SexyGraphics.cpp",
       "total_code": 26676,
-      "matched_code": 5652,
-      "matched_code_percent": 21.19,
+      "matched_code": 7600,
+      "matched_code_percent": 28.49,
       "total_functions": 109,
-      "matched_functions": 64,
-      "matched_functions_percent": 58.72,
-      "fuzzy_match_percent": 23.76,
+      "matched_functions": 75,
+      "matched_functions_percent": 68.81,
+      "fuzzy_match_percent": 38.85,
       "functions": [
         {
           "name": "Sexy::Graphics::DrawImageBox",
@@ -136577,12 +136577,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::Graphics::DrawImage",
-          "size": 616,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Sexy::Graphics::DrawLineClipHelper",
           "size": 572,
           "matched": false,
@@ -136591,42 +136585,6 @@
         {
           "name": "Sexy::Graphics::DrawTrianglesTexStrip",
           "size": 452,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawImageMirror",
-          "size": 424,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawRect",
-          "size": 424,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawImage",
-          "size": 392,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawImageRotatedF",
-          "size": 316,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::Graphics",
-          "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::Graphics",
-          "size": 296,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -136643,18 +136601,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::Graphics::DrawImageMirror",
-          "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawLineAA",
-          "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Sexy::Graphics::GetWordWrappedHeight",
           "size": 244,
           "matched": false,
@@ -136667,49 +136613,7 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::Graphics::DrawImageRotated",
-          "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawTriangleTex",
-          "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawImageCel",
-          "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawImageCel",
-          "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawImageRotatedF",
-          "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Sexy::Graphics::DrawImageMatrixOptimized",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawImageTransform",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawImageTransformF",
           "size": 156,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -136721,38 +136625,8 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::Graphics::DrawTrianglesTex",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Sexy::Graphics::DrawImageMatrix2",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawTrianglesTex",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawString",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawTrianglesTexStrip",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawStringColor",
-          "size": 56,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -136764,9 +136638,39 @@
         },
         {
           "name": "Sexy::Graphics::DrawImage",
+          "size": 616,
+          "matched": false,
+          "fuzzy_match_percent": 92.86
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageMirror",
+          "size": 424,
+          "matched": false,
+          "fuzzy_match_percent": 46.23
+        },
+        {
+          "name": "Sexy::Graphics::DrawRect",
+          "size": 424,
+          "matched": false,
+          "fuzzy_match_percent": 77.36
+        },
+        {
+          "name": "Sexy::Graphics::DrawImage",
           "size": 416,
           "matched": false,
           "fuzzy_match_percent": 86.54
+        },
+        {
+          "name": "Sexy::Graphics::DrawImage",
+          "size": 392,
+          "matched": false,
+          "fuzzy_match_percent": 86.73
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageRotatedF",
+          "size": 316,
+          "matched": false,
+          "fuzzy_match_percent": 54.84
         },
         {
           "name": "Sexy::Graphics::DrawLine",
@@ -136775,10 +136679,40 @@
           "fuzzy_match_percent": 40.62
         },
         {
+          "name": "Sexy::Graphics::DrawLineAA",
+          "size": 252,
+          "matched": false,
+          "fuzzy_match_percent": 40.62
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageCel",
+          "size": 200,
+          "matched": false,
+          "fuzzy_match_percent": 33.33
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageCel",
+          "size": 200,
+          "matched": false,
+          "fuzzy_match_percent": 41.18
+        },
+        {
           "name": "Sexy::GraphicsState::CopyStateFrom",
           "size": 196,
           "matched": false,
           "fuzzy_match_percent": 69.39
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageRotatedF",
+          "size": 168,
+          "matched": false,
+          "fuzzy_match_percent": 95.24
+        },
+        {
+          "name": "Sexy::Graphics::DrawString",
+          "size": 92,
+          "matched": false,
+          "fuzzy_match_percent": 62.5
         },
         {
           "name": "Sexy::Graphics::PFCompareInd",
@@ -136801,6 +136735,24 @@
         {
           "name": "Sexy::Graphics::CalcFinalColor",
           "size": 424,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::Graphics",
+          "size": 296,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::Graphics",
+          "size": 296,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageMirror",
+          "size": 256,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -136831,6 +136783,18 @@
         {
           "name": "Sexy::Graphics::DrawImageMatrix2",
           "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageRotated",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawTriangleTex",
+          "size": 204,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -136895,6 +136859,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Sexy::Graphics::DrawImageTransform",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageTransformF",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Sexy::Graphics::DrawImageMatrix",
           "size": 152,
           "matched": true,
@@ -136937,6 +136913,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Sexy::Graphics::DrawTrianglesTex",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawTrianglesTex",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Sexy::Graphics::GetImageColor",
           "size": 116,
           "matched": true,
@@ -136957,6 +136945,18 @@
         {
           "name": "Sexy::Graphics::~Graphics",
           "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawTrianglesTexStrip",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawStringColor",
+          "size": 56,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -137698,6 +137698,300 @@
         },
         {
           "name": "Sexy::Widget::UpdateF",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/SexyAppFramework/WidgetContainer.cpp",
+      "total_code": 8704,
+      "matched_code": 5124,
+      "matched_code_percent": 58.87,
+      "total_functions": 47,
+      "matched_functions": 36,
+      "matched_functions_percent": 76.6,
+      "fuzzy_match_percent": 90.67,
+      "functions": [
+        {
+          "name": "Sexy::WidgetContainer::MarkDirtyFull",
+          "size": 708,
+          "matched": false,
+          "fuzzy_match_percent": 74.58
+        },
+        {
+          "name": "Sexy::WidgetContainer::GetWidgetAtHelper",
+          "size": 568,
+          "matched": false,
+          "fuzzy_match_percent": 77.08
+        },
+        {
+          "name": "Sexy::WidgetContainer::InsertWidgetHelper",
+          "size": 416,
+          "matched": false,
+          "fuzzy_match_percent": 65.09
+        },
+        {
+          "name": "Sexy::WidgetContainer::RemoveAllWidgets",
+          "size": 344,
+          "matched": false,
+          "fuzzy_match_percent": 41.57
+        },
+        {
+          "name": "Sexy::WidgetContainer::BringToBack",
+          "size": 284,
+          "matched": false,
+          "fuzzy_match_percent": 84.51
+        },
+        {
+          "name": "Sexy::WidgetContainer::BringToFront",
+          "size": 284,
+          "matched": false,
+          "fuzzy_match_percent": 83.1
+        },
+        {
+          "name": "Sexy::WidgetContainer::RemoveWidget",
+          "size": 260,
+          "matched": false,
+          "fuzzy_match_percent": 86.15
+        },
+        {
+          "name": "Sexy::WidgetContainer::SysColorChangedAll",
+          "size": 212,
+          "matched": false,
+          "fuzzy_match_percent": 98.11
+        },
+        {
+          "name": "Sexy::WidgetContainer::AddedToManager",
+          "size": 208,
+          "matched": false,
+          "fuzzy_match_percent": 96.15
+        },
+        {
+          "name": "Sexy::WidgetContainer::WidgetContainer",
+          "size": 148,
+          "matched": false,
+          "fuzzy_match_percent": 94.59
+        },
+        {
+          "name": "Sexy::WidgetContainer::WidgetContainer",
+          "size": 148,
+          "matched": false,
+          "fuzzy_match_percent": 94.59
+        },
+        {
+          "name": "Sexy::WidgetContainer::DrawAll",
+          "size": 536,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::UpdateAll",
+          "size": 440,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::UpdateFAll",
+          "size": 404,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::PutInfront",
+          "size": 372,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::MarkDirty",
+          "size": 328,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::PutBehind",
+          "size": 328,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::AddWidget",
+          "size": 280,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::IsBelowHelper",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::RemovedFromManager",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::MarkAllDirty",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::GetAbsPos",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::DisableAllWidgets",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::OnBackButtonPressed",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::HasWidget",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::Intersects",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::IsBelow",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::MarkDirty",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::MarkDirtyFull",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::GetClipRect",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::GetRect",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::~WidgetContainer",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::~WidgetContainer",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::SetIgnoreMouseInput",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::~WidgetContainer",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::GetChildCount",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::Update",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::DisableWidget",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::Draw",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::SetFocus",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::SysColorChanged",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::UpdateF",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
