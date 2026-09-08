@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-07T02:56:35+00:00",
+  "generated": "2026-09-08T02:17:07+00:00",
   "measures": {
     "total_functions": 77355,
-    "matched_functions": 2364,
-    "matched_functions_percent": 3.06,
+    "matched_functions": 2373,
+    "matched_functions_percent": 3.07,
     "total_code": 12221968,
-    "matched_code": 202536,
-    "matched_code_percent": 1.66,
-    "fuzzy_match_percent": 1.9,
+    "matched_code": 204156,
+    "matched_code_percent": 1.67,
+    "fuzzy_match_percent": 1.93,
     "started_units": 139,
     "total_units": 2749,
     "started_code": 1434408,
-    "started_matched_code": 202536,
-    "started_percent": 14.12,
+    "started_matched_code": 204156,
+    "started_percent": 14.23,
     "unplaced_functions": 59484,
     "unplaced_code": 9002996,
     "compile_failures": 0
@@ -1483,19 +1483,13 @@
     {
       "name": "src/PvZ2/FileUtil.cpp",
       "total_code": 612,
-      "matched_code": 532,
-      "matched_code_percent": 86.93,
+      "matched_code": 612,
+      "matched_code_percent": 100.0,
       "total_functions": 4,
-      "matched_functions": 3,
-      "matched_functions_percent": 75.0,
-      "fuzzy_match_percent": 99.38,
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "FileUtil::openFile",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 95.24
-        },
         {
           "name": "FileUtil::readFile",
           "size": 284,
@@ -1511,6 +1505,12 @@
         {
           "name": "FileUtil::writeFile",
           "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FileUtil::openFile",
+          "size": 80,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }
@@ -11953,19 +11953,13 @@
     {
       "name": "src/PvZ2/JamApplier.cpp",
       "total_code": 1880,
-      "matched_code": 1456,
-      "matched_code_percent": 77.45,
+      "matched_code": 1688,
+      "matched_code_percent": 89.79,
       "total_functions": 11,
-      "matched_functions": 8,
-      "matched_functions_percent": 72.73,
-      "fuzzy_match_percent": 89.9,
+      "matched_functions": 9,
+      "matched_functions_percent": 81.82,
+      "fuzzy_match_percent": 98.97,
       "functions": [
-        {
-          "name": "JamApplier::RemoveMusicConditionsFrom",
-          "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 26.47
-        },
         {
           "name": "JamApplier::ApplyJamToJammableGridItem",
           "size": 188,
@@ -11993,6 +11987,12 @@
         {
           "name": "JamApplier::ApplyJamToAllJammableGridItems",
           "size": 260,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "JamApplier::RemoveMusicConditionsFrom",
+          "size": 232,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -17033,22 +17033,16 @@
     {
       "name": "src/PvZ2/Ultra.cpp",
       "total_code": 1036,
-      "matched_code": 940,
-      "matched_code_percent": 90.73,
+      "matched_code": 960,
+      "matched_code_percent": 92.66,
       "total_functions": 12,
-      "matched_functions": 8,
-      "matched_functions_percent": 66.67,
-      "fuzzy_match_percent": 90.73,
+      "matched_functions": 9,
+      "matched_functions_percent": 75.0,
+      "fuzzy_match_percent": 92.66,
       "functions": [
         {
           "name": "Ultra::~Ultra",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Ultra::PlatformSpecificInstance",
-          "size": 20,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -17103,6 +17097,12 @@
         {
           "name": "Ultra::SuperSonicHasAdvertisements",
           "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Ultra::PlatformSpecificInstance",
+          "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -136521,12 +136521,12 @@
     {
       "name": "src/SexyAppFramework/SexyGraphics.cpp",
       "total_code": 26676,
-      "matched_code": 7600,
-      "matched_code_percent": 28.49,
+      "matched_code": 8232,
+      "matched_code_percent": 30.86,
       "total_functions": 109,
-      "matched_functions": 75,
-      "matched_functions_percent": 68.81,
-      "fuzzy_match_percent": 38.85,
+      "matched_functions": 79,
+      "matched_functions_percent": 72.48,
+      "fuzzy_match_percent": 47.48,
       "functions": [
         {
           "name": "Sexy::Graphics::DrawImageBox",
@@ -136559,38 +136559,14 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::Graphics::DrawImageBoxStretch",
-          "size": 1184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Sexy::Graphics::InitRenderInfo",
           "size": 744,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::Graphics::DrawImageTransformHelper",
-          "size": 664,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawLineClipHelper",
-          "size": 572,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Sexy::Graphics::DrawTrianglesTexStrip",
           "size": 452,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawImageRotatedAndStretched",
-          "size": 268,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -136613,20 +136589,8 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::Graphics::DrawImageMatrixOptimized",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Sexy::Graphics::PFDelete",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawImageMatrix2",
-          "size": 116,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -136637,10 +136601,28 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "Sexy::Graphics::DrawImageBoxStretch",
+          "size": 1184,
+          "matched": false,
+          "fuzzy_match_percent": 73.65
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageTransformHelper",
+          "size": 664,
+          "matched": false,
+          "fuzzy_match_percent": 73.49
+        },
+        {
           "name": "Sexy::Graphics::DrawImage",
           "size": 616,
           "matched": false,
           "fuzzy_match_percent": 92.86
+        },
+        {
+          "name": "Sexy::Graphics::DrawLineClipHelper",
+          "size": 572,
+          "matched": false,
+          "fuzzy_match_percent": 64.34
         },
         {
           "name": "Sexy::Graphics::DrawImageMirror",
@@ -136709,12 +136691,6 @@
           "fuzzy_match_percent": 95.24
         },
         {
-          "name": "Sexy::Graphics::DrawString",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 62.5
-        },
-        {
           "name": "Sexy::Graphics::PFCompareInd",
           "size": 52,
           "matched": false,
@@ -136747,6 +136723,12 @@
         {
           "name": "Sexy::Graphics::Graphics",
           "size": 296,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawImageRotatedAndStretched",
+          "size": 268,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -136859,6 +136841,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Sexy::Graphics::DrawImageMatrixOptimized",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Sexy::Graphics::DrawImageTransform",
           "size": 156,
           "matched": true,
@@ -136919,6 +136907,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Sexy::Graphics::DrawImageMatrix2",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Sexy::Graphics::DrawTrianglesTex",
           "size": 116,
           "matched": true,
@@ -136933,6 +136927,12 @@
         {
           "name": "Sexy::Graphics::PopState",
           "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::DrawString",
+          "size": 92,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -137707,12 +137707,12 @@
     {
       "name": "src/SexyAppFramework/WidgetContainer.cpp",
       "total_code": 8704,
-      "matched_code": 5124,
-      "matched_code_percent": 58.87,
+      "matched_code": 5332,
+      "matched_code_percent": 61.26,
       "total_functions": 47,
-      "matched_functions": 36,
-      "matched_functions_percent": 76.6,
-      "fuzzy_match_percent": 90.67,
+      "matched_functions": 37,
+      "matched_functions_percent": 78.72,
+      "fuzzy_match_percent": 90.76,
       "functions": [
         {
           "name": "Sexy::WidgetContainer::MarkDirtyFull",
@@ -137761,12 +137761,6 @@
           "size": 212,
           "matched": false,
           "fuzzy_match_percent": 98.11
-        },
-        {
-          "name": "Sexy::WidgetContainer::AddedToManager",
-          "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 96.15
         },
         {
           "name": "Sexy::WidgetContainer::WidgetContainer",
@@ -137831,6 +137825,12 @@
         {
           "name": "Sexy::WidgetContainer::RemovedFromManager",
           "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::AddedToManager",
+          "size": 208,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -138001,28 +138001,16 @@
     {
       "name": "src/SexyAppFramework/WidgetManager.cpp",
       "total_code": 8804,
-      "matched_code": 4232,
-      "matched_code_percent": 48.07,
+      "matched_code": 4680,
+      "matched_code_percent": 53.16,
       "total_functions": 53,
-      "matched_functions": 41,
-      "matched_functions_percent": 77.36,
-      "fuzzy_match_percent": 77.26,
+      "matched_functions": 42,
+      "matched_functions_percent": 79.25,
+      "fuzzy_match_percent": 84.89,
       "functions": [
         {
           "name": "Sexy::WidgetManager::DrawScreen",
           "size": 568,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::WidgetManager::DrawWidgetsTo",
-          "size": 448,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::WidgetManager::FlushDeferredOverlayWidgets",
-          "size": 436,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -138037,6 +138025,12 @@
           "size": 528,
           "matched": false,
           "fuzzy_match_percent": 89.39
+        },
+        {
+          "name": "Sexy::WidgetManager::FlushDeferredOverlayWidgets",
+          "size": 436,
+          "matched": false,
+          "fuzzy_match_percent": 51.24
         },
         {
           "name": "Sexy::WidgetManager::TouchBegan",
@@ -138079,6 +138073,12 @@
           "size": 80,
           "matched": false,
           "fuzzy_match_percent": 76.19
+        },
+        {
+          "name": "Sexy::WidgetManager::DrawWidgetsTo",
+          "size": 448,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WidgetManager::MouseDown",

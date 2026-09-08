@@ -324,11 +324,12 @@ void WidgetContainer::MarkAllDirty()
 
 void WidgetContainer::AddedToManager(WidgetManager* theWidgetManager)
 {
-	for (WidgetList::iterator anItr = mWidgets.begin(); anItr != mWidgets.end(); ++anItr)
+	for (WidgetList::iterator anItr = mWidgets.begin(); anItr != mWidgets.end(); )
 	{
 		Widget* aWidget = *anItr;
 		aWidget->mWidgetManager = theWidgetManager;
 		aWidget->AddedToManager(theWidgetManager);
+		++anItr;
 		MarkDirty();
 	}
 }

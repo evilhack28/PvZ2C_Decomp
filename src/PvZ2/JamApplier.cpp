@@ -63,18 +63,13 @@ void JamApplier::RemoveMusicConditionsFrom(const std::string& i_theJam, Zombie *
 	std::map<std::string, ZombieConditions>::const_iterator it = props->JamsToZombieConditionApplied.find(i_theJam);
 	if (it != props->JamsToZombieConditionApplied.end())
 	{
-		if (it->second != ZCONDITION_Invalid)
+		if (it->second != ZCONDITION_Invalid && i_zombie->HasCondition(it->second))
 		{
-			if (i_zombie->HasCondition(it->second))
-			{
-				i_zombie->EndCondition(it->second);
-			}
-			else
-			{
-				i_zombie->StopJamming();
-			}
+			i_zombie->EndCondition(it->second);
 		}
 	}
+
+	i_zombie->StopJamming();
 }
 
 void JamApplier::ApplyJamToAllJammableGridItems(const std::string& i_oldJam, const std::string& i_newJam) const

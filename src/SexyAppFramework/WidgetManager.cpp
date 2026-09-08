@@ -373,6 +373,90 @@ void WidgetManager::DeferOverlay(Widget* theWidget, int thePriority)
 		mMinDeferredOverlayPriority = thePriority;
 }
 
+void WidgetManager::DrawWidgetsTo(Graphics* g)
+{
+	g->Translate(mMouseDestRect.mX, mMouseDestRect.mY);
+
+	Graphics aG(*g);
+	mCurG = &aG;
+
+	DeferredOverlayVector aSavedDeferredWidgets(mDeferredOverlayWidgets);
+	mDeferredOverlayWidgets.clear();
+
+	ModalFlags aModalFlags;
+	InitModalFlags(&aModalFlags);
+
+	for (WidgetList::iterator anItr = mWidgets.begin(); anItr != mWidgets.end(); ++anItr)
+	{
+		Widget* aWidget = *anItr;
+		if (aWidget->mVisible)
+		{
+			g->PushState();
+			g->SetFastStretch(!g->Is3D());
+			g->SetLinearBlend(g->Is3D());
+			g->Translate(-mMouseDestRect.mX, -mMouseDestRect.mY);
+			g->Translate(aWidget->mX, aWidget->mY);
+			aWidget->DrawAll(&aModalFlags, g);
+			g->PopState();
+		}
+	}
+
+	FlushDeferredOverlayWidgets(0x7FFFFFFF);
+
+	mDeferredOverlayWidgets = aSavedDeferredWidgets;
+	mCurG = NULL;
+}
+
+void WidgetManager::FlushDeferredOverlayWidgets(int theMaxPriority)
+{
+	if (mCurG == NULL)
+		return;
+
+	Graphics aG(*mCurG);
+
+	while (true)
+	{
+		if (theMaxPriority < mMinDeferredOverlayPriority)
+			return;
+
+		int aNextPriority = 0x7FFFFFFF;
+
+		int aCount = mDeferredOverlayWidgets.size();
+		for (int i = 0; i < aCount; ++i)
+		{
+			std::pair<Widget*, int>& anEntry = mDeferredOverlayWidgets[i];
+			Widget* aWidget = anEntry.first;
+			if (aWidget != NULL)
+			{
+				int aPriority = anEntry.second;
+				int aMinPriority = mMinDeferredOverlayPriority;
+				if (aMinPriority == aPriority)
+				{
+					aG.PushState();
+					aG.Translate(-mMouseDestRect.mX, -mMouseDestRect.mY);
+					aG.Translate(aWidget->mX, aWidget->mY);
+					aG.SetFastStretch(!aG.Is3D());
+					aG.SetLinearBlend(aG.Is3D());
+					mDeferredOverlayWidgets[i].first = NULL;
+					aWidget->DrawOverlay(&aG, aMinPriority);
+					aG.PopState();
+					aCount = mDeferredOverlayWidgets.size();
+				}
+				else if (aPriority < aNextPriority)
+				{
+					aNextPriority = aPriority;
+				}
+			}
+		}
+
+		mMinDeferredOverlayPriority = aNextPriority;
+		if (aNextPriority == 0x7FFFFFFF)
+			break;
+	}
+
+	mDeferredOverlayWidgets.resize(0);
+}
+
 bool WidgetManager::UpdateFrame()
 {
 	ModalFlags aModalFlags;

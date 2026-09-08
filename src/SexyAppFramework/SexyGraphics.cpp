@@ -276,6 +276,81 @@ void Graphics::DrawImageBoxStretch(const Rect& theDest, Image* theComponentImage
 	DrawImageBoxStretch(Rect(0, 0, theComponentImage->mWidth, theComponentImage->mHeight), theDest, theComponentImage);
 }
 
+void Graphics::DrawImageBoxStretch(const Rect& theSrc, const Rect& theDest, Image* theComponentImage)
+{
+	int aSrcWidth = theSrc.mWidth;
+	int aSrcHeight = theSrc.mHeight;
+
+	if (aSrcWidth > 0 && aSrcHeight > 0)
+	{
+		int aSrcX = theSrc.mX;
+		int aSrcY = theSrc.mY;
+
+		int aThirdWidth = aSrcWidth / 3;
+		int aThirdHeight = aSrcHeight / 3;
+
+		int aMidWidthDelta = aThirdWidth * -2;
+		int aMidHeightDelta = aThirdHeight * -2;
+
+		int aMidWidth = aSrcWidth + aMidWidthDelta;
+		int aMidHeight = aSrcHeight + aMidHeightDelta;
+
+		int aCornerWidth = aThirdWidth;
+		if (theDest.mWidth < aThirdWidth * 2)
+		{
+			aCornerWidth = theDest.mWidth / 2;
+			if (theDest.mWidth & 1)
+				aCornerWidth = aCornerWidth + 1;
+			aMidWidthDelta = aCornerWidth * -2;
+		}
+
+		int aCornerHeight = aThirdHeight;
+		if (theDest.mHeight < aThirdHeight * 2)
+		{
+			aCornerHeight = theDest.mHeight / 2;
+			if (theDest.mHeight & 1)
+				aCornerHeight = aCornerHeight + 1;
+			aMidHeightDelta = aCornerHeight * -2;
+		}
+
+		int aSrcMidX = aSrcX + aThirdWidth;
+		int aSrcRightX = aSrcMidX + aMidWidth;
+		int aSrcMidY = aSrcY + aThirdHeight;
+		int aSrcBottomY = aSrcMidY + aMidHeight;
+
+		DrawImage(theComponentImage, Rect(theDest.mX, theDest.mY, aCornerWidth, aCornerHeight),
+			Rect(aSrcX, aSrcY, aThirdWidth, aThirdHeight));
+		DrawImage(theComponentImage, Rect((theDest.mX + theDest.mWidth) - aCornerWidth, theDest.mY, aCornerWidth, aCornerHeight),
+			Rect(aSrcRightX, aSrcY, aThirdWidth, aThirdHeight));
+		DrawImage(theComponentImage, Rect(theDest.mX, (theDest.mY + theDest.mHeight) - aCornerHeight, aCornerWidth, aCornerHeight),
+			Rect(aSrcX, aSrcBottomY, aThirdWidth, aThirdHeight));
+		DrawImage(theComponentImage, Rect((theDest.mX + theDest.mWidth) - aCornerWidth, (theDest.mY + theDest.mHeight) - aCornerHeight, aCornerWidth, aCornerHeight),
+			Rect(aSrcRightX, aSrcBottomY, aThirdWidth, aThirdHeight));
+
+		if (aMidWidthDelta + theDest.mWidth > 0)
+		{
+			DrawImage(theComponentImage, Rect(aCornerWidth + theDest.mX, theDest.mY, aMidWidthDelta + theDest.mWidth, aCornerHeight),
+				Rect(aSrcMidX, aSrcY, aMidWidth, aThirdHeight));
+			DrawImage(theComponentImage, Rect(aCornerWidth + theDest.mX, (theDest.mY + theDest.mHeight) - aCornerHeight, aMidWidthDelta + theDest.mWidth, aCornerHeight),
+				Rect(aSrcMidX, aSrcBottomY, aMidWidth, aThirdHeight));
+		}
+
+		if (aMidHeightDelta + theDest.mHeight > 0)
+		{
+			DrawImage(theComponentImage, Rect(theDest.mX, aCornerHeight + theDest.mY, aCornerWidth, aMidHeightDelta + theDest.mHeight),
+				Rect(aSrcX, aSrcMidY, aThirdWidth, aMidHeight));
+			DrawImage(theComponentImage, Rect((theDest.mX + theDest.mWidth) - aCornerWidth, aCornerHeight + theDest.mY, aCornerWidth, aMidHeightDelta + theDest.mHeight),
+				Rect(aSrcRightX, aSrcMidY, aThirdWidth, aMidHeight));
+
+			if (aMidWidthDelta + theDest.mWidth > 0 && aMidHeightDelta + theDest.mHeight > 0)
+			{
+				DrawImage(theComponentImage, Rect(aCornerWidth + theDest.mX, aCornerHeight + theDest.mY, aMidWidthDelta + theDest.mWidth, aMidHeightDelta + theDest.mHeight),
+					Rect(aSrcMidX, aSrcMidY, aMidWidth, aMidHeight));
+			}
+		}
+	}
+}
+
 void Graphics::DrawImageCel(Image* theImageStrip, int theX, int theY, int theCel)
 {
 	DrawImageCel(theImageStrip, theX, theY, theCel % theImageStrip->mNumCols, theCel / theImageStrip->mNumCols);
@@ -319,6 +394,73 @@ void Graphics::DrawImageCel(Image* theImageStrip, const Rect& theDestRect, int t
 
 		DrawImage(theImageStrip, theDestRect,
 			Rect(aCelWidth * theCelCol, aCelHeight * theCelRow, aCelWidth, aCelHeight));
+	}
+}
+
+void Graphics::DrawImageTransformHelper(Image* theImage, const Transform& theTransform, const Rect& theSrcRect, float x, float y, bool useFloat)
+{
+	if (theTransform.mComplex || (Get3D() != NULL && useFloat))
+	{
+		DrawImageMatrix(theImage, theTransform.GetMatrix(), theSrcRect, x, y);
+		return;
+	}
+
+	float aHalfWidth = (float)theSrcRect.mWidth * 0.5f;
+	float aHalfHeight = (float)theSrcRect.mHeight * 0.5f;
+
+	if (theTransform.mHaveRot)
+	{
+		aHalfWidth = aHalfWidth - theTransform.mTransX1;
+		aHalfHeight = aHalfHeight - theTransform.mTransY1;
+
+		float aX = (theTransform.mTransX2 + 0.5f + x) - aHalfWidth;
+		float aY = (theTransform.mTransY2 + 0.5f + y) - aHalfHeight;
+
+		if (useFloat)
+			DrawImageRotatedF(theImage, aX, aY, theTransform.mRot, aHalfWidth, aHalfHeight, &theSrcRect);
+		else
+			DrawImageRotated(theImage, (int)aX, (int)aY, theTransform.mRot, (int)aHalfWidth, (int)aHalfHeight, &theSrcRect);
+	}
+	else if (!theTransform.mHaveScale)
+	{
+		float aX = (theTransform.mTransX1 + theTransform.mTransX2 + 0.5f + x) - aHalfWidth;
+		float aY = (theTransform.mTransY1 + theTransform.mTransY2 + 0.5f + y) - aHalfHeight;
+
+		if (useFloat)
+			DrawImageF(theImage, aX, aY, theSrcRect);
+		else
+			DrawImage(theImage, (int)aX, (int)aY, theSrcRect);
+	}
+	else
+	{
+		bool aMirror;
+		if (theTransform.mScaleX == -1.0f)
+		{
+			aMirror = true;
+			if (theTransform.mScaleY == 1.0f)
+			{
+				DrawImageMirror(theImage,
+					(int)((theTransform.mTransX1 + theTransform.mTransX2 + 0.5f + x) - aHalfWidth),
+					(int)((theTransform.mTransY1 + theTransform.mTransY2 + 0.5f + y) - aHalfHeight),
+					theSrcRect, true);
+				return;
+			}
+		}
+		else
+		{
+			aMirror = false;
+		}
+
+		aHalfWidth = aHalfWidth * theTransform.mScaleX;
+		aHalfHeight = theTransform.mScaleY * aHalfHeight;
+
+		Rect aDestRect(
+			(int)((x + theTransform.mTransX2) - aHalfWidth),
+			(int)((y + theTransform.mTransY2) - aHalfHeight),
+			(int)(aHalfWidth + aHalfWidth),
+			(int)(aHalfHeight + aHalfHeight));
+
+		DrawImageMirror(theImage, aDestRect, theSrcRect, aMirror);
 	}
 }
 
@@ -376,6 +518,15 @@ void Graphics::DrawImageRotated(Image* theImage, int theX, int theY, double theR
 		DrawImageRotatedF(theImage, (float)theX, (float)theY, theRot, (float)(theSrcRect->mWidth / 2), (float)(theSrcRect->mHeight / 2), theSrcRect);
 	else
 		DrawImageRotatedF(theImage, (float)theX, (float)theY, theRot, (float)(theImage->GetWidth() / 2), (float)(theImage->GetHeight() / 2), NULL);
+}
+
+void Graphics::DrawImageRotatedAndStretched(Image* theImage, int theX, int theY, int theStretchedWidth, int theStretchedHeight, double theRot, float theRotCenterX, float theRotCenterY, const Rect* theSrcRect)
+{
+	Rect aDestRect((int)mTransX + theX, (int)mTransY + theY, theStretchedWidth, theStretchedHeight);
+	Rect aSrcRect(0, 0, theImage->mWidth, theImage->mHeight);
+
+	SetAsCurrentContext();
+	mRenderDevice->BltStretchedAndRotated(theImage, aDestRect, aSrcRect, mClipRect, GetImageColor(), mDrawMode, theRot, theRotCenterX, theRotCenterY, mFastStretch, false);
 }
 
 void Graphics::DrawImageMirror(Image* theImage, int theX, int theY, bool mirror)
@@ -530,6 +681,12 @@ void Graphics::DrawImageF(Image* theImage, float theX, float theY)
 	mRenderDevice->BltF(theImage, aX, aY, aSrcRect, mClipRect, GetImageColor(), mDrawMode);
 }
 
+void Graphics::DrawImageMatrix2(Image* theImage, const SexyMatrix3& theMatrix, const Rect& theSrcRect, const Color& color)
+{
+	SetAsCurrentContext();
+	mRenderDevice->BltMatrix2(theImage, mTransX, mTransY, theMatrix, mClipRect, color, mDrawMode, theSrcRect, mLinearBlend, false);
+}
+
 void Graphics::DrawImageMatrix2(Image* theImage, const SexyMatrix3& theMatrix, const Rect& theSrcRect)
 {
 	SetAsCurrentContext();
@@ -554,6 +711,12 @@ void Graphics::DrawImageMatrix(Image* theImage, const SexyMatrix3& theMatrix, fl
 	Rect aSrcRect(0, 0, theImage->mWidth, theImage->mHeight);
 	SetAsCurrentContext();
 	mRenderDevice->BltMatrix(theImage, x + mTransX, y + mTransY, theMatrix, mClipRect, GetImageColor(), mDrawMode, aSrcRect, mLinearBlend);
+}
+
+void Graphics::DrawImageMatrixOptimized(Image* theImage, const SexyMatrix3& theMatrix, bool bNeedUpdateImage)
+{
+	SetAsCurrentContext();
+	mRenderDevice->BltMatrixOptimized(theImage, mTransX, mTransY, theMatrix, mClipRect, GetImageColor(), mDrawMode, mLinearBlend, bNeedUpdateImage);
 }
 
 /////////////// polygon fill comparators ///////////////
@@ -597,6 +760,73 @@ void Graphics::DrawTrianglesTexStrip(Image* theTexture, const TriVertex theVerti
 
 /////////////// lines ///////////////
 
+bool Graphics::DrawLineClipHelper(double* theStartX, double* theStartY, double* theEndX, double* theEndY)
+{
+	double aStartX = *theStartX;
+	double aStartY = *theStartY;
+	double aEndX = *theEndX;
+	double aEndY = *theEndY;
+
+	if (aEndX < aStartX)
+	{
+		std::swap(aStartX, aEndX);
+		std::swap(aStartY, aEndY);
+	}
+
+	if ((double)mClipRect.mX > aStartX)
+	{
+		if ((double)mClipRect.mX > aEndX)
+			return false;
+
+		aStartY = aStartY + ((aEndY - aStartY) / (aEndX - aStartX)) * ((double)mClipRect.mX - aStartX);
+		aStartX = (double)mClipRect.mX;
+	}
+
+	int aRight = mClipRect.mX + mClipRect.mWidth;
+	if ((double)aRight <= aEndX)
+	{
+		if ((double)aRight <= aStartX)
+			return false;
+
+		double aClipX = (double)(aRight - 1);
+		aEndY = aEndY + ((aEndY - aStartY) / (aEndX - aStartX)) * (aClipX - aEndX);
+		aEndX = aClipX;
+	}
+
+	if (aEndY < aStartY)
+	{
+		std::swap(aStartX, aEndX);
+		std::swap(aStartY, aEndY);
+	}
+
+	if (aStartY < (double)mClipRect.mY)
+	{
+		if (aEndY < (double)mClipRect.mY)
+			return false;
+
+		aStartX = aStartX + ((aEndX - aStartX) / (aEndY - aStartY)) * ((double)mClipRect.mY - aStartY);
+		aStartY = (double)mClipRect.mY;
+	}
+
+	int aBottom = mClipRect.mY + mClipRect.mHeight;
+	double aResultX = aEndX;
+	double aResultY = aEndY;
+	if ((double)aBottom <= aEndY)
+	{
+		if ((double)aBottom <= aStartY)
+			return false;
+
+		aResultY = (double)(aBottom - 1);
+		aResultX = aEndX + (aResultY - aEndY) * ((aEndX - aStartX) / (aEndY - aStartY));
+	}
+
+	*theStartX = aStartX;
+	*theStartY = aStartY;
+	*theEndX = aResultX;
+	*theEndY = aResultY;
+	return true;
+}
+
 void Graphics::DrawLine(float theStartX, float theStartY, float theEndX, float theEndY)
 {
 	double aStartX = theStartX + mTransX;
@@ -634,10 +864,11 @@ int Graphics::StringWidth(const SexyString& theString)
 
 void Graphics::DrawString(const SexyString& theString, int theX, int theY)
 {
-	if (mFont != NULL)
+	Font* aFont = mFont;
+	if (aFont != NULL)
 	{
 		const Color& aColor = GetFinalColor();
-		mFont->DrawString(this, theX, theY, theString, aColor, mClipRect);
+		aFont->DrawString(this, theX, theY, theString, aColor, mClipRect);
 	}
 }
 

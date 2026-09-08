@@ -17,6 +17,7 @@
 #include "PVZDB.h"
 #include "SuperSonicAdProvider.h"
 #include "Ultra.h"
+#include "UltraAndroid.h"
 
 /////////////// Ultra ///////////////
 
@@ -24,6 +25,11 @@ Ultra::Ultra()
 	: mSuperSonic(NULL)
 	, m_useSuperSonicV6(false)
 {
+}
+
+Ultra& Ultra::PlatformSpecificInstance()
+{
+	return UltraAndroid::GetInstance();
 }
 
 void Ultra::Initialize(const std::string& i_obfuscatedUserId, Delegate2<int, int>& i_addCoinsToBeAwarded, Delegate0& i_onAdvertisementsClosed)

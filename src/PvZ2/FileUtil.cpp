@@ -11,19 +11,11 @@
 
 #include "FileUtil.h"
 
-struct FileCloser
-{
-	void operator()(FILE* i_file)
-	{
-		fclose(i_file);
-	}
-};
-
 /////////////// FileUtil ///////////////
 
 std::shared_ptr<FILE> FileUtil::openFile(const std::string& i_name, const std::string& i_mode)
 {
-	return std::shared_ptr<FILE>(fopen(i_name.c_str(), i_mode.c_str()), FileCloser());
+	return std::shared_ptr<FILE>(fopen(i_name.c_str(), i_mode.c_str()));
 }
 
 void FileUtil::writeFile(const std::shared_ptr<FILE>& i_file, const std::string& i_content)
