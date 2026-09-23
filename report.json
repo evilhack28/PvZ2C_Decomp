@@ -1,20 +1,20 @@
 {
-  "generated": "2026-09-08T02:17:07+00:00",
+  "generated": "2026-09-23T10:34:00+00:00",
   "measures": {
-    "total_functions": 77355,
-    "matched_functions": 2373,
-    "matched_functions_percent": 3.07,
-    "total_code": 12221968,
-    "matched_code": 204156,
-    "matched_code_percent": 1.67,
-    "fuzzy_match_percent": 1.93,
-    "started_units": 139,
+    "total_functions": 77655,
+    "matched_functions": 2449,
+    "matched_functions_percent": 3.15,
+    "total_code": 12251212,
+    "matched_code": 209052,
+    "matched_code_percent": 1.71,
+    "fuzzy_match_percent": 1.96,
+    "started_units": 140,
     "total_units": 2749,
-    "started_code": 1434408,
-    "started_matched_code": 204156,
-    "started_percent": 14.23,
-    "unplaced_functions": 59484,
-    "unplaced_code": 9002996,
+    "started_code": 1438652,
+    "started_matched_code": 209052,
+    "started_percent": 14.53,
+    "unplaced_functions": 59204,
+    "unplaced_code": 8973924,
     "compile_failures": 0
   },
   "units": [
@@ -20446,20 +20446,472 @@
     },
     {
       "name": "src/PvZ2/debug/Cheats.cpp",
-      "total_code": 0,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 0,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 4244,
+      "matched_code": 4244,
+      "matched_code_percent": 100.0,
+      "total_functions": 75,
+      "matched_functions": 75,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "CheatManager::CheckShortcuts",
+          "size": 376,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::AddCheatCachedLog",
+          "size": 248,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::SetValue",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::GetCheatCachedText",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::trimToMaxLines",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::CheatToggleAction",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::CheatToggleAction",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::StaticGetClass",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatCommand::StaticGetClass",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::StaticGetClass",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::StaticGetClass",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::SetVariableValue",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::SetToggleValue",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::Toggle",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::Cheat",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::Cheat",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::CheatManager",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::CheatManager",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::CheatToggleAction",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::CheatToggleAction",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::Cheat",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::Cheat",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::~CheatManager",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::~CheatManager",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::Toggle",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::CheatToggle",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::CheatToggle",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::~Cheat",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::~Cheat",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatCommand::CheatCommand",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatCommand::CheatCommand",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatCommand::~CheatCommand",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatCommand::~CheatCommand",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::CheatToggle",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::CheatToggle",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::~CheatToggleAction",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::~CheatToggleAction",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatCommand::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::IsCheatValidForCurrentContext",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::~Cheat",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatCommand::~CheatCommand",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::SetCheatCachedText",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::~CheatManager",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::~CheatToggle",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::~CheatToggleAction",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::~CheatToggle",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::~CheatToggle",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::GetKeyboardShortcut",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::GetName",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::GetValidContexts",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::SetKeyboardShortcut",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::SetValidContexts",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatCommand::GetCommand",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatCommand::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::ActivateCheatForKeyboardShortcut",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::AddCheat",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::GetCheat",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::GetCheatIgnoreContext",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::GetCurrentContext",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::GetToggleValue",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::GetVariableValue",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::SetCurrentContext",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::ToggleCheat",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::GetValue",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Cheat::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatCommand::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatManager::DoCheatCommand",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggle::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatToggleAction::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/debug/PVZCheats.cpp",
-      "total_code": 26056,
+      "total_code": 34640,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 227,
+      "total_functions": 340,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0
@@ -27135,12 +27587,12 @@
     {
       "name": "src/PvZ2/net/PVZRechargeCheckServer.cpp",
       "total_code": 2620,
-      "matched_code": 856,
-      "matched_code_percent": 32.67,
+      "matched_code": 1508,
+      "matched_code_percent": 57.56,
       "total_functions": 14,
-      "matched_functions": 12,
-      "matched_functions_percent": 85.71,
-      "fuzzy_match_percent": 87.94,
+      "matched_functions": 13,
+      "matched_functions_percent": 92.86,
+      "fuzzy_match_percent": 88.24,
       "functions": [
         {
           "name": "PVZRechargeCheckServer::TryRequest",
@@ -27151,8 +27603,8 @@
         {
           "name": "PVZRechargeCheckServer::ServiceRequestCompleted",
           "size": 652,
-          "matched": false,
-          "fuzzy_match_percent": 98.77
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVZRechargeCheckServer::OnRequestFinished",
@@ -43130,10 +43582,10 @@
     },
     {
       "name": "src/PvZ2/ui/CheatUI.cpp",
-      "total_code": 0,
+      "total_code": 16416,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 0,
+      "total_functions": 112,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0

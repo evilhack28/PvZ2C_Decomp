@@ -28,6 +28,10 @@ def _imm(text):
 
 
 _MEM = ('ldrb', 'ldrh', 'ldrsb', 'ldrsh', 'ldrsw', 'str', 'strb', 'strh')
+_STR_MAX = 200   # a string literal's cap for the 'str:' label; must match on
+                 # both the unlinked-object and linked-game sides, or a long
+                 # format string (e.g. a debug log) falls back to 'localdata'
+                 # on one side only and shows up as a false mismatch.
 
 
 def listing(elf, name, symbolise=True):
@@ -173,11 +177,11 @@ def _reloc_label(elf, rel):
     if name in ('.bss', '.data') or name.startswith(('.bss.', '.data.')):
         return 'localdata'
     if name.startswith(('.rodata', '.data.rel.ro')):
-        raw = elf.section_read(name, addend, 64)
+        raw = elf.section_read(name, addend, _STR_MAX + 1)
         if raw:
             end = raw.find(b'\0')
             text = raw[:end if end >= 0 else len(raw)].decode("utf-8", "replace")
-            if text and text.isprintable():
+            if text and text.isprintable() and 0 < len(text) < _STR_MAX:
                 return f'str:{text}'
         if name == '.rodata' or name.startswith('.rodata.'):
             # non-string .rodata reached via a reloc: a compiler switch jump
@@ -271,7 +275,7 @@ def _any_sym_at(elf, addr):
 
 def _name(elf, addr):
     text = elf.cstr(addr)
-    if text and text.isprintable() and 0 < len(text) < 60:
+    if text and text.isprintable() and 0 < len(text) < _STR_MAX:
         return f'str:{text}'
     names = _any_sym_at(elf, addr)
     if names:

@@ -270,6 +270,24 @@ def build_families(classes):
     for c in list(classes):
         if c.startswith('Powerup') and c not in ('Powerup', 'PowerupType', 'PowerupManager'):
             place.setdefault(c, f'src/PvZ2/powerups/{c}.cpp')
+
+    # Cheats.h / CheatUI.h / PVZCheats.h: class names don't normalize-match
+    # any of the three filenames, so the generic rules below never place them.
+    for c in ('Cheat', 'CheatToggle', 'CheatToggleAction', 'CheatCommand',
+              'CheatManager'):
+        place.setdefault(c, 'src/PvZ2/debug/Cheats.cpp')
+    for c in ('CheatUILine', 'CheatUILineSeparator', 'CheatUILineToggle',
+              'CheatUILineCommand', 'CheatAdjusterWidget', 'CheatUILineAdjuster',
+              'CheatUILineFolder', 'CheatUIPanel'):
+        place.setdefault(c, 'src/PvZ2/ui/CheatUI.cpp')
+    for c in ('CheatGameSpawnZombieCommand', 'CheatGameSpawnCreatureCommand',
+              'CheatGameSpawnCollectable', 'CheatGameStartLevelCommand',
+              'CheatDangerRoomStartLevelCommand', 'CheatGameSpawnPlantCommand',
+              'CheatGameStartNarrative', 'CheatGameFeatureToggle',
+              'CheatGameProfileLockToggle', 'CheatGameUnlockToEvent',
+              'CheatAutoTestStartLevelCommand', 'CheatPlantsVsZombiesStartWorldCommand',
+              'CheatAutoTestStartUnlockLevelCommand', 'CheatVariable'):
+        place.setdefault(c, 'src/PvZ2/debug/PVZCheats.cpp')
     return place
 
 
