@@ -83,13 +83,25 @@ def listing(elf, name, symbolise=True):
             inner = ops[ops.index('[') + 1:ops.rindex(']')]
             parts = [x.strip() for x in inner.split(',')]
             base = parts[0]
+            # A GOT slot holds a pointer, loaded into a 64-bit x register. An
+            # `ldr` into an s/d/w register off an adrp page is a scalar literal
+            # (a float or int constant pool entry), not a pointer indirection --
+            # treat it like the sized-load branch above, or `_pointee` misreads
+            # the constant's raw bits as a bogus GOT target.
+            scalar = dst and dst[0] in 'swd'
             if base in pages:
                 kind, value, addend = pages[base]
                 if rel:
-                    ops = f'{dst}, <got:{rel[0]}{_tail(rel[2])}>'
+                    if scalar:
+                        ops = f'{dst}, <{_reloc_label(elf, rel)}>'
+                    else:
+                        ops = f'{dst}, <got:{rel[0]}{_tail(rel[2])}>'
                 elif kind == 'abs':
                     slot = value + (_imm(parts[1]) if len(parts) > 1 else 0 or 0)
-                    ops = f'{dst}, <got:{_pointee(elf, slot)}>'
+                    if scalar:
+                        ops = f'{dst}, <{_name(elf, slot)}>'
+                    else:
+                        ops = f'{dst}, <got:{_pointee(elf, slot)}>'
                 else:
                     ops = f'{dst}, <got:{value}{_tail(addend)}>'
             elif rel:

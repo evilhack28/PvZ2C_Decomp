@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-23T10:34:00+00:00",
+  "generated": "2026-09-23T16:21:30+00:00",
   "measures": {
-    "total_functions": 77655,
-    "matched_functions": 2449,
-    "matched_functions_percent": 3.15,
-    "total_code": 12251212,
-    "matched_code": 209052,
-    "matched_code_percent": 1.71,
-    "fuzzy_match_percent": 1.96,
-    "started_units": 140,
+    "total_functions": 77679,
+    "matched_functions": 2573,
+    "matched_functions_percent": 3.31,
+    "total_code": 12252444,
+    "matched_code": 220916,
+    "matched_code_percent": 1.8,
+    "fuzzy_match_percent": 2.09,
+    "started_units": 141,
     "total_units": 2749,
-    "started_code": 1438652,
-    "started_matched_code": 209052,
-    "started_percent": 14.53,
+    "started_code": 1456300,
+    "started_matched_code": 220916,
+    "started_percent": 15.17,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -43582,13 +43582,831 @@
     },
     {
       "name": "src/PvZ2/ui/CheatUI.cpp",
-      "total_code": 16416,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 112,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 17648,
+      "matched_code": 11652,
+      "matched_code_percent": 66.02,
+      "total_functions": 136,
+      "matched_functions": 123,
+      "matched_functions_percent": 90.44,
+      "fuzzy_match_percent": 91.2,
+      "functions": [
+        {
+          "name": "CheatUIPanel::Draw",
+          "size": 1832,
+          "matched": false,
+          "fuzzy_match_percent": 63.97
+        },
+        {
+          "name": "CheatUILineFolder::onDraw",
+          "size": 740,
+          "matched": false,
+          "fuzzy_match_percent": 58.42
+        },
+        {
+          "name": "CheatUILineFolder::onTap",
+          "size": 512,
+          "matched": false,
+          "fuzzy_match_percent": 94.53
+        },
+        {
+          "name": "CheatUIPanel::DoPartialOpenOrClose",
+          "size": 464,
+          "matched": false,
+          "fuzzy_match_percent": 86.21
+        },
+        {
+          "name": "CheatUIPanel::TouchMoved",
+          "size": 368,
+          "matched": false,
+          "fuzzy_match_percent": 52.63
+        },
+        {
+          "name": "CheatUILineFolder::GetHeight",
+          "size": 340,
+          "matched": false,
+          "fuzzy_match_percent": 92.94
+        },
+        {
+          "name": "CheatUIPanel::SetScrollAmount",
+          "size": 300,
+          "matched": false,
+          "fuzzy_match_percent": 94.67
+        },
+        {
+          "name": "CheatUIPanel::TouchBegan",
+          "size": 296,
+          "matched": false,
+          "fuzzy_match_percent": 40.54
+        },
+        {
+          "name": "CheatUILineAdjuster::getLabelColor",
+          "size": 284,
+          "matched": false,
+          "fuzzy_match_percent": 98.59
+        },
+        {
+          "name": "CheatUILineCommand::getLabelColor",
+          "size": 284,
+          "matched": false,
+          "fuzzy_match_percent": 98.59
+        },
+        {
+          "name": "CheatUIPanel::getSliderButtonRect",
+          "size": 200,
+          "matched": false,
+          "fuzzy_match_percent": 92.31
+        },
+        {
+          "name": "CheatUILineFolder::~CheatUILineFolder",
+          "size": 188,
+          "matched": false,
+          "fuzzy_match_percent": 78.72
+        },
+        {
+          "name": "CheatUILineFolder::~CheatUILineFolder",
+          "size": 188,
+          "matched": false,
+          "fuzzy_match_percent": 78.72
+        },
+        {
+          "name": "CheatAdjusterWidget::onCreate",
+          "size": 720,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::onDraw",
+          "size": 492,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::Tap",
+          "size": 440,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineToggle::onDraw",
+          "size": 384,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::SetVisible",
+          "size": 380,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::TouchEnded",
+          "size": 344,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::onDraw",
+          "size": 336,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineCommand::onDraw",
+          "size": 336,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::Draw",
+          "size": 316,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::onTap",
+          "size": 276,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineSeparator::onDraw",
+          "size": 272,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::EndFolder",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::getCollapseButtonRect",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::getCloseButtonRect",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::getTotalHeight",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::~CheatUIPanel",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::~CheatUIPanel",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineCommand::onTap",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::TouchMoved",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::CheatAdjusterWidget",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::CheatAdjusterWidget",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::CheatUILine",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::CheatUILine",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::TouchBegan",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::getDimensions",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::BeginFolder",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::Draw",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::EditWidgetText",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::StaticGetClass",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::StaticGetClass",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::StaticGetClass",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineCommand::StaticGetClass",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::StaticGetClass",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineSeparator::StaticGetClass",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineToggle::StaticGetClass",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::ButtonDepress",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::CheatUIPanel",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::CheatUIPanel",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::getValue",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::AddLine",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::collapseTopLevelFolder",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::BuildUILineForCheat",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::CheatUILine",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::CheatUILine",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::SortByTitle",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::TouchEnded",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::GetScreenRect",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::GetLabel",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::SetKeyboardMode",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::~CheatAdjusterWidget",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::~CheatAdjusterWidget",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::CheatUILineAdjuster",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::CheatUILineAdjuster",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::CheatUILineFolder",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::CheatUILineFolder",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::getNameDrawRect",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::CheatUILineFolder",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::CheatUILineFolder",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineCommand::CheatUILineCommand",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineCommand::CheatUILineCommand",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::~CheatUILine",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::~CheatUILine",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::AddSeparator",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineSeparator::CheatUILineSeparator",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineSeparator::CheatUILineSeparator",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineToggle::CheatUILineToggle",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineToggle::CheatUILineToggle",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineCommand::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineSeparator::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineToggle::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::getLabelColor",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::~CheatAdjusterWidget",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::~CheatUILine",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::~CheatUILineAdjuster",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::~CheatUILineAdjuster",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::~CheatUILineAdjuster",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineCommand::~CheatUILineCommand",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::~CheatUILineFolder",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineSeparator::~CheatUILineSeparator",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineToggle::onTap",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineToggle::~CheatUILineToggle",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::~CheatUIPanel",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::Tap",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineSeparator::GetHeight",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::GetHeight",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineCommand::~CheatUILineCommand",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineCommand::~CheatUILineCommand",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineSeparator::~CheatUILineSeparator",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineSeparator::~CheatUILineSeparator",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineToggle::~CheatUILineToggle",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineToggle::~CheatUILineToggle",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::TouchesCanceled",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::GetDefaultLineHeight",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::GetCheat",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::GetValidContexts",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::SetValidContexts",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::AllowChar",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::AllowKey",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::AllowText",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineCommand::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::SetExpanded",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::SetUseIndent",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineSeparator::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineToggle::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::AddLine",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::AddLine",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::IsVisible",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatAdjusterWidget::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILine::onTap",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineAdjuster::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineCommand::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineFolder::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineSeparator::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUILineToggle::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/ui/ChildrenDayUI.cpp",
@@ -138159,12 +138977,12 @@
     {
       "name": "src/SexyAppFramework/WidgetContainer.cpp",
       "total_code": 8704,
-      "matched_code": 5332,
-      "matched_code_percent": 61.26,
+      "matched_code": 5544,
+      "matched_code_percent": 63.69,
       "total_functions": 47,
-      "matched_functions": 37,
-      "matched_functions_percent": 78.72,
-      "fuzzy_match_percent": 90.76,
+      "matched_functions": 38,
+      "matched_functions_percent": 80.85,
+      "fuzzy_match_percent": 90.8,
       "functions": [
         {
           "name": "Sexy::WidgetContainer::MarkDirtyFull",
@@ -138207,12 +139025,6 @@
           "size": 260,
           "matched": false,
           "fuzzy_match_percent": 86.15
-        },
-        {
-          "name": "Sexy::WidgetContainer::SysColorChangedAll",
-          "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 98.11
         },
         {
           "name": "Sexy::WidgetContainer::WidgetContainer",
@@ -138277,6 +139089,12 @@
         {
           "name": "Sexy::WidgetContainer::RemovedFromManager",
           "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::WidgetContainer::SysColorChangedAll",
+          "size": 212,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -138458,7 +139276,7 @@
       "total_functions": 53,
       "matched_functions": 42,
       "matched_functions_percent": 79.25,
-      "fuzzy_match_percent": 84.89,
+      "fuzzy_match_percent": 84.93,
       "functions": [
         {
           "name": "Sexy::WidgetManager::DrawScreen",
@@ -138470,7 +139288,7 @@
           "name": "Sexy::WidgetManager::TouchEnded",
           "size": 552,
           "matched": false,
-          "fuzzy_match_percent": 68.12
+          "fuzzy_match_percent": 68.84
         },
         {
           "name": "Sexy::WidgetManager::TouchMoved",

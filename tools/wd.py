@@ -66,7 +66,20 @@ def resolve(token, method=None):
 
 def _search_objdefs(mangled):
     os.makedirs(config.BUILD, exist_ok=True)
-    for src in sorted(glob.glob(os.path.join(HERE, os.pardir, 'src', '**', '*.cpp'), recursive=True)):
+    sources = sorted(glob.glob(os.path.join(HERE, os.pardir, 'src', '**', '*.cpp'), recursive=True))
+    m = re.match(r'_ZN?K?(\d+)', mangled)
+    if m:
+        n = int(m.group(1))
+        cls = mangled[m.end():m.end() + n]
+        defines = re.compile(rf'\b{re.escape(cls)}::')
+
+        def likely(path):
+            try:
+                return bool(defines.search(open(path, encoding='utf-8', errors='replace').read()))
+            except OSError:
+                return False
+        sources = [s for s in sources if likely(s)] + [s for s in sources if not likely(s)]
+    for src in sources:
         obj = os.path.join(config.BUILD, os.path.basename(src).replace('.cpp', '.wd.o'))
         if subprocess.run([config.GXX, *config.CXXFLAGS, '-c', src, '-o', obj],
                           capture_output=True).returncode != 0:
