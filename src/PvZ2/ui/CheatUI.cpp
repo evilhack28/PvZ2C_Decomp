@@ -796,13 +796,12 @@ void CheatUIPanel::SetScrollAmount(int i_scrollAmount)
 	}
 
 	float screenHeight = (float)gLawnApp->mHeight;
-	if (total > screenHeight)
-		total = 0.0f;
-	else
-		total = screenHeight - total;
+	float limit = screenHeight - total;
+	if (!(screenHeight < total))
+		limit = 0.0f;
 
-	if ((float)m_scroll < total)
-		m_scroll = (int)total;
+	if ((float)m_scroll < limit)
+		m_scroll = (int)limit;
 }
 
 bool CheatUIPanel::TouchMoved(const Sexy::Touch& i_touch)

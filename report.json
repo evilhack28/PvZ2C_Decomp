@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-23T16:21:30+00:00",
+  "generated": "2026-09-25T13:05:25+00:00",
   "measures": {
     "total_functions": 77679,
-    "matched_functions": 2573,
-    "matched_functions_percent": 3.31,
+    "matched_functions": 2576,
+    "matched_functions_percent": 3.32,
     "total_code": 12252444,
-    "matched_code": 220916,
+    "matched_code": 221136,
     "matched_code_percent": 1.8,
     "fuzzy_match_percent": 2.09,
     "started_units": 141,
     "total_units": 2749,
     "started_code": 1456300,
-    "started_matched_code": 220916,
-    "started_percent": 15.17,
+    "started_matched_code": 221136,
+    "started_percent": 15.18,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -34363,12 +34363,12 @@
     {
       "name": "src/PvZ2/plants/Plant.cpp",
       "total_code": 87192,
-      "matched_code": 19836,
-      "matched_code_percent": 22.75,
+      "matched_code": 20056,
+      "matched_code_percent": 23.0,
       "total_functions": 318,
-      "matched_functions": 231,
-      "matched_functions_percent": 72.64,
-      "fuzzy_match_percent": 33.31,
+      "matched_functions": 234,
+      "matched_functions_percent": 73.58,
+      "fuzzy_match_percent": 33.45,
       "functions": [
         {
           "name": "Plant::NotifyApplyCondition",
@@ -34860,7 +34860,7 @@
           "name": "Plant::WasKilledByZombies",
           "size": 164,
           "matched": false,
-          "fuzzy_match_percent": 48.78
+          "fuzzy_match_percent": 68.29
         },
         {
           "name": "Plant::GetFireOrigin",
@@ -34873,24 +34873,6 @@
           "size": 112,
           "matched": false,
           "fuzzy_match_percent": 82.14
-        },
-        {
-          "name": "Plant::GetTotalDamageRate",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 50.0
-        },
-        {
-          "name": "Plant::SetSpeedModifier",
-          "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 95.24
-        },
-        {
-          "name": "Plant::SetIsPreviewPlant",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 10.0
         },
         {
           "name": "Plant::StaticClassInit",
@@ -35349,6 +35331,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Plant::GetTotalDamageRate",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Plant::constructAndSetFrameworkFromType",
           "size": 96,
           "matched": true,
@@ -35398,6 +35386,12 @@
         },
         {
           "name": "Plant::SetPosition",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::SetSpeedModifier",
           "size": 84,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -35752,6 +35746,12 @@
         },
         {
           "name": "Plant::GetType",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::SetIsPreviewPlant",
           "size": 40,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -43588,19 +43588,19 @@
       "total_functions": 136,
       "matched_functions": 123,
       "matched_functions_percent": 90.44,
-      "fuzzy_match_percent": 91.2,
+      "fuzzy_match_percent": 94.77,
       "functions": [
         {
           "name": "CheatUIPanel::Draw",
           "size": 1832,
           "matched": false,
-          "fuzzy_match_percent": 63.97
+          "fuzzy_match_percent": 87.77
         },
         {
           "name": "CheatUILineFolder::onDraw",
           "size": 740,
           "matched": false,
-          "fuzzy_match_percent": 58.42
+          "fuzzy_match_percent": 74.59
         },
         {
           "name": "CheatUILineFolder::onTap",
@@ -43618,7 +43618,7 @@
           "name": "CheatUIPanel::TouchMoved",
           "size": 368,
           "matched": false,
-          "fuzzy_match_percent": 52.63
+          "fuzzy_match_percent": 71.74
         },
         {
           "name": "CheatUILineFolder::GetHeight",
@@ -43630,7 +43630,7 @@
           "name": "CheatUIPanel::SetScrollAmount",
           "size": 300,
           "matched": false,
-          "fuzzy_match_percent": 94.67
+          "fuzzy_match_percent": 96.0
         },
         {
           "name": "CheatUIPanel::TouchBegan",

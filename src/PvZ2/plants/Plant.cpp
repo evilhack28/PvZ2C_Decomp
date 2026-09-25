@@ -921,8 +921,9 @@ void Plant::SetDamageFlash(float i_duration)
 
 float Plant::GetTotalDamageRate()
 {
-	float boostSum = m_uBoostInfo.m_uBoostDamageBySun + m_uBoostInfo.m_uBoostDamageGlobal + m_uBoostInfo.m_uBoostDamageTotal + m_extraNormalDamage;
-	return boostSum * m_extraSpecialDamage * GetExtraDPSmodifier() * m_awakenDamage;
+	float normal = GetExtraNormalDamage();
+	float special = GetExtraSpecialDamage();
+	return special * normal * GetExtraDPSmodifier() * GetAwakenDamage();
 }
 
 float Plant::GetDamageConstValue()
@@ -1185,8 +1186,10 @@ bool Plant::IsInvincible(bool dontConsiderPlantfood) const
 				return true;
 		}
 
-		if (!m_plantFramework->IsInvincible())
-			return m_bIsInvincible;
+		if (m_plantFramework->IsInvincible())
+			return true;
+
+		return m_bIsInvincible;
 	}
 
 	return true;
@@ -1996,12 +1999,14 @@ void Plant::SetPosition(const Sexy::SexyVector3& i_newPosition)
 void Plant::SetSpeedModifier(float i_modifier)
 {
 	m_speedModifier = i_modifier;
-	GetAnimRig()->SetAnimRateOverride(m_speedModifier + GetAdditionValue(PlantAddition::PAdditonRLS_SPD_Add));
+	PlantAnimRig* rig = GetAnimRig();
+	float speed = m_speedModifier;
+	rig->SetAnimRateOverride(GetAdditionValue(PlantAddition::PAdditonRLS_SPD_Add) + speed);
 }
 
 void Plant::SetIsPreviewPlant()
 {
-	m_pCachedPlantAnimRig->SetPaused(false);
+	m_pCachedPlantAnimRig->PlayPreviewAnim(false);
 }
 
 void Plant::PlayAttackAnimation()
@@ -2101,11 +2106,11 @@ float Plant::GetExtraHitPointsmodifier() const
 
 bool Plant::WasKilledByZombies()
 {
-	bool result = false;
-	if (!TestFlag(m_lastDamageType, DAMAGE_NON_ZOMBIE))
-		result = !(GetType()->TypeName == "magicbeans");
+	if (TestFlag(m_lastDamageType, DAMAGE_NON_ZOMBIE))
+		return false;
 
-	return result;
+	bool isMagicBeans = GetType()->TypeName == "magicbeans";
+	return !isMagicBeans;
 }
 
 void Plant::TakeNoMsgDied()
