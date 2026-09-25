@@ -327,3 +327,8 @@ void RaidingPartyZombieSpawnerProps::GatherSpawnedZombieTypes(std::set<const Zom
 {
 	o_zombies.insert(ObjectTypeDirectory<ZombieType>::GetInstancePtr()->GetTypeFromTypeName("swashbuckler"));
 }
+
+int PirateStage::GetPlankStartGridColumn() const
+{
+	return 5;
+}

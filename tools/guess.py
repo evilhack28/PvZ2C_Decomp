@@ -19,7 +19,7 @@ MD = Cs(CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN)
 GREEN, YELLOW, RED, GREY, BOLD, OFF = (
     '\033[32m', '\033[33m', '\033[31m', '\033[90m', '\033[1m', '\033[0m')
 
-LDR_SZ = {'b': 'uint8', 'h': 'uint16', 'w': 'int', 'x': 'int64', 's': 'float', 'd': 'double'}
+LDR_SZ = {'B': 'uint8', 'H': 'int16', 'W': 'int', 'b': 'uint8', 'h': 'uint16', 'w': 'int', 'x': 'int64', 's': 'float', 'd': 'double'}
 
 
 def load_syms(elf):
@@ -106,8 +106,19 @@ def guess(elf, syms, name):
         lit = {0: 'false', 1: 'true'}.get(k, str(k))
         return name, f'{{\n\treturn {lit};\n}}', 70, f'mov w0,#{k}; ret'
 
+    # ---- null / float-zero / address-of-member returns ----------------
+    if bm == ['mov'] and body[0].op_str == 'x0, #0':
+        return name, '{\n\treturn NULL;\n}', 70, 'mov x0,#0; ret'
+    if bm == ['movi'] and re.match(r'v0\.2s, #0$', body[0].op_str):
+        return name, '{\n\treturn 0.0f;\n}', 70, 'movi v0,#0; ret'
+    if bm == ['fmov'] and re.match(r's0, #1\.0', body[0].op_str):
+        return name, '{\n\treturn 1.0f;\n}', 70, 'fmov s0,#1.0; ret'
+    if bm == ['add'] and body[0].op_str.startswith('x0, x0, #'):
+        off = imm(body[0].op_str)
+        return name, f'{{\n\treturn &{fld(off)};\n}}', 60 if off in fields else 30, f'address of member +{off:#x}'
+
     # ---- member accessor: ldr REG,[x0,#N]; ret ------------------------
-    if len(body) == 1 and body[0].mnemonic == 'ldr':
+    if len(body) == 1 and body[0].mnemonic in ('ldr', 'ldrb', 'ldrh', 'ldrsw', 'ldrsb', 'ldrsh'):
         mm = re.match(r'([wxsd])\d+, \[x0(?:, #(0x[0-9a-f]+|\d+))?\]', body[0].op_str)
         if mm:
             off = int(mm.group(2), 0) if mm.group(2) else 0

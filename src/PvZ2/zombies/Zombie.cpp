@@ -121,3 +121,49 @@ bool Zombie::IsSuspended()
 {
 	return m_conditionTracker.TestModifierFlag(CMODIFIER_Suspended);
 }
+
+bool Zombie::HasGravity()
+{
+	return true;
+}
+
+void Zombie::onLostHead()
+{
+}
+
+void Zombie::onMowedDown()
+{
+}
+
+class GameSubSystem* Zombie::GetSubSystem()
+{
+	return NULL;
+}
+
+void Zombie::playEatSound()
+{
+}
+
+bool Zombie::CanBePulledHelm()
+{
+	return true;
+}
+
+void Zombie::onZombiePostLoad()
+{
+}
+
+bool Zombie::CanApplyVenomStack()
+{
+	return true;
+}
+
+bool Zombie::hasArmParticle() const
+{
+	return true;
+}
+
+bool Zombie::hasHeadParticle() const
+{
+	return true;
+}
