@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-25T13:43:13+00:00",
+  "generated": "2026-09-25T16:03:29+00:00",
   "measures": {
     "total_functions": 78507,
-    "matched_functions": 2958,
-    "matched_functions_percent": 3.77,
+    "matched_functions": 2965,
+    "matched_functions_percent": 3.78,
     "total_code": 12290996,
-    "matched_code": 223044,
-    "matched_code_percent": 1.81,
-    "fuzzy_match_percent": 2.1,
+    "matched_code": 224876,
+    "matched_code_percent": 1.83,
+    "fuzzy_match_percent": 2.12,
     "started_units": 343,
     "total_units": 2749,
     "started_code": 3544956,
-    "started_matched_code": 223044,
-    "started_percent": 6.29,
+    "started_matched_code": 224876,
+    "started_percent": 6.34,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -195847,28 +195847,16 @@
     {
       "name": "src/SexyAppFramework/Widget.cpp",
       "total_code": 6916,
-      "matched_code": 3020,
-      "matched_code_percent": 43.67,
+      "matched_code": 4852,
+      "matched_code_percent": 70.16,
       "total_functions": 72,
-      "matched_functions": 57,
-      "matched_functions_percent": 79.17,
-      "fuzzy_match_percent": 45.75,
+      "matched_functions": 64,
+      "matched_functions_percent": 88.89,
+      "fuzzy_match_percent": 75.53,
       "functions": [
-        {
-          "name": "Sexy::Widget::Layout",
-          "size": 808,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "Sexy::Widget::WriteCenteredLine",
           "size": 424,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Widget::WidgetRemovedHelper",
-          "size": 364,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -195885,20 +195873,8 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::Widget::WriteNumberFromStrip",
-          "size": 284,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Sexy::Widget::WriteString",
           "size": 260,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Widget::WriteCenteredLine",
-          "size": 200,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -195915,34 +195891,28 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::Widget::WriteWordWrapped",
-          "size": 124,
+          "name": "Sexy::Widget::WriteNumberFromStrip",
+          "size": 284,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Widget::WriteString",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Widget::WriteWordWrapped",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Widget::WriteCenteredLine",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 80.28
         },
         {
           "name": "Sexy::Widget::GetColor",
           "size": 148,
           "matched": false,
           "fuzzy_match_percent": 97.3
+        },
+        {
+          "name": "Sexy::Widget::Layout",
+          "size": 808,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::WidgetRemovedHelper",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Widget::SetColors",
@@ -195952,6 +195922,12 @@
         },
         {
           "name": "Sexy::Widget::SetColors",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::WriteCenteredLine",
           "size": 200,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -196007,6 +195983,30 @@
         {
           "name": "Sexy::Widget::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::WriteWordWrapped",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::WriteString",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::WriteWordWrapped",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Widget::WriteCenteredLine",
+          "size": 108,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },

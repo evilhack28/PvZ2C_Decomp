@@ -282,7 +282,77 @@ def m_temp(s, rng):
     return None
 
 
-MUTATORS = [m_cmp, m_cmp, m_commute, m_commute, m_ifelse, m_andor, m_incr, m_declswap, m_inline, m_temp]
+def _decl_at(lines, k, name, expr, kind):
+    ind = re.match(r'\s*', lines[k]).group(0)
+    lines.insert(k, f'{ind}{kind} {name} = {expr};')
+
+
+def m_hoist(s, rng):
+    """Cache a repeated or pre-call member/getter read in a local, declared before the first use."""
+    lines = s.split('\n')
+    body = [k for k in range(1, len(lines)) if lines[k].strip() not in ('{', '}')]
+    cands = set(re.findall(r'\b(m_\w+|Get\w+\(\))', '\n'.join(lines)))
+    cands = [c for c in cands if not re.search(rf'\b{re.escape(c)}\s*(=|\+=|-=|\+\+|--)(?!=)', s)]
+    rng.shuffle(cands)
+    for c in cands:
+        uses = [k for k in body if c in lines[k] and not re.match(r'\s*(auto|float|int|bool)\s+h\d+\s*=', lines[k])]
+        if not uses:
+            continue
+        n = f'h{rng.randrange(1000)}'
+        at = uses[0] if rng.random() < 0.6 else body[0]
+        for k in uses:
+            lines[k] = lines[k].replace(c, n)
+        _decl_at(lines, at, n, c, 'auto')
+        return '\n'.join(lines)
+    return None
+
+
+def m_negsplit(s, rng):
+    """`!(A == B)` / `!f(x)` -> named bool first, so the temporary dies before the negation."""
+    lines = s.split('\n')
+    pat = re.compile(r'!\(([^()]*(?:\([^()]*\)[^()]*)*)\)')
+    idx = [k for k in range(len(lines)) if pat.search(lines[k]) and lines[k].strip().startswith(('return', 'result', 'if'))]
+    rng.shuffle(idx)
+    for k in idx:
+        x = pat.search(lines[k])
+        n = f'b{rng.randrange(1000)}'
+        lines[k] = lines[k][:x.start()] + '!' + n + lines[k][x.end():]
+        _decl_at(lines, k, n, x.group(1), 'bool')
+        return '\n'.join(lines)
+    return None
+
+
+def m_retsplit(s, rng):
+    """`return EXPR;` -> `auto r = EXPR; return r;`."""
+    lines = s.split('\n')
+    idx = [k for k, l in enumerate(lines) if re.match(r'\s*return\s+[^;]+;\s*$', l)]
+    rng.shuffle(idx)
+    for k in idx:
+        g = re.match(r'(\s*)return\s+([^;]+);', lines[k])
+        n = f'r{rng.randrange(1000)}'
+        lines[k] = f'{g.group(1)}return {n};'
+        _decl_at(lines, k, n, g.group(2), 'auto')
+        return '\n'.join(lines)
+    return None
+
+
+def m_earlyret(s, rng):
+    """`if (!C) { ... return X; } return Y;` <-> `if (C) return Y; ... return X;` for the simple 2-exit shape."""
+    m = re.search(r'\n(\s*)if \(([^\n]*)\)\n\1\{\n((?:\1\t[^\n]*\n)+)\1\}\n\n?\1return ([^;]+);', s)
+    if not m:
+        return None
+    ind, cond, inner, tail = m.groups()
+    ret = re.search(rf'\n{ind}\treturn ([^;]+);\s*$', '\n' + inner.rstrip('\n'))
+    if not ret:
+        return None
+    neg = cond[1:] if cond.startswith('!') and cond.count('(') == cond.count(')') else f'!({cond})'
+    dedent = '\n'.join(l[len(ind) + 1:] if l.startswith(ind + '\t') else l for l in inner.rstrip('\n').split('\n'))
+    out = f'\n{ind}if ({neg})\n{ind}\treturn {tail};\n\n' + '\n'.join(ind + l for l in dedent.split('\n')) + '\n'
+    return s[:m.start()] + out + s[m.end():]
+
+
+MUTATORS = [m_cmp, m_cmp, m_commute, m_commute, m_ifelse, m_andor, m_incr, m_declswap, m_inline, m_temp,
+            m_hoist, m_hoist, m_negsplit, m_retsplit, m_earlyret]
 
 
 def mutate(fn, rng):
@@ -336,7 +406,7 @@ def main():
     ap.add_argument('cls')
     ap.add_argument('method')
     ap.add_argument('--symbol', help='mangled name when Class/method is ambiguous')
-    ap.add_argument('--jobs', type=int, default=12)
+    ap.add_argument('--jobs', type=int, default=24)
     ap.add_argument('--minutes', type=float, default=10)
     ap.add_argument('--variants', help='file of whole-function variants split by ===== lines; just score them')
     ap.add_argument('--seed', type=int, default=None)

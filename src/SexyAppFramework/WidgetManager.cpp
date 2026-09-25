@@ -253,8 +253,11 @@ bool WidgetManager::KeyUp(KeyCode key)
 	{
 		mKeyDown[key] = false;
 
-		if (key == KEYCODE_TAB && mKeyDown[KEYCODE_CONTROL])
-			return true;
+		if (key == KEYCODE_TAB)
+		{
+			if (mKeyDown[KEYCODE_CONTROL])
+				return true;
+		}
 	}
 
 	if (mFocusWidget != NULL)
@@ -603,7 +606,7 @@ bool WidgetManager::MouseDrag(int x, int y)
 	mMouseIn = true;
 	mLastMouseY = y;
 
-	if (anOverWidget != NULL && anOverWidget != mLastDownWidget)
+	if (anOverWidget != NULL && mLastDownWidget != anOverWidget)
 	{
 		mOverWidget = NULL;
 		MouseLeave(anOverWidget);
