@@ -24,7 +24,7 @@ const std::string GetButtonSource()
 	WorldMap* worldMap = gLawnApp->GetWorldMap();
 	if (worldMap == NULL)
 		return "EA2Unknown";
-	if (worldMap->m_universeMap->mVisible)
+	if (worldMap->GetUniverseMap()->mVisible)
 		return "EA2Universe";
 	return "EA2World";
 }

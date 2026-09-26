@@ -12,3 +12,17 @@
 void WorldMap_AlmanacButton::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_AlmanacButton);
+
+void WorldMap_AlmanacButton::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_AlmanacButton);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_AlmanacButton);
+}

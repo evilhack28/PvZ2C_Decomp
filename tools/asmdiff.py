@@ -375,6 +375,9 @@ def _same(x, y):
     # side. Same instruction, same place, one unnameable target.
     if a.endswith('@empty') and b.endswith('@empty'):
         return True
+    # The game statically links libstdc++, so its std::cerr is an unnamed .bss object at 0x6b49ed0.
+    if {a, b} == {'_ZSt4cerr', '0x6b49ed0'}:
+        return True
     # The game folded every do-nothing function onto one address, so a call
     # there tells us only that the callee is empty. When the other side
     # names a function neither image defines, emptiness cannot be proved and

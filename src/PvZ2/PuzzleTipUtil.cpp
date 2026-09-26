@@ -25,7 +25,7 @@ using namespace Sexy;
 PuzzleTip* PuzzleTipUtil::PopTip(SexyString tip, Rect rect)
 {
 	PuzzleTip* tipPtr = new PuzzleTip();
-	tipPtr->mWidgetFlagsMod.mAddFlags |= 0x10;
+	tipPtr->mWidgetFlagsMod.mRemoveFlags |= Sexy::WIDGETFLAGS_ALLOW_MOUSE;
 	tipPtr->SetTip(tip);
 	tipPtr->Resize(rect);
 	gLawnApp->mWidgetManager->AddWidget(tipPtr);

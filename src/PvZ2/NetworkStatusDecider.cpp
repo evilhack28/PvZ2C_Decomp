@@ -20,13 +20,10 @@ NetworkStatusDecider::NetworkStatusDecider(std::ostream& os)
 
 const bool NetworkStatusDecider::ShouldSendNetworkRequest() const
 {
-	if (!networkReachable())
-		return false;
+	if (networkReachable() && areMetricsEnabled())
+		return true;
 
-	if (!areMetricsEnabled())
-		return false;
-
-	return true;
+	return false;
 }
 
 const bool NetworkStatusDecider::networkReachable() const

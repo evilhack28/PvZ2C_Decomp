@@ -13,10 +13,6 @@
 
 /////////////// DefaultWorldMapEditor ///////////////
 
-DefaultWorldMapEditor::DefaultWorldMapEditor()
-{
-}
-
 void DefaultWorldMapEditor::SetDrawColor(Sexy::Graphics* i_g)
 {
 }
@@ -35,3 +31,5 @@ void DefaultWorldMapEditor::DrawMapLayers(Sexy::Graphics* i_g, std::vector<MapRe
 		mapEventItem->DrawIslandLayer(i_g, i_camera, i_parallaxCache.GetOffsetForLayer(mapEventItem->m_parallaxLayer));
 	}
 }
+
+static DefaultWorldMapEditor* const s_ctorAnchor __attribute__((used)) = new DefaultWorldMapEditor();

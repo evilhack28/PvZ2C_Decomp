@@ -18,5 +18,6 @@ EASquared& EASquared::Instance()
 
 EASquaredPropertySheet* EASquared::GetProperties()
 {
-	return PVZDB::GetInstance().FindObjectByAlias<EASquaredPropertySheet>(PVZDB::TABLE_EASQUAREDCONFIG, Sexy::RtName(L"EASquaredConfig"));
+	return PVZDB::GetInstance().FindObjectByAlias<EASquaredPropertySheet>(PVZDB::TABLE_EASQUAREDCONFIG, Sexy::RtName(L"EASquaredConfig")).Get();
 }
+

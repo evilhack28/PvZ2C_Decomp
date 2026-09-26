@@ -21,3 +21,25 @@ void WorldMap_TWLoginRewardButton::initLoadingResourcesGroupList()
 void WorldMap_TWLoginRewardButton::onUpdate()
 {
 }
+
+WorldMap_TWLoginRewardButton::WorldMap_TWLoginRewardButton()
+{
+}
+
+WorldMap_TWLoginRewardButton::~WorldMap_TWLoginRewardButton()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_TWLoginRewardButton);
+
+void WorldMap_TWLoginRewardButton::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_TWLoginRewardButton);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_TWLoginRewardButton);
+}

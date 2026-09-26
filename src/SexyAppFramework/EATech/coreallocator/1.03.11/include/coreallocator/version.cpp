@@ -8,7 +8,7 @@ PVZVersion Version::LoadedRSB()
 	PVZVersion result;
 	if (PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_VERSION))
 	{
-		result = *(PVZVersion*)Sexy::RtWeakPtr<PVZVersion>(*PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_VERSION));
+		result = *Sexy::RtWeakPtr<PVZVersion>(*PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_VERSION));
 	}
 	return result;
 }

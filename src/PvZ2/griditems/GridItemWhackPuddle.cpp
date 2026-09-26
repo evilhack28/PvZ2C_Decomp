@@ -17,3 +17,34 @@ bool GridItemWhackPuddle::IsAbleToSpawn()
 void GridItemWhackPuddle::registerForEvents()
 {
 }
+
+GridItemWhackPuddle::GridItemWhackPuddle()
+{
+}
+
+GridItemWhackPuddle::~GridItemWhackPuddle()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GridItemWhackPuddle);
+
+void GridItemWhackPuddle::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(GridItemWhackPuddle);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GridItemAnimation);
+
+	REFLECTION_CLASSBUILDER_END(GridItemWhackPuddle);
+}
+
+void GridItemWhackPuddle::onTakeDamage(const DamageInfo& i_arg)
+{
+}
+
+PlantingReason GridItemWhackPuddle::GetCantPlantReason() const
+{
+	return (PlantingReason)67;
+}

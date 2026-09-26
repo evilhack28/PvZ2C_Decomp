@@ -135,3 +135,7 @@ void AndroidShareDriverMgr::SaveScreenImageToLocal(ScreenInfo i_info)
 	screenImage->PurgeBits();
 	image.mBits = NULL;
 }
+
+IShareDriver::IShareDriver()
+{
+}

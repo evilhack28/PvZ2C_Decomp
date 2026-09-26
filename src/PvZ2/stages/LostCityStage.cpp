@@ -75,7 +75,7 @@ void ParachuteRainZombieSpawner::PostSpawnZombieSetup(Zombie* i_zombie, SexyVect
 {
 	ZombieLostCityLostPilot* pilot = i_zombie->Cast<ZombieLostCityLostPilot>();
 	pilot->doFallFromSky();
-	pilot->RiseFromPod(i_destination);
+	pilot->SetPosition(i_destination);
 }
 
 /////////////// Rendering ///////////////

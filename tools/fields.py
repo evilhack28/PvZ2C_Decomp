@@ -8,6 +8,7 @@ key it serialises under and the offset it lives at.
 """
 
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -78,3 +79,57 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+def fields_typed(elf, fn, limit=9000):
+    """Like fields(), but each entry is (key, type_string, offset)."""
+    out, pages, names = [], {}, []
+    for i in MD.disasm(elf.data[fn:fn + limit], fn):
+        m = i.mnemonic
+        if m == 'adrp':
+            r, v = [x.strip() for x in i.op_str.split(',')]
+            pages[r] = int(v.lstrip('#'), 0)
+        elif m == 'add':
+            p = [x.strip() for x in i.op_str.split(',')]
+            if len(p) == 3 and p[0] == p[1] == 'x1' and p[2].startswith('#') and 'x1' in pages:
+                names.append(elf.cstr(pages['x1'] + int(p[2][1:], 0)))
+        elif m == 'mov' and i.op_str.startswith('w3, #'):
+            off = int(i.op_str.split('#')[1], 0)
+            if len(names) >= 2:
+                out.append((names[0], names[1], off))
+            names = []
+        elif m == 'ret':
+            break
+    return out
+
+
+def blocks(elf, sym, limit=4000):
+    """[(name, register_fn_address, size)] for every reflected type a StaticClassInit registers, in order."""
+    found = elf.function(sym)
+    if not found:
+        return []
+    addr, size, code = found
+    out, pages, name = [], {}, None
+    fnaddr = None
+    for i in MD.disasm(code, addr):
+        m = i.mnemonic
+        if m == 'adrp':
+            r, v = [x.strip() for x in i.op_str.split(',')]
+            pages[r] = int(v.lstrip('#'), 0)
+        elif m == 'add':
+            p = [x.strip() for x in i.op_str.split(',')]
+            if len(p) == 3 and p[0] == p[1] and p[0] in pages and p[2].startswith('#'):
+                val = pages[p[0]] + int(p[2][1:], 0)
+                if p[0] == 'x1' and name is None:
+                    try:
+                        s = elf.cstr(val)
+                    except Exception:
+                        s = ''
+                    if re.fullmatch(r'[A-Za-z_]\w*', s or ''):
+                        name = s
+                elif p[0] == 'x2' and name is not None:
+                    fnaddr = val
+        elif m == 'mov' and i.op_str.startswith('w3, #') and name is not None and fnaddr is not None:
+            out.append((name, fnaddr, int(i.op_str.split('#')[1], 0)))
+            name, fnaddr = None, None
+    return out

@@ -76,6 +76,20 @@ def imm(text):
     return int(m.group(1), 0) if m else None
 
 
+def comps(sym):
+    """Length-prefixed name components of a _ZN... symbol."""
+    i = 4 if sym.startswith('_ZNK') else 3 if sym.startswith('_ZN') else 0
+    out = []
+    while i < len(sym) and sym[i].isdigit():
+        j = i
+        while sym[j].isdigit():
+            j += 1
+        n = int(sym[i:j])
+        out.append(sym[j:j + n])
+        i = j + n
+    return out
+
+
 def guess(elf, syms, name):
     found = elf.function(name)
     if not found:
@@ -116,6 +130,13 @@ def guess(elf, syms, name):
     if bm == ['add'] and body[0].op_str.startswith('x0, x0, #'):
         off = imm(body[0].op_str)
         return name, f'{{\n\treturn &{fld(off)};\n}}', 60 if off in fields else 30, f'address of member +{off:#x}'
+
+    # ---- pure tail call with no argument set-up -------------------------
+    if bm == ['b'] and cls:
+        tgt = syms.get(branch_target(body[0]), '')
+        parts = comps(tgt) if tgt.endswith('Ev') else []
+        if len(parts) >= 2:
+            return name, '{\n\t__TAIL__ %s();\n}' % '::'.join(parts[-2:]), 65, 'tail call -> ' + tgt
 
     # ---- member accessor: ldr REG,[x0,#N]; ret ------------------------
     if len(body) == 1 and body[0].mnemonic in ('ldr', 'ldrb', 'ldrh', 'ldrsw', 'ldrsb', 'ldrsh'):
@@ -201,6 +222,32 @@ def guess(elf, syms, name):
                       '\t\tREFLECTION_CLASSBUILDER_ANCESTOR(/*base*/);\n\n'
                       '\tREFLECTION_CLASSBUILDER_END(%s);\n}' % (cls, cls)), 45, \
                'looks like StaticClassInit -- fill the ancestor / fields'
+
+    lits, pages, ncall = [], {}, 0
+    for i in ins:
+        if i.mnemonic == 'adrp':
+            r, v = [x.strip() for x in i.op_str.split(',')]
+            pages[r] = int(v.lstrip('#'), 0)
+        elif i.mnemonic == 'add' and i.op_str.count(',') == 2:
+            d, s, k = [x.strip() for x in i.op_str.split(',')]
+            if d == s and s in pages and k.startswith('#') and d.startswith('x1'):
+                try:
+                    lits.append(elf.cstr(pages[s] + int(k[1:], 0)))
+                except Exception:
+                    pass
+        elif i.mnemonic in ('bl', 'blr', 'br'):
+            ncall += 1
+    if len(lits) == 1 and 1 <= ncall <= 3 and re.fullmatch(r"[ -~]{1,40}", lits[0]) and not re.search(r'["\\%]', lits[0]) \
+            and size <= 160 and not any(i.mnemonic in ('cbz', 'cbnz') or i.mnemonic.startswith('b.') for i in ins):
+        return name, '{\n\treturn "%s";\n}' % lits[0], 55, 'returns the string literal "%s"' % lits[0]
+
+    if len(lits) == 1 and 1 <= ncall <= 3 and re.fullmatch(r"[ -~]{1,40}", lits[0]) and not re.search(r'["\\%]', lits[0]) and size <= 200:
+        ldr = [(imm(i.op_str)) for i in ins if i.mnemonic == 'ldrb' and re.match(r'w\d+, \[x\d+, #', i.op_str)]
+        clr = [(imm(i.op_str)) for i in ins if i.mnemonic == 'strb' and i.op_str.startswith('wzr, [x')]
+        both = [o for o in ldr if o in clr and o]
+        nbr = sum(1 for i in ins if i.mnemonic in ('cbz', 'cbnz') or i.mnemonic.startswith('b.'))
+        if len(both) == 1 and nbr <= 2:
+            return name, '{\n\tif (%%M0x%x%%)\n\t\t%%M0x%x%% = false;\n\treturn "%s";\n}' % (both[0], both[0], lits[0]), 50, 'clears a byte member, returns a literal'
 
     return name, None, 0, f'{size} B, {len(ins)} insns -- no shape matched'
 

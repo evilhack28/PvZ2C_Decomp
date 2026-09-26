@@ -51,40 +51,46 @@ Image* GameResourceUtil::GetFrameImageByRare(int rare)
 
 Image* GameResourceUtil::GetFrameImageById(int id)
 {
+	Image* result;
 	if (id == 4013)
 	{
-		return IMAGE_UI_ACCESSORY_ICON_BG_BLUE;
+		result = IMAGE_UI_ACCESSORY_ICON_BG_BLUE;
 	}
-	if (id == 3008)
+	else if (id == 3008)
 	{
-		return IMAGE_UI_ACCESSORY_ICON_BG_PURPLE;
+		result = IMAGE_UI_ACCESSORY_ICON_BG_PURPLE;
+	}
+	else
+	{
+		GameItemInfo info;
+		if (GameInfoUtil::GetItemInfoById(id, info))
+			result = GetFrameImageByRare(info._rare);
+		else
+			result = NULL;
 	}
 
-	GameItemInfo info;
-	if (!GameInfoUtil::GetItemInfoById(id, info))
-	{
-		return NULL;
-	}
-
-	return GetFrameImageByRare(info._rare);
+	return result;
 }
 
 Image* GameResourceUtil::GetImageById(int id)
 {
+	Image* result;
 	if (id == 4013)
 	{
-		return IMAGE_UI_GEILIVABLE_LOTTERY_BONUS_COIN;
+		result = IMAGE_UI_GEILIVABLE_LOTTERY_BONUS_COIN;
 	}
-	if (id == 3008)
+	else if (id == 3008)
 	{
-		return IMAGE_UI_GEILIVABLE_LOTTERY_BONUS_GEM;
+		result = IMAGE_UI_GEILIVABLE_LOTTERY_BONUS_GEM;
+	}
+	else
+	{
+		GameItemInfo info;
+		if (GameInfoUtil::GetItemInfoById(id, info))
+			result = info._img;
+		else
+			result = NULL;
 	}
 
-	GameItemInfo info;
-	if (GameInfoUtil::GetItemInfoById(id, info))
-	{
-		return info._img;
-	}
-
-	return NULL;
+	return result;
 }

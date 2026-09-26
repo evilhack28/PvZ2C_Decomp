@@ -10,6 +10,7 @@
 /////////////// WorldMapEditorFactory ///////////////
 
 WorldMapEditorFactory::WorldMapEditorFactory()
+	: mDefaultEditor()
 {
 	mEditorFlags = (MapEditorFlags)0;
 	SetFlag(mEditorFlags, EDITORFLAG_DRAW_BACKGROUND, true);

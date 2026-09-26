@@ -16,3 +16,21 @@ void WorldMap_NewerButton::initLoadingResourcesGroupList()
 void WorldMap_NewerButton::onUpdate()
 {
 }
+
+WorldMap_NewerButton::WorldMap_NewerButton()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_NewerButton);
+
+void WorldMap_NewerButton::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_NewerButton);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_NewerButton);
+}

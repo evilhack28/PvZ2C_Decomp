@@ -21,3 +21,21 @@ void WorldMap_CommonButton::initLoadingResourcesGroupList()
 void WorldMap_CommonButton::onUpdate()
 {
 }
+
+WorldMap_CommonButton::~WorldMap_CommonButton()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_CommonButton);
+
+void WorldMap_CommonButton::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_CommonButton);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_CommonButton);
+}

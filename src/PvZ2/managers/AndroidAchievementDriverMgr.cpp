@@ -98,3 +98,7 @@ void AndroidAchievementDriverMgr::QueryAllAchievement(std::function<void(std::ve
 
 	m_QueryAllAchievementCallback = i_callback;
 }
+
+INewAchievementDriver::INewAchievementDriver()
+{
+}

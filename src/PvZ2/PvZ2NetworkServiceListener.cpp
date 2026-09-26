@@ -10,11 +10,13 @@
 #include "PvZ2NetworkServiceListener.h"
 #include "TimeMgr.h"
 
+extern const float k_timeOutAfter;
+
 /////////////// PvZ2NetworkServiceListener ///////////////
 
 PvZ2NetworkServiceListener::PvZ2NetworkServiceListener()
 {
-	m_lastSet = TimeMgr::GetInstancePtr()->m_realT;
+	m_lastSet = TimeMgr::GetInstancePtr()->RealT();
 	m_blocked = false;
 }
 
@@ -22,16 +24,16 @@ void PvZ2NetworkServiceListener::SetBlocked()
 {
 	if (!m_blocked)
 	{
-		m_lastSet = TimeMgr::GetInstancePtr()->m_realT;
+		m_lastSet = TimeMgr::GetInstancePtr()->RealT();
 	}
 	m_blocked = true;
 }
 
 bool PvZ2NetworkServiceListener::IsBlocked()
 {
-	if (m_blocked && TimeMgr::GetInstancePtr()->m_realT >= m_lastSet + 5.0f)
+	if (TimeMgr::GetInstancePtr()->RealT() >= k_timeOutAfter + m_lastSet)
 	{
-		SetBlocked();
+		logFailMessage("forced an unblock of the", NULL);
 	}
 	return m_blocked;
 }

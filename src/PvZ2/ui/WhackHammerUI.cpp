@@ -16,3 +16,23 @@ void WhackHammerUI::initLoadingResourcesGroupList()
 void WhackHammerUI::onUpdate()
 {
 }
+
+WhackHammerUI::~WhackHammerUI()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WhackHammerUI);
+
+void WhackHammerUI::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WhackHammerUI);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_FIELD(bool, m_levelEnded);
+
+	REFLECTION_CLASSBUILDER_END(WhackHammerUI);
+}

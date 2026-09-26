@@ -13,11 +13,9 @@
 
 /////////////// UUIDCreator ///////////////
 
-UUIDCreator::UUIDCreator()
-{
-}
-
 std::string UUIDCreator::Create()
 {
 	return Android::Util::GetUUIDString();
 }
+
+static UUIDCreator* const s_ctorAnchor __attribute__((used)) = new UUIDCreator();

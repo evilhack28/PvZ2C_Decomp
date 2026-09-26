@@ -12,3 +12,21 @@
 void WorldMap_PerkLibraryButton::onLoadComplete()
 {
 }
+
+WorldMap_PerkLibraryButton::~WorldMap_PerkLibraryButton()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_PerkLibraryButton);
+
+void WorldMap_PerkLibraryButton::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_PerkLibraryButton);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIButtonWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_PerkLibraryButton);
+}

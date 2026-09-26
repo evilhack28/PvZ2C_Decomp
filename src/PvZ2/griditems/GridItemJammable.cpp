@@ -12,3 +12,26 @@
 void GridItemJammable::onGridItemInitialize()
 {
 }
+
+GridItemJammable::~GridItemJammable()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GridItemJammable);
+
+void GridItemJammable::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(GridItemJammable);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GridItemBoardEntityConditionTarget);
+
+	REFLECTION_CLASSBUILDER_END(GridItemJammable);
+}
+
+bool GridItemJammable::IsJamming()
+{
+	return m_isMyJamOn;
+}

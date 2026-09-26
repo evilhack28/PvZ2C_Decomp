@@ -12,3 +12,13 @@
 void AbtestMgr::Update()
 {
 }
+
+AbtestMgr::~AbtestMgr()
+{
+}
+
+AbtestMgr::AbtestMgr()
+{
+	m_checkActivityInfosFinished = 0;
+	m_timeout = PVZ_EOT();
+}

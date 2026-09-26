@@ -13,3 +13,27 @@ int PlantAnimRig_Tallnut::GetArmorStateCount()
 {
 	return 3;
 }
+
+PlantAnimRig_Tallnut::PlantAnimRig_Tallnut()
+{
+}
+
+PlantAnimRig_Tallnut::~PlantAnimRig_Tallnut()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_Tallnut);
+
+void PlantAnimRig_Tallnut::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PlantAnimRig_Tallnut);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(PlantAnimRig);
+
+	REFLECTION_CLASSBUILDER_FIELD(bool, m_willDie);
+
+	REFLECTION_CLASSBUILDER_END(PlantAnimRig_Tallnut);
+}

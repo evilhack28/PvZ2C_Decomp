@@ -16,3 +16,23 @@ void ComponentZombieWhackTouch::onEnd()
 void ComponentZombieWhackTouch::onUpdate()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ComponentZombieWhackTouch);
+
+void ComponentZombieWhackTouch::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ComponentZombieWhackTouch);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(ComponentBase);
+
+	REFLECTION_CLASSBUILDER_FIELD(float, m_currentHitFraction);
+
+	REFLECTION_CLASSBUILDER_END(ComponentZombieWhackTouch);
+}
+
+void ComponentZombieWhackTouch::onBegin()
+{
+}

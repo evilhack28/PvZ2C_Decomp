@@ -13,3 +13,11 @@ bool PlantAnimRig_Kernelpult::PlayPlantFoodEnd()
 {
 	return true;
 }
+
+PlantAnimRig_Kernelpult::PlantAnimRig_Kernelpult()
+{
+}
+
+PlantAnimRig_Kernelpult::~PlantAnimRig_Kernelpult()
+{
+}

@@ -16,3 +16,21 @@ void PauseButton::unregisterForEvents()
 void PauseButton::initLoadingResourcesGroupList()
 {
 }
+
+PauseButton::~PauseButton()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PauseButton);
+
+void PauseButton::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PauseButton);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(PauseButton);
+}

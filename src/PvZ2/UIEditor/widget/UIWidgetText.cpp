@@ -12,3 +12,7 @@
 void UIWidgetText::Update()
 {
 }
+
+UIWidgetText::~UIWidgetText()
+{
+}

@@ -12,3 +12,24 @@
 void CollectionUI::unregisterForEvents()
 {
 }
+
+CollectionUI::~CollectionUI()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(CollectionUI);
+
+void CollectionUI::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(CollectionUI);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_FIELD(bool, m_hasCollection);
+	REFLECTION_CLASSBUILDER_FIELD(int, m_rare);
+
+	REFLECTION_CLASSBUILDER_END(CollectionUI);
+}

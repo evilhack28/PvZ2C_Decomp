@@ -16,3 +16,25 @@ void WorldMap_LotteryButton::initLoadingResourcesGroupList()
 void WorldMap_LotteryButton::onUpdate()
 {
 }
+
+WorldMap_LotteryButton::WorldMap_LotteryButton()
+{
+}
+
+WorldMap_LotteryButton::~WorldMap_LotteryButton()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_LotteryButton);
+
+void WorldMap_LotteryButton::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_LotteryButton);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_LotteryButton);
+}
