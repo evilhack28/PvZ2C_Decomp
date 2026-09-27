@@ -44,7 +44,7 @@ SRC = f'{HERE}/src'
 BUILD = f'{HERE}/build'
 
 CXXFLAGS = [
-    '-std=gnu++11', '-O2', '-fno-inline', '-fno-exceptions', '-fPIC',
+    '-std=gnu++11', '-O2', '-funswitch-loops', '-fno-inline', '-fno-exceptions', '-fPIC',
     # The shipped lib addresses every TU-local static as adrp+:lo12:sym,
     # never through a shared anchor base: LostCityStage::renderForeground
     # uses three adrp/add pairs for three statics one block apart.

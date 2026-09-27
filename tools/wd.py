@@ -77,15 +77,21 @@ def _search_objdefs(mangled):
         cls, meth = comps[-2], comps[-1]
         exact = re.compile(rf'{re.escape(cls)}::{re.escape(meth)}')
         defines = re.compile(rf'{re.escape(cls)}::')
-        sources = ([x for x in sources if os.path.basename(x) == cls + '.cpp']
-                   + [x for x in sources if os.path.basename(x) != cls + '.cpp'])
+        first = {c + '.cpp' for c in comps}
+        sources = ([x for x in sources if os.path.basename(x) in first]
+                   + [x for x in sources if os.path.basename(x) not in first])
     for src in sources:
         obj = os.path.join(config.BUILD, os.path.basename(src).replace('.cpp', '.wd.o'))
         if subprocess.run([config.GXX, *config.CXXFLAGS, '-c', src, '-o', obj],
                           capture_output=True).returncode != 0:
             continue
-        if any(n == mangled and shndx and t == 2
-               for n, v, s, shndx, t in Elf(obj).symbols()):
+        syms = Elf(obj).symbols()
+        if any(n == mangled and shndx and t == 2 for n, v, s, shndx, t in syms):
+            return src
+        # ctor/dtor aliases: accept the class's own file if it defines the same class::name
+        base = os.path.basename(src)[:-4]
+        if base in comps[-2:] and re.search(rf'{len(base)}{base}[CD]\d', mangled) \
+                and any(f'{len(base)}{base}' in n and shndx for n, v, s, shndx, t in syms):
             return src
     sys.exit(f'{mangled}: not defined by any file under src/')
 

@@ -8,6 +8,7 @@
 #include "Widget.h"
 #include "WidgetManager.h"
 #include "ReflectionBuilder.h"
+#include "PrimeText/PrimeTypeface.h"
 
 using namespace Sexy;
 
@@ -289,6 +290,22 @@ Color Widget::GetColor(int theIdx, const Color& theDefaultColor)
 	return theDefaultColor;
 }
 
+int Widget::GetWordWrappedHeight(Graphics* g, PrimeTypeface* font, int theWidth, const SexyString& theLine, int aLineSpacing)
+{
+	int aWidth, aHeight;
+	font->SizeString_Paragraph(theLine, aWidth, aHeight, (float)theWidth);
+	return aHeight;
+}
+
+int ConvertTheJustificationToEAText(int theJustification);
+
+int Widget::WriteString(Graphics* g, PrimeTypeface* font, Color color, const SexyString& theString, int theX, int theY, int theWidth, int theJustification, bool drawString, int theOffset, int theLength)
+{
+	EA::Text::HAlignment anAlignment = (EA::Text::HAlignment)ConvertTheJustificationToEAText(theJustification);
+	font->DrawString_Line(g, (float)theX, (float)theY, (float)theWidth, theString, anAlignment, color, NULL);
+	return font->StringWidth(theString);
+}
+
 int Widget::GetWordWrappedHeight(Graphics* g, int theWidth, const SexyString& theLine, int aLineSpacing)
 {
 	return g->GetWordWrappedHeight(theWidth, theLine, aLineSpacing, NULL, NULL);
@@ -301,6 +318,16 @@ int Widget::WriteString(Graphics* g, const SexyString& theString, int theX, int 
 	int aResult = g->WriteString(theString, theX, theY, theWidth, theJustification, drawString, theOffset, theLength, -1);
 	g->mWriteColoredString = aOldColored;
 	return aResult;
+}
+
+int Widget::WriteWordWrapped(Graphics* g, PrimeTypeface* font, Color color, const Rect& theRect, const SexyString& theLine, int theLineSpacing, int theJustification)
+{
+	EA::Text::HAlignment anAlignment = (EA::Text::HAlignment)ConvertTheJustificationToEAText(theJustification);
+	font->DrawString_Paragraph(g, (float)theRect.mX, (float)theRect.mY, (float)theRect.mWidth, (float)theRect.mHeight, theLine, anAlignment, (EA::Text::VAlignment)0, color, NULL);
+
+	int aWidth, aHeight;
+	font->SizeString_Paragraph(theLine, aWidth, aHeight, 0.0f);
+	return aHeight;
 }
 
 int Widget::WriteWordWrapped(Graphics* g, const Rect& theRect, const SexyString& theLine, int theLineSpacing, int theJustification)
@@ -318,6 +345,17 @@ int Widget::WriteWordWrapped(Graphics* g, Color color, const Rect& theRect, cons
 	return g->WriteWordWrapped(theRect, theLine, theLineSpacing, theJustification, NULL, -1, NULL, NULL, true);
 }
 
+void Widget::WriteCenteredLine(Graphics* g, PrimeTypeface* font, Color color, int anOffset, const SexyString& theLine)
+{
+	font->DrawString_Line(g, 0.0f, (float)anOffset, (float)mWidth, theLine, EA::Text::kHACenter, Color(Color::Invalid), NULL);
+}
+
+void Widget::WriteCenteredLine(Graphics* g, PrimeTypeface* font, int anOffset, const SexyString& theLine, Color theColor1, Color theColor2, const Point& theShadowOffset)
+{
+	font->DrawString_Line(g, (float)theShadowOffset.mX, (float)(anOffset + theShadowOffset.mY), (float)mWidth, theLine, EA::Text::kHACenter, theColor2, NULL);
+	font->DrawString_Line(g, 0.0f, (float)anOffset, (float)mWidth, theLine, EA::Text::kHACenter, theColor1, NULL);
+}
+
 Rect Widget::WriteCenteredLine(Graphics* g, Color color, int anOffset, const SexyString& theLine)
 {
 	g->SetColor(color);
@@ -333,6 +371,21 @@ Rect Widget::WriteCenteredLine(Graphics* g, int anOffset, const SexyString& theL
 	return Rect(aX, anOffset - aFont->GetAscent(), aWidth, aFont->GetHeight());
 }
 
+Rect Widget::WriteCenteredLine(Graphics* g, int anOffset, const SexyString& theLine, Color theColor1, Color theColor2, const Point& theShadowOffset)
+{
+	Font* aFont = g->GetFont();
+	int aWidth = aFont->StringWidth(theLine);
+	int aX = (mWidth - aWidth) / 2;
+	g->SetColor(theColor2);
+	g->DrawString(theLine, theShadowOffset.mX + (mWidth - aWidth) / 2, anOffset + theShadowOffset.mY);
+	g->SetColor(theColor1);
+	g->DrawString(theLine, (mWidth - aWidth) / 2, anOffset);
+
+	int aMinX = std::min(0, theShadowOffset.mX);
+	int aMinY = std::min(0, theShadowOffset.mY);
+	return Rect(aX + aMinX, anOffset - aFont->GetAscent() + aMinY, aWidth + abs(theShadowOffset.mX), aFont->GetHeight() + abs(theShadowOffset.mY));
+}
+
 void Widget::WriteNumberFromStrip(Graphics* g, int theNumber, int theX, int theY, Image* theNumberStrip, int aSpacing)
 {
 	int aDivisor = 10;
@@ -344,15 +397,14 @@ void Widget::WriteNumberFromStrip(Graphics* g, int theNumber, int theX, int theY
 	}
 
 	int aDigitLen = theNumberStrip->GetWidth() / 10;
-	int aX = theX;
 	for (int aDigitIdx = 0; aDigitIdx < aNumDigits; aDigitIdx++)
 	{
 		aDivisor /= 10;
 		g->PushState();
-		g->ClipRect(aX, theY, aDigitLen, theNumberStrip->GetHeight());
+		g->ClipRect(theX, theY, aDigitLen, theNumberStrip->GetHeight());
 		int aDigit = (theNumber / aDivisor) % 10;
-		int aDrawX = aX - aDigit * aDigitLen;
-		aX += aDigitLen + aSpacing;
+		int aDrawX = theX - aDigit * aDigitLen;
+		theX += aDigitLen + aSpacing;
 		g->DrawImage(theNumberStrip, aDrawX, theY);
 		g->PopState();
 	}

@@ -55,8 +55,8 @@ WidgetContainer::WidgetContainer()
 	mParent = NULL;
 	mWidgetManager = NULL;
 	mUpdateIteratorModified = false;
-	mLastWMUpdateCount = 0;
 	mUpdateIterator = mWidgets.end();
+	mLastWMUpdateCount = 0;
 	mUpdateCnt = 0;
 	mDirty = false;
 	mHasAlpha = false;
@@ -135,51 +135,53 @@ void WidgetContainer::MarkDirtyFull(WidgetContainer* theWidget)
 	MarkDirtyFull();
 	theWidget->mDirty = true;
 
-	if (mParent != NULL)
-		return;
-
-	WidgetList::iterator anItr = std::find(mWidgets.begin(), mWidgets.end(), theWidget);
-	if (anItr == mWidgets.end())
-		return;
-
-	if (anItr != mWidgets.begin())
+	if (mParent == NULL)
 	{
-		WidgetList::iterator aScan = anItr;
-		--aScan;
-
-		while (true)
+		WidgetList::iterator anItr = std::find(mWidgets.begin(), mWidgets.end(), theWidget);
+		if (!(anItr == mWidgets.end()))
 		{
-			Widget* aWidget = *aScan;
-			if (aWidget->mVisible)
+			WidgetList::iterator aScan = anItr;
+			if (aScan != mWidgets.begin())
 			{
-				if (!aWidget->mHasTransparencies && !aWidget->mHasAlpha)
+				--aScan;
+				do
 				{
-					Rect aRect1(theWidget->mX, theWidget->mY, theWidget->mWidth, theWidget->mHeight);
-					Rect aRect2(0, 0, mWidth, mHeight);
-					Rect aRect = aRect1.Intersection(aRect2);
-					if (aWidget->Contains(aRect.mX, aRect.mY) &&
-					    aWidget->Contains(aRect.mX + aRect.mWidth - 1, aRect.mY + aRect.mHeight - 1))
+					Widget* aWidget = *aScan;
+					if (aWidget->mVisible)
 					{
-						aWidget->MarkDirty();
-						break;
-					}
-				}
+						if (!aWidget->mHasTransparencies)
+						{
+							if (!aWidget->mHasAlpha)
+							{
+								Rect aRect = Rect(theWidget->mX, theWidget->mY, theWidget->mWidth, theWidget->mHeight).Intersection(Rect(0, 0, mWidth, mHeight));
+								if (aWidget->Contains(aRect.mX, aRect.mY) &&
+								    aWidget->Contains(aRect.mX + aRect.mWidth - 1, aRect.mY + aRect.mHeight - 1))
+								{
+									aWidget->MarkDirty();
+									break;
+								}
+							}
+						}
 
-				if (aWidget->Intersects(theWidget))
-					MarkDirty(aWidget);
+						if (aWidget->Intersects(theWidget))
+							MarkDirty(aWidget);
+					}
+
+					if (aScan == mWidgets.begin())
+						break;
+					--aScan;
+				} while (true);
 			}
 
-			if (aScan == mWidgets.begin())
-				break;
-			--aScan;
+			aScan = anItr;
+			while (aScan != mWidgets.end())
+			{
+				Widget* aWidget = *aScan;
+				if (aWidget->mVisible && aWidget->Intersects(theWidget))
+					MarkDirty(aWidget);
+				++aScan;
+			}
 		}
-	}
-
-	for (WidgetList::iterator aFwd = anItr; aFwd != mWidgets.end(); ++aFwd)
-	{
-		Widget* aWidget = *aFwd;
-		if (aWidget->mVisible && aWidget->Intersects(theWidget))
-			MarkDirty(aWidget);
 	}
 }
 
@@ -225,8 +227,7 @@ bool WidgetContainer::IsBelow(Widget* theWidget1, Widget* theWidget2)
 
 Widget* WidgetContainer::GetWidgetAtHelper(int theX, int theY, int theFlags, bool* found, int* theWidgetX, int* theWidgetY)
 {
-	int aFlags = theFlags;
-	ModFlags(aFlags, mWidgetFlagsMod);
+	ModFlags(theFlags, mWidgetFlagsMod);
 
 	bool aFoundModal = false;
 
@@ -234,14 +235,14 @@ Widget* WidgetContainer::GetWidgetAtHelper(int theX, int theY, int theFlags, boo
 	{
 		Widget* aWidget = *anItr;
 
-		int aWidgetFlags = aFlags;
+		int aWidgetFlags = theFlags;
 		ModFlags(aWidgetFlags, aWidget->mWidgetFlagsMod);
 		if (aFoundModal)
 			ModFlags(aWidgetFlags, mWidgetManager->mBelowModalFlagsMod);
 
 		if ((aWidgetFlags & WIDGETFLAGS_ALLOW_MOUSE) && aWidget->mVisible)
 		{
-			bool aChildFound = false;
+			bool aChildFound;
 			Widget* aResult = aWidget->GetWidgetAtHelper(theX - aWidget->mX, theY - aWidget->mY, aWidgetFlags, &aChildFound, theWidgetX, theWidgetY);
 			if (aResult != NULL || aChildFound)
 			{
@@ -379,7 +380,7 @@ void WidgetContainer::RemoveWidget(Widget* theWidget)
 		theWidget->mParent = NULL;
 
 		bool anUpdate = (anItr == mUpdateIterator);
-		anItr = mWidgets.erase(anItr);
+		mWidgets.erase(anItr++);
 		if (anUpdate)
 		{
 			mUpdateIterator = anItr;
@@ -390,38 +391,16 @@ void WidgetContainer::RemoveWidget(Widget* theWidget)
 
 void WidgetContainer::RemoveAllWidgets(bool doDelete, bool recursive)
 {
-	if (!recursive)
+	while (!mWidgets.empty())
 	{
-		while (!mWidgets.empty())
-		{
-			Widget* aWidget = mWidgets.front();
-			RemoveWidget(aWidget);
+		Widget* aWidget = mWidgets.front();
+		RemoveWidget(aWidget);
 
-			if (aWidget != NULL && doDelete)
-				delete aWidget;
-		}
-	}
-	else
-	{
+		if (recursive)
+			aWidget->RemoveAllWidgets(doDelete, recursive);
+
 		if (doDelete)
-		{
-			while (!mWidgets.empty())
-			{
-				Widget* aWidget = mWidgets.front();
-				RemoveWidget(aWidget);
-				aWidget->RemoveAllWidgets(doDelete, true);
-				delete aWidget;
-			}
-		}
-		else
-		{
-			while (!mWidgets.empty())
-			{
-				Widget* aWidget = mWidgets.front();
-				RemoveWidget(aWidget);
-				aWidget->RemoveAllWidgets(doDelete, true);
-			}
-		}
+			delete aWidget;
 	}
 }
 
@@ -431,37 +410,38 @@ void WidgetContainer::InsertWidgetHelper(const WidgetList::iterator& where, Widg
 {
 	WidgetList::iterator anItr = where;
 
-	while (anItr != mWidgets.end() && (*anItr)->mZOrder < theWidget->mZOrder)
-		++anItr;
-
-	if (anItr != mWidgets.end())
+	while (anItr != mWidgets.end())
 	{
-		if (anItr != mWidgets.begin())
+		if ((*anItr)->mZOrder >= theWidget->mZOrder)
 		{
-			WidgetList::iterator aPrevItr = anItr;
-			--aPrevItr;
+			if (anItr != mWidgets.begin())
+			{
+				WidgetList::iterator aPrevItr = anItr;
+				--aPrevItr;
 
-			if ((*anItr)->mZOrder > theWidget->mZOrder)
-				goto scanBack;
-		}
+				if ((*anItr)->mZOrder > theWidget->mZOrder)
+					break;
+			}
 
-		mWidgets.insert(anItr, theWidget);
-		return;
-	}
-
-scanBack:
-	while (anItr != mWidgets.begin())
-	{
-		--anItr;
-		if ((*anItr)->mZOrder <= theWidget->mZOrder)
-		{
-			++anItr;
 			mWidgets.insert(anItr, theWidget);
 			return;
 		}
+
+		++anItr;
 	}
 
-	mWidgets.push_front(theWidget);
+	do
+	{
+		if (!(anItr != mWidgets.begin()))
+		{
+			mWidgets.push_front(theWidget);
+			return;
+		}
+
+		--anItr;
+	} while ((*anItr)->mZOrder > theWidget->mZOrder);
+
+	mWidgets.insert(++anItr, theWidget);
 }
 
 void WidgetContainer::BringToFront(Widget* theWidget)
@@ -476,7 +456,7 @@ void WidgetContainer::BringToFront(Widget* theWidget)
 		}
 
 		mWidgets.erase(anItr);
-		InsertWidgetHelper(mWidgets.begin(), theWidget);
+		InsertWidgetHelper(mWidgets.end(), theWidget);
 		theWidget->OrderInManagerChanged();
 	}
 }
@@ -493,7 +473,7 @@ void WidgetContainer::BringToBack(Widget* theWidget)
 		}
 
 		mWidgets.erase(anItr);
-		InsertWidgetHelper(mWidgets.end(), theWidget);
+		InsertWidgetHelper(mWidgets.begin(), theWidget);
 		theWidget->OrderInManagerChanged();
 	}
 }
