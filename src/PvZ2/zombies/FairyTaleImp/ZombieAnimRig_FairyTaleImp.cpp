@@ -13,6 +13,17 @@ ZombieAnimRig_FairyTaleImp::~ZombieAnimRig_FairyTaleImp()
 {
 }
 
+const std::string ZombieAnimRig_FairyTaleImp::getWalkAnimationName()
+{
+	const char* aName;
+	if (m_running)
+		aName = "run";
+	else
+		aName = "walk";
+
+	return aName;
+}
+
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_FairyTaleImp);

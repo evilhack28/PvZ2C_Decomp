@@ -8,6 +8,8 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieRomanShield.h"
+#include "ObjectTypeDirectory.h"
+#include "ZombieType.h"
 
 ZombieAnimRig_RomanShield::ZombieAnimRig_RomanShield()
 {
@@ -15,6 +17,12 @@ ZombieAnimRig_RomanShield::ZombieAnimRig_RomanShield()
 
 ZombieAnimRig_RomanShield::~ZombieAnimRig_RomanShield()
 {
+}
+
+ZombieParticle* ZombieAnimRig_RomanShield::CreateProjectileParticle()
+{
+	ZombieAnimRig* aRig = ObjectTypeDirectory<ZombieType>::GetInstancePtr()->GetTypeFromTypeName("roman")->CreateAnimRig();
+	return aRig->SpawnProjectileParticle();
 }
 
 #include "ReflectionBuilder.h"

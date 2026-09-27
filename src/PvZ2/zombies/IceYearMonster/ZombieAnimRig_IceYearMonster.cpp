@@ -17,6 +17,11 @@ ZombieAnimRig_IceYearMonster::~ZombieAnimRig_IceYearMonster()
 {
 }
 
+bool ZombieAnimRig_IceYearMonster::PlayTapAnimation(std::string animation, PopAnimRig::AnimStoppedReflectionDelegate i_onAnimStopped)
+{
+	return PlayAndStop(animation, SELECT_EXACT, i_onAnimStopped) != -1;
+}
+
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_IceYearMonster);

@@ -13,6 +13,20 @@ ZombieAnimRig_LostCityGargantuar::~ZombieAnimRig_LostCityGargantuar()
 {
 }
 
+void ZombieAnimRig_LostCityGargantuar::SetTorchLayers(bool i_visible)
+{
+	if (m_hasTorch != i_visible)
+	{
+		m_hasTorch = i_visible;
+		SetLayerVisibility("torch_end_lit", m_hasTorch);
+		SetLayerVisibility("torch_fire_frame_01", m_hasTorch);
+		SetLayerVisibility("torch_fire_fire_frame_01", m_hasTorch);
+		SetLayerVisibility("torch_fire_frame_02", m_hasTorch);
+		SetLayerVisibility("torch_fire_frame_03", m_hasTorch);
+		SetLayerVisibility("torch_fire_frame_04", m_hasTorch);
+	}
+}
+
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_LostCityGargantuar);

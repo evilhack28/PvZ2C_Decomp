@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-27T06:21:27+00:00",
+  "generated": "2026-09-27T08:50:51+00:00",
   "measures": {
     "total_functions": 80021,
-    "matched_functions": 9653,
-    "matched_functions_percent": 12.06,
+    "matched_functions": 9663,
+    "matched_functions_percent": 12.08,
     "total_code": 12326444,
-    "matched_code": 616380,
-    "matched_code_percent": 5.0,
-    "fuzzy_match_percent": 5.25,
+    "matched_code": 619372,
+    "matched_code_percent": 5.02,
+    "fuzzy_match_percent": 5.28,
     "started_units": 975,
     "total_units": 2749,
     "started_code": 4256256,
-    "started_matched_code": 616380,
-    "started_percent": 14.48,
+    "started_matched_code": 619372,
+    "started_percent": 14.55,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -108509,12 +108509,12 @@
     {
       "name": "src/PvZ2/plants/Plant.cpp",
       "total_code": 87192,
-      "matched_code": 20056,
-      "matched_code_percent": 23.0,
+      "matched_code": 20220,
+      "matched_code_percent": 23.19,
       "total_functions": 318,
-      "matched_functions": 234,
-      "matched_functions_percent": 73.58,
-      "fuzzy_match_percent": 33.45,
+      "matched_functions": 235,
+      "matched_functions_percent": 73.9,
+      "fuzzy_match_percent": 34.37,
       "functions": [
         {
           "name": "Plant::NotifyApplyCondition",
@@ -108829,24 +108829,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Plant::GetExtraDPSmodifier",
-          "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Plant::Water",
-          "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Plant::SendHelpToPlants",
-          "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "PlantType::canGiveFirstAidToPlant",
           "size": 268,
           "matched": false,
@@ -108866,12 +108848,6 @@
         },
         {
           "name": "Plant::OverrideProjectileCollision",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Plant::UpdatePVP",
           "size": 164,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -108931,10 +108907,28 @@
           "fuzzy_match_percent": 90.41
         },
         {
+          "name": "Plant::GetExtraDPSmodifier",
+          "size": 288,
+          "matched": false,
+          "fuzzy_match_percent": 94.44
+        },
+        {
           "name": "Plant::ResetLaunchTimer",
           "size": 288,
           "matched": false,
           "fuzzy_match_percent": 65.28
+        },
+        {
+          "name": "Plant::Water",
+          "size": 288,
+          "matched": false,
+          "fuzzy_match_percent": 75.0
+        },
+        {
+          "name": "Plant::SendHelpToPlants",
+          "size": 276,
+          "matched": false,
+          "fuzzy_match_percent": 55.07
         },
         {
           "name": "Plant::UpdateDamageStates",
@@ -109256,6 +109250,12 @@
         },
         {
           "name": "Plant::RecoverFastCoolDownRatio",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::UpdatePVP",
           "size": 164,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -149912,13 +149912,13 @@
       "total_functions": 11,
       "matched_functions": 10,
       "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 61.84,
+      "fuzzy_match_percent": 89.91,
       "functions": [
         {
           "name": "ZombieAnimRig_ChildrensdayBucket::getBucketLayerNames",
           "size": 348,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 73.56
         },
         {
           "name": "ZombieAnimRig_ChildrensdayBucket::StaticClassInit",
@@ -150311,18 +150311,18 @@
     {
       "name": "src/PvZ2/zombies/ConeMech/ZombieAnimRig_ConeMech.cpp",
       "total_code": 1472,
-      "matched_code": 564,
-      "matched_code_percent": 38.32,
+      "matched_code": 1472,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 38.32,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ZombieAnimRig_ConeMech::SetDamageState",
           "size": 908,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ZombieAnimRig_ConeMech::StaticClassInit",
@@ -152517,22 +152517,22 @@
     {
       "name": "src/PvZ2/zombies/FairyTaleImp/ZombieAnimRig_FairyTaleImp.cpp",
       "total_code": 708,
-      "matched_code": 580,
-      "matched_code_percent": 81.92,
+      "matched_code": 708,
+      "matched_code_percent": 100.0,
       "total_functions": 12,
-      "matched_functions": 11,
-      "matched_functions_percent": 91.67,
-      "fuzzy_match_percent": 81.92,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "ZombieAnimRig_FairyTaleImp::getWalkAnimationName",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "ZombieAnimRig_FairyTaleImp::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ZombieAnimRig_FairyTaleImp::getWalkAnimationName",
+          "size": 128,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -152711,18 +152711,18 @@
     {
       "name": "src/PvZ2/zombies/FootballMech/ZombieAnimRig_FootballMech.cpp",
       "total_code": 1160,
-      "matched_code": 564,
-      "matched_code_percent": 48.62,
+      "matched_code": 1160,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 48.62,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ZombieAnimRig_FootballMech::SetDamageState",
           "size": 596,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ZombieAnimRig_FootballMech::StaticClassInit",
@@ -153775,22 +153775,22 @@
     {
       "name": "src/PvZ2/zombies/IceBall/ZombieAnimRig_IceBall.cpp",
       "total_code": 732,
-      "matched_code": 568,
-      "matched_code_percent": 77.6,
+      "matched_code": 732,
+      "matched_code_percent": 100.0,
       "total_functions": 12,
-      "matched_functions": 11,
-      "matched_functions_percent": 91.67,
-      "fuzzy_match_percent": 77.6,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "ZombieAnimRig_IceBall::PlayMove",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "ZombieAnimRig_IceBall::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ZombieAnimRig_IceBall::PlayMove",
+          "size": 164,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -153859,22 +153859,22 @@
     {
       "name": "src/PvZ2/zombies/IceYearMonster/ZombieAnimRig_IceYearMonster.cpp",
       "total_code": 712,
-      "matched_code": 564,
-      "matched_code_percent": 79.21,
+      "matched_code": 712,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 79.21,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "ZombieAnimRig_IceYearMonster::PlayTapAnimation",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "ZombieAnimRig_IceYearMonster::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ZombieAnimRig_IceYearMonster::PlayTapAnimation",
+          "size": 148,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -154607,18 +154607,18 @@
     {
       "name": "src/PvZ2/zombies/LostCityGargantuar/ZombieAnimRig_LostCityGargantuar.cpp",
       "total_code": 996,
-      "matched_code": 580,
-      "matched_code_percent": 58.23,
+      "matched_code": 996,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 58.23,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ZombieAnimRig_LostCityGargantuar::SetTorchLayers",
           "size": 416,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ZombieAnimRig_LostCityGargantuar::StaticClassInit",
@@ -159399,18 +159399,18 @@
     {
       "name": "src/PvZ2/zombies/RomanShield/ZombieAnimRig_RomanShield.cpp",
       "total_code": 744,
-      "matched_code": 564,
-      "matched_code_percent": 75.81,
+      "matched_code": 744,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 75.81,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ZombieAnimRig_RomanShield::CreateProjectileParticle",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ZombieAnimRig_RomanShield::StaticClassInit",
@@ -160169,18 +160169,18 @@
     {
       "name": "src/PvZ2/zombies/SkyCityGgtImp/ZombieAnimRig_SkyCityGgtImp.cpp",
       "total_code": 756,
-      "matched_code": 572,
-      "matched_code_percent": 75.66,
+      "matched_code": 756,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 75.66,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ZombieAnimRig_SkyCityGgtImp::getDieAnimationName",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ZombieAnimRig_SkyCityGgtImp::StaticClassInit",
@@ -162325,19 +162325,13 @@
     {
       "name": "src/PvZ2/zombies/Weasel/ZombieAnimRig_Weasel.cpp",
       "total_code": 668,
-      "matched_code": 564,
-      "matched_code_percent": 84.43,
+      "matched_code": 668,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 84.43,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "ZombieAnimRig_Weasel::getWalkAnimationName",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "ZombieAnimRig_Weasel::StaticClassInit",
           "size": 180,
@@ -162347,6 +162341,12 @@
         {
           "name": "ZombieAnimRig_Weasel::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ZombieAnimRig_Weasel::getWalkAnimationName",
+          "size": 104,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },

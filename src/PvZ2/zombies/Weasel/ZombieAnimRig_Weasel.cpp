@@ -17,6 +17,11 @@ ZombieAnimRig_Weasel::~ZombieAnimRig_Weasel()
 {
 }
 
+const std::string ZombieAnimRig_Weasel::getWalkAnimationName()
+{
+	return "walk";
+}
+
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_Weasel);

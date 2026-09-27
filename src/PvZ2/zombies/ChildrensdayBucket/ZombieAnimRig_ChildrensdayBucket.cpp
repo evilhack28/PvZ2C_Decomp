@@ -17,6 +17,17 @@ ZombieAnimRig_ChildrensdayBucket::~ZombieAnimRig_ChildrensdayBucket()
 {
 }
 
+const std::vector<std::string>& ZombieAnimRig_ChildrensdayBucket::getBucketLayerNames()
+{
+	static std::string sLayerNameArray[] = {
+		"zombie_armor_bucket_norm",
+		"zombie_armor_bucket_damage_01",
+		"zombie_armor_bucket_damage_02",
+	};
+	static std::vector<std::string> sLayerNames(sLayerNameArray, sLayerNameArray + 3);
+	return sLayerNames;
+}
+
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_ChildrensdayBucket);

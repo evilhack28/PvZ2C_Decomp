@@ -32,6 +32,11 @@ void ZombieAnimRig_IceBall::StaticClassInit()
 }
 
 #include "ZombieAnimRig.h"
+void ZombieAnimRig_IceBall::PlayMove()
+{
+	PlayAndContinue("roll");
+}
+
 void ZombieAnimRig_IceBall::onNeedsToDie()
 {
 	 ZombieAnimRig::setReadyToDie();

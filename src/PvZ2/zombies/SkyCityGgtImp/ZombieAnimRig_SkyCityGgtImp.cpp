@@ -13,6 +13,25 @@ ZombieAnimRig_SkyCityGgtImp::~ZombieAnimRig_SkyCityGgtImp()
 {
 }
 
+const std::string ZombieAnimRig_SkyCityGgtImp::getDieAnimationName()
+{
+	if (m_iNeedJump != 0)
+	{
+		if (m_iNeedJump == 1)
+			goto skee;
+		if (m_iNeedJump == 2)
+			goto skee02;
+	}
+
+	return ZombieAnimRig::getDieAnimationName();
+
+skee:
+	return "skee";
+
+skee02:
+	return "skee02";
+}
+
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_SkyCityGgtImp);

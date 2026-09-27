@@ -1116,6 +1116,25 @@ bool Plant::ReceiveHelp(PlantHelpType i_helpType)
 	return m_plantFramework->onReceiveHelp(i_helpType);
 }
 
+void Plant::SendHelpToPlants(PlantHelpType i_helpType, Rect& i_gridAreaToHelp, int i_windHelpLimit)
+{
+	std::vector<BoardEntity*> entities;
+	EntityFinder::GetEntitiesInGridSquares(entities, ENTITYTYPE_PLANT, i_gridAreaToHelp);
+
+	std::random_shuffle(entities.begin(), entities.end());
+
+	for (std::vector<BoardEntity*>::iterator it = entities.begin(); it != entities.end(); ++it)
+	{
+		Plant* aPlant = (*it)->Cast<Plant>();
+		if (aPlant->ReceiveHelp(i_helpType))
+		{
+			i_windHelpLimit--;
+			if (i_windHelpLimit < 1)
+				break;
+		}
+	}
+}
+
 bool Plant::BlockRailcartMovement() const
 {
 	return m_plantFramework->BlockRailcartMovement();
@@ -1921,6 +1940,28 @@ bool Plant::IsWatering()
 	return m_pCachedPlantAnimRig->GetState() == PLANTANIM_WATER;
 }
 
+void Plant::Water(bool water, pvztime_t duration)
+{
+	if (water)
+	{
+		if (duration > 0.0f)
+			m_waterDurationEnd = PVZ_T() + duration;
+
+		m_plantFramework->onWatered(true);
+
+		if (!IsWatering())
+			m_pCachedPlantAnimRig->PlayWatering();
+	}
+	else
+	{
+		m_waterDurationEnd = PVZ_EOT();
+		m_plantFramework->onWatered(false);
+
+		if (IsWatering())
+			m_plantFramework->Idle();
+	}
+}
+
 SexyVector2 Plant::GetRelocationBoardSpaceOffsetFromDestination()
 {
 	updateRelocationPositionAndRotation();
@@ -2104,6 +2145,26 @@ float Plant::GetExtraHitPointsmodifier() const
 	return 1.0f;
 }
 
+float Plant::GetExtraDPSmodifier() const
+{
+	float aLevelStat;
+	int idx = GetCurrentLevel() - 1;
+	if (idx >= 0 && (size_t)idx < GetProps()->PlantLevelStats.size())
+		aLevelStat = GetProps()->PlantLevelStats[idx].AttackLevel;
+	else
+		aLevelStat = 1.0f;
+
+	float aPartial = aLevelStat * m_extraLevelDamage;
+
+	float aAttackUp = 1.0f;
+	if (m_bIsAttackUp)
+		aAttackUp = m_iAppendAttackUpPercent + 1.0f;
+
+	aPartial *= aAttackUp;
+
+	return aPartial * GetAdditionValue(PlantAddition::PAdditonRLS_ATK_Muti) + GetAdditionValue(PlantAddition::PAdditonRLS_ATK_Add);
+}
+
 bool Plant::WasKilledByZombies()
 {
 	if (TestFlag(m_lastDamageType, DAMAGE_NON_ZOMBIE))
@@ -2245,6 +2306,31 @@ bool Plant::ShouldDrawShadow() const
 bool Plant::IsSuspended()
 {
 	return m_conditionTracker.TestModifierFlag(CMODIFIER_Suspended) || IsHidden();
+}
+
+void Plant::UpdatePVP()
+{
+	if (!IsDead())
+	{
+		if (!FloatApproxEqual(m_PlantLastHealth, m_PlantHealth))
+		{
+			m_PlantLastHealth = m_PlantHealth;
+			m_showHealthBarTime = 2.0f;
+			SetShowHealthBar(true);
+		}
+
+		if (m_bShowHealthBar && m_showHealthBarTime > 0.0f)
+		{
+			m_showHealthBarTime -= PVZ_Dt();
+			if (m_showHealthBarTime <= 0.0f)
+				goto hide;
+		}
+
+		return;
+	}
+
+hide:
+	SetShowHealthBar(false);
 }
 
 bool Plant::CanFindTarget(PlantWeapon i_plantWeapon)
