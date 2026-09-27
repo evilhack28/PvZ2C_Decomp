@@ -723,12 +723,12 @@ void Graphics::DrawImageMatrixOptimized(Image* theImage, const SexyMatrix3& theM
 
 int Graphics::PFCompareInd(const void* u, const void* v)
 {
-	return mPFPoints[*(const int*)u].mY > mPFPoints[*(const int*)v].mY ? 1 : -1;
+	return mPFPoints[*(const int*)u].mY <= mPFPoints[*(const int*)v].mY ? -1 : 1;
 }
 
 int Graphics::PFCompareActive(const void* u, const void* v)
 {
-	return ((const Edge*)u)->mX > ((const Edge*)v)->mX ? 1 : -1;
+	return ((const Edge*)u)->mX <= ((const Edge*)v)->mX ? -1 : 1;
 }
 
 /////////////// triangles ///////////////
@@ -902,4 +902,64 @@ void Graphics::PopState()
 
 	SetAsCurrentContext();
 	mRenderDevice->PopState();
+}
+
+int Graphics::GetWordWrappedHeight(int theWidth, const SexyString& theLine, int theLineSpacing, int* theMaxWidth, int* theLineCount)
+{
+	Graphics aGraphics;
+	aGraphics.SetFont(mFont);
+	return aGraphics.WriteWordWrapped(Rect(0, 0, theWidth, 0), theLine, theLineSpacing, -1, theMaxWidth, -1, NULL, theLineCount);
+}
+
+void Graphics::PFInsert(int i, int y)
+{
+	int j = (i < mPFNumVertices - 1) ? i + 1 : 0;
+
+	int yi = mPFPoints[i].mY;
+	int yj = mPFPoints[j].mY;
+
+	int hi = i, lo = j, yhi = yi, ylo = yj;
+	if (yi < yj)
+	{
+		hi = j;
+		lo = i;
+		yhi = yj;
+		ylo = yi;
+	}
+
+	Edge* anEdge = &mPFActiveEdgeList[mPFNumActiveEdges];
+	double aDX = (double)(mPFPoints[hi].mX - mPFPoints[lo].mX) / (double)(yhi - ylo);
+	anEdge->mDX = aDX;
+	anEdge->mX = mTransX + (double)mPFPoints[lo].mX + aDX * ((0.5 - mTransY) + y - ylo);
+	anEdge->i = i;
+	anEdge->b = ylo - (double)mPFPoints[lo].mX * (1.0 / aDX);
+
+	mPFNumActiveEdges++;
+}
+
+void Graphics::PFDelete(int i)
+{
+	if (mPFNumActiveEdges < 1)
+		return;
+
+	int anIndex;
+	if (mPFActiveEdgeList[0].i == i)
+	{
+		anIndex = 0;
+	}
+	else
+	{
+		anIndex = 1;
+		while (true)
+		{
+			if (mPFActiveEdgeList[anIndex].i == i)
+				break;
+			anIndex++;
+			if (anIndex >= mPFNumActiveEdges)
+				return;
+		}
+	}
+
+	mPFNumActiveEdges--;
+	memmove(&mPFActiveEdgeList[anIndex], &mPFActiveEdgeList[anIndex + 1], (mPFNumActiveEdges - anIndex) * sizeof(Edge));
 }

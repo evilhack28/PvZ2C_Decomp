@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-27T08:50:51+00:00",
+  "generated": "2026-09-27T13:08:26+00:00",
   "measures": {
-    "total_functions": 80021,
-    "matched_functions": 9663,
-    "matched_functions_percent": 12.08,
-    "total_code": 12326444,
-    "matched_code": 619372,
+    "total_functions": 80310,
+    "matched_functions": 9674,
+    "matched_functions_percent": 12.05,
+    "total_code": 12377048,
+    "matched_code": 620796,
     "matched_code_percent": 5.02,
-    "fuzzy_match_percent": 5.28,
-    "started_units": 975,
-    "total_units": 2749,
-    "started_code": 4256256,
-    "started_matched_code": 619372,
-    "started_percent": 14.55,
+    "fuzzy_match_percent": 5.29,
+    "started_units": 977,
+    "total_units": 2751,
+    "started_code": 4306860,
+    "started_matched_code": 620796,
+    "started_percent": 14.41,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -249793,14 +249793,1772 @@
       ]
     },
     {
+      "name": "src/SexyAppFramework/ResourceManager.cpp",
+      "total_code": 25636,
+      "matched_code": 448,
+      "matched_code_percent": 1.75,
+      "total_functions": 74,
+      "matched_functions": 4,
+      "matched_functions_percent": 5.41,
+      "fuzzy_match_percent": 9.26,
+      "functions": [
+        {
+          "name": "Sexy::ResourceManager::ParseResourcesFile",
+          "size": 3108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetImage",
+          "size": 1244,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ResetTables",
+          "size": 784,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::~ResourceManager",
+          "size": 772,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::~ResourceManager",
+          "size": 772,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetLocSetForLocaleName",
+          "size": 676,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ResourceManager",
+          "size": 652,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ResourceManager",
+          "size": 652,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceCount",
+          "size": 644,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::BuildImage",
+          "size": 600,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::RegisterResourceInternal",
+          "size": 536,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceForStringId",
+          "size": 520,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceForPath",
+          "size": 492,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ReadResourceFileSlotCount",
+          "size": 464,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::AddRsb",
+          "size": 424,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::Init",
+          "size": 404,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::Clear",
+          "size": 396,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ResizeTables",
+          "size": 372,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResInfoForPath",
+          "size": 364,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::LoadResourceForStringId",
+          "size": 364,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::PreLoadRsb",
+          "size": 360,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetLocaleSetForLocaleName",
+          "size": 356,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::InitForDecompressRsbFile",
+          "size": 352,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetLoadResourcesListProgress",
+          "size": 340,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::RemoveUngroupedSharedImage",
+          "size": 272,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::SetSoundBankInvaild",
+          "size": 264,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::PrepareLoadResourcesList",
+          "size": 260,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::RemoveAllDelayLoadedRSBConfigFiles",
+          "size": 244,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::AddDLCRsb",
+          "size": 232,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::OnInstanceTableObjectFault",
+          "size": 228,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::LoadAllRsb",
+          "size": 212,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ShowResourceError",
+          "size": 204,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetLocaleFolder",
+          "size": 200,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetAllDelayLoadedRSBSlotCount",
+          "size": 196,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::IsDelayLoadRSB",
+          "size": 192,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ReplaceResource",
+          "size": 188,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceForStringIdT",
+          "size": 164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceForStringIdT",
+          "size": 164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceForStringIdT",
+          "size": 164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceForStringIdT",
+          "size": 164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceGroupNamed",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::RegisterResource",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::Fail",
+          "size": 128,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetImageOptions::operator=",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetImageOptions::GetImageOptions",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetImageOptions::GetImageOptions",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::PreLoadTask::~PreLoadTask",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::PreLoadTask::~PreLoadTask",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResInfoForPathT",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResInfoForPathT",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResInfoForStringIdT",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResInfoForStringIdT",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResInfoForStringIdT",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResInfoForStringIdT",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResInfoForStringIdT",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetErrorText",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetImageOptions::~GetImageOptions",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetImageOptions::~GetImageOptions",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::InitDelayLoadedRSBSlotCount",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::PreLoadTask::PreLoadTask",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::PreLoadTask::PreLoadTask",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::~ResourceManager",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::HadError",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetLastNonDelayLoadRSBManifestName",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ClearError",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetDelayLoadedRSBSlotCount",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::InitResourceGen",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResInfoForStringId",
+          "size": 2488,
+          "matched": false,
+          "fuzzy_match_percent": 30.71
+        },
+        {
+          "name": "Sexy::ResourceManager::ParseCommonResource",
+          "size": 1312,
+          "matched": false,
+          "fuzzy_match_percent": 62.2
+        },
+        {
+          "name": "Sexy::ResourceManager::ParseGroupResources",
+          "size": 952,
+          "matched": false,
+          "fuzzy_match_percent": 36.4
+        },
+        {
+          "name": "Sexy::ResourceManager::CreateResourceGroup",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceGroupNamed",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetInfoClassCount",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetInfoClassIndexed",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/SexyAppFramework/SexyAppBase.cpp",
+      "total_code": 24968,
+      "matched_code": 656,
+      "matched_code_percent": 2.63,
+      "total_functions": 215,
+      "matched_functions": 4,
+      "matched_functions_percent": 1.86,
+      "fuzzy_match_percent": 3.68,
+      "functions": [
+        {
+          "name": "Sexy::SexyAppBase::ReadFromRegistry",
+          "size": 1116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RotateImageHue",
+          "size": 1064,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ReadBufferFromFile",
+          "size": 988,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::~SexyAppBase",
+          "size": 948,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::~SexyAppBase",
+          "size": 948,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ReadBufferFromFile",
+          "size": 916,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::LoadProperties",
+          "size": 900,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CreateColorizedImage",
+          "size": 872,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CreateCrossfadeImage",
+          "size": 768,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::WriteToRegistry",
+          "size": 736,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SexyAppBase",
+          "size": 716,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SexyAppBase",
+          "size": 716,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ColorizeImage",
+          "size": 680,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::MirrorImage",
+          "size": 584,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::KillDialog",
+          "size": 496,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RGBToHSL",
+          "size": 444,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::HSLToRGB",
+          "size": 428,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CreateReadBufferFromFile",
+          "size": 404,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::UpdateFrames",
+          "size": 388,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::AddDialog",
+          "size": 360,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::DeleteExtraImageData",
+          "size": 232,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::FlipImage",
+          "size": 220,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Init",
+          "size": 220,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::LostFocus",
+          "size": 220,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GotFocus",
+          "size": 212,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::DeleteNativeImageData",
+          "size": 204,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ReInitImages",
+          "size": 204,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CopyImage",
+          "size": 200,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetString",
+          "size": 196,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RemoveMemoryImage",
+          "size": 192,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetString",
+          "size": 176,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetStringVector",
+          "size": 164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetDialog",
+          "size": 152,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetInteger",
+          "size": 148,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::LoadProperties",
+          "size": 148,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetDouble",
+          "size": 148,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetInteger",
+          "size": 148,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CopyImage",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::DoDialog",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetDouble",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetInteger",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetDouble",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetBoolean",
+          "size": 136,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::HSLToRGB",
+          "size": 124,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RGBToHSL",
+          "size": 124,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::UpdateApp",
+          "size": 120,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::OnGesturePinch",
+          "size": 112,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::OnGestureFlick",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Unmute",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::NotifyCrashHook",
+          "size": 104,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Mute",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::OnGestureLongPress",
+          "size": 96,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetResumeCachedFolder",
+          "size": 96,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::NewDialog",
+          "size": 92,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SafeDeleteWidget",
+          "size": 88,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::DialogButtonDepress",
+          "size": 84,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::DialogButtonPress",
+          "size": 84,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetSharedRenderTargetPool",
+          "size": 76,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SwitchScreenMode",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SwitchScreenMode",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::WriteBufferToFile",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::PrecacheAdditive",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::PrecacheNative",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::InitFileDriver",
+          "size": 60,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetSfxVolume",
+          "size": 60,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetUIOrientation",
+          "size": 56,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::IsUIOrientationAllowed",
+          "size": 56,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetClipboard",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetDeviceName",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetGameSEHInfo",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::TouchesCanceled",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CancelVibrate",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetNativeScreenSize",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Vibrate",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::VibrateWithPattern",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetMasterVolume",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::FileExists",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::IsMainThread",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::URLOpenSucceeded",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::AddDialog",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::AddDialog",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::BeginPopup",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CheckSignature",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ClearUpdateBacklog",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CopyFile",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CopyToClipboard",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CreateFileOfSize",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::DebugKeyDown",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::DoExit",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::DoParseCmdLine",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::EnableCustomCursors",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::EndPopup",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::EraseFile",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetCursor",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetLoadingThreadProgress",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::HandleCmdLineParam",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::HideKeyboard",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Is3DAccelerated",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Is3DAccelerationRecommended",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Is3DAccelerationSupported",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::IsFullScreen",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::IsHighFPS",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::IsKeyboardShowing",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::KillDialog",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::MsgBox",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::MsgBox",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::OnBackButtonPressed",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::OpenURL",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ParseCmdLine",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Popup",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Popup",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryEraseKey",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryEraseValue",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryGetSubKeys",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryReadBoolean",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryReadData",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryReadInteger",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryReadString",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryReadString",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryWriteBoolean",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryWriteData",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryWriteInteger",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryWriteString",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RegistryWriteString",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ReloadAllResources",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Remove3DData",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RenameFile",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Set3DAcclerated",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetCursor",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetCursorImage",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetFPS",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetMainThreadToCurrent",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ShowEmailKeyboard",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ShowKeyboard",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ShowPhoneNumKeyboard",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Shutdown",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Start",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::StartLoadingThread",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SwitchScreenMode",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::UpdateAppStep",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::WriteBytesToFile",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::WriteBytesToFileAt",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::WriteBytesToFileEnd",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::~SexyAppBase",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::KillDialog",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::PrecacheAlpha",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetDialogCount",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetMusicVolume",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ActivateAudioSession",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::DeactivateAudioSession",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetMasterVolume",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::IsMuted",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::UpdateAudio",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::AppCanRestore",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetNativeScreenSize",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CalcFullScreenOffset",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ChangeDirHook",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::DebugKeyDownAsync",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::DrawScreen",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::FrameNeedsSwapScreenImage",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::FullScreenUIOrientationLeft",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::FullScreenUIOrientationRight",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetCheatsEnabled",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetMusicVolume",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetSfxVolume",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::HandleOpenURLRequest",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::IsScreenSaver",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::KeyDown",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetCheatsEnabled",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ShouldReInit",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::TouchBegan",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::TouchEnded",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::TouchMoved",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::URLOpenFailed",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::isReducedResolutionIPhone",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::AccelerometerChanged",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::AppBecomingForeground",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::AppEnteredBackground",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::AppEnteredForeground",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CleanSharedImages",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::CloseRequestAsync",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::Done3dTesting",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetManualReflection",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::HandleGameAlreadyRunning",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::HandleWwiseError",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::InitHook",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::InitPropertiesHook",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::LoadingThreadCompleted",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::LoadingThreadProc",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::LowMemoryWarning",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ModalClose",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ModalOpen",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::MuteMusic",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::OnFullVersionChange",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::OnLiveLinkConnected",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::OnLiveLinkDisconnected",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::OnResourcesUpdated",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::PostDDInterfaceInitHook",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::PreDDInterfaceInitHook",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::PreDisplayHook",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::PreTerminate",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::RehupFocus",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ShutdownHook",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::StartSounds",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::UIOrientationChanged",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::UnmuteMusic",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::UpdateFramesF",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::UpdateFramesPaused",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::WechatShareFailed",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::WechatShareSuccess",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::ProcessSafeDeleteList",
+          "size": 272,
+          "matched": false,
+          "fuzzy_match_percent": 97.06
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetString",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::GetBoolean",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::SetBoolean",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyAppBase::AddMemoryImage",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
       "name": "src/SexyAppFramework/SexyGraphics.cpp",
       "total_code": 26676,
-      "matched_code": 8232,
-      "matched_code_percent": 30.86,
+      "matched_code": 8552,
+      "matched_code_percent": 32.06,
       "total_functions": 109,
-      "matched_functions": 79,
-      "matched_functions_percent": 72.48,
-      "fuzzy_match_percent": 47.48,
+      "matched_functions": 82,
+      "matched_functions_percent": 75.23,
+      "fuzzy_match_percent": 49.14,
       "functions": [
         {
           "name": "Sexy::Graphics::DrawImageBox",
@@ -249847,24 +251605,6 @@
         {
           "name": "Sexy::Graphics::DrawStringWordWrapped",
           "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::GetWordWrappedHeight",
-          "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::PFInsert",
-          "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::PFDelete",
-          "size": 132,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -249941,6 +251681,12 @@
           "fuzzy_match_percent": 40.62
         },
         {
+          "name": "Sexy::Graphics::PFInsert",
+          "size": 224,
+          "matched": false,
+          "fuzzy_match_percent": 69.64
+        },
+        {
           "name": "Sexy::Graphics::DrawImageCel",
           "size": 200,
           "matched": false,
@@ -249965,22 +251711,16 @@
           "fuzzy_match_percent": 95.24
         },
         {
-          "name": "Sexy::Graphics::PFCompareInd",
-          "size": 52,
+          "name": "Sexy::Graphics::PFDelete",
+          "size": 132,
           "matched": false,
-          "fuzzy_match_percent": 84.62
+          "fuzzy_match_percent": 18.92
         },
         {
           "name": "Sexy::Graphics::SetScale",
           "size": 36,
           "matched": false,
           "fuzzy_match_percent": 77.78
-        },
-        {
-          "name": "Sexy::Graphics::PFCompareActive",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 66.67
         },
         {
           "name": "Sexy::Graphics::CalcFinalColor",
@@ -250020,6 +251760,12 @@
         },
         {
           "name": "Sexy::Graphics::DrawImage",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::GetWordWrappedHeight",
           "size": 244,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -250253,6 +251999,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Sexy::Graphics::PFCompareInd",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Sexy::Graphics::PushColorMult",
           "size": 44,
           "matched": true,
@@ -250326,6 +252078,12 @@
         },
         {
           "name": "Sexy::Graphics::FillRect",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::Graphics::PFCompareActive",
           "size": 24,
           "matched": true,
           "fuzzy_match_percent": 100.0
