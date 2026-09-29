@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-29T11:46:35+00:00",
+  "generated": "2026-09-29T12:13:44+00:00",
   "measures": {
     "total_functions": 80310,
-    "matched_functions": 9684,
+    "matched_functions": 9688,
     "matched_functions_percent": 12.06,
     "total_code": 12377048,
-    "matched_code": 621800,
-    "matched_code_percent": 5.02,
-    "fuzzy_match_percent": 5.3,
-    "started_units": 978,
+    "matched_code": 623680,
+    "matched_code_percent": 5.04,
+    "fuzzy_match_percent": 5.32,
+    "started_units": 979,
     "total_units": 2751,
-    "started_code": 4307832,
-    "started_matched_code": 621800,
-    "started_percent": 14.43,
+    "started_code": 4309712,
+    "started_matched_code": 623680,
+    "started_percent": 14.47,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -1365,12 +1365,38 @@
     {
       "name": "src/PvZ2/AwardsGranter.cpp",
       "total_code": 1880,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1880,
+      "matched_code_percent": 100.0,
       "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "AwardsGranter::GiveAward",
+          "size": 1028,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AwardsGranter::IsOwned",
+          "size": 308,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AwardsGranter::AwardTypeToString",
+          "size": 288,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AwardsGranter::GiveAward",
+          "size": 256,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/BeghouledZombieSpawner.cpp",
