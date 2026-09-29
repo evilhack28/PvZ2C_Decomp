@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-27T13:42:16+00:00",
+  "generated": "2026-09-29T11:46:35+00:00",
   "measures": {
     "total_functions": 80310,
-    "matched_functions": 9674,
-    "matched_functions_percent": 12.05,
+    "matched_functions": 9684,
+    "matched_functions_percent": 12.06,
     "total_code": 12377048,
-    "matched_code": 620796,
+    "matched_code": 621800,
     "matched_code_percent": 5.02,
-    "fuzzy_match_percent": 5.29,
-    "started_units": 977,
+    "fuzzy_match_percent": 5.3,
+    "started_units": 978,
     "total_units": 2751,
-    "started_code": 4306860,
-    "started_matched_code": 620796,
-    "started_percent": 14.41,
+    "started_code": 4307832,
+    "started_matched_code": 621800,
+    "started_percent": 14.43,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -41,12 +41,62 @@
     {
       "name": "src/PvZ2/Achievement.cpp",
       "total_code": 972,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 972,
+      "matched_code_percent": 100.0,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "Achievement::Init",
+          "size": 396,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Achievement::Shutdown",
+          "size": 396,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Achievement::IsNewAchievement",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Achievement::SubmitOneShotAchievement",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Achievement::Queue",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Achievement::ResetAll",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Achievement::ShowAll",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Achievement::SubmitAll",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/ActionRunner.cpp",
@@ -16465,24 +16515,24 @@
     {
       "name": "src/PvZ2/Leaderboard.cpp",
       "total_code": 56,
-      "matched_code": 24,
-      "matched_code_percent": 42.86,
+      "matched_code": 56,
+      "matched_code_percent": 100.0,
       "total_functions": 4,
-      "matched_functions": 2,
-      "matched_functions_percent": 50.0,
-      "fuzzy_match_percent": 85.71,
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Leaderboard::Show",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 75.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Leaderboard::SubmitScore",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 75.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Leaderboard::Init",
@@ -170912,13 +170962,13 @@
       "total_functions": 2,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 77.08,
+      "fuzzy_match_percent": 79.17,
       "functions": [
         {
           "name": "Android::DEBUG::PauseInJava",
           "size": 128,
           "matched": false,
-          "fuzzy_match_percent": 90.62
+          "fuzzy_match_percent": 93.75
         },
         {
           "name": "Android::DEBUG::Register",

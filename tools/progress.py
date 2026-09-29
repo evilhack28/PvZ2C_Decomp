@@ -325,7 +325,9 @@ def main():
         pct = 100.0 * bo / allb if allb else 0.0
         stub = objs[source] is STUB
         tag = f'{GREY}stub{OFF} ' if stub else ''
-        if not rows:
+        if args.quiet:
+            pass
+        elif not rows:
             print(f'{GREY}    -   {n_ok}/{len(rows):<4d} fn  (unmapped)      {tag}{rel}{OFF}')
         else:
             colour = GREEN if pct == 100 else (GREY if not n_ok else YELLOW)

@@ -26,7 +26,7 @@ report:                       ## refresh the report.json progress baseline
 	$(PYTHON) tools/progress.py --report report.json
 
 check:                        ## compile all of src/ and fail on any regression vs report.json
-	$(PYTHON) tools/progress.py --cache --check report.json --jobs $(JOBS)
+	$(PYTHON) tools/progress.py --cache --check report.json --jobs $(JOBS) --quiet
 
 progress:                     ## full progress table (add `PLANT=Iceburg` to filter)
 	$(PYTHON) tools/progress.py --jobs $(JOBS) $(PLANT)

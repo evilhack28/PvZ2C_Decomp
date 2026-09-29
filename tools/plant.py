@@ -100,6 +100,11 @@ def call_graph(elf, methods):
     return edges
 
 
+def _few(names, n=8):
+    """A folded callee can have thousands of callers game-wide; show n and a count."""
+    return ', '.join(names[:n]) + (f', ... +{len(names) - n} more' if len(names) > n else '')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('name')
@@ -122,12 +127,12 @@ def main():
             want = [s for s in methods if args.callers in s]
             for s in want:
                 who = sorted(demangle(x, classes) for x in edges.get(s, ()))
-                print(f'{demangle(s, classes)} <- {who or "nobody (virtual or unused)"}')
+                print(f'{demangle(s, classes)} <- {_few(who) or "nobody (virtual or unused)"}')
         else:
             for s in sorted(methods, key=lambda x: -methods[x][1]):
                 who = sorted(demangle(x, classes) for x in edges.get(s, ()))
                 if who:
-                    print(f'{demangle(s, classes):<44s} <- {", ".join(who)}')
+                    print(f'{demangle(s, classes):<44s} <- {_few(who)}')
         return
 
     # A plant is usually more than one translation unit: the plant itself

@@ -184,6 +184,71 @@ def show(rows, context, show_all):
         prev = i
 
 
+def _body_end(text, i):
+    """Index just past the brace block starting at the first '{' from i (skips strings and comments)."""
+    depth, n = 0, len(text)
+    while i < n:
+        c = text[i]
+        if text.startswith('//', i):
+            i = text.find('\n', i)
+            if i < 0:
+                return n
+        elif text.startswith('/*', i):
+            i = text.find('*/', i) + 1 or n
+        elif c in '"\'':
+            j = i + 1
+            while j < n and text[j] != c:
+                j += 2 if text[j] == '\\' else 1
+            i = j
+        elif c == '{':
+            depth += 1
+        elif c == '}':
+            depth -= 1
+            if depth == 0:
+                return i + 1
+        elif c == ';' and depth == 0:
+            return i + 1
+        i += 1
+    return n
+
+
+def source_of(source, mangled):
+    """[(first line no, lines)] for each definition of the symbol's Class::method in source, plus header decls."""
+    import progress
+    parts = progress.pretty(mangled).split('::')
+    if len(parts) < 2:
+        return [], []
+    cls, meth = parts[-2], parts[-1]
+    text = open(source, encoding='utf-8', errors='replace').read()
+    out = []
+    for m in re.finditer(rf'^(?:[^\s#/][^\n;]*\b)?{re.escape(cls)}::{re.escape(meth)}\s*\(', text, re.M):
+        end = _body_end(text, m.end())
+        first = text.count('\n', 0, m.start()) + 1
+        out.append((first, text[m.start():end].split('\n')))
+    decls = []
+    import hdrindex
+    h = hdrindex.header_of(cls)
+    want = re.compile((r'~' if meth.startswith('~') else r'(?<!~)\b') + rf'{re.escape(meth.lstrip("~"))}\s*\(')
+    if h:
+        h = os.path.join(HERE, os.pardir, h)
+        for no, line in enumerate(open(h, encoding='utf-8', errors='replace'), 1):
+            if want.search(line):
+                decls.append(f'{os.path.relpath(h, os.path.join(HERE, os.pardir))}:{no}: {line.strip()}')
+    return out, decls
+
+
+def print_source(source, mangled):
+    defs, decls = source_of(source, mangled)
+    for d in decls:
+        print(f'  {GREY}{d}{OFF}')
+    if not defs:
+        print(f'  {GREY}(no definition in {os.path.basename(source)} yet){OFF}')
+    for first, lines in defs:
+        for k, line in enumerate(lines):
+            print(f'{first + k:6d}\t{line}')
+    print()
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('symbol', help='mangled name, or a class (with method as the next arg)')
@@ -192,10 +257,13 @@ def main():
     ap.add_argument('-a', '--all', action='store_true', help='every line, folded-name noise included')
     ap.add_argument('--asm', action='store_true', help='a clean listing instead of a diff')
     ap.add_argument('--ours', action='store_true', help='with --asm, our listing not the game')
+    ap.add_argument('-s', '--src', action='store_true', help='print our source of just this function (and its header decl) first')
     args = ap.parse_args()
 
     mangled, source = resolve(args.symbol, args.method)
     rel = os.path.relpath(source, os.path.join(HERE, os.pardir))
+    if args.src:
+        print_source(source, mangled)
     obj = build(source)
 
     game = asmdiff.listing(Elf(config.TARGET_LIB), mangled)

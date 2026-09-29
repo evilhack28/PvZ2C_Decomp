@@ -331,6 +331,9 @@ def _pointee(elf, slot):
         return f'{addend:#x}'
     raw = elf.read_at(slot, 8)
     if not raw or len(raw) < 8:
+        bss = elf.section('.bss')
+        if bss and bss[2] <= slot < bss[2] + bss[4]:
+            return '.bss'
         return 'got'
     target = int.from_bytes(raw, 'little')
     names = _any_sym_at(elf, target)
