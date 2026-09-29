@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27T13:08:26+00:00",
+  "generated": "2026-09-27T13:42:16+00:00",
   "measures": {
     "total_functions": 80310,
     "matched_functions": 9674,
@@ -251558,7 +251558,7 @@
       "total_functions": 109,
       "matched_functions": 82,
       "matched_functions_percent": 75.23,
-      "fuzzy_match_percent": 49.14,
+      "fuzzy_match_percent": 50.1,
       "functions": [
         {
           "name": "Sexy::Graphics::DrawImageBox",
@@ -251599,12 +251599,6 @@
         {
           "name": "Sexy::Graphics::DrawTrianglesTexStrip",
           "size": 452,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Graphics::DrawStringWordWrapped",
-          "size": 268,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -251667,6 +251661,12 @@
           "size": 316,
           "matched": false,
           "fuzzy_match_percent": 54.84
+        },
+        {
+          "name": "Sexy::Graphics::DrawStringWordWrapped",
+          "size": 268,
+          "matched": false,
+          "fuzzy_match_percent": 95.52
         },
         {
           "name": "Sexy::Graphics::DrawLine",

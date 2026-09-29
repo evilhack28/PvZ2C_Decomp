@@ -9,28 +9,25 @@ also has, which is how a translation unit's progress is read.
 
 import argparse
 import os
-import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import asmdiff
 import config
+import fastcc
 from pvzelf import Elf
 
 GREEN, RED, GREY, BOLD, OFF = '\033[32m', '\033[31m', '\033[90m', '\033[1m', '\033[0m'
 
 
 def build(source):
-    os.makedirs(config.BUILD, exist_ok=True)
-    obj = os.path.join(config.BUILD, os.path.basename(source).replace('.cpp', '.o'))
-    cmd = [config.GXX, *config.CXXFLAGS, '-c', source, '-o', obj]
-    done = subprocess.run(cmd, capture_output=True, text=True)
-    if done.returncode != 0:
-        print(done.stderr.strip()[:8000])
+    obj, err = fastcc.compile_file(source, pch=True)
+    if obj is None:
+        print(err.strip()[:8000])
         raise SystemExit(f'{RED}compile failed{OFF}')
-    if done.stderr.strip():
-        print(f'{GREY}{done.stderr.strip()[:2000]}{OFF}')
+    if err.strip():
+        print(f'{GREY}{err.strip()[:2000]}{OFF}')
     return obj
 
 

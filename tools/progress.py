@@ -18,13 +18,13 @@ import glob
 import json
 import os
 import re
-import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import asmdiff
 import config
+import fastcc
 from pvzelf import Elf
 
 _TTY = sys.stdout.isatty() and not os.environ.get('NO_COLOR')
@@ -69,19 +69,6 @@ def sources():
                   for p in glob.glob(f'{root}/**/*.cpp', recursive=True))
 
 
-def _newest_input():
-    """Latest mtime of config.py, the compiler + every header (a cached .o older than this is stale)."""
-    newest = os.path.getmtime(os.path.join(config.HERE, 'tools', 'config.py'))
-    if os.path.exists(config.GXX):
-        newest = max(newest, os.path.getmtime(config.GXX))
-    for root, _dirs, files in os.walk(os.path.join(config.HERE, 'include')):
-        for fn in files:
-            if fn.endswith('.h'):
-                newest = max(newest, os.path.getmtime(os.path.join(root, fn)))
-    return newest
-
-
-_NEWEST_INPUT = None
 STUB = 'stub'
 
 
@@ -99,23 +86,12 @@ def is_stub(source):
 
 
 def compile_one(source):
-    global _NEWEST_INPUT
     if is_stub(source):
         return source, STUB, None
-    os.makedirs(config.BUILD, exist_ok=True)
-    obj = os.path.join(config.BUILD, os.path.relpath(source, config.HERE)
-                       .replace(os.sep, '__').replace('/', '__').replace('.cpp', '.o'))
-    if _CACHE and os.path.exists(obj):
-        if _NEWEST_INPUT is None:
-            _NEWEST_INPUT = _newest_input()
-        omt = os.path.getmtime(obj)
-        if omt > os.path.getmtime(source) and omt > _NEWEST_INPUT:
-            return source, obj, None
-    done = subprocess.run([config.GXX, *config.CXXFLAGS, '-c', source, '-o', obj],
-                          capture_output=True, text=True)
-    if done.returncode != 0:
-        errs = [l for l in done.stderr.splitlines() if ' error: ' in l]
-        return source, None, errs[:8] or [done.stderr.strip()[:400]]
+    obj, err = fastcc.compile_file(source, force=not _CACHE)
+    if obj is None:
+        errs = [l for l in err.splitlines() if ' error: ' in l]
+        return source, None, errs[:8] or [err.strip()[:400]]
     return source, obj, None
 
 

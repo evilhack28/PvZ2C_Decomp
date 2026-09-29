@@ -6,7 +6,6 @@ import concurrent.futures as cf
 import os
 import random
 import re
-import subprocess
 import sys
 import time
 
@@ -15,6 +14,7 @@ sys.path.insert(0, HERE)
 
 import asmdiff
 import config
+import fastcc
 import wd
 from pvzelf import Elf
 
@@ -378,20 +378,11 @@ def find_fn(text, cls, method):
 
 def evaluate(job):
     src_dir, stem, tag, full, mangled, build_dir = job
-    path = os.path.join(src_dir, f'{stem}.pm{tag}.cpp')
     obj = os.path.join(build_dir, f'pm{tag}.o')
-    try:
-        with open(path, 'w', encoding='utf-8', newline='') as f:
-            f.write(full)
-        done = subprocess.run([config.GXX, *config.CXXFLAGS, '-c', path, '-o', obj], capture_output=True, text=True)
-        if done.returncode != 0:
-            return None
-        ours = asmdiff.listing(Elf(obj), mangled)
-        return ours
-    finally:
-        for p in (path,):
-            if os.path.exists(p):
-                os.remove(p)
+    done, _err = fastcc.compile_text(os.path.join(src_dir, f'{stem}.cpp'), full, obj)
+    if done is None:
+        return None
+    return asmdiff.listing(Elf(obj), mangled)
 
 
 def rank(game, ours):

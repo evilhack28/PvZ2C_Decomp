@@ -15,6 +15,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, 'tools'))
 
 import config  # noqa: E402
+import fastcc  # noqa: E402
 from pvzelf import Elf  # noqa: E402
 from progress import is_stub  # noqa: E402
 
@@ -33,9 +34,8 @@ def resolve_file(mangled):
     for src in sorted(glob.glob(os.path.join(HERE, 'src', '**', '*.cpp'), recursive=True)):
         if is_stub(src):
             continue
-        obj = os.path.join(config.BUILD, os.path.basename(src).replace('.cpp', '.diff.o'))
-        if subprocess.run([config.GXX, *config.CXXFLAGS, '-c', src, '-o', obj],
-                          capture_output=True).returncode != 0:
+        obj, _err = fastcc.compile_file(src)
+        if obj is None:
             continue
         if any(n == mangled and shndx and t == 2
                for n, v, s, shndx, t in Elf(obj).symbols()):

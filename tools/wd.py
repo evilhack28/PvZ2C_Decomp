@@ -7,7 +7,6 @@ import glob
 import json
 import os
 import re
-import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -15,6 +14,7 @@ sys.path.insert(0, HERE)
 
 import asmdiff
 import config
+import fastcc
 from pvzelf import Elf
 
 GREEN, RED, GREY, BOLD, OFF = '\033[32m', '\033[31m', '\033[90m', '\033[1m', '\033[0m'
@@ -81,9 +81,8 @@ def _search_objdefs(mangled):
         sources = ([x for x in sources if os.path.basename(x) in first]
                    + [x for x in sources if os.path.basename(x) not in first])
     for src in sources:
-        obj = os.path.join(config.BUILD, os.path.basename(src).replace('.cpp', '.wd.o'))
-        if subprocess.run([config.GXX, *config.CXXFLAGS, '-c', src, '-o', obj],
-                          capture_output=True).returncode != 0:
+        obj, _err = fastcc.compile_file(src)
+        if obj is None:
             continue
         syms = Elf(obj).symbols()
         if any(n == mangled and shndx and t == 2 for n, v, s, shndx, t in syms):
@@ -99,15 +98,12 @@ def _search_objdefs(mangled):
 # --- build ---------------------------------------------------------------
 
 def build(source):
-    # always recompile: header stand-ins change too often to cache safely
-    os.makedirs(config.BUILD, exist_ok=True)
-    obj = os.path.join(config.BUILD, os.path.basename(source).replace('.cpp', '.o'))
-    done = subprocess.run([config.GXX, *config.CXXFLAGS, '-c', source, '-o', obj],
-                          capture_output=True, text=True)
-    if done.returncode != 0:
+    # recompiles only when the source or a header in its depfile changed
+    obj, err = fastcc.compile_file(source, pch=True)
+    if obj is None:
         # the include-order warnings are a wall of noise; keep only real errors
-        lines = [l for l in done.stderr.splitlines() if 'error:' in l]
-        print('\n'.join(lines[:40]) or done.stderr[:2000])
+        lines = [l for l in err.splitlines() if 'error:' in l]
+        print('\n'.join(lines[:40]) or err[:2000])
         sys.exit(f'{RED}compile failed{OFF}')
     return obj
 

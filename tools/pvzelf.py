@@ -138,6 +138,9 @@ class Elf:
         return addr, size, self.data[off:off + size]
 
     def section_of(self, name):
+        best = self._function_index().get(name)
+        if best is not None:
+            return self._sh[best[2]][-1]
         for nm, value, size, shndx, styp in self.symbols():
             if nm == name and shndx != 0:
                 return self._sh[shndx][-1]
@@ -146,7 +149,13 @@ class Elf:
     # ── relocations ──────────────────────────────────────────────────────
 
     def relocations(self, section_name):
-        """{offset: (symbol name, type, addend)} for one section."""
+        """{offset: (symbol name, type, addend)} for one section, cached."""
+        cache = self.__dict__.setdefault('_rel_cache', {})
+        if section_name not in cache:
+            cache[section_name] = self._relocations(section_name)
+        return cache[section_name]
+
+    def _relocations(self, section_name):
         out = {}
         sec, strs = self._symtab()
         symblob = self.data[sec[3]:sec[3] + sec[4]]

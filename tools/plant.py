@@ -14,13 +14,13 @@ import glob
 import os
 import re
 import struct
-import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import asmdiff
 import config
+import fastcc
 from pvzelf import Elf
 
 GREEN, RED, YELLOW, GREY, BOLD, OFF = (
@@ -50,12 +50,10 @@ def game_methods(elf, classes):
 
 
 def build(source):
-    obj = os.path.join(config.BUILD, os.path.basename(source).replace('.cpp', '.o'))
-    done = subprocess.run([config.GXX, *config.CXXFLAGS, '-c', source, '-o', obj],
-                          capture_output=True, text=True)
-    if done.returncode != 0:
+    obj, err = fastcc.compile_file(source, pch=True)
+    if obj is None:
         print(f'{RED}compile failed{OFF}')
-        for line in done.stderr.splitlines():
+        for line in err.splitlines():
             if ' error: ' in line:
                 print('  ', line[:200])
         raise SystemExit(1)

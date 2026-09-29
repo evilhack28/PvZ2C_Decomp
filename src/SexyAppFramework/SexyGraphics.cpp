@@ -963,3 +963,8 @@ void Graphics::PFDelete(int i)
 	mPFNumActiveEdges--;
 	memmove(&mPFActiveEdgeList[anIndex], &mPFActiveEdgeList[anIndex + 1], (mPFNumActiveEdges - anIndex) * sizeof(Edge));
 }
+
+int Graphics::DrawStringWordWrapped(const SexyString& theLine, int theX, int theY, int theWrapWidth, int theLineSpacing, int theJustification, int* theMaxWidth)
+{
+	return WriteWordWrapped(Rect(theX, theY - (mFont->GetAscent() - mFont->GetAscentPadding()), theWrapWidth, 0), theLine, theLineSpacing, theJustification, theMaxWidth);
+}

@@ -97,7 +97,7 @@ def listing(elf, name, symbolise=True):
                     else:
                         ops = f'{dst}, <got:{rel[0]}{_tail(rel[2])}>'
                 elif kind == 'abs':
-                    slot = value + (_imm(parts[1]) if len(parts) > 1 else 0 or 0)
+                    slot = value + ((_imm(parts[1]) or 0) if len(parts) > 1 else 0)
                     if scalar:
                         ops = f'{dst}, <{_name(elf, slot)}>'
                     else:
@@ -162,7 +162,7 @@ def listing(elf, name, symbolise=True):
                 if rel:
                     ops = f'{dst}, [{base}, <{_reloc_label(elf, rel)}>]'
                 elif kind == 'abs':
-                    target = value + (_imm(parts[1]) if len(parts) > 1 else 0 or 0)
+                    target = value + ((_imm(parts[1]) or 0) if len(parts) > 1 else 0)
                     ops = f'{dst}, [{base}, <{_name(elf, target)}>]'
                 else:
                     ops = f'{dst}, [{base}, <{value}{_tail(addend)}>]'
