@@ -232,7 +232,9 @@ def guess(elf, syms, name):
             d, s, k = [x.strip() for x in i.op_str.split(',')]
             if d == s and s in pages and k.startswith('#') and d.startswith('x1'):
                 try:
-                    lits.append(elf.cstr(pages[s] + int(k[1:], 0)))
+                    s_ = elf.cstr(pages[s] + int(k[1:], 0))
+                    if s_ is not None:
+                        lits.append(s_)
                 except Exception:
                     pass
         elif i.mnemonic in ('bl', 'blr', 'br'):
