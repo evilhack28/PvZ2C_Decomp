@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-29T12:13:44+00:00",
+  "generated": "2026-09-29T14:07:50+00:00",
   "measures": {
     "total_functions": 80310,
-    "matched_functions": 9688,
-    "matched_functions_percent": 12.06,
+    "matched_functions": 9779,
+    "matched_functions_percent": 12.18,
     "total_code": 12377048,
-    "matched_code": 623680,
-    "matched_code_percent": 5.04,
-    "fuzzy_match_percent": 5.32,
+    "matched_code": 637816,
+    "matched_code_percent": 5.15,
+    "fuzzy_match_percent": 5.47,
     "started_units": 979,
     "total_units": 2751,
     "started_code": 4309712,
-    "started_matched_code": 623680,
-    "started_percent": 14.47,
+    "started_matched_code": 637816,
+    "started_percent": 14.8,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -34309,714 +34309,696 @@
     {
       "name": "src/PvZ2/PopAnimRig.cpp",
       "total_code": 20132,
-      "matched_code": 16,
-      "matched_code_percent": 0.08,
+      "matched_code": 14152,
+      "matched_code_percent": 70.3,
       "total_functions": 121,
-      "matched_functions": 4,
-      "matched_functions_percent": 3.31,
-      "fuzzy_match_percent": 0.08,
+      "matched_functions": 95,
+      "matched_functions_percent": 78.51,
+      "fuzzy_match_percent": 93.92,
       "functions": [
+        {
+          "name": "PopAnimRig::CreateRig",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRig",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRig",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRig",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRig",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRig",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRig",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRig",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRig",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRig",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRigOutsideTable",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRigOutsideTable",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRigOutsideTable",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRigOutsideTable",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRigOutsideTable",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRigOutsideTable",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRigOutsideTable",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRigOutsideTable",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PopAnimRig::CreateRigOutsideTable",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
         {
           "name": "PopAnimRig::Serialize",
           "size": 2228,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::DrawReplaceLayerWithImage",
-          "size": 1612,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::Draw",
-          "size": 1552,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 99.64
         },
         {
           "name": "PopAnimRig::getSymbolRect",
           "size": 1336,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::DrawSprite",
-          "size": 888,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::PopAnimStopped",
-          "size": 512,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 95.81
         },
         {
           "name": "PopAnimRig::getCurrentTranslation",
           "size": 484,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::getCurrentTransformPAMSpace",
-          "size": 444,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::DebugPrintLayerNames",
-          "size": 440,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::internalDrawSprite",
-          "size": 416,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::selectVariation",
-          "size": 404,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 90.08
         },
         {
           "name": "PopAnimRig::Play",
           "size": 384,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 56.25
         },
         {
           "name": "PopAnimRig::GetTransformFromPAM",
           "size": 376,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::BlendTo",
-          "size": 312,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::BlendTo",
-          "size": 312,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::selectNextVariationIndex",
-          "size": 308,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CalcRigDrawingRect",
-          "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::PopAnimCommand",
-          "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CalcSymbolRect",
-          "size": 260,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::PopAnimRig",
-          "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::PopAnimRig",
-          "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::popAnimInitialize",
-          "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 82.11
         },
         {
           "name": "PopAnimRig::SetLayerVisibility",
           "size": 216,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::SetLayerVisibilityByIndex",
-          "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::SetCurrentFrameInAnimation",
-          "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CalcLayerTransformScreenSpace",
-          "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::SetAdditiveDraw",
-          "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::PlayAndContinue",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::PlayAndContinue",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::PlayAndStop",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::PlayAndStop",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::RandomizeCurrentAnimFrame",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::getOverlayEffectsColor",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::StaticClassInit",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::clearPlaybackDelegates",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::SetLayerVisibilityByIndex",
-          "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::GetPAMSize",
-          "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::AdvanceToLastFrameInAnimation",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::~PopAnimRig",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::~PopAnimRig",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CalcLayerTranslation",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::PopAnimPlaySample",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CalcAnimLength",
-          "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CalcLayerTranslation",
-          "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::ClearPopAnimCommandDelegate",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::StaticGetClass",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 90.74
         },
         {
           "name": "PopAnimRig::CalcVariationLabelName",
           "size": 120,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 83.33
+        },
+        {
+          "name": "PopAnimRig::DrawReplaceLayerWithImage",
+          "size": 1612,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::Draw",
+          "size": 1552,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::DrawSprite",
+          "size": 888,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::PopAnimStopped",
+          "size": 512,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::getCurrentTransformPAMSpace",
+          "size": 444,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::DebugPrintLayerNames",
+          "size": 440,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::internalDrawSprite",
+          "size": 416,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::selectVariation",
+          "size": 404,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::BlendTo",
+          "size": 312,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::BlendTo",
+          "size": 312,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::selectNextVariationIndex",
+          "size": 308,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::CalcRigDrawingRect",
+          "size": 292,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::PopAnimCommand",
+          "size": 280,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::CalcSymbolRect",
+          "size": 260,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::PopAnimRig",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::PopAnimRig",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::popAnimInitialize",
+          "size": 220,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::SetLayerVisibilityByIndex",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::SetCurrentFrameInAnimation",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::CalcLayerTransformScreenSpace",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::SetAdditiveDraw",
+          "size": 188,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::PlayAndContinue",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::PlayAndContinue",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::PlayAndStop",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::PlayAndStop",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::RandomizeCurrentAnimFrame",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::getOverlayEffectsColor",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::clearPlaybackDelegates",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::SetLayerVisibilityByIndex",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::GetPAMSize",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::AdvanceToLastFrameInAnimation",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::~PopAnimRig",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::~PopAnimRig",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::CalcLayerTranslation",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::PopAnimPlaySample",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::CalcAnimLength",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::CalcLayerTranslation",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::ClearPopAnimCommandDelegate",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::GetCurrentFrameInAnimation",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetLayerVisibilityByPercent",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::fireInterrupts",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::CalcAnimLengthSeconds",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::CreateRig",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::CreateRigOutsideTable",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::DrawReplaceLayerWithImage",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::onPopAnimCommand",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::IsAnimFinished",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetRenderTransform",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::UpdateAnim",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetLayerVisibility",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::Draw",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::CalcAnimVariationCount",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::CalcPlayingAnimLabelName",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRig",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRig",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRig",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRig",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRig",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRig",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRig",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRig",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRig",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRig",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRigOutsideTable",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRigOutsideTable",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRigOutsideTable",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRigOutsideTable",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRigOutsideTable",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRigOutsideTable",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRigOutsideTable",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRigOutsideTable",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::CreateRigOutsideTable",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::GetPAMColor",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetForceAdditive",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetPaused",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::~PopAnimRig",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::DoesAnimationLabelExist",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetAnimRateOverride",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetMirrorX",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::ClearAnimRateOverride",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetMultiplicativeOverlayColor",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetShaderOverrideColor",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::ConvertPAMCoordinateToLogicSpace",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::ConvertPAMCoordinateToScreenSpace",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::IsAnimActive",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::GetDrawScale",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::IsPlayingAnything",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetDrawScale",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::onPopAnimInitialized",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::ClearMultiplicativeOverlayColor",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::ClearShaderOverrideColor",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::GetIsDisabled",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::GetMirrorX",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::IsAnimStringActive",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetAudioObject",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetDisabled",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetPAMColor",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetPopAnimCommandDelegate",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetPopAnimCommandDelegate",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::SetSaturation",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::hasColorizeOverlay",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::hasMultiplicativeOverlay",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::onPostDraw",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::onPostPlayCalled",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PopAnimRig::onPreDraw",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PopAnimRig::onAnimInterrupted",
@@ -35032,6 +35014,24 @@
         },
         {
           "name": "PopAnimRig::onAnimStopped",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::onPostDraw",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::onPostPlayCalled",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PopAnimRig::onPreDraw",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
