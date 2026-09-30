@@ -16,3 +16,27 @@ void ArenaBattleModule::onPostLoad()
 void ArenaBattleModule::CancelTouch()
 {
 }
+
+ArenaBattleModule::~ArenaBattleModule()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ArenaBattleModule);
+
+void ArenaBattleModule::onZombieVanish(class StandaloneEffect* i_arg)
+{
+}
+
+#include "ArenaBattleModule.h"
+void ArenaBattleModule::onReadyForBrains()
+{
+	 ArenaBattleModule::createBrains();
+}
+
+#include "ArenaBattleModule.h"
+void ArenaBattleModule::onTriggerStartTimerOver()
+{
+	 ArenaBattleModule::TriggerBattleBegin();
+}

@@ -12,3 +12,13 @@
 void CrazyNPC::StopHolding()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(CrazyNPC);
+
+#include "CrazyNPC.h"
+void CrazyNPC::Update()
+{
+	 CrazyNPC::updateStateMachine();
+}

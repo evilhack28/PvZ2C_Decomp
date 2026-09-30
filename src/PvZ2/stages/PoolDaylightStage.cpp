@@ -53,3 +53,8 @@ void PoolDaylightStage::onWaterAnimEnd()
 void PoolDaylightStage::showToxicWater()
 {
 }
+
+int PoolDaylightStage::GetPlankStartGridColumn() const
+{
+	return 5;
+}

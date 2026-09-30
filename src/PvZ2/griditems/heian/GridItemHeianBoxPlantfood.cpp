@@ -32,3 +32,23 @@ void GridItemHeianBoxPlantfood::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemHeianBoxPlantfood);
 }
+
+GridItemHeianBoxPlantfood::GridItemHeianBoxPlantfood()
+{
+	m_endTime = PVZ_EOT();
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GridItemHeianBoxPlantfoodProps);
+
+void GridItemHeianBoxPlantfoodProps::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(GridItemHeianBoxPlantfoodProps);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GridItemHeianBoxProps);
+
+		REFLECTION_CLASSBUILDER_FIELD(float, DisableTime);
+	REFLECTION_CLASSBUILDER_END(GridItemHeianBoxPlantfoodProps);
+}

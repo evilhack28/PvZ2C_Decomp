@@ -69,3 +69,8 @@ void GridItemWizardCrucible::onDestroy()
 {
 	 GridItem::onDestroy();
 }
+
+bool GridItemWizardCrucible::CollidesWithType(const CollisionTypeFlags i_arg) const
+{
+	return true;
+}

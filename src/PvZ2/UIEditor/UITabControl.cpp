@@ -12,3 +12,7 @@
 void UITabControl::Update()
 {
 }
+
+UITabControl::~UITabControl()
+{
+}

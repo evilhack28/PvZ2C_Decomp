@@ -30,3 +30,9 @@ void OakArrowAddUI::StaticClassInit()
 void OakArrowAddUI::onInitialized()
 {
 }
+
+OakArrowAddUI::OakArrowAddUI()
+{
+	m_touchIdent = 0;
+	m_touchInitialized = 0;
+}

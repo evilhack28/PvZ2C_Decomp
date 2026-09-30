@@ -40,3 +40,7 @@ void ZombossBattleModuleProperties::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(std::string, ZombossMechType);
 	REFLECTION_CLASSBUILDER_END(ZombossBattleModuleProperties);
 }
+
+void ZombossBattleModule::showProgressMeter() const
+{
+}

@@ -12,3 +12,19 @@
 void BeghouledWaveProgressMeter::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(BeghouledWaveProgressMeter);
+
+void BeghouledWaveProgressMeter::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(BeghouledWaveProgressMeter);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+		REFLECTION_CLASSBUILDER_FIELD(uint8, m_targetFillPercent);
+		REFLECTION_CLASSBUILDER_FIELD(float, m_currentDisplayPercent);
+	REFLECTION_CLASSBUILDER_END(BeghouledWaveProgressMeter);
+}

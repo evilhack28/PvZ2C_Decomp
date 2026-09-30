@@ -16,3 +16,12 @@ PowerupVaseSelector::PowerupVaseSelector()
 PowerupVaseSelector::~PowerupVaseSelector()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PowerupVaseSelector);
+
+bool PowerupVaseSelector::onTouchBegin(const Sexy::Touch& i_arg)
+{
+	return true;
+}

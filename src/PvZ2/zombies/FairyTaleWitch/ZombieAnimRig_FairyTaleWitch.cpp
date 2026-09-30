@@ -16,3 +16,7 @@ ZombieAnimRig_FairyTaleWitch::ZombieAnimRig_FairyTaleWitch()
 ZombieAnimRig_FairyTaleWitch::~ZombieAnimRig_FairyTaleWitch()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_FairyTaleWitch);

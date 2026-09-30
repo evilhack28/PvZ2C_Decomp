@@ -69,3 +69,8 @@ void ZombiePVPSkill::onUpdate()
 {
 	 Zombie::onUpdate();
 }
+
+bool ZombiePVPSkill::ShouldDrawShadow() const
+{
+	return false;
+}

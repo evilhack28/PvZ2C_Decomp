@@ -54,3 +54,8 @@ void GridItemZombieBoundTileProps::StaticClassInit()
 void GridItemZombieBoundTile::OnStartAnimStopped(const std::string & i_arg)
 {
 }
+
+bool GridItemZombieBoundTile::CanBeTargetedBy(const BoardEntity* i_arg) const
+{
+	return false;
+}

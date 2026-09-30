@@ -13,3 +13,35 @@ bool ZombieAnimRig_Imp::PlayFalling()
 {
 	return false;
 }
+
+ZombieAnimRig_Imp::ZombieAnimRig_Imp()
+{
+}
+
+ZombieAnimRig_Imp::~ZombieAnimRig_Imp()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_Imp);
+
+void ZombieAnimRig_Imp::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ZombieAnimRig_Imp);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(ZombieAnimRig);
+
+	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_Imp);
+}
+
+bool ZombieAnimRig_Imp::PlayBonk(AnimStoppedReflectionDelegate i_arg)
+{
+	return false;
+}
+
+bool ZombieAnimRig_Imp::PlayGetUp(AnimStoppedReflectionDelegate i_arg)
+{
+	return false;
+}

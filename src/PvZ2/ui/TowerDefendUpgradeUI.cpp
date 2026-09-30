@@ -16,3 +16,19 @@ void TowerDefendUpgradeUI::unregisterForEvents()
 void TowerDefendUpgradeUI::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(TowerDefendUpgradeUI);
+
+void TowerDefendUpgradeUI::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(TowerDefendUpgradeUI);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+		REFLECTION_CLASSBUILDER_FIELD(Point, m_PlantGridPosition);
+		REFLECTION_CLASSBUILDER_FIELD(int, m_nSun);
+	REFLECTION_CLASSBUILDER_END(TowerDefendUpgradeUI);
+}

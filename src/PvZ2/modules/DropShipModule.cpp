@@ -12,3 +12,33 @@
 void DropShipModule::unregisterForEvents()
 {
 }
+
+DropShipModule::DropShipModule()
+{
+}
+
+DropShipModule::~DropShipModule()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(DropShipModule);
+
+void DropShipModule::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(DropShipModule);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(LevelModule);
+
+	REFLECTION_CLASSBUILDER_END(DropShipModule);
+}
+
+void DropShipModule::initializeModule()
+{
+}
+
+void DropShipModule::OnUpdate()
+{
+}

@@ -58,3 +58,9 @@ bool ZombieMirrorQueen::isImmuneToShrinking()
 {
 	return true;
 }
+
+#include "Zombie.h"
+bool ZombieMirrorQueen::CanDropArm() const
+{
+	return Zombie::CanDropArm();
+}

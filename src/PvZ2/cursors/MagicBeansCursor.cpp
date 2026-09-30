@@ -12,3 +12,8 @@
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(MagicBeansCursor);
+
+bool MagicBeansCursor::canAffordPlant(PlantTypePtr i_arg) const
+{
+	return true;
+}

@@ -16,3 +16,7 @@ RebateRewardConfig::RebateRewardConfig()
 RebateRewardConfig::~RebateRewardConfig()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(RebateRewardConfig);

@@ -16,3 +16,17 @@ void SpeedChange::unregisterForEvents()
 void SpeedChange::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(SpeedChange);
+
+void SpeedChange::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(SpeedChange);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(SpeedChange);
+}

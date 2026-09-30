@@ -16,3 +16,9 @@ PlaybackDlg::PlaybackDlg()
 PlaybackDlg::~PlaybackDlg()
 {
 }
+
+void PlaybackDlg::Draw(Sexy::Graphics* i_g)
+{
+	base_type::Draw(i_g);
+}
+

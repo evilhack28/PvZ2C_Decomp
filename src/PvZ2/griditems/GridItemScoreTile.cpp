@@ -34,3 +34,18 @@ void GridItemScoreTile::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemScoreTile);
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GridItemScoreTileProps);
+
+void GridItemScoreTileProps::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(GridItemScoreTileProps);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GridItemAnimationProps);
+
+		REFLECTION_CLASSBUILDER_FIELD(float, ScoreMultiplier);
+	REFLECTION_CLASSBUILDER_END(GridItemScoreTileProps);
+}

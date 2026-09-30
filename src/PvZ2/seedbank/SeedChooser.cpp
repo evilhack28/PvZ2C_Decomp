@@ -25,3 +25,14 @@ bool SeedChooser::isFavoritesFeatureToggleEnabled()
 {
 	return true;
 }
+
+bool SeedChooser::checkForZombieTouch(const int i_arg0, const int i_arg1)
+{
+	return false;
+}
+
+#include "SeedChooser.h"
+void SeedChooser::onViewBoardOrZombiesButtonPressed()
+{
+	 SeedChooser::toggleHideChooser();
+}

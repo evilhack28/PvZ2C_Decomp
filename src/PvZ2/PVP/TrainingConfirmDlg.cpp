@@ -16,3 +16,9 @@ TrainingConfirmDlg::TrainingConfirmDlg()
 TrainingConfirmDlg::~TrainingConfirmDlg()
 {
 }
+
+void TrainingConfirmDlg::Draw(Sexy::Graphics* i_g)
+{
+	base_type::Draw(i_g);
+}
+

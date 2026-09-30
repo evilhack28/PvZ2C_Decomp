@@ -26,3 +26,8 @@ void GridItemFrost::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemFrost);
 }
+
+PlantingReason GridItemFrost::GetCantPlantReason() const
+{
+	return (PlantingReason)127;
+}

@@ -38,3 +38,24 @@ time_t WorldMap_EventBar::getCurrentEventTimeRemaining()
 {
 	return NULL;
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_EventBar);
+
+bool WorldMap_EventBar::drawProgressBar(Sexy::Graphics* i_arg)
+{
+	return false;
+}
+
+void WorldMap_EventBar::createPlayNowButton(SexyString i_arg0, EventBarType i_arg1, int i_arg2)
+{
+}
+
+void WorldMap_EventBar::createLODUpcomingText(std::string& i_arg0, std::string& i_arg1)
+{
+}
+
+void WorldMap_EventBar::prepareLODDisplayUpcoming(bool i_arg0, EventBarType i_arg1)
+{
+}

@@ -16,3 +16,7 @@ EffectAnimRig_LinkedTileGlow::EffectAnimRig_LinkedTileGlow()
 EffectAnimRig_LinkedTileGlow::~EffectAnimRig_LinkedTileGlow()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(EffectAnimRig_LinkedTileGlow);

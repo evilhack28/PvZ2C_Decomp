@@ -68,3 +68,8 @@ void GridItemSchoolBus::onUpdateAttack()
 void GridItemSchoolBus::onAttack()
 {
 }
+
+PlantingReason GridItemSchoolBus::GetCantPlantReason() const
+{
+	return (PlantingReason)96;
+}

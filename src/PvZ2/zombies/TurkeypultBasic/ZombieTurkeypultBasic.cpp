@@ -18,3 +18,23 @@ void ZombieTurkeypultBasic::TurkeyRefreshStats()
 void ZombieTurkeypultBasic::CreateZombieLevelEffect(bool i_arg)
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieTurkeypultBasic);
+
+void ZombieTurkeypultBasic::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ZombieTurkeypultBasic);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(Zombie);
+
+		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, m_time);
+	REFLECTION_CLASSBUILDER_END(ZombieTurkeypultBasic);
+}
+
+bool ZombieTurkeypultBasic::allowAshState() const
+{
+	return false;
+}

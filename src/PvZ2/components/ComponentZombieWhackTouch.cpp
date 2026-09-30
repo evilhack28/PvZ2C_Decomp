@@ -36,3 +36,8 @@ void ComponentZombieWhackTouch::StaticClassInit()
 void ComponentZombieWhackTouch::onBegin()
 {
 }
+
+ComponentZombieWhackTouch::ComponentZombieWhackTouch()
+{
+	m_owningTouchIdent = 0;
+}

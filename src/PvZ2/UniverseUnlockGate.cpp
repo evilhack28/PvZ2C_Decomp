@@ -13,3 +13,7 @@ bool UniverseUnlockGate::CanBeSelected()
 {
 	return true;
 }
+
+void UniverseUnlockGate::DrawOverlay(Sexy::Graphics* i_arg)
+{
+}

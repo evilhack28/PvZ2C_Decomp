@@ -13,3 +13,27 @@ bool LawnMowerModule::canTriggerNormalADMower()
 {
 	return true;
 }
+
+LawnMowerModule::LawnMowerModule()
+{
+}
+
+LawnMowerModule::~LawnMowerModule()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(LawnMowerModule);
+
+void LawnMowerModule::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(LawnMowerModule);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(LevelModule);
+
+		REFLECTION_CLASSBUILDER_FIELD(int32, m_bonusLawnMowersRemaining);
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<int>, m_respawnsRemaining);
+	REFLECTION_CLASSBUILDER_END(LawnMowerModule);
+}

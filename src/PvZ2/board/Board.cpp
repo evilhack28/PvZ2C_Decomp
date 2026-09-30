@@ -30,3 +30,37 @@ void Board::OnAppResumeFocus()
 void Board::onZombieWarningEffectStarted()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(Board);
+
+#include "Board.h"
+void Board::OnAppLostFocus()
+{
+	 Board::PauseOnInterrupt();
+}
+
+void Board::OnPauseAdFinished(EASquaredAdFinishedReason::EASquaredAdFinishedReason i_arg)
+{
+}
+
+#include "Board.h"
+void Board::onAppEnteredBackground()
+{
+	 Board::PauseOnInterrupt();
+}
+
+#include "Board.h"
+void Board::OnRechargeCurrencyChanged()
+{
+	 Board::checkAutoSunCollect();
+}
+
+void Board::KeyChar(SexyChar i_arg)
+{
+}
+
+void Board::KeyDown(KeyCode i_arg)
+{
+}

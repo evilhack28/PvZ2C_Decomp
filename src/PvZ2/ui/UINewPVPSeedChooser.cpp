@@ -12,3 +12,17 @@
 void UINewPVPSeedChooser::updateItems()
 {
 }
+
+void UINewPVPSeedChooser::ScrollTargetReached(ScrollWidget* i_arg)
+{
+}
+
+void UINewPVPSeedChooser::ScrollTargetInterrupted(ScrollWidget* i_arg)
+{
+}
+
+void UINewPVPSeedChooser::Draw(Sexy::Graphics* i_g)
+{
+	base_type::Draw(i_g);
+}
+

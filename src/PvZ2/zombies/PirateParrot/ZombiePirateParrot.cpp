@@ -12,3 +12,7 @@
 void ZombiePirateParrot::onTurnedToAsh()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombiePirateParrot);

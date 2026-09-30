@@ -12,3 +12,17 @@
 void WorldMap_CoinBank::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_CoinBank);
+
+void WorldMap_CoinBank::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_CoinBank);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(CoinBank);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_CoinBank);
+}

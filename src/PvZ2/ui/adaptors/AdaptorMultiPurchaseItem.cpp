@@ -12,3 +12,27 @@
 void AdaptorMultiPurchaseItem::onLinkToUIViewCreated()
 {
 }
+
+AdaptorMultiPurchaseItem::~AdaptorMultiPurchaseItem()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(AdaptorMultiPurchaseItem);
+
+void AdaptorMultiPurchaseItem::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(AdaptorMultiPurchaseItem);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(HotUIAdaptor);
+
+	REFLECTION_CLASSBUILDER_END(AdaptorMultiPurchaseItem);
+}
+
+#include "HotUIAdaptor.h"
+void AdaptorMultiPurchaseItem::onLayoutFinished()
+{
+	 HotUIAdaptor::GetEntryPointWidget();
+}

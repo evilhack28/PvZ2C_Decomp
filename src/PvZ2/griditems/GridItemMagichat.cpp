@@ -32,3 +32,17 @@ void GridItemMagichat::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemMagichat);
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GridItemMagichatProps);
+
+void GridItemMagichatProps::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(GridItemMagichatProps);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GridItemBreakableTargetProps);
+
+	REFLECTION_CLASSBUILDER_END(GridItemMagichatProps);
+}

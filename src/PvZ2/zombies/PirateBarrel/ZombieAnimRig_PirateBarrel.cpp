@@ -34,3 +34,14 @@ void ZombieAnimRig_PirateBarrel::onNeedsToDie()
 {
 	 ZombieAnimRig::setReadyToDie();
 }
+
+ZombieAnimRig_PirateBarrel::ZombieAnimRig_PirateBarrel()
+{
+	m_barrelDamageIndex = 0;
+}
+
+void ZombieAnimRig_PirateBarrel::PlayRoll()
+{
+	PlayAndContinue("roll");
+}
+

@@ -12,3 +12,9 @@
 UINewerPresent::~UINewerPresent()
 {
 }
+
+void UINewerPresent::Draw(Sexy::Graphics* i_g)
+{
+	base_type::Draw(i_g);
+}
+

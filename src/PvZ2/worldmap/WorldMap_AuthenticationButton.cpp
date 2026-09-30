@@ -12,3 +12,27 @@
 void WorldMap_AuthenticationButton::BackToMap()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_AuthenticationButton);
+
+void WorldMap_AuthenticationButton::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_AuthenticationButton);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIEasyButtonWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_AuthenticationButton);
+}
+
+#include "WorldMap_AuthenticationButton.h"
+void WorldMap_AuthenticationButton::onWorldLoaded()
+{
+	 WorldMap_AuthenticationButton::CheckActivated();
+}
+
+void WorldMap_AuthenticationButton::onUpdate()
+{
+}

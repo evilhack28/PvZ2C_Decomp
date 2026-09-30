@@ -16,3 +16,25 @@ TreasureConfig::TreasureConfig()
 TreasureConfig::~TreasureConfig()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(TreasureConfig);
+
+void TreasureConfig::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(TreasureReward);
+	REFLECTION_CLASSBUILDER_END(TreasureReward);
+
+	REFLECTION_CLASSBUILDER_BEGIN(TreasurePool);
+	REFLECTION_CLASSBUILDER_END(TreasurePool);
+
+	REFLECTION_CLASSBUILDER_BEGIN(TreasureConfig);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(Sexy::RtObject);
+
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<TreasureReward>, TreasureRewardList);
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<TreasurePool>, TreasurePools);
+	REFLECTION_CLASSBUILDER_END(TreasureConfig);
+}

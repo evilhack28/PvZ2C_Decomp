@@ -13,3 +13,11 @@
 void UIWidget::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(UIWidget);
+
+void UIWidget::Draw(Graphics* i_arg)
+{
+}

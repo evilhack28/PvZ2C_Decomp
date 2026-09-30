@@ -57,3 +57,8 @@ void GridItemFestivalZombieTentProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(std::string, ZombieSpawnOnDestory);
 	REFLECTION_CLASSBUILDER_END(GridItemFestivalZombieTentProps);
 }
+
+PlantingReason GridItemFestivalZombieTent::GetCantPlantReason() const
+{
+	return (PlantingReason)23;
+}

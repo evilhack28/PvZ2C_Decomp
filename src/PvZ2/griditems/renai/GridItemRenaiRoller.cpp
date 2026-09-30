@@ -67,3 +67,28 @@ void GridItemRenaiRoller::onLinkedOnAnimDone(const std::string& i_arg)
 void GridItemRenaiRoller::onRollerLoopAnimDone(const std::string& i_arg)
 {
 }
+
+bool GridItemRenaiRoller::IsDamageable() const
+{
+	return false;
+}
+
+bool GridItemRenaiRoller::CanBeTargetedBy(const BoardEntity* i_arg) const
+{
+	return false;
+}
+
+bool GridItemRenaiRoller::CollidesWithType(const CollisionTypeFlags i_arg) const
+{
+	return false;
+}
+
+bool GridItemRenaiRoller::ShouldDrawShadow() const
+{
+	return true;
+}
+
+PlantingReason GridItemRenaiRoller::GetCantPlantReason() const
+{
+	return (PlantingReason)95;
+}

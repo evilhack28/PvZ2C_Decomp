@@ -12,3 +12,8 @@
 ShareDriverMgr::~ShareDriverMgr()
 {
 }
+
+ShareDriverMgr::ShareDriverMgr()
+{
+	m_shareDriverMgr = 0;
+}

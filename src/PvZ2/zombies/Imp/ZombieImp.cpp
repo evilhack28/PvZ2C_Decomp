@@ -18,3 +18,7 @@ float ZombieImp::GetAmberScale()
 	return 0.53f;
 }
 
+int ZombieImp::CalcProgressMeterHitpoints() const
+{
+	return false;
+}

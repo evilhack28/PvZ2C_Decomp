@@ -16,3 +16,23 @@ RiftFirstClearRewards::~RiftFirstClearRewards()
 RiftFirstClearRewardsDefinition::~RiftFirstClearRewardsDefinition()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(RiftFirstClearRewards);
+
+void RiftFirstClearRewards::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(RiftFirstClearRewardsDefinition);
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<LevelOfTheDay_RewardItemType>, FirstClearRewards);
+	REFLECTION_CLASSBUILDER_END(RiftFirstClearRewardsDefinition);
+
+	REFLECTION_CLASSBUILDER_BEGIN(RiftFirstClearRewards);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(PropertySheetBase);
+
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<RiftFirstClearRewardsDefinition>, LevelClearRewards);
+		REFLECTION_CLASSBUILDER_FIELD(RiftFirstClearRewardsDefinition, DefaultLevelClearRewards);
+	REFLECTION_CLASSBUILDER_END(RiftFirstClearRewards);
+}

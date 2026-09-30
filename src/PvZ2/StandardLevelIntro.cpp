@@ -47,3 +47,13 @@ bool StandardLevelIntro::canInit()
 {
 	return true;
 }
+
+bool StandardLevelIntro::manualIntroStart() const
+{
+	return false;
+}
+
+bool StandardLevelIntro::suppressReadySetGo() const
+{
+	return false;
+}

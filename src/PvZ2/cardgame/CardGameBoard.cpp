@@ -24,3 +24,31 @@ void CardGameBoard::onBoardCreated()
 void CardGameBoard::CreateTestCards()
 {
 }
+
+#include "CardGameBoard.h"
+void CardGameBoard::Initialize()
+{
+	 CardGameBoard::CreateBoard();
+}
+
+#include "CardGameBoard.h"
+void CardGameBoard::OnDrawCard(Card* i_arg)
+{
+	 CardGameBoard::CheckCost();
+}
+
+void CardGameBoard::drawTutorials(Sexy::Graphics* i_arg)
+{
+}
+
+#include "CardGameBoard.h"
+void CardGameBoard::onBoardPreCreated()
+{
+	 CardGameBoard::CheckTutorial();
+}
+
+#include "CardGameBoard.h"
+void CardGameBoard::Update()
+{
+	 CardGameBoard::updateTutorials();
+}

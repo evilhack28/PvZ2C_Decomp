@@ -52,3 +52,19 @@ bool GridItemBall::OverrideProjectileCollision(Projectile* i_arg)
 {
 	return false;
 }
+
+bool GridItemBall::CollidesWithType(const CollisionTypeFlags i_arg) const
+{
+	return true;
+}
+
+#include "RealObject.h"
+bool GridItemBall::ShouldDrawShadow() const
+{
+	return RealObject::ShouldDrawShadow();
+}
+
+PlantingReason GridItemBall::GetCantPlantReason() const
+{
+	return (PlantingReason)75;
+}

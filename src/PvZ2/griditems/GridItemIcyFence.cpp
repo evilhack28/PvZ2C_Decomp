@@ -43,3 +43,8 @@ void GridItemIcyFenceProps::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemIcyFenceProps);
 }
+
+bool GridItemIcyFence::IsDamageable() const
+{
+	return false;
+}

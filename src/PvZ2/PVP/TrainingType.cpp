@@ -12,3 +12,7 @@
 TrainingType::~TrainingType()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(TrainingType);

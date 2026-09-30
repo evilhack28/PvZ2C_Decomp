@@ -13,3 +13,7 @@ bool PowerupCukeTutorialIntro::needCukeTutorial()
 {
 	return false;
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PowerupCukeTutorialIntro);

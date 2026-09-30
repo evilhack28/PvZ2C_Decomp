@@ -16,3 +16,7 @@ PlantAnimRig_Imitater::PlantAnimRig_Imitater()
 PlantAnimRig_Imitater::~PlantAnimRig_Imitater()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_Imitater);

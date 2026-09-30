@@ -12,3 +12,24 @@
 void TowerDefendModule::cancelTouch()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(TowerDefendModule);
+
+void TowerDefendModule::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(TowerDefendModule);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(LevelModule);
+
+		REFLECTION_CLASSBUILDER_FIELD(bool, m_GameStarted);
+	REFLECTION_CLASSBUILDER_END(TowerDefendModule);
+}
+
+#include "TowerDefendModule.h"
+void TowerDefendModule::onPostLoad()
+{
+	 TowerDefendModule::parseRoadDatas();
+}

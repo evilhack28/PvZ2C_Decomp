@@ -16,3 +16,7 @@ PlantAnimRig_MeteorFlower::PlantAnimRig_MeteorFlower()
 PlantAnimRig_MeteorFlower::~PlantAnimRig_MeteorFlower()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_MeteorFlower);

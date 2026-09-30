@@ -12,3 +12,19 @@
 void MainMenu::gotoSystemSetting()
 {
 }
+
+void MainMenu::TouchEnded(const Sexy::Touch& i_arg)
+{
+}
+
+#include "MainMenu.h"
+void MainMenu::onUploadFirstTimeFinish(bool i_arg)
+{
+	 MainMenu::uploadLocalProfile();
+}
+
+#include "MainMenu.h"
+void MainMenu::startGame()
+{
+	 MainMenu::tryStartGame();
+}

@@ -12,3 +12,17 @@
 void WorldMap_ShopButton::CheckTutorialAndCancel()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_ShopButton);
+
+void WorldMap_ShopButton::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_ShopButton);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIEasyButtonWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_ShopButton);
+}

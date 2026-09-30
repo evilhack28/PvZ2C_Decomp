@@ -12,3 +12,7 @@
 DangerRoomSpecialOfferConfig::~DangerRoomSpecialOfferConfig()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(DangerRoomSpecialOfferConfig);

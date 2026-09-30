@@ -69,3 +69,13 @@ bool GridItemHeianBox::OverrideProjectileCollision(Projectile* i_arg)
 {
 	return false;
 }
+
+bool GridItemHeianBox::CollidesWithType(const CollisionTypeFlags i_arg) const
+{
+	return true;
+}
+
+PlantingReason GridItemHeianBox::GetCantPlantReason() const
+{
+	return (PlantingReason)103;
+}

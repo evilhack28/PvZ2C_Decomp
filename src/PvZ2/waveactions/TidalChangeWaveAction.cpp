@@ -34,3 +34,7 @@ void TidalChangeWaveAction::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(TidalChangeWaveAction);
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(TidalChangeWaveActionProps);

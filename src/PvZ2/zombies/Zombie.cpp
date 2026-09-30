@@ -167,3 +167,40 @@ bool Zombie::hasHeadParticle() const
 {
 	return true;
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(Zombie);
+
+bool Zombie::CanLevelUp(int i_arg)
+{
+	return true;
+}
+
+ZombieParticle* Zombie::onHelmDropped(HelmType i_arg0, int i_arg1)
+{
+	return NULL;
+}
+
+void Zombie::SetIsFlagZombie(bool i_arg)
+{
+}
+
+bool Zombie::onCanTargetPlant(Plant* i_arg)
+{
+	return true;
+}
+
+void Zombie::onTakeBodyDamage(const DamageInfo& i_arg)
+{
+}
+
+void Zombie::onTakeHelmDamage(const DamageInfo& i_arg)
+{
+}
+
+Sexy::SexyVector3 Zombie::GetStunnedEffectOffset() const
+{
+	return Sexy::SexyVector3(0.0f, 0.0f, 35.0f);
+}
+

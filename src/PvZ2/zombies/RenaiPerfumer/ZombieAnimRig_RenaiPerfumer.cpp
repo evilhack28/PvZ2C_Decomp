@@ -16,3 +16,7 @@ ZombieAnimRig_RenaiPerfumer::ZombieAnimRig_RenaiPerfumer()
 ZombieAnimRig_RenaiPerfumer::~ZombieAnimRig_RenaiPerfumer()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_RenaiPerfumer);

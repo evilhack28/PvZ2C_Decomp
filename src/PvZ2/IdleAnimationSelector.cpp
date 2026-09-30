@@ -16,3 +16,7 @@ IdleAnimationSelector::IdleAnimationSelector()
 IdleAnimationSelector::~IdleAnimationSelector()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(IdleAnimationSelector);

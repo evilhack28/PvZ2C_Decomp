@@ -16,3 +16,17 @@ void CrazyNPCManager::initLoadingResourcesGroupList()
 void CrazyNPCManager::stopSound()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(CrazyNPCManager);
+
+#include "CrazyNPCManager.h"
+void CrazyNPCManager::ForceEndNarrative()
+{
+	 CrazyNPCManager::finishNarrative();
+}
+
+void CrazyNPCManager::addToLoadingResourcesGroupList(const std::string& i_arg)
+{
+}

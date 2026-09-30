@@ -16,3 +16,7 @@ RechargeGiftConfig::RechargeGiftConfig()
 RechargeGiftConfig::~RechargeGiftConfig()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(RechargeGiftConfig);

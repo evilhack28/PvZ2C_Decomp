@@ -40,3 +40,22 @@ void GridItemCoalTruck::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemCoalTruck);
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GridItemCoalTruckProps);
+
+void GridItemCoalTruckProps::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(GridItemCoalTruckProps);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GridItemGravestonePropertySheet);
+
+	REFLECTION_CLASSBUILDER_END(GridItemCoalTruckProps);
+}
+
+PlantingReason GridItemCoalTruck::GetCantPlantReason() const
+{
+	return (PlantingReason)91;
+}

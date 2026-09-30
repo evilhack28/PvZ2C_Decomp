@@ -29,3 +29,8 @@ void GridItemCoalSteam::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemCoalSteam);
 }
+
+PlantingReason GridItemCoalSteam::GetCantPlantReason() const
+{
+	return (PlantingReason)92;
+}

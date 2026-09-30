@@ -12,3 +12,24 @@
 PresentTable::~PresentTable()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PresentTable);
+
+void PresentTable::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PresentTableEntry);
+		REFLECTION_CLASSBUILDER_FIELD(std::string, PresentType);
+		REFLECTION_CLASSBUILDER_FIELD(int, Weight);
+	REFLECTION_CLASSBUILDER_END(PresentTableEntry);
+
+	REFLECTION_CLASSBUILDER_BEGIN(PresentTable);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(ObjectTypeDescriptor);
+
+		REFLECTION_CLASSBUILDER_FIELD(bool, Shiny);
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<PresentTableEntry>, Entries);
+	REFLECTION_CLASSBUILDER_END(PresentTable);
+}

@@ -12,3 +12,22 @@
 void ZombiePVPSkill_Bomb::updateState_Playing()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombiePVPSkill_Bomb);
+
+void ZombiePVPSkill_Bomb::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ZombiePVPSkill_Bomb);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(ZombiePVPSkill);
+
+		REFLECTION_CLASSBUILDER_FIELD(RtWeakPtr<PVPSkillBombRocket>, m_rocketPtr);
+	REFLECTION_CLASSBUILDER_END(ZombiePVPSkill_Bomb);
+}
+
+void ZombiePVPSkill_Bomb::onExitState_Playing(ZombieState i_arg)
+{
+}

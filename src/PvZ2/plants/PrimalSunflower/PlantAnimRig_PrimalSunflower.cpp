@@ -28,3 +28,8 @@ void PlantAnimRig_PrimalSunflower::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_PrimalSunflower);
 }
+
+PlantAnimRig_PrimalSunflower::PlantAnimRig_PrimalSunflower()
+{
+	level5Idx = 0;
+}

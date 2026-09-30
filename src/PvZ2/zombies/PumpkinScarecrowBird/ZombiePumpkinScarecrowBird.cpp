@@ -12,3 +12,7 @@
 void ZombiePumpkinScarecrowBird::onTurnedToAsh()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombiePumpkinScarecrowBird);

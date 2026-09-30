@@ -54,3 +54,13 @@ void GridItemFairyTaleFogProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(ZombieConditions, ConditionApplied);
 	REFLECTION_CLASSBUILDER_END(GridItemFairyTaleFogProps);
 }
+
+bool GridItemFairyTaleFog::CollidesWithType(const CollisionTypeFlags i_arg) const
+{
+	return false;
+}
+
+PlantingReason GridItemFairyTaleFog::GetCantPlantReason() const
+{
+	return (PlantingReason)111;
+}

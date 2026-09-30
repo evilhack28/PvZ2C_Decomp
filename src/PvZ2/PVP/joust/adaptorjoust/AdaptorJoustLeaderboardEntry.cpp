@@ -12,3 +12,27 @@
 void AdaptorJoustLeaderboardEntry::onLinkToUIViewCreated()
 {
 }
+
+AdaptorJoustLeaderboardEntry::~AdaptorJoustLeaderboardEntry()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(AdaptorJoustLeaderboardEntry);
+
+void AdaptorJoustLeaderboardEntry::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(AdaptorJoustLeaderboardEntry);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(HotUIAdaptor);
+
+	REFLECTION_CLASSBUILDER_END(AdaptorJoustLeaderboardEntry);
+}
+
+#include "HotUIAdaptor.h"
+void AdaptorJoustLeaderboardEntry::onLayoutFinished()
+{
+	 HotUIAdaptor::GetEntryPointWidget();
+}

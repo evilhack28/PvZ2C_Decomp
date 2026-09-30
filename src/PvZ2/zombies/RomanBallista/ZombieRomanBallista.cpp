@@ -34,3 +34,8 @@ bool ZombieRomanBallista::CanApplyVenomStack()
 {
 	return ZombieRomanBallista::CanApplySpecialCondition();
 }
+
+bool ZombieRomanBallista::hasHeadParticle() const
+{
+	return false;
+}

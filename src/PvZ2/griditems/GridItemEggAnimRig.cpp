@@ -33,3 +33,8 @@ void GridItemEggAnimRig::StaticClassInit()
 void GridItemEggAnimRig::PlayRoll(PopAnimRig::AnimStoppedReflectionDelegate i_arg)
 {
 }
+
+GridItemEggAnimRig::GridItemEggAnimRig()
+{
+	m_damagePhase = -1;
+}

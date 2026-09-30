@@ -34,3 +34,8 @@ void GridItemVaseAnimRig::onDropCompleted(const std::string& i_arg)
 {
 	 GridItemVaseAnimRig::PlayIdle();
 }
+
+GridItemVaseAnimRig::GridItemVaseAnimRig()
+{
+	m_revealed = 0;
+}

@@ -12,3 +12,12 @@
 void UIRedPacket::loadWithNetMessage()
 {
 }
+
+bool UIRedPacket::createWithNetwork()
+{
+	return true;
+}
+
+void UIRedPacket::onMsgErrorRequest(int i_arg0, const std::string& i_arg1)
+{
+}

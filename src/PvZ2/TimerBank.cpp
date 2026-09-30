@@ -20,3 +20,17 @@ void TimerBank::unregisterForEvents()
 void TimerBank::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(TimerBank);
+
+void TimerBank::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(TimerBank);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(TimerBank);
+}

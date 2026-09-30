@@ -12,3 +12,22 @@
 HardLevelModule::~HardLevelModule()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(HardLevelModule);
+
+void HardLevelModule::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ZombieLevelCreater);
+		REFLECTION_CLASSBUILDER_FIELD(float, ControlNum);
+	REFLECTION_CLASSBUILDER_END(ZombieLevelCreater);
+
+	REFLECTION_CLASSBUILDER_BEGIN(HardLevelModule);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(LevelModule);
+
+		REFLECTION_CLASSBUILDER_FIELD(ZombieLevelCreater, m_creater);
+	REFLECTION_CLASSBUILDER_END(HardLevelModule);
+}

@@ -12,3 +12,25 @@
 void ZombieAnimRig_MonkNunchaku::PlayRest()
 {
 }
+
+ZombieAnimRig_MonkNunchaku::ZombieAnimRig_MonkNunchaku()
+{
+}
+
+ZombieAnimRig_MonkNunchaku::~ZombieAnimRig_MonkNunchaku()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_MonkNunchaku);
+
+void ZombieAnimRig_MonkNunchaku::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ZombieAnimRig_MonkNunchaku);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(ZombieAnimRig_Hammer);
+
+	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_MonkNunchaku);
+}

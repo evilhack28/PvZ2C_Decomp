@@ -42,3 +42,21 @@ void NewYearFireCrackerWaveAction::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
 void NewYearFireCrackerWaveAction::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(NewYearFireCrackerWaveActionProps);
+
+void NewYearFireCrackerWaveActionProps::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(FireCrackerData);
+	REFLECTION_CLASSBUILDER_END(FireCrackerData);
+
+	REFLECTION_CLASSBUILDER_BEGIN(NewYearFireCrackerWaveActionProps);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(WaveActionProperties);
+
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<FireCrackerData>, FireCrackers);
+	REFLECTION_CLASSBUILDER_END(NewYearFireCrackerWaveActionProps);
+}

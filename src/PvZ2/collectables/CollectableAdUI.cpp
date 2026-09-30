@@ -12,3 +12,11 @@
 void CollectableAdUI::Update()
 {
 }
+
+void CollectableAdUI::ButtonPress(int i_arg)
+{
+}
+
+void CollectableAdUI::onNotifyRefreshActivityList(bool i_arg0, const std::set<int>& i_arg1)
+{
+}

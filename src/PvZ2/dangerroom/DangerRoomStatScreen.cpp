@@ -12,3 +12,20 @@
 void DangerRoomStatScreen::ConsumeLife()
 {
 }
+
+long DangerRoomStatScreen::getRepickSeed()
+{
+	return ProfileUtils::CalculateDangerRoomRepickSeed();
+}
+
+void DangerRoomStatScreen::ScrollTargetReached(Sexy::ScrollWidget* i_arg)
+{
+}
+
+void DangerRoomStatScreen::GameCenterCreateButtons()
+{
+}
+
+void DangerRoomStatScreen::ScrollTargetInterrupted(Sexy::ScrollWidget* i_arg)
+{
+}

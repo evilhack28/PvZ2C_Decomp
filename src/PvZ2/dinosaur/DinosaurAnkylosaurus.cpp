@@ -35,3 +35,8 @@ void DinosaurAnkylosaurusPropertySheet::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, PauseBetweenAttacks);
 	REFLECTION_CLASSBUILDER_END(DinosaurAnkylosaurusPropertySheet);
 }
+
+bool DinosaurAnkylosaurus::ShouldDrawShadow() const
+{
+	return false;
+}

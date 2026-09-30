@@ -16,3 +16,7 @@ EffectAnimRig_LinkedTileConnect::EffectAnimRig_LinkedTileConnect()
 EffectAnimRig_LinkedTileConnect::~EffectAnimRig_LinkedTileConnect()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(EffectAnimRig_LinkedTileConnect);

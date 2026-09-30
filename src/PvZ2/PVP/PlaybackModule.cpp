@@ -12,3 +12,23 @@
 void PlaybackModule::onGameEnded()
 {
 }
+
+PlaybackModule::PlaybackModule()
+{
+	m_recordID = 0;
+	m_zombieIndex = 1;
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlaybackModule);
+
+void PlaybackModule::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PlaybackModule);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(LevelModule);
+
+	REFLECTION_CLASSBUILDER_END(PlaybackModule);
+}

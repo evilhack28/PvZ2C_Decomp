@@ -16,3 +16,7 @@ ArmrackModule::ArmrackModule()
 ArmrackModule::~ArmrackModule()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ArmrackModule);

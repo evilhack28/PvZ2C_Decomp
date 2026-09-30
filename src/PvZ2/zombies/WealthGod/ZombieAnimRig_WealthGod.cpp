@@ -28,3 +28,8 @@ void ZombieAnimRig_WealthGod::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_WealthGod);
 }
+
+ZombieAnimRig_WealthGod::ZombieAnimRig_WealthGod()
+{
+	m_isWake = 0;
+}

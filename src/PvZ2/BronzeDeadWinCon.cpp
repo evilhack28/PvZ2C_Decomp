@@ -34,3 +34,7 @@ void BronzeDeadWinConProperties::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(BronzeDeadWinConProperties);
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(BronzeDeadWinCon);

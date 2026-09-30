@@ -32,3 +32,8 @@ void GridItemBackpack::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(float, m_bounceStartTime);
 	REFLECTION_CLASSBUILDER_END(GridItemBackpack);
 }
+
+PlantingReason GridItemBackpack::GetCantPlantReason() const
+{
+	return (PlantingReason)26;
+}

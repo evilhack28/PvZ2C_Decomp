@@ -18,3 +18,9 @@ int CustomLevelMgr::GetEvilDaveStartingSun()
 void CustomLevelMgr::SetTowerDefendPlantfood(int i_arg)
 {
 }
+
+#include "CustomLevelMgr.h"
+const CustomLevelConfig* CustomLevelMgr::GetConfig() const
+{
+	return CustomLevelMgr::getConfig();
+}

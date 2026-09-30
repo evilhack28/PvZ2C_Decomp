@@ -13,3 +13,32 @@ bool ArenaPlantModule::preventSave()
 {
 	return true;
 }
+
+ArenaPlantModule::~ArenaPlantModule()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ArenaPlantModule);
+
+void ArenaPlantModule::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ArenaPlantModule);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(StandardLevelIntro);
+
+	REFLECTION_CLASSBUILDER_END(ArenaPlantModule);
+}
+
+#include "ArenaPlantModule.h"
+void ArenaPlantModule::onReadyForBrains()
+{
+	 ArenaPlantModule::createBrains();
+}
+
+bool ArenaPlantModule::suppressReadySetGo() const
+{
+	return true;
+}

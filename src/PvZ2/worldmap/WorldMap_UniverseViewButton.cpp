@@ -12,3 +12,7 @@
 void WorldMap_UniverseViewButton::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_UniverseViewButton);

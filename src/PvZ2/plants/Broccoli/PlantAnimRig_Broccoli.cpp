@@ -13,3 +13,26 @@ int PlantAnimRig_Broccoli::CalcDamageStateCount()
 {
 	return true;
 }
+
+PlantAnimRig_Broccoli::PlantAnimRig_Broccoli()
+{
+}
+
+PlantAnimRig_Broccoli::~PlantAnimRig_Broccoli()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_Broccoli);
+
+void PlantAnimRig_Broccoli::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PlantAnimRig_Broccoli);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(PlantAnimRig);
+
+		REFLECTION_CLASSBUILDER_FIELD(std::string, m_lastUsedIdleAnim);
+	REFLECTION_CLASSBUILDER_END(PlantAnimRig_Broccoli);
+}

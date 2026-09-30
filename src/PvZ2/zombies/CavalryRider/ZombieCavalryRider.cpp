@@ -12,3 +12,8 @@
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ZombieCavalryRider);
+
+int ZombieCavalryRider::CalcProgressMeterHitpoints() const
+{
+	return false;
+}

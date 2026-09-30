@@ -51,3 +51,8 @@ void ZombieRainSpawner::SetLoot(const std::vector<Loot>& i_loot)
 	m_zombieLoot = i_loot;
 }
 
+SexyString ZombieRainSpawnerProps::GetWaveStartMessage() const
+{
+	return ToWString(WaveStartMessage);
+}
+

@@ -16,3 +16,7 @@ ZombieAnimRig_Hunter::ZombieAnimRig_Hunter()
 ZombieAnimRig_Hunter::~ZombieAnimRig_Hunter()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_Hunter);

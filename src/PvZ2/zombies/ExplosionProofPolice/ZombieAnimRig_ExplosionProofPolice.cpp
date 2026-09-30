@@ -22,3 +22,7 @@ void ZombieAnimRig_ExplosionProofPolice::onPopAnimInitialized()
 {
 	 ZombieAnimRig_Basic::onPopAnimInitialized();
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_ExplosionProofPolice);

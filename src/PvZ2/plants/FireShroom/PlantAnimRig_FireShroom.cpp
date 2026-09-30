@@ -28,3 +28,8 @@ void PlantAnimRig_FireShroom::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_FireShroom);
 }
+
+PlantAnimRig_FireShroom::PlantAnimRig_FireShroom()
+{
+	m_isLevel5Attack = 0;
+}

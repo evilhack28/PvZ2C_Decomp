@@ -64,3 +64,8 @@ void GridItemRenaiStatue::OnChangeState(StatueState i_arg)
 void GridItemRenaiStatue::onPopAnimCommand(const std::string& i_arg0, pvztime_t i_arg1, const std::string& i_arg2, const std::string& i_arg3)
 {
 }
+
+PlantingReason GridItemRenaiStatue::GetCantPlantReason() const
+{
+	return (PlantingReason)99;
+}

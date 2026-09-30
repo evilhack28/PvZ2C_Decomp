@@ -42,3 +42,21 @@ void SummerFireworksWaveAction::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
 void SummerFireworksWaveAction::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(SummerFireworksWaveActionProps);
+
+void SummerFireworksWaveActionProps::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(SummerFireworksData);
+	REFLECTION_CLASSBUILDER_END(SummerFireworksData);
+
+	REFLECTION_CLASSBUILDER_BEGIN(SummerFireworksWaveActionProps);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(WaveActionProperties);
+
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<SummerFireworksData>, SummerFireworksGroup);
+	REFLECTION_CLASSBUILDER_END(SummerFireworksWaveActionProps);
+}

@@ -11,3 +11,11 @@ TotalRewardData& PVZVersion::GetUpdateReward(bool i_firstReward)
 {
 	return i_firstReward ? first_reward : second_reward;
 }
+
+PVZVersion::~PVZVersion()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PVZVersion);

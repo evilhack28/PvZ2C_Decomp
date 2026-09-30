@@ -30,3 +30,14 @@ void ZombieSteamCoalMinerProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(std::vector<std::string>, HelmHitPlantList);
 	REFLECTION_CLASSBUILDER_END(ZombieSteamCoalMinerProps);
 }
+
+bool ZombieSteamCoalMiner::hasHeadParticle() const
+{
+	return true;
+}
+
+#include "Zombie.h"
+float ZombieSteamCoalMiner::getHeadDropFraction() const
+{
+	return Zombie::getHeadDropFraction();
+}

@@ -16,3 +16,7 @@ LevelMutatorTableProps::LevelMutatorTableProps()
 LevelMutatorTableProps::~LevelMutatorTableProps()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(LevelMutatorTableProps);

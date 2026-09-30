@@ -12,3 +12,23 @@
 void AdaptorRiftTourneyResultsScreen::sendTournamentRegistrationRequest()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(AdaptorRiftTourneyResultsScreen);
+
+void AdaptorRiftTourneyResultsScreen::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(AdaptorRiftTourneyResultsScreen);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(HotUIAdaptor);
+
+	REFLECTION_CLASSBUILDER_END(AdaptorRiftTourneyResultsScreen);
+}
+
+#include "AdaptorRiftTourneyResultsScreen.h"
+void AdaptorRiftTourneyResultsScreen::onLinkToUIViewCreated()
+{
+	 AdaptorRiftTourneyResultsScreen::setup();
+}

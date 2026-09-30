@@ -34,3 +34,12 @@ void CollectablePlantfoodType::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(CollectablePlantfoodType);
 }
+
+CollectablePlantfood::CollectablePlantfood()
+{
+	plantfoodCategory = (decltype(plantfoodCategory))0;
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(CollectablePlantfood);

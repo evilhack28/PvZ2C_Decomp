@@ -25,3 +25,28 @@ void BesiegeModule::levelStarted()
 void BesiegeModule::postInitialize()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(BesiegeModule);
+
+void BesiegeModule::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(BesiegeModule);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(LevelModule);
+
+		REFLECTION_CLASSBUILDER_FIELD(int, m_homeHP);
+		REFLECTION_CLASSBUILDER_FIELD(Point, m_targetPoint);
+		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, m_TimeFailure);
+	REFLECTION_CLASSBUILDER_END(BesiegeModule);
+}
+
+void BesiegeModule::onZombieKilled(Zombie* i_arg0, const DamageInfo* i_arg1)
+{
+}
+
+void BesiegeModule::initializeModule()
+{
+}

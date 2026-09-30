@@ -16,3 +16,7 @@ PlantGrapeshot::PlantGrapeshot()
 PlantGrapeshot::~PlantGrapeshot()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantGrapeshot);

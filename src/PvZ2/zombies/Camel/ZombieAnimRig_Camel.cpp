@@ -13,3 +13,15 @@ class ZombieParticle* ZombieAnimRig_Camel::CreateProjectileParticle()
 {
 	return NULL;
 }
+
+ZombieAnimRig_Camel::ZombieAnimRig_Camel()
+{
+}
+
+ZombieAnimRig_Camel::~ZombieAnimRig_Camel()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_Camel);

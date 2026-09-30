@@ -57,3 +57,8 @@ void GridItemZombieTentProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(float, ProductInterval);
 	REFLECTION_CLASSBUILDER_END(GridItemZombieTentProps);
 }
+
+PlantingReason GridItemZombieTent::GetCantPlantReason() const
+{
+	return (PlantingReason)23;
+}

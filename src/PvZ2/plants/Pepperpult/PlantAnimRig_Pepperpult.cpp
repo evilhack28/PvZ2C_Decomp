@@ -22,3 +22,13 @@ void PlantAnimRig_Pepperpult::onPopAnimInitialized()
 {
 	 PlantAnimRig::onPopAnimInitialized();
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_Pepperpult);
+
+std::string PlantAnimRig_Pepperpult::getPlantFoodMainAnimName()
+{
+	return m_bAvatar ? "plantfood2" : "plantfood";
+}
+

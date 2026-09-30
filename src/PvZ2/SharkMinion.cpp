@@ -12,3 +12,13 @@
 void SharkMinion::onDestroy()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(SharkMinion);
+
+#include "BoardEntity.h"
+void SharkMinion::onInitialized()
+{
+	 BoardEntity::onInitialized();
+}

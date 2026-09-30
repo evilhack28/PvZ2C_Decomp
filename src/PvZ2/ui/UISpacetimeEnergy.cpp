@@ -16,3 +16,17 @@ void UISpacetimeEnergy::unregisterForEvents()
 void UISpacetimeEnergy::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(UISpacetimeEnergy);
+
+void UISpacetimeEnergy::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(UISpacetimeEnergy);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIEasyButtonWidget);
+
+	REFLECTION_CLASSBUILDER_END(UISpacetimeEnergy);
+}

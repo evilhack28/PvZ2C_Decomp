@@ -49,3 +49,29 @@ void GridItemRunningSubwayObjectProps::StaticClassInit()
 void GridItemRunningSubwayObject::OnCollide(BoardEntity* i_arg)
 {
 }
+
+#include "GridItemBoardEntityConditionTarget.h"
+bool GridItemRunningSubwayObject::IsControlled() const
+{
+	return GridItemBoardEntityConditionTarget::IsControlled();
+}
+
+bool GridItemRunningSubwayObject::IsDamageable() const
+{
+	return false;
+}
+
+bool GridItemRunningSubwayObject::CanBeTargetedBy(const BoardEntity* i_arg) const
+{
+	return false;
+}
+
+bool GridItemRunningSubwayObject::CollidesWithType(const CollisionTypeFlags i_arg) const
+{
+	return false;
+}
+
+bool GridItemRunningSubwayObject::ShouldDrawShadow() const
+{
+	return false;
+}

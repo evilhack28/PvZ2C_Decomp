@@ -12,3 +12,8 @@
 UIInputDialog::~UIInputDialog()
 {
 }
+
+UIInputDialog::UIInputDialog()
+{
+	m_bModel = 0;
+}

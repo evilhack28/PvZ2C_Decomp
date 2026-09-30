@@ -46,3 +46,9 @@ void ProtectChristmasModule::StaticClassInit()
 void ProtectChristmasModule::initializeModule()
 {
 }
+
+ProtectChristmasModule::ProtectChristmasModule()
+{
+	m_bStart = 0;
+	m_nProtectDestroyIndex = 0;
+}

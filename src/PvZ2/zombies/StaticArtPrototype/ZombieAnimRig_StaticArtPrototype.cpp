@@ -12,3 +12,7 @@
 ZombieAnimRig_StaticArtPrototype::~ZombieAnimRig_StaticArtPrototype()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_StaticArtPrototype);

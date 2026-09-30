@@ -12,3 +12,7 @@
 void DangerRoomDialogContents::Update()
 {
 }
+
+DangerRoomDialogContents::~DangerRoomDialogContents()
+{
+}

@@ -16,3 +16,7 @@ ZombieAnimRig_LostCityJane::ZombieAnimRig_LostCityJane()
 ZombieAnimRig_LostCityJane::~ZombieAnimRig_LostCityJane()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_LostCityJane);

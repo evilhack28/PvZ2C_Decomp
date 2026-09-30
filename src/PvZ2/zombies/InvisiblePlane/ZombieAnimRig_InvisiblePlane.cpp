@@ -28,3 +28,8 @@ void ZombieAnimRig_InvisiblePlane::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_InvisiblePlane);
 }
+
+ZombieAnimRig_InvisiblePlane::ZombieAnimRig_InvisiblePlane()
+{
+	m_damageIndex = 0;
+}

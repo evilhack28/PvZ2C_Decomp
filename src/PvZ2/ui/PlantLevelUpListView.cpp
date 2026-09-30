@@ -12,3 +12,11 @@
 void PlantLevelUpListView::AutoTestUnlockPlant()
 {
 }
+
+void PlantLevelUpListView::ScrollTargetReached(ScrollWidget* i_arg)
+{
+}
+
+void PlantLevelUpListView::ScrollTargetInterrupted(ScrollWidget* i_arg)
+{
+}

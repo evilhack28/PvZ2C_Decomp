@@ -16,3 +16,7 @@ SocialInfo::SocialInfo()
 SocialInfo::~SocialInfo()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(SocialInfo);

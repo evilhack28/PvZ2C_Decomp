@@ -66,3 +66,184 @@ void SexyAppBase::AddMemoryImage(MemoryImage* theMemoryImage)
 	AutoCrit aCrit(mImageSetCritSect);
 	mMemoryImageSet.insert(theMemoryImage);
 }
+
+void SexyAppBase::ModalClose()
+{
+}
+
+void SexyAppBase::RehupFocus()
+{
+}
+
+void SexyAppBase::StartSounds()
+{
+}
+
+void SexyAppBase::UnmuteMusic()
+{
+}
+
+void SexyAppBase::PreTerminate()
+{
+}
+
+bool SexyAppBase::ShouldReInit()
+{
+	return false;
+}
+
+void SexyAppBase::ShutdownHook()
+{
+}
+
+bool SexyAppBase::ChangeDirHook(const char * i_arg)
+{
+	return false;
+}
+
+void SexyAppBase::Done3dTesting()
+{
+}
+
+void SexyAppBase::UpdateFramesF(float i_arg)
+{
+}
+
+void SexyAppBase::PreDisplayHook()
+{
+}
+
+void SexyAppBase::HandleWwiseError()
+{
+}
+
+void SexyAppBase::LowMemoryWarning()
+{
+}
+
+void SexyAppBase::CleanSharedImages()
+{
+}
+
+void SexyAppBase::CloseRequestAsync()
+{
+}
+
+bool SexyAppBase::DebugKeyDownAsync(int i_arg0, bool i_arg1, bool i_arg2)
+{
+	return false;
+}
+
+void SexyAppBase::LoadingThreadProc()
+{
+}
+
+void SexyAppBase::WechatShareFailed()
+{
+}
+
+void SexyAppBase::InitPropertiesHook()
+{
+}
+
+void SexyAppBase::OnResourcesUpdated(ResourceUpdateType i_arg0, void* i_arg1)
+{
+}
+
+void SexyAppBase::UpdateFramesPaused()
+{
+}
+
+void SexyAppBase::WechatShareSuccess()
+{
+}
+
+void SexyAppBase::OnFullVersionChange()
+{
+}
+
+void SexyAppBase::OnLiveLinkConnected()
+{
+}
+
+void SexyAppBase::AccelerometerChanged(double i_arg0, double i_arg1, double i_arg2, double i_arg3)
+{
+}
+
+void SexyAppBase::AppEnteredBackground()
+{
+}
+
+void SexyAppBase::AppEnteredForeground()
+{
+}
+
+bool SexyAppBase::HandleOpenURLRequest(const std::string& i_arg)
+{
+	return false;
+}
+
+void SexyAppBase::UIOrientationChanged(UI_ORIENTATION i_arg)
+{
+}
+
+void SexyAppBase::AppBecomingForeground()
+{
+}
+
+void SexyAppBase::LoadingThreadCompleted()
+{
+}
+
+void SexyAppBase::OnLiveLinkDisconnected()
+{
+}
+
+void SexyAppBase::PreDDInterfaceInitHook()
+{
+}
+
+void SexyAppBase::PostDDInterfaceInitHook()
+{
+}
+
+void SexyAppBase::HandleGameAlreadyRunning()
+{
+}
+
+bool SexyAppBase::FrameNeedsSwapScreenImage()
+{
+	return true;
+}
+
+bool SexyAppBase::isReducedResolutionIPhone()
+{
+	return false;
+}
+
+UI_ORIENTATION SexyAppBase::FullScreenUIOrientationLeft()
+{
+	return (UI_ORIENTATION)4;
+}
+
+UI_ORIENTATION SexyAppBase::FullScreenUIOrientationRight()
+{
+	return (UI_ORIENTATION)3;
+}
+
+bool SexyAppBase::KeyDown(int i_arg)
+{
+	return false;
+}
+
+void SexyAppBase::InitHook()
+{
+}
+
+void SexyAppBase::ModalOpen()
+{
+}
+
+void SexyAppBase::MuteMusic()
+{
+}

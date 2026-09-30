@@ -12,3 +12,19 @@
 void ArenaAwakenWidget::Update()
 {
 }
+
+void ArenaAwakenWidget::SetAlmanacPage(ObjectTypeDescriptorPtr i_arg)
+{
+}
+
+void ArenaAwakenWidget::SetNeedsRefresh(ObjectTypeDescriptorPtr i_arg)
+{
+}
+
+void ArenaAwakenWidget::ScrollTargetReached(Sexy::ScrollWidget* i_arg)
+{
+}
+
+void ArenaAwakenWidget::ScrollTargetInterrupted(Sexy::ScrollWidget* i_arg)
+{
+}

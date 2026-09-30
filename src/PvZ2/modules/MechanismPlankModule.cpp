@@ -16,3 +16,7 @@ MechanismPlankModule::MechanismPlankModule()
 MechanismPlankModule::~MechanismPlankModule()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(MechanismPlankModule);

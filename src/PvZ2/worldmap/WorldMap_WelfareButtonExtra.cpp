@@ -12,3 +12,17 @@
 void WorldMap_WelfareButtonExtra::CheckTutorialAndCancel()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_WelfareButtonExtra);
+
+void WorldMap_WelfareButtonExtra::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_WelfareButtonExtra);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIEasyButtonWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_WelfareButtonExtra);
+}

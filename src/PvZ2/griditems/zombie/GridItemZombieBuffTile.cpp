@@ -51,3 +51,8 @@ void GridItemZombieBuffTileProps::StaticClassInit()
 void GridItemZombieBuffTile::doApplyEffect(const BoardEntity* i_arg)
 {
 }
+
+PlantingReason GridItemZombieBuffTile::GetCantPlantReason() const
+{
+	return (PlantingReason)109;
+}

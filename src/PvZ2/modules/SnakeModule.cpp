@@ -21,3 +21,27 @@ void SnakeModule::levelStarted()
 void SnakeModule::postInitialize()
 {
 }
+
+SnakeModule::~SnakeModule()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(SnakeModule);
+
+void SnakeModule::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(SnakeModule);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(LevelModule);
+
+		REFLECTION_CLASSBUILDER_FIELD(float, m_snakeStep);
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<int>, m_BlueInfos);
+	REFLECTION_CLASSBUILDER_END(SnakeModule);
+}
+
+void SnakeModule::initializeModule()
+{
+}

@@ -12,3 +12,9 @@
 void BattleStatementUI::SetupDangerRoomDatas()
 {
 }
+
+#include "BattleStatementUI.h"
+void BattleStatementUI::onADFinished(int i_arg)
+{
+	 BattleStatementUI::doublePieceRewards();
+}

@@ -12,3 +12,7 @@
 void SeedPacket::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(SeedPacket);

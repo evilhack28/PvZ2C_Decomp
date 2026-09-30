@@ -46,3 +46,8 @@ void GridItemSteamTrainProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(int8, DamageStateCount);
 	REFLECTION_CLASSBUILDER_END(GridItemSteamTrainProps);
 }
+
+PlantingReason GridItemSteamTrain::GetCantPlantReason() const
+{
+	return (PlantingReason)97;
+}

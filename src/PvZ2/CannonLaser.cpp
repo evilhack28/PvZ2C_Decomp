@@ -12,3 +12,27 @@
 void CannonLaser::onDestroy()
 {
 }
+
+CannonLaser::~CannonLaser()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(CannonLaser);
+
+void CannonLaser::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(CannonLaser);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(Projectile);
+
+		REFLECTION_CLASSBUILDER_FIELD(int, m_laserState);
+	REFLECTION_CLASSBUILDER_END(CannonLaser);
+}
+
+bool CannonLaser::ShouldDrawShadow() const
+{
+	return false;
+}

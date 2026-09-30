@@ -16,3 +16,7 @@ ZombieAnimRig_SelfExplode::ZombieAnimRig_SelfExplode()
 ZombieAnimRig_SelfExplode::~ZombieAnimRig_SelfExplode()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_SelfExplode);

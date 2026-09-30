@@ -16,3 +16,7 @@ PlantAnimRig_KiwiFruit::PlantAnimRig_KiwiFruit()
 PlantAnimRig_KiwiFruit::~PlantAnimRig_KiwiFruit()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_KiwiFruit);

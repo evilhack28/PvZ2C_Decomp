@@ -12,3 +12,26 @@
 void AirshipProgressMeter::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(AirshipProgressMeter);
+
+void AirshipProgressMeter::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(AirshipProgressMeter);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+		REFLECTION_CLASSBUILDER_FIELD(float, m_phasePercent);
+		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, m_damageFlashStartTime);
+		REFLECTION_CLASSBUILDER_FIELD(bool, m_haveShield);
+	REFLECTION_CLASSBUILDER_END(AirshipProgressMeter);
+}
+
+#include "AirshipProgressMeter.h"
+void AirshipProgressMeter::onAirshipTakeDamage(float i_arg)
+{
+	 AirshipProgressMeter::FlashDamage();
+}

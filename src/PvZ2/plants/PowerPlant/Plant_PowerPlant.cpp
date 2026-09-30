@@ -50,3 +50,12 @@ bool PlantPowerPlant::HasShadow()
 {
 	return true;
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantTypePowerPlant);
+
+bool PlantPowerPlant::IsInvincible() const
+{
+	return true;
+}

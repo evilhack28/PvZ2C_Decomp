@@ -26,3 +26,12 @@ void ZombieBeachFishermanProps::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ZombieBeachFishermanProps);
 }
+
+bool ZombieBeachFisherman::ShouldDrawShadow() const
+{
+	return false;
+}
+
+void ZombieBeachFishermanProps::Validate() const
+{
+}

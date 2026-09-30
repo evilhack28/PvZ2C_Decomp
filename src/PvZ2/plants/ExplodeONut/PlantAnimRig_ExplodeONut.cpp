@@ -17,3 +17,7 @@ int PlantAnimRig_ExplodeONut::GetArmorStateCount()
 {
 	return 3;
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_ExplodeONut);

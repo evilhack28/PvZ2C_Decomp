@@ -43,3 +43,12 @@ bool PlantGoldLeaf::CanBeShoveled()
 {
 	return false;
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantTypeGoldLeaf);
+
+bool PlantGoldLeaf::IsInvincible() const
+{
+	return true;
+}

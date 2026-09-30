@@ -40,3 +40,7 @@ bool ZombiesDeadWinCon::checkWin()
 {
 	return ZombiesDeadWinCon::Check();
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombiesDeadWinCon);

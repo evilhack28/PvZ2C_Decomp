@@ -40,3 +40,8 @@ bool ZombieGargantuar::canTargetEntityHeight(BoardEntityHeight i_arg)
 {
 	return true;
 }
+
+bool ZombieGargantuar::CanBeFlickedOff() const
+{
+	return false;
+}

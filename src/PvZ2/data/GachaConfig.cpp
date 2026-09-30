@@ -16,3 +16,7 @@ GachaConfig::GachaConfig()
 GachaConfig::~GachaConfig()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GachaConfig);

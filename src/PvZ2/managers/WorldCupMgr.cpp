@@ -12,3 +12,9 @@
 WorldCupMgr::~WorldCupMgr()
 {
 }
+
+WorldCupMgr::WorldCupMgr()
+{
+	m_currentSetStartingSun = 0;
+	m_currentSetId = 0;
+}

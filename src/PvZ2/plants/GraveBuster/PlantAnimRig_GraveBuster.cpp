@@ -16,3 +16,7 @@ PlantAnimRig_GraveBuster::PlantAnimRig_GraveBuster()
 PlantAnimRig_GraveBuster::~PlantAnimRig_GraveBuster()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_GraveBuster);

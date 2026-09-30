@@ -16,3 +16,8 @@ ArtifactBlackholeCursor::~ArtifactBlackholeCursor()
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ArtifactBlackholeCursor);
+
+bool ArtifactBlackholeCursor::canAffordPlant(PlantTypePtr i_arg) const
+{
+	return true;
+}

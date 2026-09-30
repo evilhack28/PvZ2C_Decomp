@@ -13,3 +13,11 @@ bool IdentifierMgr::EnableBind()
 {
 	return true;
 }
+
+IdentifierMgr::~IdentifierMgr()
+{
+}
+
+void IdentifierMgr::onNotifyUUIDLogin(bool i_arg)
+{
+}

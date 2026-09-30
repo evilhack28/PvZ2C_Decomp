@@ -22,3 +22,7 @@ void EffectAnimRig_LinkedTile::onAnimStopped()
 {
 	 EffectAnimRig_LinkedTile::PlayIdle();
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(EffectAnimRig_LinkedTile);

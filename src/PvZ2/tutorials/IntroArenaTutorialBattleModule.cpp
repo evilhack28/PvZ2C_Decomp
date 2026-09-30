@@ -25,3 +25,31 @@ bool IntroArenaTutorialBattleModule::preventSave()
 void IntroArenaTutorialBattleModule::onGameplayEnded()
 {
 }
+
+IntroArenaTutorialBattleModule::~IntroArenaTutorialBattleModule()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(IntroArenaTutorialBattleModule);
+
+void IntroArenaTutorialBattleModule::onPlantLost(class Plant * i_arg)
+{
+}
+
+void IntroArenaTutorialBattleModule::onZombieVanish(class StandaloneEffect* i_arg)
+{
+}
+
+#include "IntroArenaTutorialBattleModule.h"
+void IntroArenaTutorialBattleModule::onReadyForBrains()
+{
+	 IntroArenaTutorialBattleModule::createBrains();
+}
+
+#include "IntroArenaTutorialBattleModule.h"
+void IntroArenaTutorialBattleModule::onTriggerStartTimerOver()
+{
+	 IntroArenaTutorialBattleModule::TriggerBattleBegin();
+}

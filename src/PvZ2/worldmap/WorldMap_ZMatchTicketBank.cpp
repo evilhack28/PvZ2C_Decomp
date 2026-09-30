@@ -12,3 +12,17 @@
 void WorldMap_ZMatchTicketBank::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_ZMatchTicketBank);
+
+void WorldMap_ZMatchTicketBank::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_ZMatchTicketBank);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(ZMatchTicketBank);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_ZMatchTicketBank);
+}

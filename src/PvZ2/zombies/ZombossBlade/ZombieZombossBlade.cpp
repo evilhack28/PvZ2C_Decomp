@@ -16,3 +16,8 @@ RT_CLASS_IMPLEMENT(ZombieZombossBlade);
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ZombieZombossBladeProps);
+
+bool ZombieZombossBlade::IgnoreKillbox() const
+{
+	return true;
+}

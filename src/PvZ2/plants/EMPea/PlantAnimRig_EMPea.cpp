@@ -16,3 +16,7 @@ PlantAnimRig_EMPea::PlantAnimRig_EMPea()
 PlantAnimRig_EMPea::~PlantAnimRig_EMPea()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_EMPea);

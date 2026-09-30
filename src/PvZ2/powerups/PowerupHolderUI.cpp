@@ -16,3 +16,7 @@ PowerupHolderUI::PowerupHolderUI()
 PowerupHolderUI::~PowerupHolderUI()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PowerupHolderUI);

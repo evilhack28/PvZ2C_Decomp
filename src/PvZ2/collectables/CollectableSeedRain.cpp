@@ -13,3 +13,22 @@ bool CollectableSeedRain::drawCost()
 {
 	return false;
 }
+
+CollectableSeedRain::~CollectableSeedRain()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(CollectableSeedRain);
+
+void CollectableSeedRain::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(CollectableSeedRain);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(Collectable);
+
+		REFLECTION_CLASSBUILDER_FIELD(Point, m_targetGrid);
+	REFLECTION_CLASSBUILDER_END(CollectableSeedRain);
+}

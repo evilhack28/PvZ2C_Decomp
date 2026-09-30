@@ -21,3 +21,25 @@ void EliminateModule::onLevelStarted()
 void EliminateModule::onNarrationFinished()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(EliminateModule);
+
+void EliminateModule::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(EliminateModule);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(LevelModule);
+
+	REFLECTION_CLASSBUILDER_END(EliminateModule);
+}
+
+void EliminateModule::onFallDone(BoardEntity * i_arg)
+{
+}
+
+void EliminateModule::initializeModule()
+{
+}

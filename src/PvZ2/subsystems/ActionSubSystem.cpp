@@ -12,3 +12,25 @@
 void ActionSubSystem::registerForEvents()
 {
 }
+
+ActionSubSystem::ActionSubSystem()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ActionSubSystem);
+
+void ActionSubSystem::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ActionSubSystem);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GameSubSystem);
+
+	REFLECTION_CLASSBUILDER_END(ActionSubSystem);
+}
+
+void ActionSubSystem::onInitialized()
+{
+}

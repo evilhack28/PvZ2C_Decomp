@@ -20,3 +20,21 @@ void DNodeWidget::UserInit()
 void DNodeWidget::debugBtn()
 {
 }
+
+DNodeWidget::~DNodeWidget()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(DNodeWidget);
+
+void DNodeWidget::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(DNodeWidget);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(Widget);
+
+	REFLECTION_CLASSBUILDER_END(DNodeWidget);
+}

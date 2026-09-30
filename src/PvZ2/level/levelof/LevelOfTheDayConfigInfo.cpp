@@ -16,3 +16,7 @@ LevelOfTheDayConfigInfo::LevelOfTheDayConfigInfo()
 LevelOfTheDayConfigInfo::~LevelOfTheDayConfigInfo()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(LevelOfTheDayConfigInfo);

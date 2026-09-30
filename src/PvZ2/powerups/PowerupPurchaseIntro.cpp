@@ -12,3 +12,26 @@
 void PowerupPurchaseIntro::onLevelEnded()
 {
 }
+
+PowerupPurchaseIntro::PowerupPurchaseIntro()
+{
+}
+
+PowerupPurchaseIntro::~PowerupPurchaseIntro()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PowerupPurchaseIntro);
+
+void PowerupPurchaseIntro::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PowerupPurchaseIntro);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(StandardLevelIntro);
+
+		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, m_fadeStart);
+	REFLECTION_CLASSBUILDER_END(PowerupPurchaseIntro);
+}

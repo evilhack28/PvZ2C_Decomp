@@ -12,3 +12,28 @@
 void FishingEnergyBar::initLoadingResourcesGroupList()
 {
 }
+
+FishingEnergyBar::FishingEnergyBar()
+{
+	m_touchIdent = 0;
+	m_curEnergy = 0;
+	m_maxEnergy = 0;
+}
+
+FishingEnergyBar::~FishingEnergyBar()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(FishingEnergyBar);
+
+void FishingEnergyBar::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(FishingEnergyBar);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(FishingEnergyBar);
+}

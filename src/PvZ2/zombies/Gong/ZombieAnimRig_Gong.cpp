@@ -16,3 +16,7 @@ ZombieAnimRig_Gong::ZombieAnimRig_Gong()
 ZombieAnimRig_Gong::~ZombieAnimRig_Gong()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_Gong);

@@ -32,3 +32,18 @@ void ZombiePVPShadowImpProps::StaticClassInit()
 void ZombiePVPShadowImp::ApplyZombieFood()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombiePVPShadowImp);
+
+void ZombiePVPShadowImp::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ZombiePVPShadowImp);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(ZombiePVPImp);
+
+		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, m_iDestoryTime);
+	REFLECTION_CLASSBUILDER_END(ZombiePVPShadowImp);
+}

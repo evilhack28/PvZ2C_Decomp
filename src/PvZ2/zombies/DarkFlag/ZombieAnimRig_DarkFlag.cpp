@@ -16,3 +16,7 @@ ZombieAnimRig_DarkFlag::ZombieAnimRig_DarkFlag()
 ZombieAnimRig_DarkFlag::~ZombieAnimRig_DarkFlag()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_DarkFlag);

@@ -27,3 +27,8 @@ void GridItemSpeakerProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(int, SonicDamageAmount);
 	REFLECTION_CLASSBUILDER_END(GridItemSpeakerProps);
 }
+
+PlantingReason GridItemSpeaker::GetCantPlantReason() const
+{
+	return (PlantingReason)27;
+}

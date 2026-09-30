@@ -12,3 +12,7 @@
 void SocialShareMgr::Update()
 {
 }
+
+SocialShareMgr::~SocialShareMgr()
+{
+}

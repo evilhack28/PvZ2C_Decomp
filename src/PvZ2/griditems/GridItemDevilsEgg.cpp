@@ -41,3 +41,9 @@ void GridItemDevilsEgg::onUpdate()
 {
 	 GridItemAnimController::onUpdate();
 }
+
+GridItemDevilsEgg::GridItemDevilsEgg()
+{
+	m_level = 1;
+	m_isAvatar = 0;
+}

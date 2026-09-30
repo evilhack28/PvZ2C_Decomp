@@ -39,3 +39,18 @@ void ZombieAirMissileProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(float, hitPlantDamage);
 	REFLECTION_CLASSBUILDER_END(ZombieAirMissileProps);
 }
+
+bool ZombieAirMissile::allowAshState() const
+{
+	return false;
+}
+
+bool ZombieAirMissile::CollidesWithType(CollisionTypeFlags i_arg) const
+{
+	return false;
+}
+
+bool ZombieAirMissile::allowElectrocuteState() const
+{
+	return false;
+}

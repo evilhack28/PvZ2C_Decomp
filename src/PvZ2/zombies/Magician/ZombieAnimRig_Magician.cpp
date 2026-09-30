@@ -16,3 +16,7 @@ ZombieAnimRig_Magician::ZombieAnimRig_Magician()
 ZombieAnimRig_Magician::~ZombieAnimRig_Magician()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_Magician);

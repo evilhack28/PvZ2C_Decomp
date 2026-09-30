@@ -48,3 +48,8 @@ void GridItemMeteorProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(std::vector<std::string>, ZombieBlacklist);
 	REFLECTION_CLASSBUILDER_END(GridItemMeteorProps);
 }
+
+PlantingReason GridItemMeteor::GetCantPlantReason() const
+{
+	return (PlantingReason)75;
+}

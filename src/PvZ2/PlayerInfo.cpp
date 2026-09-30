@@ -132,3 +132,72 @@ PennyTechCurrency PlayerInfo::GetNumPennyTech() const
 {
 	return 99;
 }
+
+void PlayerInfo::AM_SetLevel(std::string i_arg)
+{
+}
+
+void PlayerInfo::AddPennyFuel(const PennyFuelCurrency i_arg0, const bool i_arg1)
+{
+}
+
+void PlayerInfo::AddPennyTech(const PennyTechCurrency i_arg)
+{
+}
+
+#include "PlayerInfo.h"
+bool PlayerInfo::CanRiddleToday()
+{
+	return PlayerInfo::NeedResetRiddleInfo();
+}
+
+#include "PlayerInfo.h"
+void PlayerInfo::ClearRebateData()
+{
+	 PlayerInfo::ResetRebateData();
+}
+
+void PlayerInfo::AddZombossSignal(const ZombossSignalCurrency i_arg)
+{
+}
+
+void PlayerInfo::SetZombossSignal(const ZombossSignalCurrency i_arg)
+{
+}
+
+void PlayerInfo::SubtractPennyFuel(const PennyFuelCurrency i_arg)
+{
+}
+
+void PlayerInfo::SubtractPennyTech(const PennyTechCurrency i_arg)
+{
+}
+
+#include "PlayerInfo.h"
+void PlayerInfo::saveCurrentProfile()
+{
+	 PlayerInfo::SAVE_PROFILE();
+}
+
+#include "PlayerInfo.h"
+void PlayerInfo::RegainPlantPieceSign()
+{
+	 PlayerInfo::resetPlantPieceSign();
+}
+
+void PlayerInfo::SubtractZombossSignal(const ZombossSignalCurrency i_arg)
+{
+}
+
+void PlayerInfo::increaseChallengeCount(int i_arg0, int i_arg1)
+{
+}
+
+void PlayerInfo::AddCard(int i_arg)
+{
+}
+
+int PlayerInfo::getChallengeCount(int i_arg0, int i_arg1) const
+{
+	return false;
+}

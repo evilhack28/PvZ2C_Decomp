@@ -13,3 +13,13 @@ bool CollectableAdBox::CanChangeColorState()
 {
 	return true;
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(CollectableAdBox);
+
+#include "Collectable.h"
+void CollectableAdBox::onUpdate()
+{
+	 Collectable::onUpdate();
+}

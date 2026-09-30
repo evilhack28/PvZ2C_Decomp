@@ -28,3 +28,8 @@ void PlantAnimRig_ArmamintPeashooter::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_ArmamintPeashooter);
 }
+
+PlantAnimRig_ArmamintPeashooter::PlantAnimRig_ArmamintPeashooter()
+{
+	m_type = (decltype(m_type))0;
+}

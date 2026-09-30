@@ -12,3 +12,39 @@
 void GridItemChristmasProtect::onPlaceOnBoard()
 {
 }
+
+GridItemChristmasProtect::GridItemChristmasProtect()
+{
+	m_stealedNum = 0;
+}
+
+GridItemChristmasProtect::~GridItemChristmasProtect()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GridItemChristmasProtect);
+
+void GridItemChristmasProtect::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(GridItemChristmasProtect);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GridItemAnimation);
+
+		REFLECTION_CLASSBUILDER_FIELD(int, m_stealedNum);
+	REFLECTION_CLASSBUILDER_END(GridItemChristmasProtect);
+}
+
+#include "GridItem.h"
+void GridItemChristmasProtect::registerForEvents()
+{
+	 GridItem::registerForEvents();
+}
+
+#include "GridItemAnimation.h"
+void GridItemChristmasProtect::onUpdate()
+{
+	 GridItemAnimation::onUpdate();
+}

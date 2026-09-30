@@ -16,3 +16,7 @@ ZombieAnimRig_DarkImp::ZombieAnimRig_DarkImp()
 ZombieAnimRig_DarkImp::~ZombieAnimRig_DarkImp()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_DarkImp);

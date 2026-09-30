@@ -12,3 +12,17 @@
 void CardObject::CancelUseCard()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(CardObject);
+
+void CardObject::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(CardObject);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GameObject);
+
+	REFLECTION_CLASSBUILDER_END(CardObject);
+}

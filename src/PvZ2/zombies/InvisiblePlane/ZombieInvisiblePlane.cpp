@@ -37,3 +37,13 @@ bool ZombieInvisiblePlane::canTargetEntityHeight(BoardEntityHeight i_arg)
 {
 	return true;
 }
+
+bool ZombieInvisiblePlane::allowAshState() const
+{
+	return false;
+}
+
+bool ZombieInvisiblePlane::allowElectrocuteState() const
+{
+	return false;
+}

@@ -16,3 +16,7 @@ ZombieAnimRig_Archmage::ZombieAnimRig_Archmage()
 ZombieAnimRig_Archmage::~ZombieAnimRig_Archmage()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_Archmage);

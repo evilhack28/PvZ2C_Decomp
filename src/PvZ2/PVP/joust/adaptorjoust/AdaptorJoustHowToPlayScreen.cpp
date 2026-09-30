@@ -12,3 +12,17 @@
 void AdaptorJoustHowToPlayScreen::onLayoutFinished()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(AdaptorJoustHowToPlayScreen);
+
+void AdaptorJoustHowToPlayScreen::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(AdaptorJoustHowToPlayScreen);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(HotUIAdaptor);
+
+	REFLECTION_CLASSBUILDER_END(AdaptorJoustHowToPlayScreen);
+}

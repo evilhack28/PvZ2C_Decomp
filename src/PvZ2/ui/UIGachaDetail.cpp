@@ -12,3 +12,10 @@
 void UIGachaDetail::loadWithNetMessage()
 {
 }
+
+UIGachaDetail::UIGachaDetail()
+{
+	m_chestIndex = 0;
+	m_bIsInfoMode = 0;
+	m_bIsPlantMode = 1;
+}

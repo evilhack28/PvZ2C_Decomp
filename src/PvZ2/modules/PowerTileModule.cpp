@@ -20,3 +20,7 @@ PowerTileModule::~PowerTileModule()
 void PowerTileModule::initializeModule()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PowerTileModule);

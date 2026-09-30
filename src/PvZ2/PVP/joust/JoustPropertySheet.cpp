@@ -12,3 +12,25 @@
 JoustPropertySheet::~JoustPropertySheet()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(JoustPropertySheet);
+
+void JoustPropertySheet::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PredefinedLoadoutEntry);
+		REFLECTION_CLASSBUILDER_FIELD(std::string, PlantType);
+		REFLECTION_CLASSBUILDER_FIELD(int, PlantLevel);
+		REFLECTION_CLASSBUILDER_FIELD(bool, IsImitater);
+	REFLECTION_CLASSBUILDER_END(PredefinedLoadoutEntry);
+
+	REFLECTION_CLASSBUILDER_BEGIN(JoustPropertySheet);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(PropertySheetBase);
+
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<std::vector<PredefinedLoadoutEntry>>, PredefinedLoadouts);
+		REFLECTION_CLASSBUILDER_FIELD(JoustHowToPlayScreenData, HowToPlayData);
+	REFLECTION_CLASSBUILDER_END(JoustPropertySheet);
+}

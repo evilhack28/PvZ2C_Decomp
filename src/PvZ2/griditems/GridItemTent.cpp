@@ -60,3 +60,8 @@ void GridItemTentProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(int, ZombieSpawnPointOffset);
 	REFLECTION_CLASSBUILDER_END(GridItemTentProps);
 }
+
+PlantingReason GridItemTent::GetCantPlantReason() const
+{
+	return (PlantingReason)23;
+}

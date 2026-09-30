@@ -36,3 +36,43 @@ void DinosaurDangerModule::GameplayStarted()
 void DinosaurDangerModule::OnErrorOK()
 {
 }
+
+DinosaurDangerModule::DinosaurDangerModule()
+{
+	mSmallDropCount = 0;
+	mBigDropCount = 0;
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(DinosaurDangerModule);
+
+void DinosaurDangerModule::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(DinosaurDangerModule);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(LevelModule);
+
+	REFLECTION_CLASSBUILDER_END(DinosaurDangerModule);
+}
+
+void DinosaurDangerModule::OnContinue(TimeChallengeEndLevelUI* i_arg)
+{
+}
+
+void DinosaurDangerModule::OnPlantAdded(class Plant* i_arg)
+{
+}
+
+void DinosaurDangerModule::OnRequestDinosaurDangerEnd(int i_arg)
+{
+}
+
+void DinosaurDangerModule::Draw(Graphics* i_arg)
+{
+}
+
+void DinosaurDangerModule::Update()
+{
+}

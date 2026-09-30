@@ -12,3 +12,12 @@
 JoustPlantPowerConfig::~JoustPlantPowerConfig()
 {
 }
+
+JoustPlantPowerConfig::JoustPlantPowerConfig()
+{
+	m_inited = 0;
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(JoustPlantPowerConfig);

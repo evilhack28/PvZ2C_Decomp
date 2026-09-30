@@ -16,3 +16,7 @@ PlantAnimRig_Turnip::PlantAnimRig_Turnip()
 PlantAnimRig_Turnip::~PlantAnimRig_Turnip()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_Turnip);

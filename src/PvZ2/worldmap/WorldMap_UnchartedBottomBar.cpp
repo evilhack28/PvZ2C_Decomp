@@ -12,3 +12,21 @@
 void WorldMap_UnchartedBottomBar::onUpdate()
 {
 }
+
+WorldMap_UnchartedBottomBar::~WorldMap_UnchartedBottomBar()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_UnchartedBottomBar);
+
+void WorldMap_UnchartedBottomBar::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_UnchartedBottomBar);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_UnchartedBottomBar);
+}

@@ -12,3 +12,7 @@
 RewardUI::~RewardUI()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(RewardUI);

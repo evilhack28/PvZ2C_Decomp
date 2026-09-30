@@ -16,3 +16,7 @@ PlantCherryBomb::PlantCherryBomb()
 PlantCherryBomb::~PlantCherryBomb()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantCherryBomb);

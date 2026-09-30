@@ -12,3 +12,17 @@
 void ZMatchTicketBank::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZMatchTicketBank);
+
+void ZMatchTicketBank::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ZMatchTicketBank);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(ZMatchTicketBank);
+}

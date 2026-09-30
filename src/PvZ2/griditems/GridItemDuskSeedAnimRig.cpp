@@ -16,3 +16,7 @@ GridItemDuskSeedAnimRig::GridItemDuskSeedAnimRig()
 GridItemDuskSeedAnimRig::~GridItemDuskSeedAnimRig()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GridItemDuskSeedAnimRig);

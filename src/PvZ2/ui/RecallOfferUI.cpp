@@ -16,3 +16,7 @@ void RecallOfferUI::InitTestData()
 void RecallOfferUI::Update()
 {
 }
+
+void RecallOfferUI::ButtonPress(int i_arg)
+{
+}

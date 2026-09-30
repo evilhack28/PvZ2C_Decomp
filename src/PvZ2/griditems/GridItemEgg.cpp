@@ -44,3 +44,8 @@ void GridItemEggProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, FlyDuration);
 	REFLECTION_CLASSBUILDER_END(GridItemEggProps);
 }
+
+PlantingReason GridItemEgg::GetCantPlantReason() const
+{
+	return (PlantingReason)87;
+}

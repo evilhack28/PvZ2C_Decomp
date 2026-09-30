@@ -28,3 +28,8 @@ void GridItemRunningSubwayObstacle::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemRunningSubwayObstacle);
 }
+
+GridItemRunningSubwayObstacle::GridItemRunningSubwayObstacle()
+{
+	m_hasHitted = 0;
+}

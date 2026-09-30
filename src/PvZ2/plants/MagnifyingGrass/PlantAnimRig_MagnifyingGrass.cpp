@@ -16,3 +16,7 @@ PlantAnimRig_MagnifyingGrass::PlantAnimRig_MagnifyingGrass()
 PlantAnimRig_MagnifyingGrass::~PlantAnimRig_MagnifyingGrass()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_MagnifyingGrass);

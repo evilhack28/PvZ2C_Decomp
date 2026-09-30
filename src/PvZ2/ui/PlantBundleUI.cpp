@@ -12,3 +12,7 @@
 void PlantBundleUI::Update()
 {
 }
+
+void PlantBundleUI::ButtonPress(int i_arg)
+{
+}

@@ -16,3 +16,7 @@ PlantAnimRig_ByttneriaMeteorHammer::PlantAnimRig_ByttneriaMeteorHammer()
 PlantAnimRig_ByttneriaMeteorHammer::~PlantAnimRig_ByttneriaMeteorHammer()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_ByttneriaMeteorHammer);

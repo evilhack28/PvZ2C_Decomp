@@ -12,3 +12,8 @@
 void AssetsManagerEx::ContentDownloaderFinished()
 {
 }
+
+bool AssetsManagerEx::decompress(const std::string & i_arg)
+{
+	return false;
+}

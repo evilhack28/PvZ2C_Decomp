@@ -58,3 +58,24 @@ void GridItemMazeStatue::onNotifyStatueBreak()
 {
 	 GridItemMazeStatue::BreakStatue();
 }
+
+#include "GridItemBoardEntityConditionTarget.h"
+bool GridItemMazeStatue::IsControlled() const
+{
+	return GridItemBoardEntityConditionTarget::IsControlled();
+}
+
+bool GridItemMazeStatue::IsDamageable() const
+{
+	return false;
+}
+
+bool GridItemMazeStatue::CanBeTargetedBy(const BoardEntity* i_arg) const
+{
+	return false;
+}
+
+bool GridItemMazeStatue::CollidesWithType(const CollisionTypeFlags i_arg) const
+{
+	return false;
+}

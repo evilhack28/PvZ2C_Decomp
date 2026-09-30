@@ -26,3 +26,14 @@ void PlantAnimRig_Beercoconut::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_Beercoconut);
 }
+
+PlantAnimRig_Beercoconut::PlantAnimRig_Beercoconut()
+{
+	m_isLevel5 = 0;
+}
+
+std::string PlantAnimRig_Beercoconut::getPlantFoodMainAnimName()
+{
+	return m_bAvatar ? "plantfood2" : "plantfood";
+}
+

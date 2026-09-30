@@ -34,3 +34,8 @@ void PauseButton::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PauseButton);
 }
+
+PauseButton::PauseButton()
+{
+	m_gameIsPaused = 0;
+}

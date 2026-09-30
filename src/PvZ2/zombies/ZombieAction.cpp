@@ -28,3 +28,8 @@ void ZombieActionHandler::StaticClassInit()
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ZombieActionDefinition);
+
+bool ZombieActionDefinition::TryStartAction(ZombieActionDefinitionPtr i_arg0, class ZombieWithActions* i_arg1) const
+{
+	return false;
+}

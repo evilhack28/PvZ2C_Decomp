@@ -16,3 +16,13 @@ PlantAnimRig_PlantPassion::PlantAnimRig_PlantPassion()
 PlantAnimRig_PlantPassion::~PlantAnimRig_PlantPassion()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_PlantPassion);
+
+std::string PlantAnimRig_PlantPassion::getPlantFoodMainAnimName()
+{
+	return m_bAvatar ? "plantfood2" : "plantfood";
+}
+

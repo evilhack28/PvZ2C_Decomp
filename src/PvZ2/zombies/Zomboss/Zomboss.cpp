@@ -31,3 +31,13 @@ RT_CLASS_IMPLEMENT(Zomboss);
 void Zomboss::chooseDeathState(const DamageInfo& i_arg)
 {
 }
+
+bool Zomboss::CanBeMowed() const
+{
+	return false;
+}
+
+bool Zomboss::CanBeFlickedOff() const
+{
+	return false;
+}

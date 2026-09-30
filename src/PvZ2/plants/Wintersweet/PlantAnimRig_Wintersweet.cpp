@@ -16,3 +16,7 @@ PlantAnimRig_Wintersweet::PlantAnimRig_Wintersweet()
 PlantAnimRig_Wintersweet::~PlantAnimRig_Wintersweet()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_Wintersweet);

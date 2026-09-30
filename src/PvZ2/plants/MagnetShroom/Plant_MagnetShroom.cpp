@@ -31,3 +31,8 @@ void PlantMagnetShroom::onKilled(bool i_arg)
 {
 	 PlantMagnetShroom::DropAllPulledEntities();
 }
+
+bool PlantMagnetShroom::canPullZombie(Zombie* i_arg) const
+{
+	return false;
+}

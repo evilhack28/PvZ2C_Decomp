@@ -16,3 +16,7 @@ ZombieAnimRig_PVPNurse::ZombieAnimRig_PVPNurse()
 ZombieAnimRig_PVPNurse::~ZombieAnimRig_PVPNurse()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_PVPNurse);

@@ -20,3 +20,42 @@ void GridItemGourdFire::onUpdate()
 void GridItemGourdFire::spawnDirt()
 {
 }
+
+GridItemGourdFire::GridItemGourdFire()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GridItemGourdFire);
+
+void GridItemGourdFire::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(GridItemGourdFire);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GridItem);
+
+		REFLECTION_CLASSBUILDER_FIELD(bool, m_dirtEffectSpawned);
+	REFLECTION_CLASSBUILDER_END(GridItemGourdFire);
+}
+
+void GridItemGourdFire::onDraw(Sexy::Graphics* i_arg)
+{
+}
+
+#include "GameObject.h"
+void GridItemGourdFire::Destroy()
+{
+	 GameObject::Destroy();
+}
+
+bool GridItemGourdFire::CanBeTargetedBy(const BoardEntity* i_arg) const
+{
+	return false;
+}
+
+bool GridItemGourdFire::CollidesWithType(CollisionTypeFlags i_arg) const
+{
+	return false;
+}

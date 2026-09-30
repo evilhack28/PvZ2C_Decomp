@@ -54,3 +54,8 @@ bool GridItemSummerFireworks::OverrideProjectileCollision(Projectile* i_arg)
 {
 	return false;
 }
+
+bool GridItemSummerFireworks::CollidesWithType(const CollisionTypeFlags i_arg) const
+{
+	return true;
+}

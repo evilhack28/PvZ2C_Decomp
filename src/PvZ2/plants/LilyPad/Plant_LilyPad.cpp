@@ -38,3 +38,7 @@ void PlantLilyPad::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantLilyPad);
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantTypeLilyPad);

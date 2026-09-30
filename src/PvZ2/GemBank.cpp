@@ -12,3 +12,17 @@
 void GemBank::initLoadingResourcesGroupList()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GemBank);
+
+void GemBank::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(GemBank);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(GemBank);
+}

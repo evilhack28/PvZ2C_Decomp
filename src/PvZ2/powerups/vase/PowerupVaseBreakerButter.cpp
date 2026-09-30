@@ -16,3 +16,7 @@ PowerupVaseBreakerButter::PowerupVaseBreakerButter()
 PowerupVaseBreakerButter::~PowerupVaseBreakerButter()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PowerupVaseBreakerButter);

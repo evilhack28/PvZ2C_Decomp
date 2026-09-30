@@ -62,3 +62,8 @@ void IntroCinemaProperties::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(IntroCinemaProperties);
 }
+
+bool IntroCinema::manualIntroStart() const
+{
+	return true;
+}

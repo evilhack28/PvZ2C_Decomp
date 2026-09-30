@@ -24,3 +24,11 @@ VaseBreakerArcadeModuleProperties::VaseBreakerArcadeModuleProperties()
 VaseBreakerArcadeModuleProperties::~VaseBreakerArcadeModuleProperties()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(VaseBreakerArcadeModule);
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(VaseBreakerArcadeModuleProperties);

@@ -26,3 +26,9 @@ void GridItemBarrelAnimRig::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemBarrelAnimRig);
 }
+
+void GridItemBarrelAnimRig::PlayRoll()
+{
+	PlayAndContinue("roll");
+}
+

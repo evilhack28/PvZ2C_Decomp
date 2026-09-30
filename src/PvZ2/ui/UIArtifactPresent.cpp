@@ -12,3 +12,9 @@
 UIArtifactPresent::~UIArtifactPresent()
 {
 }
+
+void UIArtifactPresent::Draw(Sexy::Graphics* i_g)
+{
+	base_type::Draw(i_g);
+}
+

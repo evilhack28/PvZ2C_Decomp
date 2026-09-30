@@ -28,3 +28,8 @@ void PlantAnimRig_RoseSwordman::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_RoseSwordman);
 }
+
+PlantAnimRig_RoseSwordman::PlantAnimRig_RoseSwordman()
+{
+	m_showSword = 0;
+}

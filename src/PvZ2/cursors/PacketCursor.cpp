@@ -12,3 +12,7 @@
 PacketCursor::~PacketCursor()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PacketCursor);

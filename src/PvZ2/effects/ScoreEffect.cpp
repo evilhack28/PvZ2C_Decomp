@@ -12,3 +12,29 @@
 void ScoreEffect::onDestroy()
 {
 }
+
+ScoreEffect::~ScoreEffect()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ScoreEffect);
+
+void ScoreEffect::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ScoreEffect);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(BoardEntity);
+
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<RtWeakPtr<Image>>, m_ImageList);
+		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, m_startTime);
+		REFLECTION_CLASSBUILDER_FIELD(float, m_fScale);
+	REFLECTION_CLASSBUILDER_END(ScoreEffect);
+}
+
+bool ScoreEffect::ShouldDrawShadow() const
+{
+	return false;
+}

@@ -25,3 +25,25 @@ void WorldMap_TurnChangeButton::onWorldLoadedReal()
 void WorldMap_TurnChangeButton::onNotifyBackFromRiftReal()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_TurnChangeButton);
+
+void WorldMap_TurnChangeButton::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_TurnChangeButton);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIEasyButtonWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_TurnChangeButton);
+}
+
+void WorldMap_TurnChangeButton::onNotifyRefreshActivityListReal(bool i_arg0, const std::set<int>& i_arg1)
+{
+}
+
+void WorldMap_TurnChangeButton::onUpdate()
+{
+}

@@ -12,3 +12,12 @@
 void PVPSeedBankModule::createSeedBank()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PVPSeedBankModule);
+
+bool PVPSeedBankModule::UsesSeedChooser() const
+{
+	return false;
+}

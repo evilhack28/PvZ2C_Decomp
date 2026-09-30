@@ -16,3 +16,7 @@ PlantAnimRig_PumpkinWitch::PlantAnimRig_PumpkinWitch()
 PlantAnimRig_PumpkinWitch::~PlantAnimRig_PumpkinWitch()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_PumpkinWitch);

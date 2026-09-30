@@ -12,3 +12,36 @@
 void CannonRocket::onDestroy()
 {
 }
+
+CannonRocket::CannonRocket()
+{
+}
+
+CannonRocket::~CannonRocket()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(CannonRocket);
+
+void CannonRocket::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(CannonRocket);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(BoardEntity);
+
+		REFLECTION_CLASSBUILDER_FIELD(Point, m_targetBoardPixel);
+		REFLECTION_CLASSBUILDER_FIELD(float, m_damageAmount);
+	REFLECTION_CLASSBUILDER_END(CannonRocket);
+}
+
+void CannonRocket::onUpdate()
+{
+}
+
+bool CannonRocket::ShouldDrawShadow() const
+{
+	return false;
+}

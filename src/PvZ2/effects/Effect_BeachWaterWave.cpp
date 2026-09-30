@@ -28,3 +28,10 @@ void Effect_BeachWaterWave::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(Effect_BeachWaterWave);
 }
+
+Effect_BeachWaterWave::Effect_BeachWaterWave()
+{
+	m_bNeedFade = 0;
+	m_bFadeOut = 0;
+	m_tChangerColorStarTime = PVZ_EOT();
+}

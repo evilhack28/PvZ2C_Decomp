@@ -40,3 +40,7 @@ const std::vector<std::string>& ZombieAnimRig_BeachFlag::getNoFlagHandLayerNames
 {
 	return ZombieAnimRig_Basic::getEmptyLayerNames();
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_BeachFlag);

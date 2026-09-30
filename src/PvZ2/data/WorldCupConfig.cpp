@@ -12,3 +12,12 @@
 WorldCupConfig::~WorldCupConfig()
 {
 }
+
+WorldCupConfig::WorldCupConfig()
+{
+	m_inited = 0;
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldCupConfig);

@@ -12,3 +12,41 @@
 void Creature::updateOverlayEffects()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(Creature);
+
+void Creature::registerForEvents()
+{
+}
+
+#include "Creature.h"
+void Creature::onIdleAnimationCycle(const std::string& i_arg0, const std::string& i_arg1, int i_arg2)
+{
+	 Creature::playIdleSound();
+}
+
+#include "Creature.h"
+void Creature::onWalkAnimationCycle(const std::string& i_arg0, const std::string& i_arg1, int i_arg2)
+{
+	 Creature::playWalkSound();
+}
+
+#include "Creature.h"
+void Creature::forceApplyConditionEffects()
+{
+	 Creature::updateSpeed();
+}
+
+#include "Creature.h"
+void Creature::onDestroy()
+{
+	 Creature::ClearConditions();
+}
+
+#include "RealObject.h"
+bool Creature::ShouldDrawShadow() const
+{
+	return RealObject::ShouldDrawShadow();
+}

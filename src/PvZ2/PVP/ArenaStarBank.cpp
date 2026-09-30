@@ -16,3 +16,22 @@ void ArenaStarBank::unregisterForEvents()
 void ArenaStarBank::initLoadingResourcesGroupList()
 {
 }
+
+ArenaStarBank::ArenaStarBank()
+{
+	m_starNum = 0;
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ArenaStarBank);
+
+void ArenaStarBank::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ArenaStarBank);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(ArenaStarBank);
+}

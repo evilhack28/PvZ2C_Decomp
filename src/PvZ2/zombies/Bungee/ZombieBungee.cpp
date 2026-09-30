@@ -12,3 +12,8 @@
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ZombieBungee);
+
+bool ZombieBungee::hasArmParticle() const
+{
+	return false;
+}

@@ -12,3 +12,7 @@
 SexyURL::~SexyURL()
 {
 }
+
+const std::string& SexyURL::AbsoluteString() const
+{
+}

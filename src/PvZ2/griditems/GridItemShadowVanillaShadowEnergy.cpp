@@ -34,3 +34,19 @@ void GridItemShadowVanillaShadowEnergy::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemShadowVanillaShadowEnergy);
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(GridItemShadowVanillaShadowEnergyProps);
+
+void GridItemShadowVanillaShadowEnergyProps::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(GridItemShadowVanillaShadowEnergyProps);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GridItemAnimationProps);
+
+		REFLECTION_CLASSBUILDER_FIELD(int, Damage);
+		REFLECTION_CLASSBUILDER_FIELD(float, Duration);
+	REFLECTION_CLASSBUILDER_END(GridItemShadowVanillaShadowEnergyProps);
+}

@@ -28,3 +28,8 @@ void ZombieAnimRig_StrongBronze::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_StrongBronze);
 }
+
+ZombieAnimRig_StrongBronze::ZombieAnimRig_StrongBronze()
+{
+	m_bCrazy = 0;
+}

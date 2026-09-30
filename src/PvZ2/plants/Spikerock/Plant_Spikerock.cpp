@@ -16,3 +16,7 @@ PlantSpikerock::PlantSpikerock()
 PlantSpikerock::~PlantSpikerock()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantSpikerock);

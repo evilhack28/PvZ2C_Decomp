@@ -12,3 +12,23 @@
 void StarvingChomper::registerForEvents()
 {
 }
+
+StarvingChomper::~StarvingChomper()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(StarvingChomper);
+
+#include "BoardEntity.h"
+void StarvingChomper::onInitialized()
+{
+	 BoardEntity::onInitialized();
+}
+
+#include "StarvingChomper.h"
+void StarvingChomper::onUpdate()
+{
+	 StarvingChomper::Update();
+}

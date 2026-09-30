@@ -47,3 +47,8 @@ void GridItemVaseProps::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemVaseProps);
 }
+
+bool GridItemVase::ShouldClipWithWater() const
+{
+	return true;
+}

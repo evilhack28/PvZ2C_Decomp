@@ -44,3 +44,15 @@ void GridItemCrater::onGridItemInitialize()
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(GridItemCraterProps);
+
+void GridItemCraterProps::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(GridItemCraterProps);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GridItemAnimationProps);
+
+		REFLECTION_CLASSBUILDER_FIELD(std::string, PopAnim);
+		REFLECTION_CLASSBUILDER_FIELD(SexyVector2, PopAnimRenderOffset);
+	REFLECTION_CLASSBUILDER_END(GridItemCraterProps);
+}

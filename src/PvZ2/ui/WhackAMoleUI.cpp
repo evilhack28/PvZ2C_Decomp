@@ -16,3 +16,36 @@ void WhackAMoleUI::registerForEvents()
 void WhackAMoleUI::onUpdate()
 {
 }
+
+WhackAMoleUI::~WhackAMoleUI()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WhackAMoleUI);
+
+void WhackAMoleUI::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WhackAMoleUI);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+		REFLECTION_CLASSBUILDER_FIELD(float, m_timeRemaining);
+	REFLECTION_CLASSBUILDER_END(WhackAMoleUI);
+}
+
+void WhackAMoleUI::onInitialized()
+{
+}
+
+void WhackAMoleUI::onOakArrowHitted(const int i_arg0, const int i_arg1)
+{
+}
+
+#include "UIWidget.h"
+void WhackAMoleUI::onDestroy()
+{
+	 UIWidget::onDestroy();
+}

@@ -16,3 +16,7 @@ HardLevelConfig::HardLevelConfig()
 HardLevelConfig::~HardLevelConfig()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(HardLevelConfig);

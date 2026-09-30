@@ -35,3 +35,30 @@ void ZombieShooter::onZombieInitialize()
 {
 	 Zombie::onZombieInitialize();
 }
+
+ZombieShooter::ZombieShooter()
+{
+}
+
+ZombieShooter::~ZombieShooter()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ZombieShooter);
+
+void ZombieShooter::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ZombieShooter);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(Zombie);
+
+	REFLECTION_CLASSBUILDER_END(ZombieShooter);
+}
+
+bool ZombieShooter::hasHeadParticle() const
+{
+	return false;
+}

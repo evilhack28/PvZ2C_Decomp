@@ -12,3 +12,7 @@
 void ActiveNationalDayTab::CreateBuyButton()
 {
 }
+
+ActiveNationalDayTab::~ActiveNationalDayTab()
+{
+}

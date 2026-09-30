@@ -12,3 +12,27 @@
 void WorldMap_AcFirstRechargeButton::BackToMap()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(WorldMap_AcFirstRechargeButton);
+
+void WorldMap_AcFirstRechargeButton::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(WorldMap_AcFirstRechargeButton);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIEasyButtonWidget);
+
+	REFLECTION_CLASSBUILDER_END(WorldMap_AcFirstRechargeButton);
+}
+
+#include "WorldMap_AcFirstRechargeButton.h"
+void WorldMap_AcFirstRechargeButton::onWorldLoaded()
+{
+	 WorldMap_AcFirstRechargeButton::CheckActivated();
+}
+
+void WorldMap_AcFirstRechargeButton::OnNotyFirstRechargeSuc(bool i_arg)
+{
+}

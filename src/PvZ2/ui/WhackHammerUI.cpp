@@ -36,3 +36,8 @@ void WhackHammerUI::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(WhackHammerUI);
 }
+
+WhackHammerUI::WhackHammerUI()
+{
+	m_levelEnded = 0;
+}

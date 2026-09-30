@@ -12,3 +12,7 @@
 ArtifactBoostPropertySheet::~ArtifactBoostPropertySheet()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(ArtifactBoostPropertySheet);

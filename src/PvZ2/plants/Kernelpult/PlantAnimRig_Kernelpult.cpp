@@ -21,3 +21,7 @@ PlantAnimRig_Kernelpult::PlantAnimRig_Kernelpult()
 PlantAnimRig_Kernelpult::~PlantAnimRig_Kernelpult()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_Kernelpult);

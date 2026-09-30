@@ -13,3 +13,11 @@ bool ToadstoolGas::OnCollideGround()
 {
 	return false;
 }
+
+ToadstoolGas::ToadstoolGas()
+{
+}
+
+ToadstoolGas::~ToadstoolGas()
+{
+}

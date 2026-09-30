@@ -16,3 +16,7 @@ PlantAnimRig_Torchwood::PlantAnimRig_Torchwood()
 PlantAnimRig_Torchwood::~PlantAnimRig_Torchwood()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PlantAnimRig_Torchwood);

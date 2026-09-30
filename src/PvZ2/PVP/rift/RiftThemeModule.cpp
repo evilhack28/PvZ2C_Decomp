@@ -44,3 +44,24 @@ void RiftThemeModule::onInit()
 {
 	 RiftThemeModule::initializeThemes();
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(RiftThemeModuleProperties);
+
+void RiftThemeModuleProperties::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ThemeDisabledInfo);
+		REFLECTION_CLASSBUILDER_FIELD(ThemeType, Type);
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<std::string>, LevelBlacklist);
+	REFLECTION_CLASSBUILDER_END(ThemeDisabledInfo);
+
+	REFLECTION_CLASSBUILDER_BEGIN(RiftThemeModuleProperties);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(LevelModuleProperties);
+
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<std::string>, LevelBlacklist);
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<ThemeDisabledInfo>, ThemeDisabledInfos);
+	REFLECTION_CLASSBUILDER_END(RiftThemeModuleProperties);
+}

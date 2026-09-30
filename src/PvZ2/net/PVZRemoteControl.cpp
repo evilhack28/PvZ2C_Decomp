@@ -12,3 +12,25 @@
 void PVZRemoteControl::Play()
 {
 }
+
+PVZRemoteControl::PVZRemoteControl()
+{
+}
+
+PVZRemoteControl::~PVZRemoteControl()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(PVZRemoteControl);
+
+void PVZRemoteControl::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PVZRemoteControl);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(RtObject);
+
+	REFLECTION_CLASSBUILDER_END(PVZRemoteControl);
+}

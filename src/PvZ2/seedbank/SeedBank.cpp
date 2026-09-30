@@ -12,3 +12,7 @@
 SeedBankProperties::~SeedBankProperties()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(SeedBankProperties);

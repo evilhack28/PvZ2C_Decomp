@@ -50,3 +50,8 @@ void GridItemAcidProps::StaticClassInit()
 void GridItemAcid::ResetTimer()
 {
 }
+
+PlantingReason GridItemAcid::GetCantPlantReason() const
+{
+	return (PlantingReason)75;
+}

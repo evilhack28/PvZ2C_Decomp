@@ -12,3 +12,23 @@
 void LevelEditorStatueMaze::Reload()
 {
 }
+
+LevelEditorStatueMaze::LevelEditorStatueMaze()
+{
+}
+
+void LevelEditorStatueMaze::ChangeBoardStage(const std::string& i_arg)
+{
+}
+
+#include "Widget.h"
+void LevelEditorStatueMaze::Update()
+{
+	 Widget::Update();
+}
+
+void LevelEditorStatueMaze::Draw(Sexy::Graphics* i_g)
+{
+	base_type::Draw(i_g);
+}
+

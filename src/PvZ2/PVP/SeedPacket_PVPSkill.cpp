@@ -12,3 +12,37 @@
 void SeedPacket_PVPSkill::initLoadingResourcesGroupList()
 {
 }
+
+SeedPacket_PVPSkill::~SeedPacket_PVPSkill()
+{
+}
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(SeedPacket_PVPSkill);
+
+void SeedPacket_PVPSkill::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(SeedPacket_PVPSkill);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(SeedPacket);
+
+	REFLECTION_CLASSBUILDER_END(SeedPacket_PVPSkill);
+}
+
+void SeedPacket_PVPSkill::onSunClicked(class CollectableSun* i_arg0, SunCurrency i_arg1)
+{
+}
+
+void SeedPacket_PVPSkill::onCursorDestroyed(class BaseCursor* i_arg)
+{
+}
+
+void SeedPacket_PVPSkill::onSeedPacketPlanted(SeedPacket* i_arg)
+{
+}
+
+void SeedPacket_PVPSkill::onSunCurrencyChanged(SunCurrency i_arg)
+{
+}

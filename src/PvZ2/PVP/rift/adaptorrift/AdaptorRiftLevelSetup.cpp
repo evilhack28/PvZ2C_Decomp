@@ -12,3 +12,29 @@
 void AdaptorRiftLevelSetup::onLayoutFinished()
 {
 }
+
+#include "ReflectionBuilder.h"
+
+RT_CLASS_IMPLEMENT(AdaptorRiftLevelSetup);
+
+void AdaptorRiftLevelSetup::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(AdaptorRiftLevelSetup);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(HotUIAdaptor);
+
+	REFLECTION_CLASSBUILDER_END(AdaptorRiftLevelSetup);
+}
+
+#include "HotUIAdaptor.h"
+void AdaptorRiftLevelSetup::closeDialog()
+{
+	 HotUIAdaptor::RemoveAndDeleteWidget();
+}
+
+#include "AdaptorRiftLevelSetup.h"
+void AdaptorRiftLevelSetup::onSuccessResponse()
+{
+	 AdaptorRiftLevelSetup::startLevel();
+}
