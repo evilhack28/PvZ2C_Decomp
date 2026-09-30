@@ -26,3 +26,15 @@ void ChallengeSunCounterUI::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ChallengeSunCounterUI);
 }
+
+void ChallengeSunCounterUI::SetCount(int i_arg)
+{
+	m_count = i_arg;
+}
+
+
+void ChallengeSunCounterUI::SetTarget(int i_arg)
+{
+	m_target = i_arg;
+}
+
