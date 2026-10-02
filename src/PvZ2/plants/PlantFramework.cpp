@@ -550,6 +550,20 @@ int PlantFramework::damageEntities(DamageInfo& i_damage, BoardEntityTypeFlag i_a
 	return damagedCount;
 }
 
+ZombiePtr PlantFramework::FindTargetZombie(PlantWeapon i_plantWeapon)
+{
+	PlantTargetParams targetParams = GetTargetParamsForWeapon(i_plantWeapon);
+
+	return FindTargetZombie(i_plantWeapon, targetParams);
+}
+
+ZombiePtr PlantFramework::FindTargetZombie(PlantWeapon i_plantWeapon, PlantTargetParams& i_targetParams)
+{
+	Rect targetRect = GetPlantAttackGridRect(i_plantWeapon);
+
+	return FindTargetZombie(targetRect, i_plantWeapon, i_targetParams);
+}
+
 ZombiePtr PlantFramework::FindTargetZombie(Rect& i_region, PlantWeapon i_plantWeapon, PlantTargetParams& i_targetParams)
 {
 	ZombiePtr bestZombie(NULL);
@@ -716,11 +730,11 @@ Rect PlantFramework::GetPlantAttackRect(PlantWeapon i_plantWeapon)
 			{
 				int rectTop = (int)(action.RectTriggerRange.mY + m_plant->GetPosition().y - roofOffset);
 				Rect gridRect = BoardTransforms::GridToBoardSpaceRect(m_plant->CalcColumnPosition(), m_plant->CalcRowPosition(), 1, 1);
-
-				attackRect.mY = std::max(rectTop, gridRect.mY);
+				int top = std::max(rectTop, gridRect.mY);
 				attackRect.mX = (int)(action.RectTriggerRange.mX + m_plant->GetPosition().x);
 				attackRect.mWidth = (int)(plantScale * action.RectTriggerRange.mWidth);
 				attackRect.mHeight = (int)(plantScale * action.RectTriggerRange.mHeight);
+				attackRect.mY = top;
 			}
 			else
 			{
@@ -732,8 +746,8 @@ Rect PlantFramework::GetPlantAttackRect(PlantWeapon i_plantWeapon)
 		}
 		else if (action.TriggerType == PLANT_ACTION_TRIGGER_GRID_RECT)
 		{
-			attackRect.mX = (int)(plantScale * action.RectTriggerRange.mX * BoardConstants::GRIDSQUARE_WIDTH() + m_plant->GetPosition().x);
-			attackRect.mY = (int)(plantScale * action.RectTriggerRange.mY * BoardConstants::GRIDSQUARE_HEIGHT() + (m_plant->GetPosition().y - roofOffset));
+			attackRect.mX = (int)(m_plant->GetPosition().x + plantScale * action.RectTriggerRange.mX * BoardConstants::GRIDSQUARE_WIDTH());
+			attackRect.mY = (int)((m_plant->GetPosition().y - roofOffset) + plantScale * action.RectTriggerRange.mY * BoardConstants::GRIDSQUARE_HEIGHT());
 			attackRect.mWidth = (int)(plantScale * action.RectTriggerRange.mWidth * BoardConstants::GRIDSQUARE_WIDTH());
 			attackRect.mHeight = (int)(plantScale * action.RectTriggerRange.mHeight * BoardConstants::GRIDSQUARE_HEIGHT());
 		}
@@ -749,8 +763,9 @@ Rect PlantFramework::GetPlantAttackRect(PlantWeapon i_plantWeapon)
 			attackRect.mX = 0;
 			attackRect.mY = BoardTransforms::BoardSpaceToGridY(m_plant->GetPosition().y);
 			attackRect.mWidth = 800;
-			attackRect.mHeight = BoardConstants::GRIDSQUARE_HEIGHT();
+			int h = BoardConstants::GRIDSQUARE_HEIGHT();
 			attackRect.mY = attackRect.mY * BoardConstants::GRIDSQUARE_HEIGHT() + 160;
+			attackRect.mHeight = h;
 		}
 		else if (action.TriggerType == PLANT_ACTION_TRIGGER_ENTIRE_BOARD)
 		{

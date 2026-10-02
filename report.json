@@ -1,17 +1,17 @@
 {
-  "generated": "2026-10-02T14:38:47+00:00",
+  "generated": "2026-10-02T15:21:31+00:00",
   "measures": {
     "total_functions": 84600,
-    "matched_functions": 25370,
+    "matched_functions": 25372,
     "matched_functions_percent": 29.99,
     "total_code": 12533448,
-    "matched_code": 1491176,
+    "matched_code": 1491444,
     "matched_code_percent": 11.9,
-    "fuzzy_match_percent": 12.41,
+    "fuzzy_match_percent": 12.42,
     "started_units": 2167,
     "total_units": 2751,
     "started_code": 9962604,
-    "started_matched_code": 1491176,
+    "started_matched_code": 1491444,
     "started_percent": 14.97,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
@@ -215363,30 +215363,18 @@
     {
       "name": "src/PvZ2/plants/PlantFramework.cpp",
       "total_code": 14648,
-      "matched_code": 9164,
-      "matched_code_percent": 62.56,
+      "matched_code": 9432,
+      "matched_code_percent": 64.39,
       "total_functions": 181,
-      "matched_functions": 172,
-      "matched_functions_percent": 95.03,
-      "fuzzy_match_percent": 88.89,
+      "matched_functions": 174,
+      "matched_functions_percent": 96.13,
+      "fuzzy_match_percent": 91.59,
       "functions": [
-        {
-          "name": "PlantFramework::FindTargetZombie",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PlantFramework::FindTargetZombie",
-          "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "PlantFramework::GetPlantAttackRect",
           "size": 1092,
           "matched": false,
-          "fuzzy_match_percent": 86.5
+          "fuzzy_match_percent": 98.17
         },
         {
           "name": "PlantFramework::FindAllTargets",
@@ -215563,6 +215551,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PlantFramework::FindTargetZombie",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PlantFramework::GetFireSoundEvent",
           "size": 140,
           "matched": true,
@@ -215589,6 +215583,12 @@
         {
           "name": "PlantFramework::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantFramework::FindTargetZombie",
+          "size": 120,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
