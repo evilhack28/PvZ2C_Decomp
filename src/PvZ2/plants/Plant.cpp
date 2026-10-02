@@ -23,6 +23,7 @@
 #include "PlantFramework.h"
 #include "PlantGeneEnhancement.h"
 #include "PlantNewAvatar.h"
+#include "PennyPerkJuggled.h"
 #include "PlayerInfo.h"
 #include "ProfileMgr.h"
 #include "PVZ1ModeUtils.h"
@@ -382,6 +383,20 @@ void PlantType::StaticClassInit()
 
 }
 
+PlantType::PlantType()
+{
+	Enabled = true;
+	PlantPieceEnabled = true;
+	AvatarEnabled = true;
+	Avatars.clear();
+	Rare = 0;
+	ExchangeAvatarCost = 0;
+	ExchangeAvatarOpenFlag = true;
+	Profession = (PlantProfessions)-1;
+	eCurAvatar = (PlantAvatarType)-2;
+	DisplayFamilyId = -1;
+}
+
 const PlantPropertySheet* PlantType::GetProps() const
 {
 	return Properties.Get();
@@ -524,6 +539,26 @@ SkillPropertySheetPtr PlantType::GetCurrentLevelSkillType(int i_level, bool bIsP
 		ret = stat.AdvancedSkillType;
 
 	return ret;
+}
+
+bool PlantType::canGiveFirstAidToPlant(Plant* i_plant) const
+{
+	int damageStateCount = i_plant->GetAnimRig()->CalcDamageStateCount();
+	bool result;
+	if (!GetProps()->CanReceiveFirstAid || !gLawnApp->HasPlayerUnlockedFeature(FEATURE_UPGRADE_WALLNUT_FIRSTAID))
+	{
+		result = false;
+	}
+	else
+	{
+		result = false;
+		PlantTypePtr type = i_plant->GetType();
+		const PlantType* plantType = type;
+		if (plantType == this)
+			result = i_plant->m_PlantHealth < plantType->GetMaxHitpoints() * damageStateCount / (damageStateCount + 1);
+	}
+
+	return result;
 }
 
 bool PlantType::HasPlantAdventureFlag(std::string i_flag) const
@@ -692,15 +727,11 @@ void Plant::constructAndSetFrameworkFromType()
 
 void Plant::UpdateDamageStates()
 {
-	if (m_damageStates != 0)
+	int states = m_damageStates;
+	if (states != 0)
 	{
-		int chunk = 0;
-		if (m_damageStates + 1 != 0)
-			chunk = (int)GetMaxHealth() / (m_damageStates + 1);
-
-		int idx = 0;
-		if (chunk != 0)
-			idx = (int)m_PlantHealth / chunk;
+		int chunk = (int)GetMaxHealth() / (states + 1);
+		int idx = (int)m_PlantHealth / chunk;
 
 		int target = eastl::min_alt(eastl::max_alt(m_damageStates - idx, 0), m_damageStates);
 
@@ -717,12 +748,12 @@ void Plant::onPostLoad()
 {
 	BoardEntity::onPostLoad();
 
-	m_pCachedPlantPropertySheet = (PlantPropertySheet*)m_type->GetProps();
+	m_pCachedPlantPropertySheet = (PlantPropertySheet*)m_type.GetObject()->Cast<PlantType>()->GetProps();
 
 	if (m_shouldUseStarPFEffect)
-		m_pCachedEffectAnimRig_StarPlantFoodShine = m_starPlantFoodShine.Get();
+		m_pCachedEffectAnimRig_StarPlantFoodShine = m_starPlantFoodShine.GetObject()->Cast<EffectAnimRig_StarPlantFoodShine>();
 	else
-		m_pCachedEffectAnimRig_PlantFoodShine = m_plantFoodShine.Get();
+		m_pCachedEffectAnimRig_PlantFoodShine = m_plantFoodShine.GetObject()->Cast<EffectAnimRig_PlantFoodShine>();
 
 	PlantAnimRig* rig = GetAnimRig();
 	m_plantFramework->SetPopAnimDelegates(rig);
@@ -805,11 +836,11 @@ float Plant::updateRelocationPositionAndRotation()
 		float toY = m_curRelocationEvent.m_relocateToY;
 		float fromX = m_curRelocationEvent.m_relocateFromX;
 		float fromY = m_curRelocationEvent.m_relocateFromY;
-		float dx = toX - fromX;
 		float dy = toY - fromY;
-		RelocationEvent::RelocationType type = m_curRelocationEvent.m_relocationType;
+		float dx = toX - fromX;
 		float t = (PVZ_T() - m_curRelocationEvent.m_relocateStartTime)
 			/ (m_curRelocationEvent.m_relocateEndTime - m_curRelocationEvent.m_relocateStartTime);
+		RelocationEvent::RelocationType type = m_curRelocationEvent.m_relocationType;
 
 		if (type == RelocationEvent::RELOCATION_ABSORBED)
 		{
@@ -854,7 +885,6 @@ void Plant::SetIsSleepping(bool i_isSleepping, float durationTime)
 	if (m_attachedEffects.Contains("sleepping"))
 		m_attachedEffects.Remove("sleepping");
 
-	bool notify = false;
 	if (m_isSleepping)
 	{
 		if (!m_attachedEffects.Contains("sleepping"))
@@ -865,12 +895,11 @@ void Plant::SetIsSleepping(bool i_isSleepping, float durationTime)
 			effect.Attach(this, SexyVector3(0.0f, 0.0f, 0.0f), 1);
 		}
 
-		notify = m_isSleepping;
 		if (durationTime > 0.0f)
 			m_sleepingEndTime = PVZ_T() + durationTime;
 	}
 
-	m_plantFramework->onSleeped(notify);
+	m_plantFramework->onSleeped(m_isSleepping);
 }
 
 void Plant::GetFireOrigin(int& originX, int& originY)
@@ -1123,7 +1152,7 @@ void Plant::SendHelpToPlants(PlantHelpType i_helpType, Rect& i_gridAreaToHelp, i
 
 	std::random_shuffle(entities.begin(), entities.end());
 
-	for (std::vector<BoardEntity*>::iterator it = entities.begin(); it != entities.end(); ++it)
+	for (std::vector<BoardEntity*>::iterator it = entities.begin(), end = entities.end(); it != end; ++it)
 	{
 		Plant* aPlant = (*it)->Cast<Plant>();
 		if (aPlant->ReceiveHelp(i_helpType))
@@ -1365,8 +1394,7 @@ void Plant::SetGridLocSilent(int i_gridX, int i_gridY)
 
 	if (gLawnApp->m_board != NULL)
 	{
-		Sexy::Point p(i_gridX, i_gridY);
-		Sexy::Point boardPos = BoardTransforms::GridToBoardSpaceUnbounded(p);
+		Sexy::Point boardPos = BoardTransforms::GridToBoardSpaceUnbounded(Sexy::Point(i_gridX, i_gridY));
 		SetPosition(Sexy::SexyVector3((float)boardPos.mX, (float)boardPos.mY - 10.0f, GetPosition().z));
 
 		if (gLawnApp->m_board->m_roofStage)
@@ -1797,6 +1825,27 @@ bool Plant::CanLevelUp(int i_targetLevel)
 	return m_type->GetProps()->MaxLevel >= i_targetLevel;
 }
 
+void Plant::clearRelocationEvents()
+{
+	m_relocationEvents.clear();
+
+	if (m_curRelocationEvent.m_relocationType == RelocationEvent::RELOCATION_PUSHED)
+	{
+		float dxTo = INV_S(m_curRelocationEvent.m_relocateToX - m_curRelocationEvent.m_relocateFromX);
+		float dyTo = INV_S(m_curRelocationEvent.m_relocateToY - m_curRelocationEvent.m_relocateFromY);
+		float t = (PVZ_T() - m_curRelocationEvent.m_relocateStartTime)
+			/ (m_curRelocationEvent.m_relocateEndTime - m_curRelocationEvent.m_relocateStartTime);
+		float dxBack = INV_S(m_curRelocationEvent.m_relocateFromX - m_curRelocationEvent.m_relocateToX);
+		float dyBack = INV_S(m_curRelocationEvent.m_relocateFromY - m_curRelocationEvent.m_relocateToY);
+
+		Sexy::SexyVector3 pos = GetPosition();
+		pos.x = dxBack + pos.x + t * dxTo;
+		pos.y = dyBack + pos.y + t * dyTo;
+		SetPosition(pos);
+		m_curRelocationEvent.reset();
+	}
+}
+
 void Plant::addRelocationEvent(const RelocationEvent& i_event)
 {
 	m_relocationEvents.push_back(i_event);
@@ -1836,13 +1885,13 @@ void Plant::PlaySongEffect(int level)
 {
 	AttachedEffect& up = (AttachedEffect&)m_attachedEffects.FindOrCreate("song_effect_up");
 	up.InitializeWithAnimation(GetPAMByName("POPANIM_EFFECTS_BIRTHSUNFLOWER_TX"));
-	std::string anim = level < 2 ? "attack2" : "attack4";
+	std::string anim = level > 1 ? "attack4" : "attack2";
 	up.PlayAnimAndDestroy(anim);
 	up.Attach(this, SexyVector3(0.0f, -15.0f, 0.0f), 1);
 
 	AttachedEffect& down = (AttachedEffect&)m_attachedEffects.FindOrCreate("song_effect_down");
 	down.InitializeWithAnimation(GetPAMByName("POPANIM_EFFECTS_BIRTHSUNFLOWER_TX"));
-	anim = level < 2 ? "attack1" : "attack3";
+	anim = level > 1 ? "attack3" : "attack1";
 	down.PlayAnimAndDestroy(anim);
 	down.Attach(this, SexyVector3(0.0f, -15.0f, 0.0f), -1);
 }
@@ -2127,9 +2176,11 @@ void Plant::SetCurrentLevel(int i_level)
 	BoardEntity::SetCurrentLevel(i_level);
 }
 
+static int __attribute__((noinline)) LevelPassThrough(int i_level) { return i_level; }
+
 int Plant::GetMaxAffectZombieLevel()
 {
-	int idx = GetCurrentLevel() - 1;
+	int idx = LevelPassThrough(m_currentLevel) - 1;
 	if (idx >= 0 && (size_t)idx < GetProps()->PlantLevelStats.size())
 		return GetProps()->PlantLevelStats[idx].MaxAffectZombieLevel;
 
@@ -2138,7 +2189,7 @@ int Plant::GetMaxAffectZombieLevel()
 
 float Plant::GetExtraHitPointsmodifier() const
 {
-	int idx = GetCurrentLevel() - 1;
+	int idx = LevelPassThrough(m_currentLevel) - 1;
 	if (idx >= 0 && (size_t)idx < GetProps()->PlantLevelStats.size())
 		return GetProps()->PlantLevelStats[idx].HitPointsLevel;
 
@@ -2148,7 +2199,7 @@ float Plant::GetExtraHitPointsmodifier() const
 float Plant::GetExtraDPSmodifier() const
 {
 	float aLevelStat;
-	int idx = GetCurrentLevel() - 1;
+	int idx = LevelPassThrough(m_currentLevel) - 1;
 	if (idx >= 0 && (size_t)idx < GetProps()->PlantLevelStats.size())
 		aLevelStat = GetProps()->PlantLevelStats[idx].AttackLevel;
 	else
@@ -2161,8 +2212,9 @@ float Plant::GetExtraDPSmodifier() const
 		aAttackUp = m_iAppendAttackUpPercent + 1.0f;
 
 	aPartial *= aAttackUp;
-
-	return aPartial * GetAdditionValue(PlantAddition::PAdditonRLS_ATK_Muti) + GetAdditionValue(PlantAddition::PAdditonRLS_ATK_Add);
+	float muti = GetAdditionValue(PlantAddition::PAdditonRLS_ATK_Muti);
+	float add = GetAdditionValue(PlantAddition::PAdditonRLS_ATK_Add);
+	return aPartial * muti + add;
 }
 
 bool Plant::WasKilledByZombies()
@@ -2301,6 +2353,67 @@ bool Plant::ShouldDrawShadow() const
 		return false;
 
 	return !IsHidden();
+}
+
+// BoardHelpers.h pulls in RiftUtils.h, which needs a header we do not have
+namespace BoardHelpers
+{
+	template<typename T> T* GetPerkByClassInRift();
+}
+
+bool Plant::OverrideProjectileCollision(Projectile* i_projectile)
+{
+	if (PennyPerkJuggled* juggled = BoardHelpers::GetPerkByClassInRift<PennyPerkJuggled>())
+		return juggled->addProjectile(i_projectile, this);
+
+	if (!m_plantFramework)
+		return BoardEntity::OverrideProjectileCollision(i_projectile);
+
+	if (IsSuspended())
+		return true;
+	if (IsIceblocked())
+		return true;
+	return m_plantFramework->OverrideProjectileCollision(i_projectile);
+}
+
+Plant::~Plant()
+{
+	m_pCachedPlantPropertySheet = NULL;
+	m_pCachedPlantAnimRig = NULL;
+	m_pCachedEffectAnimRig_PlantFoodShine = NULL;
+	m_pCachedEffectAnimRig_StarPlantFoodShine = NULL;
+
+	if (m_BombProjectile.IsValid())
+		((GameObject*)m_BombProjectile.GetObject())->Destroy();
+	m_BombProjectile.ClearId();
+
+	if (m_plantFramework)
+	{
+		delete m_plantFramework;
+		m_plantFramework = NULL;
+	}
+
+	if (m_randomObject)
+	{
+		delete m_randomObject;
+		m_randomObject = NULL;
+	}
+
+	if (m_animRig.IsValid())
+		((GameObject*)m_animRig.GetObject())->Destroy();
+	m_animRig.ClearId();
+
+	if (m_animPotRig.IsValid())
+		((GameObject*)m_animPotRig.GetObject())->Destroy();
+	m_animPotRig.ClearId();
+
+	if (m_plantFoodShine.IsValid())
+		((GameObject*)m_plantFoodShine.GetObject())->Destroy();
+	m_plantFoodShine.ClearId();
+
+	if (m_starPlantFoodShine.IsValid())
+		((GameObject*)m_starPlantFoodShine.GetObject())->Destroy();
+	m_starPlantFoodShine.ClearId();
 }
 
 bool Plant::IsSuspended()

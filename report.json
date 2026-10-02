@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-29T21:07:01+00:00",
+  "generated": "2026-10-02T14:38:47+00:00",
   "measures": {
     "total_functions": 84600,
-    "matched_functions": 25356,
-    "matched_functions_percent": 29.97,
+    "matched_functions": 25370,
+    "matched_functions_percent": 29.99,
     "total_code": 12533448,
-    "matched_code": 1486852,
-    "matched_code_percent": 11.86,
-    "fuzzy_match_percent": 12.39,
+    "matched_code": 1491176,
+    "matched_code_percent": 11.9,
+    "fuzzy_match_percent": 12.41,
     "started_units": 2167,
     "total_units": 2751,
     "started_code": 9962604,
-    "started_matched_code": 1486852,
-    "started_percent": 14.92,
+    "started_matched_code": 1491176,
+    "started_percent": 14.97,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -212981,12 +212981,12 @@
     {
       "name": "src/PvZ2/plants/Plant.cpp",
       "total_code": 87192,
-      "matched_code": 20220,
-      "matched_code_percent": 23.19,
+      "matched_code": 24544,
+      "matched_code_percent": 28.15,
       "total_functions": 318,
-      "matched_functions": 235,
-      "matched_functions_percent": 73.9,
-      "fuzzy_match_percent": 34.37,
+      "matched_functions": 249,
+      "matched_functions_percent": 78.3,
+      "fuzzy_match_percent": 37.6,
       "functions": [
         {
           "name": "Plant::NotifyApplyCondition",
@@ -213145,18 +213145,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Plant::~Plant",
-          "size": 584,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Plant::~Plant",
-          "size": 584,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Plant::SetPlantLevelValue",
           "size": 576,
           "matched": false,
@@ -213295,42 +213283,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Plant::clearRelocationEvents",
-          "size": 308,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PlantType::canGiveFirstAidToPlant",
-          "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PlantType::PlantType",
-          "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PlantType::PlantType",
-          "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Plant::OverrideProjectileCollision",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Plant::~Plant",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "PlantType::StaticClassInit",
           "size": 5016,
           "matched": false,
@@ -213346,13 +213298,7 @@
           "name": "Plant::SetIsSleepping",
           "size": 640,
           "matched": false,
-          "fuzzy_match_percent": 89.44
-        },
-        {
-          "name": "Plant::PlaySongEffect",
-          "size": 604,
-          "matched": false,
-          "fuzzy_match_percent": 96.03
+          "fuzzy_match_percent": 99.38
         },
         {
           "name": "PlantType::HasPlantAdventureFlag",
@@ -213370,19 +213316,7 @@
           "name": "Plant::updateRelocationPositionAndRotation",
           "size": 352,
           "matched": false,
-          "fuzzy_match_percent": 57.95
-        },
-        {
-          "name": "Plant::onPostLoad",
-          "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 90.41
-        },
-        {
-          "name": "Plant::GetExtraDPSmodifier",
-          "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 94.44
+          "fuzzy_match_percent": 68.18
         },
         {
           "name": "Plant::ResetLaunchTimer",
@@ -213397,40 +213331,22 @@
           "fuzzy_match_percent": 75.0
         },
         {
-          "name": "Plant::SendHelpToPlants",
-          "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 55.07
-        },
-        {
           "name": "Plant::UpdateDamageStates",
           "size": 276,
           "matched": false,
-          "fuzzy_match_percent": 58.33
+          "fuzzy_match_percent": 98.55
         },
         {
-          "name": "Plant::SetGridLocSilent",
-          "size": 272,
+          "name": "PlantType::canGiveFirstAidToPlant",
+          "size": 268,
           "matched": false,
-          "fuzzy_match_percent": 69.57
-        },
-        {
-          "name": "Plant::GetExtraHitPointsmodifier",
-          "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 98.21
+          "fuzzy_match_percent": 64.71
         },
         {
           "name": "PlantPropertySheet::GetCollisionRect",
           "size": 224,
           "matched": false,
           "fuzzy_match_percent": 42.86
-        },
-        {
-          "name": "Plant::GetMaxAffectZombieLevel",
-          "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 98.18
         },
         {
           "name": "Plant::CalcProjectileTargetLocation",
@@ -213487,6 +213403,24 @@
           "fuzzy_match_percent": 82.14
         },
         {
+          "name": "Plant::PlaySongEffect",
+          "size": 604,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::~Plant",
+          "size": 584,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::~Plant",
+          "size": 584,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Plant::StaticClassInit",
           "size": 580,
           "matched": true,
@@ -213529,13 +213463,43 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Plant::clearRelocationEvents",
+          "size": 308,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Plant::AbsorbsSmashAttack",
           "size": 296,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Plant::onPostLoad",
+          "size": 292,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::GetExtraDPSmodifier",
+          "size": 288,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::SendHelpToPlants",
+          "size": 276,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Plant::CollidesWithType",
+          "size": 272,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::SetGridLocSilent",
           "size": 272,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -213595,6 +213559,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PlantType::PlantType",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::PlantType",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Plant::SetAvatarEnable",
           "size": 228,
           "matched": true,
@@ -213603,6 +213579,18 @@
         {
           "name": "PlantType::IsBlowProducer",
           "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::GetExtraHitPointsmodifier",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::GetMaxAffectZombieLevel",
+          "size": 220,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -213716,6 +213704,12 @@
         },
         {
           "name": "Plant::GetRelocationSpeedInGridSquaresPerSecond",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::OverrideProjectileCollision",
           "size": 164,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -214460,6 +214454,12 @@
         },
         {
           "name": "Plant::onDraw",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::~Plant",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
