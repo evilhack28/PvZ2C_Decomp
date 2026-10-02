@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-02T15:21:31+00:00",
+  "generated": "2026-10-02T21:48:08+00:00",
   "measures": {
     "total_functions": 84600,
-    "matched_functions": 25372,
-    "matched_functions_percent": 29.99,
+    "matched_functions": 25774,
+    "matched_functions_percent": 30.47,
     "total_code": 12533448,
-    "matched_code": 1491444,
-    "matched_code_percent": 11.9,
-    "fuzzy_match_percent": 12.42,
+    "matched_code": 1516648,
+    "matched_code_percent": 12.1,
+    "fuzzy_match_percent": 12.63,
     "started_units": 2167,
     "total_units": 2751,
     "started_code": 9962604,
-    "started_matched_code": 1491444,
-    "started_percent": 14.97,
+    "started_matched_code": 1516648,
+    "started_percent": 15.22,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -356799,12 +356799,12 @@
     {
       "name": "src/PvZ2/zombies/Zombie.cpp",
       "total_code": 162472,
-      "matched_code": 1172,
-      "matched_code_percent": 0.72,
+      "matched_code": 26376,
+      "matched_code_percent": 16.23,
       "total_functions": 956,
-      "matched_functions": 70,
-      "matched_functions_percent": 7.32,
-      "fuzzy_match_percent": 0.73,
+      "matched_functions": 472,
+      "matched_functions_percent": 49.37,
+      "fuzzy_match_percent": 17.35,
       "functions": [
         {
           "name": "Zombie::NotifyApplyCondition",
@@ -357731,12 +357731,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Zombie::CalcPositionInTime",
-          "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Zombie::CalcSpecialConditionsDamageDot",
           "size": 252,
           "matched": false,
@@ -357749,134 +357743,8 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Zombie::HasMetallicArmor",
-          "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_Walk",
-          "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetArmorHitpoints",
-          "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Zombie::HasArmor",
           "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::storeProjectileInJuggleLimbo",
-          "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateState_RiseFromStorm",
-          "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::HasArmor",
-          "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::setupSkills",
-          "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_RiseFromPod",
-          "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onPostLoad",
-          "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::DropAndHiddenAllZombieParticle",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetInvisibleState",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::StormEntrance",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::StuckIntoGround",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::StuckIntoGround_2",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::dropAllProjectiles",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_Attack",
-          "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RemoveArmor",
-          "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetMaxArmorHitpoints",
-          "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::PlayAidEffect",
-          "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CannotStunnedByStreetLamp",
-          "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_Besiege",
-          "size": 212,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -357887,50 +357755,8 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Zombie::TakeFatalDamage",
-          "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetDamageBalancer",
-          "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetDamageBalancer",
-          "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIsControlled",
-          "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::setHelm",
-          "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateState_Die",
-          "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Zombie::ConvertToResistenceType",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::DestroySpeedUpEffect",
-          "size": 196,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -357941,206 +357767,8 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Zombie::ClearTargetbyMaybee",
-          "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Zombie::GetTitleIconTriggerNumber",
           "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::findTarget",
-          "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetResistenceRank",
-          "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::LayerToWorld",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::getElectrocutePAMName",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::setZombieState",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::DoDropIntoIceHole",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::DropAllLoot",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::EndConditions",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::UpdatePVP",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanBeFlickedOff",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanBeNumb",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::FindEatTarget",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetFormattedDescription",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetFormattedDescriptionHeader",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetFormattedNameString",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetFormattedToolTip",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetForcedTarget",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::choosePostStormState",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_BleedingOut",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::setZombieStateSerialization",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::ApplyCondition",
-          "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateStateMachine",
-          "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetCurrentResistenceValue",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateState_Ash",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_Electrocute",
-          "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetResilienceDamage",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::forceApplyConditionEffects",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateResilienceDamageThreshold",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateState_Electrocute",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::DetachAttachedEffect",
-          "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::HealByPercent",
-          "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::canThrowProjectile",
-          "size": 152,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -358151,620 +357779,8 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Zombie::HealByAmount",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsDying",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsOnGround",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::canTargetPlant",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateState_Eat",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Zombie::HasTargetTitle",
           "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::InvokeInvisible",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::OnInvisibleStateChanged",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::calcDamageIndex",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanNormalDamagePlantGroup",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CheckSpeedUpTileIsTurnToDown",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsInTargetHistory",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::MowDown",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RiseFromGround",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::playDeathAnimation",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::AddResilienceDamageAccumulation",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetNextGlideTarget",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsTargetable",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::TakeFatalDamage",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::initializeResistences",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::setState",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CancelZombieFood",
-          "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::HealHelm",
-          "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_Idle",
-          "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CheckSpeedUpTileIsTurnToUp",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::Heal",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RegrowArm",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::UpdateInvisibleState",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::WillTargetPlant",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetHeadDropHitPoints",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsBerserk",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::getGumPosition",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RemoveAttachedEffect",
-          "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetResistenceRank",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RecoverResilience",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_DropIntoIceHole",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::BindImageToSprite",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::ClearConditions",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetResistenceValue",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetResistenceValue",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onApplyCondition",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetNumbEffectOffset",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetResilienceActivatedEffectOffset",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::broadcastZombieDied",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::initializeAnimRig",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetBossStage",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsOnBoardOrClose",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIsWinningZombie",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::ShouldDrawShadow",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::TurnToAsh",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::isInPerformingSkillState",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_MowedDown",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateState_RiseFromPod",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetBaseEatDPS",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::HasTag",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::UpdateLevelEffect",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::StartLossLife",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onDestroy",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::registerForEvents",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetCurrentResilienceDamageReduced",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsOnBoard",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::spreadChemistPoison",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsResilienceBreak",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::UpdateCloneableState",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateRushCondition",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateState_Idle",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CalcProgressMeterHitpoints",
-          "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::ChangeCurrentResistenceValue",
-          "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::EndInvokeInvisibleEffect",
-          "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onExitState_RiseFromStorm",
-          "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetSummonZombieLevel",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::Rand",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RandWithOriginal",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_Grabbed",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::PlaceOnStreet",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RandWithOriginal",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::StartWarpIn",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::StartWarpOut",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onPlaceOnStreet",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateSpeed",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetAttachedBoardEntity",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetAttachedEffect",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetRandomValue",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RiseFromPod",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_FlickedOff",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_Plantify",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::setHasTorch",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateState_ResilienceBreak",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetTotalHitpoints",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsInWater",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::OnIntroOnBoardEffectComplete",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::Rand",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::ShouldClipWithWater",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CalcHelmDamageIndex",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanDropArm",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanDropHead",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetHitpointsUntilBleedout",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetLastDistanceWalked",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::HasFogImmune",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsHelmMetallic",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::Rand",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RandWithOriginal",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::applyPoisonGraphicalEffects",
-          "size": 64,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -358793,80 +357809,8 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Zombie::getTideDepthHeightMaxPct",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_Die",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onExitState_RiseFromGround",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onExitState_StuckIntoGround",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onLevelUp",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::updateState_MowedDown",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Zombie::updateTitles",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsBoss",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsValidPinchTarget",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_Ash",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_Eat",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onEnterState_Winning",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanbeCorroded",
-          "size": 52,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -358877,265 +357821,13 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Zombie::GetClassType",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetGridExtents",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetHeadParticlePopAnim",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsHelmTypeMetallic",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RiseFromStorm",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetHasLeader",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::getLeftHitPer",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onExitState_RiseFromPod",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetAmberScale",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetFlickOffStartPositon",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetShadowScaling",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetTideEffect",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::HasFullHitpoints",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsIZombie",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::PutZombieWillPath",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::TriggerPlaybackParams",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::canPerformSkill",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::reenterZombieState",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetBaseWalkSpeed",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetCurrentResistenceValue",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Zombie::GetCurrentTitleStatus",
           "size": 40,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Zombie::GetElectrocuteColor",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetGroundEffect",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetOriginalZombie",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetOwnerPlant",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetResistenceValue",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::HasReachResilienceDamageThreshold",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsInmmuneFireDamage",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsInvisible",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetCurrentResistenceValue",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onInitialized",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::AddStuckTime",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanEliteImmuneCondition",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Zombie::CanTakeFatalDamage",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetDamageThreshold",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetResilienceBaseDamageThreshold",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetResilienceExtraDamageThreshold",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::HasArm",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::HasHead",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsSlowed",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::isInState",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::modifyBodyDamage",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onTakeFatalDamage",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onZombieInitialize",
           "size": 36,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -359147,126 +357839,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Zombie::GetArmorCount",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsInSandStorm",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanInvokeInvisible",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanSurrender",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::ExplodesWhenMowed",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetCanTriggerWin",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetCriticalPos",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetEliteZombieType",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetLimitDamage",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetTypeName",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsAffectedBySliderTiles",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::NormalDeathWhenMowed",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetEliminateColor",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetFacing",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::canAttack",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::getArmDropFraction",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::getHeadDropFraction",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onResilienceRecoverAnimStopped",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::AddTag",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetAnimRig",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Zombie::GetProps",
           "size": 24,
           "matched": false,
@@ -360258,29 +358830,11 @@
         },
         {
           "name": "Zombie::GetProps",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::StartRushOnScreen",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::applyButterGraphicalEffects",
           "size": 24,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Zombie::EndCondition",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Zombie::GetAnimRig",
           "size": 20,
           "matched": false,
@@ -361056,403 +359610,7 @@
         },
         {
           "name": "Zombie::GetAnimRig",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetFacingMultiplier",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetResistenceRank",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::HasReachMaxResilienceValue",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsValidRangedTarget",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsValidRangedTarget",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RefreshLastHealth",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::ResetTargetPostion",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetBesiegeRate",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetDamageFlash",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIsTargetable",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::setBlinkOnDamage",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::ApplyNumb",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::ApplyStun",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::RemoveMarkedForDeath",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetAnimIgnoreConditionColors",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetBesiegeHit",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetHasDroppedLoot",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIgnoreFindTarget",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIgnoresAllDamage",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIgnoresCollisions",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIsBeingPulledByOlivePit",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIsFlying",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIsFriendZombie",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIsJumping",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIsParkourJumping",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIsPulledByBeachZomboss",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIsUsingAnimTranslation",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetMarkedForDeath",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetSuppressDeath",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::endRushOnScreen",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onExitState_Walk",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::setIsTorchBurningFlag",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::setUseAnimTranslation",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::BreakResilience",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanIgnoreTitle",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::DoesIgnoresCollisions",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetHasDroppedLoot",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetHasLeader",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetHasPlantFood",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::HasTorch",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsControlled",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsFlying",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsFriendZombie",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsIgnoreFindTarget",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsIgnoringAllDamage",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsJumping",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsMowDownByMower",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsNotTargetableFlagSet",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsParkourJumping",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsSuppressingDeath",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsTorchBurning",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::IsWinningZombie",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetGrabbedState",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetIdleState",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::SetWalkingState",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::StartPerformingSkills",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::canTargetEntityHeight",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::getTimeInState",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onResilienceBreakAnimStopped",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::onStartBleeding",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::AddBarrageXItem",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::AddBarrageYItem",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::AddToTargetHistory",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::AddToTargetbyMaybee",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanEliteImmunittiesByZombie",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::CanEliteScaleByZombie",
-          "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -361463,668 +359621,674 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Zombie::CanNoInvincibleTakeDamage",
-          "size": 8,
+          "name": "Zombie::CalcPositionInTime",
+          "size": 252,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 66.15
         },
         {
-          "name": "Zombie::CanShowHealthBarByDamage",
-          "size": 8,
+          "name": "Zombie::HasMetallicArmor",
+          "size": 244,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 88.52
         },
         {
-          "name": "Zombie::ClearTag",
-          "size": 8,
+          "name": "Zombie::GetArmorHitpoints",
+          "size": 240,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 86.89
         },
         {
-          "name": "Zombie::GetAttachedBoardEntityManager",
-          "size": 8,
+          "name": "Zombie::GetMaxArmorHitpoints",
+          "size": 216,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 85.45
         },
         {
-          "name": "Zombie::GetAttachedEffectManager",
-          "size": 8,
+          "name": "Zombie::GetResistenceRank",
+          "size": 188,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 91.49
         },
         {
-          "name": "Zombie::GetAttachedEffects",
-          "size": 8,
+          "name": "Zombie::LayerToWorld",
+          "size": 184,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 89.13
         },
         {
-          "name": "Zombie::GetCurrentResilienceValue",
-          "size": 8,
+          "name": "Zombie::IsOnGround",
+          "size": 148,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 85.0
         },
         {
-          "name": "Zombie::GetCurrentResilienceWeakType",
-          "size": 8,
+          "name": "Zombie::updateState_Eat",
+          "size": 148,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 91.89
         },
         {
-          "name": "Zombie::GetDpsScale",
-          "size": 8,
+          "name": "Zombie::ShouldDrawShadow",
+          "size": 104,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 89.29
         },
         {
-          "name": "Zombie::GetEliminateColor",
-          "size": 8,
+          "name": "Zombie::GetCurrentResilienceDamageReduced",
+          "size": 92,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 76.0
         },
         {
-          "name": "Zombie::GetExtraDPSmodifier",
-          "size": 8,
+          "name": "Zombie::ChangeCurrentResistenceValue",
+          "size": 84,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 59.26
         },
         {
-          "name": "Zombie::GetExtraHitPointsmodifier",
-          "size": 8,
+          "name": "Zombie::GetSummonZombieLevel",
+          "size": 80,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 95.0
         },
         {
-          "name": "Zombie::GetFacing",
-          "size": 8,
+          "name": "Zombie::setHasTorch",
+          "size": 72,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 88.89
         },
         {
-          "name": "Zombie::GetFlag",
-          "size": 8,
+          "name": "Zombie::GetHitpointsUntilBleedout",
+          "size": 64,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 81.25
         },
         {
-          "name": "Zombie::GetForcedTarget",
-          "size": 8,
+          "name": "Zombie::GetAmberScale",
+          "size": 44,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 63.64
         },
         {
-          "name": "Zombie::GetHitpoints",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetInvisibleState",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetLoot",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetMaxResilienceValue",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetMinifyTime",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetOrCreateAttachedBoardEntity",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetPlaybackController",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetSizeType",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetSpeedScale",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetSpeedUpTileOffset",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetTargetHistory",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zombie::GetTargetPosition",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::onEnterState_Walk",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::GetTargetbyMaybee",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::storeProjectileInJuggleLimbo",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::GetTranslationMultiplier",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::updateState_RiseFromStorm",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::GetType",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::HasArmor",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::GetZombieScale",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::setupSkills",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::HasCondition",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::onEnterState_RiseFromPod",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::HasHypnotized",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::onPostLoad",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::IsBleedingOut",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::DropAndHiddenAllZombieParticle",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::IsDropingIntoHole",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::SetInvisibleState",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::IsEliteZombie",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::StormEntrance",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::IsFlickedOff",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::StuckIntoGround",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::IsInZombieFoodState",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::StuckIntoGround_2",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::IsRisingFromGround",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::dropAllProjectiles",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::IsSilenced",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::onEnterState_Attack",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetBaseEatDPS",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::RemoveArmor",
+          "size": 220,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetBesieged",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::PlayAidEffect",
+          "size": 216,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetConditionTracker",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::CannotStunnedByStreetLamp",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetCurrentResilienceValue",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::onEnterState_Besiege",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetDamageScale",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::TakeFatalDamage",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetDpsScale",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::SetDamageBalancer",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetElectrocuteColor",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::SetDamageBalancer",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetExtraConditionTracker",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::SetIsControlled",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetExtraConditionTracker2",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::setHelm",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetExtraEatDPS",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::updateState_Die",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetHasHypnotized",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::DestroySpeedUpEffect",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetHitpoints",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::ClearTargetbyMaybee",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetLoot",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::findTarget",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetMaxResilienceValue",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::getElectrocutePAMName",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetMergeLevel",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::setZombieState",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetOriginalZombie",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::DoDropIntoIceHole",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetOwnerPlant",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::DropAllLoot",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetPacketLevel",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::EndConditions",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetSizeType",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::UpdatePVP",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetSpeedScale",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::CanBeFlickedOff",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetStormType",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::CanBeNumb",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetTargetPosition",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::FindEatTarget",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetTranslationMultiplier",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::GetFormattedDescription",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetZombieFlag",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::GetFormattedDescriptionHeader",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetZombieScale",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::GetFormattedNameString",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::Silence",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::GetFormattedToolTip",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::StopPerformingSkills",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::SetForcedTarget",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::getState",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::choosePostStormState",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::getStateMachineTimeScale",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::onEnterState_BleedingOut",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::getStuckIntoGroundHeight",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::setZombieStateSerialization",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::getZombieStateSerialization",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::ApplyCondition",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_SpeedUpTileDown",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::updateStateMachine",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_SpeedUpTileLeft",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::GetCurrentResistenceValue",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_SpeedUpTileRight",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::updateState_Ash",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_SpeedUpTileUp",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::onEnterState_Electrocute",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::setHelmHitpoints",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::GetResilienceDamage",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::setStateMachineTimeScale",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::forceApplyConditionEffects",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::AddToRenderQueue",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::updateResilienceDamageThreshold",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetEliminateColor",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::updateState_Electrocute",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onEnterState_Glide",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::DetachAttachedEffect",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onEnterState_TargetRise",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::HealByPercent",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_Ash",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::canThrowProjectile",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_Attack",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::HealByAmount",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_Besiege",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::IsDying",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_BleedingOut",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::canTargetPlant",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_Die",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::InvokeInvisible",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_DropIntoIceHole",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::OnInvisibleStateChanged",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_Eat",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::calcDamageIndex",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_Electrocute",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::CanNormalDamagePlantGroup",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_FlickedOff",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::CheckSpeedUpTileIsTurnToDown",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_Glide",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::IsInTargetHistory",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_Grabbed",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::MowDown",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_Idle",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::RiseFromGround",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_MowedDown",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::playDeathAnimation",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_Plantify",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::AddResilienceDamageAccumulation",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_ResilienceBreak",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::GetNextGlideTarget",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_ResilienceEnterBreak",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::IsTargetable",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_TakeWeapon",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::TakeFatalDamage",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_TargetRise",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::initializeResistences",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::onExitState_Winning",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::setState",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::updateState_Attack",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::CancelZombieFood",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::updateState_BleedingOut",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::HealHelm",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::updateState_Grabbed",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::onEnterState_Idle",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::updateState_IntroOnBoard",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::CheckSpeedUpTileIsTurnToUp",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::updateState_ResilienceEnterBreak",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::Heal",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::updateState_ResilienceRecover",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::RegrowArm",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::updateState_TakeWeapon",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::UpdateInvisibleState",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::updateState_TargetRise",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Zombie::WillTargetPlant",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::DelTag",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 50.0
+          "name": "Zombie::GetHeadDropHitPoints",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Zombie::SetWalkSpeed",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 66.67
+          "name": "Zombie::IsBerserk",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Zombie::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::getGumPosition",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::RemoveAttachedEffect",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetResistenceRank",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::RecoverResilience",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onEnterState_DropIntoIceHole",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::BindImageToSprite",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::ClearConditions",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetResistenceValue",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetResistenceValue",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onApplyCondition",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetNumbEffectOffset",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetResilienceActivatedEffectOffset",
+          "size": 108,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -362135,7 +360299,43 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::broadcastZombieDied",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::initializeAnimRig",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetBossStage",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::GetJamStyle",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsOnBoardOrClose",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIsWinningZombie",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::TurnToAsh",
           "size": 104,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362147,8 +360347,332 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::isInPerformingSkillState",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onEnterState_MowedDown",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_RiseFromPod",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetBaseEatDPS",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::HasTag",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::UpdateLevelEffect",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::StartLossLife",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onDestroy",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::registerForEvents",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsOnBoard",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::spreadChemistPoison",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::CanBeTargetedByPlant",
           "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsResilienceBreak",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::UpdateCloneableState",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateRushCondition",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_Idle",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CalcProgressMeterHitpoints",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::EndInvokeInvisibleEffect",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_RiseFromStorm",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::Rand",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::RandWithOriginal",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onEnterState_Grabbed",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::PlaceOnStreet",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::RandWithOriginal",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::StartWarpIn",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::StartWarpOut",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onPlaceOnStreet",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateSpeed",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetAttachedBoardEntity",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetAttachedEffect",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetRandomValue",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::RiseFromPod",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onEnterState_FlickedOff",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onEnterState_Plantify",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_ResilienceBreak",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetTotalHitpoints",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsInWater",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::OnIntroOnBoardEffectComplete",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::Rand",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::ShouldClipWithWater",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CalcHelmDamageIndex",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CanDropArm",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CanDropHead",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetLastDistanceWalked",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::HasFogImmune",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsHelmMetallic",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::Rand",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::RandWithOriginal",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::applyPoisonGraphicalEffects",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::getTideDepthHeightMaxPct",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onEnterState_Die",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_RiseFromGround",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_StuckIntoGround",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onLevelUp",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_MowedDown",
+          "size": 60,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -362159,7 +360683,127 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::IsBoss",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsValidPinchTarget",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onEnterState_Ash",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onEnterState_Eat",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onEnterState_Winning",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CanbeCorroded",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetClassType",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetGridExtents",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetHeadParticlePopAnim",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsHelmTypeMetallic",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::RiseFromStorm",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetHasLeader",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::getLeftHitPer",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_RiseFromPod",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::EndLossLife",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetFlickOffStartPositon",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetShadowScaling",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetTideEffect",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::HasFullHitpoints",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsIZombie",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::PutZombieWillPath",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362171,7 +360815,157 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::TriggerPlaybackParams",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::canPerformSkill",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::reenterZombieState",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetBaseWalkSpeed",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetCurrentResistenceValue",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetElectrocuteColor",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetGroundEffect",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetOriginalZombie",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetOwnerPlant",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetResistenceValue",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::HasReachResilienceDamageThreshold",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsInmmuneFireDamage",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsInvisible",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetCurrentResistenceValue",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onInitialized",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::AddStuckTime",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CanEliteImmuneCondition",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetDamageThreshold",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetResilienceBaseDamageThreshold",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetResilienceExtraDamageThreshold",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::HasArm",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::HasHead",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsSlowed",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::calcRangedTargetGridRect",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::isInState",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::modifyBodyDamage",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362183,7 +360977,73 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::onTakeFatalDamage",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onZombieInitialize",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetArmorCount",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsInSandStorm",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CanInvokeInvisible",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CanSurrender",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::EMPeachStun",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::ExplodesWhenMowed",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetCanTriggerWin",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetCriticalPos",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetEliteZombieType",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetLimitDamage",
           "size": 28,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362195,8 +361055,476 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::GetTypeName",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsAffectedBySliderTiles",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::NormalDeathWhenMowed",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetEliminateColor",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetFacing",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::canAttack",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::getArmDropFraction",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::getHeadDropFraction",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onResilienceRecoverAnimStopped",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::AddTag",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetAnimRig",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::StartRushOnScreen",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::applyButterGraphicalEffects",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::EndCondition",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetFacingMultiplier",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetResistenceRank",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::HasReachMaxResilienceValue",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsValidRangedTarget",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsValidRangedTarget",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::RefreshLastHealth",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::ResetTargetPostion",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetBesiegeRate",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetDamageFlash",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIsTargetable",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::setBlinkOnDamage",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::ApplyNumb",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::ApplyStun",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::RemoveMarkedForDeath",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetAnimIgnoreConditionColors",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetBesiegeHit",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetHasDroppedLoot",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIgnoreFindTarget",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIgnoresAllDamage",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIgnoresCollisions",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIsBeingPulledByOlivePit",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIsFlying",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIsFriendZombie",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIsJumping",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIsParkourJumping",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIsPulledByBeachZomboss",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIsUsingAnimTranslation",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetMarkedForDeath",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetSuppressDeath",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::endRushOnScreen",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Walk",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::setIsTorchBurningFlag",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::setUseAnimTranslation",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::BreakResilience",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CanIgnoreTitle",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::DoesIgnoresCollisions",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetHasDroppedLoot",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetHasLeader",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetHasPlantFood",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::HasTorch",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsControlled",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsFlying",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsFriendZombie",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsIgnoreFindTarget",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsIgnoringAllDamage",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsJumping",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsMowDownByMower",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsNotTargetableFlagSet",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsParkourJumping",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsSuppressingDeath",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::IsSuspended",
           "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsTorchBurning",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsWinningZombie",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetGrabbedState",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetIdleState",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetWalkingState",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::StartPerformingSkills",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::canTargetEntityHeight",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::getTimeInState",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onResilienceBreakAnimStopped",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onStartBleeding",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::AddBarrageXItem",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::AddBarrageYItem",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::AddToTargetHistory",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::AddToTargetbyMaybee",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -362255,7 +361583,37 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::CanEliteImmunittiesByZombie",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CanEliteScaleByZombie",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::CanLevelUp",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CanNoInvincibleTakeDamage",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::CanShowHealthBarByDamage",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::ClearTag",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362273,6 +361631,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::DelTag",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::DoSkill",
           "size": 8,
           "matched": true,
@@ -362285,7 +361649,139 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::GetAttachedBoardEntityManager",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetAttachedEffectManager",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetAttachedEffects",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::GetConditionTracker",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetCurrentResilienceValue",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetCurrentResilienceWeakType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetDpsScale",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetEliminateColor",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetExtraDPSmodifier",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetExtraHitPointsmodifier",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetFacing",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetFlag",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetForcedTarget",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetHitpoints",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetInvisibleState",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetLoot",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetMaxResilienceValue",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetMinifyTime",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetOrCreateAttachedBoardEntity",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetPlaybackController",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetSizeType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetSpeedScale",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetSpeedUpTileOffset",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362297,13 +361793,61 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::GetTargetHistory",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetTargetPosition",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetTargetbyMaybee",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetTranslationMultiplier",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::GetType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::GetWalkSpeed",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::GetZombieScale",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::HasCondition",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::HasGravity",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::HasHypnotized",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362321,7 +361865,49 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::IsBleedingOut",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsDropingIntoHole",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsEliteZombie",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsFlickedOff",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsInZombieFoodState",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::IsNumb",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsRisingFromGround",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::IsSilenced",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362339,7 +361925,175 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::SetBaseEatDPS",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetBesieged",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetConditionTracker",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetCurrentResilienceValue",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetDamageScale",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetDpsScale",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetElectrocuteColor",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetExtraConditionTracker",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetExtraConditionTracker2",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetExtraEatDPS",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetHasHypnotized",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetHitpoints",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetLoot",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetMaxResilienceValue",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetMergeLevel",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetOriginalZombie",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetOwnerPlant",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetPacketLevel",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetSizeType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetSpeedScale",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetStormType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetTargetPosition",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetTranslationMultiplier",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetWalkSpeed",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetZombieFlag",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::SetZombieScale",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::ShouldReleaseSun",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::Silence",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::StopPerformingSkills",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362358,6 +362112,30 @@
         },
         {
           "name": "Zombie::getEatingDamageType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::getState",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::getStateMachineTimeScale",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::getStuckIntoGroundHeight",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::getZombieStateSerialization",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362387,7 +362165,43 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::onExitState_SpeedUpTileDown",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_SpeedUpTileLeft",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_SpeedUpTileRight",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_SpeedUpTileUp",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::onHelmDropped",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::setHelmHitpoints",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::setStateMachineTimeScale",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362395,6 +362209,12 @@
         {
           "name": "Zombie::willDieToShrinking",
           "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::AddToRenderQueue",
+          "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -362453,6 +362273,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Zombie::SetEliminateColor",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Zombie::SetIsFlagZombie",
           "size": 4,
           "matched": true,
@@ -362478,6 +362304,132 @@
         },
         {
           "name": "Zombie::onEndCondition",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onEnterState_Glide",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onEnterState_TargetRise",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Ash",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Attack",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Besiege",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_BleedingOut",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Die",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_DropIntoIceHole",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Eat",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Electrocute",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_FlickedOff",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Glide",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Grabbed",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Idle",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_MowedDown",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Plantify",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_ResilienceBreak",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_ResilienceEnterBreak",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_TakeWeapon",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_TargetRise",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::onExitState_Winning",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -362538,6 +362490,54 @@
         },
         {
           "name": "Zombie::playEatSound",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_Attack",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_BleedingOut",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_Grabbed",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_IntroOnBoard",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_ResilienceEnterBreak",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_ResilienceRecover",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_TakeWeapon",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Zombie::updateState_TargetRise",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
