@@ -95,7 +95,10 @@ def listing(elf, name, symbolise=True):
                     if scalar:
                         ops = f'{dst}, <{_reloc_label(elf, rel)}>'
                     else:
-                        ops = f'{dst}, <got:{rel[0]}{_tail(rel[2])}>'
+                        # the game's GOT slot for a TU-local .bss object is a nameless '.bss'
+                        sec = elf.section_of(rel[0]) if not rel[0].startswith('.') else None
+                        lbl = f'.bss|{rel[0]}' if sec and sec.startswith('.bss') else rel[0]
+                        ops = f'{dst}, <got:{lbl}{_tail(rel[2])}>'
                 elif kind == 'abs':
                     slot = value + ((_imm(parts[1]) or 0) if len(parts) > 1 else 0)
                     if scalar:

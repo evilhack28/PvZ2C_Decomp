@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-03T18:59:48+00:00",
+  "generated": "2026-10-03T23:51:06+00:00",
   "measures": {
-    "total_functions": 84762,
-    "matched_functions": 25915,
-    "matched_functions_percent": 30.57,
-    "total_code": 12549664,
-    "matched_code": 1536028,
-    "matched_code_percent": 12.24,
-    "fuzzy_match_percent": 12.78,
-    "started_units": 2173,
+    "total_functions": 85000,
+    "matched_functions": 26051,
+    "matched_functions_percent": 30.65,
+    "total_code": 12593604,
+    "matched_code": 1551940,
+    "matched_code_percent": 12.32,
+    "fuzzy_match_percent": 12.88,
+    "started_units": 2182,
     "total_units": 2751,
-    "started_code": 9996420,
-    "started_matched_code": 1536028,
-    "started_percent": 15.37,
+    "started_code": 10057532,
+    "started_matched_code": 1551940,
+    "started_percent": 15.43,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -373784,35 +373784,433 @@
     },
     {
       "name": "src/SexyAppFramework/Crypt/BigInt.cpp",
-      "total_code": 4532,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 26,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 11804,
+      "matched_code": 6844,
+      "matched_code_percent": 57.98,
+      "total_functions": 66,
+      "matched_functions": 32,
+      "matched_functions_percent": 48.48,
+      "fuzzy_match_percent": 67.35,
+      "functions": [
+        {
+          "name": "BigInt::NumBits",
+          "size": 244,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 228,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 224,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 132,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 132,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 132,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 128,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt::operator=",
+          "size": 128,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 112,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt::Pow",
+          "size": 96,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt::ToInt",
+          "size": 92,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt::IsBitSet",
+          "size": 76,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 64,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 64,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt::HighWord",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt::GetWord",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt::IsNegative",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt::NumWords",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "BigInt::IsPrime",
+          "size": 952,
+          "matched": false,
+          "fuzzy_match_percent": 66.81
+        },
+        {
+          "name": "BigInt::Divide",
+          "size": 896,
+          "matched": false,
+          "fuzzy_match_percent": 52.44
+        },
+        {
+          "name": "BigInt::InvMod",
+          "size": 1168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt",
+          "size": 520,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::ShiftLeft",
+          "size": 468,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt",
+          "size": 412,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::ModPow",
+          "size": 376,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt",
+          "size": 340,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt",
+          "size": 340,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::RandNum",
+          "size": 324,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::ToHex",
+          "size": 324,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::Gcd",
+          "size": 320,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::BigInt",
+          "size": 264,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::BigInt",
+          "size": 264,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::ShiftRight",
+          "size": 256,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::SetWord",
+          "size": 216,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::SetBit",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::BigInt",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::BigInt",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::BigInt",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::BigInt",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::Resize",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::Trim",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::BigInt",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::BigInt",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::IsEven",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::~BigInt",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::~BigInt",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::~BigInt",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::BigInt",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::BigInt",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::IsOdd",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::DoubleSize",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BigInt::SetZero",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/SexyAppFramework/Debug.cpp",
       "total_code": 192,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 128,
+      "matched_code_percent": 66.67,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 79.17,
+      "matched_functions": 1,
+      "matched_functions_percent": 50.0,
+      "fuzzy_match_percent": 83.33,
       "functions": [
-        {
-          "name": "Android::DEBUG::PauseInJava",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 93.75
-        },
         {
           "name": "Android::DEBUG::Register",
           "size": 64,
           "matched": false,
           "fuzzy_match_percent": 50.0
+        },
+        {
+          "name": "Android::DEBUG::PauseInJava",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -373829,32 +374227,578 @@
     {
       "name": "src/SexyAppFramework/EATech/EAIO/2.17.03/include/EAIO/internal/Config.cpp",
       "total_code": 2452,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2020,
+      "matched_code_percent": 82.38,
       "total_functions": 13,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 12,
+      "matched_functions_percent": 92.31,
+      "fuzzy_match_percent": 94.78,
+      "functions": [
+        {
+          "name": "Android::Config::Register",
+          "size": 432,
+          "matched": false,
+          "fuzzy_match_percent": 70.37
+        },
+        {
+          "name": "Android::Config::ConfigReadBoolean",
+          "size": 220,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Config::ConfigReadInteger",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Config::ConfigReadUTF8String",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Config::ConfigReadUTF8StringEx",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Config::ConfigWriteWideString",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Config::ConfigReadWideString",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Config::ConfigWriteUTF8String",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Config::ConfigWriteBoolean",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Config::ConfigWriteInteger",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Config::ConfigEraseKey",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Config::ConfigEraseKey",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Config::InitConfig",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/SexyAppFramework/EATech/EAText/1.09.07/include/EAText/internal/EATextSquish.cpp",
-      "total_code": 2488,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 14,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 17308,
+      "matched_code": 1148,
+      "matched_code_percent": 6.63,
+      "total_functions": 52,
+      "matched_functions": 12,
+      "matched_functions_percent": 23.08,
+      "fuzzy_match_percent": 8.08,
+      "functions": [
+        {
+          "name": "EATextSquish::ClusterFit::Compress4",
+          "size": 3716,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ClusterFit::ClusterFit",
+          "size": 1976,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ClusterFit::ClusterFit",
+          "size": 1976,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ColorSet::ColorSet",
+          "size": 1560,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ColorSet::ColorSet",
+          "size": 1560,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ClusterFit::SolveLeastSquares",
+          "size": 1552,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ComputePrincipleComponent",
+          "size": 708,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ColorSet::RemapIndices",
+          "size": 636,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::SingleColourFit::Compress4",
+          "size": 184,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::SingleColourFit::SingleColourFit",
+          "size": 152,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::SingleColourFit::SingleColourFit",
+          "size": 152,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ColourFit::Compress",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ColourFit::ColourFit",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ColourFit::ColourFit",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::Sym3x3::Sym3x3",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::Sym3x3::Sym3x3",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::Vec3::Vec3",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::Vec3::Vec3",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ColorSet::GetPoints",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ColorSet::GetWeights",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::Sym3x3",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ClusterFit::~ClusterFit",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ClusterFit::~ClusterFit",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ClusterFit::~ClusterFit",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ColourFit::~ColourFit",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ColourFit::~ColourFit",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ColourFit::~ColourFit",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::SingleColourFit::~SingleColourFit",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::SingleColourFit::~SingleColourFit",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::SingleColourFit::~SingleColourFit",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::ComputeWeightedCovariance",
+          "size": 632,
+          "matched": false,
+          "fuzzy_match_percent": 23.42
+        },
+        {
+          "name": "EATextSquish::SingleColourFit::ComputeEndPoints",
+          "size": 420,
+          "matched": false,
+          "fuzzy_match_percent": 24.3
+        },
+        {
+          "name": "EATextSquish::Vec3::Vec3",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::Vec3::Vec3",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EATextSquish::WriteColourBlock4",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EATextSquish::Compress",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EATextSquish::Max",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EATextSquish::Min",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EATextSquish::Floor",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EATextSquish::Vec3",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EATextSquish::Vec3",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EATextSquish::Vec3",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EATextSquish::Vec3",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EATextSquish::Dot",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EATextSquish::Vec3",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EATextSquish::Sym3x3",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/SexyAppFramework/EATech/FontFusion/4.5a.06/core/util.cpp",
       "total_code": 2128,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1776,
+      "matched_code_percent": 83.46,
       "total_functions": 25,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 24,
+      "matched_functions_percent": 96.0,
+      "fuzzy_match_percent": 94.36,
+      "functions": [
+        {
+          "name": "Android::Util::Register",
+          "size": 352,
+          "matched": false,
+          "fuzzy_match_percent": 65.91
+        },
+        {
+          "name": "Android::Util::WStringFromJString",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::GetPackageName",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::GetUUIDString",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::StringFromJString",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::UI_DeserializeTouchEvent",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::IsAutosmoking",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::StartPNS",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::GetElapsedRealtime",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::NotifyDecompressStage",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::OpenSystemSetting",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::UI_DeserializeKeyEvent",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::Util_MonitorEnter",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::Util_MonitorExit",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::UI_DeserializeFlickEvent",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::UI_DeserializePinchEvent",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::UI_DeserializeLongPressEvent",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::GetJNIEnv",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::GetFacebookObject",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::GetGLViewObject",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::GetGameObject",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::GetHttpObject",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::GetPackageManagerObject",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::GetJVM",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Util::UI_DeserializeBackButtonEvent",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/SexyAppFramework/EATech/coreallocator/1.03.11/include/coreallocator/version.cpp",
@@ -373882,33 +374826,1305 @@
     },
     {
       "name": "src/SexyAppFramework/Feast.cpp",
-      "total_code": 1488,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 26,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 23336,
+      "matched_code": 1360,
+      "matched_code_percent": 5.83,
+      "total_functions": 186,
+      "matched_functions": 25,
+      "matched_functions_percent": 13.44,
+      "fuzzy_match_percent": 6.34,
+      "functions": [
+        {
+          "name": "FEAST::CPrsParser::Parse",
+          "size": 2428,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::GenerateStates",
+          "size": 1284,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::ComputeDFA",
+          "size": 1280,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::MinimizeDFA",
+          "size": 1240,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::ResolveProductionItemRules",
+          "size": 996,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::GetTokenNFA",
+          "size": 916,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::RegisterNonTerminal",
+          "size": 764,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::GetToken",
+          "size": 696,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::RegexGroup",
+          "size": 452,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::InitProductionLexer",
+          "size": 424,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::RegexFactorPrime",
+          "size": 412,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::ComputeEpsilonClosure",
+          "size": 396,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::MakeRule",
+          "size": 316,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::ComputeMove",
+          "size": 292,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::RegisterToken",
+          "size": 276,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::RegexFactor",
+          "size": 264,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::CPrsParser",
+          "size": 248,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::CPrsParser",
+          "size": 248,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::PrsExecute",
+          "size": 240,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartition::Add",
+          "size": 232,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::FinalizeParser",
+          "size": 212,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::RegexRange",
+          "size": 208,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::SetIntercept",
+          "size": 208,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::CLexLexer",
+          "size": 192,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::CLexLexer",
+          "size": 192,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::RegisterExpr",
+          "size": 188,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::ExprOr",
+          "size": 184,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::~CPrsParser",
+          "size": 180,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::~CPrsParser",
+          "size": 180,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexGetStockRegex",
+          "size": 172,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::RegexExpr",
+          "size": 168,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::ExprCreate",
+          "size": 156,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::ExprCreate",
+          "size": 152,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::RegexLetter",
+          "size": 148,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::~CPrsASTNode",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::~CPrsASTNode",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::ExprZeroOrMore",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartition::Remove",
+          "size": 136,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::ExprOneOrMore",
+          "size": 136,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::ExprZeroOrOne",
+          "size": 136,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CDatArray::Realloc",
+          "size": 112,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::PrsSetRuleAlias",
+          "size": 112,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartition::Next",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaNodeFactory::~CLexNfaNodeFactory",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaNodeFactory::~CLexNfaNodeFactory",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::RegexTerm",
+          "size": 96,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParseRule::~CPrsParseRule",
+          "size": 96,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParseRule::~CPrsParseRule",
+          "size": 96,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartition::Owns",
+          "size": 92,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexGetChar",
+          "size": 92,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLibClient::LibRealloc",
+          "size": 92,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::RuleForLexTag",
+          "size": 92,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartitionSet::MoveTo",
+          "size": 88,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::~CLexLexer",
+          "size": 88,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::~CLexLexer",
+          "size": 88,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaNodeFactory::AllocNode",
+          "size": 88,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLibClient::LibMalloc",
+          "size": 88,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaExprFactory::AllocExpr",
+          "size": 84,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartitionSet::Init",
+          "size": 80,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsCSTNode::~CPrsCSTNode",
+          "size": 76,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsCSTNode::~CPrsCSTNode",
+          "size": 76,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::TDatArray",
+          "size": 76,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartitionSet::CLexDfaPartitionSet",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartitionSet::CLexDfaPartitionSet",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaTable::~CLexDfaTable",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaTable::~CLexDfaTable",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::CPrsASTNode",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::CPrsASTNode",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::TDatArray",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaNode::CLexNfaNode",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaNode::CLexNfaNode",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexBitSet::Init",
+          "size": 60,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParseProd::~CPrsParseProd",
+          "size": 60,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParseProd::~CPrsParseProd",
+          "size": 60,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::IPrsParser::PrsCreate",
+          "size": 60,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::FinalizeDFA",
+          "size": 56,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParseState::ProdSortCompare",
+          "size": 56,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaNodeFactory::CLexNfaNodeFactory",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaNodeFactory::CLexNfaNodeFactory",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::PrsBuild",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartition::Init",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartitionSet::SetDFA",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexDestroy",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaExprFactory::CLexNfaExprFactory",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaExprFactory::CLexNfaExprFactory",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::NodeDestroy",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsCSTNode::NodeDestroy",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsCSTNode::NodeGetName",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::PrsDestroy",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartitionSet::MoveToCurrent",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexSetLastError",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexSetText",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::ILexLexer::LexCreate",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaNodeFactory::IdForNode",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParseRule::CPrsParseRule",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParseRule::CPrsParseRule",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::PrsGetLastError",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::TDatArray",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::TDatArray",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::TDatArray",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexGetText",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::NodeGetChild",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsCSTNode::CPrsCSTNode",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsCSTNode::CPrsCSTNode",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::TDatArray",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CDatArray::CDatArray",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CDatArray::CDatArray",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaTable::CLexDfaTable",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaTable::CLexDfaTable",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLibClient::LibError",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::PrsRegisterNT",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexBitSet::CLexBitSet",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexBitSet::CLexBitSet",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexFinalize",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexTokenIntercept",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::PrsRegisterT",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::ILexLexer::ILexLexer",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::ILexLexer::ILexLexer",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::IPrsNode::IPrsNode",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::IPrsNode::IPrsNode",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::IPrsParser::IPrsParser",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::IPrsParser::IPrsParser",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::TDatArray",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CDatArray::~CDatArray",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CDatArray::~CDatArray",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexBitSet::~CLexBitSet",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexBitSet::~CLexBitSet",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexGetToken",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexRegisterToken",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexTokenPriority",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaExprFactory::IdForExpr",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaExprFactory::~CLexNfaExprFactory",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaExprFactory::~CLexNfaExprFactory",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaNodeFactory::NodeForId",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLibClient::LibFree",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::NodeGetToken",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsCSTNode::NodeGetToken",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParseState::~CPrsParseState",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParseState::~CPrsParseState",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexCaseSensitivity",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaExpr::CLexNfaExpr",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaExpr::CLexNfaExpr",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaExprFactory::ExprForId",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParser::PrsGetLexer",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::TDatArray",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexBitSet::CLexBitSet",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexBitSet::CLexBitSet",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexLexer::LexGetLastError",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaNode::~CLexNfaNode",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexNfaNode::~CLexNfaNode",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::NodeGetAttr",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::NodeGetChildCount",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::NodeGetParent",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::NodeGetTag",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode::NodeSetAttr",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::TDatArray",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::TDatArray",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartition::CLexDfaPartition",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartition::CLexDfaPartition",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::TDatArray",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "FEAST::CPrsParseProd",
+          "size": 128,
+          "matched": false,
+          "fuzzy_match_percent": 93.94
+        },
+        {
+          "name": "FEAST::LIB_Va",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CPrsParseState",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::LIB_Errorf",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CPrsParseStateProd",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::LIB_GetClientRef",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::LIB_SetClient",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CLexDfaAcceptItem",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::LIB_ClientMalloc",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::LIB_ClientRealloc",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::LIB_ClientFree",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CLexBitSet",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CLexBitSet",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CLexDfaAcceptItem::operator=",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CPrsASTNode",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CPrsCSTNode",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CPrsCSTNode",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::LIB_GetClient",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CLexDfaPartitionSet",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::LIB_GetDefaultClient",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::LIB_GetVersion",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CLexLexer",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CLexLexer",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CPrsParser",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FEAST::CPrsParser",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/SexyAppFramework/Graphics.cpp",
       "total_code": 1640,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1016,
+      "matched_code_percent": 61.95,
       "total_functions": 15,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 10,
+      "matched_functions_percent": 66.67,
+      "fuzzy_match_percent": 90.73,
+      "functions": [
+        {
+          "name": "Android::Graphics::Register",
+          "size": 352,
+          "matched": false,
+          "fuzzy_match_percent": 64.77
+        },
+        {
+          "name": "Android::Graphics::Native_onSurfaceCreated",
+          "size": 128,
+          "matched": false,
+          "fuzzy_match_percent": 90.62
+        },
+        {
+          "name": "Android::Graphics::GetGLViewSize",
+          "size": 112,
+          "matched": false,
+          "fuzzy_match_percent": 92.86
+        },
+        {
+          "name": "Android::Graphics::Native_onSurfaceChanged",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 80.0
+        },
+        {
+          "name": "Android::Graphics::Native_onDrawFrame",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 66.67
+        },
+        {
+          "name": "Android::Graphics::GetScreenSizeInPixels",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Graphics::GetScreenSizeInPoints",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Graphics::RegisterCallbacks",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Graphics::GetGLViewScaleFactor",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Graphics::SetGLViewScaleFactor",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Graphics::CanSetGLViewScaleFactor",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Graphics::IsOpenGLES20",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Graphics::GetGLViewSysFBO",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Graphics::SetGLViewContext",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::Graphics::SetLoadingContext",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/SexyAppFramework/Image.cpp",
       "total_code": 516,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 516,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "ImageLib::Image::Image",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ImageLib::Image::Image",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ImageLib::Image::Image",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ImageLib::Image::Image",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ImageLib::Image::~Image",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ImageLib::Image::~Image",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ImageLib::Image::~Image",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ImageLib::Image::GetBits",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ImageLib::Image::GetHeight",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ImageLib::Image::GetWidth",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/SexyAppFramework/ImageLib/ImageLib.cpp",
@@ -456503,12 +458719,80 @@
     {
       "name": "src/SexyAppFramework/drivers/audio/wwise/SexyIOHookBlocking.cpp",
       "total_code": 1736,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1104,
+      "matched_code_percent": 63.59,
       "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 10,
+      "matched_functions_percent": 90.91,
+      "fuzzy_match_percent": 98.62,
+      "functions": [
+        {
+          "name": "SexyIOHookBlocking::Open_Aux",
+          "size": 632,
+          "matched": false,
+          "fuzzy_match_percent": 96.2
+        },
+        {
+          "name": "SexyIOHookBlocking::Open",
+          "size": 396,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SexyIOHookBlocking::Open",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SexyIOHookBlocking::Read",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SexyIOHookBlocking::SexyIOHookBlocking",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SexyIOHookBlocking::SexyIOHookBlocking",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SexyIOHookBlocking::~SexyIOHookBlocking",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SexyIOHookBlocking::~SexyIOHookBlocking",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SexyIOHookBlocking::~SexyIOHookBlocking",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SexyIOHookBlocking::Close",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SexyIOHookBlocking::Write",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/SexyAppFramework/drivers/crashtracking/CrashTracking.cpp",
