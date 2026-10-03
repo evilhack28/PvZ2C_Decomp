@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-03T15:29:24+00:00",
+  "generated": "2026-10-03T16:02:01+00:00",
   "measures": {
     "total_functions": 84758,
-    "matched_functions": 25873,
-    "matched_functions_percent": 30.53,
+    "matched_functions": 25888,
+    "matched_functions_percent": 30.54,
     "total_code": 12549340,
-    "matched_code": 1528164,
-    "matched_code_percent": 12.18,
-    "fuzzy_match_percent": 12.71,
-    "started_units": 2169,
+    "matched_code": 1529532,
+    "matched_code_percent": 12.19,
+    "fuzzy_match_percent": 12.72,
+    "started_units": 2170,
     "total_units": 2751,
-    "started_code": 9987860,
-    "started_matched_code": 1528164,
-    "started_percent": 15.3,
+    "started_code": 9989228,
+    "started_matched_code": 1529532,
+    "started_percent": 15.31,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -60865,12 +60865,104 @@
     {
       "name": "src/PvZ2/UserPrefsWrapper.cpp",
       "total_code": 1368,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1368,
+      "matched_code_percent": 100.0,
       "total_functions": 15,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 15,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "UserPrefsWrapper::SetPCPIDStrings",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::GetAge",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::GetPCPID",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::GetString",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::GetStringEx",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::SetAge",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::GetInstance",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::SetString",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::SetBool",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::SetInt",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::GetBool",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::GetInt",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::~UserPrefsWrapper",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::~UserPrefsWrapper",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserPrefsWrapper::~UserPrefsWrapper",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Utils.cpp",
