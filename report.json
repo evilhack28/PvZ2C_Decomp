@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-03T09:13:40+00:00",
+  "generated": "2026-10-03T15:29:24+00:00",
   "measures": {
-    "total_functions": 84755,
-    "matched_functions": 25861,
-    "matched_functions_percent": 30.51,
-    "total_code": 12549320,
-    "matched_code": 1527228,
-    "matched_code_percent": 12.17,
-    "fuzzy_match_percent": 12.7,
-    "started_units": 2168,
+    "total_functions": 84758,
+    "matched_functions": 25873,
+    "matched_functions_percent": 30.53,
+    "total_code": 12549340,
+    "matched_code": 1528164,
+    "matched_code_percent": 12.18,
+    "fuzzy_match_percent": 12.71,
+    "started_units": 2169,
     "total_units": 2751,
-    "started_code": 9986924,
-    "started_matched_code": 1527228,
-    "started_percent": 15.29,
+    "started_code": 9987860,
+    "started_matched_code": 1528164,
+    "started_percent": 15.3,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -60780,13 +60780,87 @@
     },
     {
       "name": "src/PvZ2/UserInfo.cpp",
-      "total_code": 916,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 9,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 936,
+      "matched_code": 936,
+      "matched_code_percent": 100.0,
+      "total_functions": 12,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "UserInfo::UserInfo",
+          "size": 268,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserInfo::UserInfo",
+          "size": 268,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserInfo::setHeadShotId",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserInfo::unlockHeadShotId",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserInfo::~UserInfo",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserInfo::~UserInfo",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserInfo::getEmail",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserInfo::getPhone",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserInfo::setEmail",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserInfo::setPhone",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserInfo::getName",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UserInfo::setName",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/UserPrefsWrapper.cpp",
