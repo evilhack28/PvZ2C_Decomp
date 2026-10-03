@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-02T21:48:08+00:00",
+  "generated": "2026-10-03T09:13:40+00:00",
   "measures": {
-    "total_functions": 84600,
-    "matched_functions": 25774,
-    "matched_functions_percent": 30.47,
-    "total_code": 12533448,
-    "matched_code": 1516648,
-    "matched_code_percent": 12.1,
-    "fuzzy_match_percent": 12.63,
-    "started_units": 2167,
+    "total_functions": 84755,
+    "matched_functions": 25861,
+    "matched_functions_percent": 30.51,
+    "total_code": 12549320,
+    "matched_code": 1527228,
+    "matched_code_percent": 12.17,
+    "fuzzy_match_percent": 12.7,
+    "started_units": 2168,
     "total_units": 2751,
-    "started_code": 9962604,
-    "started_matched_code": 1516648,
-    "started_percent": 15.22,
+    "started_code": 9986924,
+    "started_matched_code": 1527228,
+    "started_percent": 15.29,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -105344,13 +105344,1257 @@
     },
     {
       "name": "src/PvZ2/griditems/GridItem.cpp",
-      "total_code": 8448,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 52,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 24320,
+      "matched_code": 9804,
+      "matched_code_percent": 40.31,
+      "total_functions": 207,
+      "matched_functions": 84,
+      "matched_functions_percent": 40.58,
+      "fuzzy_match_percent": 44.71,
+      "functions": [
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItem::TakeDamage",
+          "size": 476,
+          "matched": false,
+          "fuzzy_match_percent": 47.06
+        },
+        {
+          "name": "GridItem::MatchesAny",
+          "size": 472,
+          "matched": false,
+          "fuzzy_match_percent": 56.3
+        },
+        {
+          "name": "GridItem::MatchesAny",
+          "size": 360,
+          "matched": false,
+          "fuzzy_match_percent": 70.0
+        },
+        {
+          "name": "GridItem::TakeCure",
+          "size": 356,
+          "matched": false,
+          "fuzzy_match_percent": 92.31
+        },
+        {
+          "name": "GridItem::NotifyApplyCondition",
+          "size": 804,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::onGridItemInitialize",
+          "size": 560,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::SetIsSleepping",
+          "size": 556,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::onUpdate",
+          "size": 488,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::SetInvincible",
+          "size": 372,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::DrawCollisionInfo",
+          "size": 320,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::registerForEvents",
+          "size": 296,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::IsDamageableByPlant",
+          "size": 268,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::calcCollisionRect",
+          "size": 248,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::NotifyEndCondition",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetExtraHitPointsmodifier",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::SetGridLocationUnbounded",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::KillGridItem",
+          "size": 216,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::CalcPlantProjectileTargetLocation",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GridItemInitializeUnbounded",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GridItem",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GridItem",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GridItemDestroyedEntity",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GridItemInitialize",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::TakeFatalDamage",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::GetPacketCoolDown",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::StartLossLife",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::~GridItem",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::~GridItem",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::SetGridLocation",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetEntityHeight",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::SetGridLocation",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::isSameLocation",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::onGatherPlantingRestrictions",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::IsDamageable",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::AddResourceRequirements",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::GridItemType",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::GridItemType",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::IsDamageableByPlants",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::IsDamageableByZombies",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::~GridItemType",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::~GridItemType",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetProps",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::EndLossLife",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GatherPlantingRestrictions",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetGridLocation",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetType",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::GetPropsPtr",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::NotifyHoloEnd",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::~GridItem",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::~GridItemType",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::ApplyCondition",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::EndCondition",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::ClearConditions",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::CanBeTargetedBy",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::CollidesWithType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetAttachedBoardEntityManager",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetAttachedEffectManager",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetConditionTracker",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetHitpoints",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetMaxHitpoints",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::HasCondition",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::IsInvincible",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::SetConditionTracker",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::ShouldBlockLevelCompletion",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::onDestroy",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::GetNonAudioResourceGroups",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::GetProps",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::onGridItemPostInitialize",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::onKilled",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItem::onTakeDamage",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemType::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/griditems/GridItemAcid.cpp",
@@ -120041,36 +121285,24 @@
     {
       "name": "src/PvZ2/griditems/GridItemPropertySheet.cpp",
       "total_code": 872,
-      "matched_code": 496,
-      "matched_code_percent": 56.88,
+      "matched_code": 632,
+      "matched_code_percent": 72.48,
       "total_functions": 10,
-      "matched_functions": 6,
-      "matched_functions_percent": 60.0,
-      "fuzzy_match_percent": 88.99,
+      "matched_functions": 8,
+      "matched_functions_percent": 80.0,
+      "fuzzy_match_percent": 96.33,
       "functions": [
         {
           "name": "GridItemPropertySheet::GridItemPropertySheet",
           "size": 120,
           "matched": false,
-          "fuzzy_match_percent": 70.0
+          "fuzzy_match_percent": 86.67
         },
         {
           "name": "GridItemPropertySheet::GridItemPropertySheet",
           "size": 120,
           "matched": false,
-          "fuzzy_match_percent": 70.0
-        },
-        {
-          "name": "GridItemPropertySheet::~GridItemPropertySheet",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 82.35
-        },
-        {
-          "name": "GridItemPropertySheet::~GridItemPropertySheet",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 82.35
+          "fuzzy_match_percent": 86.67
         },
         {
           "name": "GridItemPropertySheet::StaticClassInit",
@@ -120081,6 +121313,18 @@
         {
           "name": "GridItemPropertySheet::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemPropertySheet::~GridItemPropertySheet",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemPropertySheet::~GridItemPropertySheet",
+          "size": 68,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -212981,11 +214225,11 @@
     {
       "name": "src/PvZ2/plants/Plant.cpp",
       "total_code": 87192,
-      "matched_code": 24544,
-      "matched_code_percent": 28.15,
+      "matched_code": 25184,
+      "matched_code_percent": 28.88,
       "total_functions": 318,
-      "matched_functions": 249,
-      "matched_functions_percent": 78.3,
+      "matched_functions": 250,
+      "matched_functions_percent": 78.62,
       "fuzzy_match_percent": 37.6,
       "functions": [
         {
@@ -213295,12 +214539,6 @@
           "fuzzy_match_percent": 0.1
         },
         {
-          "name": "Plant::SetIsSleepping",
-          "size": 640,
-          "matched": false,
-          "fuzzy_match_percent": 99.38
-        },
-        {
           "name": "PlantType::HasPlantAdventureFlag",
           "size": 388,
           "matched": false,
@@ -213401,6 +214639,12 @@
           "size": 112,
           "matched": false,
           "fuzzy_match_percent": 82.14
+        },
+        {
+          "name": "Plant::SetIsSleepping",
+          "size": 640,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Plant::PlaySongEffect",

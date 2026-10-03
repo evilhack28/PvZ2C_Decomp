@@ -174,7 +174,8 @@ def listing(elf, name, symbolise=True):
             if rel:
                 ops = _IMM.sub(f'<{rel[0]}{_tail(rel[2])}>', ops, count=1)
             dst = ops.split(',')[0].strip()
-            pages.pop(dst, None)
+            if not (m == 'ldp' and '[sp' in ops):  # epilogue restore: code after the ret still has the page
+                pages.pop(dst, None)
 
         out.append((m, ops))
     return out
