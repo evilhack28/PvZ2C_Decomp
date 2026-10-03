@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-03T16:02:01+00:00",
+  "generated": "2026-10-03T16:37:06+00:00",
   "measures": {
-    "total_functions": 84758,
-    "matched_functions": 25888,
-    "matched_functions_percent": 30.54,
-    "total_code": 12549340,
-    "matched_code": 1529532,
+    "total_functions": 84762,
+    "matched_functions": 25900,
+    "matched_functions_percent": 30.56,
+    "total_code": 12549664,
+    "matched_code": 1530248,
     "matched_code_percent": 12.19,
-    "fuzzy_match_percent": 12.72,
-    "started_units": 2170,
+    "fuzzy_match_percent": 12.73,
+    "started_units": 2171,
     "total_units": 2751,
-    "started_code": 9989228,
-    "started_matched_code": 1529532,
-    "started_percent": 15.31,
+    "started_code": 9990228,
+    "started_matched_code": 1530248,
+    "started_percent": 15.32,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -57970,13 +57970,99 @@
     },
     {
       "name": "src/PvZ2/TimeLine.cpp",
-      "total_code": 676,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 1000,
+      "matched_code": 716,
+      "matched_code_percent": 71.6,
+      "total_functions": 14,
+      "matched_functions": 12,
+      "matched_functions_percent": 85.71,
+      "fuzzy_match_percent": 86.4,
+      "functions": [
+        {
+          "name": "TimeLine::operator=",
+          "size": 56,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "TimeLine::Updater::Progress",
+          "size": 228,
+          "matched": false,
+          "fuzzy_match_percent": 64.91
+        },
+        {
+          "name": "TimeLine::Update",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeLine::AddEvent",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeLine::AddEvent",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeLine::TimeLine",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeLine::TimeLine",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeLine::TimeLine",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeLine::TimeLine",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeLine::Updater::Updater",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeLine::Updater::Updater",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeLine::Initialize",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeLine::~TimeLine",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeLine::~TimeLine",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/TimeUtil.cpp",
