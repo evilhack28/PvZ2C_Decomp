@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-03T17:47:11+00:00",
+  "generated": "2026-10-03T18:59:48+00:00",
   "measures": {
     "total_functions": 84762,
-    "matched_functions": 25904,
-    "matched_functions_percent": 30.56,
+    "matched_functions": 25915,
+    "matched_functions_percent": 30.57,
     "total_code": 12549664,
-    "matched_code": 1531464,
-    "matched_code_percent": 12.2,
-    "fuzzy_match_percent": 12.74,
-    "started_units": 2172,
+    "matched_code": 1536028,
+    "matched_code_percent": 12.24,
+    "fuzzy_match_percent": 12.78,
+    "started_units": 2173,
     "total_units": 2751,
-    "started_code": 9991444,
-    "started_matched_code": 1531464,
-    "started_percent": 15.33,
+    "started_code": 9996420,
+    "started_matched_code": 1536028,
+    "started_percent": 15.37,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -9471,12 +9471,86 @@
     {
       "name": "src/PvZ2/GachaItemDisplayer.cpp",
       "total_code": 4976,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 4564,
+      "matched_code_percent": 91.72,
       "total_functions": 12,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 11,
+      "matched_functions_percent": 91.67,
+      "fuzzy_match_percent": 99.44,
+      "functions": [
+        {
+          "name": "GachaItemDisplayer::ButtonDepress",
+          "size": 412,
+          "matched": false,
+          "fuzzy_match_percent": 93.2
+        },
+        {
+          "name": "GachaItemDisplayer::GachaItemDisplayer",
+          "size": 1564,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GachaItemDisplayer::GachaItemDisplayer",
+          "size": 1564,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GachaItemDisplayer::Draw",
+          "size": 504,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GachaItemDisplayer::Resize",
+          "size": 316,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GachaItemDisplayer::OnNotifyTutorialResponse",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GachaItemDisplayer::~GachaItemDisplayer",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GachaItemDisplayer::~GachaItemDisplayer",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GachaItemDisplayer::getGachaImage",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GachaItemDisplayer::Create",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GachaItemDisplayer::~GachaItemDisplayer",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GachaItemDisplayer::DrawAll",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/GameCenterProxy.cpp",
