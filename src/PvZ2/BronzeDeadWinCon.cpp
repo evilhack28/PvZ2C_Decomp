@@ -8,6 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "BronzeDeadWinCon.h"
+#include "LevelModuleManager.h"
+#include "BoardEntity.h"
+#include "Zombie.h"
+#include "LawnApp.h"
+#include "Board.h"
+#include "BronzeModule.h"
+#include "EntityFinder.h"
+#include "GridItemArmrack.h"
+#include "GridItemFlame.h"
 
 BronzeDeadWinCon::BronzeDeadWinCon()
 {
@@ -38,3 +47,36 @@ void BronzeDeadWinConProperties::StaticClassInit()
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(BronzeDeadWinCon);
+
+/////////////// BronzeDeadWinCon ///////////////
+
+void BronzeDeadWinCon::registerForEvents()
+{
+	getManager()->RegisterWinCondition(Sexy::MakeDelegate(*this, &BronzeDeadWinCon::checkWin));
+}
+
+bool BronzeDeadWinCon::canDamage(const BoardEntity* i_entity) const
+{
+	if (!i_entity)
+		return false;
+	return i_entity->IsA<Zombie>() || i_entity->IsA<GridItemArmrack>() || i_entity->IsA<GridItemFlame>();
+}
+
+bool BronzeDeadWinCon::checkWin()
+{
+	BronzeModule* bronze = gLawnApp->m_board->GetLevelModuleManager()->GetModuleByClass<BronzeModule>();
+	if (!bronze)
+		return false;
+	int stumps = bronze->getBronzeStumpCount();
+	if (stumps != 0)
+		return false;
+	std::vector<BoardEntity*> entities;
+	EntityFinder::GetEntities(entities, ENTITYTYPE_ZOMBIE | ENTITYTYPE_GRIDITEM);
+	DamageInfo damage(99999.0f, (DamageTypeFlags)0x800, nullptr, Sexy::Point(-1, -1), stumps, ResilienceDamageInfo(1.0f, 0.0f));
+	for (size_t i = 0; i < entities.size(); ++i)
+	{
+		if (canDamage(entities[i]))
+			entities[i]->TakeDamage(damage);
+	}
+	return true;
+}

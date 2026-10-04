@@ -8,6 +8,12 @@
 #include "SexyAppFramework/Common.h"
 
 #include "BossProgressMeterRift.h"
+#include "ChallengeScoringUI.h"
+#include "GameEventMgr.h"
+#include "ZombossRiftBattleModule.h"
+#include "ResourceHelpers.h"
+
+static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_HUD_INGAME_PROGRESS_METER_FILL_ZOMBOSS_BONUS("IMAGE_UI_HUD_INGAME_PROGRESS_METER_FILL_ZOMBOSS_BONUS");
 
 BossProgressMeterRift::~BossProgressMeterRift()
 {
@@ -36,4 +42,35 @@ void BossProgressMeterRift::initLoadingResourcesGroupList()
 BossProgressMeterRift::BossProgressMeterRift()
 {
 	m_lootPhaseActive = 0;
+}
+
+void BossProgressMeterRift::Draw(Graphics* i_g)
+{
+	BossProgressMeter::Draw(i_g);
+}
+
+float BossProgressMeterRift::drawCalcFillPercent(int i_phaseNumber, float i_prevPhasePercentage)
+{
+	if (m_lootPhaseActive)
+		return 100.0f;
+	return BossProgressMeter::drawCalcFillPercent(i_phaseNumber, i_prevPhasePercentage);
+}
+
+void BossProgressMeterRift::onEnterLootPhase()
+{
+	getStageCounterUI()->SetRiftBonusMode(true);
+	m_lootPhaseActive = true;
+}
+
+ImagePtr BossProgressMeterRift::getMeterFillImage()
+{
+	if (m_lootPhaseActive)
+		return IMAGE_UI_HUD_INGAME_PROGRESS_METER_FILL_ZOMBOSS_BONUS;
+	return BossProgressMeter::getMeterFillImage();
+}
+
+void BossProgressMeterRift::registerForEvents()
+{
+	BossProgressMeter::registerForEvents();
+	gMessageRouter->Subscribe(Message::BossRiftEnterLootPhase, Sexy::MakeDelegate(*this, &BossProgressMeterRift::onEnterLootPhase));
 }

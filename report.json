@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-04T19:16:04+00:00",
+  "generated": "2026-10-04T23:26:42+00:00",
   "measures": {
-    "total_functions": 85023,
-    "matched_functions": 26458,
-    "matched_functions_percent": 31.12,
-    "total_code": 12597340,
-    "matched_code": 1615772,
-    "matched_code_percent": 12.83,
-    "fuzzy_match_percent": 13.42,
-    "started_units": 2192,
+    "total_functions": 85034,
+    "matched_functions": 26581,
+    "matched_functions_percent": 31.26,
+    "total_code": 12597632,
+    "matched_code": 1635608,
+    "matched_code_percent": 12.98,
+    "fuzzy_match_percent": 13.6,
+    "started_units": 2201,
     "total_units": 2751,
-    "started_code": 10074056,
-    "started_matched_code": 1615772,
-    "started_percent": 16.04,
+    "started_code": 10085148,
+    "started_matched_code": 1635608,
+    "started_percent": 16.22,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -2979,46 +2979,22 @@
     {
       "name": "src/PvZ2/BossProgressMeterRift.cpp",
       "total_code": 876,
-      "matched_code": 576,
-      "matched_code_percent": 65.75,
+      "matched_code": 876,
+      "matched_code_percent": 100.0,
       "total_functions": 16,
-      "matched_functions": 11,
-      "matched_functions_percent": 68.75,
-      "fuzzy_match_percent": 65.75,
+      "matched_functions": 16,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "BossProgressMeterRift::registerForEvents",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "BossProgressMeterRift::getMeterFillImage",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "BossProgressMeterRift::onEnterLootPhase",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "BossProgressMeterRift::drawCalcFillPercent",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "BossProgressMeterRift::Draw",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "BossProgressMeterRift::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BossProgressMeterRift::registerForEvents",
+          "size": 156,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -3029,6 +3005,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "BossProgressMeterRift::getMeterFillImage",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "BossProgressMeterRift::BossProgressMeterRift",
           "size": 60,
           "matched": true,
@@ -3037,6 +3019,12 @@
         {
           "name": "BossProgressMeterRift::BossProgressMeterRift",
           "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BossProgressMeterRift::onEnterLootPhase",
+          "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -3065,8 +3053,20 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "BossProgressMeterRift::drawCalcFillPercent",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "BossProgressMeterRift::IsAbstract",
           "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BossProgressMeterRift::Draw",
+          "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -3087,34 +3087,28 @@
     {
       "name": "src/PvZ2/BronzeDeadWinCon.cpp",
       "total_code": 1540,
-      "matched_code": 884,
-      "matched_code_percent": 57.4,
+      "matched_code": 1540,
+      "matched_code_percent": 100.0,
       "total_functions": 23,
-      "matched_functions": 20,
-      "matched_functions_percent": 86.96,
-      "fuzzy_match_percent": 57.4,
+      "matched_functions": 23,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "BronzeDeadWinCon::checkWin",
           "size": 412,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "BronzeDeadWinCon::registerForEvents",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "BronzeDeadWinCon::canDamage",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "BronzeDeadWinConProperties::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BronzeDeadWinCon::registerForEvents",
+          "size": 144,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -3127,6 +3121,12 @@
         {
           "name": "BronzeDeadWinCon::StaticGetClass",
           "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BronzeDeadWinCon::canDamage",
+          "size": 100,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -3237,78 +3237,54 @@
     {
       "name": "src/PvZ2/CannonLaser.cpp",
       "total_code": 3860,
-      "matched_code": 552,
-      "matched_code_percent": 14.3,
+      "matched_code": 3860,
+      "matched_code_percent": 100.0,
       "total_functions": 21,
-      "matched_functions": 10,
-      "matched_functions_percent": 47.62,
-      "fuzzy_match_percent": 14.3,
+      "matched_functions": 21,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "CannonLaser::Draw",
           "size": 580,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CannonLaser::onAnimationDone",
           "size": 556,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CannonLaser::Initialise",
           "size": 516,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CannonLaser::Accept",
           "size": 416,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CannonLaser::getCollisionEntities",
           "size": 372,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CannonLaser::LoadPopanimEffect",
           "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CannonLaser::onUpdate",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CannonLaser::CannonLaser",
-          "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CannonLaser::CannonLaser",
-          "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CannonLaser::GetCross",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CannonLaser::SetTarget",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CannonLaser::StaticClassInit",
@@ -3323,6 +3299,24 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "CannonLaser::CannonLaser",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CannonLaser::CannonLaser",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CannonLaser::GetCross",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "CannonLaser::~CannonLaser",
           "size": 72,
           "matched": true,
@@ -3331,6 +3325,12 @@
         {
           "name": "CannonLaser::~CannonLaser",
           "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CannonLaser::SetTarget",
+          "size": 64,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -3885,12 +3885,110 @@
     {
       "name": "src/PvZ2/ComboBox.cpp",
       "total_code": 2508,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2508,
+      "matched_code_percent": 100.0,
       "total_functions": 16,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 16,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "ComboBox::OnCreate",
+          "size": 408,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::AddSubMenu",
+          "size": 324,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::ShowMenu",
+          "size": 288,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::GetSubMenu",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::ClickComboBox",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::~ComboBox",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::~ComboBox",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::Draw",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::Resize",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::ComboBox",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::ComboBox",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::SetDisabled",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::ClickComboBoxMain",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::HideMenu",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::~ComboBox",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComboBox::ButtonDepress",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/CommandConsole.cpp",
@@ -3941,22 +4039,86 @@
     {
       "name": "src/PvZ2/ConsoleApp.cpp",
       "total_code": 1300,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 736,
+      "matched_code_percent": 56.62,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 6,
+      "matched_functions_percent": 75.0,
+      "fuzzy_match_percent": 96.31,
+      "functions": [
+        {
+          "name": "ConsoleApp::ConsolePrintf",
+          "size": 436,
+          "matched": false,
+          "fuzzy_match_percent": 95.41
+        },
+        {
+          "name": "ConsoleApp::DebugKeyDown",
+          "size": 128,
+          "matched": false,
+          "fuzzy_match_percent": 78.12
+        },
+        {
+          "name": "ConsoleApp::ConsolePrintf",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConsoleApp::~ConsoleApp",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConsoleApp::~ConsoleApp",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConsoleApp::ConsoleApp",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConsoleApp::ConsoleApp",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConsoleApp::~ConsoleApp",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/ConsoleListener.cpp",
       "total_code": 632,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 180,
+      "matched_code_percent": 28.48,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 1,
+      "matched_functions_percent": 50.0,
+      "fuzzy_match_percent": 62.03,
+      "functions": [
+        {
+          "name": "ConsoleListener::AddConsoleAction",
+          "size": 452,
+          "matched": false,
+          "fuzzy_match_percent": 46.9
+        },
+        {
+          "name": "ConsoleListener::DefineConsoleCommands",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/ConsumptionRewardInfo.cpp",
@@ -5041,136 +5203,106 @@
     {
       "name": "src/PvZ2/CrazyOlafTest.cpp",
       "total_code": 9808,
-      "matched_code": 1352,
-      "matched_code_percent": 13.78,
+      "matched_code": 6860,
+      "matched_code_percent": 69.94,
       "total_functions": 40,
-      "matched_functions": 20,
-      "matched_functions_percent": 50.0,
-      "fuzzy_match_percent": 13.78,
+      "matched_functions": 37,
+      "matched_functions_percent": 92.5,
+      "fuzzy_match_percent": 94.56,
       "functions": [
         {
           "name": "CrazyOlafTest::initializeModule",
           "size": 1492,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyOlafTest::plantAt",
-          "size": 1216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 81.23
         },
         {
           "name": "CrazyOlafTest::pickAndPerformAction",
           "size": 880,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyOlafTest::pickValidPlantType",
-          "size": 756,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyOlafTest::pickRandomGridSquare",
-          "size": 576,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 72.97
         },
         {
           "name": "CrazyOlafTest::pickRandomPlant",
           "size": 576,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 97.22
+        },
+        {
+          "name": "CrazyOlafTest::plantAt",
+          "size": 1216,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyOlafTest::pickValidPlantType",
+          "size": 756,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyOlafTest::pickRandomGridSquare",
+          "size": 576,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyOlafTestProperties::StaticClassInit",
           "size": 564,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyOlafTest::pickRandomPlantGroup",
           "size": 388,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyOlafTest::registerForEvents",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyOlafTest::destroyAllPlantsOfType",
           "size": 336,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyOlafTest::unloadPlantType",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyOlafTest::refreshDisplayText",
           "size": 284,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyOlafTest::loadPlantType",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyOlafTest::popFreeQueue",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyOlafTest::plantAt",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyOlafTest::onUpdate",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyOlafTest::onPlantDied",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyOlafTest::onZombieAddedToBoard",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyOlafTest::onZombieDied",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyOlafTest::pushFreeQueue",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyOlafTest::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyOlafTest::plantAt",
+          "size": 156,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -5207,6 +5339,12 @@
         {
           "name": "CrazyOlafTestProperties::CrazyOlafTestProperties",
           "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyOlafTest::onUpdate",
+          "size": 92,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -5259,7 +5397,31 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "CrazyOlafTest::onPlantDied",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyOlafTest::onZombieAddedToBoard",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyOlafTest::onZombieDied",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "CrazyOlafTest::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyOlafTest::pushFreeQueue",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -8258,13 +8420,117 @@
     },
     {
       "name": "src/PvZ2/DaveTask.cpp",
-      "total_code": 1604,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 15,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 1616,
+      "matched_code": 1616,
+      "matched_code_percent": 100.0,
+      "total_functions": 17,
+      "matched_functions": 17,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "DaveTask::GetRemainTime",
+          "size": 276,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::LoadState",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::SaveState",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::Init",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::ForceSetState",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::DaveTask",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::DaveTask",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::~DaveTask",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::~DaveTask",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::TaskCompleted",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::~DaveTask",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::Destory",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::StaticNew",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DaveTask::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/DebugLog.cpp",
@@ -20566,13 +20832,75 @@
     },
     {
       "name": "src/PvZ2/HeroPlant.cpp",
-      "total_code": 1052,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 1064,
+      "matched_code": 1064,
+      "matched_code_percent": 100.0,
+      "total_functions": 10,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "HeroPlantPropertySheet::StaticClassInit",
+          "size": 480,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeroPlantPropertySheet::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeroPlantPropertySheet::HeroPlantPropertySheet",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeroPlantPropertySheet::HeroPlantPropertySheet",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeroPlantPropertySheet::~HeroPlantPropertySheet",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeroPlantPropertySheet::~HeroPlantPropertySheet",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeroPlantPropertySheet::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeroPlantPropertySheet::~HeroPlantPropertySheet",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeroPlantPropertySheet::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HeroPlantPropertySheet::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/HighTideSign.cpp",
@@ -22935,22 +23263,140 @@
     {
       "name": "src/PvZ2/MeleePlantTargeter.cpp",
       "total_code": 1712,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1712,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "MeleePlantTargeter::GetAdjacentTargets",
+          "size": 484,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MeleePlantTargeter::GetBestTargetDirection",
+          "size": 288,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MeleePlantTargeter::getZombieTarget",
+          "size": 260,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MeleePlantTargeter::GetBestTarget",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MeleePlantTargeter::getGridItemTarget",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MeleePlantTargeter::getPlantAttackRect",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MeleePlantTargeter::hasGridItemLeft",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MeleePlantTargeter::hasGridItemRight",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MeleePlantTargeter::hasZombieLeft",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MeleePlantTargeter::hasZombieRight",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MeleePlantTargeter::getPlantsFramework",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/MergePlayerInfosOnServer.cpp",
       "total_code": 692,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 692,
+      "matched_code_percent": 100.0,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "MergePlayerInfosOnServer::MergePlayerInfosOnServer",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MergePlayerInfosOnServer::MergePlayerInfosOnServer",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MergePlayerInfosOnServer::onBindAskForMerge",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MergePlayerInfosOnServer::addArguments",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MergePlayerInfosOnServer::~MergePlayerInfosOnServer",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MergePlayerInfosOnServer::~MergePlayerInfosOnServer",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MergePlayerInfosOnServer::~MergePlayerInfosOnServer",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MergePlayerInfosOnServer::isWaitingForResponse",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/MetricsCollector.cpp",
@@ -41593,12 +42039,98 @@
     {
       "name": "src/PvZ2/ParallaxCache.cpp",
       "total_code": 1300,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1300,
+      "matched_code_percent": 100.0,
       "total_functions": 14,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 14,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "ParallaxCache::expandStorageIfNeededForLayer",
+          "size": 320,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::InitializeMultipliers",
+          "size": 264,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::RecalculateOffsets",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::setMultiplier",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::ParallaxCache",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::ParallaxCache",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::GetMaximumLayerIndex",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::~ParallaxCache",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::~ParallaxCache",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::GetOffsetForLayer",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::getMultiplier",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::~ParallaxCache",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::GetMinimumLayerIndex",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ParallaxCache::layerIndexToInternalIndex",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/PinataStyleChooser.cpp",
@@ -59450,13 +59982,57 @@
     },
     {
       "name": "src/PvZ2/TodLib/TodDebug.cpp",
-      "total_code": 0,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 0,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 268,
+      "matched_code": 256,
+      "matched_code_percent": 95.52,
+      "total_functions": 7,
+      "matched_functions": 4,
+      "matched_functions_percent": 57.14,
+      "fuzzy_match_percent": 95.52,
+      "functions": [
+        {
+          "name": "TodHesitationBracket::EndBracket",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "TodHesitationBracket::~TodHesitationBracket",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "TodHesitationBracket::~TodHesitationBracket",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "TodHesitationBracket::TodHesitationBracket",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TodHesitationBracket::TodHesitationBracket",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HesitationBuffer::HesitationBuffer",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HesitationBuffer::HesitationBuffer",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Toggles.cpp",
