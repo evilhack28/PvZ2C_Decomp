@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-04T00:39:33+00:00",
+  "generated": "2026-10-04T01:16:46+00:00",
   "measures": {
     "total_functions": 85000,
-    "matched_functions": 26069,
-    "matched_functions_percent": 30.67,
+    "matched_functions": 26086,
+    "matched_functions_percent": 30.69,
     "total_code": 12593604,
-    "matched_code": 1553112,
-    "matched_code_percent": 12.33,
-    "fuzzy_match_percent": 12.92,
+    "matched_code": 1555716,
+    "matched_code_percent": 12.35,
+    "fuzzy_match_percent": 12.94,
     "started_units": 2183,
     "total_units": 2751,
     "started_code": 10058272,
-    "started_matched_code": 1553112,
-    "started_percent": 15.44,
+    "started_matched_code": 1555716,
+    "started_percent": 15.47,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -1017,118 +1017,40 @@
     {
       "name": "src/PvZ2/Armor.cpp",
       "total_code": 2972,
-      "matched_code": 368,
-      "matched_code_percent": 12.38,
+      "matched_code": 2972,
+      "matched_code_percent": 100.0,
       "total_functions": 24,
-      "matched_functions": 7,
-      "matched_functions_percent": 29.17,
-      "fuzzy_match_percent": 12.38,
+      "matched_functions": 24,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Armor::TakeDamage",
           "size": 716,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Armor::DropArmor",
           "size": 620,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Armor::updateDamageState",
           "size": 324,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::InitializeArmor",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::ReinitializeFromPropertySheet",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::Armor",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::Armor",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::SetPropertySheet",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::~Armor",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::~Armor",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::getProps",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::GetArmorType",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::onPostLoad",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::DestroyArmor",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::GetArmorFlags",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::~Armor",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Armor::IsDecorativePassthrough",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Armor::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::InitializeArmor",
+          "size": 140,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -1139,8 +1061,86 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Armor::ReinitializeFromPropertySheet",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::Armor",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::Armor",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::SetPropertySheet",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::~Armor",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::~Armor",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::getProps",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::GetArmorType",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Armor::StaticNew",
           "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::onPostLoad",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::DestroyArmor",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::GetArmorFlags",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::~Armor",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Armor::IsDecorativePassthrough",
+          "size": 28,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
