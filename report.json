@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-03T23:51:06+00:00",
+  "generated": "2026-10-04T00:08:28+00:00",
   "measures": {
     "total_functions": 85000,
-    "matched_functions": 26051,
-    "matched_functions_percent": 30.65,
+    "matched_functions": 26061,
+    "matched_functions_percent": 30.66,
     "total_code": 12593604,
-    "matched_code": 1551940,
-    "matched_code_percent": 12.32,
-    "fuzzy_match_percent": 12.88,
-    "started_units": 2182,
+    "matched_code": 1552680,
+    "matched_code_percent": 12.33,
+    "fuzzy_match_percent": 12.89,
+    "started_units": 2183,
     "total_units": 2751,
-    "started_code": 10057532,
-    "started_matched_code": 1551940,
-    "started_percent": 15.43,
+    "started_code": 10058272,
+    "started_matched_code": 1552680,
+    "started_percent": 15.44,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -21,12 +21,74 @@
     {
       "name": "src/LuaEngine/lua_support/CUIAnim.cpp",
       "total_code": 740,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 740,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "Lua::CUIAnim::Move",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Lua::CUIAnim::CUIAnim",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Lua::CUIAnim::CUIAnim",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Lua::CUIAnim::PlayAction",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Lua::CUIAnim::~CUIAnim",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Lua::CUIAnim::~CUIAnim",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Lua::CUIAnim::Draw",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Lua::CUIAnim::Update",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Lua::CUIAnim::SetScale",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Lua::CUIAnim::~CUIAnim",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/AccountRemove.cpp",
