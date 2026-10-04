@@ -63,5 +63,5 @@ def function(text, needle):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        raise SystemExit('usage: python tools/ghidra.py <hex|Class::method> [...]')
+        raise SystemExit('usage: py -3 tools/ghidra.py <hex|Class::method> [...]')
     print(decompile(*sys.argv[1:], fresh='--fresh' in sys.argv))

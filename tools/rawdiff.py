@@ -1,6 +1,6 @@
 """Compares one of our functions against a raw address range in the game.
 
-    python tools/rawdiff.py <our-symbol> 0x3f37340 1556
+    py -3 tools/rawdiff.py <our-symbol> 0x3f37340 1556
 
 Most of a translation unit never reaches `.dynsym`. Local clones, template
 instantiations and the classes the reflection macros declare inside a

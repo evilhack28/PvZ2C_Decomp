@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-04T11:16:48+00:00",
+  "generated": "2026-10-04T13:21:32+00:00",
   "measures": {
     "total_functions": 85011,
-    "matched_functions": 26180,
-    "matched_functions_percent": 30.8,
+    "matched_functions": 26275,
+    "matched_functions_percent": 30.91,
     "total_code": 12595700,
-    "matched_code": 1571904,
-    "matched_code_percent": 12.48,
-    "fuzzy_match_percent": 13.06,
-    "started_units": 2185,
+    "matched_code": 1591408,
+    "matched_code_percent": 12.63,
+    "fuzzy_match_percent": 13.22,
+    "started_units": 2186,
     "total_units": 2751,
-    "started_code": 10065756,
-    "started_matched_code": 1571904,
-    "started_percent": 15.62,
+    "started_code": 10066300,
+    "started_matched_code": 1591408,
+    "started_percent": 15.81,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -1979,273 +1979,261 @@
     {
       "name": "src/PvZ2/AssetsManagerEx.cpp",
       "total_code": 12564,
-      "matched_code": 12,
-      "matched_code_percent": 0.1,
+      "matched_code": 12008,
+      "matched_code_percent": 95.57,
       "total_functions": 45,
-      "matched_functions": 2,
-      "matched_functions_percent": 4.44,
-      "fuzzy_match_percent": 0.1,
+      "matched_functions": 44,
+      "matched_functions_percent": 97.78,
+      "fuzzy_match_percent": 99.84,
       "functions": [
-        {
-          "name": "AssetsManagerEx::startUpdate",
-          "size": 1100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AssetsManagerEx::AssetsManagerEx",
-          "size": 920,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AssetsManagerEx::AssetsManagerEx",
-          "size": 920,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AssetsManagerEx::FileDownloadSuccess",
-          "size": 872,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AssetsManagerEx::loadLocalManifest",
-          "size": 616,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AssetsManagerEx::parseManifest",
-          "size": 596,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "AssetsManagerEx::initManifests",
           "size": 556,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 96.4
+        },
+        {
+          "name": "AssetsManagerEx::startUpdate",
+          "size": 1100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AssetsManagerEx::AssetsManagerEx",
+          "size": 920,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AssetsManagerEx::AssetsManagerEx",
+          "size": 920,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AssetsManagerEx::FileDownloadSuccess",
+          "size": 872,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AssetsManagerEx::loadLocalManifest",
+          "size": 616,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AssetsManagerEx::parseManifest",
+          "size": 596,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::parseVersion",
           "size": 556,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::checkUpdate",
           "size": 512,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::batchDownload",
           "size": 504,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::downloadManifest",
           "size": 456,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::versionCheck",
           "size": 440,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::update",
           "size": 432,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::ServiceRequestCompleted",
           "size": 416,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::updateAssets",
           "size": 384,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::decompressDownloadedZip",
           "size": 364,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::updateSucceed",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::~AssetsManagerEx",
           "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::~AssetsManagerEx",
           "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::downloadVersion",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::ContentDownloaderFailed",
           "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::onDownloadUnitsFinished",
           "size": 260,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::ServiceRequestFailed",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::ContentDownProgress",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::get",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::basename",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::adjustPath",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::dispatchUpdateEvent",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::destroyDownloadedVersion",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::setStoragePath",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::prepareLocalManifest",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::~AssetsManagerEx",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AssetsManagerEx::decompress",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::downloadFailedAssets",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::getFailedAssets",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::getLocalManifest",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::getRemoteManifest",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::getState",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::getStoragePath",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::isWaitToUpdate",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::setDelegate",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::setRsbVersion",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AssetsManagerEx::ServiceRequestCompleted",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AssetsManagerEx::ServiceRequestCompleted",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AssetsManagerEx::decompress",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -2255,270 +2243,282 @@
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AssetsManagerEx::ServiceRequestCompleted",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AssetsManagerEx::ServiceRequestCompleted",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/AssetsManagerManifest.cpp",
       "total_code": 6672,
-      "matched_code": 4,
-      "matched_code_percent": 0.06,
+      "matched_code": 6672,
+      "matched_code_percent": 100.0,
       "total_functions": 43,
-      "matched_functions": 1,
-      "matched_functions_percent": 2.33,
-      "fuzzy_match_percent": 0.06,
+      "matched_functions": 43,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "AssetsManagerManifest::loadVersion",
           "size": 828,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::genDiff",
           "size": 576,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::loadManifest",
           "size": 528,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::parseAsset",
           "size": 520,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::genResumeAssetsList",
           "size": 468,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::versionEquals",
           "size": 444,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::loadJson",
           "size": 424,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::AssetsManagerManifest",
           "size": 356,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::AssetsManagerManifest",
           "size": 356,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::getSearchPaths",
           "size": 340,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::setAssetDownloadState",
           "size": 336,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::parse",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::clear",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::saveToFile",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::getVersionToInt",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::~AssetsManagerManifest",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::~AssetsManagerManifest",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::Asset::Asset",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::Asset::Asset",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::Asset::operator=",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::Asset::Asset",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::Asset::Asset",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::parseVersion",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::AssetDiff::AssetDiff",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::AssetDiff::AssetDiff",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::Asset::~Asset",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::Asset::~Asset",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::getAssets",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::getGroupVerions",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::getGroupVersion",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::getGroups",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::getManifestFileUrl",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::getPackageUrl",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::getTotalFileSize",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::getVersion",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::getVersionFileUrl",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::isLoaded",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::isVersionLoaded",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::AssetDiff::AssetDiff",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::AssetDiff::AssetDiff",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::AssetDiff::~AssetDiff",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::AssetDiff::~AssetDiff",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerManifest::prependSearchPaths",
@@ -25163,12 +25163,56 @@
     {
       "name": "src/PvZ2/NetworkRequestor.cpp",
       "total_code": 544,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 544,
+      "matched_code_percent": 100.0,
       "total_functions": 7,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 7,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "NetworkRequestor::makeRequest",
+          "size": 260,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkRequestor::NetworkRequestor",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkRequestor::NetworkRequestor",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkRequestor::sendRequest",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkRequestor::~NetworkRequestor",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkRequestor::~NetworkRequestor",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkRequestor::~NetworkRequestor",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/NetworkStatusDecider.cpp",
@@ -42193,37 +42237,13 @@
     {
       "name": "src/PvZ2/PlantNewAvatar.cpp",
       "total_code": 876,
-      "matched_code": 580,
-      "matched_code_percent": 66.21,
+      "matched_code": 876,
+      "matched_code_percent": 100.0,
       "total_functions": 12,
-      "matched_functions": 8,
-      "matched_functions_percent": 66.67,
-      "fuzzy_match_percent": 85.39,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "PlantNewAvatar::GetNewAvatarID",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PlantNewAvatar::GetNewAvatarPieceID",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PlantNewAvatar::PlantNewAvatar",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 75.0
-        },
-        {
-          "name": "PlantNewAvatar::PlantNewAvatar",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 75.0
-        },
         {
           "name": "PlantNewAvatar::StaticClassInit",
           "size": 180,
@@ -42233,6 +42253,18 @@
         {
           "name": "PlantNewAvatar::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNewAvatar::PlantNewAvatar",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNewAvatar::PlantNewAvatar",
+          "size": 112,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -42251,6 +42283,18 @@
         {
           "name": "PlantNewAvatar::StaticNew",
           "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNewAvatar::GetNewAvatarID",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNewAvatar::GetNewAvatarPieceID",
+          "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },

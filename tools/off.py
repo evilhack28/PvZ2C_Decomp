@@ -76,7 +76,7 @@ def main():
         hdr = a[i + 1]
         a = a[:i] + a[i + 2:]
     if not a:
-        raise SystemExit('usage: python tools/off.py <Class> [member ...] [--hdr path]')
+        raise SystemExit('usage: py -3 tools/off.py <Class> [member ...] [--hdr path]')
     probe(a[0], a[1:], hdr)
 
 

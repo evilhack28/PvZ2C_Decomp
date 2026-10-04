@@ -174,7 +174,7 @@ def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     cpp = '--cpp' in sys.argv
     if not args:
-        raise SystemExit('usage: python tools/reflect.py <Class> [--cpp]')
+        raise SystemExit('usage: py -3 tools/reflect.py <Class> [--cpp]')
     cls = args[0]
     elf = Elf(config.TARGET_LIB)
     enums = driver_enums(elf, cls)

@@ -1,7 +1,7 @@
 """Annotated disassembly: says what every constant actually is.
 
-    python tools/explain.py _ZN12PlantIceburg4IdleEv
-    python tools/explain.py _ZN12PlantIceburg4IdleEv --this PlantIceburg
+    py -3 tools/explain.py _ZN12PlantIceburg4IdleEv
+    py -3 tools/explain.py _ZN12PlantIceburg4IdleEv --this PlantIceburg
 
 Resolves, inline:
   - string literals

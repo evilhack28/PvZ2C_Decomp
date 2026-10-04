@@ -1,6 +1,6 @@
 """Prints the reflected fields a class registers, with their struct offsets.
 
-    python tools/fields.py PlantIceburg
+    py -3 tools/fields.py PlantIceburg
 
 Reads the StaticClassInit the RT_CLASS macros generate, which passes the
 field-registration function in x2; that function names each field with the

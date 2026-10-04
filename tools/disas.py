@@ -1,6 +1,6 @@
 """Disassembles one function out of the game, with symbols and strings named.
 
-    python tools/dis.py _ZN12PlantIceburg9HasShadowEv
+    py -3 tools/disas.py _ZN12PlantIceburg9HasShadowEv
 """
 
 import os

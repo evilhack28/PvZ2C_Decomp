@@ -5,9 +5,9 @@ unrelated trivial function, so reading the table backwards does not name the
 method a call site meant. This goes the other way: it compiles a call to
 each candidate and reports the offset the compiler emitted.
 
-    python tools/slotprobe.py PlantFramework PlantFramework.h            # all
-    python tools/slotprobe.py PlantFramework PlantFramework.h 0x190      # one
-    python tools/slotprobe.py PlantAnimRig PlantAnimRig.h PlayIdleLooped
+    py -3 tools/slotprobe.py PlantFramework PlantFramework.h            # all
+    py -3 tools/slotprobe.py PlantFramework PlantFramework.h 0x190      # one
+    py -3 tools/slotprobe.py PlantAnimRig PlantAnimRig.h PlayIdleLooped
 
 With no third argument every no-argument virtual in the header is probed.
 A bare hex number filters the output to that offset.

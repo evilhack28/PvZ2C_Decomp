@@ -1,7 +1,7 @@
 """Prints the aligned instruction diff for one function.
 
-    python tools/fndiff.py Iceburg OnAnimCommand
-    python tools/fndiff.py Iceburg OnAnimCommand --context 6
+    py -3 tools/fndiff.py Iceburg OnAnimCommand
+    py -3 tools/fndiff.py Iceburg OnAnimCommand --context 6
 
 `plant.py` reports a score per function; this shows where the score is lost.
 The listing is the same normalised form the score is computed from, so a

@@ -1,7 +1,7 @@
 """Names the function a virtual call lands on.
 
-    python tools/vtable.py _ZTV20PlantAnimRig_Iceburg 0x118
-    python tools/vtable.py _ZTV12PlantIceburg          # the whole table
+    py -3 tools/vtable.py _ZTV20PlantAnimRig_Iceburg 0x118
+    py -3 tools/vtable.py _ZTV12PlantIceburg          # the whole table
 
 A call compiled as `ldr xN, [vptr, #off]; blr xN` reaches the entry at that
 byte offset in the class's vtable, which this reads out of the image.

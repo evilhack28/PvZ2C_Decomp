@@ -1,6 +1,6 @@
 """Compares a class's vtable slot numbering against the game's by name.
 
-    python tools/vtprobe.py Zombie Zombie.h
+    py -3 tools/vtprobe.py Zombie Zombie.h
 
 `vtdiff.py` needs an object file that emits `_ZTV<class>`, which only happens
 in the translation unit defining the class's key function. For a class we

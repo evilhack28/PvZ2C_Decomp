@@ -1,7 +1,7 @@
 """Compile one translation unit and diff its functions against the game.
 
-    python tools/m.py src/PvZ2/gameNetWork/NetworkData.cpp
-    python tools/m.py src/PvZ2/gameNetWork/NetworkData.cpp -f _ZN22S2C_PVP_BigMapMainInfoC2Ev
+    py -3 tools/m.py src/PvZ2/gameNetWork/NetworkData.cpp
+    py -3 tools/m.py src/PvZ2/gameNetWork/NetworkData.cpp -f _ZN22S2C_PVP_BigMapMainInfoC2Ev
 
 With no -f it reports every function the object file defines that the game
 also has, which is how a translation unit's progress is read.

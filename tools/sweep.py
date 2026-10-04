@@ -4,7 +4,7 @@ matches the most functions.
 The build flags are not recorded anywhere in the library, so they are found
 the same way everything else here is: by compiling and comparing.
 
-    python tools/sweep.py src/PvZ2/PVP/PVPDatas.cpp
+    py -3 tools/sweep.py src/PvZ2/PVP/PVPDatas.cpp
 """
 
 import os

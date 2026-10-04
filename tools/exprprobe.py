@@ -4,7 +4,7 @@
 virtual that takes arguments cannot be called from a generated stub without
 knowing its parameter types, so those are written by hand here:
 
-    python tools/exprprobe.py Zombie.h \
+    py -3 tools/exprprobe.py Zombie.h \
         'Zombie* z, const DamageInfo& d' 'z->TakeDamage(d)' \
         'Zombie* z, bool b'              'z->SnapToGround(b)'
 

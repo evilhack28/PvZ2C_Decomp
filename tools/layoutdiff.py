@@ -5,7 +5,7 @@ offsetof probe for the same names, compiles it, and prints the two side by
 side. A run of fields all off by the same amount says how much something
 above them grew; the point where the delta changes is where it grew.
 
-    python tools/layoutdiff.py Plant Plant.h
+    py -3 tools/layoutdiff.py Plant Plant.h
 """
 
 import os

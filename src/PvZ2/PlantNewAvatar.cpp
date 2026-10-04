@@ -8,6 +8,7 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PlantNewAvatar.h"
+#include "NameMapper.h"
 
 PlantNewAvatar::~PlantNewAvatar()
 {
@@ -27,4 +28,14 @@ void PlantNewAvatar::StaticClassInit()
 	REFLECTION_CLASSBUILDER_FIELD(std::vector<PlantBoost>, Boosts);
 
 	REFLECTION_CLASSBUILDER_END(PlantNewAvatar);
+}
+
+int PlantNewAvatar::GetNewAvatarID()
+{
+	return PlantNewAvatarMapper::GetInstance().GetIdForName(NewAvatarName);
+}
+
+int PlantNewAvatar::GetNewAvatarPieceID()
+{
+	return PlantNewAvatarPieceMapper::GetInstance().GetIdForName(NewAvatarName);
 }

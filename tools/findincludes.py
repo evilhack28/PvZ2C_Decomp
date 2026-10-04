@@ -3,7 +3,7 @@ finds that header in the tree and adds its directory to the include path.
 
 Prints the flags it settled on, which then go into config.py.
 
-    python tools/findincludes.py build/probe.cpp
+    py -3 tools/findincludes.py build/probe.cpp
 """
 
 import os

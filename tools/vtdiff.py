@@ -1,6 +1,6 @@
 """Compares a class's vtable in our build against the game's.
 
-    python tools/vtdiff.py PlantIceburg build/Plant_Iceburg.o
+    py -3 tools/vtdiff.py PlantIceburg build/Plant_Iceburg.o
 
 A vtable that is short by N slots means the headers are missing N virtual
 declarations, and every virtual call above the gap resolves to the wrong

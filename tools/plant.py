@@ -1,9 +1,9 @@
 """Everything about one plant's progress, in one place.
 
-    python tools/plant.py Iceburg                # progress table
-    python tools/plant.py Iceburg --todo         # only what is unwritten
-    python tools/plant.py Iceburg --calls        # internal call graph
-    python tools/plant.py Iceburg --callers Fire # who calls one method
+    py -3 tools/plant.py Iceburg                # progress table
+    py -3 tools/plant.py Iceburg --todo         # only what is unwritten
+    py -3 tools/plant.py Iceburg --calls        # internal call graph
+    py -3 tools/plant.py Iceburg --callers Fire # who calls one method
 
 Classes are found as Plant<Name>, PlantType<Name> and PlantAnimRig_<Name>.
 """
