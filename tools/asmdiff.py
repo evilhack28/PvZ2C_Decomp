@@ -48,10 +48,15 @@ def listing(elf, name, symbolise=True):
     out = []
     pages = {}          # register -> page address an adrp put there
 
-    for ins in _MD.disasm(code, addr):
+    insns = list(_MD.disasm(code, addr))
+    flow = _page_flow(elf, insns, relocs, addr, addr + size)
+
+    for ins in insns:
         ops = ins.op_str
         m = ins.mnemonic
         rel = relocs.get(ins.address)
+        if ins.address in flow:
+            pages = dict(flow[ins.address])
 
         if m == 'adrp':
             reg, imm = [x.strip() for x in ops.split(',')]
@@ -182,6 +187,96 @@ def listing(elf, name, symbolise=True):
 
         out.append((m, ops))
     return out
+
+
+_NO_WRITE = ('st', 'cmp', 'cmn', 'tst', 'fcmp', 'fccmp', 'ccmp', 'ccmn', 'prfm',
+             'cbz', 'cbnz', 'tbz', 'tbnz', 'ret', 'nop')
+
+
+def _page_step(ins, rel, pages):
+    """The adrp-page effect of one instruction, as listing() applies it."""
+    m, ops = ins.mnemonic, ins.op_str
+    if m == 'adrp':
+        reg, imm = [x.strip() for x in ops.split(',')]
+        pages[reg] = ('sym', rel[0], rel[2]) if rel else ('abs', _imm(imm) or 0, 0)
+    elif (m.startswith(_NO_WRITE) and 'xr' not in m) or m.startswith('b.') or m in ('b', 'bl', 'br', 'blr'):
+        pass
+    elif m in ('ldp', 'ldpsw', 'ldnp'):
+        if '[sp' not in ops:
+            for reg in ops.split(',')[:2]:
+                pages.pop(reg.strip(), None)
+    else:
+        pages.pop(ops.split(',')[0].strip(), None)
+
+
+def _noreturn(elf, ins, rel):
+    """True for a `bl` into a function that never returns."""
+    if rel:
+        names = {rel[0]}
+    else:
+        t = _imm(ins.op_str)
+        names = (_syms_at(elf, t) | _plt_names(elf, t)) if t is not None else set()
+    return any(n in _NORETURN or re.match(r'_ZSt\d+__throw', n) for n in names)
+
+
+def _plt_names(elf, addr):
+    """The import a PLT stub (adrp x16 / ldr x17,[x16,#off]) jumps through, as a set."""
+    try:
+        got = getattr(elf, '_asmdiff_pltgot', None)
+        if got is None:
+            got = elf._asmdiff_pltgot = {a: r[0] for a, r in elf.relocations('.plt').items()}
+        raw = elf.read_at(addr, 8)
+    except Exception:
+        return set()
+    if not raw or len(raw) < 8:
+        return set()
+    pair = list(_MD.disasm(raw, addr))
+    if len(pair) < 2:
+        return set()
+    a, b = pair[:2]
+    if not (a.mnemonic == 'adrp' and b.mnemonic == 'ldr' and '#' in b.op_str):
+        return set()
+    slot = _imm(a.op_str.split(',')[1].strip()) + _imm(b.op_str[b.op_str.rindex('#'):].rstrip(']'))
+    return {got[slot]} if slot in got else set()
+
+
+_NORETURN = {'__stack_chk_fail', 'abort', 'exit', '_exit', '__assert2', '__cxa_pure_virtual',
+             '__cxa_throw', '__cxa_rethrow', '_ZSt9terminatev'}
+
+
+def _page_flow(elf, insns, relocs, lo, hi):
+    """{address: pages on entry} along branches, keeping a register only where every incoming path agrees."""
+    index = {ins.address: i for i, ins in enumerate(insns)}
+    succ = []
+    for i, ins in enumerate(insns):
+        m = ins.mnemonic
+        nxt = [i + 1] if i + 1 < len(insns) else []
+        cond = m.startswith('b.') or m in ('cbz', 'cbnz', 'tbz', 'tbnz')
+        if m in ('ret', 'br') or (m == 'b' and not cond):
+            nxt = []
+        elif m == 'bl' and _noreturn(elf, ins, relocs.get(ins.address)):
+            nxt = []
+        if (m == 'b' or cond) and ins.address not in relocs:
+            t = _imm(ins.op_str.rpartition(',')[2].strip())
+            if t is not None and lo <= t < hi and t in index:
+                nxt.append(index[t])
+        succ.append(nxt)
+    state = {0: {}} if insns else {}
+    work = [0] if insns else []
+    while work:
+        i = work.pop()
+        pages = dict(state[i])
+        _page_step(insns[i], relocs.get(insns[i].address), pages)
+        for j in succ[i]:
+            if j not in state:
+                state[j] = dict(pages)
+            else:
+                met = {k: v for k, v in state[j].items() if pages.get(k) == v}
+                if met == state[j]:
+                    continue
+                state[j] = met
+            work.append(j)
+    return {insns[i].address: s for i, s in state.items()}
 
 
 def _reloc_label(elf, rel):

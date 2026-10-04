@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-04T13:21:32+00:00",
+  "generated": "2026-10-04T19:16:04+00:00",
   "measures": {
-    "total_functions": 85011,
-    "matched_functions": 26275,
-    "matched_functions_percent": 30.91,
-    "total_code": 12595700,
-    "matched_code": 1591408,
-    "matched_code_percent": 12.63,
-    "fuzzy_match_percent": 13.22,
-    "started_units": 2186,
+    "total_functions": 85023,
+    "matched_functions": 26458,
+    "matched_functions_percent": 31.12,
+    "total_code": 12597340,
+    "matched_code": 1615772,
+    "matched_code_percent": 12.83,
+    "fuzzy_match_percent": 13.42,
+    "started_units": 2192,
     "total_units": 2751,
-    "started_code": 10066300,
-    "started_matched_code": 1591408,
-    "started_percent": 15.81,
+    "started_code": 10074056,
+    "started_matched_code": 1615772,
+    "started_percent": 16.04,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -4465,544 +4465,334 @@
     {
       "name": "src/PvZ2/CrazyNPC.cpp",
       "total_code": 15136,
-      "matched_code": 188,
-      "matched_code_percent": 1.24,
+      "matched_code": 15136,
+      "matched_code_percent": 100.0,
       "total_functions": 94,
-      "matched_functions": 6,
-      "matched_functions_percent": 6.38,
-      "fuzzy_match_percent": 1.24,
+      "matched_functions": 94,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "CrazyNPC::StaticClassInit",
           "size": 2432,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::drawSpeechBubbleStyle",
           "size": 1316,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::pickAndPlayTalkingVO",
           "size": 1160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::drawTextBannerStyle",
           "size": 1116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::drawTextTopBannerStyle",
           "size": 896,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::onEnterState_Entering",
           "size": 804,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::pickAndPlayTalkingAnimation",
           "size": 684,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::onEnterState_Leaving",
           "size": 572,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::onEnterState_Idle",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::updateState_Entering",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::updateState_Leaving",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::onEnterState_HoldingEat",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::onEnterState_HoldingEnter",
           "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::Init",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::updateState_HoldingEat",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::updateState_HoldingEnter",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::CrazyNPC",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::CrazyNPC",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::onEnterState_HoldingIdle",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::addToLoadingResourcesGroupList",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::setState",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::StopTalking",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::StartTalking",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::Draw",
           "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::initLoadingResourcesGroupList",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::SetNPCSheet",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::~CrazyNPC",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::~CrazyNPC",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::IsLoaded",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::PrepForLoading",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::IsLoadComplete",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::StartLoad",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::UnloadResources",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::updateState_HoldingIdle",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::updateState_HoldingTalking",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::updateState_Idle",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::updateState_Ready",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::updateState_Talking",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::Leave",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::CompleteLoad",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::IsEntering",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::IsHoldingItem",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::IsLeaving",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::IsTalking",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onEnteringAnimFinished",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onHoldingEatAnimFinished",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onHoldingEnteringAnimFinished",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onLeavingAnimFinished",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::StartEating",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::StartHolding",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::Terminate",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::updateState_Loading",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::setStateHelper",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::isInState",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::~CrazyNPC",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::Die",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::Enter",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onCrazyTalkingAnimFinished",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onHoldingTalkingAnimFinished",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onScreamTalkingAnimFinished",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onTalkAnimFinished",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onYellTalkingAnimFinished",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::GetNPCName",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::IsDead",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::updateState_Initializing",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::GetNPCMood",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::IsInitialized",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::getState",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::updateStateMachine",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onEnterState_Dead",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onEnterState_HoldingTalking",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onEnterState_Initializing",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onEnterState_Loading",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onEnterState_Ready",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onEnterState_Talking",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_Dead",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_Entering",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_HoldingEat",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_HoldingEnter",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_HoldingIdle",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_HoldingTalking",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_Idle",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_Initializing",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_Leaving",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_Loading",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_Ready",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::onExitState_Talking",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CrazyNPC::updateState_Dead",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CrazyNPC::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::~CrazyNPC",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::~CrazyNPC",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::IsLoaded",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::PrepForLoading",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::IsLoadComplete",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::StartLoad",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::UnloadResources",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::updateState_HoldingIdle",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::updateState_HoldingTalking",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::updateState_Idle",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::updateState_Ready",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::updateState_Talking",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::Leave",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::CompleteLoad",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::IsEntering",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::IsHoldingItem",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::IsLeaving",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::IsTalking",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onEnteringAnimFinished",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onHoldingEatAnimFinished",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onHoldingEnteringAnimFinished",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onLeavingAnimFinished",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::StartEating",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::StartHolding",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::Terminate",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::updateState_Loading",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::setStateHelper",
+          "size": 52,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -5013,7 +4803,103 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "CrazyNPC::isInState",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::~CrazyNPC",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::Die",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::Enter",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onCrazyTalkingAnimFinished",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onHoldingTalkingAnimFinished",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onScreamTalkingAnimFinished",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onTalkAnimFinished",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onYellTalkingAnimFinished",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::GetNPCName",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::IsDead",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::updateState_Initializing",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::GetNPCMood",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "CrazyNPC::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::IsInitialized",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::getState",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::updateStateMachine",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -5032,6 +4918,120 @@
         },
         {
           "name": "CrazyNPC::Update",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onEnterState_Dead",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onEnterState_HoldingTalking",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onEnterState_Initializing",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onEnterState_Loading",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onEnterState_Ready",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onEnterState_Talking",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_Dead",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_Entering",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_HoldingEat",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_HoldingEnter",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_HoldingIdle",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_HoldingTalking",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_Idle",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_Initializing",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_Leaving",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_Loading",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_Ready",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::onExitState_Talking",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CrazyNPC::updateState_Dead",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -41166,13 +41166,147 @@
     },
     {
       "name": "src/PvZ2/PVZGameStateTopHUDController.cpp",
-      "total_code": 1704,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 18,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 1824,
+      "matched_code": 1824,
+      "matched_code_percent": 100.0,
+      "total_functions": 22,
+      "matched_functions": 22,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "PVZGameStateTopHUDController::Draw",
+          "size": 272,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::PVZGameStateTopHUDController",
+          "size": 248,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::PVZGameStateTopHUDController",
+          "size": 248,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::canHandleInput",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::TouchBegan",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::TouchEnded",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::TouchMoved",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::Update",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::~PVZGameStateTopHUDController",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::~PVZGameStateTopHUDController",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::TouchesCanceled",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::~PVZGameStateTopHUDController",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::isHidden",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::onHideTopHUD",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::onShowTopHUD",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::IsLoaded",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::StaticNew",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::setOffset",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZGameStateTopHUDController::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/PVZManifest.cpp",
@@ -42590,23 +42724,123 @@
     },
     {
       "name": "src/PvZ2/PlantTypeVine.cpp",
-      "total_code": 520,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 1944,
+      "matched_code": 1944,
+      "matched_code_percent": 100.0,
+      "total_functions": 13,
+      "matched_functions": 13,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "PlantTypeVine::GatherPlantingRestrictions",
+          "size": 1008,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::CanPlantOnPlant",
+          "size": 396,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::PlantTypeVine",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::PlantTypeVine",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::~PlantTypeVine",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::~PlantTypeVine",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::~PlantTypeVine",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::IsVine",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantTypeVine::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/PlantUtils.cpp",
       "total_code": 1092,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 600,
+      "matched_code_percent": 54.95,
       "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 2,
+      "matched_functions_percent": 66.67,
+      "fuzzy_match_percent": 99.63,
+      "functions": [
+        {
+          "name": "PlantUtils::GetEntityClusterTargets",
+          "size": 492,
+          "matched": false,
+          "fuzzy_match_percent": 99.19
+        },
+        {
+          "name": "PlantUtils::GetBestZombieFromEntities",
+          "size": 312,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantUtils::GetBestDamageableGridItemFromEntities",
+          "size": 288,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/PlayerIdentityService.cpp",
@@ -53183,22 +53417,224 @@
     {
       "name": "src/PvZ2/ScaledApp.cpp",
       "total_code": 1092,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1092,
+      "matched_code_percent": 100.0,
       "total_functions": 22,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 22,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "ScaledApp::ScreenScaleNum",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::ScaleNum",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::UIScaleNum",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::ScaledApp",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::ScaledApp",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::SetResolution",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::SetUIResolution",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::ScaleNum",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::ScaleNum",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::ScreenScaleNum",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::UIScaleNum",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::UIScaleNum",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::UIScreenScaleNum",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::ScaleNum",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::ScreenScaleNum",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::UIScaleNum",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::UIScreenScaleNum",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::~ScaledApp",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::~ScaledApp",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::~ScaledApp",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::GetScaleAmount",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScaledApp::GetUIScaleAmount",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/ScratchImage.cpp",
-      "total_code": 1192,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 1200,
+      "matched_code": 1192,
+      "matched_code_percent": 99.33,
+      "total_functions": 11,
+      "matched_functions": 10,
+      "matched_functions_percent": 90.91,
+      "fuzzy_match_percent": 99.33,
+      "functions": [
+        {
+          "name": "ScratchImage",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "ScratchImage::FinishDraw",
+          "size": 352,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScratchImage::StartDraw",
+          "size": 220,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScratchImage::ScratchImage",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScratchImage::ScratchImage",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScratchImage::SetMinAlpha",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScratchImage::DeleteRenderTarget",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScratchImage::~ScratchImage",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScratchImage::~ScratchImage",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScratchImage::SetTransitionAlpha",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ScratchImage::SetAlpha",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/ScrollingCounter.cpp",
@@ -55883,96 +56319,48 @@
     {
       "name": "src/PvZ2/SpeedChange.cpp",
       "total_code": 2340,
-      "matched_code": 368,
-      "matched_code_percent": 15.73,
+      "matched_code": 2340,
+      "matched_code_percent": 100.0,
       "total_functions": 21,
-      "matched_functions": 7,
-      "matched_functions_percent": 33.33,
-      "fuzzy_match_percent": 15.73,
+      "matched_functions": 21,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "SpeedChange::OnMouseUp",
           "size": 284,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SpeedChange::registerForEvents",
           "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SpeedChange::~SpeedChange",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SpeedChange::~SpeedChange",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SpeedChange::Draw",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SpeedChange::onGameStart",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SpeedChange::onInitialized",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SpeedChange::onRechargeNow",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SpeedChange::onCancel",
-          "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SpeedChange::SpeedChange",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SpeedChange::SpeedChange",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SpeedChange::updateState_Ready",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SpeedChange::~SpeedChange",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SpeedChange::onGameplayEnded",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SpeedChange::StaticClassInit",
@@ -55987,13 +56375,61 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "SpeedChange::onInitialized",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SpeedChange::onRechargeNow",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SpeedChange::onCancel",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SpeedChange::SpeedChange",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SpeedChange::SpeedChange",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SpeedChange::updateState_Ready",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "SpeedChange::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "SpeedChange::~SpeedChange",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "SpeedChange::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SpeedChange::onGameplayEnded",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -56020,13 +56456,87 @@
     },
     {
       "name": "src/PvZ2/StandaloneEffectFactory.cpp",
-      "total_code": 516,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 604,
+      "matched_code": 324,
+      "matched_code_percent": 53.64,
+      "total_functions": 12,
+      "matched_functions": 10,
+      "matched_functions_percent": 83.33,
+      "fuzzy_match_percent": 97.35,
+      "functions": [
+        {
+          "name": "StandaloneEffectFactory::GetEffectsTableFactory",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 94.29
+        },
+        {
+          "name": "StandaloneEffectFactory::GetOutsideOfTableFactory",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 94.29
+        },
+        {
+          "name": "StandaloneEffectFactory::CreateCenteredScreenSpaceEffectPopAnim",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "StandaloneEffectFactory::CreateCenteredScreenSpaceEffectStaticImage",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "StandaloneEffectFactory::AddEffect",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "StandaloneEffectFactory::AddEffect",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "StandaloneEffectFactory::AddEffect",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "StandaloneEffectFactory::StandaloneEffectFactory",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "StandaloneEffectFactory::StandaloneEffectFactory",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "StandaloneEffectFactory::~StandaloneEffectFactory",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "StandaloneEffectFactory::~StandaloneEffectFactory",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "StandaloneEffectFactory::~StandaloneEffectFactory",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/StandardLevelIntro.cpp",
@@ -166615,19 +167125,13 @@
     {
       "name": "src/PvZ2/net/log/TGALogMgr.cpp",
       "total_code": 38332,
-      "matched_code": 38140,
-      "matched_code_percent": 99.5,
+      "matched_code": 38332,
+      "matched_code_percent": 100.0,
       "total_functions": 149,
-      "matched_functions": 148,
-      "matched_functions_percent": 99.33,
-      "fuzzy_match_percent": 99.99,
+      "matched_functions": 149,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "TGALogMgr::LogIOSRealNameLogin",
-          "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 97.92
-        },
         {
           "name": "TGALogMgr::LogPlantAdventure",
           "size": 1184,
@@ -167356,6 +167860,12 @@
         },
         {
           "name": "TGALogMgr::LogForLogin",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TGALogMgr::LogIOSRealNameLogin",
           "size": 192,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -214903,12 +215413,12 @@
     {
       "name": "src/PvZ2/plants/Plant.cpp",
       "total_code": 87192,
-      "matched_code": 25184,
-      "matched_code_percent": 28.88,
+      "matched_code": 25460,
+      "matched_code_percent": 29.2,
       "total_functions": 318,
-      "matched_functions": 250,
-      "matched_functions_percent": 78.62,
-      "fuzzy_match_percent": 37.6,
+      "matched_functions": 251,
+      "matched_functions_percent": 78.93,
+      "fuzzy_match_percent": 37.61,
       "functions": [
         {
           "name": "Plant::NotifyApplyCondition",
@@ -215247,12 +215757,6 @@
           "fuzzy_match_percent": 75.0
         },
         {
-          "name": "Plant::UpdateDamageStates",
-          "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 98.55
-        },
-        {
           "name": "PlantType::canGiveFirstAidToPlant",
           "size": 268,
           "matched": false,
@@ -215410,6 +215914,12 @@
         },
         {
           "name": "Plant::SendHelpToPlants",
+          "size": 276,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Plant::UpdateDamageStates",
           "size": 276,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -247610,7 +248120,7 @@
       "total_functions": 83,
       "matched_functions": 70,
       "matched_functions_percent": 84.34,
-      "fuzzy_match_percent": 50.7,
+      "fuzzy_match_percent": 50.73,
       "functions": [
         {
           "name": "PirateStage::onUpdate",
@@ -247670,7 +248180,7 @@
           "name": "PirateStage::gatherPlantingRestrictions",
           "size": 244,
           "matched": false,
-          "fuzzy_match_percent": 34.43
+          "fuzzy_match_percent": 36.07
         },
         {
           "name": "PirateStage::CanZombieSpawnInRow",
