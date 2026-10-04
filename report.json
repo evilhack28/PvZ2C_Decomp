@@ -1,17 +1,17 @@
 {
-  "generated": "2026-10-04T00:08:28+00:00",
+  "generated": "2026-10-04T00:39:33+00:00",
   "measures": {
     "total_functions": 85000,
-    "matched_functions": 26061,
-    "matched_functions_percent": 30.66,
+    "matched_functions": 26069,
+    "matched_functions_percent": 30.67,
     "total_code": 12593604,
-    "matched_code": 1552680,
+    "matched_code": 1553112,
     "matched_code_percent": 12.33,
-    "fuzzy_match_percent": 12.89,
+    "fuzzy_match_percent": 12.92,
     "started_units": 2183,
     "total_units": 2751,
     "started_code": 10058272,
-    "started_matched_code": 1552680,
+    "started_matched_code": 1553112,
     "started_percent": 15.44,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
@@ -93,66 +93,30 @@
     {
       "name": "src/PvZ2/AccountRemove.cpp",
       "total_code": 3420,
-      "matched_code": 104,
-      "matched_code_percent": 3.04,
+      "matched_code": 536,
+      "matched_code_percent": 15.67,
       "total_functions": 11,
-      "matched_functions": 2,
-      "matched_functions_percent": 18.18,
-      "fuzzy_match_percent": 3.04,
+      "matched_functions": 10,
+      "matched_functions_percent": 90.91,
+      "fuzzy_match_percent": 99.53,
       "functions": [
         {
           "name": "AccountRemove::InitUI",
           "size": 2884,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 99.45
         },
         {
           "name": "AccountRemove::create",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AccountRemove::Initialize",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AccountRemove::~AccountRemove",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AccountRemove::~AccountRemove",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AccountRemove::~AccountRemove",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AccountRemove::get",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AccountRemove::UserInit",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AccountRemove::ExitGame",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AccountRemove::AccountRemove",
@@ -163,6 +127,42 @@
         {
           "name": "AccountRemove::AccountRemove",
           "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AccountRemove::~AccountRemove",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AccountRemove::~AccountRemove",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AccountRemove::~AccountRemove",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AccountRemove::get",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AccountRemove::UserInit",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AccountRemove::ExitGame",
+          "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }
