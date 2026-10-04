@@ -33,3 +33,31 @@ void AnimRigLayerSet::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(AnimRigLayerSet);
 }
+
+void AnimRigLayerSet::AddSet(std::string setName, std::vector<std::string> layerNames)
+{
+	m_layerSets[setName] = layerNames;
+}
+
+void AnimRigLayerSet::ShowSet(PopAnimRig* animRig, std::string setName)
+{
+	if (m_currentLayerName == setName)
+		return;
+	std::map<std::string, std::vector<std::string>>::iterator it = m_layerSets.begin();
+	while (it != m_layerSets.end())
+	{
+		{
+			std::pair<const std::string, std::vector<std::string>>& entry = *it;
+			bool visible = entry.first == setName;
+			std::vector<std::string>::iterator layer = entry.second.begin();
+			std::vector<std::string>::iterator layerEnd = entry.second.end();
+			while (layer != layerEnd)
+			{
+				animRig->SetLayerVisibility(*layer, visible);
+				++layer;
+			}
+			++it;
+		}
+	}
+	m_currentLayerName = setName;
+}

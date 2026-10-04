@@ -20,7 +20,7 @@ AdProviderFactory::AdProviderFactory()
 {
 }
 
-AdProviderFactory::~AdProviderFactory()
+__attribute__((always_inline, visibility("hidden"))) AdProviderFactory::~AdProviderFactory()
 {
 }
 

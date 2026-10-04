@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-04T01:16:46+00:00",
+  "generated": "2026-10-04T11:16:48+00:00",
   "measures": {
-    "total_functions": 85000,
-    "matched_functions": 26086,
-    "matched_functions_percent": 30.69,
-    "total_code": 12593604,
-    "matched_code": 1555716,
-    "matched_code_percent": 12.35,
-    "fuzzy_match_percent": 12.94,
-    "started_units": 2183,
+    "total_functions": 85011,
+    "matched_functions": 26180,
+    "matched_functions_percent": 30.8,
+    "total_code": 12595700,
+    "matched_code": 1571904,
+    "matched_code_percent": 12.48,
+    "fuzzy_match_percent": 13.06,
+    "started_units": 2185,
     "total_units": 2751,
-    "started_code": 10058272,
-    "started_matched_code": 1555716,
-    "started_percent": 15.47,
+    "started_code": 10065756,
+    "started_matched_code": 1571904,
+    "started_percent": 15.62,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -393,19 +393,13 @@
     {
       "name": "src/PvZ2/AdProvider.cpp",
       "total_code": 448,
-      "matched_code": 444,
-      "matched_code_percent": 99.11,
+      "matched_code": 448,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 99.11,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "AdProvider::~AdProvider",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "AdProvider::onClose",
           "size": 132,
@@ -465,25 +459,25 @@
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AdProvider::~AdProvider",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/AdProviderFactory.cpp",
       "total_code": 388,
-      "matched_code": 384,
-      "matched_code_percent": 98.97,
+      "matched_code": 388,
+      "matched_code_percent": 100.0,
       "total_functions": 7,
-      "matched_functions": 6,
-      "matched_functions_percent": 85.71,
-      "fuzzy_match_percent": 98.97,
+      "matched_functions": 7,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "AdProviderFactory::~AdProviderFactory",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "AdProviderFactory::InitializeAndGet",
           "size": 256,
@@ -505,6 +499,12 @@
         {
           "name": "AdProviderFactory::AdProviderFactory",
           "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AdProviderFactory::~AdProviderFactory",
+          "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -639,24 +639,18 @@
     {
       "name": "src/PvZ2/AnimRigLayerSet.cpp",
       "total_code": 1024,
-      "matched_code": 636,
-      "matched_code_percent": 62.11,
+      "matched_code": 1024,
+      "matched_code_percent": 100.0,
       "total_functions": 12,
-      "matched_functions": 10,
-      "matched_functions_percent": 83.33,
-      "fuzzy_match_percent": 62.11,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "AnimRigLayerSet::ShowSet",
           "size": 352,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AnimRigLayerSet::AddSet",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AnimRigLayerSet::StaticClassInit",
@@ -701,6 +695,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "AnimRigLayerSet::AddSet",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "AnimRigLayerSet::~AnimRigLayerSet",
           "size": 36,
           "matched": true,
@@ -733,76 +733,46 @@
     {
       "name": "src/PvZ2/ArcadePowerUpTemplateAdaptor.cpp",
       "total_code": 2356,
-      "matched_code": 708,
-      "matched_code_percent": 30.05,
+      "matched_code": 2356,
+      "matched_code_percent": 100.0,
       "total_functions": 20,
-      "matched_functions": 10,
-      "matched_functions_percent": 50.0,
-      "fuzzy_match_percent": 30.05,
+      "matched_functions": 20,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ArcadePowerUpTemplateAdaptor::RefreshUnlockStatus",
           "size": 396,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ArcadePowerUpTemplateAdaptor::getProgressTowardPowerUp",
           "size": 368,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ArcadePowerUpTemplateAdaptor::getProgressText",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadePowerUpTemplateAdaptor::onLoadUIView",
-          "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadePowerUpTemplateAdaptor::GetLockAnimation",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadePowerUpTemplateAdaptor::getUIFileName",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadePowerUpTemplateAdaptor::GetPowerUpUIButton",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadePowerUpTemplateAdaptor::IsConfiguredForPowerUp",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadePowerUpTemplateAdaptor::Configure",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadePowerUpTemplateAdaptor::onLinkToUIViewCreated",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ArcadePowerUpTemplateAdaptor::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadePowerUpTemplateAdaptor::onLoadUIView",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadePowerUpTemplateAdaptor::GetLockAnimation",
+          "size": 144,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -813,6 +783,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "ArcadePowerUpTemplateAdaptor::getUIFileName",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadePowerUpTemplateAdaptor::GetPowerUpUIButton",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "ArcadePowerUpTemplateAdaptor::~ArcadePowerUpTemplateAdaptor",
           "size": 80,
           "matched": true,
@@ -833,6 +815,24 @@
         {
           "name": "ArcadePowerUpTemplateAdaptor::ArcadePowerUpTemplateAdaptor",
           "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadePowerUpTemplateAdaptor::IsConfiguredForPowerUp",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadePowerUpTemplateAdaptor::Configure",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadePowerUpTemplateAdaptor::onLinkToUIViewCreated",
+          "size": 52,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -864,121 +864,287 @@
     },
     {
       "name": "src/PvZ2/ArcadeProgressDatabase.cpp",
-      "total_code": 1628,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 3724,
+      "matched_code": 3724,
+      "matched_code_percent": 100.0,
+      "total_functions": 21,
+      "matched_functions": 21,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "ArcadeProgressDatabase::IsLevelUnlocked",
+          "size": 368,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::GetHighestCompletedPackLevel",
+          "size": 308,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::IsPackComplete",
+          "size": 288,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::CompleteCurrentEndlessWave",
+          "size": 256,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::CheatLockPowerUp",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::UnlockPowerUp",
+          "size": 248,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::SetCurrentVaseBreakerEndlessState",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::AreAllPowerUpsUnlockedInCollection",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::IsAnyLevelComplete",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::ResetCurrentEndlessWave",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::CheatUncompleteLevel",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::CompleteLevel",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::GetCurrentVaseBreakerEndlessState",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::GetCurrentEndlessWave",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::GetHighestCompletedEndlessWave",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::IsLevelComplete",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::getSaveDataPackIDForLevelID",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::Instance",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::IsPowerUpUnlocked",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::ArcadeProgressDatabase",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeProgressDatabase::ArcadeProgressDatabase",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/ArcadeSaveDataEncoder.cpp",
       "total_code": 3760,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 3760,
+      "matched_code_percent": 100.0,
       "total_functions": 15,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 15,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "ArcadeSaveDataEncoder::GetCurrentVaseBreakerEndlessState",
+          "size": 408,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::GetCurrentEndlessWaveInPack",
+          "size": 388,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::GetHighestCompletedEndlessWaveInPack",
+          "size": 388,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::CheatLockPowerUpInCollection",
+          "size": 384,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::CheatUncompleteLevelInPack",
+          "size": 384,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::GetCurrentEndlessLevelStateInPack",
+          "size": 372,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::IsLevelCompletedInPack",
+          "size": 368,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::IsPowerUpUnlockedInCollection",
+          "size": 356,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::SetCurrentEndlessWaveInPack",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::SetHighestCompletedEndlessWaveInPack",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::SetCurrentVaseBreakerEndlessState",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::SetCurrentEndlessLevelStateInPack",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::CompleteLevelInPack",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::UnlockPowerUpInCollection",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeSaveDataEncoder::HashName",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/ArcadeTooltipAdaptor.cpp",
       "total_code": 2232,
-      "matched_code": 364,
-      "matched_code_percent": 16.31,
+      "matched_code": 2232,
+      "matched_code_percent": 100.0,
       "total_functions": 20,
-      "matched_functions": 6,
-      "matched_functions_percent": 30.0,
-      "fuzzy_match_percent": 16.31,
+      "matched_functions": 20,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ArcadeTooltipAdaptor::placeTooltip",
           "size": 508,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ArcadeTooltipAdaptor::refreshLabels",
           "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ArcadeTooltipAdaptor::onLinkToUIViewCreated",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadeTooltipAdaptor::onLoadUIView",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadeTooltipAdaptor::SetTarget",
-          "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadeTooltipAdaptor::ArcadeTooltipAdaptor",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadeTooltipAdaptor::ArcadeTooltipAdaptor",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadeTooltipAdaptor::getUIFileName",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadeTooltipAdaptor::~ArcadeTooltipAdaptor",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadeTooltipAdaptor::~ArcadeTooltipAdaptor",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadeTooltipAdaptor::~ArcadeTooltipAdaptor",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadeTooltipAdaptor::GetGlobalTooltipCount",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadeTooltipAdaptor::SetDescription",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArcadeTooltipAdaptor::SetTitle",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ArcadeTooltipAdaptor::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeTooltipAdaptor::onLoadUIView",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeTooltipAdaptor::SetTarget",
+          "size": 152,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -989,13 +1155,67 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "ArcadeTooltipAdaptor::ArcadeTooltipAdaptor",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeTooltipAdaptor::ArcadeTooltipAdaptor",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeTooltipAdaptor::getUIFileName",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeTooltipAdaptor::~ArcadeTooltipAdaptor",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeTooltipAdaptor::~ArcadeTooltipAdaptor",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "ArcadeTooltipAdaptor::StaticNew",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "ArcadeTooltipAdaptor::~ArcadeTooltipAdaptor",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeTooltipAdaptor::GetGlobalTooltipCount",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "ArcadeTooltipAdaptor::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeTooltipAdaptor::SetDescription",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArcadeTooltipAdaptor::SetTitle",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -1173,186 +1393,42 @@
     {
       "name": "src/PvZ2/Artifact.cpp",
       "total_code": 5384,
-      "matched_code": 1532,
-      "matched_code_percent": 28.45,
+      "matched_code": 5340,
+      "matched_code_percent": 99.18,
       "total_functions": 52,
-      "matched_functions": 23,
-      "matched_functions_percent": 44.23,
-      "fuzzy_match_percent": 28.45,
+      "matched_functions": 51,
+      "matched_functions_percent": 98.08,
+      "fuzzy_match_percent": 99.8,
       "functions": [
-        {
-          "name": "Artifact::Activate",
-          "size": 560,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::Artifact",
-          "size": 456,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::Artifact",
-          "size": 456,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::OnGetArtifactBoosts",
-          "size": 448,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArtifactProperties::StaticClassInit",
-          "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::onPostLoad",
-          "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::GetBoostValue",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::IsFieldActivated",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::CanTriggerMain",
-          "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::EnsureResourceGroupsLoaded",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArtifactProperties::GetDescription",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArtifactProperties::GetName",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::GetArtResourceGroups",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::Update",
-          "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::~Artifact",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::~Artifact",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::GetMaxUsedTimes",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::TriggerMain",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::OnNotifyArtifactToolUsed",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::DoTrigger",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "Artifact::GetTriggerLeftTime",
           "size": 44,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 75.0
         },
         {
-          "name": "Artifact::GetProps",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Artifact::Activate",
+          "size": 560,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Artifact::~Artifact",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Artifact::Artifact",
+          "size": 456,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Artifact::OnStartBuff",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Artifact::Artifact",
+          "size": 456,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "Artifact::GetTriggerCooldown",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::GetUsedTimes",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::Initialize",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::OnNotifyArtifactButtonDepress",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Artifact::AutoClick",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Artifact::OnGetArtifactBoosts",
+          "size": 448,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Artifact::StaticClassInit",
@@ -1361,6 +1437,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "ArtifactProperties::StaticClassInit",
+          "size": 280,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "ArtifactProperties::ArtifactProperties",
           "size": 208,
           "matched": true,
@@ -1381,6 +1463,30 @@
         {
           "name": "ArtifactProperties::~ArtifactProperties",
           "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::onPostLoad",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::GetBoostValue",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::IsFieldActivated",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::CanTriggerMain",
+          "size": 132,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -1397,6 +1503,72 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Artifact::EnsureResourceGroupsLoaded",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactProperties::GetDescription",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactProperties::GetName",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::GetArtResourceGroups",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::Update",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::~Artifact",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::~Artifact",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::GetMaxUsedTimes",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::TriggerMain",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::OnNotifyArtifactToolUsed",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::DoTrigger",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Artifact::StaticNew",
           "size": 44,
           "matched": true,
@@ -1409,8 +1581,26 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Artifact::GetProps",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::~Artifact",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "ArtifactProperties::~ArtifactProperties",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::OnStartBuff",
+          "size": 12,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -1445,7 +1635,31 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Artifact::GetTriggerCooldown",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::GetUsedTimes",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::Initialize",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Artifact::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::OnNotifyArtifactButtonDepress",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -1458,6 +1672,12 @@
         },
         {
           "name": "Artifact::ActivateSpeciallyOnDisplayBoard",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Artifact::AutoClick",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -1497,24 +1717,18 @@
     {
       "name": "src/PvZ2/ArtifactBoost.cpp",
       "total_code": 1664,
-      "matched_code": 680,
-      "matched_code_percent": 40.87,
+      "matched_code": 1664,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 9,
-      "matched_functions_percent": 81.82,
-      "fuzzy_match_percent": 40.87,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ArtifactBoostPropertySheet::StaticClassInit",
           "size": 948,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ArtifactBoostPropertySheet::Sync",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ArtifactBoostPropertySheet::ArtifactBoostPropertySheet",
@@ -1549,6 +1763,12 @@
         {
           "name": "ArtifactBoostPropertySheet::StaticNew",
           "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactBoostPropertySheet::Sync",
+          "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },

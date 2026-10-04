@@ -19,7 +19,7 @@ AdProvider::AdProvider()
 {
 }
 
-AdProvider::~AdProvider()
+__attribute__((always_inline, visibility("hidden"))) AdProvider::~AdProvider()
 {
 }
 
