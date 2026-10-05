@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-05T16:31:15+00:00",
+  "generated": "2026-10-05T22:39:12+00:00",
   "measures": {
-    "total_functions": 85045,
-    "matched_functions": 26722,
-    "matched_functions_percent": 31.42,
-    "total_code": 12597716,
-    "matched_code": 1673508,
-    "matched_code_percent": 13.28,
-    "fuzzy_match_percent": 13.98,
-    "started_units": 2203,
+    "total_functions": 85058,
+    "matched_functions": 26947,
+    "matched_functions_percent": 31.68,
+    "total_code": 12597832,
+    "matched_code": 1707952,
+    "matched_code_percent": 13.56,
+    "fuzzy_match_percent": 14.3,
+    "started_units": 2207,
     "total_units": 2751,
-    "started_code": 10110056,
-    "started_matched_code": 1673508,
-    "started_percent": 16.55,
+    "started_code": 10127196,
+    "started_matched_code": 1707952,
+    "started_percent": 16.87,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -238940,29 +238940,253 @@
     },
     {
       "name": "src/PvZ2/powerups/BasePowerup.cpp",
-      "total_code": 2280,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 33,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 2336,
+      "matched_code": 2336,
+      "matched_code_percent": 100.0,
+      "total_functions": 37,
+      "matched_functions": 37,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "BasePowerup::StaticClassInit",
+          "size": 812,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::DecrementTimeByUseCost",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::setPowerupStateSerialization",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::setState",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::BasePowerup",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::BasePowerup",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::updateState_Activated",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::~BasePowerup",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::~BasePowerup",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::SetIsInWarning",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::ResetTimeRemaining",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::Activate",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::Deactivate",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::isInState",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::~BasePowerup",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::onEnterState_Activated",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::onEnterState_Idle",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::Deselect",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::GetType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::Select",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::SetPowerupType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::Update",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::getPowerupStateSerialization",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::getState",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::onInitialized",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::Draw",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::onEnterState_Selected",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::onExitState_Activated",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::onExitState_Idle",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::onExitState_Selected",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::onSelected",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::updateState_Idle",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BasePowerup::updateState_Selected",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/powerups/PowerupBeghouledShovel.cpp",
       "total_code": 876,
-      "matched_code": 540,
-      "matched_code_percent": 61.64,
+      "matched_code": 876,
+      "matched_code_percent": 100.0,
       "total_functions": 12,
-      "matched_functions": 11,
-      "matched_functions_percent": 91.67,
-      "fuzzy_match_percent": 61.64,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PowerupBeghouledShovel::onTouchEnd",
           "size": 336,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupBeghouledShovel::StaticClassInit",
@@ -239113,360 +239337,180 @@
     {
       "name": "src/PvZ2/powerups/PowerupCukeTutorialIntro.cpp",
       "total_code": 11704,
-      "matched_code": 624,
-      "matched_code_percent": 5.33,
+      "matched_code": 11220,
+      "matched_code_percent": 95.86,
       "total_functions": 68,
-      "matched_functions": 10,
-      "matched_functions_percent": 14.71,
-      "fuzzy_match_percent": 5.33,
+      "matched_functions": 66,
+      "matched_functions_percent": 97.06,
+      "fuzzy_match_percent": 99.7,
       "functions": [
-        {
-          "name": "PowerupCukeTutorialIntro::StaticClassInit",
-          "size": 2072,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::registerForEvents",
-          "size": 928,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::pointArrowAtPowerupButton",
-          "size": 668,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::pauseWave",
-          "size": 572,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onEnterState_UsePlantfood",
-          "size": 492,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onPowerupSelected",
-          "size": 484,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onEnterState_Plantfood",
-          "size": 480,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onEnterState_Advice",
-          "size": 368,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onEnterState_DaveProlog",
-          "size": 364,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "PowerupCukeTutorialIntro::onCanApplyPlantfood",
           "size": 324,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::updateState_UsePlantfood",
-          "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::introduceDave",
-          "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::setupOpeningZombies",
-          "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onEnterState_PlantfoodEnd",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onGameplayStarted",
-          "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onShowCukeConfirm",
-          "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onExitState_PlantfoodEnd",
-          "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::updateState_WaveTrigger",
-          "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onEnterState_Resume",
-          "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onEnterState_ArrowAlert",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::setPowerupCukeTutorialStateSerialization",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::setState",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onToolAppliedPlantFood",
-          "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::addToRenderQueue",
-          "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::makeZombieRiseFromGround",
-          "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 92.77
         },
         {
           "name": "PowerupCukeTutorialIntro::onLoadComplete",
           "size": 160,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 92.5
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::StaticClassInit",
+          "size": 2072,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::registerForEvents",
+          "size": 928,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::pointArrowAtPowerupButton",
+          "size": 668,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::pauseWave",
+          "size": 572,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onEnterState_UsePlantfood",
+          "size": 492,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onPowerupSelected",
+          "size": 484,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onEnterState_Plantfood",
+          "size": 480,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onEnterState_Advice",
+          "size": 368,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onEnterState_DaveProlog",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::updateState_UsePlantfood",
+          "size": 300,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::introduceDave",
+          "size": 268,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::setupOpeningZombies",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onEnterState_PlantfoodEnd",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onGameplayStarted",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onShowCukeConfirm",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onExitState_PlantfoodEnd",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::updateState_WaveTrigger",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onEnterState_Resume",
+          "size": 188,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onEnterState_ArrowAlert",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::setPowerupCukeTutorialStateSerialization",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::setState",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onToolAppliedPlantFood",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::addToRenderQueue",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::makeZombieRiseFromGround",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupCukeTutorialIntro::onNarrationFinished",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupCukeTutorialIntro::onEndLevel",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onPowerupDeactivated",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::initializeModule",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::enterTutorial",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onWaveStarted",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::update",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::startIntro",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onExitState_UsePlantfood",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::isInState",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onEnterState_WaveTrigger",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onEnterState_Start",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onExitState_WaveTrigger",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::drawLawnOverlays",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::getPowerupCukeTutorialStateSerialization",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onEndOfAdvice",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::updateState_SpawnZombies",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onEnterState_SpawnZombies",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onExitState_Advice",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onExitState_ArrowAlert",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onExitState_DaveProlog",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onExitState_Plantfood",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onExitState_Resume",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onExitState_SpawnZombies",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::onExitState_Start",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::updateState_Advice",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::updateState_ArrowAlert",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::updateState_DaveProlog",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::updateState_Plantfood",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::updateState_PlantfoodEnd",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::updateState_Resume",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntro::updateState_Start",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupCukeTutorialIntro::StaticGetClass",
@@ -239475,6 +239519,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PowerupCukeTutorialIntro::onPowerupDeactivated",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PowerupCukeTutorialIntro::PowerupCukeTutorialIntro",
           "size": 112,
           "matched": true,
@@ -239483,6 +239533,18 @@
         {
           "name": "PowerupCukeTutorialIntro::PowerupCukeTutorialIntro",
           "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::initializeModule",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::enterTutorial",
+          "size": 92,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -239495,6 +239557,24 @@
         {
           "name": "PowerupCukeTutorialIntro::~PowerupCukeTutorialIntro",
           "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onWaveStarted",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::update",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::startIntro",
+          "size": 56,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -239505,13 +239585,55 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PowerupCukeTutorialIntro::onExitState_UsePlantfood",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::isInState",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onEnterState_WaveTrigger",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PowerupCukeTutorialIntro::~PowerupCukeTutorialIntro",
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PowerupCukeTutorialIntro::onEnterState_Start",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onExitState_WaveTrigger",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PowerupCukeTutorialIntro::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::drawLawnOverlays",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::getPowerupCukeTutorialStateSerialization",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -239523,7 +239645,109 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PowerupCukeTutorialIntro::onEndOfAdvice",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::updateState_SpawnZombies",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PowerupCukeTutorialIntro::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onEnterState_SpawnZombies",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onExitState_Advice",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onExitState_ArrowAlert",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onExitState_DaveProlog",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onExitState_Plantfood",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onExitState_Resume",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onExitState_SpawnZombies",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::onExitState_Start",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::updateState_Advice",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::updateState_ArrowAlert",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::updateState_DaveProlog",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::updateState_Plantfood",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::updateState_PlantfoodEnd",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::updateState_Resume",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupCukeTutorialIntro::updateState_Start",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -239611,66 +239835,42 @@
     {
       "name": "src/PvZ2/powerups/PowerupFlickZombie.cpp",
       "total_code": 3764,
-      "matched_code": 548,
-      "matched_code_percent": 14.56,
+      "matched_code": 880,
+      "matched_code_percent": 23.38,
       "total_functions": 19,
-      "matched_functions": 10,
-      "matched_functions_percent": 52.63,
-      "fuzzy_match_percent": 14.56,
+      "matched_functions": 15,
+      "matched_functions_percent": 78.95,
+      "fuzzy_match_percent": 95.66,
       "functions": [
         {
           "name": "PowerupFlickZombie::flick",
           "size": 1564,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 94.88
         },
         {
           "name": "PowerupFlickZombie::findTargetZombie",
           "size": 652,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 98.77
         },
         {
           "name": "PowerupFlickZombie::handleTouch",
           "size": 464,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupFlickZombie::registerForEvents",
-          "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 89.83
         },
         {
           "name": "PowerupFlickZombie::isValidTarget",
           "size": 204,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 86.27
         },
         {
-          "name": "PowerupFlickZombie::onEnterState_Idle",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupFlickZombie::unregisterForEvents",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupFlickZombie::cancelTouch",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupFlickZombie::onEnterState_Selected",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "PowerupFlickZombie::registerForEvents",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupFlickZombie::StaticClassInit",
@@ -239681,6 +239881,12 @@
         {
           "name": "PowerupFlickZombie::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupFlickZombie::onEnterState_Idle",
+          "size": 60,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -239709,6 +239915,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PowerupFlickZombie::unregisterForEvents",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PowerupFlickZombie::~PowerupFlickZombie",
           "size": 20,
           "matched": true,
@@ -239727,7 +239939,19 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PowerupFlickZombie::cancelTouch",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PowerupFlickZombie::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupFlickZombie::onEnterState_Selected",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -239737,24 +239961,24 @@
     {
       "name": "src/PvZ2/powerups/PowerupHolderUI.cpp",
       "total_code": 1056,
-      "matched_code": 380,
-      "matched_code_percent": 35.98,
+      "matched_code": 1056,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 9,
-      "matched_functions_percent": 81.82,
-      "fuzzy_match_percent": 35.98,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PowerupHolderUI::AddPowerup",
           "size": 380,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupHolderUI::Draw",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupHolderUI::StaticGetClass",
@@ -239814,41 +240038,289 @@
     },
     {
       "name": "src/PvZ2/powerups/PowerupManager.cpp",
-      "total_code": 9596,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 37,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 9632,
+      "matched_code": 8764,
+      "matched_code_percent": 90.99,
+      "total_functions": 42,
+      "matched_functions": 40,
+      "matched_functions_percent": 95.24,
+      "fuzzy_match_percent": 98.8,
+      "functions": [
+        {
+          "name": "PowerupManager::SelectPowerup",
+          "size": 692,
+          "matched": false,
+          "fuzzy_match_percent": 97.69
+        },
+        {
+          "name": "PowerupManager::OnBuyItemFinish",
+          "size": 176,
+          "matched": false,
+          "fuzzy_match_percent": 43.48
+        },
+        {
+          "name": "PowerupManager::ActivatePowerup",
+          "size": 1168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::onDrawSelectionOnBoard",
+          "size": 872,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::RemovePowerup",
+          "size": 680,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::AddPowerup",
+          "size": 628,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::addPowerupSet",
+          "size": 452,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::AddConveyorPowerup",
+          "size": 436,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::onUseGemCallback",
+          "size": 372,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::PowerupManager",
+          "size": 368,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::PowerupManager",
+          "size": 368,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::AddToRenderQueue",
+          "size": 332,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::GetCurrentPowerAdditionDamage",
+          "size": 316,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::CancelActivePowerup",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::GetPowerAdditionCost",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::SetMaxPurchasesAllowed",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::onNetworkError",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::DeactivatePowerup",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::GetBasePowerup",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::IsMiniGamePerkPowerUp",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::LoadPropsFromMagento",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::ShowWidgets",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::AddDefaultPowerupsForLevel",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::~PowerupManager",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::~PowerupManager",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::OnLevelLoadComplete",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::Update",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::RemoveAllPowerups",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::GetCurrentPowerCost",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::onDrawActivePowerup",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::~PowerupManager",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::IsBlock",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::onUseGemFinished",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::GetActivePowerup",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::GetPowerups",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::GetSelectedPowerup",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupManager::OnServerGemCallBack",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/powerups/PowerupPinchZombie.cpp",
       "total_code": 1832,
-      "matched_code": 348,
-      "matched_code_percent": 19.0,
+      "matched_code": 508,
+      "matched_code_percent": 27.73,
       "total_functions": 12,
-      "matched_functions": 9,
-      "matched_functions_percent": 75.0,
-      "fuzzy_match_percent": 19.0,
+      "matched_functions": 11,
+      "matched_functions_percent": 91.67,
+      "fuzzy_match_percent": 74.82,
       "functions": [
         {
           "name": "PowerupPinchZombie::handlePinch",
           "size": 1324,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 65.17
         },
         {
           "name": "PowerupPinchZombie::registerForEvents",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupPinchZombie::unregisterForEvents",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupPinchZombie::StaticGetClass",
@@ -239881,6 +240353,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PowerupPinchZombie::unregisterForEvents",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PowerupPinchZombie::~PowerupPinchZombie",
           "size": 20,
           "matched": true,
@@ -239909,66 +240387,42 @@
     {
       "name": "src/PvZ2/powerups/PowerupPurchaseIntro.cpp",
       "total_code": 2556,
-      "matched_code": 536,
-      "matched_code_percent": 20.97,
+      "matched_code": 2556,
+      "matched_code_percent": 100.0,
       "total_functions": 20,
-      "matched_functions": 11,
-      "matched_functions_percent": 55.0,
-      "fuzzy_match_percent": 20.97,
+      "matched_functions": 20,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PowerupPurchaseIntro::begin",
           "size": 656,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupPurchaseIntro::onTutNarrationFinished",
           "size": 472,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupPurchaseIntro::onDraw",
           "size": 312,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupPurchaseIntro::registerForEvents",
           "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupPurchaseIntro::addToRenderQueue",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupPurchaseIntro::onStandardIntroComplete",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupPurchaseIntro::initializeModule",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupPurchaseIntro::suppressReadySetGo",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupPurchaseIntro::onHijackedReadySetPlantFinished",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupPurchaseIntro::StaticClassInit",
@@ -239979,6 +240433,12 @@
         {
           "name": "PowerupPurchaseIntro::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupPurchaseIntro::onStandardIntroComplete",
+          "size": 68,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -240001,8 +240461,26 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PowerupPurchaseIntro::initializeModule",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupPurchaseIntro::suppressReadySetGo",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PowerupPurchaseIntro::~PowerupPurchaseIntro",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupPurchaseIntro::onHijackedReadySetPlantFinished",
+          "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -240190,13 +240668,135 @@
     },
     {
       "name": "src/PvZ2/powerups/PowerupTacticalCuke.cpp",
-      "total_code": 3012,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 18,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 3024,
+      "matched_code": 3024,
+      "matched_code_percent": 100.0,
+      "total_functions": 20,
+      "matched_functions": 20,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "PowerupTacticalCuke::LaunchCuke",
+          "size": 420,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::PowerupTacticalCuke",
+          "size": 260,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::PowerupTacticalCuke",
+          "size": 260,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::updateState_Idle",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::~PowerupTacticalCuke",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::~PowerupTacticalCuke",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::CreateCukeObjectAndRefreshStatus",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::onInitialized",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::onEnterState_Selected",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::updateState_Activated",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::OnNotifyPowerupUsesChanged",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::Draw",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::onExitState_Activated",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::updateState_Selected",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::~PowerupTacticalCuke",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTacticalCuke::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/powerups/PowerupTimeUI.cpp",
@@ -240357,60 +240957,24 @@
     {
       "name": "src/PvZ2/powerups/PowerupTouchBased.cpp",
       "total_code": 1288,
-      "matched_code": 456,
-      "matched_code_percent": 35.4,
+      "matched_code": 892,
+      "matched_code_percent": 69.25,
       "total_functions": 20,
-      "matched_functions": 12,
-      "matched_functions_percent": 60.0,
-      "fuzzy_match_percent": 35.4,
+      "matched_functions": 19,
+      "matched_functions_percent": 95.0,
+      "fuzzy_match_percent": 92.01,
       "functions": [
         {
           "name": "PowerupTouchBased::handleTouch",
           "size": 396,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 74.0
         },
         {
           "name": "PowerupTouchBased::registerForEvents",
           "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTouchBased::PowerupTouchBased",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTouchBased::PowerupTouchBased",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTouchBased::cancelTouch",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTouchBased::unregisterForEvents",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTouchBased::getActiveTouchIdent",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTouchBased::getLastTouchEvent",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupTouchBased::StaticClassInit",
@@ -240425,6 +240989,24 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PowerupTouchBased::PowerupTouchBased",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTouchBased::PowerupTouchBased",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTouchBased::cancelTouch",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PowerupTouchBased::StaticNew",
           "size": 44,
           "matched": true,
@@ -240433,6 +241015,12 @@
         {
           "name": "PowerupTouchBased::~PowerupTouchBased",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTouchBased::unregisterForEvents",
+          "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -240450,6 +241038,18 @@
         },
         {
           "name": "PowerupTouchBased::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTouchBased::getActiveTouchIdent",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupTouchBased::getLastTouchEvent",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -240708,13 +241308,141 @@
     },
     {
       "name": "src/PvZ2/powerups/PowerupWizardFinger.cpp",
-      "total_code": 2136,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 19,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 2148,
+      "matched_code": 1624,
+      "matched_code_percent": 75.61,
+      "total_functions": 21,
+      "matched_functions": 20,
+      "matched_functions_percent": 95.24,
+      "fuzzy_match_percent": 99.81,
+      "functions": [
+        {
+          "name": "PowerupWizardFinger::handleTouch",
+          "size": 524,
+          "matched": false,
+          "fuzzy_match_percent": 99.24
+        },
+        {
+          "name": "PowerupWizardFinger::shouldActivate",
+          "size": 256,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::activate",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::registerForEvents",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::cancelTouch",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::PowerupWizardFinger",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::PowerupWizardFinger",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::onEnterState_Idle",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::~PowerupWizardFinger",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::~PowerupWizardFinger",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::updateState_Activated",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::onExitState_Activated",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::~PowerupWizardFinger",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::unregisterForEvents",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::isTouching",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupWizardFinger::onEnterState_Selected",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/powerups/minigame/PowerupMiniGamePerkBowling.cpp",
@@ -240953,30 +241681,24 @@
     {
       "name": "src/PvZ2/powerups/minigame/PowerupMiniGamePerkSelector.cpp",
       "total_code": 664,
-      "matched_code": 372,
-      "matched_code_percent": 56.02,
+      "matched_code": 664,
+      "matched_code_percent": 100.0,
       "total_functions": 16,
-      "matched_functions": 13,
-      "matched_functions_percent": 81.25,
-      "fuzzy_match_percent": 56.02,
+      "matched_functions": 16,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PowerupMiniGamePerkSelector::updateState_Selected",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupMiniGamePerkSelector::activate",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupMiniGamePerkSelector::onEnterState_Selected",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupMiniGamePerkSelector::StaticGetClass",
@@ -241046,6 +241768,12 @@
         },
         {
           "name": "PowerupMiniGamePerkSelector::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupMiniGamePerkSelector::onEnterState_Selected",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -241505,64 +242233,52 @@
     {
       "name": "src/PvZ2/powerups/vase/PowerupVaseBreakerButter.cpp",
       "total_code": 1728,
-      "matched_code": 436,
-      "matched_code_percent": 25.23,
+      "matched_code": 1728,
+      "matched_code_percent": 100.0,
       "total_functions": 17,
-      "matched_functions": 9,
-      "matched_functions_percent": 52.94,
-      "fuzzy_match_percent": 25.23,
+      "matched_functions": 17,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PowerupVaseBreakerButter::getClosestButterableZombie",
           "size": 532,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseBreakerButter::onTouchEnd",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseBreakerButter::onTouchBegin",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseBreakerButter::onTouchMoved",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseBreakerButter::setHighlightedZombie",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerButter::updateState_Selected",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerButter::onEnterState_Activated",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerButter::onTouchCanceled",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseBreakerButter::StaticGetClass",
           "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupVaseBreakerButter::updateState_Selected",
+          "size": 68,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -241603,7 +242319,19 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PowerupVaseBreakerButter::onEnterState_Activated",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PowerupVaseBreakerButter::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupVaseBreakerButter::onTouchCanceled",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -241697,90 +242425,48 @@
     {
       "name": "src/PvZ2/powerups/vase/PowerupVaseBreakerMove.cpp",
       "total_code": 2816,
-      "matched_code": 572,
-      "matched_code_percent": 20.31,
+      "matched_code": 2372,
+      "matched_code_percent": 84.23,
       "total_functions": 24,
-      "matched_functions": 11,
-      "matched_functions_percent": 45.83,
-      "fuzzy_match_percent": 20.31,
+      "matched_functions": 23,
+      "matched_functions_percent": 95.83,
+      "fuzzy_match_percent": 97.44,
       "functions": [
         {
           "name": "PowerupVaseBreakerMove::canMoveVaseTo",
           "size": 444,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 83.78
         },
         {
           "name": "PowerupVaseBreakerMove::onTouchEnd",
           "size": 420,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseBreakerMove::onTouchMoved",
           "size": 340,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseBreakerMove::onTouchBegin",
           "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseBreakerMove::getFirstVaseAt",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseBreakerMove::selectVase",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerMove::clearQueuedVase",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerMove::clearSelection",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerMove::queueSelectedVase",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerMove::selectQueuedVase",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerMove::onExitState_Selected",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerMove::onTouchCanceled",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerMove::onEnterState_Activated",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseBreakerMove::StaticGetClass",
@@ -241797,6 +242483,30 @@
         {
           "name": "PowerupVaseBreakerMove::PowerupVaseBreakerMove",
           "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupVaseBreakerMove::clearQueuedVase",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupVaseBreakerMove::clearSelection",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupVaseBreakerMove::queueSelectedVase",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupVaseBreakerMove::selectQueuedVase",
+          "size": 76,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -241825,8 +242535,26 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PowerupVaseBreakerMove::onExitState_Selected",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupVaseBreakerMove::onTouchCanceled",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PowerupVaseBreakerMove::~PowerupVaseBreakerMove",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PowerupVaseBreakerMove::onEnterState_Activated",
+          "size": 32,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -241943,30 +242671,30 @@
     {
       "name": "src/PvZ2/powerups/vase/PowerupVaseSelector.cpp",
       "total_code": 1124,
-      "matched_code": 368,
-      "matched_code_percent": 32.74,
+      "matched_code": 1124,
+      "matched_code_percent": 100.0,
       "total_functions": 15,
-      "matched_functions": 12,
-      "matched_functions_percent": 80.0,
-      "fuzzy_match_percent": 32.74,
+      "matched_functions": 15,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PowerupVaseSelector::onTouchEnd",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseSelector::Draw",
           "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseSelector::getFirstVaseAt",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PowerupVaseSelector::StaticGetClass",

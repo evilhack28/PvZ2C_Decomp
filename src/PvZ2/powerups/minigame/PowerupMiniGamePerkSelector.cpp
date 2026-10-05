@@ -8,6 +8,11 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PowerupMiniGamePerk.h"
+#include "PowerupManager.h"
+#include "Board.h"
+#include "LawnApp.h"
+#include "GameEventMgr.h"
+#include "PowerupType.h"
 
 PowerupMiniGamePerkSelector::PowerupMiniGamePerkSelector()
 {
@@ -24,6 +29,35 @@ void PowerupMiniGamePerkSelector::onTouchEnd(const Sexy::Touch& i_arg)
 bool PowerupMiniGamePerkSelector::onTouchBegin(const Sexy::Touch& i_arg)
 {
 	return true;
+}
+
+bool PowerupMiniGamePerkSelector::canActivate()
+{
+	return true;
+}
+
+void PowerupMiniGamePerkSelector::onEnterState_Selected(PowerupState i_fromState)
+{
+	BasePowerup::onEnterState_Selected(i_fromState);
+}
+
+void PowerupMiniGamePerkSelector::updateState_Selected()
+{
+	if (!canActivate())
+	{
+		gLawnApp->m_board->GetPowerupManager()->CancelActivePowerup();
+		return;
+	}
+	if (!isInState(POWERUP_Activated))
+		Activate();
+	activate();
+}
+
+void PowerupMiniGamePerkSelector::activate()
+{
+	std::string name = GetType()->TypeName.substr(8);
+	int id = MiniGamePerkMapper::GetInstance().GetIdForName(name);
+	gMessageRouter->Post(&Message::NotifyUseButtonClicked, id);
 }
 
 void PowerupMiniGamePerkSelector::Draw(Sexy::Graphics* i_arg)
