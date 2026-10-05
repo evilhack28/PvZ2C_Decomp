@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-05T22:39:12+00:00",
+  "generated": "2026-10-05T23:11:55+00:00",
   "measures": {
     "total_functions": 85058,
-    "matched_functions": 26947,
-    "matched_functions_percent": 31.68,
+    "matched_functions": 26964,
+    "matched_functions_percent": 31.7,
     "total_code": 12597832,
-    "matched_code": 1707952,
-    "matched_code_percent": 13.56,
-    "fuzzy_match_percent": 14.3,
+    "matched_code": 1710992,
+    "matched_code_percent": 13.58,
+    "fuzzy_match_percent": 14.33,
     "started_units": 2207,
     "total_units": 2751,
     "started_code": 10127196,
-    "started_matched_code": 1707952,
-    "started_percent": 16.87,
+    "started_matched_code": 1710992,
+    "started_percent": 16.9,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -93739,114 +93739,84 @@
     {
       "name": "src/PvZ2/debug/PVZCheats.cpp",
       "total_code": 8864,
-      "matched_code": 5824,
-      "matched_code_percent": 65.7,
+      "matched_code": 8864,
+      "matched_code_percent": 100.0,
       "total_functions": 143,
-      "matched_functions": 126,
-      "matched_functions_percent": 88.11,
-      "fuzzy_match_percent": 65.7,
+      "matched_functions": 143,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "CheatGameUnlockToEvent::unlockToEvent",
           "size": 484,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameSpawnPlantCommand::spawnPlant",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameSpawnCollectable::spawnCollectable",
           "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameFeatureToggle::SetValue",
           "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameSpawnZombieCommand::spawnZombie",
           "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameProfileLockToggle::SetValue",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameStartNarrative::startNarrative",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameSpawnCreatureCommand::spawnCreature",
           "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameStartLevelCommand::startLevel",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatAutoTestStartLevelCommand::changeLevel",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatAutoTestStartUnlockLevelCommand::changeLevel",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatPlantsVsZombiesStartWorldCommand::changeWorld",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CheatDangerRoomStartLevelCommand::startLevel",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CheatVariable::SetValue2",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CheatVariable::SetValue",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CheatGameFeatureToggle::GetValue",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CheatGameProfileLockToggle::GetValue",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatAutoTestStartLevelCommand::StaticGetClass",
@@ -93933,6 +93903,24 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "CheatDangerRoomStartLevelCommand::startLevel",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatVariable::SetValue2",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatVariable::SetValue",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "CheatGameUnlockToEvent::CheatGameUnlockToEvent",
           "size": 72,
           "matched": true,
@@ -93941,6 +93929,12 @@
         {
           "name": "CheatGameUnlockToEvent::CheatGameUnlockToEvent",
           "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatGameFeatureToggle::GetValue",
+          "size": 68,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -94264,6 +94258,12 @@
         },
         {
           "name": "CheatGameFeatureToggle::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatGameProfileLockToggle::GetValue",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
