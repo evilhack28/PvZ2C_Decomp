@@ -85,16 +85,16 @@ void EightiesStage::initializeModule()
 
 void EightiesStage::StartMusic()
 {
-	if (!GetShouldStartMusic())
-		return;
+	if (GetShouldStartMusic())
+	{
+		std::string musicSuffix = getProps<StageModuleProperties>()->MusicSuffix;
+		AudioMgr::GetInstancePtr()->SetSwitch("LevelStarted", musicSuffix.c_str());
 
-	std::string musicSuffix = getProps<EightiesStageProperties>()->MusicSuffix;
-	AudioMgr::GetInstancePtr()->SetSwitch("LevelStarted", musicSuffix.c_str());
+		std::string musicType = getMusicTypeForCurrentLevel();
+		std::string musicSwitch = Sexy::StrFormat("Music_%s", musicType.c_str());
+		AudioMgr::GetInstancePtr()->SetSwitch("Music_Type", musicSwitch.c_str());
 
-	std::string musicType = getMusicTypeForCurrentLevel();
-	std::string musicSwitch = Sexy::StrFormat("Music_%s", musicType.c_str());
-	AudioMgr::GetInstancePtr()->SetSwitch("Music_Type", musicSwitch.c_str());
-
-	gLawnApp->PlayMusicCallback("Play_Music_World", &m_jamListener);
-	setStageMusicState(STAGEMUSIC_Initial);
+		gLawnApp->PlayMusicCallback("Play_Music_World", &m_jamListener);
+		setStageMusicState(STAGEMUSIC_Initial);
+	}
 }

@@ -78,8 +78,8 @@ int DarkStage::GetDefaultZombieSpawnPositionX(int i_row)
 	EntityFinder::GetEntitiesInRowMatchingClass(entities, ENTITYTYPE_GRIDITEM, i_row, GridItemGravestoneShortcut::StaticGetClass());
 	std::sort(entities.begin(), entities.end(), BoardEntity::BoardEntityLeftToRightSortFunc);
 
-	if (entities.empty())
-		return StageModule::GetDefaultZombieSpawnPositionX(i_row);
+	if (entities.size() > 0)
+		return (int)(entities[0]->GetPosition().x - 50.0f);
 
-	return (int)(entities.front()->GetPosition().x - 50.0f);
+	return StageModule::GetDefaultZombieSpawnPositionX(i_row);
 }

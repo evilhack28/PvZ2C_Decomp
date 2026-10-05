@@ -9,19 +9,30 @@
 
 #include "Board.h"
 #include "BoardConstants.h"
+#include "BoardRegion.h"
+#include "BoardTransforms.h"
 #include "DamageInfo.h"
+#include "Effect_GroundEffects.h"
+#include "Effect_PopAnim.h"
 #include "EntityFinder.h"
 #include "GameEventMgr.h"
+#include "Graphics.h"
 #include "LawnApp.h"
 #include "LevelModuleManager.h"
 #include "ObjectTypeDirectory.h"
+#include "PopAnimRig.h"
 #include "ReflectionBuilder.h"
 #include "Renderable.h"
 #include "RenderQueue.h"
+#include "ResourceHelpers.h"
 #include "RtDelegate.h"
+#include "ScaledApp.h"
 #include "TimeMgr.h"
 #include "Zombie.h"
 #include "ZombieType.h"
+
+static CachedResourcePtr<Sexy::Image> g_boardwalk("IMAGE_BACKGROUNDS_BEACH_BOARDWALK");
+static CachedResourcePtr<Sexy::Image> g_rocks("IMAGE_BACKGROUNDS_BEACH_ROCKS");
 
 RT_CLASS_IMPLEMENT(BeachStage);
 void BeachStage::StaticClassInit()
@@ -81,6 +92,30 @@ void BeachStage::addForegroundToRenderQueue(RenderQueue* i_queue)
 	i_queue->Add(RENDER_LAYER_STAGE_FOREGROUND, Sexy::MakeDelegate(*this, &BeachStage::renderForeground));
 }
 
+
+void BeachStage::AddVortex(float iX, float iY, float iDelay)
+{
+	RtWeakPtr<PopAnim> pam = GetPAMByName("POPANIM_EFFECTS_LOTUSHOOTER_VORTEX");
+	if (pam.IsValid())
+	{
+		Effect_GroundEffectStun* effect = gLawnApp->m_board->AddEffect<Effect_GroundEffectStun>();
+		effect->CreatePopAnimRig(pam, NULL);
+		effect->SetBoardSpaceOrigin(SexyVector3(iX, iY - 35.0f, 0), -1);
+		effect->SetRenderLayerOverride(RENDER_LAYER_TIDE_UPPER_LAYER);
+		effect->SetEndTime(iDelay);
+		effect->PlayLoopingAnimation("ANIMATION");
+	}
+}
+
+void BeachStage::renderForeground(Sexy::Graphics* i_g)
+{
+	i_g->mTransX /= i_g->mScaleX;
+	i_g->mTransY /= i_g->mScaleY;
+	i_g->DrawImage(g_rocks, (int)S(153.5f), (int)S(6.0f));
+	i_g->mTransX /= i_g->mScaleX;
+	i_g->mTransY /= i_g->mScaleY;
+	i_g->DrawImage(g_boardwalk, S(-41), S(404));
+}
 
 void BeachStage::SetLemonRainDelayTime(int iDelay)
 {
@@ -243,6 +278,46 @@ int BeachStageEventZombieSpawner::calculateNextRowToSpawnIn()
 	int row = m_nextRowToSpawnIn;
 	m_nextRowToSpawnIn = (m_nextRowToSpawnIn + 17) % BoardConstants::NUMBER_OF_ROWS();
 	return row;
+}
+
+void BeachStageEventZombieSpawner::spawnZombies(int i_count, int i_waveNumber, MTRand& i_random)
+{
+	const BeachStageEventZombieSpawnerProps* props = GetProps<BeachStageEventZombieSpawnerProps>();
+	RtWeakPtr<ZombieType> type = ObjectTypeDirectory<ZombieType>::GetInstancePtr()->GetTypeFromTypeName(props->GetZombieName());
+
+	i_count = std::min(i_count, props->ZombieCount - m_zombiesSpawned);
+	for (int i = 0; i < i_count; i++)
+	{
+		Zombie* zombie = gLawnApp->m_board->SpawnZombie(type, i_waveNumber);
+		zombie->SetHasPlantFood(false);
+		zombie->SetLoot(m_zombieLoot[i]);
+		zombie->SetIsFlagZombie(false);
+		zombie->GetAnimRig()->SetLayerVisibility("zombie_seaweed1", true);
+
+		int column = props->ColumnStart;
+		if (column < props->ColumnEnd)
+			column += i_random.Next(props->ColumnEnd - column);
+		int row = calculateNextRowToSpawnIn();
+		SexyVector3 pos(BoardTransforms::GridToBoardSpaceX(column), BoardTransforms::GridToBoardSpaceY(row), 0);
+		zombie->RiseFromGround(SexyVector3(pos.x, pos.y, 600.0f), true);
+		m_zombiesSpawned++;
+	}
+}
+
+void BeachStageEventZombieSpawner::spawnWaveEffect()
+{
+	Sexy::Rect unused;
+	BoardRegion* region = gLawnApp->m_board->FindRegionWithFlags(BOARDREGION_ShallowWater);
+	if (region)
+	{
+		Effect_BeachWaterWave* effect = gLawnApp->m_board->AddEffect<Effect_BeachWaterWave>();
+		effect->CreatePopAnimRig(GetPAMByName("POPANIM_BACKGROUNDS_WAVE_BIG"), NULL);
+		effect->SetCentered(true);
+		SexyVector3 offset(300.0f, 260.0f, 0);
+		Sexy::Point pos((int)region->GetRegion().mX, (int)region->GetRegion().mY);
+		effect->SetBoardSpaceOrigin(SexyVector3(pos.mX + offset.x, pos.mY + offset.y, 0), -1);
+		effect->PlaySingleAnimation("wave_crash");
+	}
 }
 
 /////////////// BeachStageEventZombieSpawnerProps ///////////////

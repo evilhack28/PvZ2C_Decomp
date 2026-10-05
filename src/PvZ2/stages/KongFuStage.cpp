@@ -13,6 +13,17 @@
 #include "ReflectionBuilder.h"
 #include "RtDelegate.h"
 #include "ZombieType.h"
+#include "Board.h"
+#include "BoardConstants.h"
+#include "BoardTransforms.h"
+#include "Graphics.h"
+#include "ResourceHelpers.h"
+#include "LawnApp.h"
+#include "ScaledApp.h"
+
+CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_MECHANISM_BG("IMAGE_BACKGROUNDS_KONGFU_BG");
+CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_MECHANISM_TRACK("IMAGE_BACKGROUNDS_KONGFU_TRACK");
+static SexyVector2 s_trackOffset(5.0f, -25.0f);
 
 RT_CLASS_IMPLEMENT(KongFuStage);
 void KongFuStage::StaticClassInit()
@@ -40,6 +51,28 @@ void KongFuStageProperties::StaticClassInit()
 void KongFuStage::renderBackground(Graphics* i_g)
 {
 	StageModule::renderBackground(i_g);
+
+	Board* board = gLawnApp->m_board;
+	getProps<KongFuStageProperties>();
+
+	for (int x = 0; x < board->m_gridSizeX; x++)
+	{
+		for (int y = 0; y < board->m_gridSizeY; y++)
+		{
+			if (board->GetGridSquareType(x, y) != GRIDSQUARE_GEAR)
+				continue;
+
+			SexyVector2 pos;
+			int bx = BoardTransforms::GridToBoardSpaceX(x);
+			int w = BoardConstants::GRIDSQUARE_WIDTH();
+			pos.x = S(bx + s_trackOffset.x - w * 0.5f);
+			int by = BoardTransforms::GridToBoardSpaceY(y);
+			int h = BoardConstants::GRIDSQUARE_HEIGHT();
+			pos.y = S(by + s_trackOffset.y - h * 0.5f);
+			if (y == 0 || y == 3)
+				i_g->DrawImage(IMAGE_BACKGROUNDS_MECHANISM_TRACK, (int)pos.x, (int)pos.y);
+		}
+	}
 }
 
 

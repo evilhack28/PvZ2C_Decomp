@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-04T23:26:42+00:00",
+  "generated": "2026-10-05T16:31:15+00:00",
   "measures": {
-    "total_functions": 85034,
-    "matched_functions": 26581,
-    "matched_functions_percent": 31.26,
-    "total_code": 12597632,
-    "matched_code": 1635608,
-    "matched_code_percent": 12.98,
-    "fuzzy_match_percent": 13.6,
-    "started_units": 2201,
+    "total_functions": 85045,
+    "matched_functions": 26722,
+    "matched_functions_percent": 31.42,
+    "total_code": 12597716,
+    "matched_code": 1673508,
+    "matched_code_percent": 13.28,
+    "fuzzy_match_percent": 13.98,
+    "started_units": 2203,
     "total_units": 2751,
-    "started_code": 10085148,
-    "started_matched_code": 1635608,
-    "started_percent": 16.22,
+    "started_code": 10110056,
+    "started_matched_code": 1673508,
+    "started_percent": 16.55,
     "unplaced_functions": 59204,
     "unplaced_code": 8973924,
     "compile_failures": 0
@@ -246495,42 +246495,36 @@
     {
       "name": "src/PvZ2/stages/BeachStage.cpp",
       "total_code": 6624,
-      "matched_code": 4456,
-      "matched_code_percent": 67.27,
+      "matched_code": 6068,
+      "matched_code_percent": 91.61,
       "total_functions": 63,
-      "matched_functions": 58,
-      "matched_functions_percent": 92.06,
-      "fuzzy_match_percent": 73.49,
+      "matched_functions": 62,
+      "matched_functions_percent": 98.41,
+      "fuzzy_match_percent": 97.83,
       "functions": [
-        {
-          "name": "BeachStageEventZombieSpawner::spawnZombies",
-          "size": 624,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "BeachStageEventZombieSpawner::spawnWaveEffect",
-          "size": 428,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "BeachStage::AddVortex",
-          "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "BeachStage::renderForeground",
-          "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "BeachStage::WaterDamge",
           "size": 556,
           "matched": false,
           "fuzzy_match_percent": 74.1
+        },
+        {
+          "name": "BeachStageEventZombieSpawner::spawnZombies",
+          "size": 624,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BeachStageEventZombieSpawner::spawnWaveEffect",
+          "size": 428,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BeachStage::AddVortex",
+          "size": 348,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "BeachStageEventZombieSpawner::WaveStart",
@@ -246540,6 +246534,12 @@
         },
         {
           "name": "BeachStage::registerForEvents",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BeachStage::renderForeground",
           "size": 212,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -246885,18 +246885,18 @@
     {
       "name": "src/PvZ2/stages/DarkStage.cpp",
       "total_code": 1864,
-      "matched_code": 1616,
-      "matched_code_percent": 86.7,
+      "matched_code": 1864,
+      "matched_code_percent": 100.0,
       "total_functions": 26,
-      "matched_functions": 25,
-      "matched_functions_percent": 96.15,
-      "fuzzy_match_percent": 97.42,
+      "matched_functions": 26,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "DarkStage::GetDefaultZombieSpawnPositionX",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 80.65
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DarkStage::GetArmor3ZombieType",
@@ -247221,18 +247221,18 @@
     {
       "name": "src/PvZ2/stages/EightiesStage.cpp",
       "total_code": 2844,
-      "matched_code": 2528,
-      "matched_code_percent": 88.89,
+      "matched_code": 2844,
+      "matched_code_percent": 100.0,
       "total_functions": 45,
-      "matched_functions": 44,
-      "matched_functions_percent": 97.78,
-      "fuzzy_match_percent": 98.06,
+      "matched_functions": 45,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "EightiesStage::StartMusic",
           "size": 316,
-          "matched": false,
-          "fuzzy_match_percent": 82.5
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "BassRainZombieSpawner::StaticClassInit",
@@ -247653,162 +247653,66 @@
     {
       "name": "src/PvZ2/stages/FutureStage.cpp",
       "total_code": 9740,
-      "matched_code": 1960,
-      "matched_code_percent": 20.12,
+      "matched_code": 8752,
+      "matched_code_percent": 89.86,
       "total_functions": 46,
-      "matched_functions": 21,
-      "matched_functions_percent": 45.65,
-      "fuzzy_match_percent": 20.12,
+      "matched_functions": 44,
+      "matched_functions_percent": 95.65,
+      "fuzzy_match_percent": 97.72,
       "functions": [
-        {
-          "name": "FutureStage::onUpdate",
-          "size": 1276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::registerForEvents",
-          "size": 712,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::renderBackground",
-          "size": 648,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "FutureStage::propagateFromTile",
           "size": 548,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::onPlantPlantfooded",
-          "size": 468,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::destroyLinkedTileAtIndex",
-          "size": 456,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 94.16
         },
         {
           "name": "FutureStage::UseToolAt",
           "size": 440,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 56.76
+        },
+        {
+          "name": "FutureStage::onUpdate",
+          "size": 1276,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::registerForEvents",
+          "size": 712,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::renderBackground",
+          "size": 648,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::onPlantPlantfooded",
+          "size": 468,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::destroyLinkedTileAtIndex",
+          "size": 456,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FutureStage::addLinkedTile",
           "size": 360,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FutureStage::onZombieDied",
           "size": 312,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::GetPlantedPacketCount",
-          "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::onPlantDied",
-          "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::onPlantPlanted",
-          "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::addToRenderQueue",
-          "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::initializeModule",
-          "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::onToolAppliedPlantFood",
-          "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::DestroyLinkedNetworkAt",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::GetRandomLinkedTileLocation",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::DestroyLinkedTileAt",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::GetLinkedTileClassAt",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::SetLinkedTiles",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::gatherPlantingRestrictions",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::CanZombieSpawnInRow",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::GetLinkedTileColor",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::onLevelEnded",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FutureStage::SetIsBossFight",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FutureStageProperties::FutureStageProperties",
@@ -247829,8 +247733,68 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "FutureStage::GetPlantedPacketCount",
+          "size": 264,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::onPlantDied",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::onPlantPlanted",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::addToRenderQueue",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::initializeModule",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::onToolAppliedPlantFood",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::DestroyLinkedNetworkAt",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "FutureStageProperties::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::GetRandomLinkedTileLocation",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::DestroyLinkedTileAt",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::GetLinkedTileClassAt",
+          "size": 144,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -247843,6 +247807,36 @@
         {
           "name": "FutureStageProperties::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::SetLinkedTiles",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::gatherPlantingRestrictions",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::CanZombieSpawnInRow",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::GetLinkedTileColor",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::onLevelEnded",
+          "size": 92,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -247908,6 +247902,12 @@
         },
         {
           "name": "FutureStage::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FutureStage::SetIsBossFight",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -248229,18 +248229,18 @@
     {
       "name": "src/PvZ2/stages/KongFuStage.cpp",
       "total_code": 2040,
-      "matched_code": 1624,
-      "matched_code_percent": 79.61,
+      "matched_code": 2040,
+      "matched_code_percent": 100.0,
       "total_functions": 27,
-      "matched_functions": 26,
-      "matched_functions_percent": 96.3,
-      "fuzzy_match_percent": 79.61,
+      "matched_functions": 27,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "KongFuStage::renderBackground",
           "size": 416,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "KongFuStage::onZombieTypeCountChange",
@@ -248691,94 +248691,70 @@
     {
       "name": "src/PvZ2/stages/PirateStage.cpp",
       "total_code": 12576,
-      "matched_code": 5876,
-      "matched_code_percent": 46.72,
+      "matched_code": 10488,
+      "matched_code_percent": 83.4,
       "total_functions": 83,
-      "matched_functions": 70,
-      "matched_functions_percent": 84.34,
-      "fuzzy_match_percent": 50.73,
+      "matched_functions": 81,
+      "matched_functions_percent": 97.59,
+      "fuzzy_match_percent": 99.75,
       "functions": [
         {
           "name": "PirateStage::onUpdate",
           "size": 1236,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PirateStage::onLoadComplete",
-          "size": 824,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PirateStage::generatePlanks",
-          "size": 720,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "BoardRegionDeepWater::DoEntityEnteredEffects",
-          "size": 560,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "RaidingPartyZombieSpawner::createZombies",
-          "size": 476,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "RaidingPartyZombieSpawner::initializeAction",
-          "size": 476,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PirateStage::SpawnWaterSplashEffect",
-          "size": 400,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PirateStage::DropZombieInOcean",
-          "size": 364,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 98.71
         },
         {
           "name": "PirateStage::renderBackground",
           "size": 852,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 98.12
         },
         {
-          "name": "PirateStage::gatherPlantingRestrictions",
-          "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 36.07
+          "name": "PirateStage::onLoadComplete",
+          "size": 824,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "PirateStage::CanZombieSpawnInRow",
-          "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 58.33
-        },
-        {
-          "name": "PirateStage::InitPlanks",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 91.11
-        },
-        {
-          "name": "PirateStage::initializeModule",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 87.5
+          "name": "PirateStage::generatePlanks",
+          "size": 720,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PirateStage::onZombieTypeCountChange",
           "size": 600,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BoardRegionDeepWater::DoEntityEnteredEffects",
+          "size": 560,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RaidingPartyZombieSpawner::createZombies",
+          "size": 476,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RaidingPartyZombieSpawner::initializeAction",
+          "size": 476,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PirateStage::SpawnWaterSplashEffect",
+          "size": 400,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PirateStage::DropZombieInOcean",
+          "size": 364,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -248801,6 +248777,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PirateStage::gatherPlantingRestrictions",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PirateStage::CanZombieSpawnInRow",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "RaidingPartyZombieSpawner::AddResourceRequirements",
           "size": 184,
           "matched": true,
@@ -248814,6 +248802,12 @@
         },
         {
           "name": "BoardRegionDeepWater::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PirateStage::InitPlanks",
           "size": 180,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -248851,6 +248845,12 @@
         {
           "name": "RaidingPartyZombieSpawner::spawnGroup",
           "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PirateStage::initializeModule",
+          "size": 128,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -249201,126 +249201,90 @@
     {
       "name": "src/PvZ2/stages/PoolDaylightStage.cpp",
       "total_code": 9924,
-      "matched_code": 1548,
-      "matched_code_percent": 15.6,
+      "matched_code": 7144,
+      "matched_code_percent": 71.99,
       "total_functions": 43,
-      "matched_functions": 24,
-      "matched_functions_percent": 55.81,
-      "fuzzy_match_percent": 15.6,
+      "matched_functions": 40,
+      "matched_functions_percent": 93.02,
+      "fuzzy_match_percent": 99.72,
       "functions": [
         {
           "name": "PoolDaylightStage::onLoadComplete",
           "size": 1784,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PoolDaylightStage::showFloatIslandsUPDown",
-          "size": 1232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PoolDaylightStage::freshenWaterGrid",
-          "size": 712,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PoolDaylightStage::onUpdate",
-          "size": 608,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PoolDaylightStage::onZombieTypeCountChange",
-          "size": 600,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 99.11
         },
         {
           "name": "PoolDaylightStage::gatherPlantingRestrictions",
           "size": 548,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 99.27
         },
         {
           "name": "PoolDaylightStage::renderBackground",
           "size": 448,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 98.21
+        },
+        {
+          "name": "PoolDaylightStage::showFloatIslandsUPDown",
+          "size": 1232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PoolDaylightStage::freshenWaterGrid",
+          "size": 712,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PoolDaylightStage::onUpdate",
+          "size": 608,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PoolDaylightStage::onZombieTypeCountChange",
+          "size": 600,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PoolDaylightStage::WaterEffChange",
           "size": 444,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PoolDaylightStage::SpawnWaterSplashEffect",
           "size": 400,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PoolDaylightStage::generatePlanks",
           "size": 372,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PoolDaylightStage::registerForEvents",
           "size": 344,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PoolDaylightStage::DropZombieInOcean",
           "size": 336,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PoolDaylightStage::GetToxicZombieRow",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PoolDaylightStage::stopZombieGroans",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PoolDaylightStage::downWaterGrid",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PoolDaylightStage::initializeModule",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PoolDaylightStage::upWaterGrid",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PoolDaylightStage::onLevelEnded",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PoolDaylightStage::ShowGuides",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PoolDaylightStage::PoolDaylightStage",
@@ -249371,6 +249335,30 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PoolDaylightStage::stopZombieGroans",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PoolDaylightStage::downWaterGrid",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PoolDaylightStage::initializeModule",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PoolDaylightStage::upWaterGrid",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PoolDaylightStageProperties::PoolDaylightStageProperties",
           "size": 48,
           "matched": true,
@@ -249407,6 +249395,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "PoolDaylightStage::onLevelEnded",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PoolDaylightStageProperties::~PoolDaylightStageProperties",
           "size": 20,
           "matched": true,
@@ -249426,6 +249420,12 @@
         },
         {
           "name": "PoolDaylightStage::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PoolDaylightStage::ShowGuides",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -249470,13 +249470,201 @@
     },
     {
       "name": "src/PvZ2/stages/RenaiStage.cpp",
-      "total_code": 4376,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 26,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 4404,
+      "matched_code": 4404,
+      "matched_code_percent": 100.0,
+      "total_functions": 31,
+      "matched_functions": 31,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "RenaiStage::setUpAnims",
+          "size": 476,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::~RenaiStage",
+          "size": 336,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::~RenaiStage",
+          "size": 336,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::ActivateAnims",
+          "size": 320,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::onLoadComplete",
+          "size": 300,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStageProperties::StaticClassInit",
+          "size": 280,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::addBackgroundToRenderQueue",
+          "size": 268,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::onRenderDay",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::onRenderEvening",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::onRenderNight",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::registerForEvents",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::RenaiStage",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::RenaiStage",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStageProperties::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStageProperties::~RenaiStageProperties",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStageProperties::~RenaiStageProperties",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStageProperties::RenaiStageProperties",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStageProperties::RenaiStageProperties",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStageProperties::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::~RenaiStage",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStageProperties::~RenaiStageProperties",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::SetEnvironmentType",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStageProperties::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStage::initializeModule",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStageProperties::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "RenaiStageProperties::GetModuleClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/stages/RoofStage.cpp",
@@ -249636,13 +249824,357 @@
     },
     {
       "name": "src/PvZ2/stages/SkyCityStage.cpp",
-      "total_code": 20448,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 51,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 20504,
+      "matched_code": 13904,
+      "matched_code_percent": 67.81,
+      "total_functions": 57,
+      "matched_functions": 53,
+      "matched_functions_percent": 92.98,
+      "fuzzy_match_percent": 97.22,
+      "functions": [
+        {
+          "name": "SkyCityStage::autoFire",
+          "size": 2676,
+          "matched": false,
+          "fuzzy_match_percent": 86.25
+        },
+        {
+          "name": "SkyCityStage::onLevelLoaded",
+          "size": 2124,
+          "matched": false,
+          "fuzzy_match_percent": 96.42
+        },
+        {
+          "name": "SkyCityStage::FireCannon",
+          "size": 1228,
+          "matched": false,
+          "fuzzy_match_percent": 90.73
+        },
+        {
+          "name": "SkyCityStage::onAirshipTakeDamage",
+          "size": 572,
+          "matched": false,
+          "fuzzy_match_percent": 97.9
+        },
+        {
+          "name": "SkyCityStage::onCannonFireAnimCommand",
+          "size": 1756,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::renderRunBackground",
+          "size": 1208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onProgressMeterSetFlagCount",
+          "size": 1120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::SetCannonLevel",
+          "size": 1036,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::registerForEvents",
+          "size": 920,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onDrawSelectionOnBoard",
+          "size": 780,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::SkyCityStage",
+          "size": 476,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::SkyCityStage",
+          "size": 476,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onRenderCannon",
+          "size": 448,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onGameplayStarted",
+          "size": 428,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::addBackgroundToRenderQueue",
+          "size": 412,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::StaticClassInit",
+          "size": 380,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::addUISkyCannonArrow",
+          "size": 360,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onRenderAirscrew",
+          "size": 360,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::AddResourceRequirements",
+          "size": 324,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onUpdate",
+          "size": 324,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::handleTouch",
+          "size": 316,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onCannonEndNarrationFinished",
+          "size": 292,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::addBouncingArrow",
+          "size": 256,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::~SkyCityStage",
+          "size": 256,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::~SkyCityStage",
+          "size": 256,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onSkyCannonPressed",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::resetShakeInfos",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStageProperties::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStageProperties::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::clearBouncingArrows",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::renderBesiegeBG",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStageProperties::SkyCityStageProperties",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStageProperties::SkyCityStageProperties",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onReviveSucceed",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onCannonIntroNarrationFinished",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStageProperties::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::~SkyCityStage",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStageProperties::~SkyCityStageProperties",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::IsHaveGridItemAirShip",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStageProperties::~SkyCityStageProperties",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStageProperties::~SkyCityStageProperties",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::SetCannonPosition",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onReviveClose",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onStartGameButtonPressed",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onThunderStart",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::GetShipWidth",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::SetCannonScale",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::cancelTouch",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::onThunderEnd",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStageProperties::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::initializeModule",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStageProperties::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStageProperties::GetModuleClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/stages/WestStage.cpp",
