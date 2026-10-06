@@ -478,11 +478,6 @@ void PowerupCukeTutorialIntro::onEnterState_UsePlantfood(PowerupCukeTutorialStat
 	m_finger.SetCurvingTutorialFinger((float)(start.mX - UIScaleNum(15)), (float)start.mY, target.x, target.y, 1.0f);
 }
 
-__attribute__((noclone)) static void setFlag(bool& o_flag, bool i_value)
-{
-	o_flag = i_value;
-}
-
 static CachedResourcePtr<Sexy::Image> IMAGE_DOWNARROW("IMAGE_DOWNARROW");
 
 void PowerupCukeTutorialIntro::pointArrowAtPowerupButton()
@@ -495,7 +490,7 @@ void PowerupCukeTutorialIntro::pointArrowAtPowerupButton()
 		RtWeakPtr<UIWidget> child = holder->GetChildId(i);
 		if (static_cast<PowerupUI*>(child.operator->())->GetPowerupType()->TypeName == sPowerupName)
 		{
-			setFlag(*((bool*)child.operator->() + 0x1aa), true);
+			static_cast<PowerupTimeUI*>(child.operator->())->setTutorialIntroState(true);
 			Rect drawRect = child->GetDrawRect();
 			m_bouncingArrow = gLawnApp->m_board->AddEffect<Effect_BouncingArrow>()->GetPtr();
 			m_bouncingArrow->SetArrowImage(IMAGE_DOWNARROW);
@@ -514,7 +509,7 @@ void PowerupCukeTutorialIntro::onPowerupSelected(BasePowerup* i_powerup)
 	{
 		RtWeakPtr<UIWidget> child = holder->GetChildId(i);
 		if (static_cast<PowerupUI*>(child.operator->())->GetPowerupType()->TypeName == "poweruptacticalcuke")
-			setFlag(*((bool*)child.operator->() + 0x1aa), false);
+			static_cast<PowerupTimeUI*>(child.operator->())->setTutorialIntroState(false);
 	}
 	gMessageRouter->Unsubscribe(&Message::PowerupSelected, Sexy::MakeDelegate(*this, &PowerupCukeTutorialIntro::onPowerupSelected));
 	gMessageRouter->Post(&Message::UseGemFinish, true);

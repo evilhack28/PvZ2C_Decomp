@@ -164,7 +164,7 @@ void GachaItemDisplayer::ButtonDepress(int i_id)
 {
 PlayerInfo* profile = ProfileMgr::GetInstance().GetCurrentProfile();
 if (i_id == 101) {
-if (__builtin_expect(gLawnApp->IsConnected() || Ver(*(int*)((char*)profile + 0x40)) == 23, 1)) {
+if (__builtin_expect(gLawnApp->IsConnected() || Ver(profile->m_activeTutorial) == 23, 1)) {
 gLawnApp->ShowGachaDisplayerDialog(m_type);
 GachaDisplayerDialog* gd = gLawnApp->GetGachaDisplayerDialog();
 if (gd != NULL) gd->ShowMask();

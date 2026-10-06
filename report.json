@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-06T20:42:38+00:00",
+  "generated": "2026-10-06T21:02:39+00:00",
   "measures": {
     "total_functions": 85805,
-    "matched_functions": 28612,
-    "matched_functions_percent": 33.35,
+    "matched_functions": 28636,
+    "matched_functions_percent": 33.37,
     "total_code": 12859148,
-    "matched_code": 1774944,
-    "matched_code_percent": 13.8,
-    "fuzzy_match_percent": 14.59,
-    "started_units": 2209,
+    "matched_code": 1777532,
+    "matched_code_percent": 13.82,
+    "fuzzy_match_percent": 14.61,
+    "started_units": 2210,
     "total_units": 2762,
-    "started_code": 10144000,
-    "started_matched_code": 1774944,
-    "started_percent": 17.5,
+    "started_code": 10146204,
+    "started_matched_code": 1777532,
+    "started_percent": 17.52,
     "unplaced_functions": 58725,
     "unplaced_code": 8742852,
     "compile_failures": 0
@@ -293655,58 +293655,58 @@
     {
       "name": "src/PvZ2/Managers/AbtestMgr.cpp",
       "total_code": 664,
-      "matched_code": 280,
-      "matched_code_percent": 42.17,
+      "matched_code": 664,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 6,
-      "matched_functions_percent": 60.0,
-      "fuzzy_match_percent": 42.17,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "AbtestMgr::GetActivityAbtestId",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AbtestMgr::InitTestData",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AbtestMgr::AbtestMgr",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AbtestMgr::AbtestMgr",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AbtestMgr::CheckActivityInfos",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AbtestMgr::~AbtestMgr",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AbtestMgr::~AbtestMgr",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AbtestMgr::GetActivityInfos",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AbtestMgr::AbtestMgr",
-          "size": 68,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "AbtestMgr::AbtestMgr",
-          "size": 68,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "AbtestMgr::~AbtestMgr",
-          "size": 52,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "AbtestMgr::~AbtestMgr",
-          "size": 52,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -296113,12 +296113,134 @@
     {
       "name": "src/PvZ2/Managers/MonthlyCardMgr.cpp",
       "total_code": 2204,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2204,
+      "matched_code_percent": 100.0,
       "total_functions": 20,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 20,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "MonthlyCardMgr::RequestFreeItems",
+          "size": 676,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::UploadColor",
+          "size": 344,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::MonthlyCardMgr",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::MonthlyCardMgr",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::GetMonthlyCardType",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::GetChangeNameCost",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::OnLuaNotify",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::SetCommonData",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::GetChangeNameType",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::CanRefreshFreeStatus",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::~MonthlyCardMgr",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::~MonthlyCardMgr",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::~MonthlyCardMgr",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::CanChangeColor",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::CanGetFreeFuel",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::CanGetFreeMysteryCrystal",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::SetCommonData",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::UpdateCurrentColor",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::GetColor",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MonthlyCardMgr::GetColor",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Managers/PinataManager.cpp",

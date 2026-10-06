@@ -4,6 +4,7 @@
 //  Base PvZ2C (arm64-v8a, 3.5.7).
 //  Reconstructed by EvilHack28 on 2026-09-29.
 //
+#include "PvZ/CollectableUpgrade.h"
 #include "PvZ/AwardsGranter.h"
 #include "PvZ/CollectableType.h"
 #include "PvZ/GameFeatureType.h"
@@ -56,8 +57,8 @@ bool AwardsGranter::IsOwned(AwardType awardType, std::string awardParam, bool i_
 	case 5:
 	{
 		PlayerInfo* profile = ProfileMgr::GetInstance().GetCurrentProfile();
-		const CollectableType* c = (const CollectableType*)Identity(ObjectTypeDirectory<CollectableType>::GetInstancePtr()->GetTypeFromTypeName(awardParam).operator->());
-		GameFeatureTypePtr feature = GameFeatureType::GetGameFeatureTypeFromUnlockString(*(const std::string*)((const char*)c + 0x98));
+		const CollectableUpgradeType* c = (const CollectableUpgradeType*)Identity(ObjectTypeDirectory<CollectableType>::GetInstancePtr()->GetTypeFromTypeName(awardParam).operator->());
+		GameFeatureTypePtr feature = GameFeatureType::GetGameFeatureTypeFromUnlockString(c->Upgrade);
 		bool r = profile->GameFeatureIsUnlocked(feature->Feature);
 		return r;
 	}
@@ -99,7 +100,7 @@ void AwardsGranter::GiveAward(AwardType i_awardType, std::string i_awardParam, i
 	case AWARD_Upgrade:
 	{
 		PlayerInfo* profile = ProfileMgr::GetInstance().GetCurrentProfile();
-		const std::string* unlockString = (const std::string*)((const char*)Identity(ObjectTypeDirectory<CollectableType>::GetInstancePtr()->GetTypeFromTypeName(i_awardParam).operator->()) + 0x98);
+		const std::string* unlockString = &((const CollectableUpgradeType*)Identity(ObjectTypeDirectory<CollectableType>::GetInstancePtr()->GetTypeFromTypeName(i_awardParam).operator->()))->Upgrade;
 		GameFeatureTypePtr feature = GameFeatureType::GetGameFeatureTypeFromUnlockString(*unlockString);
 		profile->UnlockGameFeature(feature->Feature);
 		gMessageRouter->Broadcast(Message::AwardGiven, i_awardContext, i_awardParam.c_str(), i_awardCount);

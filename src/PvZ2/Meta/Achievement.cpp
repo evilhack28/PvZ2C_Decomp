@@ -16,6 +16,7 @@
 #include "PvZ/ZombieExplorer.h"
 #include "PvZ/Plant.h"
 #include "PvZ/Plant_Peapod.h"
+#include "PvZ/Plant_Tallnut.h"
 #include "PvZ/PlayerInfo.h"
 #include "PvZ/GameEventMgr.h"
 #include "PvZ/DamageInfo.h"
@@ -95,7 +96,7 @@ static void OnZombieDamageTaken(Zombie* i_zombie, const DamageInfo& i_damage)
 	{
 		AWARD("fried_chicken_ch");
 	}
-	else if (plant->GetType()->TypeName == "potatomine" && PassThrough(*(float*)((char*)i_zombie + 0x280 /* m_hitpoints, private */)) == 0.0f)
+	else if (plant->GetType()->TypeName == "potatomine" && PassThrough(i_zombie->m_hitpoints) == 0.0f)
 	{
 		AWARD("spudow_ch");
 	}
@@ -130,8 +131,8 @@ static void OnPlantPlantfooded(Plant* i_plant)
 			PlantPtr plant = *it;
 			if (plant->GetType()->TypeName == "tallnut")
 			{
-				PlantFramework* framework = plant->GetPlantFramework<PlantFramework>();
-				if (framework && PassThrough(*(float*)((char*)framework + 0x28 /* not in header */)) > 0.0f)
+				PlantTallnut* framework = plant->GetPlantFramework<PlantTallnut>();
+				if (framework && PassThrough(framework->GetShieldHealth()) > 0.0f)
 					count++;
 			}
 		}

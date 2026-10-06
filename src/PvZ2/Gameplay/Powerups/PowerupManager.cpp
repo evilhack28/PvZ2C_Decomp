@@ -173,7 +173,7 @@ void PowerupManager::SetMaxPurchasesAllowed(const int8 i_maxPurchases)
 void PowerupManager::onNetworkError(int erroId, const std::string& requestID)
 {
 	_PacketId packetId;
-	if (requestID == packetId.ID__pad57_00)
+	if (requestID == packetId.ID_ICLOUD_USE_GEM)
 	{
 		if (gTimeMgr->GameIsPause())
 		{

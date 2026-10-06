@@ -493,9 +493,9 @@ PurchaseBroker::~PurchaseBroker()
 void PurchaseBroker::onMsgError(int erroId, const std::string& requestID)
 {
 	_PacketId ids;
-	if (requestID == *(std::string*)((char*)&ids + 0x740))
+	if (requestID == ids.ID_REQUEST_PAYMENT_RESULT)
 		m_sendingRequest = false;
-	else if (requestID == *(std::string*)((char*)&ids + 0x750))
+	else if (requestID == ids.ID_REQUEST_GET_LOST_PAYMENT)
 		gMessageRouter->Post(Message::NotifyRetreiveLostOrderEnd);
 }
 
@@ -628,7 +628,7 @@ void PurchaseBroker::requestLostPayment()
 	std::map<std::string, std::string> params;
 	DNetwork* network = DNetwork::getInstance();
 	_PacketId ids;
-	network->requestMsg(*(std::string*)((char*)&ids + 0x750), params, 30.0f, [this](const std::string& i_response)
+	network->requestMsg(ids.ID_REQUEST_GET_LOST_PAYMENT, params, 30.0f, [this](const std::string& i_response)
 	{
 		S2C_Payment_LostPurchaseOrder data;
 		if (data.SerializeJson(i_response))
@@ -692,7 +692,7 @@ void PurchaseBroker::validatePayment(const std::string& i_productId, const std::
 	params["r"] = i_orderNumber;
 	DNetwork* network = DNetwork::getInstance();
 	_PacketId ids;
-	network->requestMsg(*(std::string*)((char*)&ids + 0x740), params, 30.0f, [this](const std::string& i_response)
+	network->requestMsg(ids.ID_REQUEST_PAYMENT_RESULT, params, 30.0f, [this](const std::string& i_response)
 	{
 		m_sendingRequest = false;
 		S2C_Payment_ValidateResult data;
@@ -708,7 +708,7 @@ void PurchaseBroker::createPayment(MagentoProductProps* purchaseProps)
 	params["pdi"] = purchaseProps->Sku;
 	DNetwork* network = DNetwork::getInstance();
 	_PacketId ids;
-	network->requestMsg(*(std::string*)((char*)&ids + 0x738), params, 30.0f, [this, purchaseProps](const std::string& i_response)
+	network->requestMsg(ids.ID_REQUEST_PAYMENT_ORDER_ID, params, 30.0f, [this, purchaseProps](const std::string& i_response)
 	{
 		NetworkCreatePaymentInfo data;
 		if (data.SerializeJson(i_response))
@@ -803,7 +803,7 @@ void PurchaseBroker::syncPayment(const std::string& i_productId, const std::stri
 	params["oi"] = objectId;
 	DNetwork* network = DNetwork::getInstance();
 	_PacketId ids;
-	network->requestMsg(*(std::string*)((char*)&ids + 0x748), params, 30.0f, [this, i_lostPurchase](const std::string& i_response)
+	network->requestMsg(ids.ID_REQUEST_SYNC_PAYMENT_RESULT, params, 30.0f, [this, i_lostPurchase](const std::string& i_response)
 	{
 		S2C_Payment_SyncPaymentResult data;
 		if (data.SerializeJson(i_response))
