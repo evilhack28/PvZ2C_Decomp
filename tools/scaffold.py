@@ -26,6 +26,8 @@ TREE = os.path.join(config.HERE, 'docs', 'original-source-tree.txt')
 UNITS = os.path.join(config.HERE, 'units.json')
 UNPLACED = os.path.join(config.HERE, 'docs', 'unplaced-symbols.txt')
 
+from layout import studio  # noqa: E402
+
 HANDWRITTEN = {
     'src/PvZ2/plants/Iceburg/Plant_Iceburg.cpp',
     'src/PvZ2/plants/Iceburg/PlantAnimRig_Iceburg.cpp',
@@ -33,14 +35,10 @@ HANDWRITTEN = {
     'src/PvZ2/net/gameNetWork/NetworkData.cpp',
     'src/PvZ2/net/gameNetWork/PVPDatas.cpp',
 }
+HANDWRITTEN = {studio(p) for p in HANDWRITTEN}
 
 # header/source subdir -> where it lands under src/
-_SUBDIR_MOVE = {
-    'gameNetWork': 'net/gameNetWork',
-    'iCloud': 'net/icloud', 'logServer': 'net/log', 'LogCollector': 'net/log',
-    'NoticeBoard': 'net/noticeboard', 'wechat': 'net/wechat',
-    'OriginMobile': 'net/originmobile',
-}
+_SUBDIR_MOVE = {'gameNetWork': 'net/gameNetWork'}
 
 CO_SUFFIXES = ('PropertySheet', 'Properties', 'Props', 'PropSheet', 'Type',
                'Definition', 'Handler')
@@ -63,7 +61,14 @@ def unit_paths():
 
 
 def category(s):
-    """Folder under src/PvZ2/ for a flat or header file, or None to keep it flat."""
+    """Per-entity folder under src/PvZ2/ for plants and zombies only; everything else mirrors its header."""
+    c = _category(s)
+    if c in (None, 'plants', 'zombies', 'zombies/zomboss'):
+        return None
+    return c if c.split('/')[0] in ('plants', 'zombies') else None
+
+
+def _category(s):
     if s.startswith('Plant_'):
         return 'plants/' + s[6:]
     if s.startswith('PlantAnimRig_'):
@@ -79,7 +84,7 @@ def category(s):
     if s in ('Zombie', 'ZombieType', 'ZombieAnimRig', 'ZombieAction'):
         return 'zombies'
     if s.startswith('Zombie'):
-        return 'zombies/' + s[6:].split('Props')[0].split('PropertySheet')[0]
+        return 'zombies/' + s[6:].split('Props')[0].split('PropertySheet')[0].lstrip('_')
     if s.startswith('Effect') or s in ('StandaloneEffect', 'ScoreEffect'):
         return 'effects'
     if s.startswith(('GridItem', 'GridSquare')):
@@ -179,16 +184,56 @@ def category(s):
 
 
 def relocate(repo_path):
+    return canon(_relocate(repo_path))
+
+
+def _relocate(repo_path):
     parts = repo_path.split('/')
     stem = os.path.splitext(parts[-1])[0]
     if parts[:2] == ['src', 'PvZ2'] and len(parts) == 3:
         cat = category(stem)
         if cat:
             return f'src/PvZ2/{cat}/{parts[-1]}'
+        t = _hdr().get(_norm(stem))
+        if t and t.startswith('src/PvZ2/'):
+            return t
     if len(parts) >= 4 and parts[2] in _SUBDIR_MOVE:
         parts[2] = _SUBDIR_MOVE[parts[2]]
         return '/'.join(parts)
     return repo_path
+
+
+_HDR = {}
+_ENT_PRE = ('PlantAnimRig_', 'Plant_', 'ZombieAnimRig_', 'Zombie_', 'Zombie')
+
+
+def canon(path):
+    return studio(_canon(path))
+
+
+def _canon(path):
+    """Respell a src path's file stem (and entity folder) to the header's exact casing."""
+    parts = path.split('/')
+    stem = parts[-1][:-4]
+    t = _hdr().get(_norm(stem))
+    if not t or t.startswith('src/SexyAppFramework'):
+        return path
+    hs = t.rsplit('/', 1)[1][:-4]
+    if hs == stem:
+        return path
+    parts[-1] = hs + '.cpp'
+    if len(parts) >= 5 and parts[2] in ('plants', 'zombies'):
+        for pre in _ENT_PRE:
+            if stem.startswith(pre) and stem[len(pre):].lstrip('_') == parts[3]:
+                parts[3] = hs[len(pre):].lstrip('_')
+                break
+    return '/'.join(parts)
+
+
+def _hdr():
+    if not _HDR:
+        _HDR.update(header_index())
+    return _HDR
 
 
 def header_index():
@@ -213,7 +258,8 @@ def header_index():
                 if len(segs) >= 2 and segs[1] in _SUBDIR_MOVE:
                     segs[1] = _SUBDIR_MOVE[segs[1]]
                 target = f'src/{"/".join(segs)}/{stem}.cpp'
-            idx.setdefault(_norm(stem), target)
+            if _norm(stem) not in idx or target.count('/') < idx[_norm(stem)].count('/'):
+                idx[_norm(stem)] = target
     return idx
 
 
@@ -221,6 +267,17 @@ def entities(classes, prefix):
     return sorted({c[len(prefix):] for c in classes
                    if c.startswith(prefix) and len(c) > len(prefix)
                    and c[len(prefix)].isupper()})
+
+
+def _ent_dir(x, prefixes):
+    """Entity folder spelled as its main header, else as the class names."""
+    for pre in prefixes:
+        t = _hdr().get(_norm(pre + x))
+        if t:
+            hs = t.rsplit('/', 1)[1][:-4]
+            if hs.startswith(pre) and _norm(hs[len(pre):]) == _norm(x):
+                return hs[len(pre):]
+    return x
 
 
 def build_families(classes):
@@ -233,7 +290,7 @@ def build_families(classes):
                 and 'PlantType' + c[5:] in classes}
     plant_x = {x for x in plant_x if x and x[0].isupper()}
     for x in sorted(plant_x, key=len, reverse=True):
-        d = f'src/PvZ2/plants/{x}'
+        d = f'src/PvZ2/plants/{_ent_dir(x, ("Plant_", "Plant"))}'
         main = f'{d}/Plant_{x}.cpp'
         for c in (f'Plant{x}', f'PlantType{x}', f'Plant{x}Props',
                   f'Plant{x}PropertySheet', f'PlantProps{x}'):
@@ -248,7 +305,7 @@ def build_families(classes):
               and not x.startswith(('AnimRig', 'Type', 'Condition', 'Action',
                                     'Spawn', 'Attrib', 'Props', 'Skill'))}
     for x in sorted(zomb_x, key=len, reverse=True):
-        d = f'src/PvZ2/zombies/{x}'
+        d = f'src/PvZ2/zombies/{_ent_dir(x, ("Zombie_", "Zombie")).lstrip("_")}'
         main = f'{d}/Zombie{x}.cpp'
         for c in (f'Zombie{x}', f'Zombie{x}Props', f'Zombie{x}PropertySheet',
                   f'ZombieType{x}'):
@@ -262,24 +319,24 @@ def build_families(classes):
                 if base.endswith(suf) and len(base) > len('GridItem') + len(suf):
                     base = base[:-len(suf)]
                     break
-            place.setdefault(c, f'src/PvZ2/griditems/{base}.cpp')
+            place.setdefault(c, f'src/PvZ2/{base}.cpp')
     for x in entities(classes, 'Effect_'):
-        place[f'Effect_{x}'] = f'src/PvZ2/effects/Effect_{x}.cpp'
+        place[f'Effect_{x}'] = f'src/PvZ2/Effect_{x}.cpp'
     for x in entities(classes, 'EffectAnimRig_'):
-        place[f'EffectAnimRig_{x}'] = f'src/PvZ2/effects/EffectAnimRig_{x}.cpp'
+        place[f'EffectAnimRig_{x}'] = f'src/PvZ2/EffectAnimRig_{x}.cpp'
     for c in list(classes):
         if c.startswith('Powerup') and c not in ('Powerup', 'PowerupType', 'PowerupManager'):
-            place.setdefault(c, f'src/PvZ2/powerups/{c}.cpp')
+            place.setdefault(c, f'src/PvZ2/{c}.cpp')
 
     # Cheats.h / CheatUI.h / PVZCheats.h: class names don't normalize-match
     # any of the three filenames, so the generic rules below never place them.
     for c in ('Cheat', 'CheatToggle', 'CheatToggleAction', 'CheatCommand',
               'CheatManager'):
-        place.setdefault(c, 'src/PvZ2/debug/Cheats.cpp')
+        place.setdefault(c, 'src/PvZ2/Cheats.cpp')
     for c in ('CheatUILine', 'CheatUILineSeparator', 'CheatUILineToggle',
               'CheatUILineCommand', 'CheatAdjusterWidget', 'CheatUILineAdjuster',
               'CheatUILineFolder', 'CheatUIPanel'):
-        place.setdefault(c, 'src/PvZ2/ui/CheatUI.cpp')
+        place.setdefault(c, 'src/PvZ2/CheatUI.cpp')
     for c in ('CheatGameSpawnZombieCommand', 'CheatGameSpawnCreatureCommand',
               'CheatGameSpawnCollectable', 'CheatGameStartLevelCommand',
               'CheatDangerRoomStartLevelCommand', 'CheatGameSpawnPlantCommand',
@@ -287,7 +344,7 @@ def build_families(classes):
               'CheatGameProfileLockToggle', 'CheatGameUnlockToEvent',
               'CheatAutoTestStartLevelCommand', 'CheatPlantsVsZombiesStartWorldCommand',
               'CheatAutoTestStartUnlockLevelCommand', 'CheatVariable'):
-        place.setdefault(c, 'src/PvZ2/debug/PVZCheats.cpp')
+        place.setdefault(c, 'src/PvZ2/PVZCheats.cpp')
     return place
 
 
@@ -316,6 +373,19 @@ STUB = '''// {orig}
 {todo}'''
 
 STUB_TODO_CAP = 80
+
+CLASS_FILES = {
+    'Magento': 'src/PvZ2/MagentoService.cpp',
+    'MagentoProductProps': 'src/PvZ2/MagentoService.cpp',
+    'MagentoCategoryProps': 'src/PvZ2/MagentoService.cpp',
+    'PlantGiftMagentoProps': 'src/PvZ2/MagentoService.cpp',
+    'PVZCachedNetworkTableManager': 'src/PvZ2/PVZCachedNetworkTable.cpp',
+    'PVZPackageNetworkManager': 'src/PvZ2/PVZPackageNetwork.cpp',
+    'PVZLevelNetworkManager': 'src/PvZ2/PVZPackageNetwork.cpp',
+    'INetworkMsgProcess': 'src/PvZ2/net/gameNetWork/NetworkMsgProcess.cpp',
+    'Message': 'src/PvZ2/Message.cpp',
+    'androidNetworkMsgProcess': 'src/PvZ2/net/gameNetWork/androidNetworkMsgProcess.cpp',
+}
 
 
 def write_stub(path, orig, funcs):
@@ -444,16 +514,20 @@ def main():
             if probe.endswith(suf):
                 probe = probe[:-len(suf)]
                 break
-        target = (place.get(c) or place.get(probe)
+        target = (CLASS_FILES.get(c) or place.get(c) or place.get(probe)
                   or old_by_norm.get(_norm(c)) or old_by_norm.get(_norm(probe))
                   or hdr.get(_norm(c)) or hdr.get(_norm(probe)))
+        pref = hdr.get(_norm(c)) or hdr.get(_norm(probe))
+        if (target and pref and pref.startswith('src/PvZ2/')
+                and pref.count('/') > 2
+                and not pref.startswith(('src/PvZ2/plants/', 'src/PvZ2/zombies/')) and not (target or '').startswith('src/PvZ2/net/')):
+            target = pref
         if target:
-            per_file.setdefault(target, []).extend(funcs)
+            per_file.setdefault(canon(target), []).extend(funcs)
         else:
             unplaced[c] = funcs
     for p in old:
         per_file.setdefault(relocate(p), [])
-    regroup(per_file)
 
     placed = sum(len(v) for v in per_file.values())
     up = sum(len(v) for v in unplaced.values())
