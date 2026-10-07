@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-07T16:12:48+00:00",
+  "generated": "2026-10-07T21:01:34+00:00",
   "measures": {
     "total_functions": 85876,
-    "matched_functions": 29007,
-    "matched_functions_percent": 33.78,
+    "matched_functions": 29069,
+    "matched_functions_percent": 33.85,
     "total_code": 12864012,
-    "matched_code": 1836508,
-    "matched_code_percent": 14.28,
-    "fuzzy_match_percent": 15.13,
+    "matched_code": 1855600,
+    "matched_code_percent": 14.42,
+    "fuzzy_match_percent": 15.3,
     "started_units": 2216,
     "total_units": 2762,
     "started_code": 10185208,
-    "started_matched_code": 1836508,
-    "started_percent": 18.03,
+    "started_matched_code": 1855600,
+    "started_percent": 18.22,
     "unplaced_functions": 58725,
     "unplaced_code": 8742852,
     "compile_failures": 0
@@ -294117,12 +294117,12 @@
     {
       "name": "src/PvZ2/Managers/ActivityManager.cpp",
       "total_code": 13016,
-      "matched_code": 140,
-      "matched_code_percent": 1.08,
+      "matched_code": 6704,
+      "matched_code_percent": 51.51,
       "total_functions": 18,
-      "matched_functions": 3,
-      "matched_functions_percent": 16.67,
-      "fuzzy_match_percent": 1.08,
+      "matched_functions": 16,
+      "matched_functions_percent": 88.89,
+      "fuzzy_match_percent": 52.01,
       "functions": [
         {
           "name": "ActivityManager::onNotifyRefreshActivityList",
@@ -294131,88 +294131,76 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "ActivityManager::OnBuyItemFinish",
+          "size": 148,
+          "matched": false,
+          "fuzzy_match_percent": 44.74
+        },
+        {
           "name": "ActivityManager::Initialse",
           "size": 3928,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::SerializeMessage",
           "size": 848,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::InitLevelOfTheDayActivity",
           "size": 316,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::ActivityManager",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::ActivityManager",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::GetActiveItem",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::Request",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::RequestUseGem",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::SetActivityPopuped",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ActivityManager::OnBuyItemFinish",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::Update",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::SetActiveUpdateNotice",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ActivityManager::Reset",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ActivityManager::onNetworkError",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::~ActivityManager",
@@ -294223,12 +294211,24 @@
         {
           "name": "ActivityManager::~ActivityManager",
           "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActivityManager::Reset",
+          "size": 40,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActivityManager::~ActivityManager",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActivityManager::onNetworkError",
+          "size": 24,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }
@@ -297031,210 +297031,120 @@
     {
       "name": "src/PvZ2/Managers/IdentifierMgr.cpp",
       "total_code": 13236,
-      "matched_code": 248,
-      "matched_code_percent": 1.87,
+      "matched_code": 9844,
+      "matched_code_percent": 74.37,
       "total_functions": 38,
-      "matched_functions": 5,
-      "matched_functions_percent": 13.16,
-      "fuzzy_match_percent": 1.87,
+      "matched_functions": 37,
+      "matched_functions_percent": 97.37,
+      "fuzzy_match_percent": 92.06,
       "functions": [
         {
           "name": "IdentifierMgr::Init",
           "size": 3392,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 69.02
         },
         {
           "name": "IdentifierMgr::ResetKeychain",
           "size": 2112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::SaveToKeychain",
           "size": 1332,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::TryBind",
           "size": 844,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::onNotifyUUIDBind",
           "size": 580,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::onBindTipOK",
           "size": 548,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::GenerateLocalUUID",
           "size": 504,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::onNotifyUUIDCheck",
           "size": 488,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::onNotifyUUIDInit",
           "size": 380,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::IdentifierMgr",
           "size": 344,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::IdentifierMgr",
           "size": 344,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::onBindTipCancel",
           "size": 316,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::onBindDoubleTipOK",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::ReadFromSaveFile",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::VerifyMD5",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::SaveToLoaclFile",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::TryIdentifierCheck",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::Update",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::SetUUIDLogin",
-          "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::TryIdentifierInit",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::onBindDialogClosed",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::onBindDoubleTipCancel",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::GetAccessToken",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::GetUUID",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::IsRequestCheck",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::IsRequestFinished",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::IsRequestInit",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::IsRequestTimeOut",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::NeedUUIDLogin",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::setBindTip",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::IsBind",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::haveBindTip",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "IdentifierMgr::onRestartApp",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "IdentifierMgr::~IdentifierMgr",
@@ -297245,6 +297155,42 @@
         {
           "name": "IdentifierMgr::~IdentifierMgr",
           "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::SetUUIDLogin",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::TryIdentifierInit",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::onBindDialogClosed",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::onBindDoubleTipCancel",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::GetAccessToken",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::GetUUID",
+          "size": 40,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -297255,13 +297201,67 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "IdentifierMgr::IsRequestCheck",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::IsRequestFinished",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::IsRequestInit",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::IsRequestTimeOut",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::NeedUUIDLogin",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::setBindTip",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "IdentifierMgr::EnableBind",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "IdentifierMgr::IsBind",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::haveBindTip",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "IdentifierMgr::onNotifyUUIDLogin",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "IdentifierMgr::onRestartApp",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -297781,120 +297781,120 @@
     {
       "name": "src/PvZ2/Managers/SecretGachaMgr.cpp",
       "total_code": 3652,
-      "matched_code": 8,
-      "matched_code_percent": 0.22,
+      "matched_code": 2940,
+      "matched_code_percent": 80.5,
       "total_functions": 20,
-      "matched_functions": 2,
-      "matched_functions_percent": 10.0,
-      "fuzzy_match_percent": 0.22,
+      "matched_functions": 19,
+      "matched_functions_percent": 95.0,
+      "fuzzy_match_percent": 93.47,
       "functions": [
         {
           "name": "SecretGachaMgr::RefreshActivity",
           "size": 712,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 66.48
         },
         {
           "name": "SecretGachaMgr::InitTestData",
           "size": 548,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::OnNotifyRefreshActivityList",
           "size": 424,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::PopDelayDialog",
           "size": 304,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::GetScreenType",
           "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::SecretGachaMgr",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::SecretGachaMgr",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::RequestGachaInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::CreateMainUI",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::SyncActivityData",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::NeedInit",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::~SecretGachaMgr",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::~SecretGachaMgr",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::~SecretGachaMgr",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::RemoveMainUI",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::IsUIActive",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::GetGachaInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::SetSelectId",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SecretGachaMgr::OnNetworkError",
