@@ -48,7 +48,7 @@ void GridItemRenaiRoller::stopMoving()
 	 GridItemRenaiRoller::checkStopLocation();
 }
 
-void GridItemRenaiRoller::onPopAnimCommand(const std::string& i_arg0, pvztime_t i_arg1, const std::string& i_arg2, const std::string& i_arg3)
+void GridItemRenaiRoller::onPopAnimCommand(const std::string& i_animName, pvztime_t i_atTime, const std::string& i_command, const std::string& i_params)
 {
 }
 
@@ -59,12 +59,12 @@ void GridItemRenaiRoller::registerForEvents()
 }
 
 #include "GridItemRenaiRoller.h"
-void GridItemRenaiRoller::onLinkedOnAnimDone(const std::string& i_arg)
+void GridItemRenaiRoller::onLinkedOnAnimDone(const std::string& i_animLabelName)
 {
 	 GridItemRenaiRoller::playLinkedLoopAnim();
 }
 
-void GridItemRenaiRoller::onRollerLoopAnimDone(const std::string& i_arg)
+void GridItemRenaiRoller::onRollerLoopAnimDone(const std::string& i_animLabelName)
 {
 }
 
@@ -73,12 +73,12 @@ bool GridItemRenaiRoller::IsDamageable() const
 	return false;
 }
 
-bool GridItemRenaiRoller::CanBeTargetedBy(const BoardEntity* i_arg) const
+bool GridItemRenaiRoller::CanBeTargetedBy(const BoardEntity* i_entity) const
 {
 	return false;
 }
 
-bool GridItemRenaiRoller::CollidesWithType(const CollisionTypeFlags i_arg) const
+bool GridItemRenaiRoller::CollidesWithType(const CollisionTypeFlags i_collisionTypes) const
 {
 	return false;
 }

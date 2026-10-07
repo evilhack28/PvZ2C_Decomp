@@ -46,7 +46,7 @@ void ConveyorSeedBankProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ConveyorSeedBankProperties);
 }
 
-void ConveyorSeedBank::onRemoveSeed(const class ConveyorRemoveSeedInstruction & i_arg)
+void ConveyorSeedBank::onRemoveSeed(const class ConveyorRemoveSeedInstruction & i_instruction)
 {
 }
 

@@ -13,10 +13,10 @@ UINewYearGoods::~UINewYearGoods()
 {
 }
 
-void UINewYearGoods::ScrollTargetReached(ScrollWidget* i_arg)
+void UINewYearGoods::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UINewYearGoods::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UINewYearGoods::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

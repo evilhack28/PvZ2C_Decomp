@@ -55,10 +55,10 @@ void FairyTaleFogWaveActionProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(FairyTaleFogWaveActionProps);
 }
 
-void FairyTaleFogWaveAction::OnSetNextWaveVisible(bool i_arg)
+void FairyTaleFogWaveAction::OnSetNextWaveVisible(bool i_visible)
 {
 }
 
-void FairyTaleFogWaveAction::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
+void FairyTaleFogWaveAction::WaveEnd(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }

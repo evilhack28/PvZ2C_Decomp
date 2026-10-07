@@ -30,6 +30,6 @@ void PlantSunshroom::onAnimStoppedCallback(const std::string& i_arg)
 	 PlantSunflower::ApplyPlantfood();
 }
 
-void PlantSunshroom::onKilled(bool i_arg)
+void PlantSunshroom::onKilled(bool i_instantKill)
 {
 }

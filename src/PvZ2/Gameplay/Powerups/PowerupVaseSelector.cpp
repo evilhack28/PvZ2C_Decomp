@@ -27,7 +27,7 @@ PowerupVaseSelector::~PowerupVaseSelector()
 
 RT_CLASS_IMPLEMENT(PowerupVaseSelector);
 
-bool PowerupVaseSelector::onTouchBegin(const Sexy::Touch& i_arg)
+bool PowerupVaseSelector::onTouchBegin(const Sexy::Touch& i_touch)
 {
 	return true;
 }

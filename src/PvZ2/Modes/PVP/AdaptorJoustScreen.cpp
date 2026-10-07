@@ -41,7 +41,7 @@ void AdaptorJoustScreen::onHowToPlayTapped()
 }
 
 #include "AdaptorJoustScreen.h"
-void AdaptorJoustScreen::onEASquaredAdFinished(EASquaredAdFinishedReason::EASquaredAdFinishedReason i_arg)
+void AdaptorJoustScreen::onEASquaredAdFinished(EASquaredAdFinishedReason::EASquaredAdFinishedReason i_reason)
 {
 	 AdaptorJoustScreen::updateEASquaredForTicketsVisible();
 }

@@ -9,11 +9,11 @@
 
 #include "PVZ1ModeSelectLevel.h"
 
-void PVZ1ModeSelectLevel::ScrollTargetReached(ScrollWidget* i_arg)
+void PVZ1ModeSelectLevel::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void PVZ1ModeSelectLevel::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void PVZ1ModeSelectLevel::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

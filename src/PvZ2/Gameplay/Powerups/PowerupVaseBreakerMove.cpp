@@ -30,7 +30,7 @@ PowerupVaseBreakerMove::~PowerupVaseBreakerMove()
 
 RT_CLASS_IMPLEMENT(PowerupVaseBreakerMove);
 
-void PowerupVaseBreakerMove::Draw(Sexy::Graphics* i_arg)
+void PowerupVaseBreakerMove::Draw(Sexy::Graphics* i_g)
 {
 }
 

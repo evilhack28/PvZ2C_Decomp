@@ -40,7 +40,7 @@ void GridItemGourdFire::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemGourdFire);
 }
 
-void GridItemGourdFire::onDraw(Sexy::Graphics* i_arg)
+void GridItemGourdFire::onDraw(Sexy::Graphics* i_g)
 {
 }
 
@@ -50,12 +50,12 @@ void GridItemGourdFire::Destroy()
 	 GameObject::Destroy();
 }
 
-bool GridItemGourdFire::CanBeTargetedBy(const BoardEntity* i_arg) const
+bool GridItemGourdFire::CanBeTargetedBy(const BoardEntity* i_entity) const
 {
 	return false;
 }
 
-bool GridItemGourdFire::CollidesWithType(CollisionTypeFlags i_arg) const
+bool GridItemGourdFire::CollidesWithType(CollisionTypeFlags i_collisionTypes) const
 {
 	return false;
 }

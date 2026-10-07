@@ -37,7 +37,7 @@ int PlantAnimRig_Sugarcane::CalcDamageStateCount()
 }
 
 #include "Plant_Sugarcane.h"
-void PlantAnimRig_Sugarcane::onDamageStateIndexChanged(int i_arg)
+void PlantAnimRig_Sugarcane::onDamageStateIndexChanged(int i_oldDamageIndex)
 {
 	 PlantAnimRig_Sugarcane::UpdateDamageState();
 }

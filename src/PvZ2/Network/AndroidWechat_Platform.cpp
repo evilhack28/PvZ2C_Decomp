@@ -80,11 +80,11 @@ void AndroidWechatPlatform::Initialize()
 {
 }
 
-void AndroidWechatPlatform::BindJavaMethods(JNIEnv* i_arg0, const JavaClass& i_arg1)
+void AndroidWechatPlatform::BindJavaMethods(JNIEnv* env, const JavaClass& javaClass)
 {
 }
 
-void AndroidWechatPlatform::BindNativeMethods(JNIEnv* i_arg0, const JavaClass& i_arg1)
+void AndroidWechatPlatform::BindNativeMethods(JNIEnv* env, const JavaClass& javaClass)
 {
 }
 
@@ -93,7 +93,7 @@ bool AndroidWechatPlatform::IsWeChatInstalled()
 	return false;
 }
 
-void AndroidWechatPlatform::DoShare(const std::string& i_arg0, bool i_arg1)
+void AndroidWechatPlatform::DoShare(const std::string& i_url, bool toTimeLine)
 {
 }
 

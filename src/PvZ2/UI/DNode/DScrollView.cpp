@@ -9,6 +9,6 @@
 
 #include "DScrollView.h"
 
-void DScrollView::onTouchLongPress(const Sexy::Touch& i_arg)
+void DScrollView::onTouchLongPress(const Sexy::Touch& touch)
 {
 }

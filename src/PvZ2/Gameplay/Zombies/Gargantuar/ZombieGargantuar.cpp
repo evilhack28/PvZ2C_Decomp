@@ -36,7 +36,7 @@ void ZombieGargantuarProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieGargantuarProps);
 }
 
-bool ZombieGargantuar::canTargetEntityHeight(BoardEntityHeight i_arg)
+bool ZombieGargantuar::canTargetEntityHeight(BoardEntityHeight i_entityHeight)
 {
 	return true;
 }

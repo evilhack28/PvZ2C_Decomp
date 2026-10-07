@@ -39,7 +39,7 @@ bool PlantOlivePit::TryBlockPush()
 	return true;
 }
 
-CollisionTypeFlags PlantOlivePit::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantOlivePit::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)true;
 }

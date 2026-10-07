@@ -9,6 +9,6 @@
 
 #include "MapEventItem.h"
 
-void MapEventItem::DrawMapAdventurePlant(Sexy::Graphics* i_arg0, WorldMapCamera* i_arg1)
+void MapEventItem::DrawMapAdventurePlant(Sexy::Graphics* i_g, WorldMapCamera* i_camera)
 {
 }

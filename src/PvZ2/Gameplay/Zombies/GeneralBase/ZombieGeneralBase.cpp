@@ -38,7 +38,7 @@ void ZombieGeneralBase::SetWalkingState()
 }
 
 #include "ZombieGeneralBase.h"
-void ZombieGeneralBase::onTakeBodyDamage(const DamageInfo& i_arg)
+void ZombieGeneralBase::onTakeBodyDamage(const DamageInfo& i_damageReceived)
 {
 	 ZombieGeneralBase::updateDamageState();
 }

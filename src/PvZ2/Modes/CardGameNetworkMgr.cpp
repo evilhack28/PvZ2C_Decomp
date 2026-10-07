@@ -9,7 +9,7 @@
 
 #include "CardGameNetworkMgr.h"
 
-bool CardGameNetworkMgr::IsHardLevelUnlocked(const std::string& i_arg)
+bool CardGameNetworkMgr::IsHardLevelUnlocked(const std::string& i_worldPrefix)
 {
 	return true;
 }

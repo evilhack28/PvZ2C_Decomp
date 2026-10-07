@@ -31,7 +31,7 @@ void GridItemObstacle::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemObstacle);
 }
 
-bool GridItemObstacle::CanBeTargetedBy(const BoardEntity* i_arg) const
+bool GridItemObstacle::CanBeTargetedBy(const BoardEntity* i_entity) const
 {
 	return false;
 }

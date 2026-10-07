@@ -51,11 +51,11 @@ void GridItemZombieBoundTileProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemZombieBoundTileProps);
 }
 
-void GridItemZombieBoundTile::OnStartAnimStopped(const std::string & i_arg)
+void GridItemZombieBoundTile::OnStartAnimStopped(const std::string & i_animName)
 {
 }
 
-bool GridItemZombieBoundTile::CanBeTargetedBy(const BoardEntity* i_arg) const
+bool GridItemZombieBoundTile::CanBeTargetedBy(const BoardEntity* i_entity) const
 {
 	return false;
 }

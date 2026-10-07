@@ -33,7 +33,7 @@ void PlantStunion::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantStunion);
 }
 
-CollisionTypeFlags PlantStunion::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantStunion::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)7;
 }

@@ -10,22 +10,22 @@
 #include "ArtifactCultivationListView.h"
 
 #include "ArtifactCultivationListView.h"
-void ArtifactCultivationListView::OnEquipArtifact(int i_arg)
+void ArtifactCultivationListView::OnEquipArtifact(int i_artifactId)
 {
 	 ArtifactCultivationListView::UpdateArtifactButton();
 }
 
 #include "ArtifactCultivationListView.h"
-void ArtifactCultivationListView::OnUnEquipArtifact(int i_arg)
+void ArtifactCultivationListView::OnUnEquipArtifact(int i_artifactId)
 {
 	 ArtifactCultivationListView::UpdateArtifactButton();
 }
 
-void ArtifactCultivationListView::ScrollTargetReached(ScrollWidget* i_arg)
+void ArtifactCultivationListView::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void ArtifactCultivationListView::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void ArtifactCultivationListView::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

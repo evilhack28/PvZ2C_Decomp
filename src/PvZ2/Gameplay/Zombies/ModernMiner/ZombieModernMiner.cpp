@@ -28,7 +28,7 @@ void ZombieModernMinerProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieModernMinerProps);
 }
 
-bool ZombieModernMiner::canBeDamagedByAttack(Plant* i_arg0, DamageTypeFlags i_arg1)
+bool ZombieModernMiner::canBeDamagedByAttack(Plant* i_instigator, DamageTypeFlags i_damageFlags)
 {
 	return false;
 }

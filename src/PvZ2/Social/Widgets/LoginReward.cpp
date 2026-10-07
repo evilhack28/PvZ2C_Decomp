@@ -9,14 +9,14 @@
 
 #include "LoginReward.h"
 
-void LoginReward::ScrollTargetReached(ScrollWidget* i_arg)
+void LoginReward::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void LoginReward::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void LoginReward::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 
-void LoginReward::onProcessTotalLoginRewardException(int i_arg)
+void LoginReward::onProcessTotalLoginRewardException(int i_errorCode)
 {
 }

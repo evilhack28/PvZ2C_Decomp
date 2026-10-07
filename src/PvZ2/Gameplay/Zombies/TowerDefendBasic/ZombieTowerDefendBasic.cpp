@@ -13,7 +13,7 @@
 
 RT_CLASS_IMPLEMENT(ZombieTowerDefendBasic);
 
-bool ZombieTowerDefendBasic::NotifyCanTakeSkill(ZombieState i_arg)
+bool ZombieTowerDefendBasic::NotifyCanTakeSkill(ZombieState i_toState)
 {
 	return false;
 }

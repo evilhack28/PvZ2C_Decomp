@@ -55,10 +55,10 @@ void ZombiePotionActionProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombiePotionActionProps);
 }
 
-void ZombiePotionAction::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
+void ZombiePotionAction::WaveUpdate(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }
 
-void ZombiePotionAction::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
+void ZombiePotionAction::WaveEnd(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }

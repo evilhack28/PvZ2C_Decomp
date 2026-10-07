@@ -22,6 +22,6 @@ bool PlantTigerstool::CanApplyPlantfood()
 	return true;
 }
 
-void PlantTigerstool::onPFFinishedCallback(class StandaloneEffect* i_arg)
+void PlantTigerstool::onPFFinishedCallback(class StandaloneEffect* i_effect)
 {
 }

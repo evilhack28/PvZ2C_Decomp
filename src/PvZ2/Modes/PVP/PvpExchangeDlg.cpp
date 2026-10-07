@@ -10,7 +10,7 @@
 #include "PvpExchangeDlg.h"
 
 #include "PvpExchangeDlg.h"
-void PvpExchangeDlg::BuyFinish(int32 i_arg)
+void PvpExchangeDlg::BuyFinish(int32 objId)
 {
 	 PvpExchangeDlg::SetPvpShopData();
 }

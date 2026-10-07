@@ -31,6 +31,6 @@ void PVZ1WhackZombieModule::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PVZ1WhackZombieModule);
 }
 
-void PVZ1WhackZombieModule::onZombieDestroyed(Zombie * i_arg)
+void PVZ1WhackZombieModule::onZombieDestroyed(Zombie * i_zombie)
 {
 }

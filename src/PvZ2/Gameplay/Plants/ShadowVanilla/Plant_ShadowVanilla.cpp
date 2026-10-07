@@ -65,6 +65,6 @@ bool PlantShadowvanilla::CanApplyPlantfood()
 	return true;
 }
 
-void PlantShadowvanilla::onAnimStoppedCallback(const std::string& i_arg)
+void PlantShadowvanilla::onAnimStoppedCallback(const std::string& i_animCommand)
 {
 }

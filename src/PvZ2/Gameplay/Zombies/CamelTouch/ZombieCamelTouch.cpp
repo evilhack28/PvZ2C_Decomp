@@ -34,6 +34,6 @@ void ZombieCamelTouch::TriggerMatched()
 	 ZombieCamelTouch::onCardMatched();
 }
 
-void ZombieCamelTouch::BecomeHeadZombie(ZombieTypePtr i_arg)
+void ZombieCamelTouch::BecomeHeadZombie(ZombieTypePtr i_camelType)
 {
 }

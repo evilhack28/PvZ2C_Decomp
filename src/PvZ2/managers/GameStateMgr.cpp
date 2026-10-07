@@ -13,6 +13,6 @@
 
 RT_CLASS_IMPLEMENT(GameStateMgr);
 
-void GameStateMgr::ShowDangerRoom(GameTransitionType i_arg0, GameTransitionType i_arg1)
+void GameStateMgr::ShowDangerRoom(GameTransitionType i_out, GameTransitionType i_in)
 {
 }

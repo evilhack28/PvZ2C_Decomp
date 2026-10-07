@@ -43,10 +43,10 @@ void PlantfoodTutorialIntroProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantfoodTutorialIntroProperties);
 }
 
-void PlantfoodTutorialIntro::onPlantDied(Plant* i_arg)
+void PlantfoodTutorialIntro::onPlantDied(Plant* i_plant)
 {
 }
 
-void PlantfoodTutorialIntro::onCoinBanked(Collectable* i_arg)
+void PlantfoodTutorialIntro::onCoinBanked(Collectable* i_collectable)
 {
 }

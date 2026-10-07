@@ -25,6 +25,6 @@ void ZombieExplosionProofPolice::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieExplosionProofPolice);
 }
 
-void ZombieExplosionProofPolice::onArmorDropped(std::string i_arg)
+void ZombieExplosionProofPolice::onArmorDropped(std::string i_armorType)
 {
 }

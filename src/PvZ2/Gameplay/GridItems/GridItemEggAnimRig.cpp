@@ -30,7 +30,7 @@ void GridItemEggAnimRig::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemEggAnimRig);
 }
 
-void GridItemEggAnimRig::PlayRoll(PopAnimRig::AnimStoppedReflectionDelegate i_arg)
+void GridItemEggAnimRig::PlayRoll(PopAnimRig::AnimStoppedReflectionDelegate i_onAnimStopped)
 {
 }
 

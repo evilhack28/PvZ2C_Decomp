@@ -57,11 +57,11 @@ bool GridItemRenaiStatue::CanBeCarved()
 	return false;
 }
 
-void GridItemRenaiStatue::OnChangeState(StatueState i_arg)
+void GridItemRenaiStatue::OnChangeState(StatueState i_state)
 {
 }
 
-void GridItemRenaiStatue::onPopAnimCommand(const std::string& i_arg0, pvztime_t i_arg1, const std::string& i_arg2, const std::string& i_arg3)
+void GridItemRenaiStatue::onPopAnimCommand(const std::string& i_animName, pvztime_t i_atTime, const std::string& i_command, const std::string& i_params)
 {
 }
 

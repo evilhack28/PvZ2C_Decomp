@@ -9,10 +9,10 @@
 
 #include "FishingModuleEditor.h"
 
-void FishingModuleEditor::ScrollTargetReached(ScrollWidget* i_arg)
+void FishingModuleEditor::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void FishingModuleEditor::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void FishingModuleEditor::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

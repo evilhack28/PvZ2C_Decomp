@@ -37,7 +37,7 @@ void GridItemCardGameZombie::StaticClassInit()
 
 RT_CLASS_IMPLEMENT(GridItemCardGameZombieProps);
 
-void GridItemCardGameZombie::TouchMoved(const Sexy::Touch& i_arg)
+void GridItemCardGameZombie::TouchMoved(const Sexy::Touch& touch)
 {
 }
 
@@ -51,7 +51,7 @@ void GridItemCardGameZombie::RoundFinishStart()
 {
 }
 
-void GridItemCardGameZombie::onIntentionAnimDone(const std::string& i_arg)
+void GridItemCardGameZombie::onIntentionAnimDone(const std::string& name)
 {
 }
 

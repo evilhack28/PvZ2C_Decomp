@@ -44,6 +44,6 @@ void ZombieChicken::onTurnedToAsh()
 {
 }
 
-void ZombieChicken::CreateZombieLevelEffect(bool i_arg)
+void ZombieChicken::CreateZombieLevelEffect(bool i_street)
 {
 }

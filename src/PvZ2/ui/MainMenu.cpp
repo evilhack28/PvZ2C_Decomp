@@ -13,12 +13,12 @@ void MainMenu::gotoSystemSetting()
 {
 }
 
-void MainMenu::TouchEnded(const Sexy::Touch& i_arg)
+void MainMenu::TouchEnded(const Sexy::Touch& i_touch)
 {
 }
 
 #include "MainMenu.h"
-void MainMenu::onUploadFirstTimeFinish(bool i_arg)
+void MainMenu::onUploadFirstTimeFinish(bool i_success)
 {
 	 MainMenu::uploadLocalProfile();
 }

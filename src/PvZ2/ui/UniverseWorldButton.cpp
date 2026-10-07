@@ -9,7 +9,7 @@
 
 #include "UniverseWorldButton.h"
 
-void UniverseWorldButton::drawUniverseLock(Graphics* i_arg0, SexyVector2 i_arg1, float i_arg2, float i_arg3)
+void UniverseWorldButton::drawUniverseLock(Graphics* i_g, SexyVector2 i_position, float i_scale, float i_colorFade)
 {
 }
 
@@ -17,14 +17,14 @@ void UniverseWorldButton::syncIdleAnimation()
 {
 }
 
-void UniverseWorldButton::drawCompletionIcon(Graphics* i_arg0, const Sexy::Rect& i_arg1)
+void UniverseWorldButton::drawCompletionIcon(Graphics* i_g, const Sexy::Rect& i_starBankRect)
 {
 }
 
-void UniverseWorldButton::onTouchedInAnimStopped(const std::string& i_arg)
+void UniverseWorldButton::onTouchedInAnimStopped(const std::string& i_animLabel)
 {
 }
 
-void UniverseWorldButton::onTouchedOutAnimStopped(const std::string& i_arg)
+void UniverseWorldButton::onTouchedOutAnimStopped(const std::string& i_animLabel)
 {
 }

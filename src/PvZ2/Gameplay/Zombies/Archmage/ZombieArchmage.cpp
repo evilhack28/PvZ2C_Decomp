@@ -29,7 +29,7 @@ void ZombieArchmageProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieArchmageProps);
 }
 
-void ZombieArchmage::onApplyCondition(ZombieConditions i_arg)
+void ZombieArchmage::onApplyCondition(ZombieConditions i_condition)
 {
 }
 

@@ -9,11 +9,11 @@
 
 #include "RiftaShop.h"
 
-void RiftaShop::ScrollTargetReached(ScrollWidget* i_arg)
+void RiftaShop::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void RiftaShop::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void RiftaShop::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

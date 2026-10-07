@@ -13,7 +13,7 @@
 
 RT_CLASS_IMPLEMENT(ZombiePirateBarrel);
 
-bool ZombiePirateBarrel::canTargetEntityHeight(BoardEntityHeight i_arg)
+bool ZombiePirateBarrel::canTargetEntityHeight(BoardEntityHeight i_entityHeight)
 {
 	return true;
 }

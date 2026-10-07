@@ -9,22 +9,22 @@
 
 #include "MapEditor.h"
 
-void MapEditor::ButtonPress(int i_arg)
+void MapEditor::ButtonPress(int i_id)
 {
 }
 
-void MapEditor::ButtonDepress(int i_arg)
+void MapEditor::ButtonDepress(int i_id)
 {
 }
 
-void MapEditor::EditorTouchBegan(const Sexy::Touch& i_arg0, int i_arg1, int i_arg2)
+void MapEditor::EditorTouchBegan(const Sexy::Touch& touch, int inCameraX, int inCameraY)
 {
 }
 
-void MapEditor::EditorTouchEnded(const Sexy::Touch& i_arg)
+void MapEditor::EditorTouchEnded(const Sexy::Touch& touch)
 {
 }
 
-void MapEditor::EditorTouchMoved(const Sexy::Touch& i_arg0, float i_arg1)
+void MapEditor::EditorTouchMoved(const Sexy::Touch& touch, float scale)
 {
 }

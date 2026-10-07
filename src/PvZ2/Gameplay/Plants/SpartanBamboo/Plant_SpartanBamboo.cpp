@@ -39,17 +39,17 @@ bool PlantSpartanBamboo::CanBeHealed()
 	return PlantSpartanBamboo::HasShield();
 }
 
-int PlantSpartanBamboo::SearchLRPlant(std::vector<RtWeakPtr<Plant>>& i_arg)
+int PlantSpartanBamboo::SearchLRPlant(std::vector<RtWeakPtr<Plant>>& i_plants)
 {
 	return false;
 }
 
-int PlantSpartanBamboo::SearchUDPlant(std::vector<RtWeakPtr<Plant>>& i_arg)
+int PlantSpartanBamboo::SearchUDPlant(std::vector<RtWeakPtr<Plant>>& i_plants)
 {
 	return false;
 }
 
-void PlantSpartanBamboo::onEndCondition(PlantConditions i_arg)
+void PlantSpartanBamboo::onEndCondition(PlantConditions i_condition)
 {
 }
 
@@ -58,20 +58,20 @@ bool PlantSpartanBamboo::CanApplyPlantfood()
 	return true;
 }
 
-bool PlantSpartanBamboo::FindTargetAndFire(PlantWeapon i_arg)
+bool PlantSpartanBamboo::FindTargetAndFire(PlantWeapon i_plantWeapon)
 {
 	return false;
 }
 
-void PlantSpartanBamboo::tryKnockbackZombie(Zombie* i_arg)
+void PlantSpartanBamboo::tryKnockbackZombie(Zombie* i_zombie)
 {
 }
 
-void PlantSpartanBamboo::onAnimStoppedCallback(const std::string& i_arg)
+void PlantSpartanBamboo::onAnimStoppedCallback(const std::string& i_labelname)
 {
 }
 
-Projectile * PlantSpartanBamboo::Fire(ZombiePtr i_arg0, int i_arg1, PlantWeapon i_arg2)
+Projectile * PlantSpartanBamboo::Fire(ZombiePtr i_targetZombie, int i_row, PlantWeapon i_plantWeapon)
 {
 	return NULL;
 }

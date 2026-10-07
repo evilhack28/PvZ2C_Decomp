@@ -9,6 +9,6 @@
 
 #include "BoardZombieAlmanacUI.h"
 
-void BoardZombieAlmanacUI::ButtonPress(int i_arg)
+void BoardZombieAlmanacUI::ButtonPress(int i_id)
 {
 }

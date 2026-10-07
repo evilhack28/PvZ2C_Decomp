@@ -9,10 +9,10 @@
 
 #include "UIBattleOrder.h"
 
-void UIBattleOrder::ScrollTargetReached(ScrollWidget* i_arg)
+void UIBattleOrder::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIBattleOrder::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIBattleOrder::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

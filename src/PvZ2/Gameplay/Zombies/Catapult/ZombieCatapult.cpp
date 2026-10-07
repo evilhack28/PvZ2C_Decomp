@@ -28,7 +28,7 @@ void ZombieCatapultProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieCatapultProps);
 }
 
-bool ZombieCatapult::canTargetEntityHeight(BoardEntityHeight i_arg)
+bool ZombieCatapult::canTargetEntityHeight(BoardEntityHeight i_entityHeight)
 {
 	return true;
 }

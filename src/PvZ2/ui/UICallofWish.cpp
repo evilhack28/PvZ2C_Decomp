@@ -9,11 +9,11 @@
 
 #include "UICallofWish.h"
 
-void UICallofWish::ScrollTargetReached(ScrollWidget* i_arg)
+void UICallofWish::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UICallofWish::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UICallofWish::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

@@ -9,10 +9,10 @@
 
 #include "UINewPVPBattlePass.h"
 
-void UINewPVPBattlePass::ScrollTargetReached(ScrollWidget* i_arg)
+void UINewPVPBattlePass::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UINewPVPBattlePass::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UINewPVPBattlePass::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

@@ -29,7 +29,7 @@ void ZombieActionHandler::StaticClassInit()
 
 RT_CLASS_IMPLEMENT(ZombieActionDefinition);
 
-bool ZombieActionDefinition::TryStartAction(ZombieActionDefinitionPtr i_arg0, class ZombieWithActions* i_arg1) const
+bool ZombieActionDefinition::TryStartAction(ZombieActionDefinitionPtr i_actionDef, class ZombieWithActions* i_zombie) const
 {
 	return false;
 }

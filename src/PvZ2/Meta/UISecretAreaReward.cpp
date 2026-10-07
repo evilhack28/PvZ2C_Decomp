@@ -13,11 +13,11 @@ UISecretAreaReward::~UISecretAreaReward()
 {
 }
 
-void UISecretAreaReward::ScrollTargetReached(ScrollWidget* i_arg)
+void UISecretAreaReward::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UISecretAreaReward::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UISecretAreaReward::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

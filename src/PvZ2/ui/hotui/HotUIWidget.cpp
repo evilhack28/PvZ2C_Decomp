@@ -36,7 +36,7 @@ void HotUIWidget::StaticClassInit()
 
 RT_CLASS_IMPLEMENT(HotUIWidgetProperties);
 
-void HotUIWidget::OnTouchBegan(const Sexy::Touch& i_arg)
+void HotUIWidget::OnTouchBegan(const Sexy::Touch& touch)
 {
 }
 
@@ -48,7 +48,7 @@ void HotUIWidget::onInitializeWidget()
 {
 }
 
-void HotUIWidget::onProcessStringReplaceMap(const HotUIStringMap& i_arg)
+void HotUIWidget::onProcessStringReplaceMap(const HotUIStringMap& i_stringMap)
 {
 }
 
@@ -62,7 +62,7 @@ int HotUIWidget::getImageHeightForResizeData()
 	return false;
 }
 
-void HotUIWidget::onDraw(Sexy::Graphics* i_arg)
+void HotUIWidget::onDraw(Sexy::Graphics* i_g)
 {
 }
 

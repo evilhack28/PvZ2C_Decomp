@@ -51,6 +51,6 @@ void RiverCrossingModule::initializeModule()
 {
 }
 
-void RiverCrossingModule::onRiverEntitySpawned(class RiverEntity * i_arg)
+void RiverCrossingModule::onRiverEntitySpawned(class RiverEntity * i_entity)
 {
 }

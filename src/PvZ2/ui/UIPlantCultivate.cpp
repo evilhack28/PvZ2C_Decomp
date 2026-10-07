@@ -9,11 +9,11 @@
 
 #include "UIPlantCultivate.h"
 
-void UIPlantCultivate::ScrollTargetReached(ScrollWidget* i_arg)
+void UIPlantCultivate::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIPlantCultivate::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIPlantCultivate::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

@@ -27,6 +27,6 @@ void CrazyNPCManager::ForceEndNarrative()
 	 CrazyNPCManager::finishNarrative();
 }
 
-void CrazyNPCManager::addToLoadingResourcesGroupList(const std::string& i_arg)
+void CrazyNPCManager::addToLoadingResourcesGroupList(const std::string& i_groupName)
 {
 }

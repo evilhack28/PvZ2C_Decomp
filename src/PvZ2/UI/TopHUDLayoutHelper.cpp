@@ -21,6 +21,6 @@ void TopHUDLayoutHelper::ShowEASquaredButtons()
 {
 }
 
-void TopHUDLayoutHelper::SetMetricsContext(const std::string& i_arg)
+void TopHUDLayoutHelper::SetMetricsContext(const std::string& i_metricsContext)
 {
 }

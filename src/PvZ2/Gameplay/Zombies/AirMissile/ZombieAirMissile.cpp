@@ -45,7 +45,7 @@ bool ZombieAirMissile::allowAshState() const
 	return false;
 }
 
-bool ZombieAirMissile::CollidesWithType(CollisionTypeFlags i_arg) const
+bool ZombieAirMissile::CollidesWithType(CollisionTypeFlags i_collisionTypes) const
 {
 	return false;
 }

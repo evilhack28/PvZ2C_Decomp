@@ -9,11 +9,11 @@
 
 #include "FakeHttpDriver.h"
 
-void FakeHttpDriver::AddNetworkStatusListener(Sexy::INetworkStatusListener* i_arg)
+void FakeHttpDriver::AddNetworkStatusListener(Sexy::INetworkStatusListener* listener)
 {
 }
 
-void FakeHttpDriver::RemoveNetworkStatusListener(Sexy::INetworkStatusListener* i_arg)
+void FakeHttpDriver::RemoveNetworkStatusListener(Sexy::INetworkStatusListener* listener)
 {
 }
 

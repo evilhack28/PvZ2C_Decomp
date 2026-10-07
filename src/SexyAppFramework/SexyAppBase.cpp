@@ -96,7 +96,7 @@ void SexyAppBase::ShutdownHook()
 {
 }
 
-bool SexyAppBase::ChangeDirHook(const char * i_arg)
+bool SexyAppBase::ChangeDirHook(const char * theIntendedPath)
 {
 	return false;
 }
@@ -105,7 +105,7 @@ void SexyAppBase::Done3dTesting()
 {
 }
 
-void SexyAppBase::UpdateFramesF(float i_arg)
+void SexyAppBase::UpdateFramesF(float i_dt)
 {
 }
 
@@ -129,7 +129,7 @@ void SexyAppBase::CloseRequestAsync()
 {
 }
 
-bool SexyAppBase::DebugKeyDownAsync(int i_arg0, bool i_arg1, bool i_arg2)
+bool SexyAppBase::DebugKeyDownAsync(int theKey, bool ctrlDown, bool altDown)
 {
 	return false;
 }
@@ -146,7 +146,7 @@ void SexyAppBase::InitPropertiesHook()
 {
 }
 
-void SexyAppBase::OnResourcesUpdated(ResourceUpdateType i_arg0, void* i_arg1)
+void SexyAppBase::OnResourcesUpdated(ResourceUpdateType theType, void* theInfo)
 {
 }
 
@@ -166,7 +166,7 @@ void SexyAppBase::OnLiveLinkConnected()
 {
 }
 
-void SexyAppBase::AccelerometerChanged(double i_arg0, double i_arg1, double i_arg2, double i_arg3)
+void SexyAppBase::AccelerometerChanged(double theTimestamp, double theX, double theY, double theZ)
 {
 }
 
@@ -178,12 +178,12 @@ void SexyAppBase::AppEnteredForeground()
 {
 }
 
-bool SexyAppBase::HandleOpenURLRequest(const std::string& i_arg)
+bool SexyAppBase::HandleOpenURLRequest(const std::string& theURL)
 {
 	return false;
 }
 
-void SexyAppBase::UIOrientationChanged(UI_ORIENTATION i_arg)
+void SexyAppBase::UIOrientationChanged(UI_ORIENTATION theOrientation)
 {
 }
 
@@ -231,7 +231,7 @@ UI_ORIENTATION SexyAppBase::FullScreenUIOrientationRight()
 	return (UI_ORIENTATION)3;
 }
 
-bool SexyAppBase::KeyDown(int i_arg)
+bool SexyAppBase::KeyDown(int theKey)
 {
 	return false;
 }

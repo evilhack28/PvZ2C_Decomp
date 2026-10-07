@@ -13,10 +13,10 @@ UIEditorMenu::UIEditorMenu()
 {
 }
 
-void UIEditorMenu::ScrollTargetReached(ScrollWidget* i_arg)
+void UIEditorMenu::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIEditorMenu::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIEditorMenu::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

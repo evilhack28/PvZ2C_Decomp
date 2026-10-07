@@ -9,6 +9,6 @@
 
 #include "BossChallenge.h"
 
-void BossChallenge::OnNotifyRefreshActivityList(bool i_arg0, const std::set<int>& i_arg1)
+void BossChallenge::OnNotifyRefreshActivityList(bool i_success, const std::set<int>& changeList)
 {
 }

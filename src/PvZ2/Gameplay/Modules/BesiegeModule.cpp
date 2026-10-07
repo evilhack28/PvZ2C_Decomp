@@ -43,7 +43,7 @@ void BesiegeModule::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(BesiegeModule);
 }
 
-void BesiegeModule::onZombieKilled(Zombie* i_arg0, const DamageInfo* i_arg1)
+void BesiegeModule::onZombieKilled(Zombie* i_zombie, const DamageInfo* i_deathBlow)
 {
 }
 

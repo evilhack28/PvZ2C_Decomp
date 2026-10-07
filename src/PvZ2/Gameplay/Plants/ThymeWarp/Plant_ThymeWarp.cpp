@@ -42,11 +42,11 @@ bool PlantThymeWarp::CanBeTargeted()
 	return false;
 }
 
-void PlantThymeWarp::TakeSmashAttack(ZombiePtr i_arg)
+void PlantThymeWarp::TakeSmashAttack(ZombiePtr i_srcZombie)
 {
 }
 
-void PlantThymeWarp::quickKillZombie(RtWeakPtr<Zombie> i_arg)
+void PlantThymeWarp::quickKillZombie(RtWeakPtr<Zombie> zombie)
 {
 }
 

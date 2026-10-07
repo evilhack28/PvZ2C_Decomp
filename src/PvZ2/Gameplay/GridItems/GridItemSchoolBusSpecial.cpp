@@ -37,12 +37,12 @@ void GridItemSchoolBusSpecial::onUpdateAttack()
 {
 }
 
-bool GridItemSchoolBusSpecial::isPendingGraveAt(int i_arg0, int i_arg1)
+bool GridItemSchoolBusSpecial::isPendingGraveAt(int i_gridX, int i_gridY)
 {
 	return false;
 }
 
-bool GridItemSchoolBusSpecial::isTombraiserZombieAt(int i_arg0, int i_arg1)
+bool GridItemSchoolBusSpecial::isTombraiserZombieAt(int i_gridX, int i_gridY)
 {
 	return false;
 }

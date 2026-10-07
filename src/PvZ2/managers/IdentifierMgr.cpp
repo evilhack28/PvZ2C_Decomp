@@ -18,6 +18,6 @@ IdentifierMgr::~IdentifierMgr()
 {
 }
 
-void IdentifierMgr::onNotifyUUIDLogin(bool i_arg)
+void IdentifierMgr::onNotifyUUIDLogin(bool i_success)
 {
 }

@@ -45,7 +45,7 @@ void ZombieDinoPushEggProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieDinoPushEggProps);
 }
 
-void ZombieDinoPushEgg::drawPushRectangle(const Sexy::Graphics* i_arg)
+void ZombieDinoPushEgg::drawPushRectangle(const Sexy::Graphics* i_g)
 {
 }
 

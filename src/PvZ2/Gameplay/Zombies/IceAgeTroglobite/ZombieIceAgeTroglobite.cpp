@@ -46,6 +46,6 @@ void ZombieIceAgeTroglobiteProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieIceAgeTroglobiteProps);
 }
 
-void ZombieIceAgeTroglobite::drawPushRectangle(const Sexy::Graphics* i_arg)
+void ZombieIceAgeTroglobite::drawPushRectangle(const Sexy::Graphics* i_g)
 {
 }

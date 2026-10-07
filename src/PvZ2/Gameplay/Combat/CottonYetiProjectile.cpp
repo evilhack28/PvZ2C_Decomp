@@ -39,11 +39,11 @@ void CottonYetiProjectile::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(CottonYetiProjectile);
 }
 
-bool CottonYetiProjectile::OnCollideEntity(BoardEntity* i_arg)
+bool CottonYetiProjectile::OnCollideEntity(BoardEntity* i_entity)
 {
 	return false;
 }
 
-void CottonYetiProjectile::onUpdate(pvztime_t i_arg)
+void CottonYetiProjectile::onUpdate(pvztime_t i_dt)
 {
 }

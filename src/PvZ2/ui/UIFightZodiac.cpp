@@ -9,14 +9,14 @@
 
 #include "UIFightZodiac.h"
 
-void UIFightZodiac::ScrollTargetReached(ScrollWidget* i_arg)
+void UIFightZodiac::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIFightZodiac::TabSelectionChanged(int i_arg)
+void UIFightZodiac::TabSelectionChanged(int tabID)
 {
 }
 
-void UIFightZodiac::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIFightZodiac::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

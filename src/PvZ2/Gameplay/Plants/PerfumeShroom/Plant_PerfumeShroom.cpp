@@ -50,6 +50,6 @@ bool PlantPerfumeShroom::CanBeTargeted()
 	return false;
 }
 
-void PlantPerfumeShroom::TakeSmashAttack(ZombiePtr i_arg)
+void PlantPerfumeShroom::TakeSmashAttack(ZombiePtr i_srcZombie)
 {
 }

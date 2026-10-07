@@ -9,10 +9,10 @@
 
 #include "UIUnchartedEntry.h"
 
-void UIUnchartedEntry::ScrollTargetReached(ScrollWidget* i_arg)
+void UIUnchartedEntry::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIUnchartedEntry::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIUnchartedEntry::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

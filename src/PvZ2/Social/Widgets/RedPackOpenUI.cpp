@@ -9,6 +9,6 @@
 
 #include "RedPackOpenUI.h"
 
-void RedPackOpenUI::ButtonDepress(int i_arg)
+void RedPackOpenUI::ButtonDepress(int i_id)
 {
 }

@@ -32,7 +32,7 @@ bool PlantSmallChestnut::CanBeShoveled()
 	return false;
 }
 
-CollisionTypeFlags PlantSmallChestnut::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantSmallChestnut::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)true;
 }

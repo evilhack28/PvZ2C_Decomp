@@ -52,11 +52,11 @@ Image* GameResourceUtil::GetFrameImageByRare(int rare)
 Image* GameResourceUtil::GetFrameImageById(int id)
 {
 	Image* result;
-	if (id == 4013)
+	if (id == COINS_ID)
 	{
 		result = IMAGE_UI_ACCESSORY_ICON_BG_BLUE;
 	}
-	else if (id == 3008)
+	else if (id == GEMS_ID)
 	{
 		result = IMAGE_UI_ACCESSORY_ICON_BG_PURPLE;
 	}
@@ -75,11 +75,11 @@ Image* GameResourceUtil::GetFrameImageById(int id)
 Image* GameResourceUtil::GetImageById(int id)
 {
 	Image* result;
-	if (id == 4013)
+	if (id == COINS_ID)
 	{
 		result = IMAGE_UI_GEILIVABLE_LOTTERY_BONUS_COIN;
 	}
-	else if (id == 3008)
+	else if (id == GEMS_ID)
 	{
 		result = IMAGE_UI_GEILIVABLE_LOTTERY_BONUS_GEM;
 	}

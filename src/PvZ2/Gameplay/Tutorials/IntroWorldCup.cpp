@@ -29,13 +29,13 @@ void IntroWorldCup::StaticClassInit()
 }
 
 #include "IntroWorldCup.h"
-void IntroWorldCup::OnEffectDone(class StandaloneEffect* i_arg)
+void IntroWorldCup::OnEffectDone(class StandaloneEffect* i_effect)
 {
 	 IntroWorldCup::CreateCountDownEffect();
 }
 
 #include "IntroWorldCup.h"
-void IntroWorldCup::OnCountDownEffectDone(class StandaloneEffect* i_arg)
+void IntroWorldCup::OnCountDownEffectDone(class StandaloneEffect* i_effect)
 {
 	 IntroWorldCup::MoveOffIntroIcons();
 }

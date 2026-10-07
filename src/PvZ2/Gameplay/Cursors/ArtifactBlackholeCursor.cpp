@@ -17,7 +17,7 @@ ArtifactBlackholeCursor::~ArtifactBlackholeCursor()
 
 RT_CLASS_IMPLEMENT(ArtifactBlackholeCursor);
 
-bool ArtifactBlackholeCursor::canAffordPlant(PlantTypePtr i_arg) const
+bool ArtifactBlackholeCursor::canAffordPlant(PlantTypePtr i_plantType) const
 {
 	return true;
 }

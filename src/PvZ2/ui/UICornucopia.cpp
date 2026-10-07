@@ -9,10 +9,10 @@
 
 #include "UICornucopia.h"
 
-void UICornucopia::ScrollTargetReached(ScrollWidget* i_arg)
+void UICornucopia::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UICornucopia::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UICornucopia::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

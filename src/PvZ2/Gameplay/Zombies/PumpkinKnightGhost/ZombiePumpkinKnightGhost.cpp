@@ -13,7 +13,7 @@
 
 RT_CLASS_IMPLEMENT(ZombiePumpkinKnightGhost);
 
-bool ZombiePumpkinKnightGhost::moveToDestination(const float i_arg0, const float i_arg1)
+bool ZombiePumpkinKnightGhost::moveToDestination(const float i_destX, const float i_destY)
 {
 	return true;
 }

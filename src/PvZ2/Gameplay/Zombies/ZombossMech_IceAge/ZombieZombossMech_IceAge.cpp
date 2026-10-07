@@ -44,7 +44,7 @@ void ZombieZombossMechIceAgeProps::StaticClassInit()
 }
 
 #include "ZombieZombossMech_IceAge.h"
-void ZombieZombossMech_IceAge::onEndCondition(ZombieConditions i_arg)
+void ZombieZombossMech_IceAge::onEndCondition(ZombieConditions i_condition)
 {
 	 ZombieZombossMech_IceAge::updateHelmEffects();
 }

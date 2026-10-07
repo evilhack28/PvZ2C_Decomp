@@ -39,7 +39,7 @@ void PowerupBeghouledShovel::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PowerupBeghouledShovel);
 }
 
-bool PowerupBeghouledShovel::onTouchBegin(const Sexy::Touch& i_arg)
+bool PowerupBeghouledShovel::onTouchBegin(const Sexy::Touch& i_touch)
 {
 	return true;
 }

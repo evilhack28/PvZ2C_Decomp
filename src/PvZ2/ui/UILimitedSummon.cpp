@@ -9,10 +9,10 @@
 
 #include "UILimitedSummon.h"
 
-void UILimitedSummon::ScrollTargetReached(ScrollWidget* i_arg)
+void UILimitedSummon::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UILimitedSummon::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UILimitedSummon::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

@@ -13,6 +13,6 @@ void SecretGachaMgr::Update()
 {
 }
 
-void SecretGachaMgr::OnNetworkError(int i_arg0, const std::string& i_arg1)
+void SecretGachaMgr::OnNetworkError(int erroId, const std::string& i_reqID)
 {
 }

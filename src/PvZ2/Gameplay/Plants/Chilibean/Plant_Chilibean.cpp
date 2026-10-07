@@ -27,7 +27,7 @@ void PlantChilibean::Initialize()
 	 PlantFramework::Initialize();
 }
 
-void PlantChilibean::onSetDuplicate(bool i_arg)
+void PlantChilibean::onSetDuplicate(bool i_duplicate)
 {
 }
 
@@ -36,7 +36,7 @@ bool PlantChilibean::CanApplyPlantfood()
 	return true;
 }
 
-CollisionTypeFlags PlantChilibean::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantChilibean::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)true;
 }

@@ -28,7 +28,7 @@ void ZombieGentlemanProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieGentlemanProps);
 }
 
-void ZombieGentleman::onZombieTossDrop(Zombie* i_arg)
+void ZombieGentleman::onZombieTossDrop(Zombie* i_zombie)
 {
 }
 

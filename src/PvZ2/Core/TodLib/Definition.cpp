@@ -265,7 +265,7 @@ int DefParseTrackCurve(const SexyChar*& theSrc)
 	{
 		SexyChar aName[32];
 		wcsncpy(aName, theSrc, aLen);
-		aName[aLen] = L' ';
+		aName[aLen] = L'\0';
 		if (DefSymbolValueFromString(gDefTrackEaseSymbols, aName, &aCurve))
 		{
 			theSrc += aLen;

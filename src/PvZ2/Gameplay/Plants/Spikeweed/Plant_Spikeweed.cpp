@@ -37,7 +37,7 @@ void PlantSpikeweed::StaticClassInit()
 }
 
 #include "Plant_Spikeweed.h"
-void PlantSpikeweed::OnKillZombie(Zombie* i_arg)
+void PlantSpikeweed::OnKillZombie(Zombie* i_zombie)
 {
 	 PlantSpikeweed::NotifyZombieKilled();
 }

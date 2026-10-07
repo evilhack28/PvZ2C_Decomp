@@ -50,10 +50,10 @@ void ZombieBoundTileActionProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieBoundTileActionProps);
 }
 
-void ZombieBoundTileAction::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
+void ZombieBoundTileAction::WaveUpdate(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }
 
-void ZombieBoundTileAction::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
+void ZombieBoundTileAction::WaveEnd(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }

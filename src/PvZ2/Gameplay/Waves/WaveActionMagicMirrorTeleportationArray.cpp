@@ -54,10 +54,10 @@ void WaveActionMagicMirrorTeleportationArrayProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(WaveActionMagicMirrorTeleportationArrayProps);
 }
 
-void WaveActionMagicMirrorTeleportationArray::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
+void WaveActionMagicMirrorTeleportationArray::WaveUpdate(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }
 
-void WaveActionMagicMirrorTeleportationArray::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
+void WaveActionMagicMirrorTeleportationArray::WaveEnd(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }

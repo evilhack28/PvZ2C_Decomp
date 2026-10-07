@@ -50,10 +50,10 @@ void ZombieAirbubbleActionProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieAirbubbleActionProps);
 }
 
-void ZombieAirbubbleAction::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
+void ZombieAirbubbleAction::WaveUpdate(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }
 
-void ZombieAirbubbleAction::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
+void ZombieAirbubbleAction::WaveEnd(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }

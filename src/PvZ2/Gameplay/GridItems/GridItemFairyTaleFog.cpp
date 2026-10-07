@@ -55,7 +55,7 @@ void GridItemFairyTaleFogProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemFairyTaleFogProps);
 }
 
-bool GridItemFairyTaleFog::CollidesWithType(const CollisionTypeFlags i_arg) const
+bool GridItemFairyTaleFog::CollidesWithType(const CollisionTypeFlags i_collisionTypes) const
 {
 	return false;
 }

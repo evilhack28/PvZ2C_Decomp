@@ -13,6 +13,6 @@ PVZ2UIBuyGachaDialog::~PVZ2UIBuyGachaDialog()
 {
 }
 
-void PVZ2UIBuyGachaDialog::OnServerGemCallBack(const bool& i_arg)
+void PVZ2UIBuyGachaDialog::OnServerGemCallBack(const bool& i_Success)
 {
 }

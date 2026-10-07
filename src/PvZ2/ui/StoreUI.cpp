@@ -9,10 +9,10 @@
 
 #include "StoreUI.h"
 
-void StoreUI::ScrollTargetReached(Sexy::ScrollWidget* i_arg)
+void StoreUI::ScrollTargetReached(Sexy::ScrollWidget* i_scrollWidget)
 {
 }
 
-void StoreUI::ScrollTargetInterrupted(Sexy::ScrollWidget* i_arg)
+void StoreUI::ScrollTargetInterrupted(Sexy::ScrollWidget* i_scrollWidget)
 {
 }

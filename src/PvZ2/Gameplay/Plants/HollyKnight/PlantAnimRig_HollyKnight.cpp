@@ -29,7 +29,7 @@ void PlantAnimRig_HollyKnight::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_HollyKnight);
 }
 
-void PlantAnimRig_HollyKnight::onPopAnimCommand(pvztime_t i_arg0, const std::string & i_arg1, const std::string & i_arg2)
+void PlantAnimRig_HollyKnight::onPopAnimCommand(pvztime_t i_atTime, const std::string & i_command, const std::string & i_param)
 {
 }
 

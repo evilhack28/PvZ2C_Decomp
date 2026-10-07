@@ -9,10 +9,10 @@
 
 #include "PlantAdventureUI.h"
 
-void PlantAdventureUI::ScrollTargetReached(ScrollWidget* i_arg)
+void PlantAdventureUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void PlantAdventureUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void PlantAdventureUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

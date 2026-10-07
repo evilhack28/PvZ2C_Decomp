@@ -9,6 +9,6 @@
 
 #include "PurchaseMgr.h"
 
-void PurchaseMgr::onNetworkError(int i_arg)
+void PurchaseMgr::onNetworkError(int erroId)
 {
 }

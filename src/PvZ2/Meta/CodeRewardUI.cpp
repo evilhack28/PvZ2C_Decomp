@@ -9,12 +9,12 @@
 
 #include "CodeRewardUI.h"
 
-bool CodeRewardUI::AllowKey(int i_arg0, KeyCode i_arg1)
+bool CodeRewardUI::AllowKey(int theId, KeyCode theKey)
 {
 	return true;
 }
 
-bool CodeRewardUI::AllowText(int i_arg0, const SexyString& i_arg1)
+bool CodeRewardUI::AllowText(int theId, const SexyString& theText)
 {
 	return true;
 }

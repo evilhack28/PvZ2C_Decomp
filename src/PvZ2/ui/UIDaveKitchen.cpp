@@ -17,10 +17,10 @@ UIDaveKitchen::~UIDaveKitchen()
 {
 }
 
-void UIDaveKitchen::ScrollTargetReached(ScrollWidget* i_arg)
+void UIDaveKitchen::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIDaveKitchen::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIDaveKitchen::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

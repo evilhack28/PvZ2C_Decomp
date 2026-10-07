@@ -13,11 +13,11 @@ void UINewPVPSeedChooser::updateItems()
 {
 }
 
-void UINewPVPSeedChooser::ScrollTargetReached(ScrollWidget* i_arg)
+void UINewPVPSeedChooser::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UINewPVPSeedChooser::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UINewPVPSeedChooser::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

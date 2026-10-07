@@ -9,10 +9,10 @@
 
 #include "PlantAvatarListView.h"
 
-void PlantAvatarListView::ScrollTargetReached(ScrollWidget* i_arg)
+void PlantAvatarListView::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void PlantAvatarListView::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void PlantAvatarListView::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

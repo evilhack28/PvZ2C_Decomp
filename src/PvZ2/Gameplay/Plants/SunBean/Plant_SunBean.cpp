@@ -33,7 +33,7 @@ void PlantSunBean::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantSunBean);
 }
 
-CollisionTypeFlags PlantSunBean::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantSunBean::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)true;
 }

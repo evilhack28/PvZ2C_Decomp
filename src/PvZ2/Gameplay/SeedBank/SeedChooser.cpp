@@ -26,7 +26,7 @@ bool SeedChooser::isFavoritesFeatureToggleEnabled()
 	return true;
 }
 
-bool SeedChooser::checkForZombieTouch(const int i_arg0, const int i_arg1)
+bool SeedChooser::checkForZombieTouch(const int i_mouseX, const int i_mouseY)
 {
 	return false;
 }

@@ -14,10 +14,10 @@ void ZombieGong::onLostHead()
 {
 }
 
-void ZombieGong::onApplyCondition(ZombieConditions i_arg)
+void ZombieGong::onApplyCondition(ZombieConditions i_condition)
 {
 }
 
-void ZombieGong::onTakeBodyDamage(const DamageInfo& i_arg)
+void ZombieGong::onTakeBodyDamage(const DamageInfo& i_damageReceived)
 {
 }

@@ -15,7 +15,7 @@ void ZombieTurkeypultBasic::TurkeyRefreshStats()
 	 Zombie::RefreshStats();
 }
 
-void ZombieTurkeypultBasic::CreateZombieLevelEffect(bool i_arg)
+void ZombieTurkeypultBasic::CreateZombieLevelEffect(bool i_street)
 {
 }
 

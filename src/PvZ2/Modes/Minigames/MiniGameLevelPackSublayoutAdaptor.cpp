@@ -23,6 +23,6 @@ void MiniGameLevelPackSublayoutAdaptor::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(MiniGameLevelPackSublayoutAdaptor);
 }
 
-void MiniGameLevelPackSublayoutAdaptor::ButtonPress(int i_arg)
+void MiniGameLevelPackSublayoutAdaptor::ButtonPress(int i_buttonID)
 {
 }

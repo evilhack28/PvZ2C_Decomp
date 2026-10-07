@@ -40,7 +40,7 @@ void WhackAMoleUI::onInitialized()
 {
 }
 
-void WhackAMoleUI::onOakArrowHitted(const int i_arg0, const int i_arg1)
+void WhackAMoleUI::onOakArrowHitted(const int i_target_type, const int i_count)
 {
 }
 

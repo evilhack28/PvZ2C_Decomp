@@ -17,7 +17,7 @@ LevelEditorStatueMaze::LevelEditorStatueMaze()
 {
 }
 
-void LevelEditorStatueMaze::ChangeBoardStage(const std::string& i_arg)
+void LevelEditorStatueMaze::ChangeBoardStage(const std::string& i_stage)
 {
 }
 

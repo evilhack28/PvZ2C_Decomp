@@ -31,7 +31,7 @@ void AirshipProgressMeter::StaticClassInit()
 }
 
 #include "AirshipProgressMeter.h"
-void AirshipProgressMeter::onAirshipTakeDamage(float i_arg)
+void AirshipProgressMeter::onAirshipTakeDamage(float i_amount)
 {
 	 AirshipProgressMeter::FlashDamage();
 }

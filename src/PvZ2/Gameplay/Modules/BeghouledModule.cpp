@@ -17,6 +17,6 @@ BeghouledModule::BeghouledModule()
 
 RT_CLASS_IMPLEMENT(BeghouledModule);
 
-void BeghouledModule::GatherDependentModulePropertySheets(std::vector<LevelModulePropertiesPtr>& i_arg)
+void BeghouledModule::GatherDependentModulePropertySheets(std::vector<LevelModulePropertiesPtr>& io_dependent)
 {
 }

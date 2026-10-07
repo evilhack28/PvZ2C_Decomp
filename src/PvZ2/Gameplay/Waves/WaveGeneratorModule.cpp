@@ -27,6 +27,6 @@ void WaveGeneratorModule::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(WaveGeneratorModule);
 }
 
-void WaveGeneratorModule::onZombieSpawned(class Zombie* i_arg)
+void WaveGeneratorModule::onZombieSpawned(class Zombie* i_zombie)
 {
 }

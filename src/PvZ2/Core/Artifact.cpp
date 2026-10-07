@@ -53,7 +53,7 @@ void Artifact::registerForEvents()
 {
 }
 
-void Artifact::DisplayPassiveSkill(float i_arg)
+void Artifact::DisplayPassiveSkill(float i_delay)
 {
 }
 
@@ -61,12 +61,12 @@ void Artifact::unregisterForEvents()
 {
 }
 
-bool Artifact::CanGetArtifactBoosts(int i_arg)
+bool Artifact::CanGetArtifactBoosts(int i_id)
 {
 	return true;
 }
 
-void Artifact::ActivateSpeciallyOnDisplayBoard(int i_arg)
+void Artifact::ActivateSpeciallyOnDisplayBoard(int i_index)
 {
 }
 

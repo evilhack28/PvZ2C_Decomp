@@ -23,7 +23,7 @@ void PlantAnimRig_Fishhookgrass::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_Fishhookgrass);
 }
 
-bool PlantAnimRig_Fishhookgrass::PlayAttack(PopAnimRig::AnimStoppedReflectionDelegate i_arg)
+bool PlantAnimRig_Fishhookgrass::PlayAttack(PopAnimRig::AnimStoppedReflectionDelegate i_onAnimStopped)
 {
 	return true;
 }
@@ -33,6 +33,6 @@ bool PlantAnimRig_Fishhookgrass::PlayPlantFoodEnd()
 	return true;
 }
 
-void PlantAnimRig_Fishhookgrass::onChewingContinued(const std::string& i_arg)
+void PlantAnimRig_Fishhookgrass::onChewingContinued(const std::string& i_animEnded)
 {
 }

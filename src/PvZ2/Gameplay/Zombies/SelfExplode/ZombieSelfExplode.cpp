@@ -33,6 +33,6 @@ void ZombieSelfExplode::onLostHead()
 {
 }
 
-void ZombieSelfExplode::onTakeBodyDamage(const DamageInfo& i_arg)
+void ZombieSelfExplode::onTakeBodyDamage(const DamageInfo& i_damageReceived)
 {
 }

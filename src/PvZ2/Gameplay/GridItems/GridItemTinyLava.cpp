@@ -53,6 +53,6 @@ void GridItemTinyLavaProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemTinyLavaProps);
 }
 
-void GridItemTinyLava::onAnimStopped(const std::string & i_arg)
+void GridItemTinyLava::onAnimStopped(const std::string & i_animName)
 {
 }

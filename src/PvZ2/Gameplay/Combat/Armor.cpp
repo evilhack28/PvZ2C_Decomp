@@ -36,11 +36,11 @@ void Armor::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(Armor);
 }
 
-void Armor::onTakeDamage(const DamageInfo& i_arg)
+void Armor::onTakeDamage(const DamageInfo& i_damageInfo)
 {
 }
 
-void Armor::onArmorDropped(std::string i_arg)
+void Armor::onArmorDropped(std::string i_armorType)
 {
 }
 

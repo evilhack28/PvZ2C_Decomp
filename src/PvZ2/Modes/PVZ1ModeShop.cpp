@@ -9,11 +9,11 @@
 
 #include "PVZ1ModeShop.h"
 
-void PVZ1ModeShop::ScrollTargetReached(ScrollWidget* i_arg)
+void PVZ1ModeShop::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void PVZ1ModeShop::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void PVZ1ModeShop::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

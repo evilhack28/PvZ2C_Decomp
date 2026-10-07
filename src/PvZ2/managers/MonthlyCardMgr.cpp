@@ -14,6 +14,7 @@
 #include "gameNetWork/PacketID.h"
 #include "DNode/DNodeWidget.h"
 #include "GameEventMgr.h"
+#include "ActivityManager.h"
 
 /////////////// Colors ///////////////
 
@@ -141,11 +142,11 @@ void MonthlyCardMgr::RequestFreeItems(MonthlyFreeType i_type)
 {
 	std::map<std::string, std::string> params;
 	if (i_type == Free_MysteryCrystal)
-		params["ai"] = std::to_string(10809);
+		params["ai"] = std::to_string((int)Activity_MysteryStore);
 	else if (i_type == Free_Fuel)
-		params["ai"] = std::to_string(10800);
+		params["ai"] = std::to_string((int)Activity_Rift);
 	else if (i_type == Free_PVZ1Mode_TimeEnergy)
-		params["ai"] = std::to_string(10836);
+		params["ai"] = std::to_string((int)Activity_PVZ1_Mode);
 	params["t"] = std::to_string(GetMonthlyCardType());
 	params["i"] = "0";
 	DNetwork* network = DNetwork::getInstance();

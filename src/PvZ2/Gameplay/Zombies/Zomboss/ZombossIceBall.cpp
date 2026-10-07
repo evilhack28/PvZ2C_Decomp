@@ -29,7 +29,7 @@ void ZombossIceBallProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombossIceBallProps);
 }
 
-bool ZombossIceBall::canTargetEntityHeight(BoardEntityHeight i_arg)
+bool ZombossIceBall::canTargetEntityHeight(BoardEntityHeight i_entityHeight)
 {
 	return true;
 }

@@ -9,7 +9,7 @@
 
 #include "GetPlantBagUI.h"
 
-void GetPlantBagUI::ButtonPress(int i_arg)
+void GetPlantBagUI::ButtonPress(int i_id)
 {
 }
 

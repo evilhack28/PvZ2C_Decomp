@@ -45,7 +45,7 @@ void PlantDevilsFlower::StaticClassInit()
 
 RT_CLASS_IMPLEMENT(PlantTypeDevilsFlower);
 
-void PlantDevilsFlower::OnPlantMoving(Plant* i_arg0, Point& i_arg1)
+void PlantDevilsFlower::OnPlantMoving(Plant* i_plant, Point& i_targetGridLocation)
 {
 }
 
@@ -60,7 +60,7 @@ bool PlantDevilsFlower::CanApplyPlantfood()
 	return true;
 }
 
-BoardEntityTypeFlag PlantDevilsFlower::GetTargetEntityTypesForWeapon(PlantWeapon i_arg)
+BoardEntityTypeFlag PlantDevilsFlower::GetTargetEntityTypesForWeapon(PlantWeapon i_plantWeapon)
 {
 	return (BoardEntityTypeFlag)2;
 }

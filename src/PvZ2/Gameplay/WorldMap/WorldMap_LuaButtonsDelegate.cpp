@@ -23,6 +23,6 @@ void WorldMap_LuaButtonsDelegate::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(WorldMap_LuaButtonsDelegate);
 }
 
-void WorldMap_LuaButtonsDelegate::OnMouseUp(const int i_arg0, const int i_arg1)
+void WorldMap_LuaButtonsDelegate::OnMouseUp(const int i_mouseX, const int i_mouseY)
 {
 }

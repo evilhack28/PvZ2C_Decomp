@@ -13,10 +13,10 @@ void SummerEventEntranceUI::GoToPlay()
 {
 }
 
-void SummerEventEntranceUI::ScrollTargetReached(ScrollWidget* i_arg)
+void SummerEventEntranceUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void SummerEventEntranceUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void SummerEventEntranceUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

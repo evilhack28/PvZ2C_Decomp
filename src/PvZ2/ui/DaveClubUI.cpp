@@ -9,11 +9,11 @@
 
 #include "DaveClubUI.h"
 
-void DaveClubUI::ScrollTargetReached(ScrollWidget* i_arg)
+void DaveClubUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void DaveClubUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void DaveClubUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

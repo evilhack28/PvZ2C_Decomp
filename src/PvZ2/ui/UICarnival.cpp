@@ -10,15 +10,15 @@
 #include "UICarnival.h"
 
 #include "UICarnival.h"
-void UICarnival::OnBuyCarnivalPacket(int i_arg)
+void UICarnival::OnBuyCarnivalPacket(int i_index)
 {
 	 UICarnival::Refresh();
 }
 
-void UICarnival::ScrollTargetReached(ScrollWidget* i_arg)
+void UICarnival::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UICarnival::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UICarnival::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

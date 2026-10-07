@@ -40,6 +40,6 @@ void PlantMorningGlory::UpdateActions()
 	 PlantMorningGlory::checkLinkingStatus();
 }
 
-void PlantMorningGlory::DoSpecial(int i_arg)
+void PlantMorningGlory::DoSpecial(int i_extraParam)
 {
 }

@@ -48,7 +48,7 @@ bool PlantByttneriaMeteorHammer::CanApplyPlantfood()
 	return true;
 }
 
-bool PlantByttneriaMeteorHammer::FindTargetAndFire(PlantWeapon i_arg)
+bool PlantByttneriaMeteorHammer::FindTargetAndFire(PlantWeapon i_plantWeapon)
 {
 	return false;
 }

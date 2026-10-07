@@ -33,7 +33,7 @@ void PlantFireShroom::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantFireShroom);
 }
 
-void PlantFireShroom::onSetDuplicate(bool i_arg)
+void PlantFireShroom::onSetDuplicate(bool i_duplicate)
 {
 }
 

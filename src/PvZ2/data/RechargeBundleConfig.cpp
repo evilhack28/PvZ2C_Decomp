@@ -22,7 +22,7 @@ RechargeBundleConfig::~RechargeBundleConfig()
 
 RT_CLASS_IMPLEMENT(RechargeBundleConfig);
 
-bool RechargeBundleConfig::IsBundleListSingleton(int i_arg)
+bool RechargeBundleConfig::IsBundleListSingleton(int bundleTypeId)
 {
 	return true;
 }

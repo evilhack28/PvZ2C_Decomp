@@ -13,6 +13,6 @@
 
 RT_CLASS_IMPLEMENT(ZombieRogue);
 
-void ZombieRogue::OnInvisibleStateChanged(InvisibleState i_arg0, InvisibleState i_arg1)
+void ZombieRogue::OnInvisibleStateChanged(InvisibleState oldState, InvisibleState newState)
 {
 }

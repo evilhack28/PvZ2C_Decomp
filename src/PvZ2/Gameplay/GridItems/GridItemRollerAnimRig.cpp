@@ -31,6 +31,6 @@ void GridItemRollerAnimRig::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemRollerAnimRig);
 }
 
-void GridItemRollerAnimRig::PlayRoll(PopAnimRig::AnimStoppedReflectionDelegate i_arg)
+void GridItemRollerAnimRig::PlayRoll(PopAnimRig::AnimStoppedReflectionDelegate i_onAnimStopped)
 {
 }

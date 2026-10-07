@@ -31,7 +31,7 @@ void PlantGumnut::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantGumnut);
 }
 
-CollisionTypeFlags PlantGumnut::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantGumnut::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)7;
 }

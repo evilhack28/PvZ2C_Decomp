@@ -47,7 +47,7 @@ void GridItemHeavyShield::KillGridItem()
 	 GridItem::KillGridItem();
 }
 
-void GridItemHeavyShield::onAnimStoppedCallback(const std::string& i_arg)
+void GridItemHeavyShield::onAnimStoppedCallback(const std::string& i_animLabel)
 {
 }
 

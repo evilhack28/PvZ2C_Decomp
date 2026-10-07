@@ -29,7 +29,7 @@ void HotUIAdaptor::LoadWidget()
 	 HotUIAdaptor::loadUIView();
 }
 
-void HotUIAdaptor::ButtonPress(int i_arg)
+void HotUIAdaptor::ButtonPress(int i_buttonID)
 {
 }
 
@@ -37,11 +37,11 @@ void HotUIAdaptor::onLoadUIView()
 {
 }
 
-void HotUIAdaptor::ButtonDepress(int i_arg)
+void HotUIAdaptor::ButtonDepress(int i_buttonID)
 {
 }
 
-void HotUIAdaptor::SliderReleased(int i_arg0, double i_arg1)
+void HotUIAdaptor::SliderReleased(int i_sliderID, double i_value)
 {
 }
 
@@ -58,6 +58,6 @@ void HotUIAdaptor::onLinkToUIViewCreated()
 {
 }
 
-void HotUIAdaptor::SliderVal(int i_arg0, double i_arg1)
+void HotUIAdaptor::SliderVal(int i_sliderID, double i_value)
 {
 }

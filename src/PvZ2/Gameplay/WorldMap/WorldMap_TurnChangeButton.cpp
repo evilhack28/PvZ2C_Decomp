@@ -40,7 +40,7 @@ void WorldMap_TurnChangeButton::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(WorldMap_TurnChangeButton);
 }
 
-void WorldMap_TurnChangeButton::onNotifyRefreshActivityListReal(bool i_arg0, const std::set<int>& i_arg1)
+void WorldMap_TurnChangeButton::onNotifyRefreshActivityListReal(bool i_success, const std::set<int>& changeList)
 {
 }
 

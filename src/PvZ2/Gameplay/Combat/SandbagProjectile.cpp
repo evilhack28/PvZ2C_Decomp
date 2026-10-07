@@ -41,7 +41,7 @@ void SandbagProjectileProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(SandbagProjectileProps);
 }
 
-bool SandbagProjectile::OnCollideEntity(BoardEntity* i_arg)
+bool SandbagProjectile::OnCollideEntity(BoardEntity* i_entity)
 {
 	return false;
 }

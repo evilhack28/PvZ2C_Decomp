@@ -23,7 +23,7 @@ void PlantAnimRig_Toadstool::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_Toadstool);
 }
 
-bool PlantAnimRig_Toadstool::PlayAttack(PopAnimRig::AnimStoppedReflectionDelegate i_arg)
+bool PlantAnimRig_Toadstool::PlayAttack(PopAnimRig::AnimStoppedReflectionDelegate i_onAnimStopped)
 {
 	return true;
 }

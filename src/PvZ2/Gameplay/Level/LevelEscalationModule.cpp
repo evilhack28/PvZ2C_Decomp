@@ -51,6 +51,6 @@ void LevelEscalationModuleProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(LevelEscalationModuleProperties);
 }
 
-void LevelEscalationModule::generateRandomEvents(int i_arg0, MTRand & i_arg1, class WaveManagerProperties * i_arg2)
+void LevelEscalationModule::generateRandomEvents(int i_level, MTRand & i_random, class WaveManagerProperties * o_props)
 {
 }

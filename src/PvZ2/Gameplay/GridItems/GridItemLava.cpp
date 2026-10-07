@@ -48,6 +48,6 @@ void GridItemLavaProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemLavaProps);
 }
 
-void GridItemLava::onCauseDamage(class Zombie* i_arg)
+void GridItemLava::onCauseDamage(class Zombie* i_zombie)
 {
 }

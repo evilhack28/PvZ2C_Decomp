@@ -27,12 +27,12 @@ bool PlantMagnetShroom::CanApplyPlantfood()
 }
 
 #include "Plant_MagnetShroom.h"
-void PlantMagnetShroom::onKilled(bool i_arg)
+void PlantMagnetShroom::onKilled(bool i_instantKill)
 {
 	 PlantMagnetShroom::DropAllPulledEntities();
 }
 
-bool PlantMagnetShroom::canPullZombie(Zombie* i_arg) const
+bool PlantMagnetShroom::canPullZombie(Zombie* i_zombie) const
 {
 	return false;
 }

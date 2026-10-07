@@ -9,6 +9,6 @@
 
 #include "PlantDisplayFrame.h"
 
-void PlantDisplayFrame::ButtonPress(int i_arg)
+void PlantDisplayFrame::ButtonPress(int i_id)
 {
 }

@@ -57,11 +57,11 @@ void TimeEnergyModule::onLoadComplete()
 }
 
 #include "TimeEnergyModule.h"
-void TimeEnergyModule::achievementOnLilyPadDied(class GridItemLilyPad* i_arg)
+void TimeEnergyModule::achievementOnLilyPadDied(class GridItemLilyPad* i_lilyPad)
 {
 	 TimeEnergyModule::achievementHandlePlantDied();
 }
 
-void TimeEnergyModule::achievementOnFlowerPotDied(class GridItemFlowerPot* i_arg)
+void TimeEnergyModule::achievementOnFlowerPotDied(class GridItemFlowerPot* i_flowerPot)
 {
 }

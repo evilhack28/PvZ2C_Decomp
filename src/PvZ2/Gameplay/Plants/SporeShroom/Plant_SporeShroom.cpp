@@ -33,6 +33,6 @@ void PlantSporeshroom::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantSporeshroom);
 }
 
-void PlantSporeshroom::trySpawnPlantForZombie(Zombie * i_arg)
+void PlantSporeshroom::trySpawnPlantForZombie(Zombie * zombie)
 {
 }

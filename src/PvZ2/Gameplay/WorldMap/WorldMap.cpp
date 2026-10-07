@@ -64,129 +64,129 @@ void WorldMap::queueQuestToastFeatureItemQuickStore()
 {
 }
 
-void WorldMap::EditorMouseUp(const int i_arg0, const int i_arg1, const int i_arg2)
+void WorldMap::EditorMouseUp(const int i_mouseX, const int i_mouseY, const int i_clickCount)
 {
 }
 
-void WorldMap::DrawEditorLabel(Graphics* i_arg0, const SexyString& i_arg1, const EditorInputArea& i_arg2)
+void WorldMap::DrawEditorLabel(Graphics* i_g, const SexyString& i_labelText, const EditorInputArea& i_labelArea)
 {
 }
 
-void WorldMap::EditorMouseDown(const int i_arg0, const int i_arg1, const int i_arg2)
+void WorldMap::EditorMouseDown(const int i_mouseX, const int i_mouseY, const int i_clickCount)
 {
 }
 
-void WorldMap::EditorMouseMove(const int i_arg0, const int i_arg1)
+void WorldMap::EditorMouseMove(const int i_mouseX, const int i_mouseY)
 {
 }
 
-void WorldMap::DrawEditorButton(Graphics* i_arg0, const Sexy::Rect& i_arg1, const SexyString& i_arg2, const bool i_arg3)
+void WorldMap::DrawEditorButton(Graphics* i_g, const Sexy::Rect& i_rect, const SexyString& i_label, const bool i_isDown)
 {
 }
 
-void WorldMap::LoadSandboxLevel(const std::string i_arg)
+void WorldMap::LoadSandboxLevel(const std::string i_levelname)
 {
 }
 
-void WorldMap::EditorRemoveEvent(const MapEventItem* i_arg0, bool i_arg1)
+void WorldMap::EditorRemoveEvent(const MapEventItem* i_removeEvent, bool i_decoupleEvent)
 {
 }
 
-void WorldMap::EditorRenameEvent(MapEventItem* i_arg0, const std::string& i_arg1)
+void WorldMap::EditorRenameEvent(MapEventItem* i_event, const std::string& i_newName)
 {
 }
 
-void WorldMap::EditorRenameWorld(WorldData* i_arg0, const std::string i_arg1)
+void WorldMap::EditorRenameWorld(WorldData* i_worldData, const std::string i_newWorldName)
 {
 }
 
-void WorldMap::EditorRemoveEvents(std::vector<MapEventItem*> i_arg0, bool i_arg1)
+void WorldMap::EditorRemoveEvents(std::vector<MapEventItem*> i_eventsToRemove, bool i_decoupleEvent)
 {
 }
 
-void WorldMap::DrawEditorTextField(Graphics* i_arg0, const SexyString& i_arg1, const EditorInputArea& i_arg2)
+void WorldMap::DrawEditorTextField(Graphics* i_g, const SexyString& i_labelText, const EditorInputArea& i_labelArea)
 {
 }
 
-void WorldMap::EditorDecoupleEvent(const MapEventItem* i_arg)
+void WorldMap::EditorDecoupleEvent(const MapEventItem* i_removeEvent)
 {
 }
 
-void WorldMap::EditorHandleDialogInput(const int i_arg0, const int i_arg1)
+void WorldMap::EditorHandleDialogInput(const int i_mouseX, const int i_mouseY)
 {
 }
 
-void WorldMap::EditorHandleMenuBarInput(const int i_arg0, const int i_arg1)
+void WorldMap::EditorHandleMenuBarInput(const int i_mouseX, const int i_mouseY)
 {
 }
 
-bool WorldMap::shouldPlayWorldKeyTutorial(PlayerInfo* i_arg)
-{
-	return false;
-}
-
-void WorldMap::DoWorldMapPlantRewardDialog(PlantTypePtr i_arg)
-{
-}
-
-void WorldMap::EditorSelectAllEventsInRect(const int& i_arg0, const int& i_arg1, const int& i_arg2, const int& i_arg3)
-{
-}
-
-void WorldMap::StartWorldKeyRewardAnimation(ActionWorldKeyRewardAnimation* i_arg)
-{
-}
-
-void WorldMap::testToClearUniverseTutorials(PlayerInfo* i_arg)
-{
-}
-
-MapEventItem* WorldMap::EditorGetAnyMapEventAtLocation(const int& i_arg0, const int& i_arg1)
-{
-	return NULL;
-}
-
-MapEventItem* WorldMap::EditorGetMapEventItemAtLocation(const int& i_arg0, const int& i_arg1, const MapEventType& i_arg2)
-{
-	return NULL;
-}
-
-bool WorldMap::shouldPlayUniverseIntroTutorial(PlayerInfo* i_arg)
+bool WorldMap::shouldPlayWorldKeyTutorial(PlayerInfo* i_playerInfo)
 {
 	return false;
 }
 
-MapEventItem* WorldMap::EditorGetAnyMapArtEventAtLocation(const int& i_arg0, const int& i_arg1)
+void WorldMap::DoWorldMapPlantRewardDialog(PlantTypePtr i_awardedPlant)
+{
+}
+
+void WorldMap::EditorSelectAllEventsInRect(const int& i_startX, const int& i_startY, const int& i_endX, const int& i_endY)
+{
+}
+
+void WorldMap::StartWorldKeyRewardAnimation(ActionWorldKeyRewardAnimation* i_animationAction)
+{
+}
+
+void WorldMap::testToClearUniverseTutorials(PlayerInfo* i_playerInfo)
+{
+}
+
+MapEventItem* WorldMap::EditorGetAnyMapEventAtLocation(const int& i_mouseX, const int& i_mouseY)
 {
 	return NULL;
 }
 
-bool WorldMap::shouldPlayUnusableWorldKeyTutorial(PlayerInfo* i_arg)
+MapEventItem* WorldMap::EditorGetMapEventItemAtLocation(const int& i_mouseX, const int& i_mouseY, const MapEventType& i_eventType)
+{
+	return NULL;
+}
+
+bool WorldMap::shouldPlayUniverseIntroTutorial(PlayerInfo* i_playerInfo)
 {
 	return false;
 }
 
-MapEventItem* WorldMap::EditorGetAnyMapEventAtLocationOnAnyMap(const int& i_arg0, const int& i_arg1)
+MapEventItem* WorldMap::EditorGetAnyMapArtEventAtLocation(const int& i_mouseX, const int& i_mouseY)
 {
 	return NULL;
 }
 
-void WorldMap::newMap(const std::string& i_arg)
+bool WorldMap::shouldPlayUnusableWorldKeyTutorial(PlayerInfo* i_playerInfo)
+{
+	return false;
+}
+
+MapEventItem* WorldMap::EditorGetAnyMapEventAtLocationOnAnyMap(const int& i_mouseX, const int& i_mouseY)
+{
+	return NULL;
+}
+
+void WorldMap::newMap(const std::string& i_worldName)
 {
 }
 
-void WorldMap::KeyChar(SexyChar i_arg)
+void WorldMap::KeyChar(SexyChar i_char)
 {
 }
 
-void WorldMap::KeyDown(KeyCode i_arg)
+void WorldMap::KeyDown(KeyCode i_key)
 {
 }
 
-void WorldMap::saveMap(int i_arg)
+void WorldMap::saveMap(int i_filter)
 {
 }
 
-void WorldMap::MouseMove(const int i_arg0, const int i_arg1)
+void WorldMap::MouseMove(const int i_mouseX, const int i_mouseY)
 {
 }

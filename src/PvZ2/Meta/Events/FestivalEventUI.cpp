@@ -13,10 +13,10 @@ void FestivalEventUI::loadData()
 {
 }
 
-void FestivalEventUI::ScrollTargetReached(ScrollWidget* i_arg)
+void FestivalEventUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void FestivalEventUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void FestivalEventUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

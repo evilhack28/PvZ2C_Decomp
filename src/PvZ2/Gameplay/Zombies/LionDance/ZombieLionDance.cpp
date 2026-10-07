@@ -33,7 +33,7 @@ void ZombieLionDanceProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieLionDanceProps);
 }
 
-bool ZombieLionDance::canTargetEntityHeight(BoardEntityHeight i_arg)
+bool ZombieLionDance::canTargetEntityHeight(BoardEntityHeight i_entityHeight)
 {
 	return true;
 }

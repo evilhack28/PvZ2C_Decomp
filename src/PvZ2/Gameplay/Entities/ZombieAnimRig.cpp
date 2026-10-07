@@ -31,7 +31,7 @@ void ZombieAnimRig::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig);
 }
 
-void ZombieAnimRig::CursorAnimChange(class Zombie* i_arg)
+void ZombieAnimRig::CursorAnimChange(class Zombie* i_zombie)
 {
 }
 

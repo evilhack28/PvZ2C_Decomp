@@ -34,7 +34,7 @@ void PlantGardenerGrass::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantGardenerGrass);
 }
 
-void PlantGardenerGrass::onEndCondition(PlantConditions i_arg)
+void PlantGardenerGrass::onEndCondition(PlantConditions i_condition)
 {
 }
 

@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-06T21:02:39+00:00",
+  "generated": "2026-10-07T11:34:20+00:00",
   "measures": {
-    "total_functions": 85805,
-    "matched_functions": 28636,
-    "matched_functions_percent": 33.37,
-    "total_code": 12859148,
-    "matched_code": 1777532,
-    "matched_code_percent": 13.82,
-    "fuzzy_match_percent": 14.61,
-    "started_units": 2210,
+    "total_functions": 85872,
+    "matched_functions": 28919,
+    "matched_functions_percent": 33.68,
+    "total_code": 12863972,
+    "matched_code": 1813016,
+    "matched_code_percent": 14.09,
+    "fuzzy_match_percent": 14.93,
+    "started_units": 2212,
     "total_units": 2762,
-    "started_code": 10146204,
-    "started_matched_code": 1777532,
-    "started_percent": 17.52,
+    "started_code": 10168332,
+    "started_matched_code": 1813016,
+    "started_percent": 17.83,
     "unplaced_functions": 58725,
     "unplaced_code": 8742852,
     "compile_failures": 0
@@ -202744,71 +202744,167 @@
     },
     {
       "name": "src/PvZ2/Gameplay/Subsystems/ActionSubSystem.cpp",
-      "total_code": 2352,
-      "matched_code": 488,
-      "matched_code_percent": 20.75,
-      "total_functions": 18,
-      "matched_functions": 9,
-      "matched_functions_percent": 50.0,
-      "fuzzy_match_percent": 20.75,
+      "total_code": 7164,
+      "matched_code": 6804,
+      "matched_code_percent": 94.97,
+      "total_functions": 83,
+      "matched_functions": 81,
+      "matched_functions_percent": 97.59,
+      "fuzzy_match_percent": 98.65,
       "functions": [
+        {
+          "name": "ActionEntityFade::update",
+          "size": 268,
+          "matched": false,
+          "fuzzy_match_percent": 92.54
+        },
+        {
+          "name": "ActionBase::step",
+          "size": 92,
+          "matched": false,
+          "fuzzy_match_percent": 16.67
+        },
         {
           "name": "ActionSubSystem::Update",
           "size": 504,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::update",
+          "size": 316,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::StaticClassInit",
+          "size": 280,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActionSubSystem::Serialize",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::update",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierTo::InitWithTarget",
+          "size": 216,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActionSubSystem::AddActionEntityFade",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::InitWithTarget",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierTo::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionEntityFade::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActionSubSystem::AddActionBezierBy",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActionSubSystem::AddActionBezierTo",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActionSubSystem::AddActionMoveTo",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ActionSubSystem::~ActionSubSystem",
-          "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ActionSubSystem::~ActionSubSystem",
-          "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ActionSubSystem::~ActionSubSystem",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ActionSubSystem::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::InitWithTarget",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionSubSystem::~ActionSubSystem",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionSubSystem::~ActionSubSystem",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierTo::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionEntityFade::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::StaticGetClass",
+          "size": 124,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -202819,6 +202915,66 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "ActionEntityFade::InitWithTarget",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::InitWithTarget",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::ActionBase",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::ActionBase",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::ActionBezierBy",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::ActionBezierBy",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::ActionMoveTo",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::ActionMoveTo",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::~ActionBase",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::~ActionBase",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "ActionSubSystem::ActionSubSystem",
           "size": 60,
           "matched": true,
@@ -202827,6 +202983,60 @@
         {
           "name": "ActionSubSystem::ActionSubSystem",
           "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionEntityFade::ActionEntityFade",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionEntityFade::ActionEntityFade",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierTo::ActionBezierTo",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierTo::ActionBezierTo",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierTo::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionEntityFade::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::StaticNew",
+          "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -202837,8 +203047,188 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "ActionBase::~ActionBase",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::~ActionBezierBy",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierTo::~ActionBezierTo",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionEntityFade::~ActionEntityFade",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::~ActionMoveTo",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionSubSystem::~ActionSubSystem",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::isDone",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::~ActionBezierBy",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::~ActionBezierBy",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierTo::~ActionBezierTo",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierTo::~ActionBezierTo",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionEntityFade::isDone",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionEntityFade::~ActionEntityFade",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionEntityFade::~ActionEntityFade",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::isDone",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::~ActionMoveTo",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::~ActionMoveTo",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::isDone",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierTo::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionEntityFade::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "ActionSubSystem::IsAbstract",
           "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::stop",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBase::update",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierBy::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionBezierTo::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionEntityFade::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ActionMoveTo::GetClass",
+          "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -293505,132 +293895,96 @@
     {
       "name": "src/PvZ2/Managers/ADManager.cpp",
       "total_code": 3424,
-      "matched_code": 140,
-      "matched_code_percent": 4.09,
+      "matched_code": 3424,
+      "matched_code_percent": 100.0,
       "total_functions": 23,
-      "matched_functions": 3,
-      "matched_functions_percent": 13.04,
-      "fuzzy_match_percent": 4.09,
+      "matched_functions": 23,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ADManager::onADFinished",
           "size": 708,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::ShowAD",
           "size": 476,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::RequestReward",
           "size": 356,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::InitADMaps",
           "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::CanWatchAD",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::ServerIdToLocalId",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::GetLeftADWatchCount",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::GetADWatchCount",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::RequestLocalReward",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::InitDefaultADMaps",
           "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::TryRequestReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::HasADReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::ADManager",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::ADManager",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ADManager::CanWatchAD",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ADManager::SetADWatchCount",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ADManager::LocalIdToServerId",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ADManager::ToViewPositionType",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ADManager::isCustomLevelAD",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ADManager::isLocalReward",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::~ADManager",
@@ -293641,12 +293995,48 @@
         {
           "name": "ADManager::~ADManager",
           "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ADManager::CanWatchAD",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ADManager::SetADWatchCount",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ADManager::LocalIdToServerId",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ADManager::ToViewPositionType",
+          "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
           "name": "ADManager::~ADManager",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ADManager::isCustomLevelAD",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ADManager::isLocalReward",
+          "size": 12,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }
@@ -294104,85 +294494,629 @@
     },
     {
       "name": "src/PvZ2/Managers/AnimationMgr.cpp",
-      "total_code": 2352,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 21,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 2364,
+      "matched_code": 2364,
+      "matched_code_percent": 100.0,
+      "total_functions": 23,
+      "matched_functions": 23,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "AnimationMgr::Update",
+          "size": 448,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::Add",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::AddToRenderQueue",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::InnerDraw",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::Add",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::Add",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::Add",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::Add",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::AnimationMgr",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::AnimationMgr",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::Clear",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::~AnimationMgr",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::~AnimationMgr",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::~AnimationMgr",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::onInitialized",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::Add",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::Create",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AnimationMgr::Serialize",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Managers/ArtifactMgr.cpp",
       "total_code": 14952,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 9688,
+      "matched_code_percent": 64.79,
       "total_functions": 69,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 58,
+      "matched_functions_percent": 84.06,
+      "fuzzy_match_percent": 90.73,
+      "functions": [
+        {
+          "name": "ArtifactMgr::GetArtifactBoostForPlant",
+          "size": 916,
+          "matched": false,
+          "fuzzy_match_percent": 69.43
+        },
+        {
+          "name": "ArtifactMgr::artifactDisabled",
+          "size": 736,
+          "matched": false,
+          "fuzzy_match_percent": 92.93
+        },
+        {
+          "name": "ArtifactMgr::GetCurrentGlobalBoostInfo",
+          "size": 688,
+          "matched": false,
+          "fuzzy_match_percent": 68.13
+        },
+        {
+          "name": "ArtifactMgr::GetRealExpression",
+          "size": 468,
+          "matched": false,
+          "fuzzy_match_percent": 30.77
+        },
+        {
+          "name": "ArtifactMgr::GetBoostValue",
+          "size": 420,
+          "matched": false,
+          "fuzzy_match_percent": 66.98
+        },
+        {
+          "name": "ArtifactMgr::getCurrentBoostInfo",
+          "size": 408,
+          "matched": false,
+          "fuzzy_match_percent": 67.65
+        },
+        {
+          "name": "ArtifactMgr::GetArtifactByTypeId",
+          "size": 404,
+          "matched": false,
+          "fuzzy_match_percent": 80.2
+        },
+        {
+          "name": "ArtifactMgr::GetBoostValue",
+          "size": 376,
+          "matched": false,
+          "fuzzy_match_percent": 97.87
+        },
+        {
+          "name": "ArtifactMgr::InitDefaultImprovedProps",
+          "size": 356,
+          "matched": false,
+          "fuzzy_match_percent": 93.26
+        },
+        {
+          "name": "ArtifactMgr::getExtraValue",
+          "size": 344,
+          "matched": false,
+          "fuzzy_match_percent": 64.84
+        },
+        {
+          "name": "ArtifactMgr::FillCommonData",
+          "size": 148,
+          "matched": false,
+          "fuzzy_match_percent": 94.74
+        },
+        {
+          "name": "ArtifactMgr::RequestTriggerArtifact",
+          "size": 640,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::TrySyncArtifact",
+          "size": 624,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::needRequestTriggerArtifact",
+          "size": 512,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::RecomputeEntityValues",
+          "size": 380,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::SyncLocalProps",
+          "size": 348,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetGlobalExtraValue",
+          "size": 336,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::AddArtifactModuleIfNeeded",
+          "size": 284,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetActivatedArtifact",
+          "size": 276,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetTargetFieldByFieldType",
+          "size": 264,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetCurrentBoostInfo",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::ConstructBoostInfos",
+          "size": 240,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::RemoveActivatedArtifact",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::ArtifactMgr",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::ArtifactMgr",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::CalculateFieldValue",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::CreateArtifactData",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::CalculateFieldValue",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetBoostRareByBoostId",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetBoostAliases",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::SyncArtifact",
+          "size": 188,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::InitProps",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::OnGetArtifactBoosts",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::getArtifactImprovedPropsById",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetNetworkBoostById",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::getBoostById",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetArtifactDescription",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetArtifactName",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetImprovedDescription",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetImprovedName",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::addArtifact",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetActivatedArtifactCooldown",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetActivatedArtifactMaxUsedTime",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::hasPlantBoost",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::CanTriggerActivatedArtifact",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetActivatedArtifactLeftTime",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetActivatedArtifactUsedTime",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::~ArtifactMgr",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::~ArtifactMgr",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetBoostValueRangeByBoostId",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::getBoostSheet",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetBoostRareByBoostId",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::IsArtifactDisabled",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetBoostTypeByBoostId",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::IsDangerRoom",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetEnabledBoostProps",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetArtifact",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetProps",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::CalculateExpValue",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::CheatTestField",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::~ArtifactMgr",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::CanFreeNoCD",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::CanFreePlanting",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::IsGlobalBoost",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::TriggerArtifact",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::IsUnsharedBoost",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::GetOrderId",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::SetArtifact",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ArtifactMgr::SetOrderId",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Managers/AttachedEffectManager.cpp",
       "total_code": 1936,
-      "matched_code": 604,
-      "matched_code_percent": 31.2,
+      "matched_code": 1648,
+      "matched_code_percent": 85.12,
       "total_functions": 18,
-      "matched_functions": 10,
-      "matched_functions_percent": 55.56,
-      "fuzzy_match_percent": 31.2,
+      "matched_functions": 16,
+      "matched_functions_percent": 88.89,
+      "fuzzy_match_percent": 97.73,
       "functions": [
-        {
-          "name": "AttachedEffectManager::UpdateDynamicScaleForAllEffects",
-          "size": 336,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AttachedEffectManager::update",
-          "size": 304,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AttachedEffectManager::Clear",
-          "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "AttachedEffectManager::indexOf",
           "size": 148,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AttachedEffectManager::remove",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 97.3
         },
         {
           "name": "AttachedEffectManager::add",
           "size": 140,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 71.43
         },
         {
-          "name": "AttachedEffectManager::Count",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "AttachedEffectManager::UpdateDynamicScaleForAllEffects",
+          "size": 336,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "AttachedEffectManager::at",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "AttachedEffectManager::update",
+          "size": 304,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AttachedEffectManager::Clear",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AttachedEffectManager::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AttachedEffectManager::remove",
+          "size": 148,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -294229,6 +295163,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "AttachedEffectManager::Count",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AttachedEffectManager::at",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "AttachedEffectManager::IsAbstract",
           "size": 8,
           "matched": true,
@@ -294245,202 +295191,202 @@
     {
       "name": "src/PvZ2/Managers/AudioMgr.cpp",
       "total_code": 2580,
-      "matched_code": 292,
-      "matched_code_percent": 11.32,
+      "matched_code": 2580,
+      "matched_code_percent": 100.0,
       "total_functions": 32,
-      "matched_functions": 5,
-      "matched_functions_percent": 15.62,
-      "fuzzy_match_percent": 11.32,
+      "matched_functions": 32,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "AudioMgr::Init",
           "size": 724,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SendEventThrottled",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::BroadcastCallbackMessages",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SendPositionalAudioValue",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AudioMgr::AudioMgr",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AudioMgr::AudioMgr",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SendEventCallback",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SendEvent",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SendEventCallback",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AudioMgr::~AudioMgr",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AudioMgr::~AudioMgr",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SendEvent",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::Term",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SetRTPCValue",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SetRTPCValue",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SetRTPCValue",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SetRTPCValue",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SetState",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SetState",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SetSwitch",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::AddDataToCallbackQueue",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::CancelEventCallback",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::RegisterForAudio",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SendEvent",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SendEventCallback",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SetListenerPosition",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::SetObjectPosition",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::UnregisterForAudio",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AudioMgr::SetListenerInternalPosition",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AudioMgr::OnLevelEnded",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AudioMgr::ReadDataFromCallbackQueue",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AudioMgr::AudioMgr",
-          "size": 68,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "AudioMgr::AudioMgr",
-          "size": 68,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "AudioMgr::~AudioMgr",
-          "size": 60,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "AudioMgr::~AudioMgr",
-          "size": 60,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
           "name": "AudioMgr::~AudioMgr",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AudioMgr::SetListenerInternalPosition",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AudioMgr::OnLevelEnded",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AudioMgr::ReadDataFromCallbackQueue",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }
@@ -294449,126 +295395,126 @@
     {
       "name": "src/PvZ2/Managers/AuthMgr.cpp",
       "total_code": 2288,
-      "matched_code": 8,
-      "matched_code_percent": 0.35,
+      "matched_code": 2288,
+      "matched_code_percent": 100.0,
       "total_functions": 21,
-      "matched_functions": 2,
-      "matched_functions_percent": 9.52,
-      "fuzzy_match_percent": 0.35,
+      "matched_functions": 21,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "AuthMgr::HandleReachLimit",
           "size": 788,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::AuthMgr",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::AuthMgr",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::StartRequest",
           "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::Update",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::~AuthMgr",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::~AuthMgr",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::NeedCheck",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::CheckLegal",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::~AuthMgr",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::OnReachLimit",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::SetAuthInfo",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::GetCharacterId",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::GetToken",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::HasAuthed",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::SetCharacterId",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::SetDesc",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::SetLimitDesc",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::SetToken",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AuthMgr::RequestAuth",
@@ -295761,100 +296707,100 @@
     {
       "name": "src/PvZ2/Managers/GemOfferMgr.cpp",
       "total_code": 1816,
-      "matched_code": 268,
-      "matched_code_percent": 14.76,
+      "matched_code": 1340,
+      "matched_code_percent": 73.79,
       "total_functions": 15,
-      "matched_functions": 5,
-      "matched_functions_percent": 33.33,
-      "fuzzy_match_percent": 14.76,
+      "matched_functions": 13,
+      "matched_functions_percent": 86.67,
+      "fuzzy_match_percent": 91.65,
       "functions": [
-        {
-          "name": "GemOfferMgr::InitTestData",
-          "size": 364,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "GemOfferMgr::NeedShowHint",
           "size": 256,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 89.23
         },
         {
           "name": "GemOfferMgr::SyncActivityData",
           "size": 220,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 43.64
+        },
+        {
+          "name": "GemOfferMgr::InitTestData",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GemOfferMgr::RefreshActivity",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GemOfferMgr::Update",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GemOfferMgr::ResetHintTimes",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GemOfferMgr::RequestNetwork",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GemOfferMgr::GemOfferMgr",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GemOfferMgr::GemOfferMgr",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GemOfferMgr::~GemOfferMgr",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GemOfferMgr::~GemOfferMgr",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GemOfferMgr::CanShowHint",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GemOfferMgr::ClearDatas",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GemOfferMgr::ShowHint",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GemOfferMgr::GemOfferMgr",
-          "size": 64,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "GemOfferMgr::GemOfferMgr",
-          "size": 64,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "GemOfferMgr::~GemOfferMgr",
-          "size": 52,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "GemOfferMgr::~GemOfferMgr",
-          "size": 52,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
           "name": "GemOfferMgr::~GemOfferMgr",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GemOfferMgr::ClearDatas",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GemOfferMgr::ShowHint",
+          "size": 16,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }
@@ -296245,126 +297191,126 @@
     {
       "name": "src/PvZ2/Managers/PinataManager.cpp",
       "total_code": 3444,
-      "matched_code": 8,
-      "matched_code_percent": 0.23,
+      "matched_code": 3016,
+      "matched_code_percent": 87.57,
       "total_functions": 21,
-      "matched_functions": 2,
-      "matched_functions_percent": 9.52,
-      "fuzzy_match_percent": 0.23,
+      "matched_functions": 20,
+      "matched_functions_percent": 95.24,
+      "fuzzy_match_percent": 99.19,
       "functions": [
         {
           "name": "PinataManager::PopPinata",
           "size": 428,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 93.46
         },
         {
           "name": "PinataManager::SetupPinatas",
           "size": 396,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::RecvReward",
           "size": 360,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::SelectUnPoppedPinataAtRandom",
           "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::AreAllPrizesRevealed",
           "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::IsLocationValid",
           "size": 260,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::createPinataPopAnimRigDrawer",
           "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::DropPinatas",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::GetPinatasToDraw",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::InitRewardList",
           "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::RevealAllPinataPrizes",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::PinataManager",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::PinataManager",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::onExplodeFinished",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::~PinataManager",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::~PinataManager",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::~PinataManager",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::GetPinatas",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::SetPinataStyleChooser",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::onAnimationFinished",
@@ -296869,66 +297815,30 @@
     {
       "name": "src/PvZ2/Managers/TimeMgr.cpp",
       "total_code": 916,
-      "matched_code": 172,
-      "matched_code_percent": 18.78,
+      "matched_code": 416,
+      "matched_code_percent": 45.41,
       "total_functions": 14,
-      "matched_functions": 5,
-      "matched_functions_percent": 35.71,
-      "fuzzy_match_percent": 18.78,
+      "matched_functions": 13,
+      "matched_functions_percent": 92.86,
+      "fuzzy_match_percent": 82.61,
       "functions": [
         {
           "name": "TimeMgr::Update",
           "size": 500,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 68.15
         },
         {
           "name": "TimeMgr::Init",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TimeMgr::SetDateOverride",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TimeMgr::GetDate",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TimeMgr::ClearDateOverride",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TimeMgr::GameIsPause",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TimeMgr::PauseGameOnly",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TimeMgr::SetFixedSPF",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TimeMgr::SetT",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TimeMgr::TimeMgr",
@@ -296939,6 +297849,12 @@
         {
           "name": "TimeMgr::TimeMgr",
           "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeMgr::GetDate",
+          "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -296957,6 +297873,36 @@
         {
           "name": "TimeMgr::~TimeMgr",
           "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeMgr::ClearDateOverride",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeMgr::GameIsPause",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeMgr::PauseGameOnly",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeMgr::SetFixedSPF",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TimeMgr::SetT",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }
@@ -296965,72 +297911,66 @@
     {
       "name": "src/PvZ2/Managers/TipsManager.cpp",
       "total_code": 2368,
-      "matched_code": 140,
-      "matched_code_percent": 5.91,
+      "matched_code": 2368,
+      "matched_code_percent": 100.0,
       "total_functions": 13,
-      "matched_functions": 3,
-      "matched_functions_percent": 23.08,
-      "fuzzy_match_percent": 5.91,
+      "matched_functions": 13,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "TipsManager::Draw",
           "size": 504,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TipsManager::StartNewTipFromAcitvityConfig",
           "size": 428,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TipsManager::StartNewTip",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TipsManager::Update",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TipsManager::decreaseUIGroupRefCount",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TipsManager::setState",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TipsManager::increaseUIGroupRefCount",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TipsManager::TipsManager",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TipsManager::TipsManager",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TipsManager::StopTip",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TipsManager::~TipsManager",
@@ -297049,48 +297989,54 @@
           "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TipsManager::StopTip",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Managers/WhitelistManager.cpp",
       "total_code": 776,
-      "matched_code": 244,
-      "matched_code_percent": 31.44,
+      "matched_code": 776,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 5,
-      "matched_functions_percent": 50.0,
-      "fuzzy_match_percent": 31.44,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "WhitelistManager::IsDisabledByWhitelisting",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WhitelistManager::EnableWhitelisting",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WhitelistManager::DisableAllInput",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WhitelistManager::EnableWhitelisting",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WhitelistManager::DisableWhitelisting",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WhitelistManager::WhitelistManager",
@@ -297127,72 +298073,66 @@
     {
       "name": "src/PvZ2/Managers/WorldCupMgr.cpp",
       "total_code": 1656,
-      "matched_code": 268,
-      "matched_code_percent": 16.18,
+      "matched_code": 1404,
+      "matched_code_percent": 84.78,
       "total_functions": 15,
-      "matched_functions": 5,
-      "matched_functions_percent": 33.33,
-      "fuzzy_match_percent": 16.18,
+      "matched_functions": 14,
+      "matched_functions_percent": 93.33,
+      "fuzzy_match_percent": 97.1,
       "functions": [
-        {
-          "name": "WorldCupMgr::InitTestData",
-          "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "WorldCupMgr::IsPlantDisabled",
           "size": 252,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 80.95
+        },
+        {
+          "name": "WorldCupMgr::InitTestData",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldCupMgr::GetRandomPlantSpotForTutorial",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldCupMgr::SetCarrierForTutorial",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldCupMgr::GetCurrentSetSize",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldCupMgr::ShouldDoTutorial",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldCupMgr::NotifyTutorialState",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldCupMgr::GetCurrentScore",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldCupMgr::GetGameEndTime",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "WorldCupMgr::IsTutorial",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldCupMgr::WorldCupMgr",
@@ -297203,6 +298143,12 @@
         {
           "name": "WorldCupMgr::WorldCupMgr",
           "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldCupMgr::IsTutorial",
+          "size": 56,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },

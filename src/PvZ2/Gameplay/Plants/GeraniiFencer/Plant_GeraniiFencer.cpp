@@ -31,7 +31,7 @@ void PlantGeraniiFencer::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantGeraniiFencer);
 }
 
-bool PlantGeraniiFencer::CanBeTargetedBy(const BoardEntity * i_arg)
+bool PlantGeraniiFencer::CanBeTargetedBy(const BoardEntity * i_entity)
 {
 	return true;
 }

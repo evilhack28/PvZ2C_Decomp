@@ -40,6 +40,6 @@ void ZombieIceYearMonsterProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieIceYearMonsterProps);
 }
 
-void ZombieIceYearMonster::onResilienceRecoverAnimStopped(const std::string& i_arg)
+void ZombieIceYearMonster::onResilienceRecoverAnimStopped(const std::string& i_animLabel)
 {
 }

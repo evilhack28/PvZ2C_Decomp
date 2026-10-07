@@ -31,18 +31,18 @@ void SeedPacket_PVPSkill::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(SeedPacket_PVPSkill);
 }
 
-void SeedPacket_PVPSkill::onSunClicked(class CollectableSun* i_arg0, SunCurrency i_arg1)
+void SeedPacket_PVPSkill::onSunClicked(class CollectableSun* i_sun, SunCurrency i_upcomingAmount)
 {
 }
 
-void SeedPacket_PVPSkill::onCursorDestroyed(class BaseCursor* i_arg)
+void SeedPacket_PVPSkill::onCursorDestroyed(class BaseCursor* i_cursor)
 {
 }
 
-void SeedPacket_PVPSkill::onSeedPacketPlanted(SeedPacket* i_arg)
+void SeedPacket_PVPSkill::onSeedPacketPlanted(SeedPacket* i_packet)
 {
 }
 
-void SeedPacket_PVPSkill::onSunCurrencyChanged(SunCurrency i_arg)
+void SeedPacket_PVPSkill::onSunCurrencyChanged(SunCurrency i_upcomingAmount)
 {
 }

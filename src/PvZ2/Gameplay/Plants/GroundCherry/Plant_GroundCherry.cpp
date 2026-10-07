@@ -38,7 +38,7 @@ bool PlantGroundCherry::CanBeTargeted()
 	return false;
 }
 
-bool PlantGroundCherry::CanBeTargetedBy(const BoardEntity* i_arg)
+bool PlantGroundCherry::CanBeTargetedBy(const BoardEntity* i_entity)
 {
 	return false;
 }

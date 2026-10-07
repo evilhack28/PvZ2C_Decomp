@@ -24,6 +24,6 @@ void ZombieWithPushingAction::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieWithPushingAction);
 }
 
-void ZombieWithPushingAction::spawnGridItemThatZombiePushes(int32_t i_arg)
+void ZombieWithPushingAction::spawnGridItemThatZombiePushes(int32_t column)
 {
 }

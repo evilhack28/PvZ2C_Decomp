@@ -36,7 +36,7 @@ void EliminateModule::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(EliminateModule);
 }
 
-void EliminateModule::onFallDone(BoardEntity * i_arg)
+void EliminateModule::onFallDone(BoardEntity * target)
 {
 }
 

@@ -59,7 +59,7 @@ bool PlantBoomFlower::CanApplyPlantfood()
 	return true;
 }
 
-void PlantBoomFlower::SetupLevelBasedProjectileProps(const BoomFlowerProps* i_arg)
+void PlantBoomFlower::SetupLevelBasedProjectileProps(const BoomFlowerProps* props)
 {
 }
 

@@ -57,7 +57,7 @@ void PlantTypeCaulipower::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantTypeCaulipower);
 }
 
-BoardEntityTypeFlag PlantCaulipower::GetTargetEntityTypesForWeapon(PlantWeapon i_arg)
+BoardEntityTypeFlag PlantCaulipower::GetTargetEntityTypesForWeapon(PlantWeapon i_plantWeapon)
 {
 	return (BoardEntityTypeFlag)2;
 }

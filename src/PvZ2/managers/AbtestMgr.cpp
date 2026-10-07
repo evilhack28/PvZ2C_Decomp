@@ -10,6 +10,7 @@
 #include "AbtestMgr.h"
 #include "EASquared.h"
 #include "SocialShareMgr.h"
+#include "ActivityManager.h"
 
 void AbtestMgr::Update()
 {
@@ -50,6 +51,6 @@ int AbtestMgr::GetActivityAbtestId(int i_activityId)
 
 void AbtestMgr::InitTestData()
 {
-	std::pair<ShareType, int> p = std::make_pair((ShareType)10752, 1);
+	std::pair<ShareType, int> p = std::make_pair((ShareType)Activity_Spring_ConsumeAndReceive, 1);
 	m_activityInfos.insert(reinterpret_cast<std::pair<int, int>&&>(p));
 }

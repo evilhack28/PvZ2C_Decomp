@@ -33,7 +33,7 @@ void Effect_ZombieGate::StaticClassInit()
 }
 
 #include "Effect_ZombieGate.h"
-void Effect_ZombieGate::OnAnimDone(const std::string & i_arg)
+void Effect_ZombieGate::OnAnimDone(const std::string & i_animName)
 {
 	 Effect_ZombieGate::playNormalAnim();
 }

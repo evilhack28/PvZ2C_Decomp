@@ -10,16 +10,16 @@
 #include "UINewPVPShop.h"
 
 #include "UINewPVPShop.h"
-void UINewPVPShop::costOnceBuyLimit(int i_arg)
+void UINewPVPShop::costOnceBuyLimit(int i_index)
 {
 	 UINewPVPShop::refreshShop();
 }
 
-void UINewPVPShop::ScrollTargetReached(ScrollWidget* i_arg)
+void UINewPVPShop::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UINewPVPShop::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UINewPVPShop::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

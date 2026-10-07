@@ -53,10 +53,10 @@ void WaveActionSnowBallProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(WaveActionSnowBallProps);
 }
 
-void WaveActionSnowBall::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
+void WaveActionSnowBall::WaveUpdate(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }
 
-void WaveActionSnowBall::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
+void WaveActionSnowBall::WaveEnd(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }

@@ -27,6 +27,6 @@ void MiniGameDialogAdaptor::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(MiniGameDialogAdaptor);
 }
 
-void MiniGameDialogAdaptor::ButtonPress(int i_arg)
+void MiniGameDialogAdaptor::ButtonPress(int i_buttonID)
 {
 }

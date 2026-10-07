@@ -28,7 +28,7 @@ void ZombossProps::StaticClassInit()
 
 RT_CLASS_IMPLEMENT(Zomboss);
 
-void Zomboss::chooseDeathState(const DamageInfo& i_arg)
+void Zomboss::chooseDeathState(const DamageInfo& i_deathBlow)
 {
 }
 

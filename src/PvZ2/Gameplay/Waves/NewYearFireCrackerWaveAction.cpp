@@ -35,11 +35,11 @@ void NewYearFireCrackerWaveAction::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(NewYearFireCrackerWaveAction);
 }
 
-void NewYearFireCrackerWaveAction::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
+void NewYearFireCrackerWaveAction::WaveUpdate(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }
 
-void NewYearFireCrackerWaveAction::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
+void NewYearFireCrackerWaveAction::WaveEnd(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }
 

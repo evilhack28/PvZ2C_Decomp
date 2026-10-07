@@ -35,11 +35,11 @@ void SummerFireworksWaveAction::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(SummerFireworksWaveAction);
 }
 
-void SummerFireworksWaveAction::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
+void SummerFireworksWaveAction::WaveUpdate(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }
 
-void SummerFireworksWaveAction::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
+void SummerFireworksWaveAction::WaveEnd(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }
 

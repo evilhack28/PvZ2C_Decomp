@@ -40,7 +40,7 @@ bool PlantKiwiFruit::CanApplyPlantfood()
 }
 
 #include "Plant_KiwiFruit.h"
-void PlantKiwiFruit::DoSpecial(int i_arg)
+void PlantKiwiFruit::DoSpecial(int i_extraParam)
 {
 	 PlantKiwiFruit::dealPlantfoodDamage();
 }

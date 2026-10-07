@@ -105,11 +105,11 @@ int LawnApp::GetButtonReleaseExpansionPixels()
 	return 15;
 }
 
-void LawnApp::ButtonPress(int i_arg)
+void LawnApp::ButtonPress(int i_id)
 {
 }
 
-bool LawnApp::DebugKeyDown(int i_arg)
+bool LawnApp::DebugKeyDown(int i_key)
 {
 	return false;
 }
@@ -120,11 +120,11 @@ void LawnApp::OnCloseDialog()
 	 LawnApp::KillPVZ2Dialog();
 }
 
-void LawnApp::OnGestureFlick(Sexy::GestureFlickDirection i_arg0, Sexy::Point i_arg1)
+void LawnApp::OnGestureFlick(Sexy::GestureFlickDirection i_direction, Sexy::Point i_startingLocation)
 {
 }
 
-void LawnApp::SetCheatsEnabled(bool i_arg)
+void LawnApp::SetCheatsEnabled(bool i_enabled)
 {
 }
 
@@ -134,17 +134,17 @@ time_t LawnApp::GetRealBeijingTime()
 	return LawnApp::GetRealServerTime();
 }
 
-void LawnApp::LaunchMerchWebpage(bool i_arg)
+void LawnApp::LaunchMerchWebpage(bool i_fromMainMenu)
 {
 }
 
-bool LawnApp::IsWorldRSBFileLoaded(const std::string& i_arg)
+bool LawnApp::IsWorldRSBFileLoaded(const std::string& i_world_name)
 {
 	return true;
 }
 
 #include "LawnApp.h"
-void LawnApp::onEASquaredFlowEnded(const std::string& i_arg0, int i_arg1, int i_arg2)
+void LawnApp::onEASquaredFlowEnded(const std::string& i_placementOrigin, int i_coinsEarned, int i_videosWatched)
 {
 	 LawnApp::KillNetConnectingUI();
 }
@@ -155,16 +155,16 @@ void LawnApp::AppBecomingForeground()
 	 BehaviorLog::resume();
 }
 
-void LawnApp::onItemPurchasedFromStore(MagentoProductProps* i_arg)
+void LawnApp::onItemPurchasedFromStore(MagentoProductProps* i_props)
 {
 }
 
-bool LawnApp::NeedShowLoginRewardDialog(bool i_arg)
+bool LawnApp::NeedShowLoginRewardDialog(bool i_canUseLocalTime)
 {
 	return false;
 }
 
-void LawnApp::onPurchaseRefreshComplete(Sexy::IPurchaseDriver* i_arg)
+void LawnApp::onPurchaseRefreshComplete(Sexy::IPurchaseDriver* purchase_driver)
 {
 }
 

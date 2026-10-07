@@ -35,7 +35,7 @@ void AgaveSwordLight::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(AgaveSwordLight);
 }
 
-bool AgaveSwordLight::OnCollideEntity(BoardEntity* i_arg)
+bool AgaveSwordLight::OnCollideEntity(BoardEntity* i_entity)
 {
 	return false;
 }

@@ -37,7 +37,7 @@ void PlantBramble::Initialize()
 	 PlantFramework::Initialize();
 }
 
-bool PlantBramble::CanTargetZombie(ZombiePtr i_arg0, PlantWeapon i_arg1)
+bool PlantBramble::CanTargetZombie(ZombiePtr i_zombie, PlantWeapon i_plantWeapon)
 {
 	return false;
 }
@@ -47,7 +47,7 @@ bool PlantBramble::CanApplyPlantfood()
 	return false;
 }
 
-CollisionTypeFlags PlantBramble::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantBramble::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)false;
 }

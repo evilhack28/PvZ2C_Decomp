@@ -52,6 +52,6 @@ bool PlantHollyKnight::CanApplyPlantfood()
 	return true;
 }
 
-void PlantHollyKnight::SetupLevelBasedProjectileProps(const HollyKnightProps* i_arg)
+void PlantHollyKnight::SetupLevelBasedProjectileProps(const HollyKnightProps* props)
 {
 }

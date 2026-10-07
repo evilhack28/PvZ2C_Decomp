@@ -9,19 +9,19 @@
 
 #include "DailyAchievement.h"
 
-void DailyAchievement::ButtonPress(int i_arg)
+void DailyAchievement::ButtonPress(int i_id)
 {
 }
 
-void DailyAchievement::ButtonDepress(int i_arg)
+void DailyAchievement::ButtonDepress(int i_id)
 {
 }
 
-void DailyAchievement::ScrollTargetReached(ScrollWidget* i_arg)
+void DailyAchievement::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void DailyAchievement::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void DailyAchievement::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

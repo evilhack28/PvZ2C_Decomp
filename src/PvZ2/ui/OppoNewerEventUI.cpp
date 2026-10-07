@@ -13,10 +13,10 @@ void OppoNewerEventUI::loadData()
 {
 }
 
-void OppoNewerEventUI::ScrollTargetReached(ScrollWidget* i_arg)
+void OppoNewerEventUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void OppoNewerEventUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void OppoNewerEventUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

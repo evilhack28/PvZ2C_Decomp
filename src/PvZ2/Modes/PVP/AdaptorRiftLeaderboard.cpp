@@ -23,10 +23,10 @@ void AdaptorRiftLeaderboard::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(AdaptorRiftLeaderboard);
 }
 
-void AdaptorRiftLeaderboard::ScrollTargetReached(ScrollWidget* i_arg)
+void AdaptorRiftLeaderboard::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void AdaptorRiftLeaderboard::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void AdaptorRiftLeaderboard::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

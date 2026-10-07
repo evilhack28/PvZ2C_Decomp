@@ -9,15 +9,15 @@
 
 #include "UIPartyAssist.h"
 
-void UIPartyAssist::ScrollTargetReached(ScrollWidget* i_arg)
+void UIPartyAssist::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIPartyAssist::TabSelectionChanged(int i_arg)
+void UIPartyAssist::TabSelectionChanged(int tabID)
 {
 }
 
-void UIPartyAssist::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIPartyAssist::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

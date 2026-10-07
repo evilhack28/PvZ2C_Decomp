@@ -31,6 +31,6 @@ void DinoTimeWaveAction::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(DinoTimeWaveAction);
 }
 
-void DinoTimeWaveAction::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
+void DinoTimeWaveAction::WaveUpdate(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }

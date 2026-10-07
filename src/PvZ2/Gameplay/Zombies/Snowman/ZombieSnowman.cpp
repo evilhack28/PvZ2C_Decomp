@@ -15,7 +15,7 @@ void ZombieSnowman::onZombieInitialize()
 	 Zombie::onZombieInitialize();
 }
 
-void ZombieSnowman::onAttackAnimStopped(const std::string& i_arg)
+void ZombieSnowman::onAttackAnimStopped(const std::string& i_animLabel)
 {
 }
 

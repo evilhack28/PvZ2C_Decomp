@@ -34,7 +34,7 @@ void PlantMagicbeans::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantMagicbeans);
 }
 
-void PlantMagicbeans::onSetDuplicate(bool i_arg)
+void PlantMagicbeans::onSetDuplicate(bool i_duplicate)
 {
 }
 
@@ -48,7 +48,7 @@ bool PlantMagicbeans::CanApplyPlantfood()
 	return false;
 }
 
-bool PlantMagicbeans::TryBlockPushOffBoard(Zombie* i_arg0, const int i_arg1)
+bool PlantMagicbeans::TryBlockPushOffBoard(Zombie* i_srcZombie, const int i_direction)
 {
 	return false;
 }

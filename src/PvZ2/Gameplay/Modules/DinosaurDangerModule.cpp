@@ -57,19 +57,19 @@ void DinosaurDangerModule::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(DinosaurDangerModule);
 }
 
-void DinosaurDangerModule::OnContinue(TimeChallengeEndLevelUI* i_arg)
+void DinosaurDangerModule::OnContinue(TimeChallengeEndLevelUI* ui)
 {
 }
 
-void DinosaurDangerModule::OnPlantAdded(class Plant* i_arg)
+void DinosaurDangerModule::OnPlantAdded(class Plant* i_plant)
 {
 }
 
-void DinosaurDangerModule::OnRequestDinosaurDangerEnd(int i_arg)
+void DinosaurDangerModule::OnRequestDinosaurDangerEnd(int result)
 {
 }
 
-void DinosaurDangerModule::Draw(Graphics* i_arg)
+void DinosaurDangerModule::Draw(Graphics* i_g)
 {
 }
 

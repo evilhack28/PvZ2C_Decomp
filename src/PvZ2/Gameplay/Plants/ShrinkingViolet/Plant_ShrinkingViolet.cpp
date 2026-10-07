@@ -33,12 +33,12 @@ void PlantShrinkingViolet::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantShrinkingViolet);
 }
 
-CollisionTypeFlags PlantShrinkingViolet::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantShrinkingViolet::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)7;
 }
 
-bool PlantShrinkingViolet::TryBlockZombossRush(Zombie* i_arg)
+bool PlantShrinkingViolet::TryBlockZombossRush(Zombie* i_zomboss)
 {
 	return false;
 }

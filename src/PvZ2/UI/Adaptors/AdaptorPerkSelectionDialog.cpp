@@ -29,13 +29,13 @@ void AdaptorPerkSelectionDialog::StaticClassInit()
 }
 
 #include "AdaptorPerkSelectionDialog.h"
-void AdaptorPerkSelectionDialog::onPerkSelected(std::string i_arg0, bool i_arg1, Point& i_arg2)
+void AdaptorPerkSelectionDialog::onPerkSelected(std::string i_perkName, bool i_needsAnimation, Point& i_startPoint)
 {
 	 AdaptorPerkSelectionDialog::refresh();
 }
 
 #include "AdaptorPerkSelectionDialog.h"
-void AdaptorPerkSelectionDialog::onPerkSelectionChanged(std::string i_arg)
+void AdaptorPerkSelectionDialog::onPerkSelectionChanged(std::string i_perkName)
 {
 	 AdaptorPerkSelectionDialog::refresh();
 }

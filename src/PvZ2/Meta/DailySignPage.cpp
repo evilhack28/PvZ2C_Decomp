@@ -9,10 +9,10 @@
 
 #include "DailySignPage.h"
 
-void DailySignPage::ScrollTargetReached(ScrollWidget* i_arg)
+void DailySignPage::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void DailySignPage::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void DailySignPage::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

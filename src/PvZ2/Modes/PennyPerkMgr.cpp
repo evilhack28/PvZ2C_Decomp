@@ -13,7 +13,7 @@ PennyPerkMgr::PennyPerkMgr()
 {
 }
 
-bool PennyPerkMgr::CheatIsPerkToggleActive(std::string i_arg)
+bool PennyPerkMgr::CheatIsPerkToggleActive(std::string i_perkClassName)
 {
 	return false;
 }

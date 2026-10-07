@@ -46,6 +46,6 @@ bool GridItemTriggerTile::CanTriggerTile()
 	return GridItemTriggerTile::isTimeForNextTrigger();
 }
 
-void GridItemTriggerTile::handleTargetCollisions(const std::vector<BoardEntity*>& i_arg)
+void GridItemTriggerTile::handleTargetCollisions(const std::vector<BoardEntity*>& i_entities)
 {
 }

@@ -9,18 +9,18 @@
 
 #include "UIFestivalGoldenEgg.h"
 
-void UIFestivalGoldenEgg::ScrollTargetReached(ScrollWidget* i_arg)
+void UIFestivalGoldenEgg::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIFestivalGoldenEgg::TabSelectionChanged(int i_arg)
+void UIFestivalGoldenEgg::TabSelectionChanged(int tabID)
 {
 }
 
-void UIFestivalGoldenEgg::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIFestivalGoldenEgg::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 
-void UIFestivalGoldenEgg::Draw(Graphics* i_arg)
+void UIFestivalGoldenEgg::Draw(Graphics* i_g)
 {
 }

@@ -41,6 +41,6 @@ void ArtifactSkateBoardProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ArtifactSkateBoardProperties);
 }
 
-void ArtifactSkateBoardProperties::GatherResourceRequirements(std::set<std::string>& i_arg) const
+void ArtifactSkateBoardProperties::GatherResourceRequirements(std::set<std::string>& io_resourceGroupNames) const
 {
 }

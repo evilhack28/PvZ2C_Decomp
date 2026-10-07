@@ -29,7 +29,7 @@ void ZombieExcavatorProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieExcavatorProps);
 }
 
-bool ZombieExcavator::canTargetEntityHeight(BoardEntityHeight i_arg)
+bool ZombieExcavator::canTargetEntityHeight(BoardEntityHeight i_entityHeight)
 {
 	return true;
 }

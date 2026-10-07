@@ -9,14 +9,14 @@
 
 #include "RechargeBundleUI.h"
 
-void RechargeBundleUI::ButtonPress(int i_arg)
+void RechargeBundleUI::ButtonPress(int i_id)
 {
 }
 
-void RechargeBundleUI::ScrollTargetReached(ScrollWidget* i_arg)
+void RechargeBundleUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void RechargeBundleUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void RechargeBundleUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

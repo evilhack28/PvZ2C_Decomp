@@ -18,10 +18,10 @@ UIRankAvatarSelect::~UIRankAvatarSelect()
 {
 }
 
-void UIRankAvatarSelect::ScrollTargetReached(ScrollWidget* i_arg)
+void UIRankAvatarSelect::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIRankAvatarSelect::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIRankAvatarSelect::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

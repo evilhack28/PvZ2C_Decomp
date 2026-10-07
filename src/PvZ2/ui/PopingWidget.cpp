@@ -17,6 +17,6 @@ void PopingWidget::RecoverAllButtonAndAnims()
 {
 }
 
-void PopingWidget::Draw(Graphics* i_arg)
+void PopingWidget::Draw(Graphics* i_g)
 {
 }

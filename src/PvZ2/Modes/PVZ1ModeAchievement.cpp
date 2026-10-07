@@ -9,10 +9,10 @@
 
 #include "PVZ1ModeAchievement.h"
 
-void PVZ1ModeAchievement::ScrollTargetReached(ScrollWidget* i_arg)
+void PVZ1ModeAchievement::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void PVZ1ModeAchievement::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void PVZ1ModeAchievement::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

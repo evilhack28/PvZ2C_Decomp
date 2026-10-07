@@ -40,7 +40,7 @@ bool PlantDartichoke::CanApplyPlantfood()
 	return true;
 }
 
-BoardEntityTypeFlag PlantDartichoke::GetTargetEntityTypesForWeapon(PlantWeapon i_arg)
+BoardEntityTypeFlag PlantDartichoke::GetTargetEntityTypesForWeapon(PlantWeapon i_plantWeapon)
 {
 	return (BoardEntityTypeFlag)2;
 }

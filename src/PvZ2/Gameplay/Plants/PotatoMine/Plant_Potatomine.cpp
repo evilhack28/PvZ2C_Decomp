@@ -32,6 +32,6 @@ void PlantPotatomine::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantPotatomine);
 }
 
-void PlantPotatomine::onSetDuplicate(bool i_arg)
+void PlantPotatomine::onSetDuplicate(bool i_duplicate)
 {
 }

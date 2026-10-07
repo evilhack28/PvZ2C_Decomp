@@ -13,6 +13,6 @@ void PlantBundleUI::Update()
 {
 }
 
-void PlantBundleUI::ButtonPress(int i_arg)
+void PlantBundleUI::ButtonPress(int i_id)
 {
 }

@@ -43,19 +43,19 @@ time_t WorldMap_EventBar::getCurrentEventTimeRemaining()
 
 RT_CLASS_IMPLEMENT(WorldMap_EventBar);
 
-bool WorldMap_EventBar::drawProgressBar(Sexy::Graphics* i_arg)
+bool WorldMap_EventBar::drawProgressBar(Sexy::Graphics* i_g)
 {
 	return false;
 }
 
-void WorldMap_EventBar::createPlayNowButton(SexyString i_arg0, EventBarType i_arg1, int i_arg2)
+void WorldMap_EventBar::createPlayNowButton(SexyString buttonText, EventBarType i_eventType, int i_coinCost)
 {
 }
 
-void WorldMap_EventBar::createLODUpcomingText(std::string& i_arg0, std::string& i_arg1)
+void WorldMap_EventBar::createLODUpcomingText(std::string& headerText, std::string& descText)
 {
 }
 
-void WorldMap_EventBar::prepareLODDisplayUpcoming(bool i_arg0, EventBarType i_arg1)
+void WorldMap_EventBar::prepareLODDisplayUpcoming(bool shouldCreatePlayButton, EventBarType i_eventBarType)
 {
 }

@@ -17,10 +17,10 @@ UIWishingPool::~UIWishingPool()
 {
 }
 
-void UIWishingPool::ScrollTargetReached(ScrollWidget* i_arg)
+void UIWishingPool::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIWishingPool::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIWishingPool::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

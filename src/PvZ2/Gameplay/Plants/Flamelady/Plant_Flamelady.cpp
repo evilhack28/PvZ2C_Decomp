@@ -50,7 +50,7 @@ void PlantFlamelady::stopSpecialEffect()
 }
 
 #include "Plant_Flamelady.h"
-void PlantFlamelady::onKilled(bool i_arg)
+void PlantFlamelady::onKilled(bool i_instantKill)
 {
 	 PlantFlamelady::CancelPowerAttack();
 }

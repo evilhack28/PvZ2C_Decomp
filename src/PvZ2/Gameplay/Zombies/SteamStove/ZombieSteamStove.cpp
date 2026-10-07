@@ -27,12 +27,12 @@ void ZombieSteamStoveProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieSteamStoveProps);
 }
 
-void ZombieSteamStove::onEndCondition(ZombieConditions i_arg)
+void ZombieSteamStove::onEndCondition(ZombieConditions i_condition)
 {
 }
 
 #include "ZombieSteamStove.h"
-void ZombieSteamStove::onExplodeAnimDone(const std::string& i_arg)
+void ZombieSteamStove::onExplodeAnimDone(const std::string& i_animLabelName)
 {
 	 ZombieSteamStove::findAndExplodePlant();
 }

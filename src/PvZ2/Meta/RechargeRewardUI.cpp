@@ -9,6 +9,6 @@
 
 #include "RechargeRewardUI.h"
 
-void RechargeRewardUI::ButtonPress(int i_arg)
+void RechargeRewardUI::ButtonPress(int i_id)
 {
 }

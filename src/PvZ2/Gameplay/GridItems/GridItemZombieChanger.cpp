@@ -51,6 +51,6 @@ void GridItemZombieChangerProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemZombieChangerProps);
 }
 
-void GridItemZombieChanger::onTakeDamage(const DamageInfo& i_arg)
+void GridItemZombieChanger::onTakeDamage(const DamageInfo& i_damage)
 {
 }

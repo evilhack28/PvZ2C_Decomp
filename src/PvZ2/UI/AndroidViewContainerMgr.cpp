@@ -21,34 +21,34 @@ AndroidViewContainerMgr::~AndroidViewContainerMgr()
 {
 }
 
-void AndroidViewContainerMgr::ShowWebView(const std::string& i_arg)
+void AndroidViewContainerMgr::ShowWebView(const std::string& i_url)
 {
 }
 
-void AndroidViewContainerMgr::ShowViewHook(JNIEnv* i_arg0, jobject i_arg1, jlong i_arg2, jint i_arg3)
+void AndroidViewContainerMgr::ShowViewHook(JNIEnv* env, jobject javaObject, jlong nativeObject, jint resultCode)
 {
 }
 
-void AndroidViewContainerMgr::PassCallLottery(const std::string& i_arg0, int i_arg1, int i_arg2, int i_arg3)
+void AndroidViewContainerMgr::PassCallLottery(const std::string& i_key, int i_id, int i_quantity, int i_index)
 {
 }
 
-void AndroidViewContainerMgr::PassCallSettlement(const std::string& i_arg0, int i_arg1)
+void AndroidViewContainerMgr::PassCallSettlement(const std::string& i_key, int i_count)
 {
 }
 
-void AndroidViewContainerMgr::PassCallConsumeCash(const std::string& i_arg0, int i_arg1)
+void AndroidViewContainerMgr::PassCallConsumeCash(const std::string& i_key, int i_num)
 {
 }
 
-void AndroidViewContainerMgr::PassCallAddPlayTimes(const std::string& i_arg0, int i_arg1)
+void AndroidViewContainerMgr::PassCallAddPlayTimes(const std::string& i_key, int i_result)
 {
 }
 
-void AndroidViewContainerMgr::PassCallScoreStoreBuy(const std::string& i_arg0, int i_arg1)
+void AndroidViewContainerMgr::PassCallScoreStoreBuy(const std::string& i_key, int i_id)
 {
 }
 
-void AndroidViewContainerMgr::PassCallScoreStoreInfo(const std::string& i_arg0, const std::string& i_arg1)
+void AndroidViewContainerMgr::PassCallScoreStoreInfo(const std::string& i_key, const std::string& i_info)
 {
 }

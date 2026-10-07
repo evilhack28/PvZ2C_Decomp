@@ -9,10 +9,10 @@
 
 #include "RedPackUI.h"
 
-void RedPackUI::ScrollTargetReached(ScrollWidget* i_arg)
+void RedPackUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void RedPackUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void RedPackUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

@@ -32,7 +32,7 @@ void ZombieZombossMechDarkProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieZombossMechDarkProps);
 }
 
-bool ZombieZombossMech_Dark::isPlantAllowedUnderZomboss(const PlantType* i_arg)
+bool ZombieZombossMech_Dark::isPlantAllowedUnderZomboss(const PlantType* i_plant)
 {
 	return true;
 }

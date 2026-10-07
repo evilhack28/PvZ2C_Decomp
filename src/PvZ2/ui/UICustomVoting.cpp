@@ -9,11 +9,11 @@
 
 #include "UICustomVoting.h"
 
-void UICustomVoting::ScrollTargetReached(ScrollWidget* i_arg)
+void UICustomVoting::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UICustomVoting::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UICustomVoting::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

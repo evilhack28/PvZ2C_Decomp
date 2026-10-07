@@ -9,11 +9,11 @@
 
 #include "ArenaEndingUI.h"
 
-void ArenaEndingUI::ScrollTargetReached(ScrollWidget* i_arg)
+void ArenaEndingUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void ArenaEndingUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void ArenaEndingUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

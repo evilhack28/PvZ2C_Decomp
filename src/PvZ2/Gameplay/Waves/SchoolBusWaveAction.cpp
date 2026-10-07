@@ -56,10 +56,10 @@ void SchoolBusWaveActionProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(SchoolBusWaveActionProps);
 }
 
-void SchoolBusWaveAction::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
+void SchoolBusWaveAction::WaveUpdate(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }
 
-void SchoolBusWaveAction::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
+void SchoolBusWaveAction::WaveEnd(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }

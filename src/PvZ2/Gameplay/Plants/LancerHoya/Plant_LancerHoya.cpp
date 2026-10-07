@@ -32,7 +32,7 @@ void PlantLancerHoya::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantLancerHoya);
 }
 
-Projectile* PlantLancerHoya::normalFire(ZombiePtr i_arg0, int i_arg1, PlantWeapon i_arg2)
+Projectile* PlantLancerHoya::normalFire(ZombiePtr i_targetZombie, int i_row, PlantWeapon i_plantWeapon)
 {
 	return NULL;
 }
@@ -42,7 +42,7 @@ bool PlantLancerHoya::CanApplyPlantfood()
 	return true;
 }
 
-Projectile* PlantLancerHoya::Fire(ZombiePtr i_arg0, int i_arg1, PlantWeapon i_arg2)
+Projectile* PlantLancerHoya::Fire(ZombiePtr i_targetZombie, int i_row, PlantWeapon i_plantWeapon)
 {
 	return NULL;
 }

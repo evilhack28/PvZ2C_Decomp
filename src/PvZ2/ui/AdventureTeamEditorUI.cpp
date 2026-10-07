@@ -9,14 +9,14 @@
 
 #include "AdventureTeamEditorUI.h"
 
-void AdventureTeamEditorUI::UpdateSpirit(Sexy::Graphics* i_arg)
+void AdventureTeamEditorUI::UpdateSpirit(Sexy::Graphics* i_g)
 {
 }
 
-void AdventureTeamEditorUI::ScrollTargetReached(ScrollWidget* i_arg)
+void AdventureTeamEditorUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void AdventureTeamEditorUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void AdventureTeamEditorUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

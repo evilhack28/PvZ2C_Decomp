@@ -9,11 +9,11 @@
 
 #include "BirthdayRewardDialog.h"
 
-void BirthdayRewardDialog::ScrollTargetReached(ScrollWidget* i_arg)
+void BirthdayRewardDialog::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void BirthdayRewardDialog::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void BirthdayRewardDialog::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

@@ -37,6 +37,6 @@ bool PlantElaeocarpus::CanApplyPlantfood()
 	return true;
 }
 
-void PlantElaeocarpus::DoSpecial(int i_arg)
+void PlantElaeocarpus::DoSpecial(int i_extraParam)
 {
 }

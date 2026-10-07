@@ -31,6 +31,6 @@ void PlantIcyCurrant::OnRelocationBegun()
 	 PlantIcyCurrant::ReleaseFence();
 }
 
-void PlantIcyCurrant::onKilled(bool i_arg)
+void PlantIcyCurrant::onKilled(bool i_instantKill)
 {
 }

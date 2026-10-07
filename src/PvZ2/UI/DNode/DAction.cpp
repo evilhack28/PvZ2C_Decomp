@@ -9,6 +9,6 @@
 
 #include "DAction.h"
 
-void DAction::timeStep(float i_arg)
+void DAction::timeStep(float dt)
 {
 }

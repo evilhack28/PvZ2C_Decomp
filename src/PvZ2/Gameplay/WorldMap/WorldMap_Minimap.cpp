@@ -22,6 +22,6 @@ WorldMap_Minimap::~WorldMap_Minimap()
 
 RT_CLASS_IMPLEMENT(WorldMap_Minimap);
 
-void WorldMap_Minimap::OnMouseUp(const int i_arg0, const int i_arg1)
+void WorldMap_Minimap::OnMouseUp(const int i_mouseX, const int i_mouseY)
 {
 }

@@ -9,15 +9,15 @@
 
 #include "UIActivityCollection.h"
 
-void UIActivityCollection::ScrollTargetReached(ScrollWidget* i_arg)
+void UIActivityCollection::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIActivityCollection::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIActivityCollection::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 
-void UIActivityCollection::Draw(Sexy::Graphics* i_arg)
+void UIActivityCollection::Draw(Sexy::Graphics* i_g)
 {
 }
 

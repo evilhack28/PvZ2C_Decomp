@@ -31,6 +31,6 @@ void PlantPrimalSunflower::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantPrimalSunflower);
 }
 
-void PlantPrimalSunflower::onKilled(bool i_arg)
+void PlantPrimalSunflower::onKilled(bool i_instantKill)
 {
 }

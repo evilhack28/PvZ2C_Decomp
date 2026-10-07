@@ -46,7 +46,7 @@ void ZombieZombossExplosive::registerForEvents()
 	 Zombie::registerForEvents();
 }
 
-void ZombieZombossExplosive::onJumpToSkyAnimDone(const std::string& i_arg)
+void ZombieZombossExplosive::onJumpToSkyAnimDone(const std::string& i_label)
 {
 }
 
@@ -54,6 +54,6 @@ void ZombieZombossExplosive::unregisterForEvents()
 {
 }
 
-void ZombieZombossExplosive::onJumpToChangeLaneAnimDone(const std::string& i_arg)
+void ZombieZombossExplosive::onJumpToChangeLaneAnimDone(const std::string& i_label)
 {
 }

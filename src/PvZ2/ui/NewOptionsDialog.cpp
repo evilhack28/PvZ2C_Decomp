@@ -9,6 +9,6 @@
 
 #include "NewOptionsDialog.h"
 
-void NewOptionsDialog::MouseDrag(int i_arg0, int i_arg1)
+void NewOptionsDialog::MouseDrag(int x, int y)
 {
 }

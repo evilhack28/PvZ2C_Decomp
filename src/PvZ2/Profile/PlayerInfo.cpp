@@ -133,15 +133,15 @@ PennyTechCurrency PlayerInfo::GetNumPennyTech() const
 	return 99;
 }
 
-void PlayerInfo::AM_SetLevel(std::string i_arg)
+void PlayerInfo::AM_SetLevel(std::string string)
 {
 }
 
-void PlayerInfo::AddPennyFuel(const PennyFuelCurrency i_arg0, const bool i_arg1)
+void PlayerInfo::AddPennyFuel(const PennyFuelCurrency i_amount, const bool i_willBeBankedLater)
 {
 }
 
-void PlayerInfo::AddPennyTech(const PennyTechCurrency i_arg)
+void PlayerInfo::AddPennyTech(const PennyTechCurrency i_amount)
 {
 }
 
@@ -157,19 +157,19 @@ void PlayerInfo::ClearRebateData()
 	 PlayerInfo::ResetRebateData();
 }
 
-void PlayerInfo::AddZombossSignal(const ZombossSignalCurrency i_arg)
+void PlayerInfo::AddZombossSignal(const ZombossSignalCurrency i_amount)
 {
 }
 
-void PlayerInfo::SetZombossSignal(const ZombossSignalCurrency i_arg)
+void PlayerInfo::SetZombossSignal(const ZombossSignalCurrency i_resetAmount)
 {
 }
 
-void PlayerInfo::SubtractPennyFuel(const PennyFuelCurrency i_arg)
+void PlayerInfo::SubtractPennyFuel(const PennyFuelCurrency i_amount)
 {
 }
 
-void PlayerInfo::SubtractPennyTech(const PennyTechCurrency i_arg)
+void PlayerInfo::SubtractPennyTech(const PennyTechCurrency i_amount)
 {
 }
 
@@ -185,19 +185,19 @@ void PlayerInfo::RegainPlantPieceSign()
 	 PlayerInfo::resetPlantPieceSign();
 }
 
-void PlayerInfo::SubtractZombossSignal(const ZombossSignalCurrency i_arg)
+void PlayerInfo::SubtractZombossSignal(const ZombossSignalCurrency i_amount)
 {
 }
 
-void PlayerInfo::increaseChallengeCount(int i_arg0, int i_arg1)
+void PlayerInfo::increaseChallengeCount(int worldIndex, int levelIndex)
 {
 }
 
-void PlayerInfo::AddCard(int i_arg)
+void PlayerInfo::AddCard(int i_cardID)
 {
 }
 
-int PlayerInfo::getChallengeCount(int i_arg0, int i_arg1) const
+int PlayerInfo::getChallengeCount(int worldIndex, int levelIndex) const
 {
 	return false;
 }

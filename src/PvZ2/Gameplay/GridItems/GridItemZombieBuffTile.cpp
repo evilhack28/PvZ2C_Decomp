@@ -48,7 +48,7 @@ void GridItemZombieBuffTileProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemZombieBuffTileProps);
 }
 
-void GridItemZombieBuffTile::doApplyEffect(const BoardEntity* i_arg)
+void GridItemZombieBuffTile::doApplyEffect(const BoardEntity* i_entity)
 {
 }
 

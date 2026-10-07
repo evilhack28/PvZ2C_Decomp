@@ -9,10 +9,10 @@
 
 #include "BossChallengeInfo.h"
 
-void BossChallengeInfo::ScrollTargetReached(Sexy::ScrollWidget* i_arg)
+void BossChallengeInfo::ScrollTargetReached(Sexy::ScrollWidget* scrollWidget)
 {
 }
 
-void BossChallengeInfo::ScrollTargetInterrupted(Sexy::ScrollWidget* i_arg)
+void BossChallengeInfo::ScrollTargetInterrupted(Sexy::ScrollWidget* scrollWidget)
 {
 }

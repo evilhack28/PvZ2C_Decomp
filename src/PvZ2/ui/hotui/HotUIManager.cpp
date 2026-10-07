@@ -13,6 +13,6 @@ HotUIManager::~HotUIManager()
 {
 }
 
-void HotUIManager::removePropertySheetChildrenFromWidget(HotUIWidgetPtr i_arg)
+void HotUIManager::removePropertySheetChildrenFromWidget(HotUIWidgetPtr i_widget)
 {
 }

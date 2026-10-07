@@ -38,6 +38,6 @@ bool PlantButtercup::CanApplyPlantfood()
 	return true;
 }
 
-void PlantButtercup::onUseSpecialAnimCommand(pvztime_t i_arg)
+void PlantButtercup::onUseSpecialAnimCommand(pvztime_t i_timeStamp)
 {
 }

@@ -39,6 +39,6 @@ void CollectableSunBombType::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(CollectableSunBombType);
 }
 
-void CollectableSunBomb::onBeamAnimDone_Destroy(StandaloneEffect* i_arg)
+void CollectableSunBomb::onBeamAnimDone_Destroy(StandaloneEffect* i_effect)
 {
 }

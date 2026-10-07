@@ -65,12 +65,12 @@ void GridItemHeianBox::registerForEvents()
 	 GridItem::registerForEvents();
 }
 
-bool GridItemHeianBox::OverrideProjectileCollision(Projectile* i_arg)
+bool GridItemHeianBox::OverrideProjectileCollision(Projectile* i_projectile)
 {
 	return false;
 }
 
-bool GridItemHeianBox::CollidesWithType(const CollisionTypeFlags i_arg) const
+bool GridItemHeianBox::CollidesWithType(const CollisionTypeFlags i_collisionTypes) const
 {
 	return true;
 }

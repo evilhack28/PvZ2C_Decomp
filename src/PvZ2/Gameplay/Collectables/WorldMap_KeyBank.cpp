@@ -27,6 +27,6 @@ void WorldMap_KeyBank::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(WorldMap_KeyBank);
 }
 
-void WorldMap_KeyBank::Draw(Graphics* i_arg)
+void WorldMap_KeyBank::Draw(Graphics* i_g)
 {
 }

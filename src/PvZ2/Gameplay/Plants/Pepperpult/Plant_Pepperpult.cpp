@@ -40,6 +40,6 @@ bool PlantPepperpult::CanApplyPlantfood()
 	return true;
 }
 
-void PlantPepperpult::onKilled(bool i_arg)
+void PlantPepperpult::onKilled(bool i_instantKill)
 {
 }

@@ -19,10 +19,10 @@ void PlantAccessoryUI::OnActionComplete()
 	 PlantAccessoryUI::RecreateCurrentPanel();
 }
 
-void PlantAccessoryUI::ScrollTargetReached(ScrollWidget* i_arg)
+void PlantAccessoryUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void PlantAccessoryUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void PlantAccessoryUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

@@ -9,7 +9,7 @@
 
 #include "ModularBoardEntity.h"
 
-void ModularBoardEntity::onEffectAttached(AttachedEffect& i_arg0, bool i_arg1)
+void ModularBoardEntity::onEffectAttached(AttachedEffect& i_effect, bool i_disableDynamicScaling)
 {
 }
 

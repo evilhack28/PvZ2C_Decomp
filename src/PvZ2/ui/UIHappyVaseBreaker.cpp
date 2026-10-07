@@ -9,10 +9,10 @@
 
 #include "UIHappyVaseBreaker.h"
 
-void UIHappyVaseBreaker::ScrollTargetReached(ScrollWidget* i_arg)
+void UIHappyVaseBreaker::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIHappyVaseBreaker::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIHappyVaseBreaker::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

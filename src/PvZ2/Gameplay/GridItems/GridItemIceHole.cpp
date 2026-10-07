@@ -51,7 +51,7 @@ void GridItemIceHole::registerForEvents()
 	 GridItem::registerForEvents();
 }
 
-bool GridItemIceHole::CanBeTargetedBy(const BoardEntity* i_arg) const
+bool GridItemIceHole::CanBeTargetedBy(const BoardEntity* i_entity) const
 {
 	return false;
 }

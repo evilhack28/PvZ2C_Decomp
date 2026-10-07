@@ -32,6 +32,6 @@ void PlantInferno::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantInferno);
 }
 
-void PlantInferno::onAnimStoppedCallback(const std::string& i_arg)
+void PlantInferno::onAnimStoppedCallback(const std::string& i_animLabel)
 {
 }

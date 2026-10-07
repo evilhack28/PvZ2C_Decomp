@@ -24,6 +24,6 @@ void PlantIceShroom::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantIceShroom);
 }
 
-void PlantIceShroom::onSetDuplicate(bool i_arg)
+void PlantIceShroom::onSetDuplicate(bool i_duplicate)
 {
 }

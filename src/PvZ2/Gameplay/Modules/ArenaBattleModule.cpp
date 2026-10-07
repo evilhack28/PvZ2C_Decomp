@@ -25,7 +25,7 @@ ArenaBattleModule::~ArenaBattleModule()
 
 RT_CLASS_IMPLEMENT(ArenaBattleModule);
 
-void ArenaBattleModule::onZombieVanish(class StandaloneEffect* i_arg)
+void ArenaBattleModule::onZombieVanish(class StandaloneEffect* i_effect)
 {
 }
 

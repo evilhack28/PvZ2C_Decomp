@@ -42,7 +42,7 @@ void ZombieZombossMechDinoProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieZombossMechDinoProps);
 }
 
-bool ZombieZombossMech_Dino::isPlantAllowedUnderZomboss(const PlantType* i_arg)
+bool ZombieZombossMech_Dino::isPlantAllowedUnderZomboss(const PlantType* i_plant)
 {
 	return true;
 }

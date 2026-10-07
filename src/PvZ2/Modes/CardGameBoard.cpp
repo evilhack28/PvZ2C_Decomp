@@ -32,12 +32,12 @@ void CardGameBoard::Initialize()
 }
 
 #include "CardGameBoard.h"
-void CardGameBoard::OnDrawCard(Card* i_arg)
+void CardGameBoard::OnDrawCard(Card* i_card)
 {
 	 CardGameBoard::CheckCost();
 }
 
-void CardGameBoard::drawTutorials(Sexy::Graphics* i_arg)
+void CardGameBoard::drawTutorials(Sexy::Graphics* i_g)
 {
 }
 

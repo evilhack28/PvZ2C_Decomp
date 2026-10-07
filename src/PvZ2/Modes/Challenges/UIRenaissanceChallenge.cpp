@@ -10,16 +10,16 @@
 #include "UIRenaissanceChallenge.h"
 
 #include "UIRenaissanceChallenge.h"
-void UIRenaissanceChallenge::onBuyGacha(int i_arg)
+void UIRenaissanceChallenge::onBuyGacha(int i_index)
 {
 	 UIRenaissanceChallenge::updateMaterial();
 }
 
-void UIRenaissanceChallenge::ScrollTargetReached(ScrollWidget* i_arg)
+void UIRenaissanceChallenge::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIRenaissanceChallenge::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIRenaissanceChallenge::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

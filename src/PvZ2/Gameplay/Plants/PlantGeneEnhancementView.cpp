@@ -10,7 +10,7 @@
 #include "PlantGeneEnhancementView.h"
 
 #include "PlantGeneEnhancementView.h"
-void PlantGeneEnhancementView::OnBuyGeneFactor(int i_arg)
+void PlantGeneEnhancementView::OnBuyGeneFactor(int i_index)
 {
 	 PlantGeneEnhancementView::RefreshProgress();
 }

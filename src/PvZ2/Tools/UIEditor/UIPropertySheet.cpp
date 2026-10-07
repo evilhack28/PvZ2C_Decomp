@@ -9,29 +9,29 @@
 
 #include "UIPropertySheet.h"
 
-void UIPropertySheet::ScrollTargetReached(ScrollWidget* i_arg)
+void UIPropertySheet::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIPropertySheet::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIPropertySheet::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 
-void UIPropertySheet::Draw(Sexy::Graphics* i_arg)
+void UIPropertySheet::Draw(Sexy::Graphics* i_g)
 {
 }
 
-bool UIPropertySheet::AllowKey(int i_arg0, Sexy::KeyCode i_arg1)
-{
-	return true;
-}
-
-bool UIPropertySheet::AllowChar(int i_arg0, SexyChar i_arg1)
+bool UIPropertySheet::AllowKey(int theId, Sexy::KeyCode theKey)
 {
 	return true;
 }
 
-bool UIPropertySheet::AllowText(int i_arg0, const SexyString& i_arg1)
+bool UIPropertySheet::AllowChar(int theId, SexyChar theChar)
+{
+	return true;
+}
+
+bool UIPropertySheet::AllowText(int theId, const SexyString& theText)
 {
 	return true;
 }

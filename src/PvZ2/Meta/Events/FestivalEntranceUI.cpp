@@ -9,10 +9,10 @@
 
 #include "FestivalEntranceUI.h"
 
-void FestivalEntranceUI::ScrollTargetReached(ScrollWidget* i_arg)
+void FestivalEntranceUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void FestivalEntranceUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void FestivalEntranceUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

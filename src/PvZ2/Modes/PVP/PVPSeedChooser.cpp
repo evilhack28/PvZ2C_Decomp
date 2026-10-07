@@ -9,7 +9,7 @@
 
 #include "PVPSeedChooser.h"
 
-bool PVPSeedChooser::isBlacklisted(const std::string& i_arg)
+bool PVPSeedChooser::isBlacklisted(const std::string& i_seedName)
 {
 	return false;
 }

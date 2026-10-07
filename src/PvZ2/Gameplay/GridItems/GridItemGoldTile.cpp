@@ -29,7 +29,7 @@ void GridItemGoldTileProps::StaticClassInit()
 }
 
 #include "GridItemGoldTile.h"
-void GridItemGoldTile::onAnimDone(const std::string& i_arg)
+void GridItemGoldTile::onAnimDone(const std::string& i_animName)
 {
 	 GridItemGoldTile::playStateAnim();
 }

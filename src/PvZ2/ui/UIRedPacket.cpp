@@ -18,6 +18,6 @@ bool UIRedPacket::createWithNetwork()
 	return true;
 }
 
-void UIRedPacket::onMsgErrorRequest(int i_arg0, const std::string& i_arg1)
+void UIRedPacket::onMsgErrorRequest(int erroId, const std::string& i_reqID)
 {
 }

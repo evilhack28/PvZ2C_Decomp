@@ -35,6 +35,6 @@ void ChallengeUI::initLoadingResourcesGroupList()
 {
 }
 
-void ChallengeUI::postDraw(Graphics* i_arg)
+void ChallengeUI::postDraw(Graphics* i_g)
 {
 }

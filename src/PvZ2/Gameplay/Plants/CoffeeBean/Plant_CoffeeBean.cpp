@@ -37,11 +37,11 @@ RT_CLASS_IMPLEMENT(PlantCoffeeBean);
 
 RT_CLASS_IMPLEMENT(PlantTypeCoffeeBean);
 
-CollisionTypeFlags PlantCoffeeBean::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantCoffeeBean::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)240;
 }
 
-void PlantTypeCoffeeBean::GatherPlantingRestrictions(Board* i_arg0, const Sexy::Point& i_arg1, std::vector<PlantingReason>* i_arg2) const
+void PlantTypeCoffeeBean::GatherPlantingRestrictions(Board* i_board, const Sexy::Point& i_gridPosition, std::vector<PlantingReason>* io_plantingReasons) const
 {
 }

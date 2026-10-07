@@ -9,11 +9,11 @@
 
 #include "RechargeGiftUI.h"
 
-void RechargeGiftUI::ScrollTargetReached(ScrollWidget* i_arg)
+void RechargeGiftUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void RechargeGiftUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void RechargeGiftUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

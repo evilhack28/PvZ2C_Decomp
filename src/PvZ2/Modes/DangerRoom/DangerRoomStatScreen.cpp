@@ -18,7 +18,7 @@ long DangerRoomStatScreen::getRepickSeed()
 	return ProfileUtils::CalculateDangerRoomRepickSeed();
 }
 
-void DangerRoomStatScreen::ScrollTargetReached(Sexy::ScrollWidget* i_arg)
+void DangerRoomStatScreen::ScrollTargetReached(Sexy::ScrollWidget* i_scrollWidget)
 {
 }
 
@@ -26,6 +26,6 @@ void DangerRoomStatScreen::GameCenterCreateButtons()
 {
 }
 
-void DangerRoomStatScreen::ScrollTargetInterrupted(Sexy::ScrollWidget* i_arg)
+void DangerRoomStatScreen::ScrollTargetInterrupted(Sexy::ScrollWidget* i_scrollWidget)
 {
 }

@@ -36,12 +36,12 @@ void ZombieAnimRig_Imp::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_Imp);
 }
 
-bool ZombieAnimRig_Imp::PlayBonk(AnimStoppedReflectionDelegate i_arg)
+bool ZombieAnimRig_Imp::PlayBonk(AnimStoppedReflectionDelegate i_onAnimStopped)
 {
 	return false;
 }
 
-bool ZombieAnimRig_Imp::PlayGetUp(AnimStoppedReflectionDelegate i_arg)
+bool ZombieAnimRig_Imp::PlayGetUp(AnimStoppedReflectionDelegate i_onAnimStopped)
 {
 	return false;
 }

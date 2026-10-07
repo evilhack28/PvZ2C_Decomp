@@ -40,6 +40,6 @@ int PlantAnimRig_SpartanBamboo::GetArmorStateCount()
 	return false;
 }
 
-void PlantAnimRig_SpartanBamboo::SetArmorStateIndex(int i_arg)
+void PlantAnimRig_SpartanBamboo::SetArmorStateIndex(int i_index)
 {
 }

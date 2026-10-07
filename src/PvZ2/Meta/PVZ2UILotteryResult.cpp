@@ -9,6 +9,6 @@
 
 #include "PVZ2UILotteryResult.h"
 
-void PVZ2UILotteryResult::SetProgressPieces(int i_arg)
+void PVZ2UILotteryResult::SetProgressPieces(int i_pieces)
 {
 }

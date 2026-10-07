@@ -31,6 +31,6 @@ void SnakeProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(SnakeProperties);
 }
 
-void SnakeProperties::GatherResourceRequirements(std::set<std::string>& i_arg) const
+void SnakeProperties::GatherResourceRequirements(std::set<std::string>& io_resourceGroupNames) const
 {
 }

@@ -41,6 +41,6 @@ bool PlantBlover::CanBeTargeted()
 	return false;
 }
 
-void PlantBlover::TakeSmashAttack(ZombiePtr i_arg)
+void PlantBlover::TakeSmashAttack(ZombiePtr i_srcZombie)
 {
 }

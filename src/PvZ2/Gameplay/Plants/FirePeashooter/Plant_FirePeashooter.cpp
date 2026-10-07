@@ -38,6 +38,6 @@ bool PlantFirePeashooter::CanApplyPlantfood()
 	return true;
 }
 
-void PlantFirePeashooter::onKilled(bool i_arg)
+void PlantFirePeashooter::onKilled(bool i_instantKill)
 {
 }

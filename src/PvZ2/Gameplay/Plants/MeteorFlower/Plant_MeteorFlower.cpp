@@ -37,7 +37,7 @@ bool PlantMeteorFlower::CanApplyPlantfood()
 	return true;
 }
 
-Projectile* PlantMeteorFlower::Fire(ZombiePtr i_arg0, int i_arg1, PlantWeapon i_arg2)
+Projectile* PlantMeteorFlower::Fire(ZombiePtr i_targetZombie, int i_row, PlantWeapon i_plantWeapon)
 {
 	return NULL;
 }

@@ -13,10 +13,10 @@ UIGeneralPlantChipsExchange::~UIGeneralPlantChipsExchange()
 {
 }
 
-void UIGeneralPlantChipsExchange::ScrollTargetReached(ScrollWidget* i_arg)
+void UIGeneralPlantChipsExchange::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIGeneralPlantChipsExchange::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIGeneralPlantChipsExchange::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

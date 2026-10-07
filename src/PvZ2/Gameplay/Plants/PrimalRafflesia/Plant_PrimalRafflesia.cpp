@@ -38,6 +38,6 @@ bool PlantPrimalRafflesia::CanApplyPlantfood()
 	return true;
 }
 
-void PlantPrimalRafflesia::DoSpecial(int i_arg)
+void PlantPrimalRafflesia::DoSpecial(int i_extraParam)
 {
 }

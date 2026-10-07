@@ -44,7 +44,7 @@ void ZombiePVPSkill::onZombieInitialize()
 	 Zombie::onZombieInitialize();
 }
 
-void ZombiePVPSkill::onExitState_Playing(ZombieState i_arg)
+void ZombiePVPSkill::onExitState_Playing(ZombieState i_newState)
 {
 }
 
@@ -52,7 +52,7 @@ void ZombiePVPSkill::updateState_Playing()
 {
 }
 
-void ZombiePVPSkill::onEnterState_Playing(ZombieState i_arg)
+void ZombiePVPSkill::onEnterState_Playing(ZombieState i_oldState)
 {
 }
 
@@ -60,7 +60,7 @@ void ZombiePVPSkill::CreateArenaSpawnEffect()
 {
 }
 
-void ZombiePVPSkill::CreateZombieLevelEffect(bool i_arg)
+void ZombiePVPSkill::CreateZombieLevelEffect(bool i_street)
 {
 }
 

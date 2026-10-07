@@ -13,10 +13,10 @@ void PlantDefenceEntrance::GoToPlay()
 {
 }
 
-void PlantDefenceEntrance::ScrollTargetReached(ScrollWidget* i_arg)
+void PlantDefenceEntrance::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void PlantDefenceEntrance::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void PlantDefenceEntrance::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

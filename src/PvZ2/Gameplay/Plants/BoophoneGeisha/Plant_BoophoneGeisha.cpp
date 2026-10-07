@@ -38,6 +38,6 @@ bool PlantBoophoneGeisha::CanApplyPlantfood()
 	return true;
 }
 
-void PlantBoophoneGeisha::ResetProjectileSlot(uint32 i_arg)
+void PlantBoophoneGeisha::ResetProjectileSlot(uint32 slotIndex)
 {
 }

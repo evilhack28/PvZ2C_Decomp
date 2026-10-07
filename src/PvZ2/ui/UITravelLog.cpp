@@ -9,15 +9,15 @@
 
 #include "UITravelLog.h"
 
-void UITravelLog::ScrollTargetReached(ScrollWidget* i_arg)
+void UITravelLog::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UITravelLog::TabSelectionChanged(int i_arg)
+void UITravelLog::TabSelectionChanged(int tabID)
 {
 }
 
-void UITravelLog::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UITravelLog::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

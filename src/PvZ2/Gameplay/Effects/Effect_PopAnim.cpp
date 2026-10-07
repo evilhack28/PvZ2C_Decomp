@@ -38,12 +38,12 @@ void Effect_PopAnim::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(Effect_PopAnim);
 }
 
-void Effect_PopAnim::OnAnimCommand(const std::string & i_arg0, const std::string & i_arg1)
+void Effect_PopAnim::OnAnimCommand(const std::string & i_animCommand, const std::string & i_animCommandParam)
 {
 }
 
 #include "Effect_PopAnim.h"
-void Effect_PopAnim::onAnimStopped(const std::string& i_arg)
+void Effect_PopAnim::onAnimStopped(const std::string& i_animName)
 {
 	 Effect_PopAnim::advanceAnimSequence();
 }

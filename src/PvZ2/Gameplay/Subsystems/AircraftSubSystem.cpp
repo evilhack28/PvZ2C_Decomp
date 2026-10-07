@@ -39,10 +39,10 @@ void AircraftSubSystem::registerForEvents()
 {
 }
 
-void AircraftSubSystem::onAircraftUpMoveDone(BoardEntity * i_arg)
+void AircraftSubSystem::onAircraftUpMoveDone(BoardEntity * target)
 {
 }
 
-void AircraftSubSystem::onAircraftDownMoveDone(BoardEntity * i_arg)
+void AircraftSubSystem::onAircraftDownMoveDone(BoardEntity * target)
 {
 }

@@ -9,10 +9,10 @@
 
 #include "UIArborDay.h"
 
-void UIArborDay::ScrollTargetReached(ScrollWidget* i_arg)
+void UIArborDay::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIArborDay::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIArborDay::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

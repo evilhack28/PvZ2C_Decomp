@@ -34,11 +34,11 @@ IntroArenaTutorialBattleModule::~IntroArenaTutorialBattleModule()
 
 RT_CLASS_IMPLEMENT(IntroArenaTutorialBattleModule);
 
-void IntroArenaTutorialBattleModule::onPlantLost(class Plant * i_arg)
+void IntroArenaTutorialBattleModule::onPlantLost(class Plant * i_plant)
 {
 }
 
-void IntroArenaTutorialBattleModule::onZombieVanish(class StandaloneEffect* i_arg)
+void IntroArenaTutorialBattleModule::onZombieVanish(class StandaloneEffect* i_effect)
 {
 }
 

@@ -17,6 +17,6 @@ void RecallOfferUI::Update()
 {
 }
 
-void RecallOfferUI::ButtonPress(int i_arg)
+void RecallOfferUI::ButtonPress(int i_id)
 {
 }

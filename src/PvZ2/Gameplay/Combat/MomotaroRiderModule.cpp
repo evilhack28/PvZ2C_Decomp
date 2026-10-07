@@ -54,7 +54,7 @@ void MomotaroRiderModuleProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(MomotaroRiderModuleProperties);
 }
 
-bool MomotaroRiderModule::isInRiver(Point i_arg)
+bool MomotaroRiderModule::isInRiver(Point point)
 {
 	return false;
 }

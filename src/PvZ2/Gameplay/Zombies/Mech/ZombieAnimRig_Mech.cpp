@@ -31,12 +31,12 @@ void ZombieAnimRig_Mech::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_Mech);
 }
 
-void ZombieAnimRig_Mech::SetDamageState(int i_arg)
+void ZombieAnimRig_Mech::SetDamageState(int i_damageState)
 {
 }
 
 #include "ZombieAnimRig_Mech.h"
-void ZombieAnimRig_Mech::onStunStartEnd(const std::string& i_arg)
+void ZombieAnimRig_Mech::onStunStartEnd(const std::string& i_animLabelName)
 {
 	 ZombieAnimRig_Mech::PlayEMPeachStunIdle();
 }

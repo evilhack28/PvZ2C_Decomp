@@ -29,7 +29,7 @@ void GridItemMoleProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemMoleProps);
 }
 
-bool GridItemMole::CanBeTargetedBy(const BoardEntity* i_arg) const
+bool GridItemMole::CanBeTargetedBy(const BoardEntity* i_entity) const
 {
 	return false;
 }

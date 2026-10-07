@@ -29,7 +29,7 @@ void PlantHatMushroom::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantHatMushroom);
 }
 
-bool PlantHatMushroom::OnAnimCommand(const std::string & i_arg0, const std::string & i_arg1)
+bool PlantHatMushroom::OnAnimCommand(const std::string & i_animCommand, const std::string & i_animCommandParam)
 {
 	return true;
 }

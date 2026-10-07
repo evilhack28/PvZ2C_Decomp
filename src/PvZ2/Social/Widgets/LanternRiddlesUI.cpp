@@ -9,10 +9,10 @@
 
 #include "LanternRiddlesUI.h"
 
-void LanternRiddlesUI::ScrollTargetReached(ScrollWidget* i_arg)
+void LanternRiddlesUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void LanternRiddlesUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void LanternRiddlesUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

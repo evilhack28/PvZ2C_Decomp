@@ -187,30 +187,30 @@ bool Zombie::hasHeadParticle() const
 
 RT_CLASS_IMPLEMENT(Zombie);
 
-bool Zombie::CanLevelUp(int i_arg)
+bool Zombie::CanLevelUp(int i_targetLevel)
 {
 	return true;
 }
 
-ZombieParticle* Zombie::onHelmDropped(HelmType i_arg0, int i_arg1)
+ZombieParticle* Zombie::onHelmDropped(HelmType i_helmType, int i_helmHitpoints)
 {
 	return NULL;
 }
 
-void Zombie::SetIsFlagZombie(bool i_arg)
+void Zombie::SetIsFlagZombie(bool i_hasFlag)
 {
 }
 
-bool Zombie::onCanTargetPlant(Plant* i_arg)
+bool Zombie::onCanTargetPlant(Plant* i_plant)
 {
 	return true;
 }
 
-void Zombie::onTakeBodyDamage(const DamageInfo& i_arg)
+void Zombie::onTakeBodyDamage(const DamageInfo& i_damageReceived)
 {
 }
 
-void Zombie::onTakeHelmDamage(const DamageInfo& i_arg)
+void Zombie::onTakeHelmDamage(const DamageInfo& i_damageReceived)
 {
 }
 

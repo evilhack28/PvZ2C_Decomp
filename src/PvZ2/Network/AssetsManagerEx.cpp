@@ -93,7 +93,7 @@ void AssetsManagerEx::ContentDownloaderFinished()
 {
 }
 
-bool AssetsManagerEx::decompress(const std::string & i_arg)
+bool AssetsManagerEx::decompress(const std::string & filename)
 {
 	return false;
 }

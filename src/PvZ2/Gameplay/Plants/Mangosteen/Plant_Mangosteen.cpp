@@ -35,6 +35,6 @@ void PlantMangosteen::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantMangosteen);
 }
 
-void PlantMangosteen::DoSpecial(int i_arg)
+void PlantMangosteen::DoSpecial(int i_extraParam)
 {
 }

@@ -33,6 +33,6 @@ bool PlantHeadbutterLettuce::CanApplyPlantfood()
 	return true;
 }
 
-void PlantHeadbutterLettuce::onAnimStoppedCallback(const std::string& i_arg)
+void PlantHeadbutterLettuce::onAnimStoppedCallback(const std::string& i_animCommand)
 {
 }

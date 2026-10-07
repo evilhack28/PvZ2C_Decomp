@@ -33,6 +33,6 @@ bool PlantEnts::CanApplyPlantfood()
 	return true;
 }
 
-void PlantEnts::onStandaloneEffectFinishedCallback(class StandaloneEffect* i_arg)
+void PlantEnts::onStandaloneEffectFinishedCallback(class StandaloneEffect* i_effect)
 {
 }

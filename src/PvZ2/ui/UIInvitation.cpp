@@ -13,14 +13,14 @@ void UIInvitation::initSharedButton()
 {
 }
 
-void UIInvitation::ScrollTargetReached(ScrollWidget* i_arg)
+void UIInvitation::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIInvitation::TabSelectionChanged(int i_arg)
+void UIInvitation::TabSelectionChanged(int tabID)
 {
 }
 
-void UIInvitation::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIInvitation::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

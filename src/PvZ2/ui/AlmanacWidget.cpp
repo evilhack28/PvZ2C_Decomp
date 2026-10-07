@@ -9,10 +9,10 @@
 
 #include "AlmanacWidget.h"
 
-void AlmanacWidget::ScrollTargetReached(Sexy::ScrollWidget* i_arg)
+void AlmanacWidget::ScrollTargetReached(Sexy::ScrollWidget* i_scrollWidget)
 {
 }
 
-void AlmanacWidget::ScrollTargetInterrupted(Sexy::ScrollWidget* i_arg)
+void AlmanacWidget::ScrollTargetInterrupted(Sexy::ScrollWidget* i_scrollWidget)
 {
 }

@@ -13,14 +13,14 @@ void ActiveRebateTab::Update()
 {
 }
 
-void ActiveRebateTab::ButtonPress(int i_arg)
+void ActiveRebateTab::ButtonPress(int i_id)
 {
 }
 
-void ActiveRebateTab::ButtonDepress(int i_arg)
+void ActiveRebateTab::ButtonDepress(int i_id)
 {
 }
 
-void ActiveRebateTab::OnButtonClicked(int i_arg)
+void ActiveRebateTab::OnButtonClicked(int i_id)
 {
 }

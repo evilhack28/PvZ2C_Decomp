@@ -13,10 +13,10 @@ void TimeTravelEntranceUI::GoToPlay()
 {
 }
 
-void TimeTravelEntranceUI::ScrollTargetReached(ScrollWidget* i_arg)
+void TimeTravelEntranceUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void TimeTravelEntranceUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void TimeTravelEntranceUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

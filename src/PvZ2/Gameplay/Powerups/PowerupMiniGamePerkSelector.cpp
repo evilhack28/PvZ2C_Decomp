@@ -22,11 +22,11 @@ PowerupMiniGamePerkSelector::~PowerupMiniGamePerkSelector()
 {
 }
 
-void PowerupMiniGamePerkSelector::onTouchEnd(const Sexy::Touch& i_arg)
+void PowerupMiniGamePerkSelector::onTouchEnd(const Sexy::Touch& i_touch)
 {
 }
 
-bool PowerupMiniGamePerkSelector::onTouchBegin(const Sexy::Touch& i_arg)
+bool PowerupMiniGamePerkSelector::onTouchBegin(const Sexy::Touch& i_touch)
 {
 	return true;
 }
@@ -60,7 +60,7 @@ void PowerupMiniGamePerkSelector::activate()
 	gMessageRouter->Post(&Message::NotifyUseButtonClicked, id);
 }
 
-void PowerupMiniGamePerkSelector::Draw(Sexy::Graphics* i_arg)
+void PowerupMiniGamePerkSelector::Draw(Sexy::Graphics* i_g)
 {
 }
 

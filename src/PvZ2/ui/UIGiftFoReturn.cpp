@@ -17,10 +17,10 @@ UIGiftFoReturn::~UIGiftFoReturn()
 {
 }
 
-void UIGiftFoReturn::ScrollTargetReached(ScrollWidget* i_arg)
+void UIGiftFoReturn::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIGiftFoReturn::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIGiftFoReturn::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

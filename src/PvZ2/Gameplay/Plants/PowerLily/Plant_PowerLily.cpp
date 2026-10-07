@@ -39,7 +39,7 @@ void PlantPowerLily::ApplyPlantfood()
 	 PlantFramework::ApplyPlantfood();
 }
 
-bool PlantPowerLily::OverrideProjectileCollision(class Projectile* i_arg)
+bool PlantPowerLily::OverrideProjectileCollision(class Projectile* pProjectile)
 {
 	return true;
 }

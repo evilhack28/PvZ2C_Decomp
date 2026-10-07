@@ -53,6 +53,6 @@ void GridItemGroundLavaProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemGroundLavaProps);
 }
 
-void GridItemGroundLava::onAnimStopped(const std::string & i_arg)
+void GridItemGroundLava::onAnimStopped(const std::string & i_animName)
 {
 }

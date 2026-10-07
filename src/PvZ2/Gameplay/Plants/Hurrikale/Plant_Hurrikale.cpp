@@ -44,6 +44,6 @@ bool PlantHurrikale::CanBeTargeted()
 	return false;
 }
 
-void PlantHurrikale::TakeSmashAttack(ZombiePtr i_arg)
+void PlantHurrikale::TakeSmashAttack(ZombiePtr i_srcZombie)
 {
 }

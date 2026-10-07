@@ -18,6 +18,6 @@ GridItemBesiegeBox::GridItemBesiegeBox()
 
 RT_CLASS_IMPLEMENT(GridItemBesiegeBox);
 
-void GridItemBesiegeBox::onAnimDone(StandaloneEffect* i_arg)
+void GridItemBesiegeBox::onAnimDone(StandaloneEffect* i_effect)
 {
 }

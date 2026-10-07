@@ -19,12 +19,12 @@ const AuthInfo& SocialMgr::GetAuthInfo()
 	return m_authInfo;
 }
 
-bool SocialMgr::LoginSocialPlatform(SocialPlatformType i_arg)
+bool SocialMgr::LoginSocialPlatform(SocialPlatformType i_platform)
 {
 	return false;
 }
 
-bool SocialMgr::ShareContentToPlatform(const std::string& i_arg0, const std::string& i_arg1, const std::string& i_arg2, const std::string& i_arg3)
+bool SocialMgr::ShareContentToPlatform(const std::string& i_title, const std::string& i_desc, const std::string& i_url, const std::string& i_imgUrl)
 {
 	return true;
 }

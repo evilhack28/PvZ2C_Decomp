@@ -9,10 +9,10 @@
 
 #include "UINoviceSevenDays.h"
 
-void UINoviceSevenDays::ScrollTargetReached(ScrollWidget* i_arg)
+void UINoviceSevenDays::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UINoviceSevenDays::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UINoviceSevenDays::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

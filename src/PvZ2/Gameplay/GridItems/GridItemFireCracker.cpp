@@ -50,12 +50,12 @@ void GridItemFireCracker::updateState()
 {
 }
 
-bool GridItemFireCracker::OverrideProjectileCollision(Projectile* i_arg)
+bool GridItemFireCracker::OverrideProjectileCollision(Projectile* i_projectile)
 {
 	return false;
 }
 
-bool GridItemFireCracker::CollidesWithType(const CollisionTypeFlags i_arg) const
+bool GridItemFireCracker::CollidesWithType(const CollisionTypeFlags i_collisionTypes) const
 {
 	return true;
 }

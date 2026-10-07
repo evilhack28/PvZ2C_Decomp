@@ -27,6 +27,6 @@ void WorldMap_StarBank::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(WorldMap_StarBank);
 }
 
-void WorldMap_StarBank::Draw(Graphics* i_arg)
+void WorldMap_StarBank::Draw(Graphics* i_g)
 {
 }

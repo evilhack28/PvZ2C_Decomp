@@ -15,7 +15,7 @@ int CustomLevelMgr::GetEvilDaveStartingSun()
 	return CustomLevelMgr::GetStartingSun();
 }
 
-void CustomLevelMgr::SetTowerDefendPlantfood(int i_arg)
+void CustomLevelMgr::SetTowerDefendPlantfood(int i_count)
 {
 }
 

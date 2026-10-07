@@ -33,6 +33,6 @@ bool PlantHammerflower::CanApplyPlantfood()
 	return true;
 }
 
-void PlantHammerflower::onStandaloneEffectFinishedCallback(class StandaloneEffect* i_arg)
+void PlantHammerflower::onStandaloneEffectFinishedCallback(class StandaloneEffect* i_effect)
 {
 }

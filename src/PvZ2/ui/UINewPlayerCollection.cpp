@@ -9,14 +9,14 @@
 
 #include "UINewPlayerCollection.h"
 
-void UINewPlayerCollection::CheckTabButton(NewPlayerCollectionTab i_arg)
+void UINewPlayerCollection::CheckTabButton(NewPlayerCollectionTab i_tab)
 {
 }
 
-void UINewPlayerCollection::ScrollTargetReached(ScrollWidget* i_arg)
+void UINewPlayerCollection::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UINewPlayerCollection::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UINewPlayerCollection::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

@@ -23,7 +23,7 @@ void WorldMap_MarqueeView::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(WorldMap_MarqueeView);
 }
 
-void WorldMap_MarqueeView::ScrollTargetReached(ScrollWidget* i_arg)
+void WorldMap_MarqueeView::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
@@ -31,6 +31,6 @@ void WorldMap_MarqueeView::OnOrientationChanged()
 {
 }
 
-void WorldMap_MarqueeView::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void WorldMap_MarqueeView::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

@@ -9,14 +9,14 @@
 
 #include "ActiveConsumptionTab.h"
 
-void ActiveConsumptionTab::OnButtonClicked(int i_arg)
+void ActiveConsumptionTab::OnButtonClicked(int i_id)
 {
 }
 
-void ActiveConsumptionTab::ScrollTargetReached(ScrollWidget* i_arg)
+void ActiveConsumptionTab::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void ActiveConsumptionTab::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void ActiveConsumptionTab::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

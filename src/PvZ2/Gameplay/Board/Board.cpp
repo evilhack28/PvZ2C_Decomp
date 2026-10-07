@@ -41,7 +41,7 @@ void Board::OnAppLostFocus()
 	 Board::PauseOnInterrupt();
 }
 
-void Board::OnPauseAdFinished(EASquaredAdFinishedReason::EASquaredAdFinishedReason i_arg)
+void Board::OnPauseAdFinished(EASquaredAdFinishedReason::EASquaredAdFinishedReason i_reason)
 {
 }
 
@@ -57,10 +57,10 @@ void Board::OnRechargeCurrencyChanged()
 	 Board::checkAutoSunCollect();
 }
 
-void Board::KeyChar(SexyChar i_arg)
+void Board::KeyChar(SexyChar i_char)
 {
 }
 
-void Board::KeyDown(KeyCode i_arg)
+void Board::KeyDown(KeyCode i_key)
 {
 }

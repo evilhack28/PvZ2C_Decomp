@@ -16,7 +16,7 @@
 
 RT_CLASS_IMPLEMENT(AutoTest);
 
-void AutoTest::updateState(bool i_arg)
+void AutoTest::updateState(bool i_isOn)
 {
 }
 

@@ -29,7 +29,7 @@ void ZombieHammerProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieHammerProps);
 }
 
-void ZombieHammer::onBlockEnd(Zombie* i_arg)
+void ZombieHammer::onBlockEnd(Zombie* z)
 {
 }
 
@@ -38,6 +38,6 @@ ZombieParticle* ZombieHammer::DropArm()
 	return NULL;
 }
 
-void ZombieHammer::onRestEnd(Zombie* i_arg)
+void ZombieHammer::onRestEnd(Zombie* z)
 {
 }

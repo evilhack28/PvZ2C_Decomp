@@ -32,12 +32,12 @@ bool PlantFireGourd::CanApplyPlantfood()
 	return true;
 }
 
-void PlantFireGourd::OnUseActionAnimCommand(pvztime_t i_arg)
+void PlantFireGourd::OnUseActionAnimCommand(pvztime_t i_timeStamp)
 {
 }
 
 #include "Plant_FireGourd.h"
-void PlantFireGourd::OnUseSpecialAnimCommand(pvztime_t i_arg)
+void PlantFireGourd::OnUseSpecialAnimCommand(pvztime_t i_timeStamp)
 {
 	 PlantFireGourd::willStartFiringAnimation();
 }

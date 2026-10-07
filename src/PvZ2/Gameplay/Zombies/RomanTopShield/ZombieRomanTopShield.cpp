@@ -28,7 +28,7 @@ bool ZombieRomanTopShield::canBecomeUncamel()
 	return false;
 }
 
-bool ZombieRomanTopShield::shouldPlayArmorDrop(std::string i_arg)
+bool ZombieRomanTopShield::shouldPlayArmorDrop(std::string i_armorType)
 {
 	return false;
 }

@@ -9,11 +9,11 @@
 
 #include "DailySignRewardWithTW.h"
 
-void DailySignRewardWithTW::ScrollTargetReached(ScrollWidget* i_arg)
+void DailySignRewardWithTW::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void DailySignRewardWithTW::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void DailySignRewardWithTW::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

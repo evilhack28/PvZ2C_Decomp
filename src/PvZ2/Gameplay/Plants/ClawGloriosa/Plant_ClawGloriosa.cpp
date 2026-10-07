@@ -33,7 +33,7 @@ void PlantClawGloriosa::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantClawGloriosa);
 }
 
-void PlantClawGloriosa::onEndCondition(PlantConditions i_arg)
+void PlantClawGloriosa::onEndCondition(PlantConditions i_condition)
 {
 }
 

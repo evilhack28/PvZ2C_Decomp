@@ -31,7 +31,7 @@ bool PlantSunGun::CanBeTargeted()
 	return false;
 }
 
-void PlantSunGun::TakeSmashAttack(ZombiePtr i_arg)
+void PlantSunGun::TakeSmashAttack(ZombiePtr i_srcZombie)
 {
 }
 

@@ -23,6 +23,6 @@ void GridItemAirship::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemAirship);
 }
 
-void GridItemAirship::onDraw(Sexy::Graphics* i_arg)
+void GridItemAirship::onDraw(Sexy::Graphics* i_g)
 {
 }

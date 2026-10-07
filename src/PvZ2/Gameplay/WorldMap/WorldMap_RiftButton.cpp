@@ -29,6 +29,6 @@ void WorldMap_RiftButton::onWorldLoaded()
 	 WorldMap_RiftButton::CheckActivated();
 }
 
-void WorldMap_RiftButton::onNetworkError(int i_arg)
+void WorldMap_RiftButton::onNetworkError(int erroId)
 {
 }

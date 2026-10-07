@@ -33,6 +33,6 @@ void WorldMap_AcFirstRechargeButton::onWorldLoaded()
 	 WorldMap_AcFirstRechargeButton::CheckActivated();
 }
 
-void WorldMap_AcFirstRechargeButton::OnNotyFirstRechargeSuc(bool i_arg)
+void WorldMap_AcFirstRechargeButton::OnNotyFirstRechargeSuc(bool i_success)
 {
 }

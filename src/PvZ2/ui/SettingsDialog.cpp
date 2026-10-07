@@ -17,14 +17,14 @@ void SettingsDialog::setupContractUsPane()
 {
 }
 
-void SettingsDialog::ScrollTargetReached(Sexy::ScrollWidget* i_arg)
+void SettingsDialog::ScrollTargetReached(Sexy::ScrollWidget* i_scrollWidget)
 {
 }
 
-void SettingsDialog::ScrollTargetInterrupted(Sexy::ScrollWidget* i_arg)
+void SettingsDialog::ScrollTargetInterrupted(Sexy::ScrollWidget* i_scrollWidget)
 {
 }
 
-void SettingsDialog::Draw(Sexy::Graphics* i_arg)
+void SettingsDialog::Draw(Sexy::Graphics* i_g)
 {
 }

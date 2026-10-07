@@ -36,7 +36,7 @@ bool PlantBeanChemist::CanApplyPlantfood()
 	return true;
 }
 
-BoardEntityTypeFlag PlantBeanChemist::GetTargetEntityTypesForWeapon(PlantWeapon i_arg)
+BoardEntityTypeFlag PlantBeanChemist::GetTargetEntityTypesForWeapon(PlantWeapon i_plantWeapon)
 {
 	return (BoardEntityTypeFlag)2;
 }

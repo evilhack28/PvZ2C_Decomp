@@ -39,7 +39,7 @@ void ZombiePianoProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombiePianoProps);
 }
 
-bool ZombiePiano::canTargetEntityHeight(BoardEntityHeight i_arg)
+bool ZombiePiano::canTargetEntityHeight(BoardEntityHeight i_entityHeight)
 {
 	return true;
 }

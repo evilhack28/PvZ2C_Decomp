@@ -9,11 +9,11 @@
 
 #include "StarConvert.h"
 
-void StarConvert::ScrollTargetReached(Sexy::ScrollWidget* i_arg)
+void StarConvert::ScrollTargetReached(Sexy::ScrollWidget* i_scrollWidget)
 {
 }
 
-void StarConvert::ScrollTargetInterrupted(Sexy::ScrollWidget* i_arg)
+void StarConvert::ScrollTargetInterrupted(Sexy::ScrollWidget* i_scrollWidget)
 {
 }
 

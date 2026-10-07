@@ -30,6 +30,7 @@
 #include "ActivityManager.h"
 #include "UIRechargeReward.h"
 #include "TGALogMgr.h"
+#include "NameMapperEnum.h"
 #include "ProfileMgr.h"
 #include "UIDoubleFestivalActivity.h"
 #include "RechargeDailySignActivity.h"
@@ -45,7 +46,7 @@
 #include "gameNetWork/NetworkMgr.h"
 #include "SexyAppFramework/drivers/purchase/android/AndroidPurchaseDriver.h"
 
-void PurchaseBroker::PurchaseDriverPaymentDeferred(IPurchaseDriver* i_arg0, const std::string& i_arg1)
+void PurchaseBroker::PurchaseDriverPaymentDeferred(IPurchaseDriver* merch, const std::string& productId)
 {
 }
 
@@ -960,7 +961,7 @@ void ObtainDaveTreasureIntegralMsg(int) asm("_ZN7Message26ObtainDaveTreasureInte
 void RichmanDiceShopBuyFinishMsg(int) asm("_ZN7Message24RichmanDiceShopBuyFinishEi");
 void LimitLotteryBuyCoinMsg(int, int) asm("_ZN7Message19LimitLotteryBuyCoinEii");
 
-#define LIMIT_LOTTERY_BUY(count, coins) 	{ 		PlayerInfo* lotteryPlayer = ProfileMgr::GetInstance().GetCurrentProfile(); 		gMessageRouter->Post(LimitLotteryBuyCoinMsg, count, coins); 		ProfileChangeItemAmount(0xfad, coins, false); 		ProfileChangeItemAmount(0x59fc, product->ObjectCount, false); 		S2C_LimitLotteryCrystalBuy crystalData; 		crystalData.leftCrystalNum = lotteryPlayer->GetMaterialNum(0x59fc); 		gMessageRouter->Post(Message::NotifyLimitLotteryBuyCrystalFinish, true, &crystalData); 	}
+#define LIMIT_LOTTERY_BUY(count, coins) 	{ 		PlayerInfo* lotteryPlayer = ProfileMgr::GetInstance().GetCurrentProfile(); 		gMessageRouter->Post(LimitLotteryBuyCoinMsg, count, coins); 		ProfileChangeItemAmount(id_coin_gold, coins, false); 		ProfileChangeItemAmount(id_mat_limitlottery_crystal, product->ObjectCount, false); 		S2C_LimitLotteryCrystalBuy crystalData; 		crystalData.leftCrystalNum = lotteryPlayer->GetMaterialNum(id_mat_limitlottery_crystal); 		gMessageRouter->Post(Message::NotifyLimitLotteryBuyCrystalFinish, true, &crystalData); 	}
 
 void PurchaseBroker::PurchaseSuccessed(std::string orderNumber, std::string sku_id, const std::vector<PaymentBundleInfo>& i_bundleInfos, bool i_lostPurchase)
 {
@@ -1014,27 +1015,27 @@ void PurchaseBroker::PurchaseSuccessed(std::string orderNumber, std::string sku_
 			}
 			if (sku_id == "com.popcap.ios.chs.PVZ2.Richman1")
 			{
-				ProfileMgr::GetInstance().GetCurrentProfile()->AddCommonGachaReward(0xfad, 1000, false, true);
+				ProfileMgr::GetInstance().GetCurrentProfile()->AddCommonGachaReward(GachaRewardCode_Coins, 1000, false, true);
 				gMessageRouter->Post(RichmanDiceShopBuyFinishMsg, 1);
 			}
 			else if (sku_id == "com.popcap.ios.chs.PVZ2.Richman12")
 			{
-				ProfileMgr::GetInstance().GetCurrentProfile()->AddCommonGachaReward(0xfad, 15000, false, true);
+				ProfileMgr::GetInstance().GetCurrentProfile()->AddCommonGachaReward(GachaRewardCode_Coins, 15000, false, true);
 				gMessageRouter->Post(RichmanDiceShopBuyFinishMsg, 15);
 			}
 			else if (sku_id == "com.popcap.ios.chs.PVZ2.Richman88")
 			{
-				ProfileMgr::GetInstance().GetCurrentProfile()->AddCommonGachaReward(0xfad, 190000, false, true);
+				ProfileMgr::GetInstance().GetCurrentProfile()->AddCommonGachaReward(GachaRewardCode_Coins, 190000, false, true);
 				gMessageRouter->Post(RichmanDiceShopBuyFinishMsg, 190);
 			}
 			else if (sku_id == "com.popcap.ios.chs.PVZ2.Richman168")
 			{
-				ProfileMgr::GetInstance().GetCurrentProfile()->AddCommonGachaReward(0xfad, 456000, false, true);
+				ProfileMgr::GetInstance().GetCurrentProfile()->AddCommonGachaReward(GachaRewardCode_Coins, 456000, false, true);
 				gMessageRouter->Post(RichmanDiceShopBuyFinishMsg, 456);
 			}
 			else if (sku_id == "com.popcap.ios.chs.PVZ2.Richman248")
 			{
-				ProfileMgr::GetInstance().GetCurrentProfile()->AddCommonGachaReward(0xfad, 800000, false, true);
+				ProfileMgr::GetInstance().GetCurrentProfile()->AddCommonGachaReward(GachaRewardCode_Coins, 800000, false, true);
 				gMessageRouter->Post(RichmanDiceShopBuyFinishMsg, 800);
 			}
 			sku_id == "com.popcap.ios.chs.PVZ2.NewYearLuckyBag45";
@@ -1048,7 +1049,7 @@ void PurchaseBroker::PurchaseSuccessed(std::string orderNumber, std::string sku_
 					int price = (int)product->GetPriceInUSD(notMoney);
 					if (price > 1)
 					{
-						TGALogMgr::GetInstance().LogSegments(0x2718, notMoney, DString(price));
+						TGALogMgr::GetInstance().LogSegments(TGA_LOG_FIRSTRECHARGE, notMoney, DString(price));
 						NetworkMgr::Instance()->GetNewNetWorkProcess()->ICloudRequestfirstChargeSucceed(price);
 					}
 				}
@@ -1122,7 +1123,7 @@ finish:
 	data._firstPayItem = m_paymentInfo.m_orderNumber;
 	data._totalPay = DString(player->GetNumRechargeCurrency()).c_str();
 	TGALogMgr::GetInstance().LogPurchase(data);
-	TGALogMgr::GetInstance().clearSegments(0x2729);
+	TGALogMgr::GetInstance().clearSegments(TGA_LOG_PURCHASE_ID);
 }
 
 static std::vector<PaymentBundleInfo> sNoBundleInfos;
@@ -1204,7 +1205,7 @@ void PurchaseBroker::onSyncPayment(const std::string& i_orderNumber, const std::
 		data._step = std::to_string(2);
 		TGALogMgr::GetInstance().LogNewRecallBank(data);
 		std::vector<std::pair<int, int>> activities;
-		activities.push_back(std::pair<int, int>(0x2a29, 1));
+		activities.push_back(std::pair<int, int>((int)Activity_NewRecall_Bank, 1));
 		NetworkMgr::Instance()->GetNewNetWorkProcess()->RequestActivityList(activities, 0, true);
 	}
 	else if (i_skuId == "com.popcap.ios.chs.PVZ2.TimeMystery45")
@@ -1212,7 +1213,7 @@ void PurchaseBroker::onSyncPayment(const std::string& i_orderNumber, const std::
 	else if (i_skuId == "com.popcap.ios.chs.PVZ2.EasterEgg06")
 	{
 		std::vector<std::pair<int, int>> activities;
-		activities.push_back(std::pair<int, int>(0x2a7d, 1));
+		activities.push_back(std::pair<int, int>((int)Activity_NewPlayerSpecialGift, 1));
 		NetworkMgr::Instance()->GetNewNetWorkProcess()->RequestActivityList(activities, 0, true);
 	}
 	else if (i_skuId == "com.popcap.ios.chs.PVZ2.DuelChest3")

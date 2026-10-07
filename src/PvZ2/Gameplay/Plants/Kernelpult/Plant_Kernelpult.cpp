@@ -45,7 +45,7 @@ bool PlantKernelpult::CanApplyPlantfood()
 }
 
 #include "Plant_Kernelpult.h"
-void PlantKernelpult::DoSpecial(int i_arg)
+void PlantKernelpult::DoSpecial(int i_extraParam)
 {
 	 PlantKernelpult::launchMassButterAssault();
 }

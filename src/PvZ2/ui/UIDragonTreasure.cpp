@@ -9,10 +9,10 @@
 
 #include "UIDragonTreasure.h"
 
-void UIDragonTreasure::ScrollTargetReached(ScrollWidget* i_arg)
+void UIDragonTreasure::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIDragonTreasure::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIDragonTreasure::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

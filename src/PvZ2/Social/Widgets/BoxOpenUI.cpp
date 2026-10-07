@@ -9,6 +9,6 @@
 
 #include "BoxOpenUI.h"
 
-void BoxOpenUI::ButtonDepress(int i_arg)
+void BoxOpenUI::ButtonDepress(int i_id)
 {
 }

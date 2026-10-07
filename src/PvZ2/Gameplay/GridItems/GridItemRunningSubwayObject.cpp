@@ -46,7 +46,7 @@ void GridItemRunningSubwayObjectProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemRunningSubwayObjectProps);
 }
 
-void GridItemRunningSubwayObject::OnCollide(BoardEntity* i_arg)
+void GridItemRunningSubwayObject::OnCollide(BoardEntity* i_entity)
 {
 }
 
@@ -61,12 +61,12 @@ bool GridItemRunningSubwayObject::IsDamageable() const
 	return false;
 }
 
-bool GridItemRunningSubwayObject::CanBeTargetedBy(const BoardEntity* i_arg) const
+bool GridItemRunningSubwayObject::CanBeTargetedBy(const BoardEntity* i_entity) const
 {
 	return false;
 }
 
-bool GridItemRunningSubwayObject::CollidesWithType(const CollisionTypeFlags i_arg) const
+bool GridItemRunningSubwayObject::CollidesWithType(const CollisionTypeFlags i_collisionTypes) const
 {
 	return false;
 }

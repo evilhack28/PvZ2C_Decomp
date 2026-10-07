@@ -33,7 +33,7 @@ void ZombieInvisiblePlaneProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieInvisiblePlaneProps);
 }
 
-bool ZombieInvisiblePlane::canTargetEntityHeight(BoardEntityHeight i_arg)
+bool ZombieInvisiblePlane::canTargetEntityHeight(BoardEntityHeight i_entityHeight)
 {
 	return true;
 }

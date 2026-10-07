@@ -27,7 +27,7 @@ void ZombieBeachShellProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieBeachShellProps);
 }
 
-bool ZombieBeachShell::canTargetEntityHeight(BoardEntityHeight i_arg)
+bool ZombieBeachShell::canTargetEntityHeight(BoardEntityHeight i_entityHeight)
 {
 	return true;
 }

@@ -43,6 +43,6 @@ void ZombieStatueProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieStatueProps);
 }
 
-void ZombieStatue::onApplyCondition(ZombieConditions i_arg)
+void ZombieStatue::onApplyCondition(ZombieConditions i_condition)
 {
 }

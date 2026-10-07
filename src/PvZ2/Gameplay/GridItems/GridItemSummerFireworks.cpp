@@ -50,12 +50,12 @@ void GridItemSummerFireworks::updateState()
 {
 }
 
-bool GridItemSummerFireworks::OverrideProjectileCollision(Projectile* i_arg)
+bool GridItemSummerFireworks::OverrideProjectileCollision(Projectile* i_projectile)
 {
 	return false;
 }
 
-bool GridItemSummerFireworks::CollidesWithType(const CollisionTypeFlags i_arg) const
+bool GridItemSummerFireworks::CollidesWithType(const CollisionTypeFlags i_collisionTypes) const
 {
 	return true;
 }

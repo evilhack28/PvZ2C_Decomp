@@ -51,10 +51,10 @@ void WaveActionToxicWaterProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(WaveActionToxicWaterProps);
 }
 
-void WaveActionToxicWater::WaveUpdate(int i_arg0, Sexy::MTRand & i_arg1)
+void WaveActionToxicWater::WaveUpdate(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }
 
-void WaveActionToxicWater::WaveEnd(int i_arg0, Sexy::MTRand & i_arg1)
+void WaveActionToxicWater::WaveEnd(int i_waveNumber, Sexy::MTRand & i_random)
 {
 }

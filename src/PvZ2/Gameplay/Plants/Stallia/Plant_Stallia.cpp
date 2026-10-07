@@ -28,12 +28,12 @@ void PlantStallia::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantStallia);
 }
 
-CollisionTypeFlags PlantStallia::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantStallia::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)7;
 }
 
-bool PlantStallia::TryBlockZombossRush(Zombie* i_arg)
+bool PlantStallia::TryBlockZombossRush(Zombie* i_zomboss)
 {
 	return false;
 }

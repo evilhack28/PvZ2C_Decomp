@@ -45,7 +45,7 @@ void GridItemMazeStatueProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemMazeStatueProps);
 }
 
-void GridItemMazeStatue::onPopAnimCommand(const std::string& i_arg0, pvztime_t i_arg1, const std::string& i_arg2, const std::string& i_arg3)
+void GridItemMazeStatue::onPopAnimCommand(const std::string& i_animName, pvztime_t i_atTime, const std::string& i_command, const std::string& i_params)
 {
 }
 
@@ -70,12 +70,12 @@ bool GridItemMazeStatue::IsDamageable() const
 	return false;
 }
 
-bool GridItemMazeStatue::CanBeTargetedBy(const BoardEntity* i_arg) const
+bool GridItemMazeStatue::CanBeTargetedBy(const BoardEntity* i_entity) const
 {
 	return false;
 }
 
-bool GridItemMazeStatue::CollidesWithType(const CollisionTypeFlags i_arg) const
+bool GridItemMazeStatue::CollidesWithType(const CollisionTypeFlags i_collisionTypes) const
 {
 	return false;
 }

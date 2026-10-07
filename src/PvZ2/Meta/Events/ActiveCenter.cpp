@@ -9,10 +9,10 @@
 
 #include "ActiveCenter.h"
 
-void ActiveCenter::ScrollTargetReached(ScrollWidget* i_arg)
+void ActiveCenter::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void ActiveCenter::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void ActiveCenter::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

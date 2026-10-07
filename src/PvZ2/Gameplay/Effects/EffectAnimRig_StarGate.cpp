@@ -28,7 +28,7 @@ void EffectAnimRig_StarGate::StaticClassInit()
 }
 
 #include "EffectAnimRig_StarGate.h"
-void EffectAnimRig_StarGate::onLockingSequenceContinued(const std::string& i_arg)
+void EffectAnimRig_StarGate::onLockingSequenceContinued(const std::string& i_oldAnimName)
 {
 	 EffectAnimRig_StarGate::PlayLockedIdle();
 }

@@ -23,10 +23,10 @@ void AdaptorJoustLeaderboard::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(AdaptorJoustLeaderboard);
 }
 
-void AdaptorJoustLeaderboard::ScrollTargetReached(ScrollWidget* i_arg)
+void AdaptorJoustLeaderboard::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void AdaptorJoustLeaderboard::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void AdaptorJoustLeaderboard::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

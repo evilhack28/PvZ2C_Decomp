@@ -31,6 +31,6 @@ void SkyCannonUI::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(SkyCannonUI);
 }
 
-void SkyCannonUI::onCursorDestroyed(class BaseCursor* i_arg)
+void SkyCannonUI::onCursorDestroyed(class BaseCursor* i_cursor)
 {
 }

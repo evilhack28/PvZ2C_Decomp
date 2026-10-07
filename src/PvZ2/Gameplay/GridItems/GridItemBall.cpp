@@ -48,12 +48,12 @@ void GridItemBallProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemBallProps);
 }
 
-bool GridItemBall::OverrideProjectileCollision(Projectile* i_arg)
+bool GridItemBall::OverrideProjectileCollision(Projectile* i_projectile)
 {
 	return false;
 }
 
-bool GridItemBall::CollidesWithType(const CollisionTypeFlags i_arg) const
+bool GridItemBall::CollidesWithType(const CollisionTypeFlags i_collisionTypes) const
 {
 	return true;
 }

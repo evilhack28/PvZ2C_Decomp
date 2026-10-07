@@ -50,11 +50,11 @@ bool PlantDoubleSamara::CanBeTargeted()
 	return false;
 }
 
-CollisionTypeFlags PlantDoubleSamara::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantDoubleSamara::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)7;
 }
 
-void PlantDoubleSamara::DoSpecial(int i_arg)
+void PlantDoubleSamara::DoSpecial(int i_extraParam)
 {
 }

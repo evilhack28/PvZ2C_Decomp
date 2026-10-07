@@ -72,7 +72,7 @@ void PopAnimRig::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PopAnimRig);
 }
 
-void PopAnimRig::onPostDraw(Graphics* i_arg)
+void PopAnimRig::onPostDraw(Graphics* i_g)
 {
 }
 
@@ -80,7 +80,7 @@ void PopAnimRig::onPostPlayCalled()
 {
 }
 
-void PopAnimRig::onPreDraw(Graphics* i_arg)
+void PopAnimRig::onPreDraw(Graphics* i_g)
 {
 }
 

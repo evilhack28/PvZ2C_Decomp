@@ -29,7 +29,7 @@ void GridItemPowerTile::StaticClassInit()
 RT_CLASS_IMPLEMENT(GridItemPowerTileProps);
 
 #include "GridItemPowerTile.h"
-void GridItemPowerTile::onRegionChanged(class BoardRegion* i_arg)
+void GridItemPowerTile::onRegionChanged(class BoardRegion* i_region)
 {
 	 GridItemPowerTile::updateVisibility();
 }

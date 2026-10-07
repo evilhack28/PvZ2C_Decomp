@@ -9,6 +9,6 @@
 
 #include "Plant_TwinSunflower.h"
 
-void PlantTwinSunflower::onKilled(bool i_arg)
+void PlantTwinSunflower::onKilled(bool i_instantKill)
 {
 }

@@ -43,12 +43,12 @@ bool PlantPumpkinWitch::CanApplyPlantfood()
 	return true;
 }
 
-bool PlantPumpkinWitch::FindTargetAndFire(PlantWeapon i_arg)
+bool PlantPumpkinWitch::FindTargetAndFire(PlantWeapon i_plantWeapon)
 {
 	return false;
 }
 
-Projectile* PlantPumpkinWitch::Fire(ZombiePtr i_arg0, int i_arg1, PlantWeapon i_arg2)
+Projectile* PlantPumpkinWitch::Fire(ZombiePtr i_targetZombie, int i_row, PlantWeapon i_plantWeapon)
 {
 	return NULL;
 }

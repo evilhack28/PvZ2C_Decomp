@@ -39,7 +39,7 @@ void MinigameWhackAZombieModuleProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(MinigameWhackAZombieModuleProperties);
 }
 
-void MinigameWhackAZombieModule::openPuddles(int i_arg)
+void MinigameWhackAZombieModule::openPuddles(int numToOpen)
 {
 }
 

@@ -13,7 +13,7 @@
 
 RT_CLASS_IMPLEMENT(MagicBeansCursor);
 
-bool MagicBeansCursor::canAffordPlant(PlantTypePtr i_arg) const
+bool MagicBeansCursor::canAffordPlant(PlantTypePtr i_plantType) const
 {
 	return true;
 }

@@ -36,7 +36,7 @@ bool PlantPeach::CanApplyPlantfood()
 	return true;
 }
 
-void PlantPeach::DoSpecial(int i_arg)
+void PlantPeach::DoSpecial(int i_extraParam)
 {
 }
 

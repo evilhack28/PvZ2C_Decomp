@@ -13,11 +13,11 @@ ProbabilityDLG::ProbabilityDLG()
 {
 }
 
-void ProbabilityDLG::ScrollTargetReached(ScrollWidget* i_arg)
+void ProbabilityDLG::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void ProbabilityDLG::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void ProbabilityDLG::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

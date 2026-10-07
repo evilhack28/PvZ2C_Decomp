@@ -9,10 +9,10 @@
 
 #include "UniverseWorldInfo.h"
 
-void UniverseWorldInfo::ScrollTargetReached(ScrollWidget* i_arg)
+void UniverseWorldInfo::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UniverseWorldInfo::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UniverseWorldInfo::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

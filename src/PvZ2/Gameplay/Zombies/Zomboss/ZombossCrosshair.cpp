@@ -44,7 +44,7 @@ void ZombossCrosshair::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombossCrosshair);
 }
 
-void ZombossCrosshair::StartRocketEffect(const std::string& i_arg0, const std::string& i_arg1, float i_arg2, float i_arg3)
+void ZombossCrosshair::StartRocketEffect(const std::string& i_rocketPopAnim, const std::string& i_rocketAnimation, float i_hitTime, float i_rocketSpeed)
 {
 }
 

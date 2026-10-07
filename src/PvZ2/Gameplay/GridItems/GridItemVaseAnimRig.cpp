@@ -30,7 +30,7 @@ void GridItemVaseAnimRig::StaticClassInit()
 }
 
 #include "GridItemVase.h"
-void GridItemVaseAnimRig::onDropCompleted(const std::string& i_arg)
+void GridItemVaseAnimRig::onDropCompleted(const std::string& i_animName)
 {
 	 GridItemVaseAnimRig::PlayIdle();
 }

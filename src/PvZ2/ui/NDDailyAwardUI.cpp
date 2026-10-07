@@ -13,10 +13,10 @@ NDDailyAwardUI::~NDDailyAwardUI()
 {
 }
 
-void NDDailyAwardUI::ScrollTargetReached(ScrollWidget* i_arg)
+void NDDailyAwardUI::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void NDDailyAwardUI::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void NDDailyAwardUI::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }

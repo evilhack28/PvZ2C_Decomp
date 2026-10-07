@@ -16,7 +16,7 @@ void ZMatchShopDlg::updateShopUI()
 }
 
 #include "ZMatchShopDlg.h"
-void ZMatchShopDlg::BuyFinish(int32 i_arg)
+void ZMatchShopDlg::BuyFinish(int32 objId)
 {
 	 ZMatchShopDlg::SetZMatchShopData();
 }

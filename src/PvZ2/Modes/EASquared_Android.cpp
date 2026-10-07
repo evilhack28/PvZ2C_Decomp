@@ -28,11 +28,11 @@ bool EASquared_Android::IsEnabledForUser()
 	return false;
 }
 
-void EASquared_Android::showAdvertisement(const EASquaredAdCompletedCallback & i_arg0, bool i_arg1)
+void EASquared_Android::showAdvertisement(const EASquaredAdCompletedCallback & i_postFlowCallback, bool i_suppressRewardScreen)
 {
 }
 
-void EASquared_Android::OfferToShowAdvertisements(const std::string& i_arg0, const EASquaredAdCompletedCallback& i_arg1)
+void EASquared_Android::OfferToShowAdvertisements(const std::string& i_placementOrigin, const EASquaredAdCompletedCallback& i_postFlowCallback)
 {
 }
 

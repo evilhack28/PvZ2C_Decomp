@@ -13,7 +13,7 @@
 
 RT_CLASS_IMPLEMENT_ABSTRACT(BaseCursor);
 
-void BaseCursor::onDraw(Sexy::Graphics* i_arg)
+void BaseCursor::onDraw(Sexy::Graphics* i_g)
 {
 }
 

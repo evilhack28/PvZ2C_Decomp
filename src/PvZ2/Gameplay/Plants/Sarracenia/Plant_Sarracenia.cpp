@@ -64,7 +64,7 @@ bool PlantSarracenia::CanApplyPlantfood()
 	return true;
 }
 
-BoardEntityTypeFlag PlantSarracenia::GetTargetEntityTypesForWeapon(PlantWeapon i_arg)
+BoardEntityTypeFlag PlantSarracenia::GetTargetEntityTypesForWeapon(PlantWeapon i_plantWeapon)
 {
 	return (BoardEntityTypeFlag)2;
 }

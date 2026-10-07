@@ -9,6 +9,6 @@
 
 #include "PVZ2UIButton.h"
 
-void PVZ2UIButton::MouseDown(int i_arg0, int i_arg1, int i_arg2, int i_arg3)
+void PVZ2UIButton::MouseDown(int i_x, int i_y, int i_btnNum, int i_clickCount)
 {
 }

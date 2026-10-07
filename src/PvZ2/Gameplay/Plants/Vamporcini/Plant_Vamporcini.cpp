@@ -31,7 +31,7 @@ void PlantVamporcini::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantVamporcini);
 }
 
-bool PlantVamporcini::TryBlockZombossRush(Zombie* i_arg)
+bool PlantVamporcini::TryBlockZombossRush(Zombie* i_zomboss)
 {
 	return false;
 }

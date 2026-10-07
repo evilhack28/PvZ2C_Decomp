@@ -9,11 +9,11 @@
 
 #include "UIDaveTreasure.h"
 
-void UIDaveTreasure::ScrollTargetReached(ScrollWidget* i_arg)
+void UIDaveTreasure::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void UIDaveTreasure::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void UIDaveTreasure::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

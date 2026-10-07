@@ -28,7 +28,7 @@ void ZombieZombossMechSkyCityProps::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieZombossMechSkyCityProps);
 }
 
-bool ZombieZombossMech_SkyCity::isPlantAllowedUnderZomboss(const PlantType* i_arg)
+bool ZombieZombossMech_SkyCity::isPlantAllowedUnderZomboss(const PlantType* i_plant)
 {
 	return true;
 }

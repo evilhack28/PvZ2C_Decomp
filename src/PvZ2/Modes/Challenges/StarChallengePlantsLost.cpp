@@ -49,11 +49,11 @@ void StarChallengePlantsLostProps::StaticClassInit()
 }
 
 #include "StarChallengePlantsLost.h"
-void StarChallengePlantsLost::onLilyPadDied(class GridItemLilyPad* i_arg)
+void StarChallengePlantsLost::onLilyPadDied(class GridItemLilyPad* i_lilyPad)
 {
 	 StarChallengePlantsLost::handlePlantDied();
 }
 
-void StarChallengePlantsLost::onFlowerPotDied(class GridItemFlowerPot* i_arg)
+void StarChallengePlantsLost::onFlowerPotDied(class GridItemFlowerPot* i_flowerPot)
 {
 }

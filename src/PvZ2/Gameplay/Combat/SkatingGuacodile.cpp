@@ -31,6 +31,6 @@ void SkatingGuacodile::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(SkatingGuacodile);
 }
 
-void SkatingGuacodile::onZombieDropHead(class Zombie * i_arg)
+void SkatingGuacodile::onZombieDropHead(class Zombie * i_zombie)
 {
 }

@@ -48,7 +48,7 @@ bool PlantHeathSeeker::CanBeTargeted()
 	return false;
 }
 
-Projectile* PlantHeathSeeker::Fire(Zombie* i_arg0, PlantWeapon i_arg1)
+Projectile* PlantHeathSeeker::Fire(Zombie* targetZombie, PlantWeapon i_plantWeapon)
 {
 	return NULL;
 }

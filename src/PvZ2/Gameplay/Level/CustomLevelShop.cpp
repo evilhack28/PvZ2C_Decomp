@@ -9,11 +9,11 @@
 
 #include "CustomLevelShop.h"
 
-void CustomLevelShop::ScrollTargetReached(ScrollWidget* i_arg)
+void CustomLevelShop::ScrollTargetReached(ScrollWidget* scrollWidget)
 {
 }
 
-void CustomLevelShop::ScrollTargetInterrupted(ScrollWidget* i_arg)
+void CustomLevelShop::ScrollTargetInterrupted(ScrollWidget* scrollWidget)
 {
 }
 

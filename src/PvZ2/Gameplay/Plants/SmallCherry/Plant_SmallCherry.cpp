@@ -21,7 +21,7 @@ PlantSmallCherry::~PlantSmallCherry()
 
 RT_CLASS_IMPLEMENT(PlantSmallCherry);
 
-bool PlantSmallCherry::OnAnimCommand(const std::string & i_arg0, const std::string & i_arg1)
+bool PlantSmallCherry::OnAnimCommand(const std::string & i_animCommand, const std::string & i_animCommandParam)
 {
 	return true;
 }

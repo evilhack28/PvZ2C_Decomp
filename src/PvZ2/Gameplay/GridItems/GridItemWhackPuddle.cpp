@@ -40,7 +40,7 @@ void GridItemWhackPuddle::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemWhackPuddle);
 }
 
-void GridItemWhackPuddle::onTakeDamage(const DamageInfo& i_arg)
+void GridItemWhackPuddle::onTakeDamage(const DamageInfo& i_damage)
 {
 }
 

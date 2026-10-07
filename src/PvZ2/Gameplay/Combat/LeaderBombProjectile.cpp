@@ -36,7 +36,7 @@ void LeaderBombProjectile::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(LeaderBombProjectile);
 }
 
-bool LeaderBombProjectile::OnCollideEntity(BoardEntity* i_arg)
+bool LeaderBombProjectile::OnCollideEntity(BoardEntity* i_entity)
 {
 	return false;
 }

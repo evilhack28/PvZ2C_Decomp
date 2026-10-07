@@ -37,7 +37,7 @@ void PlantShadowShroom::Initialize()
 	 PlantFramework::Initialize();
 }
 
-CollisionTypeFlags PlantShadowShroom::GetCollisionFlags(PlantWeapon i_arg)
+CollisionTypeFlags PlantShadowShroom::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
 	return (CollisionTypeFlags)true;
 }

@@ -18,6 +18,6 @@ void UIWidget::initLoadingResourcesGroupList()
 
 RT_CLASS_IMPLEMENT(UIWidget);
 
-void UIWidget::Draw(Graphics* i_arg)
+void UIWidget::Draw(Graphics* i_g)
 {
 }

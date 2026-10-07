@@ -34,7 +34,7 @@ void DinosaurRunnerPropertySheet::StaticClassInit()
 }
 
 #include "DinosaurRunner.h"
-void DinosaurRunner::ScaredAway(BoardEntity* i_arg)
+void DinosaurRunner::ScaredAway(BoardEntity* i_instigator)
 {
 	 DinosaurRunner::TurnLeftToRight();
 }

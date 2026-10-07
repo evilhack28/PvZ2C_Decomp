@@ -13,6 +13,6 @@ UIRechargeReward::~UIRechargeReward()
 {
 }
 
-void UIRechargeReward::DrawOverlay(Graphics* i_arg)
+void UIRechargeReward::DrawOverlay(Graphics* i_g)
 {
 }

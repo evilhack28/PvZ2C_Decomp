@@ -28,7 +28,7 @@ void PlayerIdentityService::iCloudAccountDidSignInFirstTime()
 }
 
 #include "PlayerIdentityService.h"
-void PlayerIdentityService::iCloudDataServerChangeWithChangedKeys(const char** i_arg)
+void PlayerIdentityService::iCloudDataServerChangeWithChangedKeys(const char** keys)
 {
 	 PlayerIdentityService::accountStoredInKvStore();
 }

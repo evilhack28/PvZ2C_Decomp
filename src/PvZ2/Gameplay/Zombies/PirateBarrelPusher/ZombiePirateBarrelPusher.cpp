@@ -26,7 +26,7 @@ void ZombiePirateBarrelPusher::StaticClassInit()
 }
 
 #include "ZombiePirateBarrelPusher.h"
-void ZombiePirateBarrelPusher::onTakeFatalDamage(const DamageInfo& i_arg)
+void ZombiePirateBarrelPusher::onTakeFatalDamage(const DamageInfo& i_lastDamageReceived)
 {
 	 ZombiePirateBarrelPusher::disconnectBarrel();
 }
