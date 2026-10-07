@@ -11,6 +11,9 @@
 #include "Board.h"
 #include "GameEventMgr.h"
 #include "Zombie.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieModifierModule::ZombieModifierModule()
 {
@@ -20,13 +23,15 @@ ZombieModifierModule::~ZombieModifierModule()
 {
 }
 
+/////////////// Reflection ///////////////
+
+RT_CLASS_IMPLEMENT(ZombieModifierModule);
+
+/////////////// Logic ///////////////
+
 void ZombieModifierModule::initializeModule()
 {
 }
-
-#include "ReflectionBuilder.h"
-
-RT_CLASS_IMPLEMENT(ZombieModifierModule);
 
 void ZombieModifierModule::registerForEvents()
 {

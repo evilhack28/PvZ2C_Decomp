@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombiePropertySheet.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieBullRiderProps::~ZombieBullRiderProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieBullRiderProps);
 

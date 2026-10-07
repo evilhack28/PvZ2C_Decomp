@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "SnakeModule.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 SnakeProperties::~SnakeProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(SnakeProperties);
 
@@ -30,6 +33,8 @@ void SnakeProperties::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(SnakeProperties);
 }
+
+/////////////// Logic ///////////////
 
 void SnakeProperties::GatherResourceRequirements(std::set<std::string>& io_resourceGroupNames) const
 {

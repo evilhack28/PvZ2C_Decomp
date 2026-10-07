@@ -11,6 +11,18 @@
 
 #include "ReflectionBuilder.h"
 
+/////////////// Lifecycle ///////////////
+
+ZombieDinoEggShell::ZombieDinoEggShell()
+{
+}
+
+ZombieDinoEggShell::~ZombieDinoEggShell()
+{
+}
+
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(ZombieDinoEggShell);
 
 void ZombieDinoEggShell::StaticClassInit()
@@ -23,15 +35,9 @@ void ZombieDinoEggShell::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieDinoEggShell);
 }
 
+/////////////// Logic ///////////////
+
 bool ZombieDinoEggShell::willDieToShrinking()
 {
 	return true;
-}
-
-ZombieDinoEggShell::ZombieDinoEggShell()
-{
-}
-
-ZombieDinoEggShell::~ZombieDinoEggShell()
-{
 }

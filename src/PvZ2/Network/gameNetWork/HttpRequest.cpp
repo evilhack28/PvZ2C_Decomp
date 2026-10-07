@@ -10,7 +10,7 @@
 #include "gameNetWork/NetworkMgr.h"
 #include "gameNetWork/events/NetWorkEvent.h"
 
-const std::string HttpRequest::EmptyUrl;
+/////////////// Lifecycle ///////////////
 
 HttpRequest::HttpRequest()
 {
@@ -21,6 +21,10 @@ HttpRequest::HttpRequest()
 HttpRequest::~HttpRequest()
 {
 }
+
+/////////////// Logic ///////////////
+
+const std::string HttpRequest::EmptyUrl;
 
 void HttpRequest::ServiceRequestCompleted(const Sexy::StructuredData* response, const void* context)
 {

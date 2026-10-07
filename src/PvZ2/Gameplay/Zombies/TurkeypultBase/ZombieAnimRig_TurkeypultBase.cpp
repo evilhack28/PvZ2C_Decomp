@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieTurkeypultBasic.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_TurkeypultBase::ZombieAnimRig_TurkeypultBase()
 {
@@ -17,7 +20,7 @@ ZombieAnimRig_TurkeypultBase::~ZombieAnimRig_TurkeypultBase()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_TurkeypultBase);
 

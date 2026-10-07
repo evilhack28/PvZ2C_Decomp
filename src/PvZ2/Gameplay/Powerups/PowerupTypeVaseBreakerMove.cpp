@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PowerupVaseBreaker.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PowerupTypeVaseBreakerMove::PowerupTypeVaseBreakerMove()
 {
@@ -17,7 +20,7 @@ PowerupTypeVaseBreakerMove::~PowerupTypeVaseBreakerMove()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PowerupTypeVaseBreakerMove);
 

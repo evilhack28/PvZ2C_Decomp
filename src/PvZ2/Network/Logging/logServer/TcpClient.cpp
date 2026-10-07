@@ -13,6 +13,8 @@
 #include <string>
 #include <unistd.h>
 
+/////////////// Lifecycle ///////////////
+
 TcpClient::TcpClient()
 {
 	mSocket = -1;
@@ -24,6 +26,8 @@ TcpClient::~TcpClient()
 	if (m_Endpoint)
 		freeaddrinfo(m_Endpoint);
 }
+
+/////////////// Logic ///////////////
 
 void TcpClient::CloseSocket()
 {

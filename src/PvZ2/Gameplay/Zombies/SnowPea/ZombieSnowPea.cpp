@@ -8,6 +8,10 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieSnowPea.h"
+#include "ReflectionBuilder.h"
+#include "ZombieShooter.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieSnowPea::ZombieSnowPea()
 {
@@ -17,7 +21,7 @@ ZombieSnowPea::~ZombieSnowPea()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieSnowPea);
 
@@ -31,7 +35,8 @@ void ZombieSnowPea::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieSnowPea);
 }
 
-#include "ZombieShooter.h"
+/////////////// Logic ///////////////
+
 void ZombieSnowPea::onZombieInitialize()
 {
 	 ZombieShooter::onZombieInitialize();

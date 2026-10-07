@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "FadeOutOutro.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 FadeOutOutroProperties::~FadeOutOutroProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(FadeOutOutroProperties);
 

@@ -19,7 +19,10 @@
 #include "RtDelegate.h"
 #include "ZombieType.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(EgyptStage);
+
 void EgyptStage::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(EgyptStage);
@@ -31,6 +34,7 @@ void EgyptStage::StaticClassInit()
 }
 
 RT_CLASS_IMPLEMENT(EgyptStageProperties);
+
 void EgyptStageProperties::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(EgyptStageProperties);
@@ -41,6 +45,7 @@ void EgyptStageProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(EgyptStageProperties);
 }
 
+/////////////// Logic ///////////////
 
 void EgyptStage::registerForEvents()
 {
@@ -48,7 +53,6 @@ void EgyptStage::registerForEvents()
 	getManager()->RegisterOnLoadComplete(Sexy::MakeDelegate(*this, &EgyptStage::onLoadComplete));
 	gMessageRouter->Subscribe(Message::GameWon, Sexy::MakeDelegate(*this, &EgyptStage::onGameWon));
 }
-
 
 void EgyptStage::onZombieTypeCountChange(ZombieTypePtr i_type, int i_from, int i_to)
 {
@@ -62,7 +66,6 @@ void EgyptStage::onZombieTypeCountChange(ZombieTypePtr i_type, int i_from, int i
 			AudioMgr::GetInstancePtr()->SendEvent("Play_Zomb_Egypt_Sarcophagus_Mommy", NULL);
 	}
 }
-
 
 void EgyptStage::stopZombieGroans()
 {

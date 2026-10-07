@@ -13,6 +13,9 @@
 #include "LawnApp.h"
 #include "GameEventMgr.h"
 #include "PowerupType.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PowerupMiniGamePerkSelector::PowerupMiniGamePerkSelector()
 {
@@ -21,6 +24,12 @@ PowerupMiniGamePerkSelector::PowerupMiniGamePerkSelector()
 PowerupMiniGamePerkSelector::~PowerupMiniGamePerkSelector()
 {
 }
+
+/////////////// Reflection ///////////////
+
+RT_CLASS_IMPLEMENT(PowerupMiniGamePerkSelector);
+
+/////////////// Logic ///////////////
 
 void PowerupMiniGamePerkSelector::onTouchEnd(const Sexy::Touch& i_touch)
 {
@@ -63,7 +72,3 @@ void PowerupMiniGamePerkSelector::activate()
 void PowerupMiniGamePerkSelector::Draw(Sexy::Graphics* i_g)
 {
 }
-
-#include "ReflectionBuilder.h"
-
-RT_CLASS_IMPLEMENT(PowerupMiniGamePerkSelector);

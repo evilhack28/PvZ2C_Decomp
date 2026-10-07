@@ -10,6 +10,9 @@
 #include "ZombieRomanShield.h"
 #include "ObjectTypeDirectory.h"
 #include "ZombieType.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_RomanShield::ZombieAnimRig_RomanShield()
 {
@@ -19,13 +22,7 @@ ZombieAnimRig_RomanShield::~ZombieAnimRig_RomanShield()
 {
 }
 
-ZombieParticle* ZombieAnimRig_RomanShield::CreateProjectileParticle()
-{
-	ZombieAnimRig* aRig = ObjectTypeDirectory<ZombieType>::GetInstancePtr()->GetTypeFromTypeName("roman")->CreateAnimRig();
-	return aRig->SpawnProjectileParticle();
-}
-
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_RomanShield);
 
@@ -37,4 +34,12 @@ void ZombieAnimRig_RomanShield::StaticClassInit()
 		REFLECTION_CLASSBUILDER_ANCESTOR(ZombieAnimRig_Camel);
 
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_RomanShield);
+}
+
+/////////////// Logic ///////////////
+
+ZombieParticle* ZombieAnimRig_RomanShield::CreateProjectileParticle()
+{
+	ZombieAnimRig* aRig = ObjectTypeDirectory<ZombieType>::GetInstancePtr()->GetTypeFromTypeName("roman")->CreateAnimRig();
+	return aRig->SpawnProjectileParticle();
 }

@@ -14,7 +14,10 @@
 #include "ReflectionBuilder.h"
 #include "ZombieType.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(DarkStage);
+
 void DarkStage::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(DarkStage);
@@ -26,6 +29,7 @@ void DarkStage::StaticClassInit()
 }
 
 RT_CLASS_IMPLEMENT(DarkStageProperties);
+
 void DarkStageProperties::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(DarkStageProperties);
@@ -36,6 +40,7 @@ void DarkStageProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(DarkStageProperties);
 }
 
+/////////////// Accessors ///////////////
 
 ZombieTypePtr DarkStage::GetZombieTypeForBasicHelm(HelmType i_helmType)
 {
@@ -45,6 +50,7 @@ ZombieTypePtr DarkStage::GetZombieTypeForBasicHelm(HelmType i_helmType)
 	return StageModule::GetZombieTypeForBasicHelm(i_helmType);
 }
 
+/////////////// Logic ///////////////
 
 ZombieTypePtr DarkStage::ResolveZombieType(const std::string& i_genericTypeName)
 {
@@ -54,12 +60,10 @@ ZombieTypePtr DarkStage::ResolveZombieType(const std::string& i_genericTypeName)
 	return StageModule::ResolveZombieType(i_genericTypeName);
 }
 
-
 void DarkStage::registerForEvents()
 {
 	StageModule::registerForEvents();
 }
-
 
 ZombieTypePtr DarkStage::GetArmor3ZombieType()
 {
@@ -70,7 +74,6 @@ ZombieTypePtr DarkStage::GetArmor3ZombieType()
 		getProps<DarkStageProperties>()->Armor3ZombieTypeName);
 	return m_armor3ZombieType;
 }
-
 
 int DarkStage::GetDefaultZombieSpawnPositionX(int i_row)
 {

@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieFairyTaleBasic.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_FairyTaleArmorBasic::ZombieAnimRig_FairyTaleArmorBasic()
 {
@@ -17,9 +20,11 @@ ZombieAnimRig_FairyTaleArmorBasic::~ZombieAnimRig_FairyTaleArmorBasic()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_FairyTaleArmorBasic);
+
+/////////////// Accessors ///////////////
 
 void ZombieAnimRig_FairyTaleArmorBasic::SetLayerVisibilityForCurrentState()
 {

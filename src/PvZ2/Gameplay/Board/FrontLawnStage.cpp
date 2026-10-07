@@ -12,7 +12,10 @@
 #include "LevelDefinition.h"
 #include "ReflectionBuilder.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(FrontLawnStage);
+
 void FrontLawnStage::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(FrontLawnStage);
@@ -24,6 +27,7 @@ void FrontLawnStage::StaticClassInit()
 }
 
 RT_CLASS_IMPLEMENT(FrontLawnStageProperties);
+
 void FrontLawnStageProperties::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(FrontLawnStageProperties);
@@ -34,12 +38,12 @@ void FrontLawnStageProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(FrontLawnStageProperties);
 }
 
+/////////////// Logic ///////////////
 
 void FrontLawnStage::renderBackground(Graphics* i_g)
 {
 	StageModule::renderBackground(i_g);
 }
-
 
 void FrontLawnStage::initializeModule()
 {

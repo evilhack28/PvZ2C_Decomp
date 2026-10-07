@@ -12,14 +12,21 @@
 #include "GameEventMgr.h"
 #include "ZombossRiftBattleModule.h"
 #include "ResourceHelpers.h"
+#include "ReflectionBuilder.h"
+#include "RedPacketRewardInfo.h"
 
-static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_HUD_INGAME_PROGRESS_METER_FILL_ZOMBOSS_BONUS("IMAGE_UI_HUD_INGAME_PROGRESS_METER_FILL_ZOMBOSS_BONUS");
+/////////////// Lifecycle ///////////////
 
 BossProgressMeterRift::~BossProgressMeterRift()
 {
 }
 
-#include "ReflectionBuilder.h"
+BossProgressMeterRift::BossProgressMeterRift()
+{
+	m_lootPhaseActive = 0;
+}
+
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(BossProgressMeterRift);
 
@@ -35,13 +42,12 @@ void BossProgressMeterRift::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(BossProgressMeterRift);
 }
 
+/////////////// Logic ///////////////
+
+static WEAKIMAGE(IMAGE_UI_HUD_INGAME_PROGRESS_METER_FILL_ZOMBOSS_BONUS, "IMAGE_UI_HUD_INGAME_PROGRESS_METER_FILL_ZOMBOSS_BONUS")
+
 void BossProgressMeterRift::initLoadingResourcesGroupList()
 {
-}
-
-BossProgressMeterRift::BossProgressMeterRift()
-{
-	m_lootPhaseActive = 0;
 }
 
 void BossProgressMeterRift::Draw(Graphics* i_g)

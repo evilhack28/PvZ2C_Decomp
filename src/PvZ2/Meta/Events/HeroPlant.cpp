@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PvZ/HeroPlantConfig.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 HeroPlantPropertySheet::HeroPlantPropertySheet()
 	: SunCondtion(9999)
@@ -22,7 +25,7 @@ HeroPlantPropertySheet::~HeroPlantPropertySheet()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(HeroPlantPropertySheet);
 

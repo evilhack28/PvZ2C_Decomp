@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_Pomegranate.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantAnimRig_PomegranateJeweler::PlantAnimRig_PomegranateJeweler()
 {
@@ -17,7 +20,7 @@ PlantAnimRig_PomegranateJeweler::~PlantAnimRig_PomegranateJeweler()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantAnimRig_PomegranateJeweler);
 

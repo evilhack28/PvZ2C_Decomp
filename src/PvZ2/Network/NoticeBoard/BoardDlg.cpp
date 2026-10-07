@@ -17,13 +17,14 @@
 #include "PvZ/UIEditor/UIWidgetText.h"
 #include "PvZ/UIEditor/UIWidgetImage.h"
 #include "PvZ/gameNetWork/NetworkMgr.h"
-#include "PvZ/gameNetWork/NetworkMsgProcess.h"
+#include "PvZ/gameNetWork/NetworkMsgProcess.h"
+#include "RedPacketRewardInfo.h"
 
-static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_BOARD_IMAGE_COMMON("IMAGE_UI_BOARD_IMAGE_COMMON");
-static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_CURRENCY_GEM("IMAGE_UI_CURRENCY_GEM");
-static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_CURRENCY_COIN("IMAGE_UI_CURRENCY_COIN");
-static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_CURRENCY_PVPCOIN("IMAGE_UI_CURRENCY_PVPCOIN");
-static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_CURRENCY_PVPMETAL("IMAGE_UI_CURRENCY_PVPMETAL");
+static WEAKIMAGE(IMAGE_UI_BOARD_IMAGE_COMMON, "IMAGE_UI_BOARD_IMAGE_COMMON")
+static WEAKIMAGE(IMAGE_UI_CURRENCY_GEM, "IMAGE_UI_CURRENCY_GEM")
+static WEAKIMAGE(IMAGE_UI_CURRENCY_COIN, "IMAGE_UI_CURRENCY_COIN")
+static WEAKIMAGE(IMAGE_UI_CURRENCY_PVPCOIN, "IMAGE_UI_CURRENCY_PVPCOIN")
+static WEAKIMAGE(IMAGE_UI_CURRENCY_PVPMETAL, "IMAGE_UI_CURRENCY_PVPMETAL")
 
 void BoardDlg::Draw(Sexy::Graphics* i_g)
 {

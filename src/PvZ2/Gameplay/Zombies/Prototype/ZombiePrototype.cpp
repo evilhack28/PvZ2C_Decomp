@@ -9,6 +9,9 @@
 
 #include "ZombiePropertySheet.h"
 #include "ZombiePrototype.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombiePrototypeProps::ZombiePrototypeProps()
 {
@@ -18,7 +21,7 @@ ZombiePrototypeProps::~ZombiePrototypeProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombiePrototypeProps);
 

@@ -12,9 +12,21 @@
 #include "RtDelegate.h"
 #include "WhitelistManager.h"
 
+/////////////// Lifecycle ///////////////
+
 Whitelistable::Whitelistable()
 {
 }
+
+/////////////// Accessors ///////////////
+
+void Whitelistable::SetWhitelistID(const std::string& i_whitelistID)
+{
+	m_whitelistID = i_whitelistID;
+	onWhitelistingChanged();
+}
+
+/////////////// Logic ///////////////
 
 void Whitelistable::RegisterForWhitelistEvents()
 {
@@ -24,12 +36,6 @@ void Whitelistable::RegisterForWhitelistEvents()
 void Whitelistable::UnregisterForWhitelistEvents()
 {
 	gMessageRouter->Unsubscribe(Message::WhitelistingChanged, Sexy::MakeDelegate(*this, &Whitelistable::onWhitelistingChanged));
-}
-
-void Whitelistable::SetWhitelistID(const std::string& i_whitelistID)
-{
-	m_whitelistID = i_whitelistID;
-	onWhitelistingChanged();
 }
 
 bool Whitelistable::isDisabledByWhitelisting()

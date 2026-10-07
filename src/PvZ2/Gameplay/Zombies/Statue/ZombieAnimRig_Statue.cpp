@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieStatue.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_Statue::ZombieAnimRig_Statue()
 {
@@ -17,7 +20,7 @@ ZombieAnimRig_Statue::~ZombieAnimRig_Statue()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_Statue);
 

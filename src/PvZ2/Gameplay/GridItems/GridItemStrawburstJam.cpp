@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_Strawburst.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemStrawburstJamProps::~GridItemStrawburstJamProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemStrawburstJamProps);
 

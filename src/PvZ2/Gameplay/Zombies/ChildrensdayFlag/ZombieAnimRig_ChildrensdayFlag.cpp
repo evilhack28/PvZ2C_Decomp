@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieAnimRig_Tutorial.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_ChildrensdayFlag::ZombieAnimRig_ChildrensdayFlag()
 {
@@ -17,7 +20,7 @@ ZombieAnimRig_ChildrensdayFlag::~ZombieAnimRig_ChildrensdayFlag()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_ChildrensdayFlag);
 

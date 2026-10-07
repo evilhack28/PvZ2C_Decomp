@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "TutorialPeashooterDeath.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 TutorialPeashooterDeathProperties::TutorialPeashooterDeathProperties()
 {
@@ -17,7 +20,7 @@ TutorialPeashooterDeathProperties::~TutorialPeashooterDeathProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(TutorialPeashooterDeathProperties);
 

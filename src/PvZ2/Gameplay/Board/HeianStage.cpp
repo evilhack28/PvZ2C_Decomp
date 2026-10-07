@@ -9,7 +9,10 @@
 
 #include "ReflectionBuilder.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(HeianStage);
+
 void HeianStage::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(HeianStage);
@@ -21,6 +24,7 @@ void HeianStage::StaticClassInit()
 }
 
 RT_CLASS_IMPLEMENT(HeianStageProperties);
+
 void HeianStageProperties::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(HeianStageProperties);
@@ -30,6 +34,8 @@ void HeianStageProperties::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(HeianStageProperties);
 }
+
+/////////////// Logic ///////////////
 
 void HeianStage::initializeModule()
 {

@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieLostCityRelicHunter.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieLostCityRelicHunterProps::ZombieLostCityRelicHunterProps()
 {
@@ -17,7 +20,7 @@ ZombieLostCityRelicHunterProps::~ZombieLostCityRelicHunterProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieLostCityRelicHunterProps);
 

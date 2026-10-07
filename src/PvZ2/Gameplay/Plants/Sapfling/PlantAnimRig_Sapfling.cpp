@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_Sapfling.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantAnimRig_Sapfling::PlantAnimRig_Sapfling()
 {
@@ -17,7 +20,7 @@ PlantAnimRig_Sapfling::~PlantAnimRig_Sapfling()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantAnimRig_Sapfling);
 

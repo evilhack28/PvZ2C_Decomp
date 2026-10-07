@@ -11,6 +11,8 @@
 
 #include "ReflectionBuilder.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(GameSubSystem);
 
 void GameSubSystem::StaticClassInit()

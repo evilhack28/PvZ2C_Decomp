@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CardTarget.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemTargetProperty::~GridItemTargetProperty()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemTargetProperty);
 

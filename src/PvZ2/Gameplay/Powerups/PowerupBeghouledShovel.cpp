@@ -16,6 +16,9 @@
 #include "ScaledApp.h"
 #include "BoardTransforms.h"
 #include "PowerupManager.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PowerupBeghouledShovel::PowerupBeghouledShovel()
 {
@@ -25,7 +28,7 @@ PowerupBeghouledShovel::~PowerupBeghouledShovel()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PowerupBeghouledShovel);
 
@@ -38,6 +41,8 @@ void PowerupBeghouledShovel::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PowerupBeghouledShovel);
 }
+
+/////////////// Logic ///////////////
 
 bool PowerupBeghouledShovel::onTouchBegin(const Sexy::Touch& i_touch)
 {

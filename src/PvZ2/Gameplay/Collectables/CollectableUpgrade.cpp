@@ -8,6 +8,10 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CollectableUpgrade.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CollectableUpgrade::CollectableUpgrade()
 {
@@ -21,7 +25,7 @@ CollectableUpgradeType::~CollectableUpgradeType()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CollectableUpgradeType);
 
@@ -36,7 +40,5 @@ void CollectableUpgradeType::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(CollectableUpgradeType);
 }
-
-#include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(CollectableUpgrade);

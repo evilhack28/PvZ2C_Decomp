@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "BeghouledZombieSpawner.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 BeghouledZombieSpawnerProperties::BeghouledZombieSpawnerProperties()
 {
@@ -17,7 +20,7 @@ BeghouledZombieSpawnerProperties::~BeghouledZombieSpawnerProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(BeghouledZombieSpawnerProperties);
 

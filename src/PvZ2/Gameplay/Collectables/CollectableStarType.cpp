@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CollectableStarType.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CollectableStarType::CollectableStarType()
 {
@@ -17,7 +20,7 @@ CollectableStarType::~CollectableStarType()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CollectableStarType);
 

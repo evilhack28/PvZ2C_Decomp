@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "SimpleZombieSpawner.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 SimpleZombieSpawnerProperties::SimpleZombieSpawnerProperties()
 {
@@ -17,7 +20,7 @@ SimpleZombieSpawnerProperties::~SimpleZombieSpawnerProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(SimpleZombieSpawnerProperties);
 

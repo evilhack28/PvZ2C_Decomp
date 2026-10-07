@@ -9,16 +9,7 @@
 
 #include "ReflectionBuilder.h"
 
-RT_CLASS_IMPLEMENT(ComponentBase);
-void ComponentBase::StaticClassInit()
-{
-	REFLECTION_CLASSBUILDER_BEGIN(ComponentBase);
-	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
-
-		REFLECTION_CLASSBUILDER_ANCESTOR(GameObject);
-
-	REFLECTION_CLASSBUILDER_END(ComponentBase);
-}
+/////////////// Lifecycle ///////////////
 
 ComponentBase::ComponentBase()
 	: m_state(COMPONENTSTATE_NotStarted)
@@ -30,6 +21,39 @@ ComponentBase::ComponentBase()
 ComponentBase::~ComponentBase()
 {
 }
+
+/////////////// Reflection ///////////////
+
+RT_CLASS_IMPLEMENT(ComponentBase);
+
+void ComponentBase::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ComponentBase);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(GameObject);
+
+	REFLECTION_CLASSBUILDER_END(ComponentBase);
+}
+
+/////////////// Accessors ///////////////
+
+void ComponentBase::SetOwner(BoardEntityPtr i_owner)
+{
+	m_owner = i_owner;
+}
+
+BoardEntityPtr ComponentBase::GetOwner()
+{
+	return m_owner;
+}
+
+void ComponentBase::SetName(const std::string& i_name)
+{
+	m_name = i_name;
+}
+
+/////////////// Logic ///////////////
 
 void ComponentBase::onBegin()
 {
@@ -45,21 +69,6 @@ void ComponentBase::onDraw(Sexy::Graphics* i_g)
 
 void ComponentBase::onEnd()
 {
-}
-
-void ComponentBase::SetOwner(BoardEntityPtr i_owner)
-{
-	m_owner = i_owner;
-}
-
-BoardEntityPtr ComponentBase::GetOwner()
-{
-	return m_owner;
-}
-
-void ComponentBase::SetName(const std::string& i_name)
-{
-	m_name = i_name;
 }
 
 void ComponentBase::Initialize()

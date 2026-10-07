@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PlantGiftPropertySheet.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantGiftPropertySheet::~PlantGiftPropertySheet()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantGiftPropertySheet);
 

@@ -10,6 +10,7 @@
 #include "PVZ2UIButton.h"
 #include "ComboBox.h"
 #include "UIHelper.h"
+#include "RedPacketRewardInfo.h"
 
 /////////////// Construction ///////////////
 
@@ -69,8 +70,8 @@ void ComboBox::ClickComboBox(int id)
 
 /////////////// Layout ///////////////
 
-static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_DIALOG_ASSET_COMBO_BOX_BG("IMAGE_UI_DIALOG_ASSET_COMBO_BOX_BG");
-static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_DIALOG_ASSET_COMBO_BOX_ARROW("IMAGE_UI_DIALOG_ASSET_COMBO_BOX_ARROW");
+static WEAKIMAGE(IMAGE_UI_DIALOG_ASSET_COMBO_BOX_BG, "IMAGE_UI_DIALOG_ASSET_COMBO_BOX_BG")
+static WEAKIMAGE(IMAGE_UI_DIALOG_ASSET_COMBO_BOX_ARROW, "IMAGE_UI_DIALOG_ASSET_COMBO_BOX_ARROW")
 
 void ComboBox::Resize(int i_x, int i_y, int i_w, int i_h)
 {

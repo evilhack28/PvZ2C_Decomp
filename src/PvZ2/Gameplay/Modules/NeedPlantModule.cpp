@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "NeedPlantModule.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 NeedPlantModule::NeedPlantModule()
 {
@@ -17,7 +20,7 @@ NeedPlantModule::~NeedPlantModule()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(NeedPlantModule);
 

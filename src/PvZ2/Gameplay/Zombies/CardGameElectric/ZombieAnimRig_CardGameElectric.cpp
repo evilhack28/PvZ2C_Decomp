@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieCardGameElectric.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_CardGameElectric::~ZombieAnimRig_CardGameElectric()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_CardGameElectric);
 

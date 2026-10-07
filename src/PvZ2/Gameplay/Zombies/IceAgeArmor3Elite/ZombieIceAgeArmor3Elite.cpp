@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieIceageBasic.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieIceAgeArmor3ElitePropertySheet::~ZombieIceAgeArmor3ElitePropertySheet()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieIceAgeArmor3ElitePropertySheet);
 

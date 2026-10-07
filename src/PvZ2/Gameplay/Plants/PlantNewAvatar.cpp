@@ -9,12 +9,15 @@
 
 #include "PlantNewAvatar.h"
 #include "NameMapper.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantNewAvatar::~PlantNewAvatar()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantNewAvatar);
 
@@ -29,6 +32,8 @@ void PlantNewAvatar::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantNewAvatar);
 }
+
+/////////////// Accessors ///////////////
 
 int PlantNewAvatar::GetNewAvatarID()
 {

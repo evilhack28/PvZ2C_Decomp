@@ -14,7 +14,11 @@
 
 #include "ReflectionBuilder.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(AutoTest);
+
+/////////////// Logic ///////////////
 
 void AutoTest::updateState(bool i_isOn)
 {
@@ -40,4 +44,3 @@ void AutoTest::setIsOn(bool i_value)
 		updateState(m_isOn);
 	}
 }
-

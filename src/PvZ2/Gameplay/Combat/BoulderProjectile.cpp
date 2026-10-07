@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "BoulderProjectile.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 BoulderProjectileProps::~BoulderProjectileProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(BoulderProjectileProps);
 

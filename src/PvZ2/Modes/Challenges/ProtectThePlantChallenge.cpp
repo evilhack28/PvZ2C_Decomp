@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ProtectThePlantChallenge.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ProtectThePlantChallengeProperties::~ProtectThePlantChallengeProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ProtectThePlantChallengeProperties);
 

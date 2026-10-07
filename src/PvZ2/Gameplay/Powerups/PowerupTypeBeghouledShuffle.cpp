@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PowerupBeghouled.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PowerupTypeBeghouledShuffle::PowerupTypeBeghouledShuffle()
 {
@@ -17,7 +20,7 @@ PowerupTypeBeghouledShuffle::~PowerupTypeBeghouledShuffle()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PowerupTypeBeghouledShuffle);
 

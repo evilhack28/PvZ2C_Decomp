@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "LevelOfTheDay.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 LevelOfTheDayPropertySheet::~LevelOfTheDayPropertySheet()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(LevelOfTheDayPropertySheet);
 

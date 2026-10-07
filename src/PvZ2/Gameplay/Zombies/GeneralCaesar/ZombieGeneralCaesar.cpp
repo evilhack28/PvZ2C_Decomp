@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieGeneralCaesar.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieGeneralCaesarProps::ZombieGeneralCaesarProps()
 {
@@ -17,7 +20,7 @@ ZombieGeneralCaesarProps::~ZombieGeneralCaesarProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieGeneralCaesarProps);
 

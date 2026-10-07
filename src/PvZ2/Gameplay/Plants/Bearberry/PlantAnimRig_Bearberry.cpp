@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_Bearberry.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantAnimRig_Bearberry::PlantAnimRig_Bearberry()
 {
@@ -17,7 +20,7 @@ PlantAnimRig_Bearberry::~PlantAnimRig_Bearberry()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantAnimRig_Bearberry);
 
@@ -30,6 +33,8 @@ void PlantAnimRig_Bearberry::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_Bearberry);
 }
+
+/////////////// Logic ///////////////
 
 std::string PlantAnimRig_Bearberry::getPlantFoodMainAnimName()
 {

@@ -10,14 +10,27 @@
 
 #include "ReflectionBuilder.h"
 
-static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY_LEFT("IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY_LEFT");
-static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY("IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY");
-static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY_RIGHT("IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY_RIGHT");
-static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT_LEFT("IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT_LEFT");
-static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT("IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT");
-static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT_RIGHT("IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT_RIGHT");
+/////////////// Lifecycle ///////////////
+
+RenaiStage::RenaiStage()
+{
+	m_environmentType = (decltype(m_environmentType))0;
+}
+
+RenaiStage::~RenaiStage()
+{
+	for (Effect_PopAnimPtr anim : m_environmentAnims)
+	{
+		if (anim.IsValid())
+			anim->Destroy();
+		anim.ClearId();
+	}
+}
+
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(RenaiStage);
+
 void RenaiStage::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(RenaiStage);
@@ -29,6 +42,7 @@ void RenaiStage::StaticClassInit()
 }
 
 RT_CLASS_IMPLEMENT(RenaiStageProperties);
+
 void RenaiStageProperties::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(EnvironmentAnim);
@@ -46,38 +60,37 @@ void RenaiStageProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(RenaiStageProperties);
 }
 
+/////////////// Accessors ///////////////
+
+void RenaiStage::SetEnvironmentType(EnvironmentType i_type)
+{
+	m_environmentType = i_type;
+}
+
+/////////////// Logic ///////////////
+
+static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY_LEFT("IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY_LEFT");
+
+static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY("IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY");
+
+static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY_RIGHT("IMAGE_BACKGROUNDS_RENAI_TEXTURE_DAY_RIGHT");
+
+static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT_LEFT("IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT_LEFT");
+
+static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT("IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT");
+
+static CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT_RIGHT("IMAGE_BACKGROUNDS_RENAI_TEXTURE_NIGHT_RIGHT");
 
 void RenaiStage::initializeModule()
 {
 	StageModule::initializeModule();
 }
 
-
 void RenaiStage::registerForEvents()
 {
 	StageModule::registerForEvents();
 	getManager()->RegisterOnLoadComplete(Sexy::MakeDelegate(*this, &RenaiStage::onLoadComplete));
 	getManager()->RegisterAddToRenderQueue(Sexy::MakeDelegate(*this, &RenaiStage::addBackgroundToRenderQueue));
-}
-
-RenaiStage::RenaiStage()
-{
-	m_environmentType = (decltype(m_environmentType))0;
-}
-
-RenaiStage::~RenaiStage()
-{
-	for (Effect_PopAnimPtr anim : m_environmentAnims)
-	{
-		if (anim.IsValid())
-			anim->Destroy();
-		anim.ClearId();
-	}
-}
-
-void RenaiStage::SetEnvironmentType(EnvironmentType i_type)
-{
-	m_environmentType = i_type;
 }
 
 void RenaiStage::setUpAnims()

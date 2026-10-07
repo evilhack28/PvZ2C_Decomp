@@ -12,10 +12,9 @@
 #include "PvZ/LawnApp.h"
 #include "PvZ/CrazyNPCManager.h"
 #include "PvZ/ProfileUtils.h"
+#include "ReflectionBuilder.h"
 
-void PowerupPurchaseIntro::onLevelEnded()
-{
-}
+/////////////// Lifecycle ///////////////
 
 PowerupPurchaseIntro::PowerupPurchaseIntro()
 {
@@ -25,7 +24,7 @@ PowerupPurchaseIntro::~PowerupPurchaseIntro()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PowerupPurchaseIntro);
 
@@ -38,6 +37,12 @@ void PowerupPurchaseIntro::StaticClassInit()
 
 		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, m_fadeStart);
 	REFLECTION_CLASSBUILDER_END(PowerupPurchaseIntro);
+}
+
+/////////////// Logic ///////////////
+
+void PowerupPurchaseIntro::onLevelEnded()
+{
 }
 
 void PowerupPurchaseIntro::initializeModule()

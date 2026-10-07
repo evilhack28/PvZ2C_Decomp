@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_DevilsFlower.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_DevilsAlienGargantuar::~ZombieAnimRig_DevilsAlienGargantuar()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_DevilsAlienGargantuar);
 

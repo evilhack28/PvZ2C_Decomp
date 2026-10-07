@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CollectableKey.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CollectableKeyType::~CollectableKeyType()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CollectableKeyType);
 

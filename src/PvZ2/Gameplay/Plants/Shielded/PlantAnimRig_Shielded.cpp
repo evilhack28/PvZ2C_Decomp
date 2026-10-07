@@ -10,6 +10,8 @@
 #include "PlantAnimRig_Shielded.h"
 #include "ReflectionBuilder.h"
 
+/////////////// Lifecycle ///////////////
+
 PlantAnimRig_Shielded::PlantAnimRig_Shielded()
 {
 }
@@ -17,6 +19,8 @@ PlantAnimRig_Shielded::PlantAnimRig_Shielded()
 PlantAnimRig_Shielded::~PlantAnimRig_Shielded()
 {
 }
+
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT_ABSTRACT(PlantAnimRig_Shielded);
 

@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CowboyMinigame.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CowboyMinigameProperties::~CowboyMinigameProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CowboyMinigameProperties);
 

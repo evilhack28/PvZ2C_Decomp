@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ProtectTheGridItemChallenge.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ProtectTheGridItemChallengeProperties::~ProtectTheGridItemChallengeProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ProtectTheGridItemChallengeProperties);
 

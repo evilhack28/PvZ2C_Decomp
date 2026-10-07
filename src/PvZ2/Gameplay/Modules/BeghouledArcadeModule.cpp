@@ -8,6 +8,10 @@
 #include "SexyAppFramework/Common.h"
 
 #include "BeghouledArcadeModule.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 BeghouledArcadeModule::BeghouledArcadeModule()
 {
@@ -25,10 +29,8 @@ BeghouledArcadeModuleProperties::~BeghouledArcadeModuleProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(BeghouledArcadeModule);
-
-#include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(BeghouledArcadeModuleProperties);

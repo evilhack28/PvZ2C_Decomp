@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Zombie_IceYearMonster.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_IceYearMonster::ZombieAnimRig_IceYearMonster()
 {
@@ -17,12 +20,7 @@ ZombieAnimRig_IceYearMonster::~ZombieAnimRig_IceYearMonster()
 {
 }
 
-bool ZombieAnimRig_IceYearMonster::PlayTapAnimation(std::string animation, PopAnimRig::AnimStoppedReflectionDelegate i_onAnimStopped)
-{
-	return PlayAndStop(animation, SELECT_EXACT, i_onAnimStopped) != -1;
-}
-
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_IceYearMonster);
 
@@ -34,4 +32,11 @@ void ZombieAnimRig_IceYearMonster::StaticClassInit()
 		REFLECTION_CLASSBUILDER_ANCESTOR(ZombieAnimRig);
 
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_IceYearMonster);
+}
+
+/////////////// Logic ///////////////
+
+bool ZombieAnimRig_IceYearMonster::PlayTapAnimation(std::string animation, PopAnimRig::AnimStoppedReflectionDelegate i_onAnimStopped)
+{
+	return PlayAndStop(animation, SELECT_EXACT, i_onAnimStopped) != -1;
 }

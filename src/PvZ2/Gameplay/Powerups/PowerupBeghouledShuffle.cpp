@@ -9,6 +9,9 @@
 
 #include "PowerupBeghouled.h"
 #include "GameEventMgr.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PowerupBeghouledShuffle::PowerupBeghouledShuffle()
 {
@@ -18,7 +21,7 @@ PowerupBeghouledShuffle::~PowerupBeghouledShuffle()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PowerupBeghouledShuffle);
 
@@ -31,6 +34,8 @@ void PowerupBeghouledShuffle::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PowerupBeghouledShuffle);
 }
+
+/////////////// Logic ///////////////
 
 void PowerupBeghouledShuffle::onSelected()
 {

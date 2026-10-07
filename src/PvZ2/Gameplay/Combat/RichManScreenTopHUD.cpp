@@ -8,6 +8,10 @@
 #include "SexyAppFramework/Common.h"
 
 #include "RichManScreenTopHUD.h"
+#include "ReflectionBuilder.h"
+#include "UIWidget.h"
+
+/////////////// Lifecycle ///////////////
 
 RichManScreenTopHUD::RichManScreenTopHUD()
 {
@@ -17,7 +21,7 @@ RichManScreenTopHUD::~RichManScreenTopHUD()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(RichManScreenTopHUD);
 
@@ -31,7 +35,8 @@ void RichManScreenTopHUD::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(RichManScreenTopHUD);
 }
 
-#include "UIWidget.h"
+/////////////// Logic ///////////////
+
 void RichManScreenTopHUD::Open()
 {
 	 UIWidget::ResetUI();

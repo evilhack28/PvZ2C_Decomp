@@ -22,7 +22,7 @@
 #include <netdb.h>
 #include <pthread.h>
 
-LogServer* LogServer::s_pLogServer = NULL;
+/////////////// Lifecycle ///////////////
 
 LogServer::LogServer()
 {
@@ -34,6 +34,10 @@ LogServer::LogServer()
 LogServer::~LogServer()
 {
 }
+
+/////////////// Logic ///////////////
+
+LogServer* LogServer::s_pLogServer = NULL;
 
 LogServer* LogServer::Instance()
 {

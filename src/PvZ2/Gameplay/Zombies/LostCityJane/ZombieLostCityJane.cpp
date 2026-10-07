@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieLostCityJane.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieLostCityJaneProps::~ZombieLostCityJaneProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieLostCityJaneProps);
 

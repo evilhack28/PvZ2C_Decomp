@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PVZLiveConfig.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PVZLiveConfig::~PVZLiveConfig()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PVZLiveConfig);
 

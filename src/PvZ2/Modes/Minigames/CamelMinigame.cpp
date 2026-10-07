@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CamelMinigame.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CamelMinigameProperties::~CamelMinigameProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CamelMinigameProperties);
 

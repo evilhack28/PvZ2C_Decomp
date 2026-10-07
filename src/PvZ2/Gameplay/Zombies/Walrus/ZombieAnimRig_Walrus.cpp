@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieIceAgeWalrus.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_Walrus::ZombieAnimRig_Walrus()
 {
@@ -17,7 +20,7 @@ ZombieAnimRig_Walrus::~ZombieAnimRig_Walrus()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_Walrus);
 

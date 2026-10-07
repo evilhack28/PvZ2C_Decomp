@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CollectableNote.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CollectableNoteType::~CollectableNoteType()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CollectableNoteType);
 

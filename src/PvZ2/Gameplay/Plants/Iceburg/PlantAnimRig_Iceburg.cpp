@@ -1,5 +1,7 @@
 #include "PlantAnimRig_Iceburg.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(PlantAnimRig_Iceburg);
 
 void PlantAnimRig_Iceburg::StaticClassInit()
@@ -11,6 +13,8 @@ void PlantAnimRig_Iceburg::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_Iceburg);
 }
+
+/////////////// Logic ///////////////
 
 bool PlantAnimRig_Iceburg::PlayShootAnimation()
 {

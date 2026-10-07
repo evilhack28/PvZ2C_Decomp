@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_HatMushroom.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantAnimRig_HatMushroom::PlantAnimRig_HatMushroom()
 {
@@ -17,7 +20,7 @@ PlantAnimRig_HatMushroom::~PlantAnimRig_HatMushroom()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantAnimRig_HatMushroom);
 

@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieExplosionProofPolice.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemZombieGasSmoke::GridItemZombieGasSmoke()
 {
@@ -17,7 +20,7 @@ GridItemZombieGasSmoke::~GridItemZombieGasSmoke()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemZombieGasSmoke);
 
@@ -31,6 +34,8 @@ void GridItemZombieGasSmoke::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemZombieGasSmoke);
 }
 
+/////////////// Accessors ///////////////
+
 bool GridItemZombieGasSmoke::IsDamageable() const
 {
 	return false;
@@ -40,6 +45,8 @@ bool GridItemZombieGasSmoke::IsDamageableByPlants() const
 {
 	return false;
 }
+
+/////////////// Logic ///////////////
 
 void GridItemZombieGasSmoke::DestroySmoke()
 {

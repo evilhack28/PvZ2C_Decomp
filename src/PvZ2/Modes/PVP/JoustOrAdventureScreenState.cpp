@@ -8,6 +8,11 @@
 #include "SexyAppFramework/Common.h"
 
 #include "JoustOrAdventureScreenState.h"
+#include "ReflectionBuilder.h"
+#include "AdaptorJoustOrAdventureScreen.h"
+#include "JoustOrAdventureScreenTopHUD.h"
+
+/////////////// Lifecycle ///////////////
 
 JoustOrAdventureScreenState::JoustOrAdventureScreenState()
 {
@@ -17,7 +22,7 @@ JoustOrAdventureScreenState::~JoustOrAdventureScreenState()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(JoustOrAdventureScreenState);
 
@@ -31,13 +36,13 @@ void JoustOrAdventureScreenState::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(JoustOrAdventureScreenState);
 }
 
-#include "AdaptorJoustOrAdventureScreen.h"
+/////////////// Logic ///////////////
+
 RtClass* JoustOrAdventureScreenState::getHotUIAdaptorClass()
 {
 	return AdaptorJoustOrAdventureScreen::StaticGetClass();
 }
 
-#include "JoustOrAdventureScreenTopHUD.h"
 RtClass* JoustOrAdventureScreenState::getTopHudControllerClass()
 {
 	return JoustOrAdventureScreenTopHUD::StaticGetClass();

@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PowerupType.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PowerupType::~PowerupType()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PowerupType);
 

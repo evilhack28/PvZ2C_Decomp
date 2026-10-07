@@ -8,22 +8,17 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ArtifactBoost.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ArtifactBoostPropertySheet::~ArtifactBoostPropertySheet()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ArtifactBoostPropertySheet);
-
-void ArtifactBoostPropertySheet::Sync(const NetworkArtifactBoostData& i_info)
-{
-	Id = i_info.Id;
-	Type = i_info.Type;
-	Rare = i_info.Rare;
-	ValueRange = i_info.Value;
-}
 
 void ArtifactBoostPropertySheet::StaticClassInit()
 {
@@ -60,4 +55,14 @@ void ArtifactBoostPropertySheet::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(ArtifactBoostValueInfo, ValueRange);
 	REFLECTION_CLASSBUILDER_END(ArtifactBoostPropertySheet);
 
+}
+
+/////////////// Logic ///////////////
+
+void ArtifactBoostPropertySheet::Sync(const NetworkArtifactBoostData& i_info)
+{
+	Id = i_info.Id;
+	Type = i_info.Type;
+	Rare = i_info.Rare;
+	ValueRange = i_info.Value;
 }

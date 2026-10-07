@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CreaturePropertySheet.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CreaturePropertySheet::~CreaturePropertySheet()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CreaturePropertySheet);
 

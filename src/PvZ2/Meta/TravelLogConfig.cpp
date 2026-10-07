@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "TravelLogConfig.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 TravelLogConfig::TravelLogConfig()
 {
@@ -17,7 +20,7 @@ TravelLogConfig::~TravelLogConfig()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(TravelLogConfig);
 

@@ -8,6 +8,11 @@
 #include "SexyAppFramework/Common.h"
 
 #include "RichManScreenState.h"
+#include "ReflectionBuilder.h"
+#include "RichManScreen.h"
+#include "RichManScreenTopHUD.h"
+
+/////////////// Lifecycle ///////////////
 
 RichManScreenState::RichManScreenState()
 {
@@ -17,7 +22,7 @@ RichManScreenState::~RichManScreenState()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(RichManScreenState);
 
@@ -31,13 +36,13 @@ void RichManScreenState::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(RichManScreenState);
 }
 
-#include "RichManScreen.h"
+/////////////// Logic ///////////////
+
 RtClass* RichManScreenState::getHotUIAdaptorClass()
 {
 	return AdaptorRichManScreen::StaticGetClass();
 }
 
-#include "RichManScreenTopHUD.h"
 RtClass* RichManScreenState::getTopHudControllerClass()
 {
 	return RichManScreenTopHUD::StaticGetClass();

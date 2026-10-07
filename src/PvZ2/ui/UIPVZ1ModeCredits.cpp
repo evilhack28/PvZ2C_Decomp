@@ -10,19 +10,23 @@
 #include "UIPVZ1ModeCredits.h"
 #include "LawnApp.h"
 
-void UIPVZ1ModeCredits::PlayEndFunc()
-{
-}
-
-void UIPVZ1ModeCredits::InitView()
-{
-}
+/////////////// Lifecycle ///////////////
 
 UIPVZ1ModeCredits::UIPVZ1ModeCredits()
 {
 }
 
 UIPVZ1ModeCredits::~UIPVZ1ModeCredits()
+{
+}
+
+/////////////// Logic ///////////////
+
+void UIPVZ1ModeCredits::PlayEndFunc()
+{
+}
+
+void UIPVZ1ModeCredits::InitView()
 {
 }
 

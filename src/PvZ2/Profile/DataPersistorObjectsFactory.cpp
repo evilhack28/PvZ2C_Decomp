@@ -12,18 +12,10 @@
 #include "ICloudWrapperFactory.h"
 #include "UserPrefsWrapper.h"
 
+/////////////// Lifecycle ///////////////
+
 DataPersistorObjectsFactory::~DataPersistorObjectsFactory()
 {
-}
-
-DataPersistorFactory& DataPersistorObjectsFactory::GetDataPersistorFactory()
-{
-	return m_dataPersistorFactory;
-}
-
-PlayerIdentityService& DataPersistorObjectsFactory::GetPlayerIdentityService()
-{
-	return m_playerIdentityService;
 }
 
 DataPersistorObjectsFactory::DataPersistorObjectsFactory()
@@ -34,4 +26,16 @@ DataPersistorObjectsFactory::DataPersistorObjectsFactory()
 	, m_playerIdentityService(m_iCloudWrapper, m_uuidCreator, UserPrefsWrapper::GetInstance(), *gMessageRouter)
 	, m_dataPersistorFactory(m_networkStatusDecider, m_serverConfigGetter, m_playerIdentityService)
 {
+}
+
+/////////////// Accessors ///////////////
+
+DataPersistorFactory& DataPersistorObjectsFactory::GetDataPersistorFactory()
+{
+	return m_dataPersistorFactory;
+}
+
+PlayerIdentityService& DataPersistorObjectsFactory::GetPlayerIdentityService()
+{
+	return m_playerIdentityService;
 }

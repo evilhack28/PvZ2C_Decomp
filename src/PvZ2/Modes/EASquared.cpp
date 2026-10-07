@@ -5,9 +5,20 @@
 #include "Toggles.h"
 #include "PVZDB.h"
 
+/////////////// Lifecycle ///////////////
+
 EASquared::EASquared()
 {
 }
+
+/////////////// Accessors ///////////////
+
+EASquaredPropertySheet* EASquared::GetProperties()
+{
+	return PVZDB::GetInstance().FindObjectByAlias<EASquaredPropertySheet>(PVZDB::TABLE_EASQUAREDCONFIG, Sexy::RtName(L"EASquaredConfig")).Get();
+}
+
+/////////////// Logic ///////////////
 
 EASquared& EASquared::Instance()
 {
@@ -15,9 +26,3 @@ EASquared& EASquared::Instance()
 		return Sexy::LazySingleton<EASquared_Android>::GetInstance();
 	return Sexy::LazySingleton<EASquaredNullImpl>::GetInstance();
 }
-
-EASquaredPropertySheet* EASquared::GetProperties()
-{
-	return PVZDB::GetInstance().FindObjectByAlias<EASquaredPropertySheet>(PVZDB::TABLE_EASQUAREDCONFIG, Sexy::RtName(L"EASquaredConfig")).Get();
-}
-

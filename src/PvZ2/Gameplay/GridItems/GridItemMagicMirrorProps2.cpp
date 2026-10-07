@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "GridItemMagicMirror2.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemMagicMirrorProps2::GridItemMagicMirrorProps2()
 {
@@ -17,7 +20,7 @@ GridItemMagicMirrorProps2::~GridItemMagicMirrorProps2()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemMagicMirrorProps2);
 

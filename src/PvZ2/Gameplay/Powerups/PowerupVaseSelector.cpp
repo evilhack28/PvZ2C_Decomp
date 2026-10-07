@@ -14,6 +14,9 @@
 #include "ScaledApp.h"
 #include "BoardTransforms.h"
 #include "PowerupManager.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PowerupVaseSelector::PowerupVaseSelector()
 {
@@ -23,9 +26,11 @@ PowerupVaseSelector::~PowerupVaseSelector()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PowerupVaseSelector);
+
+/////////////// Logic ///////////////
 
 bool PowerupVaseSelector::onTouchBegin(const Sexy::Touch& i_touch)
 {

@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_HocusCrocus.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantAnimRig_HocusCrocus::PlantAnimRig_HocusCrocus()
 {
@@ -17,7 +20,7 @@ PlantAnimRig_HocusCrocus::~PlantAnimRig_HocusCrocus()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantAnimRig_HocusCrocus);
 

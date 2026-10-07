@@ -12,9 +12,7 @@
 #include "SocialShareMgr.h"
 #include "ActivityManager.h"
 
-void AbtestMgr::Update()
-{
-}
+/////////////// Lifecycle ///////////////
 
 AbtestMgr::~AbtestMgr()
 {
@@ -26,9 +24,17 @@ AbtestMgr::AbtestMgr()
 	m_timeout = PVZ_EOT();
 }
 
+/////////////// Accessors ///////////////
+
 int AbtestMgr::GetActivityInfos()
 {
 	return EASquared::Instance().GetActivityInfos(m_activityInfos);
+}
+
+/////////////// Logic ///////////////
+
+void AbtestMgr::Update()
+{
 }
 
 void AbtestMgr::CheckActivityInfos()

@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieFairyTaleGargantuar.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_FairyTaleArmedGargantuar::~ZombieAnimRig_FairyTaleArmedGargantuar()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_FairyTaleArmedGargantuar);
 

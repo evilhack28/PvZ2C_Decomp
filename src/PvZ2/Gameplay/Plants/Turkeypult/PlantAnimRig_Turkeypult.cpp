@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_Turkeypult.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantAnimRig_Turkeypult::PlantAnimRig_Turkeypult()
 {
@@ -17,7 +20,7 @@ PlantAnimRig_Turkeypult::~PlantAnimRig_Turkeypult()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantAnimRig_Turkeypult);
 

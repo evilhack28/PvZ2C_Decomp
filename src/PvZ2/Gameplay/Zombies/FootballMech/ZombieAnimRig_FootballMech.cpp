@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieAnimRig_Mech.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_FootballMech::ZombieAnimRig_FootballMech()
 {
@@ -16,6 +19,22 @@ ZombieAnimRig_FootballMech::ZombieAnimRig_FootballMech()
 ZombieAnimRig_FootballMech::~ZombieAnimRig_FootballMech()
 {
 }
+
+/////////////// Reflection ///////////////
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_FootballMech);
+
+void ZombieAnimRig_FootballMech::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ZombieAnimRig_FootballMech);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(ZombieAnimRig_Mech);
+
+	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_FootballMech);
+}
+
+/////////////// Logic ///////////////
 
 void ZombieAnimRig_FootballMech::SetDamageState(int i_damageState)
 {
@@ -31,18 +50,4 @@ void ZombieAnimRig_FootballMech::SetDamageState(int i_damageState)
 	bool aVisible6 = i_damageState == 6;
 	SetLayerVisibility("damage6_helmet", aVisible6);
 	SetLayerVisibility("damage6_leg", aVisible6);
-}
-
-#include "ReflectionBuilder.h"
-
-RT_CLASS_IMPLEMENT(ZombieAnimRig_FootballMech);
-
-void ZombieAnimRig_FootballMech::StaticClassInit()
-{
-	REFLECTION_CLASSBUILDER_BEGIN(ZombieAnimRig_FootballMech);
-	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
-
-		REFLECTION_CLASSBUILDER_ANCESTOR(ZombieAnimRig_Mech);
-
-	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_FootballMech);
 }

@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "BowlingMinigame.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 BowlingMinigameProperties::~BowlingMinigameProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(BowlingMinigameProperties);
 

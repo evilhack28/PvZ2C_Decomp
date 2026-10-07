@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "StreamingMusicList.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 StreamingMusicList::~StreamingMusicList()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(StreamingMusicList);
 

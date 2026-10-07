@@ -8,23 +8,20 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieFairyTaleImp.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_FairyTaleImp::~ZombieAnimRig_FairyTaleImp()
 {
 }
 
-const std::string ZombieAnimRig_FairyTaleImp::getWalkAnimationName()
+ZombieAnimRig_FairyTaleImp::ZombieAnimRig_FairyTaleImp()
 {
-	const char* aName;
-	if (m_running)
-		aName = "run";
-	else
-		aName = "walk";
-
-	return aName;
+	m_running = 0;
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_FairyTaleImp);
 
@@ -40,12 +37,22 @@ void ZombieAnimRig_FairyTaleImp::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_FairyTaleImp);
 }
 
-ZombieAnimRig_FairyTaleImp::ZombieAnimRig_FairyTaleImp()
-{
-	m_running = 0;
-}
+/////////////// Accessors ///////////////
 
 void ZombieAnimRig_FairyTaleImp::SetRunning(bool i_arg)
 {
 	m_running = i_arg;
+}
+
+/////////////// Logic ///////////////
+
+const std::string ZombieAnimRig_FairyTaleImp::getWalkAnimationName()
+{
+	const char* aName;
+	if (m_running)
+		aName = "run";
+	else
+		aName = "walk";
+
+	return aName;
 }

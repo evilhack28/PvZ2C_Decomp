@@ -8,6 +8,11 @@
 #include "SexyAppFramework/Common.h"
 
 #include "JoustLandingScreenState.h"
+#include "ReflectionBuilder.h"
+#include "AdaptorJoustScreen.h"
+#include "JoustLandingScreenTopHUD.h"
+
+/////////////// Lifecycle ///////////////
 
 JoustLandingScreenState::JoustLandingScreenState()
 {
@@ -17,7 +22,7 @@ JoustLandingScreenState::~JoustLandingScreenState()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(JoustLandingScreenState);
 
@@ -31,13 +36,13 @@ void JoustLandingScreenState::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(JoustLandingScreenState);
 }
 
-#include "AdaptorJoustScreen.h"
+/////////////// Logic ///////////////
+
 RtClass* JoustLandingScreenState::getHotUIAdaptorClass()
 {
 	return AdaptorJoustScreen::StaticGetClass();
 }
 
-#include "JoustLandingScreenTopHUD.h"
 RtClass* JoustLandingScreenState::getTopHudControllerClass()
 {
 	return JoustLandingScreenTopHUD::StaticGetClass();

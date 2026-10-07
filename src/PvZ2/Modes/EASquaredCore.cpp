@@ -2,6 +2,8 @@
 #include <string>
 #include "EASquaredCore.h"
 
+/////////////// Logic ///////////////
+
 bool EASquaredCore::inSelectedMonetizationGroup(int transactionCount, const std::string& monetizationGroup)
 {
 	if (monetizationGroup.compare("monetizers") == 0)

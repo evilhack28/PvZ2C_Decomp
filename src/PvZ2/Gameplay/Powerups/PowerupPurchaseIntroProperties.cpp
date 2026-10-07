@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PowerupPurchaseIntro.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PowerupPurchaseIntroProperties::PowerupPurchaseIntroProperties()
 {
@@ -17,7 +20,7 @@ PowerupPurchaseIntroProperties::~PowerupPurchaseIntroProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PowerupPurchaseIntroProperties);
 

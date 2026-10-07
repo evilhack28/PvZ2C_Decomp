@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "DangerRoomLevelDesigner.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 DangerRoomLevelDesigner::DangerRoomLevelDesigner()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(DangerRoomLevelDesigner);
 

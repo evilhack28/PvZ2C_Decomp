@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_Cracker.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantAnimRig_Cracker::PlantAnimRig_Cracker()
 {
@@ -17,7 +20,7 @@ PlantAnimRig_Cracker::~PlantAnimRig_Cracker()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantAnimRig_Cracker);
 

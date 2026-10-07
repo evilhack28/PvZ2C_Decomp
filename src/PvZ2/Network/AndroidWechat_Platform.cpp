@@ -10,10 +10,7 @@
 #include "AndroidWechat_Platform.h"
 #include "GameEventMgr.h"
 
-namespace Message {
-void WechatShareSuccess();
-void WeChatShareFailed();
-}
+/////////////// Lifecycle ///////////////
 
 AndroidWechatPlatform::AndroidWechatPlatform()
 {
@@ -76,6 +73,20 @@ AndroidWechatPlatform::~AndroidWechatPlatform()
 {
 }
 
+/////////////// Accessors ///////////////
+
+bool AndroidWechatPlatform::IsWeChatInstalled()
+{
+	return false;
+}
+
+/////////////// Logic ///////////////
+
+namespace Message {
+void WechatShareSuccess();
+void WeChatShareFailed();
+}
+
 void AndroidWechatPlatform::Initialize()
 {
 }
@@ -86,11 +97,6 @@ void AndroidWechatPlatform::BindJavaMethods(JNIEnv* env, const JavaClass& javaCl
 
 void AndroidWechatPlatform::BindNativeMethods(JNIEnv* env, const JavaClass& javaClass)
 {
-}
-
-bool AndroidWechatPlatform::IsWeChatInstalled()
-{
-	return false;
 }
 
 void AndroidWechatPlatform::DoShare(const std::string& i_url, bool toTimeLine)

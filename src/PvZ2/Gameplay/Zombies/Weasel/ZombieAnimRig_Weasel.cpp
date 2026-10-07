@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieAnimRig_Chicken.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_Weasel::ZombieAnimRig_Weasel()
 {
@@ -17,12 +20,7 @@ ZombieAnimRig_Weasel::~ZombieAnimRig_Weasel()
 {
 }
 
-const std::string ZombieAnimRig_Weasel::getWalkAnimationName()
-{
-	return "walk";
-}
-
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_Weasel);
 
@@ -34,4 +32,11 @@ void ZombieAnimRig_Weasel::StaticClassInit()
 		REFLECTION_CLASSBUILDER_ANCESTOR(ZombieAnimRig_Chicken);
 
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_Weasel);
+}
+
+/////////////// Logic ///////////////
+
+const std::string ZombieAnimRig_Weasel::getWalkAnimationName()
+{
+	return "walk";
 }

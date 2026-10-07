@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "GridItemGravestoneZombieInCardGame.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemCardGameGravestonePropertySheet::GridItemCardGameGravestonePropertySheet()
 {
@@ -17,7 +20,7 @@ GridItemCardGameGravestonePropertySheet::~GridItemCardGameGravestonePropertyShee
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemCardGameGravestonePropertySheet);
 

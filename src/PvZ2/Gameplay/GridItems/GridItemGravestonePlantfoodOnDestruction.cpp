@@ -10,6 +10,9 @@
 #include "GridItemGravestonePlantfoodOnDestruction.h"
 #include "LawnApp.h"
 #include "Board.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemGravestonePlantfoodOnDestruction::GridItemGravestonePlantfoodOnDestruction()
 {
@@ -19,7 +22,7 @@ GridItemGravestonePlantfoodOnDestruction::~GridItemGravestonePlantfoodOnDestruct
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemGravestonePlantfoodOnDestruction);
 
@@ -32,6 +35,8 @@ void GridItemGravestonePlantfoodOnDestruction::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemGravestonePlantfoodOnDestruction);
 }
+
+/////////////// Logic ///////////////
 
 void GridItemGravestonePlantfoodOnDestruction::onKilled()
 {

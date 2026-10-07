@@ -9,6 +9,8 @@
 
 #include "gameNetWork/NetworkMgr.h"
 
+/////////////// Lifecycle ///////////////
+
 NetWorkEvent::NetWorkEvent()
 {
 }
@@ -16,6 +18,8 @@ NetWorkEvent::NetWorkEvent()
 NetWorkEvent::~NetWorkEvent()
 {
 }
+
+/////////////// Logic ///////////////
 
 void NetWorkEvent::Update(long ms)
 {

@@ -12,7 +12,10 @@
 #include "ReflectionBuilder.h"
 #include "ZombieType.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(WestStage);
+
 void WestStage::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(WestStage);
@@ -24,6 +27,7 @@ void WestStage::StaticClassInit()
 }
 
 RT_CLASS_IMPLEMENT(WestStageProperties);
+
 void WestStageProperties::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(WestStageProperties);
@@ -34,6 +38,7 @@ void WestStageProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(WestStageProperties);
 }
 
+/////////////// Logic ///////////////
 
 void WestStage::onZombieTypeCountChange(ZombieTypePtr i_type, int i_from, int i_to)
 {
@@ -53,7 +58,6 @@ void WestStage::onZombieTypeCountChange(ZombieTypePtr i_type, int i_from, int i_
 			AudioMgr::GetInstancePtr()->SendEvent("Play_Zomb_WildWest_Pancho_Vox", NULL);
 	}
 }
-
 
 void WestStage::stopZombieGroans()
 {

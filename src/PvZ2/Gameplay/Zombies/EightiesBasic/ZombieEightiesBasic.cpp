@@ -11,6 +11,8 @@
 
 #include "ReflectionBuilder.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(ZombieEightiesBasic);
 
 void ZombieEightiesBasic::StaticClassInit()

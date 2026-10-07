@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PowerupCukeTutorialIntro.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PowerupCukeTutorialIntroProperties::PowerupCukeTutorialIntroProperties()
 {
@@ -17,7 +20,7 @@ PowerupCukeTutorialIntroProperties::~PowerupCukeTutorialIntroProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PowerupCukeTutorialIntroProperties);
 

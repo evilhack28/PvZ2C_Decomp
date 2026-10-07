@@ -9,6 +9,8 @@
 
 #include "GridItemCardGameZombie.h"
 
+/////////////// Lifecycle ///////////////
+
 GridItemCardGameZombieActionData::~GridItemCardGameZombieActionData()
 {
 }
@@ -42,6 +44,8 @@ GridItemCardGameZombieActionData::GridItemCardGameZombieActionData(GridItemCardG
 	, ShowIntention(i_other.ShowIntention)
 {
 }
+
+/////////////// Logic ///////////////
 
 GridItemCardGameZombieActionData& GridItemCardGameZombieActionData::operator=(const GridItemCardGameZombieActionData& i_other)
 {

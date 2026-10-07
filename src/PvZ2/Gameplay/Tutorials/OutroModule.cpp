@@ -8,6 +8,10 @@
 #include "SexyAppFramework/Common.h"
 
 #include "OutroModule.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 OutroModule::OutroModule()
 {
@@ -25,7 +29,7 @@ OutroModuleProperties::~OutroModuleProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(OutroModule);
 
@@ -38,8 +42,6 @@ void OutroModule::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(OutroModule);
 }
-
-#include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(OutroModuleProperties);
 

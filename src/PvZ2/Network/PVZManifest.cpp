@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PVZManifest.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PVZManifest::PVZManifest()
 {
@@ -17,7 +20,7 @@ PVZManifest::~PVZManifest()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PVZManifest);
 

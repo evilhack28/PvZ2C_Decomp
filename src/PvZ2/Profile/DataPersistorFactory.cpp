@@ -9,20 +9,7 @@
 
 #include "DataPersistorFactory.h"
 
-OfflineDataPersistor& DataPersistorFactory::getOffline()
-{
-	return m_offlineDataPersistor;
-}
-
-PlayerInfoDeltaHandler& DataPersistorFactory::GetDeltaHandler()
-{
-	return m_playerInfoDeltaHandler;
-}
-
-OnlineDataPersistor& DataPersistorFactory::getOnline()
-{
-	return m_onlineDataPersistor;
-}
+/////////////// Lifecycle ///////////////
 
 DataPersistorFactory::DataPersistorFactory(const NetworkStatusDecider& networkStatusDecider, ServerConfigGetter& serverConfigGetter, PlayerIdentityService& playerIdentityService)
 	: m_offlineDataPersistor("pp.dat", PVZDB::TABLE_PLAYER_PROFILES)
@@ -31,6 +18,13 @@ DataPersistorFactory::DataPersistorFactory(const NetworkStatusDecider& networkSt
 	, m_serverConfigGetter(serverConfigGetter)
 	, m_networkStatusDecider(networkStatusDecider)
 {
+}
+
+/////////////// Accessors ///////////////
+
+PlayerInfoDeltaHandler& DataPersistorFactory::GetDeltaHandler()
+{
+	return m_playerInfoDeltaHandler;
 }
 
 IDataPersistor& DataPersistorFactory::GetPersistor()
@@ -46,4 +40,16 @@ IDataPersistor& DataPersistorFactory::GetOfflinePersistor()
 OnlineDataPersistor& DataPersistorFactory::GetOnlinePersistor()
 {
 	return getOnline();
+}
+
+/////////////// Logic ///////////////
+
+OfflineDataPersistor& DataPersistorFactory::getOffline()
+{
+	return m_offlineDataPersistor;
+}
+
+OnlineDataPersistor& DataPersistorFactory::getOnline()
+{
+	return m_onlineDataPersistor;
 }

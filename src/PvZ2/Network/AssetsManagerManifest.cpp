@@ -10,6 +10,46 @@
 #include "AssetsManagerManifest.h"
 #include "SexyAppFramework/SexyAppBase.h"
 
+/////////////// Lifecycle ///////////////
+
+AssetsManagerManifest::~AssetsManagerManifest()
+{
+}
+
+AssetsManagerManifest::Asset::Asset()
+{
+    md5 = "";
+    path = "";
+    compressed = false;
+    downloadState = DownloadState::UNSTARTED;
+}
+
+AssetsManagerManifest::Asset::Asset(const Asset&) = default;
+
+AssetsManagerManifest::Asset::~Asset() = default;
+
+AssetsManagerManifest::AssetDiff::AssetDiff() = default;
+
+AssetsManagerManifest::AssetDiff::AssetDiff(const AssetDiff&) = default;
+
+AssetsManagerManifest::AssetDiff::~AssetDiff() = default;
+
+AssetsManagerManifest::AssetsManagerManifest(const std::string& manifestUrl)
+    : _versionLoaded(false)
+    , _loaded(false)
+    , _manifestRoot("")
+    , _remoteManifestUrl("")
+    , _remoteVersionUrl("")
+    , _version("")
+    , _totalfilesize(0)
+    , _engineVer("")
+{
+    if (manifestUrl.size() > 0)
+        parse(manifestUrl);
+}
+
+/////////////// Logic ///////////////
+
 class StringHelper
 {
 public:
@@ -17,11 +57,17 @@ public:
 };
 
 typedef AssetsManagerManifest::Asset ManifestAsset;
+
 typedef std::__umap_hashtable<std::string, ManifestAsset, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<const std::string, ManifestAsset> > > ManifestAssetTable;
+
 typedef std::__umap_hashtable<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<const std::string, std::string> > > ManifestStringTable;
+
 typedef std::pair<std::__detail::_Node_iterator<std::pair<const std::string, ManifestAsset>, false, true>, bool> ManifestAssetEmplaceResult;
+
 typedef std::pair<std::__detail::_Node_iterator<std::pair<const std::string, std::string>, false, true>, bool> ManifestStringEmplaceResult;
+
 ManifestAssetEmplaceResult ManifestAssetTable_MEmplace(ManifestAssetTable * table, const std::string & key, ManifestAsset & asset);
+
 ManifestStringEmplaceResult ManifestStringTable_MEmplace(ManifestStringTable * table, std::string & key, std::string & value);
 
 namespace std
@@ -141,10 +187,6 @@ void AssetsManagerManifest::parse(const std::string& manifestUrl)
     loadManifest(_json);
 }
 
-AssetsManagerManifest::~AssetsManagerManifest()
-{
-}
-
 int AssetsManagerManifest::getVersionToInt(std::string i_version)
 {
     if (i_version == "")
@@ -154,25 +196,7 @@ int AssetsManagerManifest::getVersionToInt(std::string i_version)
     return result;
 }
 
-AssetsManagerManifest::Asset::Asset()
-{
-    md5 = "";
-    path = "";
-    compressed = false;
-    downloadState = DownloadState::UNSTARTED;
-}
-
-AssetsManagerManifest::Asset::Asset(const Asset&) = default;
-
 AssetsManagerManifest::Asset& AssetsManagerManifest::Asset::operator=(const Asset&) = default;
-
-AssetsManagerManifest::Asset::~Asset() = default;
-
-AssetsManagerManifest::AssetDiff::AssetDiff() = default;
-
-AssetsManagerManifest::AssetDiff::AssetDiff(const AssetDiff&) = default;
-
-AssetsManagerManifest::AssetDiff::~AssetDiff() = default;
 
 void AssetsManagerManifest::setAssetDownloadState(const std::string &key, const DownloadState &state)
 {
@@ -305,20 +329,6 @@ std::vector<std::string> AssetsManagerManifest::getSearchPaths() const
         paths.push_back(path);
     }
     return paths;
-}
-
-AssetsManagerManifest::AssetsManagerManifest(const std::string& manifestUrl)
-    : _versionLoaded(false)
-    , _loaded(false)
-    , _manifestRoot("")
-    , _remoteManifestUrl("")
-    , _remoteVersionUrl("")
-    , _version("")
-    , _totalfilesize(0)
-    , _engineVer("")
-{
-    if (manifestUrl.size() > 0)
-        parse(manifestUrl);
 }
 
 void AssetsManagerManifest::loadJson(const std::string& url)

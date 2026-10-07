@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombiePVPSkill.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_PVPSkill::ZombieAnimRig_PVPSkill()
 {
@@ -17,7 +20,7 @@ ZombieAnimRig_PVPSkill::~ZombieAnimRig_PVPSkill()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_PVPSkill);
 

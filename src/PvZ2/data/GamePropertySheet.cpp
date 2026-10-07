@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "GamePropertySheet.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GamePropertySheet::~GamePropertySheet()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GamePropertySheet);
 

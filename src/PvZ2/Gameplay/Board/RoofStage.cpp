@@ -16,7 +16,10 @@
 #include "ScaledApp.h"
 #include "UIWidget.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(RoofStage);
+
 void RoofStage::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(RoofStage);
@@ -28,6 +31,7 @@ void RoofStage::StaticClassInit()
 }
 
 RT_CLASS_IMPLEMENT(RoofStageProperties);
+
 void RoofStageProperties::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(RoofStageProperties);
@@ -38,13 +42,13 @@ void RoofStageProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(RoofStageProperties);
 }
 
+/////////////// Logic ///////////////
 
 void RoofStage::registerForEvents()
 {
 	StageModule::registerForEvents();
 	getManager()->RegisterOnLoadComplete(Sexy::MakeDelegate(*this, &RoofStage::onLoadComplete));
 }
-
 
 void RoofStage::onLevelLoaded()
 {
@@ -53,7 +57,6 @@ void RoofStage::onLevelLoaded()
 	BoardRegionRoof* region = gLawnApp->m_board->AddRegion<BoardRegionRoof>();
 	region->SetRegionFromBoardCoordinates(Sexy::FRect(200.0f, 0.0f, 800.0f, 600.0f));
 }
-
 
 void RoofStage::onLoadComplete()
 {

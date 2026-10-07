@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_Gumnut.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantAnimRig_Gumnut::PlantAnimRig_Gumnut()
 {
@@ -17,7 +20,7 @@ PlantAnimRig_Gumnut::~PlantAnimRig_Gumnut()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantAnimRig_Gumnut);
 
@@ -31,8 +34,9 @@ void PlantAnimRig_Gumnut::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_Gumnut);
 }
 
+/////////////// Logic ///////////////
+
 std::string PlantAnimRig_Gumnut::getPlantFoodMainAnimName()
 {
 	return m_bAvatar ? "plantfood2" : "plantfood";
 }
-

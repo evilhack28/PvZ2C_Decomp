@@ -10,6 +10,8 @@
 #include "CardGameUtils.h"
 #include "NewPVPUtils.h"
 
+/////////////// Accessors ///////////////
+
 bool BoardConstants::IsCardGameScale()
 {
 	return CardGameUtils::IsPlayingCardGame();

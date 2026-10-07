@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "SunBombChallenge.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 SunBombChallengeProperties::~SunBombChallengeProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(SunBombChallengeProperties);
 

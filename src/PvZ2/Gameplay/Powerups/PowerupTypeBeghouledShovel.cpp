@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PowerupBeghouled.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PowerupTypeBeghouledShovel::PowerupTypeBeghouledShovel()
 {
@@ -17,7 +20,7 @@ PowerupTypeBeghouledShovel::~PowerupTypeBeghouledShovel()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PowerupTypeBeghouledShovel);
 

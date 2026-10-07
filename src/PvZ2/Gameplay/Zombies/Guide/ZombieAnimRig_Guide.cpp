@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieLostCityGuide.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_Guide::ZombieAnimRig_Guide()
 {
@@ -17,9 +20,11 @@ ZombieAnimRig_Guide::~ZombieAnimRig_Guide()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_Guide);
+
+/////////////// Logic ///////////////
 
 bool ZombieAnimRig_Guide::DoGuideAnimation(PopAnimRig::AnimStoppedReflectionDelegate i_onAnimStopped)
 {

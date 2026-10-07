@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "WhackAMoleModule.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 Effect_HammerEffect::Effect_HammerEffect()
 {
@@ -17,7 +20,7 @@ Effect_HammerEffect::~Effect_HammerEffect()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(Effect_HammerEffect);
 
@@ -30,6 +33,8 @@ void Effect_HammerEffect::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(Effect_HammerEffect);
 }
+
+/////////////// Logic ///////////////
 
 void Effect_HammerEffect::Destroy()
 {

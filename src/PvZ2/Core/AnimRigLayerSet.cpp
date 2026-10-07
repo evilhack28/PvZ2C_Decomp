@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "AnimRigLayerSet.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 AnimRigLayerSet::AnimRigLayerSet()
 {
@@ -17,7 +20,7 @@ AnimRigLayerSet::~AnimRigLayerSet()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(AnimRigLayerSet);
 
@@ -33,6 +36,8 @@ void AnimRigLayerSet::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(AnimRigLayerSet);
 }
+
+/////////////// Logic ///////////////
 
 void AnimRigLayerSet::AddSet(std::string setName, std::vector<std::string> layerNames)
 {

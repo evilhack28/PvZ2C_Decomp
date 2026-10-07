@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PlantPieceLevelData.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantPieceLevelData::PlantPieceLevelData()
 {
@@ -17,7 +20,7 @@ PlantPieceLevelData::~PlantPieceLevelData()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantPieceLevelData);
 
@@ -34,6 +37,8 @@ void PlantPieceLevelData::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD_DIFF_NAME(std::vector<PlantPieceLevel>, m_PlantPieceLevelDataArray, PlantPieceLevelDataArray);
 	REFLECTION_CLASSBUILDER_END(PlantPieceLevelData);
 }
+
+/////////////// Accessors ///////////////
 
 const std::vector<PlantPieceLevel> & PlantPieceLevelData::GetData()
 {

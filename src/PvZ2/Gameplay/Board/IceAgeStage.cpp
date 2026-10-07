@@ -9,7 +9,10 @@
 
 #include "ReflectionBuilder.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(IceAgeStage);
+
 void IceAgeStage::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(IceAgeStage);
@@ -21,6 +24,7 @@ void IceAgeStage::StaticClassInit()
 }
 
 RT_CLASS_IMPLEMENT(IceAgeStageProperties);
+
 void IceAgeStageProperties::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(IceAgeStageProperties);

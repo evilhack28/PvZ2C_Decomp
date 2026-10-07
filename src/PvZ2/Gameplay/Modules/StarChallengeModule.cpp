@@ -8,6 +8,10 @@
 #include "SexyAppFramework/Common.h"
 
 #include "StarChallengeModule.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 StarChallengeModule::StarChallengeModule()
 {
@@ -21,7 +25,7 @@ StarChallengeModuleProperties::~StarChallengeModuleProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(StarChallengeModule);
 
@@ -34,8 +38,6 @@ void StarChallengeModule::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(StarChallengeModule);
 }
-
-#include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(StarChallengeModuleProperties);
 

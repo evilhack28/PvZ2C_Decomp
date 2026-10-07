@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieMoneyTree.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_MoneyTree::ZombieAnimRig_MoneyTree()
 {
@@ -17,7 +20,7 @@ ZombieAnimRig_MoneyTree::~ZombieAnimRig_MoneyTree()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_MoneyTree);
 

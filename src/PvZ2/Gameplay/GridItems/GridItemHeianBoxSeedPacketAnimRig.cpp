@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "GridItemHeianBox.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemHeianBoxSeedPacketAnimRig::GridItemHeianBoxSeedPacketAnimRig()
 {
@@ -17,7 +20,7 @@ GridItemHeianBoxSeedPacketAnimRig::~GridItemHeianBoxSeedPacketAnimRig()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemHeianBoxSeedPacketAnimRig);
 

@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_BambooSpartan.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemspearrainProps::~GridItemspearrainProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemspearrainProps);
 

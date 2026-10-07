@@ -15,6 +15,8 @@
 #include "TodLib/TodStringFile.h"
 #include "TimeMgr.h"
 
+/////////////// Lifecycle ///////////////
+
 ContentDownloader::ContentDownloader()
 	: m_delegate(NULL)
 	, m_currentDownloadRequestId(-1)
@@ -26,21 +28,7 @@ ContentDownloader::~ContentDownloader()
 {
 }
 
-void ContentDownloader::Reset()
-{
-	m_wasDownloadSuccessful = false;
-	m_wasDownloadCancelled = false;
-	m_progress = 0.0f;
-	m_currentPath = 0;
-	m_retryTime = PVZ_EOT();
-	m_allowRetries = true;
-	m_paths.clear();
-	m_downloadUpdateErrorMsg = L"";
-	m_lastURL = "";
-	if (m_currentDownloadRequestId != -1)
-		Sexy::NetworkServiceManager::DefaultNetworkServiceManager()->CancelRequest(m_currentDownloadRequestId);
-	m_currentDownloadRequestId = -1;
-}
+/////////////// Accessors ///////////////
 
 void ContentDownloader::SetAllowRetries(bool i_enabled)
 {
@@ -56,6 +44,24 @@ bool ContentDownloader::IsActive()
 const std::string& ContentDownloader::GetCurrentURL()
 {
 	return m_lastURL;
+}
+
+/////////////// Logic ///////////////
+
+void ContentDownloader::Reset()
+{
+	m_wasDownloadSuccessful = false;
+	m_wasDownloadCancelled = false;
+	m_progress = 0.0f;
+	m_currentPath = 0;
+	m_retryTime = PVZ_EOT();
+	m_allowRetries = true;
+	m_paths.clear();
+	m_downloadUpdateErrorMsg = L"";
+	m_lastURL = "";
+	if (m_currentDownloadRequestId != -1)
+		Sexy::NetworkServiceManager::DefaultNetworkServiceManager()->CancelRequest(m_currentDownloadRequestId);
+	m_currentDownloadRequestId = -1;
 }
 
 void ContentDownloader::setDelegate(ContentDownloaderDelegateProtocol* delegate)

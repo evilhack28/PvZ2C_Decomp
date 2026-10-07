@@ -6,48 +6,18 @@
 //
 
 #include "PVZVersion.h"
+#include "ReflectionBuilder.h"
+#include <sstream>
 
-TotalRewardData& PVZVersion::GetUpdateReward(bool i_firstReward)
-{
-	return i_firstReward ? first_reward : second_reward;
-}
+/////////////// Lifecycle ///////////////
 
 PVZVersion::~PVZVersion()
 {
 }
 
-#include "ReflectionBuilder.h"
-#include <sstream>
+PVZVersion::PVZVersion(const PVZVersion&) = default;
 
-bool PVZVersion::operator==(const PVZVersion& i_rhs) const
-{
-	return major == i_rhs.major && minor == i_rhs.minor && content == i_rhs.content;
-}
-
-bool PVZVersion::operator<(const PVZVersion& i_rhs) const
-{
-	if (major < i_rhs.major) return true;
-	if (major == i_rhs.major)
-	{
-		if (minor < i_rhs.minor) return true;
-		if (minor == i_rhs.minor) return content < i_rhs.content;
-	}
-	return false;
-}
-
-void PVZVersion::FromString(const std::string& i_version)
-{
-	if (i_version != "")
-	{
-		std::stringstream aStream(i_version, std::ios_base::out | std::ios_base::in);
-		char aDot;
-		aStream >> major;
-		aStream >> aDot;
-		aStream >> minor;
-		aStream >> aDot;
-		aStream >> content;
-	}
-}
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PVZVersion);
 
@@ -178,7 +148,45 @@ void PVZVersion::StaticClassInit()
 
 }
 
+/////////////// Accessors ///////////////
 
-PVZVersion::PVZVersion(const PVZVersion&) = default;
+TotalRewardData& PVZVersion::GetUpdateReward(bool i_firstReward)
+{
+	return i_firstReward ? first_reward : second_reward;
+}
+
+/////////////// Logic ///////////////
+
+bool PVZVersion::operator==(const PVZVersion& i_rhs) const
+{
+	return major == i_rhs.major && minor == i_rhs.minor && content == i_rhs.content;
+}
+
+bool PVZVersion::operator<(const PVZVersion& i_rhs) const
+{
+	if (major < i_rhs.major) return true;
+	if (major == i_rhs.major)
+	{
+		if (minor < i_rhs.minor) return true;
+		if (minor == i_rhs.minor) return content < i_rhs.content;
+	}
+	return false;
+}
+
+void PVZVersion::FromString(const std::string& i_version)
+{
+	if (i_version != "")
+	{
+		std::stringstream aStream(i_version, std::ios_base::out | std::ios_base::in);
+		char aDot;
+		aStream >> major;
+		aStream >> aDot;
+		aStream >> minor;
+		aStream >> aDot;
+		aStream >> content;
+	}
+}
+
 PVZVersion& PVZVersion::operator=(const PVZVersion&) = default;
+
 PVZVersion& PVZVersion::operator=(PVZVersion&&) = default;

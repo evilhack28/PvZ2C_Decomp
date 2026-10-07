@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieZoybeanPodGargantuar.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_ZoybeanPodGargantuar::ZombieAnimRig_ZoybeanPodGargantuar()
 {
@@ -17,7 +20,7 @@ ZombieAnimRig_ZoybeanPodGargantuar::~ZombieAnimRig_ZoybeanPodGargantuar()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_ZoybeanPodGargantuar);
 

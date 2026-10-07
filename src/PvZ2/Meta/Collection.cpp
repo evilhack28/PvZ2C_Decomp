@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Collection.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CollectionType::CollectionType()
 {
@@ -17,7 +20,7 @@ CollectionType::~CollectionType()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CollectionType);
 

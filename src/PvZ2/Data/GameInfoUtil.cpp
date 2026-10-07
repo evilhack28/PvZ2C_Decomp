@@ -15,12 +15,16 @@
 #include "PvZ/NameMapper.h"
 #include "PvZ/UIEditor/StringHelper.h"
 
+/////////////// Accessors ///////////////
+
 bool GameInfoUtil::GetRareByAccessaryName(std::string name, int& rare)
 {
     AccessoryUIInfo info = PlantAccessoryMgr::GetInstance().GetAccessoryUIInfo(name);
     rare = info.Quality + 1;
     return true;
 }
+
+/////////////// Logic ///////////////
 
 bool GameInfoUtil::GetRareByPlantName(std::string name, int& rare)
 {

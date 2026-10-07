@@ -10,12 +10,19 @@
 #include "ZombieGatlingPea.h"
 
 #include "ZombieShooter.h"
-void ZombieGatlingPea::onZombieInitialize()
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
+
+ZombieGatlingPea::ZombieGatlingPea()
 {
-	 ZombieShooter::onZombieInitialize();
 }
 
-#include "ReflectionBuilder.h"
+ZombieGatlingPea::~ZombieGatlingPea()
+{
+}
+
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieGatlingPea);
 
@@ -29,10 +36,9 @@ void ZombieGatlingPea::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieGatlingPea);
 }
 
-ZombieGatlingPea::ZombieGatlingPea()
-{
-}
+/////////////// Logic ///////////////
 
-ZombieGatlingPea::~ZombieGatlingPea()
+void ZombieGatlingPea::onZombieInitialize()
 {
+	 ZombieShooter::onZombieInitialize();
 }

@@ -8,6 +8,11 @@
 #include "SexyAppFramework/Common.h"
 
 #include "GridItemCrater.h"
+#include "ReflectionBuilder.h"
+#include "GridItemAnimation.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemCrater::GridItemCrater()
 {
@@ -21,7 +26,7 @@ GridItemCraterProps::~GridItemCraterProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemCrater);
 
@@ -35,14 +40,6 @@ void GridItemCrater::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemCrater);
 }
 
-#include "GridItemAnimation.h"
-void GridItemCrater::onGridItemInitialize()
-{
-	 GridItemAnimation::setDefaultAnimRig();
-}
-
-#include "ReflectionBuilder.h"
-
 RT_CLASS_IMPLEMENT(GridItemCraterProps);
 
 void GridItemCraterProps::StaticClassInit()
@@ -55,4 +52,11 @@ void GridItemCraterProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(std::string, PopAnim);
 		REFLECTION_CLASSBUILDER_FIELD(SexyVector2, PopAnimRenderOffset);
 	REFLECTION_CLASSBUILDER_END(GridItemCraterProps);
+}
+
+/////////////// Logic ///////////////
+
+void GridItemCrater::onGridItemInitialize()
+{
+	 GridItemAnimation::setDefaultAnimRig();
 }

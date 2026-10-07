@@ -7,6 +7,8 @@
 
 #include "DamageInfo.h"
 
+/////////////// Lifecycle ///////////////
+
 DamageInfo::DamageInfo()
 	: Amount(0.f)
 	, Instigator(NULL)
@@ -61,11 +63,13 @@ DamageInfo::DamageInfo(const DamageInfo&) = default;
 
 DamageInfo::DamageInfo(DamageInfo&&) = default;
 
+DamageInfo::~DamageInfo() = default;
+
+/////////////// Logic ///////////////
+
 DamageInfo& DamageInfo::operator=(const DamageInfo&) = default;
 
 DamageInfo& DamageInfo::operator=(DamageInfo&&) = default;
-
-DamageInfo::~DamageInfo() = default;
 
 int DamageInfo::GetFrostAmount() const
 {
@@ -89,7 +93,6 @@ int DamageInfo::GetFrostAmount() const
 		return 0;
 	return 350;
 }
-
 
 bool DamageInfo::ObtainZombieCondition(ZombieConditions zcValue) const
 {

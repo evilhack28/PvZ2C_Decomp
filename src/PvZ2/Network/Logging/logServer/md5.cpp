@@ -9,6 +9,33 @@
 
 #include <cstring>
 
+/////////////// Lifecycle ///////////////
+
+/* Default construct. */
+MD5::MD5() {
+	reset();
+}
+
+/* Construct a MD5 object with a input buffer. */
+MD5::MD5(const void* input, size_t length) {
+	reset();
+	update(input, length);
+}
+
+/* Construct a MD5 object with a string. */
+MD5::MD5(const string& str) {
+	reset();
+	update(str);
+}
+
+/* Construct a MD5 object with a file. */
+MD5::MD5(ifstream& in) {
+	reset();
+	update(in);
+}
+
+/////////////// Logic ///////////////
+
 /* Constants for MD5Transform routine. */
 #define s11 7
 #define s12 12
@@ -43,16 +70,19 @@ Rotation is separate from addition to prevent recomputation. */
 	(a) = ROTATE_LEFT ((a), (s)); \
 	(a) += (b); \
 }
+
 #define GG(a, b, c, d, x, s, ac) { \
 	(a) += G ((b), (c), (d)) + (x) + ac; \
 	(a) = ROTATE_LEFT ((a), (s)); \
 	(a) += (b); \
 }
+
 #define HH(a, b, c, d, x, s, ac) { \
 	(a) += H ((b), (c), (d)) + (x) + ac; \
 	(a) = ROTATE_LEFT ((a), (s)); \
 	(a) += (b); \
 }
+
 #define II(a, b, c, d, x, s, ac) { \
 	(a) += I ((b), (c), (d)) + (x) + ac; \
 	(a) = ROTATE_LEFT ((a), (s)); \
@@ -60,35 +90,13 @@ Rotation is separate from addition to prevent recomputation. */
 }
 
 const byte MD5::PADDING[64] = { 0x80 };
+
 const char MD5::HEX[16] = {
 	'0', '1', '2', '3',
 	'4', '5', '6', '7',
 	'8', '9', 'a', 'b',
 	'c', 'd', 'e', 'f'
 };
-
-/* Default construct. */
-MD5::MD5() {
-	reset();
-}
-
-/* Construct a MD5 object with a input buffer. */
-MD5::MD5(const void* input, size_t length) {
-	reset();
-	update(input, length);
-}
-
-/* Construct a MD5 object with a string. */
-MD5::MD5(const string& str) {
-	reset();
-	update(str);
-}
-
-/* Construct a MD5 object with a file. */
-MD5::MD5(ifstream& in) {
-	reset();
-	update(in);
-}
 
 /* Return the message-digest */
 const byte* MD5::digest() {

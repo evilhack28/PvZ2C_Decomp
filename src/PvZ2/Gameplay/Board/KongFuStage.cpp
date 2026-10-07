@@ -21,11 +21,10 @@
 #include "LawnApp.h"
 #include "ScaledApp.h"
 
-CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_MECHANISM_BG("IMAGE_BACKGROUNDS_KONGFU_BG");
-CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_MECHANISM_TRACK("IMAGE_BACKGROUNDS_KONGFU_TRACK");
-static SexyVector2 s_trackOffset(5.0f, -25.0f);
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(KongFuStage);
+
 void KongFuStage::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(KongFuStage);
@@ -37,6 +36,7 @@ void KongFuStage::StaticClassInit()
 }
 
 RT_CLASS_IMPLEMENT(KongFuStageProperties);
+
 void KongFuStageProperties::StaticClassInit()
 {
 	REFLECTION_CLASSBUILDER_BEGIN(KongFuStageProperties);
@@ -47,6 +47,13 @@ void KongFuStageProperties::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(KongFuStageProperties);
 }
 
+/////////////// Logic ///////////////
+
+CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_MECHANISM_BG("IMAGE_BACKGROUNDS_KONGFU_BG");
+
+CachedResourcePtr<Sexy::Image> IMAGE_BACKGROUNDS_MECHANISM_TRACK("IMAGE_BACKGROUNDS_KONGFU_TRACK");
+
+static SexyVector2 s_trackOffset(5.0f, -25.0f);
 
 void KongFuStage::renderBackground(Graphics* i_g)
 {
@@ -75,13 +82,11 @@ void KongFuStage::renderBackground(Graphics* i_g)
 	}
 }
 
-
 void KongFuStage::registerForEvents()
 {
 	StageModule::registerForEvents();
 	getManager()->RegisterOnLoadComplete(Sexy::MakeDelegate(*this, &KongFuStage::parseGearImages));
 }
-
 
 void KongFuStage::onZombieTypeCountChange(ZombieTypePtr i_type, int i_from, int i_to)
 {
@@ -96,20 +101,17 @@ void KongFuStage::onZombieTypeCountChange(ZombieTypePtr i_type, int i_from, int 
 	}
 }
 
-
 void KongFuStage::stopZombieGroans()
 {
 	AudioMgr::GetInstancePtr()->SendEvent("Stop_Zomb_KongFu_Sarcophagus_Mommy", NULL);
 	StageModule::stopZombieGroans();
 }
 
-
 void KongFuStage::onPostLoad()
 {
 	StageModule::onPostLoad();
 	parseGearImages();
 }
-
 
 void KongFuStage::parseGearImages()
 {

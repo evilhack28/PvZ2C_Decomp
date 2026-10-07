@@ -17,6 +17,9 @@
 #include "EntityFinder.h"
 #include "BoardConstants.h"
 #include <limits>
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PowerupVaseBreakerButter::PowerupVaseBreakerButter()
 {
@@ -26,9 +29,11 @@ PowerupVaseBreakerButter::~PowerupVaseBreakerButter()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PowerupVaseBreakerButter);
+
+/////////////// Logic ///////////////
 
 Zombie* PowerupVaseBreakerButter::getClosestButterableZombie(const SexyVector2& i_location, float i_maxGridSquareDistance)
 {

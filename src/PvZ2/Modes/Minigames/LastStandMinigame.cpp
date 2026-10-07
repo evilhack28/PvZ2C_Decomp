@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "LastStandMinigame.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 LastStandMinigameProperties::~LastStandMinigameProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(LastStandMinigameProperties);
 

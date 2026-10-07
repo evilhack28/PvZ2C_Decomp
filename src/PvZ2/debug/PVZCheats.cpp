@@ -22,11 +22,26 @@
 #include "PvZ/LawnApp.h"
 #include "PvZ/DangerRoomManager.h"
 #include "PvZ/DangerRoomModule.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CheatVariable::~CheatVariable()
 {
 }
-
 
 CheatGameUnlockToEvent::~CheatGameUnlockToEvent()
 {
@@ -39,7 +54,6 @@ CheatGameStartNarrative::~CheatGameStartNarrative()
 CheatGameSpawnCollectable::~CheatGameSpawnCollectable()
 {
 }
-
 
 CheatGameSpawnPlantCommand::~CheatGameSpawnPlantCommand()
 {
@@ -73,61 +87,37 @@ CheatPlantsVsZombiesStartWorldCommand::~CheatPlantsVsZombiesStartWorldCommand()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CheatVariable);
 
-#include "ReflectionBuilder.h"
-
 RT_CLASS_IMPLEMENT(CheatGameFeatureToggle);
-
-#include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(CheatGameUnlockToEvent);
 
-#include "ReflectionBuilder.h"
-
 RT_CLASS_IMPLEMENT(CheatGameStartNarrative);
-
-#include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(CheatGameSpawnCollectable);
 
-#include "ReflectionBuilder.h"
-
 RT_CLASS_IMPLEMENT(CheatGameProfileLockToggle);
-
-#include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(CheatGameSpawnPlantCommand);
 
-#include "ReflectionBuilder.h"
-
 RT_CLASS_IMPLEMENT(CheatGameStartLevelCommand);
-
-#include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(CheatGameSpawnZombieCommand);
 
-#include "ReflectionBuilder.h"
-
 RT_CLASS_IMPLEMENT(CheatGameSpawnCreatureCommand);
-
-#include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(CheatAutoTestStartLevelCommand);
 
-#include "ReflectionBuilder.h"
-
 RT_CLASS_IMPLEMENT(CheatDangerRoomStartLevelCommand);
-
-#include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(CheatAutoTestStartUnlockLevelCommand);
 
-#include "ReflectionBuilder.h"
-
 RT_CLASS_IMPLEMENT(CheatPlantsVsZombiesStartWorldCommand);
+
+/////////////// Logic ///////////////
 
 void CheatVariable::SetValue(float i_value)
 {
@@ -233,6 +223,7 @@ void CheatGameSpawnCreatureCommand::spawnCreature()
 }
 
 extern int cheat_spawn_zombie_row;
+
 extern int cheat_spawn_zombie_level;
 
 void CheatGameSpawnZombieCommand::spawnZombie()

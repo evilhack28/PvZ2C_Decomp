@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CannonMinigame.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CannonMinigameProperties::~CannonMinigameProperties()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CannonMinigameProperties);
 

@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "DaveTaskConfig.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 DaveTaskConfig::DaveTaskConfig()
 {
@@ -17,7 +20,7 @@ DaveTaskConfig::~DaveTaskConfig()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(DaveTaskConfig);
 

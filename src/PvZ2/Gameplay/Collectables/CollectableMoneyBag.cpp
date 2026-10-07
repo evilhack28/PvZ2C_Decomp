@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CollectableMoneyBag.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CollectableMoneyBagType::~CollectableMoneyBagType()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CollectableMoneyBagType);
 

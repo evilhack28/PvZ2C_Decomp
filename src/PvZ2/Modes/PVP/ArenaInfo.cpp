@@ -9,6 +9,8 @@
 
 #include "ArenaInfo.h"
 
+/////////////// Lifecycle ///////////////
+
 ArenaInfo::~ArenaInfo()
 {
 }
@@ -26,6 +28,8 @@ ArenaInfo::ArenaInfo(const ArenaInfo& i_info)
 	ArenaPlantList2 = i_info.ArenaPlantList2;
 	ArenaPlantList3 = i_info.ArenaPlantList3;
 }
+
+/////////////// Logic ///////////////
 
 void ArenaInfo::RestartArenaInfo()
 {

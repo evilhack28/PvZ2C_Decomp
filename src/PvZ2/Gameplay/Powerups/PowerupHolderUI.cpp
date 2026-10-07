@@ -11,6 +11,7 @@
 #include "PowerupUI.h"
 namespace MiniGameCollectionUtils { bool IsPlayingMiniGameCollectionLevel(); }
 #include "PVZ2UIButton.h"
+#include "RedPacketRewardInfo.h"
 
 PowerupHolderUI::PowerupHolderUI()
 {
@@ -26,8 +27,8 @@ RT_CLASS_IMPLEMENT(PowerupHolderUI);
 
 /////////////// Functions ///////////////
 
-static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_HUD_INGAME_POWERUP_CUKE_FRAME("IMAGE_UI_HUD_INGAME_POWERUP_CUKE_FRAME");
-static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_POWERUPS_POWERUP_FRAME_MINIGAMES("IMAGE_UI_POWERUPS_POWERUP_FRAME_MINIGAMES");
+static WEAKIMAGE(IMAGE_UI_HUD_INGAME_POWERUP_CUKE_FRAME, "IMAGE_UI_HUD_INGAME_POWERUP_CUKE_FRAME")
+static WEAKIMAGE(IMAGE_UI_POWERUPS_POWERUP_FRAME_MINIGAMES, "IMAGE_UI_POWERUPS_POWERUP_FRAME_MINIGAMES")
 
 static bool FlagClickable(UIWidgetFlags f) { return TestFlag(f, UIFLAG_CLICKABLE); }
 static int UiScaleI(int v) { return UI_S(v); }

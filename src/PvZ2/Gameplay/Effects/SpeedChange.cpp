@@ -15,12 +15,43 @@
 #include "PlayerInfo.h"
 #include "ProfileUtils.h"
 #include "AnimationControllerHelpers.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 SpeedChange::SpeedChange()
 	: m_isTutorial(false)
 	, m_tutorialArrow(nullptr)
 {
 }
+
+SpeedChange::~SpeedChange()
+{
+	if (m_tutorialArrow)
+	{
+		if (m_tutorialArrow->GetPtr().IsValid())
+			m_tutorialArrow->GetPtr()->Destroy();
+		m_tutorialArrow->GetPtr().ClearId();
+		m_tutorialArrow = nullptr;
+	}
+	gMessageRouter->Unsubscribe(this);
+}
+
+/////////////// Reflection ///////////////
+
+RT_CLASS_IMPLEMENT(SpeedChange);
+
+void SpeedChange::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(SpeedChange);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
+
+	REFLECTION_CLASSBUILDER_END(SpeedChange);
+}
+
+/////////////// Logic ///////////////
 
 void SpeedChange::onGameplayEnded()
 {
@@ -70,32 +101,6 @@ void SpeedChange::initLoadingResourcesGroupList()
 {
 }
 
-#include "ReflectionBuilder.h"
-
-RT_CLASS_IMPLEMENT(SpeedChange);
-
-void SpeedChange::StaticClassInit()
-{
-	REFLECTION_CLASSBUILDER_BEGIN(SpeedChange);
-	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
-
-		REFLECTION_CLASSBUILDER_ANCESTOR(UIWidget);
-
-	REFLECTION_CLASSBUILDER_END(SpeedChange);
-}
-
-SpeedChange::~SpeedChange()
-{
-	if (m_tutorialArrow)
-	{
-		if (m_tutorialArrow->GetPtr().IsValid())
-			m_tutorialArrow->GetPtr()->Destroy();
-		m_tutorialArrow->GetPtr().ClearId();
-		m_tutorialArrow = nullptr;
-	}
-	gMessageRouter->Unsubscribe(this);
-}
-
 namespace Message { void TutorialFTUE(int event); }
 
 void SpeedChange::onGameStart()
@@ -108,6 +113,7 @@ void SpeedChange::onGameStart()
 }
 
 static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_SPEEDCHANGE_X1("IMAGE_UI_HUD_INGAME_SPEED");
+
 static CachedUIResourcePtr<Sexy::Image> IMAGE_UI_SPEEDCHANGE_X2("IMAGE_UI_HUD_INGAME_SPEED_DOWN");
 
 void SpeedChange::Draw(Graphics* i_g)

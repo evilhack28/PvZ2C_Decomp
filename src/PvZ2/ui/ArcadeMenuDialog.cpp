@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ArcadeMenuDialog.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ArcadeMenuDialog::ArcadeMenuDialog()
 {
@@ -17,7 +20,7 @@ ArcadeMenuDialog::~ArcadeMenuDialog()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ArcadeMenuDialog);
 
@@ -30,6 +33,8 @@ void ArcadeMenuDialog::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ArcadeMenuDialog);
 }
+
+/////////////// Logic ///////////////
 
 ArcadeMenuDialog* ArcadeMenuDialog::Clone() const
 {

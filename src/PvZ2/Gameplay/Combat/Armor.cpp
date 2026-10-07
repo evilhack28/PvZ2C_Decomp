@@ -19,6 +19,26 @@
 
 #include "ReflectionBuilder.h"
 
+/////////////// Lifecycle ///////////////
+
+Armor::Armor()
+	: m_propertySheetPtr(nullptr)
+	, m_ownerZombiePtr(nullptr)
+	, m_health(0.0f)
+	, m_maxHealth(0.0f)
+	, m_damageState(-1)
+	, m_destroyed(false)
+	, m_armorFlagsOverride(ARMOR_None)
+{
+}
+
+Armor::~Armor()
+{
+	m_cachedPropertySheet = nullptr;
+}
+
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(Armor);
 
 void Armor::StaticClassInit()
@@ -35,6 +55,32 @@ void Armor::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(int32, m_armorFlagsOverride);
 	REFLECTION_CLASSBUILDER_END(Armor);
 }
+
+/////////////// Accessors ///////////////
+
+std::string Armor::GetArmorType() const
+{
+	return getProps()->ArmorType;
+}
+
+ArmorTypeFlags Armor::GetArmorFlags() const
+{
+	return m_armorFlagsOverride == ARMOR_None ? getProps()->ArmorFlags : m_armorFlagsOverride;
+}
+
+bool Armor::IsDecorativePassthrough()
+{
+	return TestFlag(getProps()->ArmorFlags, ARMOR_PASSDAMAGE);
+}
+
+void Armor::SetPropertySheet(ArmorPropertySheetPtr i_propertySheetPtr)
+{
+	m_propertySheetPtr = i_propertySheetPtr;
+	m_cachedPropertySheet = m_propertySheetPtr.Get();
+	m_maxHealth = m_health = getProps()->BaseHealth;
+}
+
+/////////////// Logic ///////////////
 
 void Armor::onTakeDamage(const DamageInfo& i_damageInfo)
 {
@@ -53,21 +99,6 @@ const ArmorPropertySheet* Armor::getProps() const
 	return m_cachedPropertySheet;
 }
 
-std::string Armor::GetArmorType() const
-{
-	return getProps()->ArmorType;
-}
-
-ArmorTypeFlags Armor::GetArmorFlags() const
-{
-	return m_armorFlagsOverride == ARMOR_None ? getProps()->ArmorFlags : m_armorFlagsOverride;
-}
-
-bool Armor::IsDecorativePassthrough()
-{
-	return TestFlag(getProps()->ArmorFlags, ARMOR_PASSDAMAGE);
-}
-
 void Armor::onPostLoad()
 {
 	m_cachedPropertySheet = m_propertySheetPtr.Get();
@@ -82,29 +113,6 @@ void Armor::DestroyArmor()
 void Armor::ReinitializeFromPropertySheet()
 {
 	SetPropertySheet(m_propertySheetPtr);
-}
-
-void Armor::SetPropertySheet(ArmorPropertySheetPtr i_propertySheetPtr)
-{
-	m_propertySheetPtr = i_propertySheetPtr;
-	m_cachedPropertySheet = m_propertySheetPtr.Get();
-	m_maxHealth = m_health = getProps()->BaseHealth;
-}
-
-Armor::Armor()
-	: m_propertySheetPtr(nullptr)
-	, m_ownerZombiePtr(nullptr)
-	, m_health(0.0f)
-	, m_maxHealth(0.0f)
-	, m_damageState(-1)
-	, m_destroyed(false)
-	, m_armorFlagsOverride(ARMOR_None)
-{
-}
-
-Armor::~Armor()
-{
-	m_cachedPropertySheet = nullptr;
 }
 
 void Armor::InitializeArmor(ArmorPropertySheetPtr i_propertySheet, RtWeakPtr<Zombie> i_owner)
@@ -246,4 +254,3 @@ DamageInfo Armor::TakeDamage(const DamageInfo& i_damageInfo)
 	updateDamageState();
 	return result;
 }
-

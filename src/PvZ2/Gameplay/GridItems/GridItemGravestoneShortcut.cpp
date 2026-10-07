@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "GridItemGravestoneShortcut.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemGravestoneShortcut::GridItemGravestoneShortcut()
 {
@@ -17,7 +20,7 @@ GridItemGravestoneShortcut::~GridItemGravestoneShortcut()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemGravestoneShortcut);
 

@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CollectableGem.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 CollectableGemType::~CollectableGemType()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CollectableGemType);
 

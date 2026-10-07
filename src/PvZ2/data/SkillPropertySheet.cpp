@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "SkillPropertySheet.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 SkillPropertySheet::~SkillPropertySheet()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(SkillPropertySheet);
 

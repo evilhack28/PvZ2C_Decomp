@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PlantFamilyPropertySheet.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantFamilyPropertySheet::PlantFamilyPropertySheet()
 {
@@ -17,7 +20,7 @@ PlantFamilyPropertySheet::~PlantFamilyPropertySheet()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantFamilyPropertySheet);
 

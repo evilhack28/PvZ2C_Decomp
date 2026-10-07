@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieAnimRig_Mech.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieAnimRig_ConeMech::ZombieAnimRig_ConeMech()
 {
@@ -16,6 +19,22 @@ ZombieAnimRig_ConeMech::ZombieAnimRig_ConeMech()
 ZombieAnimRig_ConeMech::~ZombieAnimRig_ConeMech()
 {
 }
+
+/////////////// Reflection ///////////////
+
+RT_CLASS_IMPLEMENT(ZombieAnimRig_ConeMech);
+
+void ZombieAnimRig_ConeMech::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(ZombieAnimRig_ConeMech);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(ZombieAnimRig_Mech);
+
+	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_ConeMech);
+}
+
+/////////////// Logic ///////////////
 
 void ZombieAnimRig_ConeMech::SetDamageState(int i_damageState)
 {
@@ -39,18 +58,4 @@ void ZombieAnimRig_ConeMech::SetDamageState(int i_damageState)
 	SetLayerVisibility("damage6_mouth1", aVisible6);
 	SetLayerVisibility("damage6_mouth2", aVisible6);
 	SetLayerVisibility("damage6_mouth3", aVisible6);
-}
-
-#include "ReflectionBuilder.h"
-
-RT_CLASS_IMPLEMENT(ZombieAnimRig_ConeMech);
-
-void ZombieAnimRig_ConeMech::StaticClassInit()
-{
-	REFLECTION_CLASSBUILDER_BEGIN(ZombieAnimRig_ConeMech);
-	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
-
-		REFLECTION_CLASSBUILDER_ANCESTOR(ZombieAnimRig_Mech);
-
-	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_ConeMech);
 }

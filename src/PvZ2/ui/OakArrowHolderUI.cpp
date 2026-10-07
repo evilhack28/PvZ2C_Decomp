@@ -10,6 +10,9 @@
 #include "OakArrowHolderUI.h"
 #include "Graphics.h"
 #include "ResourceHelpers.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 OakArrowHolderUI::OakArrowHolderUI()
 {
@@ -19,9 +22,11 @@ OakArrowHolderUI::~OakArrowHolderUI()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(OakArrowHolderUI);
+
+/////////////// Logic ///////////////
 
 static CachedResourcePtr<Sexy::Image> g_holderBg("IMAGE_UI_HUD_INGAME_OAK_ARROW_HOLDER_BG");
 

@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ServerConfig.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ServerConfig::ServerConfig()
 {
@@ -17,7 +20,7 @@ ServerConfig::~ServerConfig()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ServerConfig);
 

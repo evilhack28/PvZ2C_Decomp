@@ -12,6 +12,8 @@
 #include "ActivityConfig.h"
 #include "TodLib/TodStringFile.h"
 
+/////////////// Lifecycle ///////////////
+
 TipsManager::~TipsManager()
 {
 }
@@ -25,6 +27,8 @@ TipsManager::TipsManager()
 {
     m_pBannerImg = nullptr;
 }
+
+/////////////// Logic ///////////////
 
 void TipsManager::StopTip()
 {

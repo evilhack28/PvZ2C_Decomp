@@ -3,6 +3,8 @@
 #include "PVZDB.h"
 #include "drivers/app/android/JavaInterface.h"
 
+/////////////// Logic ///////////////
+
 PVZVersion Version::LoadedRSB()
 {
 	PVZVersion result;

@@ -15,6 +15,8 @@
 #include "Rect.h"
 #include "TodCommon.h"
 
+/////////////// Logic ///////////////
+
 namespace BoardTransforms
 {
 

@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PlantAnimRig_LightningReed.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PlantAnimRig_LightningReed::PlantAnimRig_LightningReed()
 {
@@ -17,9 +20,11 @@ PlantAnimRig_LightningReed::~PlantAnimRig_LightningReed()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PlantAnimRig_LightningReed);
+
+/////////////// Logic ///////////////
 
 bool PlantAnimRig_LightningReed::PlayAttackAnim(const std::string& i_attackAnim)
 {
@@ -32,4 +37,3 @@ bool PlantAnimRig_LightningReed::PlayAttackAnim(const std::string& i_attackAnim)
 
 	return false;
 }
-

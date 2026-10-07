@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieZombossMech_LostCity.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 ZombieZombossMechLostCityProps::ZombieZombossMechLostCityProps()
 {
@@ -17,7 +20,7 @@ ZombieZombossMechLostCityProps::~ZombieZombossMechLostCityProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(ZombieZombossMechLostCityProps);
 

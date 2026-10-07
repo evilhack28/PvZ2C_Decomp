@@ -14,8 +14,7 @@
 #include "StringHelper.h"
 #include "TimeMgr.h"
 
-NetworkMgr* NetworkMgr::s_pNetworkMgr = NULL;
-NetworkMgr* gNetworkMgr = NULL;
+/////////////// Lifecycle ///////////////
 
 NetworkMgr::NetworkMgr()
 {
@@ -34,12 +33,7 @@ NetworkMgr::~NetworkMgr()
 	SAFE_DELETE(m_pNetWorkMsgProc);
 }
 
-NetworkMgr* NetworkMgr::Instance()
-{
-	if (!s_pNetworkMgr)
-		s_pNetworkMgr = new NetworkMgr();
-	return s_pNetworkMgr;
-}
+/////////////// Accessors ///////////////
 
 INetworkMsgProcess* NetworkMgr::GetNewNetWorkProcess()
 {
@@ -49,6 +43,19 @@ INetworkMsgProcess* NetworkMgr::GetNewNetWorkProcess()
 INetworkMsgProcess* NetworkMgr::GetNetWorkProcess()
 {
 	return m_pNetWorkMsgProc;
+}
+
+/////////////// Logic ///////////////
+
+NetworkMgr* NetworkMgr::s_pNetworkMgr = NULL;
+
+NetworkMgr* gNetworkMgr = NULL;
+
+NetworkMgr* NetworkMgr::Instance()
+{
+	if (!s_pNetworkMgr)
+		s_pNetworkMgr = new NetworkMgr();
+	return s_pNetworkMgr;
 }
 
 int NetworkMgr::Init()

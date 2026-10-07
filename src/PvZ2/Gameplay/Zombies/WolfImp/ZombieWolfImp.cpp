@@ -11,6 +11,8 @@
 
 #include "ReflectionBuilder.h"
 
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT(ZombieWolfImp);
 
 void ZombieWolfImp::StaticClassInit()
@@ -22,6 +24,8 @@ void ZombieWolfImp::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ZombieWolfImp);
 }
+
+/////////////// Accessors ///////////////
 
 float ZombieWolfImp::GetAmberScale()
 {

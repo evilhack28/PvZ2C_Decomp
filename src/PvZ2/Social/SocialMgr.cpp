@@ -10,13 +10,40 @@
 #include "SocialMgr.h"
 #include "GameEventMgr.h"
 
-void SocialMgr::Destory()
+/////////////// Lifecycle ///////////////
+
+SocialMgr::SocialMgr()
 {
+	m_socialPlatformType = SPT_None;
+	m_socialInfo = new SocialInfo();
 }
+
+SocialMgr::~SocialMgr()
+{
+	delete m_socialInfo;
+}
+
+/////////////// Accessors ///////////////
 
 const AuthInfo& SocialMgr::GetAuthInfo()
 {
 	return m_authInfo;
+}
+
+SocialInfo* SocialMgr::GetSocialInfo() const
+{
+	return m_socialInfo;
+}
+
+SocialPlatformType SocialMgr::GetSocialPlatformType()
+{
+	return m_socialPlatformType;
+}
+
+/////////////// Logic ///////////////
+
+void SocialMgr::Destory()
+{
 }
 
 bool SocialMgr::LoginSocialPlatform(SocialPlatformType i_platform)
@@ -32,27 +59,6 @@ bool SocialMgr::ShareContentToPlatform(const std::string& i_title, const std::st
 bool SocialMgr::Init()
 {
 	return true;
-}
-
-SocialInfo* SocialMgr::GetSocialInfo() const
-{
-	return m_socialInfo;
-}
-
-SocialMgr::SocialMgr()
-{
-	m_socialPlatformType = SPT_None;
-	m_socialInfo = new SocialInfo();
-}
-
-SocialMgr::~SocialMgr()
-{
-	delete m_socialInfo;
-}
-
-SocialPlatformType SocialMgr::GetSocialPlatformType()
-{
-	return m_socialPlatformType;
 }
 
 bool SocialMgr::LogoutSocialPlatform(bool bClean)

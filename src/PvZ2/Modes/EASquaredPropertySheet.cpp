@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "EASquaredPropertySheet.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 EASquaredPropertySheet::~EASquaredPropertySheet()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(EASquaredPropertySheet);
 

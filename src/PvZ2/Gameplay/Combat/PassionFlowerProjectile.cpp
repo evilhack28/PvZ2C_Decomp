@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PassionFlowerProjectile.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PassionFlowerProjectileProps::~PassionFlowerProjectileProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PassionFlowerProjectileProps);
 

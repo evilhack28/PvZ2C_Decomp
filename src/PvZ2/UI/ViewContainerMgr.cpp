@@ -2,6 +2,8 @@
 #include "ViewContainerMgr.h"
 #include "IViewContainer.h"
 
+/////////////// Lifecycle ///////////////
+
 ViewContainerMgr::ViewContainerMgr()
 	: m_viewContainerMgr(nullptr)
 {
@@ -10,6 +12,8 @@ ViewContainerMgr::ViewContainerMgr()
 ViewContainerMgr::~ViewContainerMgr()
 {
 }
+
+/////////////// Logic ///////////////
 
 void ViewContainerMgr::InitializeSDK()
 {

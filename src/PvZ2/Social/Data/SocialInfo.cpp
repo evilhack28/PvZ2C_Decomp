@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "SocialInfo.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 SocialInfo::SocialInfo()
 {
@@ -17,19 +20,56 @@ SocialInfo::~SocialInfo()
 {
 }
 
+/////////////// Reflection ///////////////
+
+RT_CLASS_IMPLEMENT(SocialInfo);
+
+void SocialInfo::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(FriendInfo);
+		REFLECTION_CLASSBUILDER_FIELD_RENAME(int32, userId, ui);
+		REFLECTION_CLASSBUILDER_FIELD_RENAME(SexyString, name, n);
+		REFLECTION_CLASSBUILDER_FIELD_RENAME(int, imageId, imgi);
+		REFLECTION_CLASSBUILDER_FIELD_RENAME(int, star, s);
+		REFLECTION_CLASSBUILDER_FIELD_RENAME(int, giftLeftTime, glt);
+	REFLECTION_CLASSBUILDER_END(FriendInfo);
+
+	REFLECTION_CLASSBUILDER_BEGIN(SocialInfo);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_FIELD_RENAME(std::vector<FriendInfo>, m_friendList, fl);
+		REFLECTION_CLASSBUILDER_FIELD_RENAME(std::vector<int32>, m_borrowedplantList, bl);
+	REFLECTION_CLASSBUILDER_END(SocialInfo);
+}
+
+/////////////// Accessors ///////////////
+
 std::vector<int32>& SocialInfo::GetBorrowedPlantList()
 {
 	return m_borrowedplantList;
 }
 
-void SocialInfo::AddBorrowedPlantList(int32 userId)
-{
-	m_borrowedplantList.push_back(userId);
-}
-
 std::vector<FriendInfo>& SocialInfo::GetFriendList()
 {
 	return m_friendList;
+}
+
+std::vector<int32>& SocialInfo::GetReceivedSunList()
+{
+	return m_receivesunList;
+}
+
+void SocialInfo::GetGameRank(std::vector<GameRankInfo> &i_info, int i_star)
+{
+	if ((unsigned)i_star < GAME_RANK_STAR_COUNT)
+		i_info = m_gameRankList[i_star];
+}
+
+/////////////// Logic ///////////////
+
+void SocialInfo::AddBorrowedPlantList(int32 userId)
+{
+	m_borrowedplantList.push_back(userId);
 }
 
 SexyString SocialInfo::GetFriendNameById(int32 i_userId)
@@ -54,45 +94,12 @@ void SocialInfo::SetFriendLeftTime(int32 i_userId, int i_time)
 	}
 }
 
-std::vector<int32>& SocialInfo::GetReceivedSunList()
-{
-	return m_receivesunList;
-}
-
 void SocialInfo::RemoveUsedFriendSunList(int32 userId)
 {
 	m_receivesunList.erase(std::remove(m_receivesunList.begin(), m_receivesunList.end(), userId), m_receivesunList.end());
 }
 
-void SocialInfo::GetGameRank(std::vector<GameRankInfo> &i_info, int i_star)
-{
-	if ((unsigned)i_star < GAME_RANK_STAR_COUNT)
-		i_info = m_gameRankList[i_star];
-}
-
 std::vector<int32> SocialInfo::getUsedSunList()
 {
 	return m_usedsunList;
-}
-
-#include "ReflectionBuilder.h"
-
-RT_CLASS_IMPLEMENT(SocialInfo);
-
-void SocialInfo::StaticClassInit()
-{
-	REFLECTION_CLASSBUILDER_BEGIN(FriendInfo);
-		REFLECTION_CLASSBUILDER_FIELD_RENAME(int32, userId, ui);
-		REFLECTION_CLASSBUILDER_FIELD_RENAME(SexyString, name, n);
-		REFLECTION_CLASSBUILDER_FIELD_RENAME(int, imageId, imgi);
-		REFLECTION_CLASSBUILDER_FIELD_RENAME(int, star, s);
-		REFLECTION_CLASSBUILDER_FIELD_RENAME(int, giftLeftTime, glt);
-	REFLECTION_CLASSBUILDER_END(FriendInfo);
-
-	REFLECTION_CLASSBUILDER_BEGIN(SocialInfo);
-	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
-
-		REFLECTION_CLASSBUILDER_FIELD_RENAME(std::vector<FriendInfo>, m_friendList, fl);
-		REFLECTION_CLASSBUILDER_FIELD_RENAME(std::vector<int32>, m_borrowedplantList, bl);
-	REFLECTION_CLASSBUILDER_END(SocialInfo);
 }

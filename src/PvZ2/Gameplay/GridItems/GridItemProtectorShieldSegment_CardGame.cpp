@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieCardGameProtector.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemProtectorShieldSegment_CardGame::GridItemProtectorShieldSegment_CardGame()
 {
@@ -17,7 +20,7 @@ GridItemProtectorShieldSegment_CardGame::~GridItemProtectorShieldSegment_CardGam
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemProtectorShieldSegment_CardGame);
 
@@ -30,6 +33,8 @@ void GridItemProtectorShieldSegment_CardGame::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(GridItemProtectorShieldSegment_CardGame);
 }
+
+/////////////// Logic ///////////////
 
 void GridItemProtectorShieldSegment_CardGame::onGridItemInitialize()
 {

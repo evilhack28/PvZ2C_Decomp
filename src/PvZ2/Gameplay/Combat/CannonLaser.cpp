@@ -15,22 +15,25 @@
 #include "Effect_PopAnim.h"
 #include "EntityFinder.h"
 #include "ScaledApp.h"
+#include "ReflectionBuilder.h"
 
-using namespace Sexy;
-
-SexyVector2 boardToScreenSpace(const SexyVector3& i_vector);
-SexyVector2 artPointToScreenPoint(const Point& i_artPoint);
-float getAngleForVector(const SexyVector2& i_vector);
-
-void CannonLaser::onDestroy()
-{
-}
+/////////////// Lifecycle ///////////////
 
 CannonLaser::~CannonLaser()
 {
 }
 
-#include "ReflectionBuilder.h"
+CannonLaser::CannonLaser()
+	: m_laserOriginRig(nullptr)
+	, m_laserRig(nullptr)
+	, m_timerDestroy(PVZ_EOT())
+	, m_timerAttack(0)
+	, m_bCanCollision(false)
+	, m_laserState(0)
+{
+}
+
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(CannonLaser);
 
@@ -45,10 +48,7 @@ void CannonLaser::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(CannonLaser);
 }
 
-bool CannonLaser::ShouldDrawShadow() const
-{
-	return false;
-}
+/////////////// Accessors ///////////////
 
 void CannonLaser::SetTarget(const SexyVector3& from, const SexyVector3& to)
 {
@@ -64,14 +64,23 @@ float CannonLaser::GetCross(const SexyVector3& p)
 	return b.y * a.x - b.x * a.y;
 }
 
-CannonLaser::CannonLaser()
-	: m_laserOriginRig(nullptr)
-	, m_laserRig(nullptr)
-	, m_timerDestroy(PVZ_EOT())
-	, m_timerAttack(0)
-	, m_bCanCollision(false)
-	, m_laserState(0)
+/////////////// Logic ///////////////
+
+using namespace Sexy;
+
+SexyVector2 boardToScreenSpace(const SexyVector3& i_vector);
+
+SexyVector2 artPointToScreenPoint(const Point& i_artPoint);
+
+float getAngleForVector(const SexyVector2& i_vector);
+
+void CannonLaser::onDestroy()
 {
+}
+
+bool CannonLaser::ShouldDrawShadow() const
+{
+	return false;
 }
 
 void CannonLaser::onUpdate(pvztime_t i_dt)

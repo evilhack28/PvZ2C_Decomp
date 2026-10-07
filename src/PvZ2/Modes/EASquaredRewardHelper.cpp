@@ -4,7 +4,10 @@
 #include "AudioMgr.h"
 #include "LawnApp.h"
 
+/////////////// Logic ///////////////
+
 int EASquaredRewardHelper::sm_numCoinsToRewardForCompletion = 0;
+
 PVZ2UIAwardScreen* EASquaredRewardHelper::m_awardScreen = NULL;
 
 void EASquaredRewardHelper::onCoinAwardScreenDismissed()

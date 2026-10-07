@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "GridItemBarrel.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemBarrelAnimRig::~GridItemBarrelAnimRig()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemBarrelAnimRig);
 
@@ -27,8 +30,9 @@ void GridItemBarrelAnimRig::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GridItemBarrelAnimRig);
 }
 
+/////////////// Logic ///////////////
+
 void GridItemBarrelAnimRig::PlayRoll()
 {
 	PlayAndContinue("roll");
 }
-

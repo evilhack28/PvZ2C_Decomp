@@ -8,12 +8,15 @@
 #include "SexyAppFramework/Common.h"
 
 #include "GridItemRenaiStatue.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 GridItemRenaiHalfStatueProps::~GridItemRenaiHalfStatueProps()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(GridItemRenaiHalfStatueProps);
 

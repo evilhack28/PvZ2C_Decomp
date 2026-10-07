@@ -11,6 +11,9 @@
 #include "LevelModuleManager.h"
 #include "PirateStage.h"
 #include "RtDelegate.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
 
 PiratePlankModule::PiratePlankModule()
 {
@@ -20,9 +23,11 @@ PiratePlankModule::~PiratePlankModule()
 {
 }
 
-#include "ReflectionBuilder.h"
+/////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(PiratePlankModule);
+
+/////////////// Logic ///////////////
 
 void PiratePlankModule::registerForEvents()
 {

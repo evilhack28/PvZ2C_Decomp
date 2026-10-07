@@ -15,14 +15,7 @@
 #include "gameNetWork/events/NetWorkEvent.h"
 #include "SexyAppFramework/drivers/app/android/JavaInterface.h"
 
-_NetworkEventConfig& GetTimeServerConfig(bool bForce);
-long GetTimeTime(const char* i_str);
-
-namespace Message { void ServerTimeReceived(); }
-
-ServerTime* ServerTime::s_pServerTime = NULL;
-
-static const int s_retryDelay[5] = { 10, 30, 60, 90, 100 };
+/////////////// Lifecycle ///////////////
 
 ServerTime::ServerTime()
 	: m_IsConnected(false)
@@ -46,6 +39,41 @@ ServerTime::~ServerTime()
 	handlers.clear();
 }
 
+/////////////// Accessors ///////////////
+
+long ServerTime::GetServerTime()
+{
+	return m_ServerTime;
+}
+
+const tm* ServerTime::GetServerTimeS()
+{
+	Sexy::AutoCrit lock(mHttpRequestCS);
+	if (m_ServerTime == 0)
+		return NULL;
+	return localtime((const time_t*)&m_ServerTime);
+}
+
+void ServerTime::GetServerTimeFromNet(CServerTimeHandler* pHandler, bool bShowUI)
+{
+	Sexy::AutoCrit lock(mHttpRequestCS);
+	m_pServerHandlers.push_back(pHandler);
+	if (!m_bRequesting)
+		StartRequest(bShowUI);
+}
+
+/////////////// Logic ///////////////
+
+_NetworkEventConfig& GetTimeServerConfig(bool bForce);
+
+long GetTimeTime(const char* i_str);
+
+namespace Message { void ServerTimeReceived(); }
+
+ServerTime* ServerTime::s_pServerTime = NULL;
+
+static const int s_retryDelay[5] = { 10, 30, 60, 90, 100 };
+
 ServerTime* ServerTime::Instance()
 {
 	if (!s_pServerTime)
@@ -56,22 +84,9 @@ ServerTime* ServerTime::Instance()
 	return s_pServerTime;
 }
 
-long ServerTime::GetServerTime()
-{
-	return m_ServerTime;
-}
-
 bool ServerTime::ValidServerTime()
 {
 	return m_ServerTime > 0;
-}
-
-const tm* ServerTime::GetServerTimeS()
-{
-	Sexy::AutoCrit lock(mHttpRequestCS);
-	if (m_ServerTime == 0)
-		return NULL;
-	return localtime((const time_t*)&m_ServerTime);
 }
 
 void ServerTime::Init()
@@ -267,14 +282,6 @@ void ServerTime::GetServerTime(ServerTimeHandler hanlder)
 		m_ServerTimeHanlde(0, m_ServerTime);
 		m_ServerTimeHanlde = NULL;
 	}
-}
-
-void ServerTime::GetServerTimeFromNet(CServerTimeHandler* pHandler, bool bShowUI)
-{
-	Sexy::AutoCrit lock(mHttpRequestCS);
-	m_pServerHandlers.push_back(pHandler);
-	if (!m_bRequesting)
-		StartRequest(bShowUI);
 }
 
 void ServerTime::Update(float dt)
