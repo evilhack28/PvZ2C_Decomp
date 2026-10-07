@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-07T11:34:20+00:00",
+  "generated": "2026-10-07T16:12:48+00:00",
   "measures": {
-    "total_functions": 85872,
-    "matched_functions": 28919,
-    "matched_functions_percent": 33.68,
-    "total_code": 12863972,
-    "matched_code": 1813016,
-    "matched_code_percent": 14.09,
-    "fuzzy_match_percent": 14.93,
-    "started_units": 2212,
+    "total_functions": 85876,
+    "matched_functions": 29007,
+    "matched_functions_percent": 33.78,
+    "total_code": 12864012,
+    "matched_code": 1836508,
+    "matched_code_percent": 14.28,
+    "fuzzy_match_percent": 15.13,
+    "started_units": 2216,
     "total_units": 2762,
-    "started_code": 10168332,
-    "started_matched_code": 1813016,
-    "started_percent": 17.83,
+    "started_code": 10185208,
+    "started_matched_code": 1836508,
+    "started_percent": 18.03,
     "unplaced_functions": 58725,
     "unplaced_code": 8742852,
     "compile_failures": 0
@@ -295533,66 +295533,282 @@
     {
       "name": "src/PvZ2/Managers/BusyAnimationManager.cpp",
       "total_code": 3056,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2660,
+      "matched_code_percent": 87.04,
       "total_functions": 14,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 13,
+      "matched_functions_percent": 92.86,
+      "fuzzy_match_percent": 99.08,
+      "functions": [
+        {
+          "name": "BusyAnimationManager::Update",
+          "size": 396,
+          "matched": false,
+          "fuzzy_match_percent": 92.93
+        },
+        {
+          "name": "BusyAnimationManager::DrawOverlay",
+          "size": 824,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::StartBusyIcon",
+          "size": 440,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::InitializeData",
+          "size": 348,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::generateBounceTrack",
+          "size": 276,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::BusyAnimationManager",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::BusyAnimationManager",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::~BusyAnimationManager",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::~BusyAnimationManager",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::StopBusyIcon",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::Draw",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::generateBounceTracks",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::~BusyAnimationManager",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "BusyAnimationManager::OnBackButtonPressed",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Managers/CommonUIManager.cpp",
       "total_code": 4192,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 4192,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "CommonUIManager::CommonUIManager",
+          "size": 716,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommonUIManager::CommonUIManager",
+          "size": 716,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommonUIManager::~CommonUIManager",
+          "size": 716,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommonUIManager::~CommonUIManager",
+          "size": 716,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommonUIManager::ShowCheatingCheckWarning",
+          "size": 396,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommonUIManager::ShowBonus",
+          "size": 384,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommonUIManager::ShowBonusRedPachet",
+          "size": 380,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommonUIManager::CloseBonus",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommonUIManager::~CommonUIManager",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommonUIManager::OnCheatingCheckCallback",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Managers/ConfigUpdateMgr.cpp",
-      "total_code": 3488,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 3508,
+      "matched_code": 3508,
+      "matched_code_percent": 100.0,
+      "total_functions": 12,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "ConfigUpdateMgr::Init",
+          "size": 1328,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConfigUpdateMgr::dispatchEvent",
+          "size": 480,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConfigUpdateMgr::ForceRestart",
+          "size": 460,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConfigUpdateMgr::ConfigUpdateMgr",
+          "size": 352,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConfigUpdateMgr::ConfigUpdateMgr",
+          "size": 352,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConfigUpdateMgr::CheckUpdate",
+          "size": 272,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConfigUpdateMgr::~ConfigUpdateMgr",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConfigUpdateMgr::~ConfigUpdateMgr",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConfigUpdateMgr::~ConfigUpdateMgr",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConfigUpdateMgr::onRestart",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConfigUpdateMgr::GetRSBFileName",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConfigUpdateMgr::IsUpdated",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Managers/DefineIDMgr.cpp",
       "total_code": 2440,
-      "matched_code": 172,
-      "matched_code_percent": 7.05,
+      "matched_code": 992,
+      "matched_code_percent": 40.66,
       "total_functions": 9,
-      "matched_functions": 5,
-      "matched_functions_percent": 55.56,
-      "fuzzy_match_percent": 7.05,
+      "matched_functions": 8,
+      "matched_functions_percent": 88.89,
+      "fuzzy_match_percent": 84.75,
       "functions": [
         {
           "name": "DefineIDMgr::GetUserDefineID",
           "size": 1448,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 74.31
         },
         {
           "name": "DefineIDMgr::ClearSaveDefineID",
           "size": 444,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DefineIDMgr::GetNewUserDefineID",
           "size": 328,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DefineIDMgr::GetSignature",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DefineIDMgr::DefineIDMgr",
@@ -295602,6 +295818,12 @@
         },
         {
           "name": "DefineIDMgr::DefineIDMgr",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DefineIDMgr::GetSignature",
           "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -297048,13 +297270,111 @@
     },
     {
       "name": "src/PvZ2/Managers/LuaUpdateMgr.cpp",
-      "total_code": 6100,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 14,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 6120,
+      "matched_code": 6120,
+      "matched_code_percent": 100.0,
+      "total_functions": 16,
+      "matched_functions": 16,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "LuaUpdateMgr::dispatchEvent",
+          "size": 2532,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::DoUpdate",
+          "size": 668,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::LoadLuaRSB",
+          "size": 636,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::GetPackageRSBFilePath",
+          "size": 528,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::onLuaUpdateOK",
+          "size": 424,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::LuaUpdateMgr",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::LuaUpdateMgr",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::CheckUpdate",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::~LuaUpdateMgr",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::~LuaUpdateMgr",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::Init",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::onLuaUpdateCancel",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::~LuaUpdateMgr",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::GetRSBFileName",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::NeedUpdate",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LuaUpdateMgr::onWaitingDialogClose",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Managers/MonthlyCardMgr.cpp",
@@ -297329,126 +297649,126 @@
     {
       "name": "src/PvZ2/Managers/PurchaseMgr.cpp",
       "total_code": 3388,
-      "matched_code": 4,
-      "matched_code_percent": 0.12,
+      "matched_code": 3084,
+      "matched_code_percent": 91.03,
       "total_functions": 20,
-      "matched_functions": 1,
-      "matched_functions_percent": 5.0,
-      "fuzzy_match_percent": 0.12,
+      "matched_functions": 19,
+      "matched_functions_percent": 95.0,
+      "fuzzy_match_percent": 97.76,
       "functions": [
-        {
-          "name": "PurchaseMgr::TryRetreiveLostOrders",
-          "size": 760,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PurchaseMgr::PurchaseMgr",
-          "size": 452,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PurchaseMgr::PurchaseMgr",
-          "size": 452,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PurchaseMgr::TryValidateAgain",
-          "size": 308,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "PurchaseMgr::onNotifyPurchaseValidation",
           "size": 304,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 75.0
+        },
+        {
+          "name": "PurchaseMgr::TryRetreiveLostOrders",
+          "size": 760,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PurchaseMgr::PurchaseMgr",
+          "size": 452,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PurchaseMgr::PurchaseMgr",
+          "size": 452,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PurchaseMgr::TryValidateAgain",
+          "size": 308,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::onNotifyPurchaseInit",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::~PurchaseMgr",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::~PurchaseMgr",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::onNotifyLostPurchaseOrder",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::ValidatePurchaseOrder",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::InitPurchaseOrder",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::ResetPurchaseInfo",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::SetChannelId",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::SetOrderId",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::DoValidateAgain",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::RequestLostPurchaseOrder",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::FinishRetreiveLostOrders",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::~PurchaseMgr",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::GetChannelId",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PurchaseMgr::onNetworkError",
@@ -297671,120 +297991,108 @@
     {
       "name": "src/PvZ2/Managers/SocialShareMgr.cpp",
       "total_code": 4088,
-      "matched_code": 160,
-      "matched_code_percent": 3.91,
+      "matched_code": 3272,
+      "matched_code_percent": 80.04,
       "total_functions": 22,
-      "matched_functions": 4,
-      "matched_functions_percent": 18.18,
-      "fuzzy_match_percent": 3.91,
+      "matched_functions": 20,
+      "matched_functions_percent": 90.91,
+      "fuzzy_match_percent": 98.34,
       "functions": [
         {
           "name": "SocialShareMgr::ShareCallback",
           "size": 672,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SocialShareMgr::RequestReward",
-          "size": 532,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SocialShareMgr::gatherScreenInfo",
-          "size": 444,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SocialShareMgr::SaveCallback",
-          "size": 352,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SocialShareMgr::shareResultDialogClose",
-          "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SocialShareMgr::SaveScreenImageToGallery",
-          "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SocialShareMgr::InitShareInfoMaps",
-          "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SocialShareMgr::InitDefaultShareInfoMaps",
-          "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SocialShareMgr::ShareWithImage",
-          "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SocialShareMgr::GetShareRewardCount",
-          "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 94.64
         },
         {
           "name": "SocialShareMgr::HasShareCode",
           "size": 144,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 77.78
+        },
+        {
+          "name": "SocialShareMgr::RequestReward",
+          "size": 532,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SocialShareMgr::gatherScreenInfo",
+          "size": 444,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SocialShareMgr::SaveCallback",
+          "size": 352,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SocialShareMgr::shareResultDialogClose",
+          "size": 296,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SocialShareMgr::SaveScreenImageToGallery",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SocialShareMgr::InitShareInfoMaps",
+          "size": 220,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SocialShareMgr::InitDefaultShareInfoMaps",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SocialShareMgr::ShareWithImage",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SocialShareMgr::GetShareRewardCount",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SocialShareMgr::saveScreenImageToLocal",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SocialShareMgr::SaveScreenImageToLocal",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SocialShareMgr::SocialShareMgr",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SocialShareMgr::SocialShareMgr",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SocialShareMgr::saveResultDialogClose",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SocialShareMgr::SetShareRewardCount",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SocialShareMgr::HasShareReward",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SocialShareMgr::~SocialShareMgr",
@@ -297795,12 +298103,24 @@
         {
           "name": "SocialShareMgr::~SocialShareMgr",
           "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SocialShareMgr::SetShareRewardCount",
+          "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
           "name": "SocialShareMgr::~SocialShareMgr",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SocialShareMgr::HasShareReward",
+          "size": 28,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },

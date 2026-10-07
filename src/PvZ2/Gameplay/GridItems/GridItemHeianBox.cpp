@@ -77,5 +77,5 @@ bool GridItemHeianBox::CollidesWithType(const CollisionTypeFlags i_collisionType
 
 PlantingReason GridItemHeianBox::GetCantPlantReason() const
 {
-	return (PlantingReason)103;
+	return PLANTING_NEED_FLOWERPOT_FIRST;
 }

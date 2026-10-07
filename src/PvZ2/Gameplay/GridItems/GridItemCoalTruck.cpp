@@ -57,5 +57,5 @@ void GridItemCoalTruckProps::StaticClassInit()
 
 PlantingReason GridItemCoalTruck::GetCantPlantReason() const
 {
-	return (PlantingReason)91;
+	return PLANTING_NOT_ON_COAL_TRUCK;
 }

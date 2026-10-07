@@ -216,33 +216,33 @@ DamageInfo Armor::TakeDamage(const DamageInfo& i_damageInfo)
 	}
 	DamageInfo result;
 	result = m_ownerZombiePtr->onArmorDamageTaken(i_damageInfo, getProps()->ArmorType);
-	if (TestFlag(result.Flags, (DamageTypeFlags)8))
+	if (TestFlag(result.Flags, DAMAGE_BYPASSES_SHIELD))
 	{
 		return result;
 	}
-	if (TestFlag(result.Flags, (DamageTypeFlags)0x10))
+	if (TestFlag(result.Flags, DAMAGE_BYPASSES_ONE_SHIELD_LAYER))
 	{
-		SetFlag(result.Flags, (DamageTypeFlags)0x10, false);
+		SetFlag(result.Flags, DAMAGE_BYPASSES_ONE_SHIELD_LAYER, false);
 		return result;
 	}
 	onTakeDamage(result);
-	if (EA_UNLIKELY(!TestFlag(result.Flags, (DamageTypeFlags)0x10000) && (!result.Instigator || !result.Instigator->IsA<Zombie>()) && !getProps()->ImpactSoundEvent.empty()))
+	if (EA_UNLIKELY(!TestFlag(result.Flags, DAMAGE_DOESNT_CAUSE_SOUND) && (!result.Instigator || !result.Instigator->IsA<Zombie>()) && !getProps()->ImpactSoundEvent.empty()))
 	{
 		m_ownerZombiePtr->PlayPositionalSound(getProps()->ImpactSoundEvent, 0.1f);
 		m_ownerZombiePtr->SetHasPlayedImpactSound(true);
 	}
-	if (TestFlag(result.Flags, (DamageTypeFlags)2))
+	if (TestFlag(result.Flags, DAMAGE_FATAL))
 	{
 		m_health = 0.0f;
 	}
 	float before = m_health;
 	float amount = i_damageInfo.Amount;
-	if (!TestFlag(getProps()->ArmorFlags, (ArmorTypeFlags)0x80))
+	if (!TestFlag(getProps()->ArmorFlags, ARMOR_INVINCIBLE))
 	{
 		m_health -= result.Amount;
 	}
 	result = i_damageInfo;
-	if (!TestFlag(getProps()->ArmorFlags, (ArmorTypeFlags)8))
+	if (!TestFlag(getProps()->ArmorFlags, ARMOR_PASSDAMAGE))
 	{
 		result.Amount = ClampFloat(amount - before, 0.0f, i_damageInfo.Amount);
 	}

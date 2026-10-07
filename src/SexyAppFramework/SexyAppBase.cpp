@@ -223,12 +223,12 @@ bool SexyAppBase::isReducedResolutionIPhone()
 
 UI_ORIENTATION SexyAppBase::FullScreenUIOrientationLeft()
 {
-	return (UI_ORIENTATION)4;
+	return UI_ORIENTATION_LANDSCAPE_LEFT;
 }
 
 UI_ORIENTATION SexyAppBase::FullScreenUIOrientationRight()
 {
-	return (UI_ORIENTATION)3;
+	return UI_ORIENTATION_LANDSCAPE_RIGHT;
 }
 
 bool SexyAppBase::KeyDown(int theKey)

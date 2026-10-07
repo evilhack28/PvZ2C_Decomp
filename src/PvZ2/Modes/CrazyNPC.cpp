@@ -128,7 +128,7 @@ void CrazyNPC::updateState_Entering()
 	{
 		m_popAnimRig->UpdateAnim(PVZ_T(), PVZ_Dt());
 	}
-	if (m_sheetPtr->DialogStyle != 0)
+	if (m_sheetPtr->DialogStyle != NPCTEXT_SPEECHBUBBLE)
 	{
 		if (GetNPCName() == "zombossicon")
 		{
@@ -147,7 +147,7 @@ void CrazyNPC::updateState_Leaving()
 	{
 		m_popAnimRig->UpdateAnim(PVZ_T(), PVZ_Dt());
 	}
-	if (m_sheetPtr->DialogStyle != 0)
+	if (m_sheetPtr->DialogStyle != NPCTEXT_SPEECHBUBBLE)
 	{
 		if (GetNPCName() == "zombossicon")
 		{
@@ -166,7 +166,7 @@ void CrazyNPC::updateState_HoldingEnter()
 	{
 		m_popAnimRig->UpdateAnim(PVZ_T(), PVZ_Dt());
 	}
-	if (m_sheetPtr->DialogStyle != 0)
+	if (m_sheetPtr->DialogStyle != NPCTEXT_SPEECHBUBBLE)
 	{
 		onHoldingEnteringAnimFinished(std::string(""));
 	}
@@ -178,7 +178,7 @@ void CrazyNPC::updateState_HoldingEat()
 	{
 		m_popAnimRig->UpdateAnim(PVZ_T(), PVZ_Dt());
 	}
-	if (m_sheetPtr->DialogStyle != 0)
+	if (m_sheetPtr->DialogStyle != NPCTEXT_SPEECHBUBBLE)
 	{
 		onHoldingEatAnimFinished(std::string(""));
 	}
@@ -453,7 +453,7 @@ void CrazyNPC::Draw(Sexy::Graphics* i_g)
 
 void CrazyNPC::onEnterState_Idle(CrazyNPCState)
 {
-	if (m_sheetPtr->DialogStyle == 0)
+	if (m_sheetPtr->DialogStyle == NPCTEXT_SPEECHBUBBLE)
 	{
 		m_popAnimRig->PlayAndContinue(std::string("anim_idle"), SELECT_EXACT);
 	}
@@ -469,7 +469,7 @@ void CrazyNPC::onEnterState_Idle(CrazyNPCState)
 
 void CrazyNPC::onEnterState_HoldingIdle(CrazyNPCState)
 {
-	if (m_sheetPtr->DialogStyle == 0)
+	if (m_sheetPtr->DialogStyle == NPCTEXT_SPEECHBUBBLE)
 	{
 		m_popAnimRig->PlayAndContinue(StrFormat("anim_%s_idle", m_holdingItem.c_str()), SELECT_EXACT);
 	}
@@ -477,7 +477,7 @@ void CrazyNPC::onEnterState_HoldingIdle(CrazyNPCState)
 
 void CrazyNPC::onEnterState_HoldingEnter(CrazyNPCState)
 {
-	if (m_sheetPtr->DialogStyle == 0)
+	if (m_sheetPtr->DialogStyle == NPCTEXT_SPEECHBUBBLE)
 	{
 		m_popAnimRig->PlayAndStop(StrFormat("anim_%s_enter", m_holdingItem.c_str()), SELECT_EXACT, Sexy::MakeDelegate(*this, &CrazyNPC::onHoldingEnteringAnimFinished));
 	}
@@ -486,7 +486,7 @@ void CrazyNPC::onEnterState_HoldingEnter(CrazyNPCState)
 
 void CrazyNPC::onEnterState_HoldingEat(CrazyNPCState)
 {
-	if (m_sheetPtr->DialogStyle == 0)
+	if (m_sheetPtr->DialogStyle == NPCTEXT_SPEECHBUBBLE)
 	{
 		m_popAnimRig->PlayAndStop(StrFormat("anim_%s_eat", m_holdingItem.c_str()), SELECT_EXACT, Sexy::MakeDelegate(*this, &CrazyNPC::onHoldingEatAnimFinished));
 		AudioMgr::GetInstancePtr()->SendEvent("Play_VO_CrazyDave_Taco_Chomp");
@@ -496,7 +496,7 @@ void CrazyNPC::onEnterState_HoldingEat(CrazyNPCState)
 
 void CrazyNPC::onEnterState_Entering(CrazyNPCState)
 {
-	if (m_sheetPtr->DialogStyle == 0)
+	if (m_sheetPtr->DialogStyle == NPCTEXT_SPEECHBUBBLE)
 	{
 		m_popAnimRig->PlayAndStop(std::string("anim_enter"), SELECT_EXACT, Sexy::MakeDelegate(*this, &CrazyNPC::onEnteringAnimFinished));
 		if (GetNPCName() == "crazydave")
@@ -528,7 +528,7 @@ void CrazyNPC::onEnterState_Entering(CrazyNPCState)
 
 void CrazyNPC::onEnterState_Leaving(CrazyNPCState)
 {
-	if (m_sheetPtr->DialogStyle == 0)
+	if (m_sheetPtr->DialogStyle == NPCTEXT_SPEECHBUBBLE)
 	{
 		if (m_popAnimRig)
 		{
@@ -571,7 +571,7 @@ void CrazyNPC::pickAndPlayTalkingAnimation()
 			}
 		}
 	}
-	if (m_sheetPtr->DialogStyle == 0)
+	if (m_sheetPtr->DialogStyle == NPCTEXT_SPEECHBUBBLE)
 	{
 		std::string animName;
 		PopAnimRig::AnimStoppedDelegate onFinished;
@@ -810,7 +810,7 @@ void CrazyNPC::drawTextTopBannerStyle(Graphics* i_g)
 			font = NULL;
 			break;
 		}
-		WriteWordInRect(i_g, text, textRect, font, Color(Color::White), (DrawStringJustification)5, true);
+		WriteWordInRect(i_g, text, textRect, font, Color(Color::White), DS_ALIGN_CENTER_VERTICAL_MIDDLE, true);
 	}
 	int tx = S(-82) + gLawnApp->mScreenBounds.mWidth / 2;
 	float uiY = UI_S(bannerY);
@@ -946,7 +946,7 @@ void CrazyNPC::drawSpeechBubbleStyle(Graphics* i_g)
 			font = NULL;
 			break;
 		}
-		TodDrawStringWrapped(i_g, text, rect, font, Color(Color::Black), (DrawStringJustification)5, false);
+		TodDrawStringWrapped(i_g, text, rect, font, Color(Color::Black), DS_ALIGN_CENTER_VERTICAL_MIDDLE, false);
 		if (clickable)
 		{
 			PrimeTypeface* tapFont = FONT_CONVERSATION_TAP_TEXT;

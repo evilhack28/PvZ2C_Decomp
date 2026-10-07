@@ -33,5 +33,5 @@ void GridItemFakeMold::StaticClassInit()
 
 PlantingReason GridItemFakeMold::GetCantPlantReason() const
 {
-	return (PlantingReason)30;
+	return PLANTING_NOT_ON_MOLD;
 }

@@ -29,7 +29,7 @@ void ChallengeSunTimerUI::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ChallengeSunTimerUI);
 }
 
-void ChallengeSunTimerUI::SetSeconds(int i_arg)
+void ChallengeSunTimerUI::SetSeconds(int i_seconds)
 {
-	m_seconds = i_arg;
+	m_seconds = i_seconds;
 }

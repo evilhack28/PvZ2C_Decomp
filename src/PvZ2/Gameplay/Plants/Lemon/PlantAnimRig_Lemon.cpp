@@ -31,12 +31,12 @@ void PlantAnimRig_Lemon::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_Lemon);
 }
 
-void PlantAnimRig_Lemon::setIdleState(int i_arg)
+void PlantAnimRig_Lemon::setIdleState(int i_idleState)
 {
-	m_idleState = i_arg;
+	m_idleState = i_idleState;
 }
 
-void PlantAnimRig_Lemon::setAttackState(int i_arg)
+void PlantAnimRig_Lemon::setAttackState(int i_attackState)
 {
-	m_attackState = i_arg;
+	m_attackState = i_attackState;
 }

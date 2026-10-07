@@ -31,7 +31,7 @@ void JoustOrAdventureScreenTopHUD::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(JoustOrAdventureScreenTopHUD);
 }
 
-void JoustOrAdventureScreenTopHUD::onShowingFUEChanged(bool i_arg)
+void JoustOrAdventureScreenTopHUD::onShowingFUEChanged(bool i_showingFUE)
 {
-	m_showingFUE = i_arg;
+	m_showingFUE = i_showingFUE;
 }

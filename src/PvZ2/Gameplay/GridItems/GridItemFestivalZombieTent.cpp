@@ -60,5 +60,5 @@ void GridItemFestivalZombieTentProps::StaticClassInit()
 
 PlantingReason GridItemFestivalZombieTent::GetCantPlantReason() const
 {
-	return (PlantingReason)23;
+	return PLANTING_NOT_ON_TENT;
 }

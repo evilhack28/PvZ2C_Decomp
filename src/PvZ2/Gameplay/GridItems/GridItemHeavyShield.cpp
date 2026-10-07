@@ -67,5 +67,5 @@ void GridItemHeavyShieldProps::StaticClassInit()
 
 PlantingReason GridItemHeavyShield::GetCantPlantReason() const
 {
-	return (PlantingReason)110;
+	return PLANTING_NOT_ON_FOG;
 }

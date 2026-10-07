@@ -31,7 +31,7 @@ void AdaptorCarouselDotEntry::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(AdaptorCarouselDotEntry);
 }
 
-void AdaptorCarouselDotEntry::Configure(Sexy::WidgetContainer* i_arg)
+void AdaptorCarouselDotEntry::Configure(Sexy::WidgetContainer* i_parent)
 {
-	m_parent = i_arg;
+	m_parent = i_parent;
 }

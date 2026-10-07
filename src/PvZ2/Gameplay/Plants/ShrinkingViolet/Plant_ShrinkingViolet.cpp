@@ -35,7 +35,7 @@ void PlantShrinkingViolet::StaticClassInit()
 
 CollisionTypeFlags PlantShrinkingViolet::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
-	return (CollisionTypeFlags)7;
+	return COLLIDE_ALL_ZOMBIES;
 }
 
 bool PlantShrinkingViolet::TryBlockZombossRush(Zombie* i_zomboss)

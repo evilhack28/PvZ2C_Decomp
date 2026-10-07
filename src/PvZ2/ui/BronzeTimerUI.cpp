@@ -29,7 +29,7 @@ void BronzeTimerUI::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(BronzeTimerUI);
 }
 
-void BronzeTimerUI::SetSeconds(int i_arg)
+void BronzeTimerUI::SetSeconds(int i_seconds)
 {
-	m_seconds = i_arg;
+	m_seconds = i_seconds;
 }

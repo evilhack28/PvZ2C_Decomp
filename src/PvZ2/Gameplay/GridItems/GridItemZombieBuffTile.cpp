@@ -54,5 +54,5 @@ void GridItemZombieBuffTile::doApplyEffect(const BoardEntity* i_entity)
 
 PlantingReason GridItemZombieBuffTile::GetCantPlantReason() const
 {
-	return (PlantingReason)109;
+	return PLANTING_NOT_ON_HEAVY_SHIELD;
 }

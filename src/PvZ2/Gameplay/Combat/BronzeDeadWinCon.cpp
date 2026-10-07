@@ -72,7 +72,7 @@ bool BronzeDeadWinCon::checkWin()
 		return false;
 	std::vector<BoardEntity*> entities;
 	EntityFinder::GetEntities(entities, ENTITYTYPE_ZOMBIE | ENTITYTYPE_GRIDITEM);
-	DamageInfo damage(99999.0f, (DamageTypeFlags)0x800, nullptr, Sexy::Point(-1, -1), stumps, ResilienceDamageInfo(1.0f, 0.0f));
+	DamageInfo damage(99999.0f, DAMAGE_FROM_LOBBED, nullptr, Sexy::Point(-1, -1), stumps, ResilienceDamageInfo(1.0f, 0.0f));
 	for (size_t i = 0; i < entities.size(); ++i)
 	{
 		if (canDamage(entities[i]))

@@ -53,5 +53,5 @@ void GridItemAcid::ResetTimer()
 
 PlantingReason GridItemAcid::GetCantPlantReason() const
 {
-	return (PlantingReason)75;
+	return PLANTING_NOT_IN_GOLDROAD;
 }

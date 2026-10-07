@@ -71,5 +71,5 @@ void GridItemSchoolBus::onAttack()
 
 PlantingReason GridItemSchoolBus::GetCantPlantReason() const
 {
-	return (PlantingReason)96;
+	return PLANTING_NOT_ON_SCHOOLBUS;
 }

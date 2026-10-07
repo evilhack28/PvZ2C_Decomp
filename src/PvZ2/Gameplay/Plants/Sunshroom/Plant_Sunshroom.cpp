@@ -25,7 +25,7 @@ void PlantSunshroom::StaticClassInit()
 }
 
 #include "Plant_Sunflower.h"
-void PlantSunshroom::onAnimStoppedCallback(const std::string& i_arg)
+void PlantSunshroom::onAnimStoppedCallback(const std::string& i_animLabel)
 {
 	 PlantSunflower::ApplyPlantfood();
 }

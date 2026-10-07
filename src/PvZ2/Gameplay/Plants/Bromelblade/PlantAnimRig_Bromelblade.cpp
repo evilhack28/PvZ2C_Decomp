@@ -34,7 +34,7 @@ PlantAnimRig_Bromelblade::PlantAnimRig_Bromelblade()
 	m_IsAvatarEnable = 0;
 }
 
-void PlantAnimRig_Bromelblade::SetAvatar(bool i_arg)
+void PlantAnimRig_Bromelblade::SetAvatar(bool i_isAvatarEnable)
 {
-	m_IsAvatarEnable = i_arg;
+	m_IsAvatarEnable = i_isAvatarEnable;
 }

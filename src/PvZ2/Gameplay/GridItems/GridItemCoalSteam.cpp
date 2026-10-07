@@ -32,5 +32,5 @@ void GridItemCoalSteam::StaticClassInit()
 
 PlantingReason GridItemCoalSteam::GetCantPlantReason() const
 {
-	return (PlantingReason)92;
+	return PLANTING_NOT_ON_COAL;
 }

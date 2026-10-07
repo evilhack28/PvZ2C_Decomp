@@ -12,7 +12,7 @@
 WorldMapEditorFactory::WorldMapEditorFactory()
 	: mDefaultEditor()
 {
-	mEditorFlags = (MapEditorFlags)0;
+	mEditorFlags = EDITORFLAG_None;
 	SetFlag(mEditorFlags, EDITORFLAG_DRAW_BACKGROUND, true);
 	SetFlag(mEditorFlags, EDITORFLAG_DRAW_FOREGROUND, true);
 	SetFlag(mEditorFlags, EDITORFLAG_DRAW_HIDDEN_FOREGROUND, true);

@@ -90,5 +90,5 @@ bool GridItemRenaiRoller::ShouldDrawShadow() const
 
 PlantingReason GridItemRenaiRoller::GetCantPlantReason() const
 {
-	return (PlantingReason)95;
+	return PLANTING_NOT_ON_ROLLER;
 }

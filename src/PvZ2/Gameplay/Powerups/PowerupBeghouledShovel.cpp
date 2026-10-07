@@ -52,7 +52,7 @@ bool PowerupBeghouledShovel::onTouchBegin(const Sexy::Touch& i_touch)
 static GridItemCrater* GetCraterAt(int i_x, int i_y)
 {
 	std::vector<BoardEntity*> entities;
-	EntityFinder::GetEntitiesAtGridSquare(entities, (BoardEntityTypeFlag)4, i_x, i_y);
+	EntityFinder::GetEntitiesAtGridSquare(entities, ENTITYTYPE_GRIDITEM, i_x, i_y);
 	for (size_t i = 0; i < entities.size(); i++)
 	{
 		GridItemCrater* crater = entities[i]->Cast<GridItemCrater>();

@@ -106,7 +106,7 @@ void PowerupPinchZombie::handlePinch(Sexy::Point i_center, int i_distanceBetween
 						if (Pass(m_timeRemaining) <= 0.0f)
 							break;
 						ResilienceDamageInfo resilience(1.0f, 0.0f);
-						DamageInfo damage(0.0f, (DamageTypeFlags)1, NULL, Point(-1, -1), false, resilience);
+						DamageInfo damage(0.0f, DAMAGE_NONE, NULL, Point(-1, -1), false, resilience);
 						switch (Pass((int)closest->m_helm))
 						{
 						case HELMTYPE_NONE:

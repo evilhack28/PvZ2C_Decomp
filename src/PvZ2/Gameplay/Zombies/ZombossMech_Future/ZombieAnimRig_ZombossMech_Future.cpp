@@ -25,7 +25,7 @@ void ZombieAnimRig_ZombossMech_Future::StaticClassInit()
 
 ZombieAnimRig_ZombossMech_Future::ZombieAnimRig_ZombossMech_Future()
 {
-	m_queuedTileClass = (PowerTileClass)-1;
+	m_queuedTileClass = POWERTILE_Invalid;
 }
 
 void ZombieAnimRig_ZombossMech_Future::SetRocketStartAnimFromTileType(PowerTileClass i_class)
@@ -37,17 +37,17 @@ const char* ZombieAnimRig_ZombossMech_Future::getRocketStartAnimName() const
 {
 	switch ((int)m_queuedTileClass)
 	{
-	case 0:
+	case POWERTILE_ALPHA:
 		return "linktile1_start";
-	case 1:
+	case POWERTILE_BETA:
 		return "linktile2_start";
-	case 2:
+	case POWERTILE_GAMMA:
 		return "linktile3_start";
-	case 3:
+	case POWERTILE_DELTA:
 		return "linktile4_start";
-	case 4:
+	case POWERTILE_EPSILON:
 		return "linktile5_start";
-	case -1:
+	case POWERTILE_Invalid:
 		return ZombieAnimRig_ZombossMech::getRocketStartAnimName();
 	default:
 		return ZombieAnimRig_ZombossMech::getRocketStartAnimName();

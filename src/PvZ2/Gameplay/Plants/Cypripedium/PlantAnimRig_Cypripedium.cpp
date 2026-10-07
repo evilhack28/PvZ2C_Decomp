@@ -41,12 +41,12 @@ PlantAnimRig_Cypripedium::PlantAnimRig_Cypripedium()
 	m_isLv5 = 0;
 }
 
-void PlantAnimRig_Cypripedium::SetIsLevel5(bool i_arg)
+void PlantAnimRig_Cypripedium::SetIsLevel5(bool i_isLevel5)
 {
-	m_isLv5 = i_arg;
+	m_isLv5 = i_isLevel5;
 }
 
-void PlantAnimRig_Cypripedium::SetAttackMode(int i_arg)
+void PlantAnimRig_Cypripedium::SetAttackMode(int i_attackMode)
 {
-	m_mode = i_arg;
+	m_mode = i_attackMode;
 }

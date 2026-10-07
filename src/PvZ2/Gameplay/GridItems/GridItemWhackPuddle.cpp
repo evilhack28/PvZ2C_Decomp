@@ -46,5 +46,5 @@ void GridItemWhackPuddle::onTakeDamage(const DamageInfo& i_damage)
 
 PlantingReason GridItemWhackPuddle::GetCantPlantReason() const
 {
-	return (PlantingReason)67;
+	return PLANTING_NOT_ON_WHACK_PUDDLE;
 }

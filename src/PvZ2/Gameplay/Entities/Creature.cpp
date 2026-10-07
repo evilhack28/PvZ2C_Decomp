@@ -22,13 +22,13 @@ void Creature::registerForEvents()
 }
 
 #include "Creature.h"
-void Creature::onIdleAnimationCycle(const std::string& i_arg0, const std::string& i_arg1, int i_arg2)
+void Creature::onIdleAnimationCycle(const std::string& i_animLabel, const std::string& i_nextAnimLabel, int i_cycleCount)
 {
 	 Creature::playIdleSound();
 }
 
 #include "Creature.h"
-void Creature::onWalkAnimationCycle(const std::string& i_arg0, const std::string& i_arg1, int i_arg2)
+void Creature::onWalkAnimationCycle(const std::string& i_animLabel, const std::string& i_nextAnimLabel, int i_cycleCount)
 {
 	 Creature::playWalkSound();
 }

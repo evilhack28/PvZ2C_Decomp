@@ -56,7 +56,7 @@ void GridItemSurfboardProps::StaticClassInit()
 
 PlantingReason GridItemSurfboard::GetCantPlantReason() const
 {
-	return (PlantingReason)22;
+	return PLANTING_NOT_ON_SURFBOARD;
 }
 
 bool GridItemSurfboard::ShouldClipWithWater() const

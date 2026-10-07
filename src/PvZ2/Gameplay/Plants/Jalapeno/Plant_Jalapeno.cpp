@@ -181,7 +181,7 @@ void PlantJalapeno::UpdateActions()
 			int right = std::min(column + propagation, maxColumn);
 			int bottom = std::min(row + propagation, maxRow);
 
-			BoardEntityTypeFlag types = (BoardEntityTypeFlag)2 | (BoardEntityTypeFlag)4;
+			BoardEntityTypeFlag types = ENTITYTYPE_ZOMBIE | ENTITYTYPE_GRIDITEM;
 
 			EntityFinder::GetEntitiesInGridSquares(entities, types,
 			                                       Sexy::Rect(left, row, right - left, 1));

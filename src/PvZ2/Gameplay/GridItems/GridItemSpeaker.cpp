@@ -30,5 +30,5 @@ void GridItemSpeakerProps::StaticClassInit()
 
 PlantingReason GridItemSpeaker::GetCantPlantReason() const
 {
-	return (PlantingReason)27;
+	return PLANTING_NOT_ON_SPEAKER;
 }

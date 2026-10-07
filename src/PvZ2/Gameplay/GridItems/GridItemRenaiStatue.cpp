@@ -67,5 +67,5 @@ void GridItemRenaiStatue::onPopAnimCommand(const std::string& i_animName, pvztim
 
 PlantingReason GridItemRenaiStatue::GetCantPlantReason() const
 {
-	return (PlantingReason)99;
+	return PLANTING_NOT_ON_GLIDING;
 }

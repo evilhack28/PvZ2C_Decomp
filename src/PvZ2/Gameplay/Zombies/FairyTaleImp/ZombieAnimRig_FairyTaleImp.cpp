@@ -39,9 +39,9 @@ void ZombieAnimRig_FairyTaleImp::StaticClassInit()
 
 /////////////// Accessors ///////////////
 
-void ZombieAnimRig_FairyTaleImp::SetRunning(bool i_arg)
+void ZombieAnimRig_FairyTaleImp::SetRunning(bool i_running)
 {
-	m_running = i_arg;
+	m_running = i_running;
 }
 
 /////////////// Logic ///////////////

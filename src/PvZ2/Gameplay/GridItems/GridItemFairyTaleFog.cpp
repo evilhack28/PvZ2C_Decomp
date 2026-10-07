@@ -62,5 +62,5 @@ bool GridItemFairyTaleFog::CollidesWithType(const CollisionTypeFlags i_collision
 
 PlantingReason GridItemFairyTaleFog::GetCantPlantReason() const
 {
-	return (PlantingReason)111;
+	return PLANTING_NOT_ON_MAGIC_MIRROR;
 }

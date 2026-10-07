@@ -137,25 +137,25 @@ void CrazyOlafTest::initializeModule()
 	origin = SexyVector2(gLawnApp->mWidth * 0.15f, gLawnApp->mHeight * 0.2f);
 
 	m_textPlantCount = gLawnApp->m_board->AddEffect<Effect_FloatingText>()->GetPtr();
-	m_textPlantCount->SetScreenSpaceOrigin(origin, 0xDBBA0);
+	m_textPlantCount->SetScreenSpaceOrigin(origin, 900000);
 	m_textPlantCount->SetColor(Color(Color::Green));
 	m_textPlantCount->SetStyle(FTS_OlafStats);
 	origin.y += gLawnApp->mHeight * 0.08f;
 
 	m_textKilledPlants = gLawnApp->m_board->AddEffect<Effect_FloatingText>()->GetPtr();
-	m_textKilledPlants->SetScreenSpaceOrigin(origin, 0xDBBA0);
+	m_textKilledPlants->SetScreenSpaceOrigin(origin, 900000);
 	m_textKilledPlants->SetColor(Color(128, 255, 128));
 	m_textKilledPlants->SetStyle(FTS_OlafStats);
 	origin.y += gLawnApp->mHeight * 0.08f;
 
 	m_textZombieCount = gLawnApp->m_board->AddEffect<Effect_FloatingText>()->GetPtr();
-	m_textZombieCount->SetScreenSpaceOrigin(origin, 0xDBBA0);
+	m_textZombieCount->SetScreenSpaceOrigin(origin, 900000);
 	m_textZombieCount->SetColor(Color(Color::Purple));
 	m_textZombieCount->SetStyle(FTS_OlafStats);
 	origin.y += gLawnApp->mHeight * 0.08f;
 
 	m_textKilledZombies = gLawnApp->m_board->AddEffect<Effect_FloatingText>()->GetPtr();
-	m_textKilledZombies->SetScreenSpaceOrigin(origin, 0xDBBA0);
+	m_textKilledZombies->SetScreenSpaceOrigin(origin, 900000);
 	m_textKilledZombies->SetColor(Color(255, 128, 255));
 	m_textKilledZombies->SetStyle(FTS_OlafStats);
 

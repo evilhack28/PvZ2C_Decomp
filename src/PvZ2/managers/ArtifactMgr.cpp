@@ -551,7 +551,7 @@ float ArtifactMgr::GetBoostValue(int i_artifactId, ArtifactBoostType i_type)
 	{
 		if (it->second == i_artifactId)
 		{
-			float rareValue = GetBoostValue(i_artifactId, i_type, 3);
+			float rareValue = GetBoostValue(i_artifactId, i_type, BoostRarity_Legend);
 			if (rareValue != 0.0f)
 			{
 				sharedValue = 0.0f;
@@ -562,7 +562,7 @@ float ArtifactMgr::GetBoostValue(int i_artifactId, ArtifactBoostType i_type)
 		else if (sharedValue == 0.0f && canShare && !IsUnsharedBoost(i_type))
 		{
 			canShare = true;
-			sharedValue = GetBoostValue(it->second, i_type, 3);
+			sharedValue = GetBoostValue(it->second, i_type, BoostRarity_Legend);
 		}
 	}
 	return result + sharedValue;
@@ -602,7 +602,7 @@ int ArtifactMgr::GetGlobalExtraValue(float& i_outValue, int i_plantId, int i_typ
 	it = artifacts.begin();
 	for (; it != artifacts.end(); ++it)
 	{
-		if (it->second != i_currentArtifactId && GetBoostValue(it->second, Global_Passive1, 3) > 0.0f)
+		if (it->second != i_currentArtifactId && GetBoostValue(it->second, Global_Passive1, BoostRarity_Legend) > 0.0f)
 		{
 			result = it->second;
 			total += getExtraValue(plantName, result, i_type);
@@ -624,7 +624,7 @@ float ArtifactMgr::getExtraValue(const std::string& i_plantName, int i_currentAr
 			if (!props.Get()->TargetablePlantTypes.IsIncluded((const PlantType*)plantType))
 				goto done;
 		}
-		else if (i_boostType != 8 && i_boostType != 10)
+		else if (i_boostType != Global_Passive1 && i_boostType != Start_No_CD)
 			goto done;
 		{
 			ArtifactPropertiesPtr copy((const RtWeakPtrBase&)props);
@@ -708,7 +708,7 @@ float ArtifactMgr::GetBoostValue(int i_artifactId, ArtifactBoostType i_type, int
 		ArtifactBoostPropertySheetPtr sheet = getBoostSheet(i_artifactId, boost.BoostId);
 		if (sheet && sheet->Type == i_type)
 		{
-			if (rare == -1 && sheet->Rare != 3)
+			if (rare == -1 && sheet->Rare != BoostRarity_Legend)
 			{
 				result = boost.Value;
 				if (result != 0.0f)
@@ -892,11 +892,11 @@ std::vector<CurrentArtifactBoostInfo> ArtifactMgr::GetCurrentGlobalBoostInfo(int
 	for (; it != artifacts.end(); ++it)
 	{
 		std::vector<ArtifactBoostInfo> infos = profile->GetArtifactInfoByID(it->second).BoostInfos;
-		std::vector<CurrentArtifactBoostInfo> boosts = getCurrentBoostInfo(i_artifactId, infos, 3);
+		std::vector<CurrentArtifactBoostInfo> boosts = getCurrentBoostInfo(i_artifactId, infos, BoostRarity_Legend);
 		std::vector<CurrentArtifactBoostInfo>::iterator boost = boosts.begin();
 		while (boost != boosts.end())
 		{
-			if (boost->Rare == 3 && (boost->Type == Global_Passive1 || IsUnsharedBoost(boost->Type)))
+			if (boost->Rare == BoostRarity_Legend && (boost->Type == Global_Passive1 || IsUnsharedBoost(boost->Type)))
 			{
 				boost = boosts.erase(boost);
 				continue;

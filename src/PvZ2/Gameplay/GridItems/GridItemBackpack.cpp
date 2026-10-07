@@ -35,5 +35,5 @@ void GridItemBackpack::StaticClassInit()
 
 PlantingReason GridItemBackpack::GetCantPlantReason() const
 {
-	return (PlantingReason)26;
+	return PLANTING_NOT_ON_BACKPACK;
 }

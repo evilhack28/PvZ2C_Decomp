@@ -38,8 +38,8 @@ const bool ZombieAnimRig_Bull::getDieShouldBlend()
 	return false;
 }
 
-void ZombieAnimRig_Bull::SetRunning(bool i_arg)
+void ZombieAnimRig_Bull::SetRunning(bool i_running)
 {
-	m_running = i_arg;
+	m_running = i_running;
 }
 

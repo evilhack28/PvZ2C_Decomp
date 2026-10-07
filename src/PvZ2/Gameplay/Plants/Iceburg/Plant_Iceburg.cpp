@@ -227,7 +227,7 @@ template <typename T>
 static T* FindGridItemAt(int i_column, int i_row)
 {
 	std::vector<BoardEntity*> entities;
-	EntityFinder::GetEntitiesAtGridSquare(entities, (BoardEntityTypeFlag)4, i_column, i_row);
+	EntityFinder::GetEntitiesAtGridSquare(entities, ENTITYTYPE_GRIDITEM, i_column, i_row);
 	for (std::vector<BoardEntity*>::iterator it = entities.begin(); it != entities.end(); ++it)
 	{
 		T* gridItem = (*it)->Cast<T>();
@@ -257,7 +257,7 @@ void PlantIceburg::FindValidZombiesAndAttack()
 	std::vector<BoardEntity*> entities;
 	m_validTargets.clear();
 
-	EntityFinder::GetEntitiesInGridSquares(entities, (BoardEntityTypeFlag)2,
+	EntityFinder::GetEntitiesInGridSquares(entities, ENTITYTYPE_ZOMBIE,
 	                                       Sexy::Rect(0, 0, gLawnApp->m_board->m_gridSizeX + 1,
 	                                                  gLawnApp->m_board->m_gridSizeY));
 
@@ -348,7 +348,7 @@ bool PlantIceburg::OnAnimCommand(const std::string& i_animCommand, const std::st
 		}
 
 		std::vector<BoardEntity*> entities;
-		EntityFinder::GetEntitiesAtGridSquare(entities, (BoardEntityTypeFlag)4,
+		EntityFinder::GetEntitiesAtGridSquare(entities, ENTITYTYPE_GRIDITEM,
 		                                      m_plant->m_column, m_plant->m_row);
 		for (size_t i = 0; i < entities.size(); i++)
 		{
@@ -461,7 +461,7 @@ void PlantIceburg::UpdateActions()
 		}
 
 		std::vector<BoardEntity*> entities;
-		EntityFinder::GetEntitiesAtGridSquare(entities, (BoardEntityTypeFlag)4,
+		EntityFinder::GetEntitiesAtGridSquare(entities, ENTITYTYPE_GRIDITEM,
 		                                      m_plant->m_column, m_plant->m_row);
 		for (size_t i = 0; i < entities.size(); )
 		{
@@ -478,7 +478,7 @@ void PlantIceburg::UpdateActions()
 	{
 		if (!GetRig()->IsPlayingAnything())
 		{
-			m_plant->KillPlant(false, false, (DamageTypeFlags)1);
+			m_plant->KillPlant(false, false, DAMAGE_NONE);
 		}
 	}
 }

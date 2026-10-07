@@ -54,7 +54,7 @@ CollectableSpacetimeEnergy::CollectableSpacetimeEnergy()
 	EnergyValue = 0;
 }
 
-void CollectableSpacetimeEnergy::setEnergyValue(int i_arg)
+void CollectableSpacetimeEnergy::setEnergyValue(int i_energyValue)
 {
-	EnergyValue = i_arg;
+	EnergyValue = i_energyValue;
 }

@@ -24,26 +24,26 @@ const char* AwardsGranter::AwardTypeToString(AwardType i_awardType)
 {
 	switch (i_awardType)
 	{
-	case 0x14: return "sprout";
-	case 0x13: return "worldkey";
-	case 0x12: return "giftbox";
-	case 0x11: return "costume";
-	case 0x10: return "costumegroup_lod";
-	case 0xf: return "game_feature";
-	case 0xe: return "key";
-	case 0xd: return "powerupuse";
-	case 0xc: return "gems";
-	case 0xb: return "coins";
-	case 9: return "note";
-	case 8: return "firstkey";
-	case 7: return "powerupgadget";
-	case 6: return "mapgadget";
-	case 5: return "upgrade";
-	case 4: return "powerup";
-	case 3: return "unlock_plant";
-	case 2: return "collectible";
-	case 1: return "present";
-	case 0x15: return "plant_boost";
+	case AWARD_Sprout: return "sprout";
+	case AWARD_WorldKey: return "worldkey";
+	case AWARD_GiftBox: return "giftbox";
+	case AWARD_Costume: return "costume";
+	case AWARD_CostumeGroupLOD: return "costumegroup_lod";
+	case AWARD_GameFeature: return "game_feature";
+	case AWARD_Key: return "key";
+	case AWARD_PowerupUse: return "powerupuse";
+	case AWARD_Gems: return "gems";
+	case AWARD_Coins: return "coins";
+	case AWARD_Note: return "note";
+	case AWARD_FirstKey: return "firstkey";
+	case AWARD_PowerupGadget: return "powerupgadget";
+	case AWARD_MapGadget: return "mapgadget";
+	case AWARD_Upgrade: return "upgrade";
+	case AWARD_Powerup: return "powerup";
+	case AWARD_UnlockPlant: return "unlock_plant";
+	case AWARD_Collectable: return "collectible";
+	case AWARD_Present: return "present";
+	case AWARD_PlantBoost: return "plant_boost";
 	default: return "none";
 	}
 }
@@ -54,7 +54,7 @@ bool AwardsGranter::IsOwned(AwardType awardType, std::string awardParam, bool i_
 {
 	switch (awardType)
 	{
-	case 5:
+	case AWARD_Upgrade:
 	{
 		PlayerInfo* profile = ProfileMgr::GetInstance().GetCurrentProfile();
 		const CollectableUpgradeType* c = (const CollectableUpgradeType*)Identity(ObjectTypeDirectory<CollectableType>::GetInstancePtr()->GetTypeFromTypeName(awardParam).operator->());
@@ -62,14 +62,14 @@ bool AwardsGranter::IsOwned(AwardType awardType, std::string awardParam, bool i_
 		bool r = profile->GameFeatureIsUnlocked(feature->Feature);
 		return r;
 	}
-	case 0xf:
+	case AWARD_GameFeature:
 	{
 		PlayerInfo* profile = ProfileMgr::GetInstance().GetCurrentProfile();
 		GameFeatureTypePtr feature = GameFeatureType::GetGameFeatureTypeFromUnlockString(awardParam);
 		bool r = profile->GameFeatureIsUnlocked(feature->Feature);
 		return r;
 	}
-	case 3:
+	case AWARD_UnlockPlant:
 		return ProfileMgr::GetInstance().GetCurrentProfile()->GetIsPlantUnlocked(awardParam);
 	default:
 		return false;
@@ -90,11 +90,11 @@ void AwardsGranter::GiveAward(AwardType i_awardType, std::string i_awardParam, i
 	case AWARD_UnlockPlant:
 		ProfileMgr::GetInstance().GetCurrentProfile()->UnlockPlant(i_awardParam);
 		if (i_awardParam == "sunflower")
-			ProfileUtils::TriggerTutorialFunnelEventForCurrentProfile((FunnelEvent)10);
+			ProfileUtils::TriggerTutorialFunnelEventForCurrentProfile(FUNNEL_PickupSunflower);
 		else if (i_awardParam == "wallnut")
-			ProfileUtils::TriggerTutorialFunnelEventForCurrentProfile((FunnelEvent)15);
+			ProfileUtils::TriggerTutorialFunnelEventForCurrentProfile(FUNNEL_PickupWallnut);
 		else if (i_awardParam == "potatomine")
-			ProfileUtils::TriggerTutorialFunnelEventForCurrentProfile((FunnelEvent)21);
+			ProfileUtils::TriggerTutorialFunnelEventForCurrentProfile(FUNNEL_PickupPotatoMine);
 		gMessageRouter->Broadcast(Message::AwardGiven, i_awardContext, i_awardParam.c_str(), i_awardCount);
 		break;
 	case AWARD_Upgrade:
@@ -107,7 +107,7 @@ void AwardsGranter::GiveAward(AwardType i_awardType, std::string i_awardParam, i
 		break;
 	}
 	case AWARD_MapGadget:
-		ProfileUtils::TriggerTutorialFunnelEventForCurrentProfile((FunnelEvent)29);
+		ProfileUtils::TriggerTutorialFunnelEventForCurrentProfile(FUNNEL_PickupMap);
 		break;
 	case AWARD_Coins:
 	{

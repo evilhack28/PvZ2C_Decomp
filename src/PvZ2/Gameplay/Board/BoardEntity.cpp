@@ -218,7 +218,7 @@ void BoardEntity::Update()
 
 			poisonDebuff.buffID = -1;
 			if (Cast<GridItem>() && !Cast<GridItem>()->IsDestroyed())
-				Cast<GridItem>()->EndCondition((GridItemConditions)7);
+				Cast<GridItem>()->EndCondition(GCONDITION_Firecracker_pg02);
 		}
 	}
 

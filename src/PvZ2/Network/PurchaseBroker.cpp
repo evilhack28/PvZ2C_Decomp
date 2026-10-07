@@ -1061,11 +1061,11 @@ void PurchaseBroker::PurchaseSuccessed(std::string orderNumber, std::string sku_
 			else if (sku_id == "com.popcap.ios.chs.PVZ2.Lottery6")
 				LIMIT_LOTTERY_BUY(6, 6000)
 			else if (sku_id == "com.popcap.ios.chs.PVZ2.Lottery25")
-				LIMIT_LOTTERY_BUY(0x19, 30000)
+				LIMIT_LOTTERY_BUY(25, 30000)
 			else if (sku_id == "com.popcap.ios.chs.PVZ2.Lottery328")
-				LIMIT_LOTTERY_BUY(0x148, 0x60ae0)
+				LIMIT_LOTTERY_BUY(328, 396000)
 			else if (sku_id == "com.popcap.ios.chs.PVZ2.Bank30")
-				NetworkMgr::Instance()->GetNewNetWorkProcess()->RequestBuyShopItem(2, 1, 1, 9999, 30);
+				NetworkMgr::Instance()->GetNewNetWorkProcess()->RequestBuyShopItem(PIGGY_BANK_2019, 1, 1, GachaRewardCode_RMB, 30);
 		}
 	}
 finish:
@@ -1148,7 +1148,7 @@ void PurchaseBroker::OnNotifyPurchaseResult(bool i_success, const std::string& i
 			{
 				SexyString header(L"[PURCHASE_ERROR_HEADER]");
 				SexyString body(L"[PURCHASE_ERROR_BODY]");
-				if (i_errorCode == 0x5033)
+				if (i_errorCode == 20531)
 				{
 					header = L"[PURCHASE_FULL_ERROR_HEADER]";
 					body = L"[PURCHASE_FULL_ERROR_BODY]";

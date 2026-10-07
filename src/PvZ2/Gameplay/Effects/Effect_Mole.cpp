@@ -31,7 +31,7 @@ void Effect_Mole::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(Effect_Mole);
 }
 
-void Effect_Mole::SetMoleType(MoleType i_arg)
+void Effect_Mole::SetMoleType(MoleType i_moleType)
 {
-	m_moleType = i_arg;
+	m_moleType = i_moleType;
 }

@@ -59,7 +59,7 @@ bool PlantTypeVine::CanPlantOnPlant(Plant* plant) const
 void PlantTypeVine::GatherPlantingRestrictions(Board* i_board, const Sexy::Point& i_gridPosition, std::vector<PlantingReason>* io_plantingReasons) const
 {
 	std::vector<BoardEntity*> entities;
-	EntityFinder::GetEntitiesAtGridSquare(entities, (BoardEntityTypeFlag)1, i_gridPosition.mX, i_gridPosition.mY);
+	EntityFinder::GetEntitiesAtGridSquare(entities, ENTITYTYPE_PLANT, i_gridPosition.mX, i_gridPosition.mY);
 	if (entities.empty())
 	{
 		Plant* leftPlant = gLawnApp->m_board->GetPlantAt(i_gridPosition.mX - 1, i_gridPosition.mY, "");
@@ -69,7 +69,7 @@ void PlantTypeVine::GatherPlantingRestrictions(Board* i_board, const Sexy::Point
 		}
 		else if (leftPlant != nullptr && "armorflame" == leftPlant->GetType()->TypeName)
 		{
-			io_plantingReasons->push_back((PlantingReason)4);
+			io_plantingReasons->push_back(PLANTING_ONLY_ON_GRAVES);
 		}
 		else
 		{
@@ -92,7 +92,7 @@ void PlantTypeVine::GatherPlantingRestrictions(Board* i_board, const Sexy::Point
 			}
 			if ("armorflame" == plant->GetType()->TypeName)
 			{
-				io_plantingReasons->push_back((PlantingReason)4);
+				io_plantingReasons->push_back(PLANTING_ONLY_ON_GRAVES);
 				return;
 			}
 			if ("smallcactus" == plant->GetType()->TypeName || "smallChestnut" == plant->GetType()->TypeName)
@@ -111,7 +111,7 @@ void PlantTypeVine::GatherPlantingRestrictions(Board* i_board, const Sexy::Point
 			}
 			if ("armorflame" == leftPlant->GetType()->TypeName)
 			{
-				io_plantingReasons->push_back((PlantingReason)4);
+				io_plantingReasons->push_back(PLANTING_ONLY_ON_GRAVES);
 				return;
 			}
 		}

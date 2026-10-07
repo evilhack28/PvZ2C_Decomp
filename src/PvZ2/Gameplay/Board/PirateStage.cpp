@@ -398,7 +398,7 @@ BoardRegionDeepWater::BoardRegionDeepWater()
 	: m_leftSplashMinDistance(0.0f)
 	, m_rightSplashMinDistance(0.0f)
 {
-	SetFlags((BoardRegionFlags)1);
+	SetFlags(BOARDREGION_PitOfDoom);
 }
 
 void BoardRegionDeepWater::DoEntityEnteredEffects(const SexyVector3& i_boardLocation, BoardEntity* i_enteringEntity)

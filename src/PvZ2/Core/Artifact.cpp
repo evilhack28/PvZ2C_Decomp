@@ -278,16 +278,16 @@ void Artifact::OnGetArtifactBoosts(int i_id, int i_type)
 	std::string name = PlantNameMapper::GetInstance().GetNameForId(i_id);
 	float value;
 	switch (i_type) {
-	case 4:
+	case Improved_TriggerCD:
 		value = GetExtraHpRate(name);
 		break;
-	case 6:
+	case Improved_Passive2CD:
 		value = GetExtraAttackRate(name);
 		break;
-	case 8:
+	case Global_Passive1:
 		value = GetExtraReducedCooldown(name);
 		break;
-	case 10:
+	case Start_No_CD:
 		value = GetExtraFastPlant(name);
 		break;
 	default:
@@ -296,7 +296,7 @@ void Artifact::OnGetArtifactBoosts(int i_id, int i_type)
 	}
 	if (value > 0)
 	{
-		float boost = GetBoostValue((ArtifactBoostType)7);
+		float boost = GetBoostValue(Improved_Passive1);
 		asm("fmul %s0, %s0, %s1\n\tfadd %s1, %s0, %s1" : "+w"(boost), "+w"(value));
 	}
 finish:
@@ -333,10 +333,10 @@ void Artifact::Activate()
 	m_nextMainFieldTime = 0;
 	ArtifactMgr::GetInstance().FillCommonData(m_commonData);
 	float cooldown = m_commonData.Cooldown;
-	float reduce = GetBoostValue((ArtifactBoostType)4);
+	float reduce = GetBoostValue(Improved_TriggerCD);
 	asm volatile("" ::: "memory");
 	m_commonData.Cooldown = m_commonData.Cooldown - reduce * cooldown;
-	m_commonData.MaxUsedTimes = (int)(GetBoostValue((ArtifactBoostType)5) + (float)m_commonData.MaxUsedTimes);
+	m_commonData.MaxUsedTimes = (int)(GetBoostValue(Improved_UseTimes) + (float)m_commonData.MaxUsedTimes);
 	int usedTimes;
 	if (ArtifactMgr::GetInstance().IsDangerRoom()) {
 		usedTimes = DangerRoomManager::GetInstancePtr()->GetArtifactUsedTimes();
@@ -352,10 +352,10 @@ void Artifact::Activate()
 	else
 		gMessageRouter->Subscribe(&Message::ArtifactDisplayBoardUpdate, Sexy::MakeDelegate(*this, &Artifact::Update));
 	bool inGame = gGameStateMgr->GetState() == GAME_Game;
-	float sun = GetBoostValue((ArtifactBoostType)9);
+	float sun = GetBoostValue(Bonus_Starting_Sun);
 	if (sun > 0 && inGame && gLawnApp->m_board)
 		gLawnApp->m_board->AddSunMoney((int)sun);
-	float noCD = GetBoostValue((ArtifactBoostType)10);
+	float noCD = GetBoostValue(Start_No_CD);
 	if (noCD > 0 && inGame)
 		ArtifactMgr::GetInstance().SetFreeNoCDLeftCount((int)noCD);
 	gMessageRouter->Post(&Message::ActionComplete);

@@ -34,7 +34,7 @@ void ZombieAnimRig_DiscoMech::StaticClassInit()
 }
 
 #include "ZombieAnimRig_DiscoMech.h"
-void ZombieAnimRig_DiscoMech::onDanceStartEnd(const std::string& i_arg)
+void ZombieAnimRig_DiscoMech::onDanceStartEnd(const std::string& i_animLabel)
 {
 	 ZombieAnimRig_DiscoMech::DanceIdle();
 }

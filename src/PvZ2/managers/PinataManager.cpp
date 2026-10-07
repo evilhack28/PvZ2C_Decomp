@@ -204,7 +204,7 @@ void PinataManager::RecvReward()
     else if (type == THEDAYREWARDTYPE_PLANTPIECE)
         profile->AddPlantPieceCount(reward->strItemName, reward->iCount);
     else if (type == THEDAYREWARDTYPE_AVATARPIECE)
-        profile->AddAvatarPiecesCount(reward->strItemName, (PlantAvatarType)0, reward->iCount);
+        profile->AddAvatarPiecesCount(reward->strItemName, E_AVATAR_NORMAL, reward->iCount);
 }
 
 void PinataManager::SetupPinatas(int i_parentWidth, Sexy::Delegate0 i_onAllPinatasOpened)

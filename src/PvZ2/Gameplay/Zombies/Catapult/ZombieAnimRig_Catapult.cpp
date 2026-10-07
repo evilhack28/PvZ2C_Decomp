@@ -29,7 +29,7 @@ void ZombieAnimRig_Catapult::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_Catapult);
 }
 
-void ZombieAnimRig_Catapult::SetRemainingAmmo(int i_arg)
+void ZombieAnimRig_Catapult::SetRemainingAmmo(int i_ammo)
 {
-	Ammo = i_arg;
+	Ammo = i_ammo;
 }

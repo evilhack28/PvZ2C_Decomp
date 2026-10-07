@@ -28,5 +28,5 @@ bool PlantElectricBlueberry::CanApplyPlantfood()
 
 BoardEntityTypeFlag PlantElectricBlueberry::GetTargetEntityTypesForWeapon(PlantWeapon i_plantWeapon)
 {
-	return (BoardEntityTypeFlag)2;
+	return ENTITYTYPE_ZOMBIE;
 }

@@ -34,7 +34,7 @@ void ZombieFairyTaleImp::onZombieInitialize()
 	 Zombie::onZombieInitialize();
 }
 
-void ZombieFairyTaleImp::onWalkAnimContinued(const std::string& i_arg0, const std::string& i_arg1, int i_arg2)
+void ZombieFairyTaleImp::onWalkAnimContinued(const std::string& i_animLabel, const std::string& i_nextAnimLabel, int i_cycleCount)
 {
 }
 

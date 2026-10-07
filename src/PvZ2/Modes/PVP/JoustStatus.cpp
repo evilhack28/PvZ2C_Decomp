@@ -38,12 +38,12 @@ const JoustAPIResponseMatchComplete& JoustStatus::GetMatchCompleteData()
 	return MatchCompleteData;
 }
 
-void JoustStatus::SetLeagueChangeEvent(JoustAPIResponseLeagueChange& i_arg)
+void JoustStatus::SetLeagueChangeEvent(JoustAPIResponseLeagueChange& i_leagueChange)
 {
-	LeagueChangeEvent = i_arg;
+	LeagueChangeEvent = i_leagueChange;
 }
 
-void JoustStatus::SetMatchCompleteData(JoustAPIResponseMatchComplete& i_arg)
+void JoustStatus::SetMatchCompleteData(JoustAPIResponseMatchComplete& i_matchComplete)
 {
-	MatchCompleteData = i_arg;
+	MatchCompleteData = i_matchComplete;
 }

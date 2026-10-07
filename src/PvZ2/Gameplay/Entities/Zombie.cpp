@@ -220,87 +220,87 @@ Sexy::SexyVector3 Zombie::GetStunnedEffectOffset() const
 }
 
 
-void Zombie::onExitState_Ash(ZombieState i_arg)
+void Zombie::onExitState_Ash(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_Attack(ZombieState i_arg)
+void Zombie::onExitState_Attack(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_Besiege(ZombieState i_arg)
+void Zombie::onExitState_Besiege(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_BleedingOut(ZombieState i_arg)
+void Zombie::onExitState_BleedingOut(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_Die(ZombieState i_arg)
+void Zombie::onExitState_Die(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_DropIntoIceHole(ZombieState i_arg)
+void Zombie::onExitState_DropIntoIceHole(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_Eat(ZombieState i_arg)
+void Zombie::onExitState_Eat(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_Electrocute(ZombieState i_arg)
+void Zombie::onExitState_Electrocute(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_FlickedOff(ZombieState i_arg)
+void Zombie::onExitState_FlickedOff(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_Glide(ZombieState i_arg)
+void Zombie::onExitState_Glide(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_Grabbed(ZombieState i_arg)
+void Zombie::onExitState_Grabbed(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_Idle(ZombieState i_arg)
+void Zombie::onExitState_Idle(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_MowedDown(ZombieState i_arg)
+void Zombie::onExitState_MowedDown(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_Plantify(ZombieState i_arg)
+void Zombie::onExitState_Plantify(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_ResilienceBreak(ZombieState i_arg)
+void Zombie::onExitState_ResilienceBreak(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_ResilienceEnterBreak(ZombieState i_arg)
+void Zombie::onExitState_ResilienceEnterBreak(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_TakeWeapon(ZombieState i_arg)
+void Zombie::onExitState_TakeWeapon(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_TargetRise(ZombieState i_arg)
+void Zombie::onExitState_TargetRise(ZombieState i_state)
 {
 }
 
-void Zombie::onExitState_Winning(ZombieState i_arg)
+void Zombie::onExitState_Winning(ZombieState i_state)
 {
 }
 
-void Zombie::onEnterState_Glide(ZombieState i_arg)
+void Zombie::onEnterState_Glide(ZombieState i_state)
 {
 }
 
-void Zombie::onEnterState_TargetRise(ZombieState i_arg)
+void Zombie::onEnterState_TargetRise(ZombieState i_state)
 {
 }
 
@@ -848,7 +848,7 @@ bool Zombie::IsInvisible() const
 
 GroundEffectType Zombie::GetTideEffect() const
 {
-	return TestFlag(m_zombieFlags, ZFLAG_IsPulledByBeachZomboss) ? (GroundEffectType)5 : (GroundEffectType)0;
+	return TestFlag(m_zombieFlags, ZFLAG_IsPulledByBeachZomboss) ? GROUND_EFFECT_Surf : GROUND_EFFECT_Tide;
 }
 
 bool Zombie::IsSlowed()
@@ -1144,29 +1144,29 @@ void Zombie::SetIsUsingAnimTranslation(bool i_hasAnimTranslation)
 	SetFlag(m_zombieFlags, ZFLAG_UseAnimTranslation, i_hasAnimTranslation);
 }
 
-void Zombie::onExitState_Walk(ZombieState i_arg)
+void Zombie::onExitState_Walk(ZombieState i_state)
 {
 	SetFlag(m_zombieFlags, ZFLAG_UseAnimTranslation, false);
 }
 
-void Zombie::onExitState_SpeedUpTileLeft(ZombieState i_arg)
+void Zombie::onExitState_SpeedUpTileLeft(ZombieState i_state)
 {
-	EndCondition((ZombieConditions)0x92);
+	EndCondition((ZombieConditions)146);
 }
 
-void Zombie::onExitState_SpeedUpTileRight(ZombieState i_arg)
+void Zombie::onExitState_SpeedUpTileRight(ZombieState i_state)
 {
-	EndCondition((ZombieConditions)0x92);
+	EndCondition((ZombieConditions)146);
 }
 
-void Zombie::onExitState_SpeedUpTileUp(ZombieState i_arg)
+void Zombie::onExitState_SpeedUpTileUp(ZombieState i_state)
 {
-	EndCondition((ZombieConditions)0x92);
+	EndCondition((ZombieConditions)146);
 }
 
-void Zombie::onExitState_SpeedUpTileDown(ZombieState i_arg)
+void Zombie::onExitState_SpeedUpTileDown(ZombieState i_state)
 {
-	EndCondition((ZombieConditions)0x92);
+	EndCondition((ZombieConditions)146);
 }
 
 bool Zombie::IsValidRangedTarget(Plant* plant)
@@ -1192,7 +1192,7 @@ void Zombie::SetEliminateColor(int i_color)
 void Zombie::SetEliminateColor(EEliminateType i_color)
 {
 	if ((unsigned)i_color >= 8)
-		i_color = (EEliminateType)8;
+		i_color = EEliminateType_None;
 	m_eliminateColor = i_color;
 	m_conditionTracker.SetEliminateColor(i_color);
 }
@@ -1584,7 +1584,7 @@ void Zombie::applyPoisonGraphicalEffects()
 
 bool Zombie::HasFogImmune() const
 {
-	return HasCondition((ZombieConditions)107) || HasCondition((ZombieConditions)108);
+	return HasCondition(ZCONDITION_FogShieldLvl2) || HasCondition(ZCONDITION_FogShieldLvl3);
 }
 
 int Zombie::CalcHelmDamageIndex() const
@@ -1697,7 +1697,7 @@ void Zombie::StartWarpIn(float ofDuration)
 
 void Zombie::StartWarpOut(float ofDuration)
 {
-	m_conditionTracker.ApplyCondition(this, (ZombieConditions)63, ofDuration, 0.f);
+	m_conditionTracker.ApplyCondition(this, ZCONDITION_WarpingOut, ofDuration, 0.f);
 	SetFlag(m_zombieFlags, ZFLAG_IgnoresCollisions, true);
 	SetFlag(m_zombieFlags, ZFLAG_NotTargetable, true);
 }
@@ -1762,7 +1762,7 @@ int Zombie::CalcProgressMeterHitpoints() const
 
 void Zombie::updateState_Idle()
 {
-	if (HasCondition((ZombieConditions)85))
+	if (HasCondition(ZCONDITION_Gummed))
 	{
 		if (FindEatTarget())
 			setZombieState(ZS_Eat, false);
@@ -1771,7 +1771,7 @@ void Zombie::updateState_Idle()
 
 void Zombie::updateRushCondition()
 {
-	if (m_conditionTracker.HasCondition((ZombieConditions)7))
+	if (m_conditionTracker.HasCondition(ZCONDITION_RushOnscreen))
 	{
 		if (GetPosition().x <= 792.f)
 			endRushOnScreen();
@@ -1791,7 +1791,7 @@ bool Zombie::IsResilienceBreak() const
 
 void Zombie::spreadChemistPoison()
 {
-	if (HasCondition((ZombieConditions)78))
+	if (HasCondition(ZCONDITION_ChemistContagiousPoison))
 		doSpreadChemistPoison(CalcColumnPosition(), CalcRowPosition());
 }
 
@@ -1908,7 +1908,7 @@ void Zombie::TurnToAsh()
 		setZombieState(ZS_Die, false);
 }
 
-void Zombie::onEnterState_MowedDown(ZombieState i_arg)
+void Zombie::onEnterState_MowedDown(ZombieState i_state)
 {
 	m_pCachedZombieAnimRig->SetPaused(true);
 	onMowedDown();
@@ -2027,7 +2027,7 @@ void Zombie::DetachAttachedEffect(const char* i_entityName)
 		effect->Detach();
 }
 
-void Zombie::onEnterState_DropIntoIceHole(ZombieState i_arg)
+void Zombie::onEnterState_DropIntoIceHole(ZombieState i_state)
 {
 	GetAnimRig()->PlayStreetIdle();
 }
@@ -2115,9 +2115,9 @@ bool Zombie::CheckSpeedUpTileIsTurnToDown()
 	return gLawnApp->m_board->GetGridSquareType(x, y + 1) == GRIDSQUARE_TD_ROAD;
 }
 
-void Zombie::onEnterState_Idle(ZombieState i_arg)
+void Zombie::onEnterState_Idle(ZombieState i_state)
 {
-	if (i_arg != ZS_RiseFromGround && i_arg != ZS_DropIntoIceHole)
+	if (i_state != ZS_RiseFromGround && i_state != ZS_DropIntoIceHole)
 		m_pCachedZombieAnimRig->PlayStreetIdle();
 }
 
@@ -2187,7 +2187,7 @@ void Zombie::registerForEvents()
 	gMessageRouter->Subscribe(Message::NotifyWhenChanged, Sexy::MakeDelegate(*this, &Zombie::onStreetLampChanged));
 }
 
-void Zombie::onExitState_RiseFromStorm(ZombieState i_arg)
+void Zombie::onExitState_RiseFromStorm(ZombieState i_state)
 {
 	SetUseGroundClipRect(false);
 	SetIsControlled(false);
@@ -2264,9 +2264,9 @@ bool Zombie::IsInTargetHistory(BoardEntityPtr i_entity)
 	return std::find(m_targetHistory.begin(), m_targetHistory.end(), i_entity) != m_targetHistory.end();
 }
 
-bool Zombie::CanNormalDamagePlantGroup(PlantGroup* i_plantGroup, bool i_arg)
+bool Zombie::CanNormalDamagePlantGroup(PlantGroup* i_plantGroup, bool checkInvincible)
 {
-	return IsOnOpposingTeam(i_plantGroup) && i_plantGroup->CanBeTargetedBy(this, i_arg) && canTargetEntityHeight(i_plantGroup->GetEntityHeight());
+	return IsOnOpposingTeam(i_plantGroup) && i_plantGroup->CanBeTargetedBy(this, checkInvincible) && canTargetEntityHeight(i_plantGroup->GetEntityHeight());
 }
 
 int Zombie::calcDamageIndex(float i_currentHitPoints, float i_maxHitpoints, int i_damageStates) const
@@ -2589,10 +2589,10 @@ float Zombie::GetCurrentResistenceValue(ZombieResistenceType i_type)
 {
 	if (i_type == -1)
 		return 0.0f;
-	if (i_type == 6 && HasCondition((ZombieConditions)0x8a))
+	if (i_type == 6 && HasCondition((ZombieConditions)138))
 	{
 		float base = m_currentResistence[6];
-		return base + GetConditionTracker().GetCondition((ZombieConditions)0x8a).m_additionalDataValue;
+		return base + GetConditionTracker().GetCondition((ZombieConditions)138).m_additionalDataValue;
 	}
 	return m_currentResistence[i_type];
 }
@@ -2626,9 +2626,9 @@ void Zombie::updateResilienceDamageThreshold()
 
 void Zombie::forceApplyConditionEffects()
 {
-	if (HasCondition((ZombieConditions)3))
+	if (HasCondition(ZCONDITION_Buttered))
 		applyButterGraphicalEffects();
-	if (HasCondition((ZombieConditions)0x30) || HasCondition((ZombieConditions)0x31) || HasCondition((ZombieConditions)0x8d))
+	if (HasCondition(ZCONDITION_ShadowPoisoned) || HasCondition(ZCONDITION_Venom) || HasCondition((ZombieConditions)141))
 		applyPoisonGraphicalEffects();
 	updateSpeed();
 }
@@ -2641,7 +2641,7 @@ void Zombie::updateStateMachine()
 		float scale = m_stateMachineTimeScale;
 		m_elapsedTimeInState += PVZ_Dt() * scale;
 	}
-	else if (HasCondition((ZombieConditions)0x92))
+	else if (HasCondition((ZombieConditions)146))
 	{
 		m_stateMachine.UpdateState();
 		m_elapsedTimeInState += PVZ_Dt() * 0.0001f;
@@ -2703,7 +2703,7 @@ void Zombie::SetForcedTarget(BoardEntity* i_forcedTarget)
 	dst = RtWeakPtr<BoardEntity>(ptr);
 }
 
-void Zombie::onEnterState_BleedingOut(ZombieState i_arg)
+void Zombie::onEnterState_BleedingOut(ZombieState i_state)
 {
 	gMessageRouter->Post(Message::ZombieBleedingOut, this, nullptr);
 	SetFlag(m_zombieFlags, ZFLAG_UseAnimTranslation, true);
@@ -2750,17 +2750,17 @@ void Zombie::DoDropIntoIceHole(const SexyVector3& i_boardPosition, bool bSpecial
 	m_bSpecialSplitRect = bSpecial;
 	SetTargetPosition(i_boardPosition);
 	setZombieState(ZS_DropIntoIceHole);
-	EndCondition((ZombieConditions)1);
-	EndCondition((ZombieConditions)0x27);
-	EndCondition((ZombieConditions)0x65);
-	EndCondition((ZombieConditions)0x2c);
-	EndCondition((ZombieConditions)0x18);
-	EndCondition((ZombieConditions)2);
-	EndCondition((ZombieConditions)0x38);
-	EndCondition((ZombieConditions)0x29);
-	EndCondition((ZombieConditions)3);
-	EndCondition((ZombieConditions)4);
-	EndCondition((ZombieConditions)0x39);
+	EndCondition(ZCONDITION_Frozen);
+	EndCondition(ZCONDITION_Icecubed);
+	EndCondition(ZCONDITION_Squidified);
+	EndCondition(ZCONDITION_PresentBoxed);
+	EndCondition(ZCONDITION_Stucked);
+	EndCondition(ZCONDITION_Stunned);
+	EndCondition(ZCONDITION_Numb);
+	EndCondition(ZCONDITION_Amber);
+	EndCondition(ZCONDITION_Buttered);
+	EndCondition(ZCONDITION_Buttered9);
+	EndCondition(ZCONDITION_Binded);
 }
 
 Sexy::SexyVector3 Zombie::LayerToWorld(const std::string& i_layerName)
@@ -2786,7 +2786,7 @@ std::string Zombie::getElectrocutePAMName() const
 	return name;
 }
 
-void Zombie::onEnterState_Besiege(ZombieState i_arg)
+void Zombie::onEnterState_Besiege(ZombieState i_state)
 {
 	if (m_besiegeRate < 0.001f)
 		m_besiegeRate = 3.0f;
@@ -2809,7 +2809,7 @@ void Zombie::RemoveArmor(std::string i_armorFlags)
 	}
 }
 
-void Zombie::onEnterState_Attack(ZombieState i_arg)
+void Zombie::onEnterState_Attack(ZombieState i_state)
 {
 	m_pCachedZombieAnimRig->PlayAttack(PopAnimRig::AnimStoppedReflectionDelegate(GetPtr(), "onAttackAnimStopped"));
 }
@@ -2909,7 +2909,7 @@ void Zombie::DropAndHiddenAllZombieParticle()
 		particle->SetHidden(true);
 	for (size_t i = 0; i < m_armor.size(); i++)
 	{
-		particle = m_armor[i]->DropArmor((DamageTypeFlags)2);
+		particle = m_armor[i]->DropArmor(DAMAGE_FATAL);
 		if (particle)
 			particle->SetHidden(true);
 	}
@@ -2940,13 +2940,13 @@ void Zombie::onPostLoad()
 	onZombiePostLoad();
 }
 
-void Zombie::onEnterState_RiseFromPod(ZombieState i_arg)
+void Zombie::onEnterState_RiseFromPod(ZombieState i_state)
 {
 	GetAnimRig()->PlayAndStop(spawnFromPodAnimationName, SELECT_EXACT, PopAnimRig::AnimStoppedDelegate());
 	if (IsOnWaterTile(GetPosition()))
 		m_groundEffect.SetGroundEffect(this, GetTideEffect(), true);
 	else
-		m_groundEffect.SetGroundEffect(this, (GroundEffectType)3, true);
+		m_groundEffect.SetGroundEffect(this, GROUND_EFFECT_Rise_From_Ground, true);
 	SetIsControlled(true);
 }
 
@@ -2972,11 +2972,11 @@ void Zombie::storeProjectileInJuggleLimbo(Projectile* i_projectile)
 	m_juggledProjectiles.push_back(timer);
 }
 
-void Zombie::onEnterState_Walk(ZombieState i_arg)
+void Zombie::onEnterState_Walk(ZombieState i_state)
 {
-	if (HasCondition((ZombieConditions)0x55) && HasCondition((ZombieConditions)0x8c))
+	if (HasCondition(ZCONDITION_Gummed) && HasCondition((ZombieConditions)140))
 		return;
-	if (HasCondition((ZombieConditions)0x37))
+	if (HasCondition(ZCONDITION_Blocked))
 	{
 		m_pCachedZombieAnimRig->PlayEat();
 		return;

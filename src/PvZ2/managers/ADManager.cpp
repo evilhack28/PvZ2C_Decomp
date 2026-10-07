@@ -163,7 +163,7 @@ void ADManager::onADFinished(EASquaredAdFinishedReason::EASquaredAdFinishedReaso
     bool isCustom = isCustomLevelAD(m_currentADType);
     switch (i_reason)
     {
-    case 0:
+    case EASquaredAdFinishedReason::Completed:
         if (isCustom)
         {
             TGACustomLevelADData data;
@@ -179,7 +179,7 @@ void ADManager::onADFinished(EASquaredAdFinishedReason::EASquaredAdFinishedReaso
         else
             TryRequestReward();
         break;
-    case 2:
+    case EASquaredAdFinishedReason::Clicked:
         if (isCustom)
         {
             TGACustomLevelADData data;
@@ -191,7 +191,7 @@ void ADManager::onADFinished(EASquaredAdFinishedReason::EASquaredAdFinishedReaso
             TGALogMgr::GetInstance().LogCustomLevelAD(data);
         }
         break;
-    case 3:
+    case EASquaredAdFinishedReason::Closed:
         if (isCustom)
         {
             TGACustomLevelADData data;
@@ -203,7 +203,7 @@ void ADManager::onADFinished(EASquaredAdFinishedReason::EASquaredAdFinishedReaso
             TGALogMgr::GetInstance().LogCustomLevelAD(data);
         }
         break;
-    case 1:
+    case EASquaredAdFinishedReason::Success:
         if (isCustom)
         {
             TGACustomLevelADData data;
@@ -215,7 +215,7 @@ void ADManager::onADFinished(EASquaredAdFinishedReason::EASquaredAdFinishedReaso
             TGALogMgr::GetInstance().LogCustomLevelAD(data);
         }
         break;
-    case 4:
+    case EASquaredAdFinishedReason::Canceled:
         if (isCustom)
         {
             TGACustomLevelADData data;

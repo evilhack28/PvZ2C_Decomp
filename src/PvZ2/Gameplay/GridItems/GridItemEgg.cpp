@@ -47,5 +47,5 @@ void GridItemEggProps::StaticClassInit()
 
 PlantingReason GridItemEgg::GetCantPlantReason() const
 {
-	return (PlantingReason)87;
+	return PLANTING_NOT_ON_DINOEGG;
 }

@@ -105,7 +105,7 @@ void CheatUILine::onDraw(Graphics* i_g)
 
 	PrimeText_PotentialTypeface* font = PrimeText_Game::Typeface_CafeteriaBlack_26;
 	PrimeTypeface* typeface = font ? font->Typeface() : NULL;
-	WriteWordInRect(i_g, text, rect, typeface, color, (DrawStringJustification)3, false);
+	WriteWordInRect(i_g, text, rect, typeface, color, DS_ALIGN_LEFT_VERTICAL_MIDDLE, false);
 }
 
 SexyVector2 CheatUILine::getDimensions()
@@ -245,7 +245,7 @@ void CheatAdjusterWidget::onCreate(const std::string& i_name, float i_value, Sex
 	m_pCloseButton->Resize(mWidth - mHeight, 0, mHeight, mHeight);
 	Image* normalImage = StringHelper::ToImage(std::string("IMAGE_UI_GENERIC_RED_CROSS"), true);
 	Image* downImage = StringHelper::ToImage(std::string("IMAGE_UI_GENERIC_RED_CROSS"), true);
-	m_pCloseButton->SetDialogStates(PVZ2UIImage(normalImage, (PVZ2UIImageType)2), PVZ2UIImage(downImage, (PVZ2UIImageType)2));
+	m_pCloseButton->SetDialogStates(PVZ2UIImage(normalImage, PVZ2UIIMAGE_SINGLE_STRETCHED), PVZ2UIImage(downImage, PVZ2UIIMAGE_SINGLE_STRETCHED));
 	AddWidget(m_pCloseButton);
 }
 
@@ -259,7 +259,7 @@ void CheatAdjusterWidget::Draw(Graphics* g)
 	SexyString name = Sexy::ToSexyString(m_name);
 	Rect nameRect = getNameDrawRect();
 	PrimeTypeface* typeface = PrimeText_Game::Typeface_FZCuYuan_24->Typeface();
-	WriteWordInRect(g, name, nameRect, typeface, Color(Color::Cyan), (DrawStringJustification)3, false);
+	WriteWordInRect(g, name, nameRect, typeface, Color(Color::Cyan), DS_ALIGN_LEFT_VERTICAL_MIDDLE, false);
 }
 
 void CheatAdjusterWidget::TouchBegan(const Sexy::Touch& i_touch)

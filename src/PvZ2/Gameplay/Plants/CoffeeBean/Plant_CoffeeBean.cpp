@@ -39,7 +39,7 @@ RT_CLASS_IMPLEMENT(PlantTypeCoffeeBean);
 
 CollisionTypeFlags PlantCoffeeBean::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
-	return (CollisionTypeFlags)240;
+	return COLLIDE_ALL_PLANTS;
 }
 
 void PlantTypeCoffeeBean::GatherPlantingRestrictions(Board* i_board, const Sexy::Point& i_gridPosition, std::vector<PlantingReason>* io_plantingReasons) const

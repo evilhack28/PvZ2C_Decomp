@@ -29,17 +29,17 @@ void ChallengePlantCounterUI::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ChallengePlantCounterUI);
 }
 
-void ChallengePlantCounterUI::SetIsOneCount(bool i_arg)
+void ChallengePlantCounterUI::SetIsOneCount(bool i_isOneCount)
 {
-	m_IsOneCount = i_arg;
+	m_IsOneCount = i_isOneCount;
 }
 
-void ChallengePlantCounterUI::SetCount(int i_arg)
+void ChallengePlantCounterUI::SetCount(int i_count)
 {
-	m_count = i_arg;
+	m_count = i_count;
 }
 
-void ChallengePlantCounterUI::SetTarget(int i_arg)
+void ChallengePlantCounterUI::SetTarget(int i_target)
 {
-	m_target = i_arg;
+	m_target = i_target;
 }

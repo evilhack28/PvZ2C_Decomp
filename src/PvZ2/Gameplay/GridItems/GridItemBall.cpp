@@ -66,5 +66,5 @@ bool GridItemBall::ShouldDrawShadow() const
 
 PlantingReason GridItemBall::GetCantPlantReason() const
 {
-	return (PlantingReason)75;
+	return PLANTING_NOT_IN_GOLDROAD;
 }

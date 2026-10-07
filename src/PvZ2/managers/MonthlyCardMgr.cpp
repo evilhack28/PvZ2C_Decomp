@@ -60,15 +60,15 @@ void MonthlyCardMgr::SetCommonData(const MonthlyCardCommonData& i_data)
 	m_commonData = i_data;
 }
 
-void MonthlyCardMgr::SetCommonData(int i_p1, int i_p2, int i_p3, int i_p4, int i_p5, int i_p6)
+void MonthlyCardMgr::SetCommonData(int i_freeCrystalAmount, int i_freeFuelAmount, int i_freeChangeNameCount, int i_monthlyChangeNamePrice, int i_normalChangeNamePrice, int i_freeTimeEnergyCount)
 {
-	m_commonData = MonthlyCardCommonData(i_p1, i_p2, i_p3, i_p4, i_p5, i_p6);
+	m_commonData = MonthlyCardCommonData(i_freeCrystalAmount, i_freeFuelAmount, i_freeChangeNameCount, i_monthlyChangeNamePrice, i_normalChangeNamePrice, i_freeTimeEnergyCount);
 }
 
 MonthlyChangeNameType MonthlyCardMgr::GetChangeNameType()
 {
 	PlayerInfo* profile = ProfileMgr::GetInstance().GetCurrentProfile();
-	if (profile && profile->IsMonthlyCardActivated((eMonthlyCardType)1))
+	if (profile && profile->IsMonthlyCardActivated(E_MC_MAKE_UP))
 		return GetFreeChangeNameCount() <= 0 ? N_MonthlyCard : N_Free;
 	return N_Normal;
 }
@@ -89,26 +89,26 @@ int MonthlyCardMgr::GetMonthlyCardType()
 	PlayerInfo* profile = ProfileMgr::GetInstance().GetCurrentProfile();
 	if (!profile)
 		return 0;
-	if (profile->IsMonthlyCardActivated((eMonthlyCardType)4))
-		return 17;
-	if (profile->IsMonthlyCardActivated((eMonthlyCardType)2))
-		return 4;
-	return profile->IsMonthlyCardActivated((eMonthlyCardType)1) ? 18 : 0;
+	if (profile->IsMonthlyCardActivated(E_MC_SUPER))
+		return MONTHLY_CARD_SUPER_QUERY;
+	if (profile->IsMonthlyCardActivated(E_MC_CLASSICAL))
+		return MONTHLY_CARD_CLASSIC_QUERY;
+	return profile->IsMonthlyCardActivated(E_MC_MAKE_UP) ? MONTHLY_CARD_MAKEUP_QUERY : 0;
 }
 
 bool MonthlyCardMgr::CanGetFreeMysteryCrystal()
 {
-	return ProfileMgr::GetInstance().GetCurrentProfile()->IsMonthlyCardActivated((eMonthlyCardType)2);
+	return ProfileMgr::GetInstance().GetCurrentProfile()->IsMonthlyCardActivated(E_MC_CLASSICAL);
 }
 
 bool MonthlyCardMgr::CanGetFreeFuel()
 {
-	return ProfileMgr::GetInstance().GetCurrentProfile()->IsMonthlyCardActivated((eMonthlyCardType)4);
+	return ProfileMgr::GetInstance().GetCurrentProfile()->IsMonthlyCardActivated(E_MC_SUPER);
 }
 
 bool MonthlyCardMgr::CanChangeColor()
 {
-	return ProfileMgr::GetInstance().GetCurrentProfile()->IsMonthlyCardActivated((eMonthlyCardType)1);
+	return ProfileMgr::GetInstance().GetCurrentProfile()->IsMonthlyCardActivated(E_MC_MAKE_UP);
 }
 
 void MonthlyCardMgr::UpdateCurrentColor()

@@ -57,22 +57,22 @@ GachaItemDisplayer::GachaItemDisplayer(GachaType i_type, const Rect& i_rect)
     int coin = GachaMgr::GetInstance().GetTargetGachaRewardCoin(i_type, false);
     switch (i_type)
     {
-    case 0:
+    case GACHA_NORMAL:
         m_headerLabel = TodStringTranslate(L"[GACHA_ITEM_NORMAL_HEADER]");
         m_descriptionLabel = StringHelper::ReplaceNumberString(std::string("[GACHA_ITEM_NORMAL_DES]"), L"{NUMBER}", coin);
         m_backgroundImage = IMAGE_UI_DIALOG_ASSET_BG_BLUE;
         break;
-    case 1:
+    case GACHA_RARE:
         m_headerLabel = TodStringTranslate(L"[GACHA_ITEM_RARE_HEADER]");
         m_descriptionLabel = StringHelper::ReplaceNumberString(std::string("[GACHA_ITEM_RARE_DES]"), L"{NUMBER}", coin);
         m_backgroundImage = IMAGE_UI_DIALOG_ASSET_BG_PURPLE;
         break;
-    case 2:
+    case GACHA_LEGEND:
         m_headerLabel = TodStringTranslate(L"[GACHA_ITEM_LEGEND_HEADER]");
         m_descriptionLabel = StringHelper::ReplaceNumberString(std::string("[GACHA_ITEM_LEGEND_DES]"), L"{NUMBER}", coin);
         m_backgroundImage = IMAGE_UI_CARDS_STORE_STORE_COIN_CARD;
         break;
-    case 3:
+    case GACHA_AVATAR:
         m_headerLabel = TodStringTranslate(L"[GACHA_ITEM_AVATAR_HEADER]");
         m_descriptionLabel = StringHelper::ReplaceNumberString(std::string("[GACHA_ITEM_AVATAR_DES]"), L"{NUMBER}", coin);
         m_backgroundImage = IMAGE_UI_DIALOG_ASSET_CARD_PURPLE;

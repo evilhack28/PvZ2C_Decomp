@@ -33,8 +33,8 @@ void ZombieAnimRig_Cavalry::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_Cavalry);
 }
 
-void ZombieAnimRig_Cavalry::SetRunning(bool i_arg)
+void ZombieAnimRig_Cavalry::SetRunning(bool i_running)
 {
-	m_running = i_arg;
+	m_running = i_running;
 }
 

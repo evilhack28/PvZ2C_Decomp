@@ -27,14 +27,14 @@ void ChallengeZombieComboUI::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ChallengeZombieComboUI);
 }
 
-void ChallengeZombieComboUI::SetCount(int i_arg)
+void ChallengeZombieComboUI::SetCount(int i_count)
 {
-	m_count = i_arg;
+	m_count = i_count;
 }
 
 
-void ChallengeZombieComboUI::SetTarget(int i_arg)
+void ChallengeZombieComboUI::SetTarget(int i_target)
 {
-	m_target = i_arg;
+	m_target = i_target;
 }
 

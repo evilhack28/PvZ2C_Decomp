@@ -34,7 +34,7 @@ void ZombieAnimRig_Chicken::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_Chicken);
 }
 
-void ZombieAnimRig_Chicken::SetFriedChickenDeath(bool i_arg)
+void ZombieAnimRig_Chicken::SetFriedChickenDeath(bool i_friedChickenDeath)
 {
-	m_friedChickenDeath = i_arg;
+	m_friedChickenDeath = i_friedChickenDeath;
 }

@@ -99,7 +99,7 @@ void* DefinitionAlloc(int theSize)
 
 bool FloatTrackIsSet(FloatParameterTrack& theTrack)
 {
-	return theTrack.m_countNodes != 0 && theTrack.m_nodes[0].m_curveType != 0;
+	return theTrack.m_countNodes != 0 && theTrack.m_nodes[0].m_curveType != CURVE_CONSTANT;
 }
 
 bool FloatTrackIsConstantZero(FloatParameterTrack& theTrack)
@@ -121,8 +121,8 @@ void FloatTrackSetDefault(FloatParameterTrack& theTrack, float theValue)
 	theTrack.m_countNodes = 1;
 	FloatParameterTrackNode* aNode = (FloatParameterTrackNode*)DefinitionAlloc(sizeof(FloatParameterTrackNode));
 	theTrack.m_nodes = aNode;
-	aNode->m_curveType = (CurveType)0;
-	aNode->m_distribution = (CurveType)1;
+	aNode->m_curveType = CURVE_CONSTANT;
+	aNode->m_distribution = CURVE_LINEAR;
 	aNode->m_lowValue = theValue;
 	aNode->m_highValue = theValue;
 	aNode->m_time = 0.0f;
@@ -313,7 +313,7 @@ bool DefParseTrackSimpleNode(const SexyChar*& theSrc, FloatParameterTrackNode* t
 	if (swscanf(theSrc, L"%f", &theNode->m_lowValue) != 1)
 		return false;
 
-	theNode->m_distribution = (CurveType)1;
+	theNode->m_distribution = CURVE_LINEAR;
 	theNode->m_highValue = theNode->m_lowValue;
 	theSrc += wcscspn(theSrc, L", 	");
 	return DefParseTrackTime(theSrc, theNode);

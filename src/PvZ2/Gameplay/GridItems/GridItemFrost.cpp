@@ -29,5 +29,5 @@ void GridItemFrost::StaticClassInit()
 
 PlantingReason GridItemFrost::GetCantPlantReason() const
 {
-	return (PlantingReason)127;
+	return PLANTING_NOT_ON_FROST;
 }

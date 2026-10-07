@@ -30,7 +30,7 @@ void PlantStallia::StaticClassInit()
 
 CollisionTypeFlags PlantStallia::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
-	return (CollisionTypeFlags)7;
+	return COLLIDE_ALL_ZOMBIES;
 }
 
 bool PlantStallia::TryBlockZombossRush(Zombie* i_zomboss)

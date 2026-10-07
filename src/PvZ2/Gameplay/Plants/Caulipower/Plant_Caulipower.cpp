@@ -59,7 +59,7 @@ void PlantTypeCaulipower::StaticClassInit()
 
 BoardEntityTypeFlag PlantCaulipower::GetTargetEntityTypesForWeapon(PlantWeapon i_plantWeapon)
 {
-	return (BoardEntityTypeFlag)2;
+	return ENTITYTYPE_ZOMBIE;
 }
 
 bool PlantCaulipower::HasShadow()

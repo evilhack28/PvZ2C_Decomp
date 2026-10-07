@@ -52,7 +52,7 @@ bool PlantDoubleSamara::CanBeTargeted()
 
 CollisionTypeFlags PlantDoubleSamara::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
-	return (CollisionTypeFlags)7;
+	return COLLIDE_ALL_ZOMBIES;
 }
 
 void PlantDoubleSamara::DoSpecial(int i_extraParam)

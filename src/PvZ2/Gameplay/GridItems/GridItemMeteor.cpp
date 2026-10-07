@@ -51,5 +51,5 @@ void GridItemMeteorProps::StaticClassInit()
 
 PlantingReason GridItemMeteor::GetCantPlantReason() const
 {
-	return (PlantingReason)75;
+	return PLANTING_NOT_IN_GOLDROAD;
 }

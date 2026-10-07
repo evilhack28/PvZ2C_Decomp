@@ -35,5 +35,5 @@ void PlantStunion::StaticClassInit()
 
 CollisionTypeFlags PlantStunion::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
-	return (CollisionTypeFlags)7;
+	return COLLIDE_ALL_ZOMBIES;
 }

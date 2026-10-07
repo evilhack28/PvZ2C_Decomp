@@ -63,5 +63,5 @@ void GridItemTentProps::StaticClassInit()
 
 PlantingReason GridItemTent::GetCantPlantReason() const
 {
-	return (PlantingReason)23;
+	return PLANTING_NOT_ON_TENT;
 }

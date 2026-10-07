@@ -240,7 +240,7 @@ void PlantType::StaticClassInit()
 	REFLECTION_ENUMBUILDER_END(PlantAvatarRare);
 
 	REFLECTION_ENUMBUILDER_BEGIN(PlantProfessions);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(invalid, (PlantProfessions)-1);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(invalid, PROFESSION_Invalid);
 		REFLECTION_ENUMBUILDER_MEMBER_RENAME(shooter, (PlantProfessions)0);
 		REFLECTION_ENUMBUILDER_MEMBER_RENAME(warrior, (PlantProfessions)1);
 		REFLECTION_ENUMBUILDER_MEMBER_RENAME(supporter, (PlantProfessions)2);
@@ -392,8 +392,8 @@ PlantType::PlantType()
 	Rare = 0;
 	ExchangeAvatarCost = 0;
 	ExchangeAvatarOpenFlag = true;
-	Profession = (PlantProfessions)-1;
-	eCurAvatar = (PlantAvatarType)-2;
+	Profession = PROFESSION_Invalid;
+	eCurAvatar = E_AVATAR_ILLEGAL;
 	DisplayFamilyId = -1;
 }
 
@@ -1532,7 +1532,7 @@ int Plant::Shovel()
 	if (isHappyLeek)
 		m_plantFramework->ShovelKill();
 	else
-		KillPlant(false, isHappyLeek, (DamageTypeFlags)0x40000000000);
+		KillPlant(false, isHappyLeek, DAMAGE_SHOVEL);
 
 	return refund;
 }
@@ -2140,7 +2140,7 @@ void Plant::UpdateShooter()
 	if (PVZ_T() > m_launchTime)
 	{
 		ResetLaunchTimer(false);
-		m_plantFramework->FindTargetAndFire((PlantWeapon)0);
+		m_plantFramework->FindTargetAndFire(WEAPON_PRIMARY);
 	}
 }
 

@@ -49,5 +49,5 @@ void GridItemSteamTrainProps::StaticClassInit()
 
 PlantingReason GridItemSteamTrain::GetCantPlantReason() const
 {
-	return (PlantingReason)97;
+	return PLANTING_NOT_ON_RENAI_TILE;
 }

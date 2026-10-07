@@ -40,7 +40,7 @@ PlantAnimRig_Egretflower::PlantAnimRig_Egretflower()
 	m_attackMode = 0;
 }
 
-void PlantAnimRig_Egretflower::SetAttackMode(int i_arg)
+void PlantAnimRig_Egretflower::SetAttackMode(int i_attackMode)
 {
-	m_attackMode = i_arg;
+	m_attackMode = i_attackMode;
 }

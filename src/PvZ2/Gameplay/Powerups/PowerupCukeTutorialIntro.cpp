@@ -421,7 +421,7 @@ void PowerupCukeTutorialIntro::onEnterState_DaveProlog(PowerupCukeTutorialState)
 
 void PowerupCukeTutorialIntro::onEnterState_Advice(PowerupCukeTutorialState)
 {
-	ShowAdvice* advice = ShowAdvice::Create(L"[TACTICAL_CUKE_ADVICE_AT_LAST]", (MessageStyle)7);
+	ShowAdvice* advice = ShowAdvice::Create(L"[TACTICAL_CUKE_ADVICE_AT_LAST]", MESSAGE_STYLE_HINT_FAST);
 	TimeEvent* endEvent = TimeEvent::Create()->Init(GetPtr(), "onEndOfAdvice");
 	m_animationMgr->ResetTime();
 	pvztime_t time = m_animationMgr->GetTime();
@@ -468,7 +468,7 @@ void PowerupCukeTutorialIntro::onEnterState_UsePlantfood(PowerupCukeTutorialStat
 	m_animationMgr->Clear();
 	m_animationMgr->ResetTime();
 	pvztime_t time = m_animationMgr->GetTime();
-	m_animationMgr->Add(ShowAdvice::Create(Sexy::UTF8StringToWString(getProps<PowerupCukeTutorialIntroProperties>()->PlantfoodAdvice), (MessageStyle)2), time);
+	m_animationMgr->Add(ShowAdvice::Create(Sexy::UTF8StringToWString(getProps<PowerupCukeTutorialIntroProperties>()->PlantfoodAdvice), MESSAGE_STYLE_TUTORIAL_LEVEL1_STAY), time);
 	Sexy::Point boardOffset = gLawnApp->m_board->GetBoardBaseOffset();
 	Rect drawRect = UIWidget::GetWidgetBySheetName("UIPlantfood")->GetDrawRect();
 	SexyVector2 target = ToScreen(m_plantPtr->m_position) * ScaleNum(1.0f);
