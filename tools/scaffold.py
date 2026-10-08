@@ -385,6 +385,15 @@ CLASS_FILES = {
     'INetworkMsgProcess': 'src/PvZ2/net/gameNetWork/NetworkMsgProcess.cpp',
     'Message': 'src/PvZ2/Message.cpp',
     'androidNetworkMsgProcess': 'src/PvZ2/net/gameNetWork/androidNetworkMsgProcess.cpp',
+    'NameMapperBase': 'src/PvZ2/Data/Mappers/NameMapperBase.cpp',
+    'PlantNameMapper': 'src/PvZ2/Data/Mappers/PlantNameMapper.cpp',
+    'PlantNameMapperServerID': 'src/PvZ2/Data/Mappers/PlantNameMapperServerID.cpp',
+    'PlantChipNameMapperServerID': 'src/PvZ2/Data/Mappers/PlantChipNameMapperServerID.cpp',
+    'AvatarNameMapperServerID': 'src/PvZ2/Data/Mappers/AvatarNameMapperServerID.cpp',
+    'AvatarChipNameMapperServerID': 'src/PvZ2/Data/Mappers/AvatarChipNameMapperServerID.cpp',
+    'ConstraintNameMapper': 'src/PvZ2/Data/Mappers/ConstraintNameMapper.cpp',
+    'OtherServerNameMapper': 'src/PvZ2/Data/Mappers/OtherServerNameMapper.cpp',
+    'NarrationEventNameMapper': 'src/PvZ2/Data/Mappers/NarrationEventNameMapper.cpp',
 }
 
 

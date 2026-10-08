@@ -1,20 +1,20 @@
 {
-  "generated": "2026-10-07T21:01:34+00:00",
+  "generated": "2026-10-08T09:44:16+00:00",
   "measures": {
-    "total_functions": 85876,
-    "matched_functions": 29069,
-    "matched_functions_percent": 33.85,
-    "total_code": 12864012,
-    "matched_code": 1855600,
-    "matched_code_percent": 14.42,
-    "fuzzy_match_percent": 15.3,
-    "started_units": 2216,
-    "total_units": 2762,
-    "started_code": 10185208,
-    "started_matched_code": 1855600,
-    "started_percent": 18.22,
-    "unplaced_functions": 58725,
-    "unplaced_code": 8742852,
+    "total_functions": 85948,
+    "matched_functions": 29141,
+    "matched_functions_percent": 33.91,
+    "total_code": 13039532,
+    "matched_code": 2031120,
+    "matched_code_percent": 15.58,
+    "fuzzy_match_percent": 16.47,
+    "started_units": 2225,
+    "total_units": 2771,
+    "started_code": 10360728,
+    "started_matched_code": 2031120,
+    "started_percent": 19.6,
+    "unplaced_functions": 58654,
+    "unplaced_code": 8567392,
     "compile_failures": 0
   },
   "units": [
@@ -16123,6 +16123,150 @@
       ]
     },
     {
+      "name": "src/PvZ2/Data/Mappers/AvatarChipNameMapperServerID.cpp",
+      "total_code": 33812,
+      "matched_code": 33812,
+      "matched_code_percent": 100.0,
+      "total_functions": 6,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "AvatarChipNameMapperServerID::AvatarChipNameMapperServerID",
+          "size": 16804,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AvatarChipNameMapperServerID::AvatarChipNameMapperServerID",
+          "size": 16804,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AvatarChipNameMapperServerID::GetInstance",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AvatarChipNameMapperServerID::~AvatarChipNameMapperServerID",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AvatarChipNameMapperServerID::~AvatarChipNameMapperServerID",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AvatarChipNameMapperServerID::~AvatarChipNameMapperServerID",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/PvZ2/Data/Mappers/AvatarNameMapperServerID.cpp",
+      "total_code": 33812,
+      "matched_code": 33812,
+      "matched_code_percent": 100.0,
+      "total_functions": 6,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "AvatarNameMapperServerID::AvatarNameMapperServerID",
+          "size": 16804,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AvatarNameMapperServerID::AvatarNameMapperServerID",
+          "size": 16804,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AvatarNameMapperServerID::GetInstance",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AvatarNameMapperServerID::~AvatarNameMapperServerID",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AvatarNameMapperServerID::~AvatarNameMapperServerID",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AvatarNameMapperServerID::~AvatarNameMapperServerID",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/PvZ2/Data/Mappers/ConstraintNameMapper.cpp",
+      "total_code": 932,
+      "matched_code": 932,
+      "matched_code_percent": 100.0,
+      "total_functions": 6,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "ConstraintNameMapper::ConstraintNameMapper",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConstraintNameMapper::ConstraintNameMapper",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConstraintNameMapper::GetInstance",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConstraintNameMapper::~ConstraintNameMapper",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConstraintNameMapper::~ConstraintNameMapper",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ConstraintNameMapper::~ConstraintNameMapper",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
       "name": "src/PvZ2/Data/Mappers/NameMapper.cpp",
       "total_code": 0,
       "matched_code": 0,
@@ -16131,6 +16275,402 @@
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0
+    },
+    {
+      "name": "src/PvZ2/Data/Mappers/NameMapperBase.cpp",
+      "total_code": 1972,
+      "matched_code": 1972,
+      "matched_code_percent": 100.0,
+      "total_functions": 16,
+      "matched_functions": 16,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "NameMapperBase::IsMapValid",
+          "size": 396,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::CreateMD5Check",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::GetNameForId",
+          "size": 276,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::ContainsId",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::GetIdForName",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::ContainsName",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::NameMapperBase",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::NameMapperBase",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::operator=",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::Mondify",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::NameMapperBase",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::NameMapperBase",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::~NameMapperBase",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::~NameMapperBase",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::~NameMapperBase",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NameMapperBase::GetMap",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/PvZ2/Data/Mappers/NarrationEventNameMapper.cpp",
+      "total_code": 3844,
+      "matched_code": 3844,
+      "matched_code_percent": 100.0,
+      "total_functions": 6,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "NarrationEventNameMapper::NarrationEventNameMapper",
+          "size": 1820,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NarrationEventNameMapper::NarrationEventNameMapper",
+          "size": 1820,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NarrationEventNameMapper::GetInstance",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NarrationEventNameMapper::~NarrationEventNameMapper",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NarrationEventNameMapper::~NarrationEventNameMapper",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NarrationEventNameMapper::~NarrationEventNameMapper",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/PvZ2/Data/Mappers/OtherServerNameMapper.cpp",
+      "total_code": 452,
+      "matched_code": 452,
+      "matched_code_percent": 100.0,
+      "total_functions": 6,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "OtherServerNameMapper::GetInstance",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OtherServerNameMapper::OtherServerNameMapper",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OtherServerNameMapper::OtherServerNameMapper",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OtherServerNameMapper::~OtherServerNameMapper",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OtherServerNameMapper::~OtherServerNameMapper",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OtherServerNameMapper::~OtherServerNameMapper",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/PvZ2/Data/Mappers/PlantChipNameMapperServerID.cpp",
+      "total_code": 33804,
+      "matched_code": 33804,
+      "matched_code_percent": 100.0,
+      "total_functions": 6,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "PlantChipNameMapperServerID::PlantChipNameMapperServerID",
+          "size": 16800,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantChipNameMapperServerID::PlantChipNameMapperServerID",
+          "size": 16800,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantChipNameMapperServerID::GetInstance",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantChipNameMapperServerID::~PlantChipNameMapperServerID",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantChipNameMapperServerID::~PlantChipNameMapperServerID",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantChipNameMapperServerID::~PlantChipNameMapperServerID",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/PvZ2/Data/Mappers/PlantNameMapper.cpp",
+      "total_code": 32692,
+      "matched_code": 32692,
+      "matched_code_percent": 100.0,
+      "total_functions": 10,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "PlantNameMapper::PlantNameMapper",
+          "size": 16060,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapper::PlantNameMapper",
+          "size": 16060,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapper::GetInstance",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapper::GetIdForType",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapper::GetIdForType",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapper::GetTypeForID",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapper::~PlantNameMapper",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapper::~PlantNameMapper",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapper::~PlantNameMapper",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapper::IsIDValid",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/PvZ2/Data/Mappers/PlantNameMapperServerID.cpp",
+      "total_code": 34200,
+      "matched_code": 34200,
+      "matched_code_percent": 100.0,
+      "total_functions": 10,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "PlantNameMapperServerID::PlantNameMapperServerID",
+          "size": 16804,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapperServerID::PlantNameMapperServerID",
+          "size": 16804,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapperServerID::GetInstance",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapperServerID::GetIdForType",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapperServerID::GetIdForType",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapperServerID::GetTypeForID",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapperServerID::IsIDValid",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapperServerID::~PlantNameMapperServerID",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapperServerID::~PlantNameMapperServerID",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantNameMapperServerID::~PlantNameMapperServerID",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Data/ObjectTypeDescriptor.cpp",
@@ -294122,13 +294662,13 @@
       "total_functions": 18,
       "matched_functions": 16,
       "matched_functions_percent": 88.89,
-      "fuzzy_match_percent": 52.01,
+      "fuzzy_match_percent": 86.16,
       "functions": [
         {
           "name": "ActivityManager::onNotifyRefreshActivityList",
           "size": 6164,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 72.1
         },
         {
           "name": "ActivityManager::OnBuyItemFinish",
