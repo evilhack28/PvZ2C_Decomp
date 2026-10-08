@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-08T09:44:16+00:00",
+  "generated": "2026-10-08T11:54:15+00:00",
   "measures": {
-    "total_functions": 85948,
-    "matched_functions": 29141,
-    "matched_functions_percent": 33.91,
-    "total_code": 13039532,
-    "matched_code": 2031120,
-    "matched_code_percent": 15.58,
-    "fuzzy_match_percent": 16.47,
-    "started_units": 2225,
+    "total_functions": 85955,
+    "matched_functions": 29177,
+    "matched_functions_percent": 33.94,
+    "total_code": 13039868,
+    "matched_code": 2038552,
+    "matched_code_percent": 15.63,
+    "fuzzy_match_percent": 16.57,
+    "started_units": 2226,
     "total_units": 2771,
-    "started_code": 10360728,
-    "started_matched_code": 2031120,
-    "started_percent": 19.6,
+    "started_code": 10375192,
+    "started_matched_code": 2038552,
+    "started_percent": 19.65,
     "unplaced_functions": 58654,
     "unplaced_code": 8567392,
     "compile_failures": 0
@@ -19242,13 +19242,285 @@
     },
     {
       "name": "src/PvZ2/Debug/CommandConsole.cpp",
-      "total_code": 14128,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 38,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 14464,
+      "matched_code": 7432,
+      "matched_code_percent": 51.38,
+      "total_functions": 45,
+      "matched_functions": 36,
+      "matched_functions_percent": 80.0,
+      "fuzzy_match_percent": 84.81,
+      "functions": [
+        {
+          "name": "CommandConsole::UpdateCompletionHelp",
+          "size": 1436,
+          "matched": false,
+          "fuzzy_match_percent": 34.54
+        },
+        {
+          "name": "CommandConsole::DrawWithPrimeFont",
+          "size": 1196,
+          "matched": false,
+          "fuzzy_match_percent": 61.54
+        },
+        {
+          "name": "CommandConsole::DrawWithFont",
+          "size": 1104,
+          "matched": false,
+          "fuzzy_match_percent": 99.28
+        },
+        {
+          "name": "CommandConsole::CommandConsole",
+          "size": 920,
+          "matched": false,
+          "fuzzy_match_percent": 92.64
+        },
+        {
+          "name": "CommandConsole::CommandConsole",
+          "size": 920,
+          "matched": false,
+          "fuzzy_match_percent": 92.64
+        },
+        {
+          "name": "CommandConsole::RefreshButtonPositions",
+          "size": 436,
+          "matched": false,
+          "fuzzy_match_percent": 64.86
+        },
+        {
+          "name": "CommandConsole::EditProcessKey",
+          "size": 412,
+          "matched": false,
+          "fuzzy_match_percent": 56.31
+        },
+        {
+          "name": "CommandConsole::AddCommand",
+          "size": 348,
+          "matched": false,
+          "fuzzy_match_percent": 32.22
+        },
+        {
+          "name": "CommandConsole::EditKeyCodeDown",
+          "size": 260,
+          "matched": false,
+          "fuzzy_match_percent": 67.69
+        },
+        {
+          "name": "CommandConsole::EditWidgetText",
+          "size": 1112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::Hide",
+          "size": 656,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::RefreshButtons",
+          "size": 428,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::DoHelp",
+          "size": 420,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::GetAllCompletionStrings",
+          "size": 404,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::addLineHelper",
+          "size": 400,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::GetDisplayLineHeight",
+          "size": 384,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::Update",
+          "size": 380,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::SetFont",
+          "size": 340,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::DoNextCompletion",
+          "size": 332,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::ButtonDepress",
+          "size": 280,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::EraseContext",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::RefreshSize",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::ClearButtons",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::~CommandConsole",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::~CommandConsole",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::SetFont",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::AddHistory",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::ShowError",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::FindCurrentContext",
+          "size": 108,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::ClearLastCompletionHelp",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::CommandConsoleEdit::KeyDown",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::CommandConsoleEdit::ProcessKey",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::CommandConsoleEdit::CommandConsoleEdit",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::CommandConsoleEdit::CommandConsoleEdit",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::CommandConsoleEdit::~CommandConsoleEdit",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::~CommandConsole",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::CommandConsoleEdit::~CommandConsoleEdit",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::CommandConsoleEdit::~CommandConsoleEdit",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::Draw",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::SetContext",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::AddLine",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::AddLineErr",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::AddLineWarn",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::AllowChar",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CommandConsole::ResetCompletion",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Debug/ConsoleApp.cpp",
@@ -19318,13 +19590,13 @@
       "total_functions": 2,
       "matched_functions": 1,
       "matched_functions_percent": 50.0,
-      "fuzzy_match_percent": 62.03,
+      "fuzzy_match_percent": 67.09,
       "functions": [
         {
           "name": "ConsoleListener::AddConsoleAction",
           "size": 452,
           "matched": false,
-          "fuzzy_match_percent": 46.9
+          "fuzzy_match_percent": 53.98
         },
         {
           "name": "ConsoleListener::DefineConsoleCommands",

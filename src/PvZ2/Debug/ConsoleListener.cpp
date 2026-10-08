@@ -30,21 +30,21 @@ bool ConsoleListener::AddConsoleAction(const SexyString& i_passedCmd, const CCSt
 	CommandConsole* console = gConsoleApp->m_console;
 	if (console == NULL)
 		return false;
-	if (m_consoleDefineMode == false)
+	if (m_consoleDefineMode)
 	{
-		if (i_passedCmd == i_cmd && ConsoleEnsureArgs(i_passedParams, i_argCount))
-		{
-			bool echo = m_consoleEchoOn;
-			if (echo)
-			{
-				std::string line = Sexy::StrFormat("^8888ff^--> %S", i_cmd.c_str());
-				for (unsigned int i = 0; i < i_passedParams.size(); i++)
-					line = Sexy::StrFormat("%s %S", line.c_str(), i_passedParams[i].c_str());
-			}
-			return echo;
-		}
+		console->AddCommand(i_context, i_cmd, i_desc, i_addButton, fastdelegate::MakeDelegate(this, &ConsoleListener::HandleConsoleCommand));
 		return false;
 	}
-	console->AddCommand(i_context, i_cmd, i_desc, i_addButton, fastdelegate::MakeDelegate(this, &ConsoleListener::HandleConsoleCommand));
+	if (i_passedCmd == i_cmd && ConsoleEnsureArgs(i_passedParams, i_argCount))
+	{
+		bool echo = m_consoleEchoOn;
+		if (echo)
+		{
+			std::string line = Sexy::StrFormat("^8888ff^--> %S", i_cmd.c_str());
+			for (unsigned int i = 0; i < i_passedParams.size(); i++)
+				line = Sexy::StrFormat("%s %S", line.c_str(), i_passedParams[i].c_str());
+		}
+		return echo ? echo : true;
+	}
 	return false;
 }
