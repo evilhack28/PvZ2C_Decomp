@@ -114,10 +114,10 @@ GachaItemDisplayer::~GachaItemDisplayer()
 
 Sexy::Image* GachaItemDisplayer::getGachaImage(GachaType i_type)
 {
-    if (i_type == 0) return IMAGE_UI_STORE_GACHA_EVENT_NORMAL;
-    if (i_type == 1) return IMAGE_UI_STORE_GACHA_EVENT_RARE;
-    if (i_type == 2) return IMAGE_UI_STORE_GACHA_EVENT_LEGEND;
-    if (i_type == 3) return IMAGE_UI_STORE_GACHA_EVENT_AVATAR;
+    if (i_type == GACHA_NORMAL) return IMAGE_UI_STORE_GACHA_EVENT_NORMAL;
+    if (i_type == GACHA_RARE) return IMAGE_UI_STORE_GACHA_EVENT_RARE;
+    if (i_type == GACHA_LEGEND) return IMAGE_UI_STORE_GACHA_EVENT_LEGEND;
+    if (i_type == GACHA_AVATAR) return IMAGE_UI_STORE_GACHA_EVENT_AVATAR;
     return NULL;
 }
 
@@ -125,13 +125,13 @@ Sexy::Image* GachaItemDisplayer::getGachaImage(GachaType i_type)
 
 void GachaItemDisplayer::OnNotifyTutorialResponse()
 {
-if (GachaMgr::GetInstance().GetTutorialStep() == Gacha_Normal_Draw) { if (m_type == 0) { GachaMgr::GetInstance().SetTutorialOffset(mX + m_buyButton->mX + m_buyButton->mWidth / 2);
+if (GachaMgr::GetInstance().GetTutorialStep() == Gacha_Normal_Draw) { if (m_type == GACHA_NORMAL) { GachaMgr::GetInstance().SetTutorialOffset(mX + m_buyButton->mX + m_buyButton->mWidth / 2);
 } }
-else if (GachaMgr::GetInstance().GetTutorialStep() == Gacha_Epic_Draw) { if (m_type == 1) { GachaMgr::GetInstance().SetTutorialOffset(mX + m_buyButton->mX + m_buyButton->mWidth / 2);
+else if (GachaMgr::GetInstance().GetTutorialStep() == Gacha_Epic_Draw) { if (m_type == GACHA_RARE) { GachaMgr::GetInstance().SetTutorialOffset(mX + m_buyButton->mX + m_buyButton->mWidth / 2);
 } }
-else if (GachaMgr::GetInstance().GetTutorialStep() == Gacha_Avatar_Draw) { if (m_type == 3) { GachaMgr::GetInstance().SetTutorialOffset(mX + m_buyButton->mX + m_buyButton->mWidth / 2);
+else if (GachaMgr::GetInstance().GetTutorialStep() == Gacha_Avatar_Draw) { if (m_type == GACHA_AVATAR) { GachaMgr::GetInstance().SetTutorialOffset(mX + m_buyButton->mX + m_buyButton->mWidth / 2);
 } }
-else if (GachaMgr::GetInstance().GetTutorialStep() == Gacha_Legend_Draw) { if (m_type == 2) { GachaMgr::GetInstance().SetTutorialOffset(mX + m_buyButton->mX + m_buyButton->mWidth / 2);
+else if (GachaMgr::GetInstance().GetTutorialStep() == Gacha_Legend_Draw) { if (m_type == GACHA_LEGEND) { GachaMgr::GetInstance().SetTutorialOffset(mX + m_buyButton->mX + m_buyButton->mWidth / 2);
 } }
 }
 

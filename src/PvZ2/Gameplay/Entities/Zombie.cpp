@@ -868,7 +868,7 @@ bool Zombie::IsInSandStorm() const
 
 bool Zombie::CanEliteImmuneCondition() const
 {
-	return GetEliteZombieType() != 1;
+	return GetEliteZombieType() != EliteZombie_PVZ1_Normal;
 }
 
 bool Zombie::HasReachResilienceDamageThreshold()
@@ -1974,14 +1974,14 @@ void Zombie::onApplyCondition(ZombieConditions i_condition)
 
 float Zombie::GetResistenceValue(ZombieResistenceType i_type)
 {
-	if (i_type != -1 && (size_t)i_type < m_type->Resistences.size())
+	if (i_type != ZombieResistenceType_None && (size_t)i_type < m_type->Resistences.size())
 		return m_type->Resistences[i_type];
 	return 0.0f;
 }
 
 float Zombie::GetResistenceValue(ZombieResistenceType i_type, ZombieTypePtr i_zombieType)
 {
-	if (i_type != -1 && (size_t)i_type < i_zombieType->Resistences.size())
+	if (i_type != ZombieResistenceType_None && (size_t)i_type < i_zombieType->Resistences.size())
 		return i_zombieType->Resistences[i_type];
 	return 0.0f;
 }
@@ -2232,7 +2232,7 @@ void Zombie::playDeathAnimation()
 	DropAllLoot();
 	ClearConditions();
 	m_playingAnim = m_pCachedZombieAnimRig->PlayDie();
-	if (m_playingAnim != -1)
+	if (m_playingAnim != ANIMHANDLE_NONE)
 	{
 		SetFlag(m_zombieFlags, ZFLAG_UseAnimTranslation, false);
 		SetFlag(m_zombieFlags, ZFLAG_PlayedDeathAnim, true);
@@ -2587,9 +2587,9 @@ void Zombie::onEnterState_Electrocute(ZombieState i_state)
 
 float Zombie::GetCurrentResistenceValue(ZombieResistenceType i_type)
 {
-	if (i_type == -1)
+	if (i_type == ZombieResistenceType_None)
 		return 0.0f;
-	if (i_type == 6 && HasCondition((ZombieConditions)138))
+	if (i_type == ZombieResistenceType_Flame && HasCondition((ZombieConditions)138))
 	{
 		float base = m_currentResistence[6];
 		return base + GetConditionTracker().GetCondition((ZombieConditions)138).m_additionalDataValue;

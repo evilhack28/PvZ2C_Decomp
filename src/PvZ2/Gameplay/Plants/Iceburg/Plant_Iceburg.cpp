@@ -147,7 +147,8 @@ Projectile* PlantIceburg::Fire(ZombiePtr i_targetZombie, int i_row, PlantWeapon 
 	if (m_plant->GetCurrentLevel() > 1)
 	{
 		m_plant->m_currentPlantActionIdx = 2;
-		return PlantFramework::Fire(i_targetZombie, i_row, i_plantWeapon);
+		Projectile* projectile = PlantFramework::Fire(i_targetZombie, i_row, i_plantWeapon);
+		return projectile;
 	}
 	return NULL;
 }

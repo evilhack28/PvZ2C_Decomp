@@ -50,7 +50,7 @@ void LogServer::Init()
 {
 	m_strIp = "pvz2logandroid.intelligent.popcap.com.cn";
 	m_port = 4346;
-	Sexy::LaunchThread(Thread_fun, this, (Sexy::SexyThreadPriority)2);
+	Sexy::LaunchThread(Thread_fun, this, STP_NORMAL);
 	printf("LogServer::Init() ip = %s", m_strIp.c_str());
 }
 

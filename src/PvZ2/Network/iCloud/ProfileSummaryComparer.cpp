@@ -169,7 +169,7 @@ void ProfileSummaryComparer::Draw(Sexy::Graphics* i_g)
 	Sexy::Widget::Draw(i_g);
 	SexyString title(L"[SUMMARY_TITLE]");
 	Sexy::PrimeTypeface* font = PrimeText_Game::Typeface_FZShaoEr_34_ThickOutline->Typeface();
-	font->DrawString_Line(i_g, (float)m_leftHeaderPosition.mX, (float)m_leftHeaderPosition.mY, (float)mWidth, TodStringTranslate(title), (EA::Text::HAlignment)1, Color(PrimeText_Game::Color_DangerRoom_LargeLabel), NULL);
+	font->DrawString_Line(i_g, (float)m_leftHeaderPosition.mX, (float)m_leftHeaderPosition.mY, (float)mWidth, TodStringTranslate(title), EA::Text::kHACenter, Color(PrimeText_Game::Color_DangerRoom_LargeLabel), NULL);
 	drawLocalSummary(i_g);
 	drawCloudSummary(i_g);
 	SexyString recommendation(L"[SUMMARY_NEWER_DATA_RECOMMENDATION]");
@@ -383,7 +383,7 @@ void ProfileSummaryComparer::drawCloudSummary(Sexy::Graphics* i_g)
 
 	SexyString title(L"[SUMMARY_CLOUD]");
 	Sexy::PrimeTypeface* titleFont = PrimeText_Game::Typeface_FZCuYuan_32_ThickOutline->Typeface();
-	titleFont->DrawString_Line(i_g, (float)(m_leftProgressHeaderPosition.mX + m_cloudPanelToLeftDistance), (float)m_leftProgressHeaderPosition.mY, (float)m_leftProgressPanelBGRect.mWidth, TodStringTranslate(title), (EA::Text::HAlignment)1, Color(PrimeText_Game::Color_Popover_Btn_Label), NULL);
+	titleFont->DrawString_Line(i_g, (float)(m_leftProgressHeaderPosition.mX + m_cloudPanelToLeftDistance), (float)m_leftProgressHeaderPosition.mY, (float)m_leftProgressPanelBGRect.mWidth, TodStringTranslate(title), EA::Text::kHACenter, Color(PrimeText_Game::Color_Popover_Btn_Label), NULL);
 
 	struct tm* time = gLawnApp->BeijingTime(&m_cloudTime);
 	SexyString timeText = TodStringTranslate(L"[SUMMARY_LAST_TIME]");
@@ -392,15 +392,15 @@ void ProfileSummaryComparer::drawCloudSummary(Sexy::Graphics* i_g)
 	timeText = TodReplaceNumberString(timeText, L"{HOUR}", time->tm_hour);
 	timeText = TodReplaceNumberString(timeText, L"{MIN}", time->tm_min);
 	Sexy::PrimeTypeface* timeFont = PrimeText_Game::Typeface_FZCuYuan_20->Typeface();
-	timeFont->DrawString_Line(i_g, (float)(m_leftTimePosition.mX + m_cloudPanelToLeftDistance), (float)m_leftTimePosition.mY, (float)panelRect.mWidth, TodStringTranslate(timeText), (EA::Text::HAlignment)1, Color(PrimeText_Game::Color_Description_Brown), NULL);
+	timeFont->DrawString_Line(i_g, (float)(m_leftTimePosition.mX + m_cloudPanelToLeftDistance), (float)m_leftTimePosition.mY, (float)panelRect.mWidth, TodStringTranslate(timeText), EA::Text::kHACenter, Color(PrimeText_Game::Color_Description_Brown), NULL);
 
 	SexyString levelLabel(L"[SUMMARY_LEVEL]");
 	Sexy::PrimeTypeface* labelFont = PrimeText_Game::Typeface_FZCuYuan_24->Typeface();
-	labelFont->DrawString_Line(i_g, (float)(levelRect.mX + UIScaleNum(10)), (float)(levelRect.mY + UIScaleNum(3)), (float)levelRect.mWidth, TodStringTranslate(levelLabel), (EA::Text::HAlignment)0, Color(PrimeText_Game::Color_Description_Brown), NULL);
+	labelFont->DrawString_Line(i_g, (float)(levelRect.mX + UIScaleNum(10)), (float)(levelRect.mY + UIScaleNum(3)), (float)levelRect.mWidth, TodStringTranslate(levelLabel), EA::Text::kHALeft, Color(PrimeText_Game::Color_Description_Brown), NULL);
 
 	SexyString starLabel(L"[SUMMARY_STAR]");
 	Sexy::PrimeTypeface* starFont = PrimeText_Game::Typeface_FZCuYuan_24->Typeface();
-	starFont->DrawString_Line(i_g, (float)(starRect.mX + UIScaleNum(10)), (float)(starRect.mY + UIScaleNum(3)), (float)starRect.mWidth, TodStringTranslate(starLabel), (EA::Text::HAlignment)0, Color(PrimeText_Game::Color_Description_Brown), NULL);
+	starFont->DrawString_Line(i_g, (float)(starRect.mX + UIScaleNum(10)), (float)(starRect.mY + UIScaleNum(3)), (float)starRect.mWidth, TodStringTranslate(starLabel), EA::Text::kHALeft, Color(PrimeText_Game::Color_Description_Brown), NULL);
 }
 
 void ProfileSummaryComparer::drawLocalSummary(Sexy::Graphics* i_g)
@@ -414,7 +414,7 @@ void ProfileSummaryComparer::drawLocalSummary(Sexy::Graphics* i_g)
 
 	SexyString title(L"[SUMMARY_LOCAL]");
 	Sexy::PrimeTypeface* titleFont = PrimeText_Game::Typeface_FZCuYuan_32_ThickOutline->Typeface();
-	titleFont->DrawString_Line(i_g, (float)(m_leftProgressHeaderPosition.mX + m_localPanelToLeftDistance), (float)m_leftProgressHeaderPosition.mY, (float)panelRect.mWidth, TodStringTranslate(title), (EA::Text::HAlignment)1, Color(PrimeText_Game::Color_Popover_Btn_Label), NULL);
+	titleFont->DrawString_Line(i_g, (float)(m_leftProgressHeaderPosition.mX + m_localPanelToLeftDistance), (float)m_leftProgressHeaderPosition.mY, (float)panelRect.mWidth, TodStringTranslate(title), EA::Text::kHACenter, Color(PrimeText_Game::Color_Popover_Btn_Label), NULL);
 
 	struct tm* time = gLawnApp->BeijingTime(&m_localTime);
 	SexyString timeText = TodStringTranslate(L"[SUMMARY_LAST_TIME]");
@@ -423,13 +423,13 @@ void ProfileSummaryComparer::drawLocalSummary(Sexy::Graphics* i_g)
 	timeText = TodReplaceNumberString(timeText, L"{HOUR}", time->tm_hour);
 	timeText = TodReplaceNumberString(timeText, L"{MIN}", time->tm_min);
 	Sexy::PrimeTypeface* timeFont = PrimeText_Game::Typeface_FZCuYuan_20->Typeface();
-	timeFont->DrawString_Line(i_g, (float)(m_leftTimePosition.mX + m_localPanelToLeftDistance), (float)m_leftTimePosition.mY, (float)panelRect.mWidth, TodStringTranslate(timeText), (EA::Text::HAlignment)1, Color(PrimeText_Game::Color_Description_Brown), NULL);
+	timeFont->DrawString_Line(i_g, (float)(m_leftTimePosition.mX + m_localPanelToLeftDistance), (float)m_leftTimePosition.mY, (float)panelRect.mWidth, TodStringTranslate(timeText), EA::Text::kHACenter, Color(PrimeText_Game::Color_Description_Brown), NULL);
 
 	SexyString levelLabel(L"[SUMMARY_LEVEL]");
 	Sexy::PrimeTypeface* labelFont = PrimeText_Game::Typeface_FZCuYuan_24->Typeface();
-	labelFont->DrawString_Line(i_g, (float)(levelRect.mX + UIScaleNum(10)), (float)(levelRect.mY + UIScaleNum(3)), (float)levelRect.mWidth, TodStringTranslate(levelLabel), (EA::Text::HAlignment)0, Color(PrimeText_Game::Color_Description_Brown), NULL);
+	labelFont->DrawString_Line(i_g, (float)(levelRect.mX + UIScaleNum(10)), (float)(levelRect.mY + UIScaleNum(3)), (float)levelRect.mWidth, TodStringTranslate(levelLabel), EA::Text::kHALeft, Color(PrimeText_Game::Color_Description_Brown), NULL);
 
 	SexyString starLabel(L"[SUMMARY_STAR]");
 	Sexy::PrimeTypeface* starFont = PrimeText_Game::Typeface_FZCuYuan_24->Typeface();
-	starFont->DrawString_Line(i_g, (float)(starRect.mX + UIScaleNum(10)), (float)(starRect.mY + UIScaleNum(3)), (float)starRect.mWidth, TodStringTranslate(starLabel), (EA::Text::HAlignment)0, Color(PrimeText_Game::Color_Description_Brown), NULL);
+	starFont->DrawString_Line(i_g, (float)(starRect.mX + UIScaleNum(10)), (float)(starRect.mY + UIScaleNum(3)), (float)starRect.mWidth, TodStringTranslate(starLabel), EA::Text::kHALeft, Color(PrimeText_Game::Color_Description_Brown), NULL);
 }

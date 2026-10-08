@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-08T11:54:15+00:00",
+  "generated": "2026-10-08T17:15:27+00:00",
   "measures": {
-    "total_functions": 85955,
-    "matched_functions": 29177,
-    "matched_functions_percent": 33.94,
-    "total_code": 13039868,
-    "matched_code": 2038552,
-    "matched_code_percent": 15.63,
-    "fuzzy_match_percent": 16.57,
-    "started_units": 2226,
+    "total_functions": 85958,
+    "matched_functions": 29271,
+    "matched_functions_percent": 34.05,
+    "total_code": 13039908,
+    "matched_code": 2059220,
+    "matched_code_percent": 15.79,
+    "fuzzy_match_percent": 16.75,
+    "started_units": 2228,
     "total_units": 2771,
-    "started_code": 10375192,
-    "started_matched_code": 2038552,
-    "started_percent": 19.65,
+    "started_code": 10378556,
+    "started_matched_code": 2059220,
+    "started_percent": 19.84,
     "unplaced_functions": 58654,
     "unplaced_code": 8567392,
     "compile_failures": 0
@@ -64313,12 +64313,12 @@
     {
       "name": "src/PvZ2/Gameplay/Entities/Plant.cpp",
       "total_code": 87192,
-      "matched_code": 25460,
-      "matched_code_percent": 29.2,
+      "matched_code": 25728,
+      "matched_code_percent": 29.51,
       "total_functions": 318,
-      "matched_functions": 251,
-      "matched_functions_percent": 78.93,
-      "fuzzy_match_percent": 37.61,
+      "matched_functions": 252,
+      "matched_functions_percent": 79.25,
+      "fuzzy_match_percent": 37.71,
       "functions": [
         {
           "name": "Plant::NotifyApplyCondition",
@@ -64657,12 +64657,6 @@
           "fuzzy_match_percent": 75.0
         },
         {
-          "name": "PlantType::canGiveFirstAidToPlant",
-          "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 64.71
-        },
-        {
           "name": "PlantPropertySheet::GetCollisionRect",
           "size": 224,
           "matched": false,
@@ -64833,6 +64827,12 @@
         {
           "name": "Plant::SetGridLocSilent",
           "size": 272,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantType::canGiveFirstAidToPlant",
+          "size": 268,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -158283,24 +158283,18 @@
     {
       "name": "src/PvZ2/Gameplay/Plants/Iceburg/Plant_Iceburg.cpp",
       "total_code": 7828,
-      "matched_code": 7252,
-      "matched_code_percent": 92.64,
+      "matched_code": 7428,
+      "matched_code_percent": 94.89,
       "total_functions": 55,
-      "matched_functions": 53,
-      "matched_functions_percent": 96.36,
-      "fuzzy_match_percent": 99.23,
+      "matched_functions": 54,
+      "matched_functions_percent": 98.18,
+      "fuzzy_match_percent": 99.9,
       "functions": [
         {
           "name": "PlantIceburg::ApplyPlantfood",
           "size": 400,
           "matched": false,
           "fuzzy_match_percent": 98.0
-        },
-        {
-          "name": "PlantIceburg::Fire",
-          "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 70.45
         },
         {
           "name": "PlantIceburg::OnAnimCommand",
@@ -158353,6 +158347,12 @@
         {
           "name": "PlantTypeIceburg::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantIceburg::Fire",
+          "size": 176,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -347837,46 +347837,34 @@
     {
       "name": "src/PvZ2/Profile/DraperSaveData.cpp",
       "total_code": 636,
-      "matched_code": 256,
-      "matched_code_percent": 40.25,
+      "matched_code": 636,
+      "matched_code_percent": 100.0,
       "total_functions": 12,
-      "matched_functions": 7,
-      "matched_functions_percent": 58.33,
-      "fuzzy_match_percent": 40.25,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "DraperSaveData::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DraperSaveData::DraperSaveData",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DraperSaveData::DraperSaveData",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DraperSaveData::SetLastPurchaseTimeAndCountAndTotal",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DraperSaveData::SetLastPlayTime",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DraperSaveData::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DraperSaveData::DraperSaveData",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DraperSaveData::DraperSaveData",
+          "size": 76,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -347889,6 +347877,18 @@
         {
           "name": "DraperSaveData::~DraperSaveData",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DraperSaveData::SetLastPurchaseTimeAndCountAndTotal",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "DraperSaveData::SetLastPlayTime",
+          "size": 20,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -348197,84 +348197,84 @@
     {
       "name": "src/PvZ2/Profile/PlayerIdentityService.cpp",
       "total_code": 3168,
-      "matched_code": 16,
-      "matched_code_percent": 0.51,
+      "matched_code": 3168,
+      "matched_code_percent": 100.0,
       "total_functions": 16,
-      "matched_functions": 4,
-      "matched_functions_percent": 25.0,
-      "fuzzy_match_percent": 0.51,
+      "matched_functions": 16,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PlayerIdentityService::accountStoredInKvStore",
           "size": 688,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::accountStoredLocally",
           "size": 568,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::onUpdateAccountID",
           "size": 388,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::postMergeRequest",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::PlayerIdentityService",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::PlayerIdentityService",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::CreateNewId",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::~PlayerIdentityService",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::~PlayerIdentityService",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::Init",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::GetAccount",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::~PlayerIdentityService",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerIdentityService::iCloudAccountDidSignInFirstTime",
@@ -354988,23 +354988,153 @@
     },
     {
       "name": "src/PvZ2/Profile/PlayerInfoDeltaHandler.cpp",
-      "total_code": 2032,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 2060,
+      "matched_code": 1580,
+      "matched_code_percent": 76.7,
+      "total_functions": 11,
+      "matched_functions": 9,
+      "matched_functions_percent": 81.82,
+      "fuzzy_match_percent": 99.61,
+      "functions": [
+        {
+          "name": "PlayerInfoDeltaHandler::CreateDelta",
+          "size": 348,
+          "matched": false,
+          "fuzzy_match_percent": 98.85
+        },
+        {
+          "name": "PlayerInfoDeltaHandler::getOfflineFilename",
+          "size": 132,
+          "matched": false,
+          "fuzzy_match_percent": 96.97
+        },
+        {
+          "name": "PlayerInfoDeltaHandler::SnapshotToDelta",
+          "size": 664,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoDeltaHandler::FillCurrentMap",
+          "size": 260,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoDeltaHandler::PlayerInfoDeltaHandler",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoDeltaHandler::PlayerInfoDeltaHandler",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoDeltaHandler::UpdateFileIndex",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoDeltaHandler::~PlayerInfoDeltaHandler",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoDeltaHandler::getOtherIndex",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoDeltaHandler::~PlayerInfoDeltaHandler",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoDeltaHandler::~PlayerInfoDeltaHandler",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Profile/PlayerInfoLocalSaveData.cpp",
-      "total_code": 1292,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 1304,
+      "matched_code": 1304,
+      "matched_code_percent": 100.0,
+      "total_functions": 10,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "PlayerInfoLocalSaveData::StaticClassInit",
+          "size": 480,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoLocalSaveData::PlayerInfoLocalSaveData",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoLocalSaveData::PlayerInfoLocalSaveData",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoLocalSaveData::~PlayerInfoLocalSaveData",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoLocalSaveData::~PlayerInfoLocalSaveData",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoLocalSaveData::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoLocalSaveData::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoLocalSaveData::~PlayerInfoLocalSaveData",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoLocalSaveData::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlayerInfoLocalSaveData::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Profile/PlayerList.cpp",
@@ -355093,336 +355223,336 @@
     {
       "name": "src/PvZ2/Profile/ProfileMgr.cpp",
       "total_code": 15732,
-      "matched_code": 4,
-      "matched_code_percent": 0.03,
+      "matched_code": 11396,
+      "matched_code_percent": 72.44,
       "total_functions": 55,
-      "matched_functions": 1,
-      "matched_functions_percent": 1.82,
-      "fuzzy_match_percent": 0.03,
+      "matched_functions": 47,
+      "matched_functions_percent": 85.45,
+      "fuzzy_match_percent": 93.92,
       "functions": [
-        {
-          "name": "ProfileMgr::UpdateProfileToLatestVersion",
-          "size": 1596,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProfileMgr::Update",
-          "size": 1012,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProfileMgr::SaveAs",
-          "size": 788,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "ProfileMgr::GetPurchaseProfile",
           "size": 752,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 72.87
         },
         {
           "name": "ProfileMgr::ChangeHackDataForAug05",
           "size": 700,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 74.58
         },
         {
           "name": "ProfileMgr::Save",
           "size": 624,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 90.38
         },
         {
           "name": "ProfileMgr::populateProfiles",
           "size": 592,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProfileMgr::needCheckFakeFromServer",
-          "size": 580,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProfileMgr::SaveAsAutoName",
-          "size": 564,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 80.41
         },
         {
           "name": "ProfileMgr::GetCurrentProfile",
           "size": 516,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 64.34
         },
         {
           "name": "ProfileMgr::removeProfileOwnerError",
           "size": 472,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProfileMgr::LoginiCloudServer",
-          "size": 460,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProfileMgr::CreateProfileFromServer",
-          "size": 436,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProfileMgr::RealSave",
-          "size": 408,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProfileMgr::CreateProfile",
-          "size": 380,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 79.66
         },
         {
           "name": "ProfileMgr::removeInvalidProfile",
           "size": 360,
           "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProfileMgr::ProfileMgr",
-          "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProfileMgr::ProfileMgr",
-          "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 90.0
         },
         {
           "name": "ProfileMgr::InitializeProfile",
           "size": 320,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 74.12
+        },
+        {
+          "name": "ProfileMgr::UpdateProfileToLatestVersion",
+          "size": 1596,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ProfileMgr::Update",
+          "size": 1012,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ProfileMgr::SaveAs",
+          "size": 788,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ProfileMgr::needCheckFakeFromServer",
+          "size": 580,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ProfileMgr::SaveAsAutoName",
+          "size": 564,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ProfileMgr::LoginiCloudServer",
+          "size": 460,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ProfileMgr::CreateProfileFromServer",
+          "size": 436,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ProfileMgr::RealSave",
+          "size": 408,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ProfileMgr::CreateProfile",
+          "size": 380,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ProfileMgr::ProfileMgr",
+          "size": 348,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ProfileMgr::ProfileMgr",
+          "size": 348,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::DeleteProfile",
           "size": 316,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::DeleteProfile",
           "size": 308,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::FindProfile",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::replaceUUID",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::FindProfile",
           "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::FindProfileByIndex",
           "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::FindProfileByIndex",
           "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::UpdateCurrentProfile",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::DuplicateProfile",
           "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::setAnyProfileAsCurrent",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::ClearAllProfile",
           "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::SetCurrentProfile",
           "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::RenameProfile",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::SetReadOnlyMode",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::SetCurrentProfile",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::RequestSave",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::~ProfileMgr",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::~ProfileMgr",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::SyncProfileFromServer",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::SaveResult",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::forceReload",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::GetAccountName",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::LoadAndSetProfile",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::IsSaveDataExist",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::~ProfileMgr",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::GetNumProfiles",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::HasValidProfile",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::onDialogButtonPressed",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::SetLockdownForProfileConversion",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::GetPurchaseBroker",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::GetReadOnlyMode",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::Init",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::LoadAndSetProfile",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::RemoveLockdownForProfileConversion",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::hasPopulateProfiles",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileMgr::ReloginiCloudServer",
@@ -355445,78 +355575,72 @@
     {
       "name": "src/PvZ2/Profile/SaveGameMgr.cpp",
       "total_code": 2860,
-      "matched_code": 172,
-      "matched_code_percent": 6.01,
+      "matched_code": 2588,
+      "matched_code_percent": 90.49,
       "total_functions": 16,
-      "matched_functions": 5,
-      "matched_functions_percent": 31.25,
-      "fuzzy_match_percent": 6.01,
+      "matched_functions": 15,
+      "matched_functions_percent": 93.75,
+      "fuzzy_match_percent": 99.02,
       "functions": [
-        {
-          "name": "SaveGameMgr::loadSaveGameHeader",
-          "size": 360,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SaveGameMgr::getSaveLocationFor",
-          "size": 324,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SaveGameMgr::generateHeaderForCurrentProfile",
-          "size": 312,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SaveGameMgr::IsSaveGameValidForCurrentPlayerID",
-          "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SaveGameMgr::TryLoadGame",
-          "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SaveGameMgr::saveSaveGameHeader",
-          "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "SaveGameMgr::TrySaveGame",
           "size": 272,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 89.71
+        },
+        {
+          "name": "SaveGameMgr::loadSaveGameHeader",
+          "size": 360,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SaveGameMgr::getSaveLocationFor",
+          "size": 324,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SaveGameMgr::generateHeaderForCurrentProfile",
+          "size": 312,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SaveGameMgr::IsSaveGameValidForCurrentPlayerID",
+          "size": 300,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SaveGameMgr::TryLoadGame",
+          "size": 296,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SaveGameMgr::saveSaveGameHeader",
+          "size": 292,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameMgr::GetResourceGroupsRequiredForLoad",
           "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameMgr::ClearSaveGame",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameMgr::DoesSaveGameExist",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "SaveGameMgr::CanLoadGame",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameMgr::SaveGameMgr",
@@ -355545,6 +355669,12 @@
         {
           "name": "SaveGameMgr::~SaveGameMgr",
           "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SaveGameMgr::CanLoadGame",
+          "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }

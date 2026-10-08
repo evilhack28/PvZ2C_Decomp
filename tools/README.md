@@ -3,10 +3,8 @@
 All Python, all driven by `config.py` (which reads the per-machine
 `config_local.py` written by `configure.py`).
 
-The repo root also has `diff.py` (one function, game vs ours, finds the file
-for you), `first_diff.py` (what is left, biggest first) and
-`diff_settings.py` (a shim for asm-differ / decomp-permuter). `make` wraps
-all of this — see the top-level `Makefile`.
+The repo root also has `first_diff.py` (what is left across the whole tree,
+biggest first). `make` wraps all of this — see the top-level `Makefile`.
 
 ## Setup
 
@@ -15,42 +13,62 @@ all of this — see the top-level `Makefile`.
 | `extract.py <apk>` | pull `libSrc.so` out of the 3.5.7 APK (path or url), verify SHA256 |
 | `configure.py` | find the NDK and `libSrc.so`, write `config_local.py` |
 | `config.py` | paths and build flags; imported by everything else |
-| `findincludes.py` | compile a probe and add missing header dirs to `-I` |
+| `scaffold.py` | regenerate the `src/` stubs + `units.json` from the library |
+| `genstage.py <Name>` | scaffold `<Name>Stage.cpp` -- RT_CLASS boilerplate for the stage / properties pair |
 
 ## Progress
 
 | tool | what it does |
 | --- | --- |
-| `progress.py` | compile all of `src/`, diff every function; `--report`, `--check`, `--cache`, `--all` |
-| `scaffold.py` | regenerate the `src/` stubs + `units.json` from the library |
+| `progress.py` | compile all of `src/`, diff every function; `<File>.cpp --quiet`, `--report`, `--check` |
+| `chk.py <file.cpp> [-d] [pat]` | one compile, match state of every function in the file |
 | `plant.py <Name>` | one plant's methods: matched / near / not written, with `--todo`, `--calls`, `--callers` |
 | `m.py <file.cpp>` | compile one translation unit, diff every function it shares with the game |
-| `sweep.py <file.cpp>` | try the file under several flag sets, report which matches most |
+| `ltodiff.py <src>... -f <sym>` | whole-program `-flto` diff, for the LTO-sensitive list |
 
 ## One function at a time
 
 | tool | what it does |
 | --- | --- |
-| `disas.py <symbol>` | disassemble one game function, strings and symbols named |
-| `explain.py <symbol>` | annotated disassembly: floats resolved, member offsets labelled, unnamed clones followed |
-| `guess.py <symbol>` / `--class <Name>` | match a function's shape against the recurring patterns (empty body, const return, accessor, flag get/set, tail-forwarder, single virtual, RT_CLASS boilerplate) and print the source line that shape has matched before, with a confidence. A draft for `diff.py`, never a finished answer. |
-| `genstage.py <Name>` | scaffold `src/PvZ2/stages/<Name>Stage.cpp` -- RT_CLASS boilerplate for the `<Name>Stage` / `<Name>StageProperties` pair, base-forwarding stubs for `void f()` overrides, TODO lines for the rest. Pure-boilerplate stages (IceAge) come out 100%; the others need their real methods filled in |
-| `fndiff.py <Name> <method>` | aligned game-vs-ours listing for one method; `--shape` compares mnemonics only |
-| `wd.py <symbol>` / `<Class> <method>` | terse game-vs-ours: finds and compiles the file, hides compiler warnings, prints only the instructions that actually differ (folded-name noise dropped), with a match-% header. `--all` for every line, `-c N` for context, `--asm [--ours]` for a clean listing with member offsets named |
-| `rawdiff.py` | byte-level diff, no normalisation |
-| `asmdiff.py` | the normaliser the others call |
+| `wd.py <sym>...` / `<Class> <method>...` / `<file.cpp> <sym>...` | only the instructions that still differ; one compile for many functions. `-s` source + header decl, `--asm [--ours]` clean listing, `--shape` mnemonics only, `-a` all lines, `-c N` context |
+| `recon.py <sym>` | Ghidra decompile + annotated game asm, members / vslots / calls named |
+| `explain.py <sym>` | annotated disassembly: floats resolved, member offsets labelled, unnamed clones followed |
+| `guess.py <sym>` / `--class <Name>` | a draft body from the function's shape (empty, accessor, flag, forwarder, RT_CLASS). A start, never an answer |
+| `autofill.py <file.cpp> [--dry]` | write missing methods, keep only what compiles to OK |
+| `permute.py <Class> <method> [--variants F [--apply]]` | hill-climb one function, or score hand-written variants in parallel |
+| `reflect.py <Class> [--cpp]` | a `StaticClassInit` straight to `REFLECTION_CLASSBUILDER` lines |
+
+## Cleaning source
+
+| tool | what it does |
+| --- | --- |
+| `tidy.py [file.cpp...]` | all of the below (layout only when given < 20 files) |
+| `tidy.py args` | rename `i_arg` placeholders to the header's parameter names |
+| `tidy.py nums [--report]` | `(Enum)N`, `case N:`, `x == N`, `x = N;` on enum-typed values -> the enumerator; kept only if the object is byte-identical. `--report` lists literals it could not type |
+| `tidy.py layout <file>...` | group a file into Lifecycle / Reflection / Accessors / Logic sections |
 
 ## Layout and vtables
 
 | tool | what it does |
 | --- | --- |
-| `fields.py <Class> [Class...]` | every reflected field with the offset the game registers |
-| `layoutdiff.py <Class> <Header.h>` | game offsets vs `offsetof` in the headers; every delta must be `+0` |
-| `layout.cpp` | the probe `layoutdiff.py` compiles |
-| `vtable.py <Class>` | dump a vtable from the library |
-| `vtdiff.py <Class>` | our vtable vs the game's, when our build emits `_ZTV<class>` |
-| `vtprobe.py <Class> <Header.h>` | same, by symbol name, when nothing emits the vtable |
-| `slotprobe.py <Class> <Header.h> <method>...` | which no-argument virtual produces a given offset |
-| `exprprobe.py <Header.h> '<params>' '<call>'...` | same for virtuals that take arguments |
+| `off.py <Class> [member...]` | `offsetof` / `sizeof` from the headers; `--all` every declared field |
+| `off.py <Class> --game` | the game's reflected field offsets vs the headers; every delta must be `+0` |
+| `vt.py <Class>` | our vtable vs the game's (falls back to `names` when our build emits none) |
+| `vt.py names <Class>` | slot numbering by symbol name; says where missing declarations belong |
+| `vt.py slot <Class> [0xOFF\|method...]` | which no-argument virtual compiles to an offset (ICF-proof naming) |
+| `vt.py expr ['<params>' '<call>']...` | same for virtuals that take arguments |
+| `vt.py fix <Class>... [--chain]` | pad a header until its slots and size agree with the game |
 
-`pvzelf.py` — minimal ELF reader, shared by the rest.
+Headers are found automatically (`hdrindex.py`); `--hdr <path>` overrides.
+
+## Running in the game
+
+| tool | what it does |
+| --- | --- |
+| `hybrid.py <src.cpp>...` | build `libpvzours.so` from matched functions + a Frida loader; `hybrid.py run [s]` launches it |
+| `trace/` | Frida boot traces (`trace_run.py`, `trace_live.py`, `trace_all.py`) and their results |
+| `mods/` | cheat menus (3.5.7 / 4.2.4 / 9.6.1), console, and the 4.2.4 / 9.6.1 RE scripts |
+
+Libraries the rest import: `asmdiff.py` (normaliser), `pvzelf.py` (ELF
+reader), `fastcc.py` (cached / PCH compiles), `ghidra.py`, `hdrindex.py`,
+`fields.py`, `layout.py`, `foldcopy.py`, `ctorinit.py`.

@@ -29,7 +29,7 @@ RT_CLASS_IMPLEMENT(ZombieAnimRig_Guide);
 bool ZombieAnimRig_Guide::DoGuideAnimation(PopAnimRig::AnimStoppedReflectionDelegate i_onAnimStopped)
 {
 	AnimHandle handle = PlayAndStop("guide", SELECT_EXACT, i_onAnimStopped);
-	if (handle != -1)
+	if (handle != ANIMHANDLE_NONE)
 	{
 		m_state = ZOMBIEANIM_USERDEFINED;
 		return true;

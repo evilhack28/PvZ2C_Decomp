@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Only the instructions that still differ, game vs ours (wd.py <sym> | <Class> <method>)."""
+"""Only the instructions that still differ, game vs ours (wd.py <sym>... | <Class> <method>... | <file.cpp> <sym>...; --shape, --asm, -s)."""
 
 import argparse
 import difflib
@@ -249,45 +249,76 @@ def print_source(source, mangled):
     print()
 
 
+def shape(game_rows, our_rows):
+    """Mnemonic-only diff: where instructions were added or dropped, register naming aside."""
+    sa = [asmdiff._short(x) for x in asmdiff.render(game_rows)]
+    sb = [asmdiff._short(y) for y in asmdiff.render(our_rows)]
+    ka, kb = [l.split()[0] for l in sa], [l.split()[0] for l in sb]
+    print(f'      game {len(ka)} instructions, ours {len(kb)}')
+    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, ka, kb, autojunk=False).get_opcodes():
+        if op == 'equal':
+            continue
+        print(f'\n      {op}: game[{i1}:{i2}] ours[{j1}:{j2}]')
+        for k in range(max(0, i1 - 3), min(len(sa), i2 + 3)):
+            print(f'      {RED if i1 <= k < i2 else GREY}{">" if i1 <= k < i2 else " "} game  {sa[k]}{OFF}')
+        for k in range(max(0, j1 - 3), min(len(sb), j2 + 3)):
+            print(f'      {GREEN if j1 <= k < j2 else GREY}{">" if j1 <= k < j2 else " "} ours  {sb[k]}{OFF}')
+
+
+def targets(items):
+    """[(mangled, source)] from `sym...`, `Class method...` or `file.cpp sym|Class::method...`."""
+    first = items[0]
+    if first.endswith('.cpp') or '/' in first or os.sep in first:
+        source = first if os.path.isabs(first) else os.path.normpath(os.path.join(os.getcwd(), first))
+        out = []
+        for n in items[1:]:
+            cls, _, meth = n.replace('::', ' ').partition(' ')
+            out.append((n if n.startswith('_Z') else resolve(cls, meth or None)[0], source))
+        return out
+    if first.startswith('_Z'):
+        return [resolve(n) for n in items]
+    return [resolve(first, m) for m in (items[1:] or [None])]
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('symbol', help='mangled name, or a class (with method as the next arg)')
-    ap.add_argument('method', nargs='?')
+    ap.add_argument('items', nargs='+', help='mangled names | Class method... | file.cpp sym...')
     ap.add_argument('-c', '--context', type=int, default=2, help='matching lines kept around each hunk (default 2)')
     ap.add_argument('-a', '--all', action='store_true', help='every line, folded-name noise included')
     ap.add_argument('--asm', action='store_true', help='a clean listing instead of a diff')
     ap.add_argument('--ours', action='store_true', help='with --asm, our listing not the game')
+    ap.add_argument('--shape', action='store_true', help='mnemonics only: find added or missing instructions')
     ap.add_argument('-s', '--src', action='store_true', help='print our source of just this function (and its header decl) first')
     args = ap.parse_args()
 
-    mangled, source = resolve(args.symbol, args.method)
-    rel = os.path.relpath(source, os.path.join(HERE, os.pardir))
-    if args.src:
-        print_source(source, mangled)
-    obj = build(source)
-
-    game = asmdiff.listing(Elf(config.TARGET_LIB), mangled)
-    ours = asmdiff.listing(Elf(obj), mangled)
-    if game is None:
-        sys.exit(f'{mangled}: not in the game')
-    if ours is None:
-        sys.exit(f'{mangled}: {rel} compiled but does not define it')
-
-    same, total, _ = asmdiff.compare(game, ours)
-    ok = same == total and len(game) == len(ours)
-    tag = f'{GREEN}OK{OFF}' if ok else f'{RED}{same}/{total} ({100 * same // max(total, 1)}%){OFF}'
-    countnote = '' if len(game) == len(ours) else f'  {RED}[game {len(game)} insns, ours {len(ours)}]{OFF}'
-    print(f'{BOLD}{mangled}{OFF}  {rel}   {tag}{countnote}')
-
-    if args.asm:
-        members = member_names(mangled)
-        for line in asmdiff.render(ours if args.ours else game):
-            print(f'  {annotate(asmdiff._short(line), members)}')
-        return 0 if ok else 1
-
-    if not ok:
-        show(aligned(game, ours), args.context, args.all)
-    return 0 if ok else 1
+    game_elf, objs, rc = Elf(config.TARGET_LIB), {}, 0
+    for mangled, source in targets(args.items):
+        rel = os.path.relpath(source, os.path.join(HERE, os.pardir))
+        if args.src:
+            print_source(source, mangled)
+        if source not in objs:
+            objs[source] = build(source)
+        game = asmdiff.listing(game_elf, mangled)
+        ours = asmdiff.listing(Elf(objs[source]), mangled)
+        if game is None or ours is None:
+            print(f'{BOLD}{mangled}{OFF}  {RED}' + ('not in the game' if game is None else f'{rel} does not define it') + OFF)
+            rc = 1
+            continue
+        same, total, _ = asmdiff.compare(game, ours)
+        ok = same == total and len(game) == len(ours)
+        tag = f'{GREEN}OK{OFF}' if ok else f'{RED}{same}/{total} ({100 * same // max(total, 1)}%){OFF}'
+        countnote = '' if len(game) == len(ours) else f'  {RED}[game {len(game)} insns, ours {len(ours)}]{OFF}'
+        print(f'{BOLD}{mangled}{OFF}  {rel}   {tag}{countnote}')
+        if args.asm:
+            members = member_names(mangled)
+            for line in asmdiff.render(ours if args.ours else game):
+                print(f'  {annotate(asmdiff._short(line), members)}')
+        elif args.shape:
+            shape(game, ours)
+        elif not ok:
+            show(aligned(game, ours), args.context, args.all)
+        rc = rc or (0 if ok else 1)
+    return rc
 
 
 if __name__ == '__main__':

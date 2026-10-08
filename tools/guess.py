@@ -203,7 +203,7 @@ def guess(elf, syms, name):
     ncalls = sum(1 for i in ins if i.mnemonic in ('bl', 'blr', 'b', 'br'))
     if len(vslots) == 1 and ncalls == 1:
         return name, f'{{\n\t// one virtual call, vtable +{vslots[0]:#x}\n' \
-                     f'\t// name it:  py -3 tools/vtprobe.py {cls} {cls}.h\n}}', 35, \
+                     f'\t// name it:  py -3 tools/vt.py names {cls}\n}}', 35, \
                f'single virtual dispatch at vtable +{vslots[0]:#x}'
 
     # ---- RT_CLASS machinery ---------------------------------------

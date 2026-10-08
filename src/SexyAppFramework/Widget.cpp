@@ -323,7 +323,7 @@ int Widget::WriteString(Graphics* g, const SexyString& theString, int theX, int 
 int Widget::WriteWordWrapped(Graphics* g, PrimeTypeface* font, Color color, const Rect& theRect, const SexyString& theLine, int theLineSpacing, int theJustification)
 {
 	EA::Text::HAlignment anAlignment = (EA::Text::HAlignment)ConvertTheJustificationToEAText(theJustification);
-	font->DrawString_Paragraph(g, (float)theRect.mX, (float)theRect.mY, (float)theRect.mWidth, (float)theRect.mHeight, theLine, anAlignment, (EA::Text::VAlignment)0, color, NULL);
+	font->DrawString_Paragraph(g, (float)theRect.mX, (float)theRect.mY, (float)theRect.mWidth, (float)theRect.mHeight, theLine, anAlignment, EA::Text::kVATop, color, NULL);
 
 	int aWidth, aHeight;
 	font->SizeString_Paragraph(theLine, aWidth, aHeight, 0.0f);

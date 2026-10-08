@@ -23,18 +23,18 @@ RT_CLASS_IMPLEMENT(ArtifactBoostPropertySheet);
 void ArtifactBoostPropertySheet::StaticClassInit()
 {
 	REFLECTION_ENUMBUILDER_BEGIN(ArtifactBoostType);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(none, (ArtifactBoostType)0);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_dmg, (ArtifactBoostType)1);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_duration, (ArtifactBoostType)2);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_control, (ArtifactBoostType)3);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_trigger_cd, (ArtifactBoostType)4);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_usetimes, (ArtifactBoostType)5);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_passive2_cd, (ArtifactBoostType)6);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_passive1, (ArtifactBoostType)7);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(global_passive1, (ArtifactBoostType)8);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(bonus_starting_sun, (ArtifactBoostType)9);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(start_free_plant, (ArtifactBoostType)10);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(start_free_plant_new, (ArtifactBoostType)11);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(none, Boost_None);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_dmg, Improved_Damage);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_duration, Improved_Duration);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_control, Improved_Control);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_trigger_cd, Improved_TriggerCD);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_usetimes, Improved_UseTimes);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_passive2_cd, Improved_Passive2CD);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(improved_passive1, Improved_Passive1);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(global_passive1, Global_Passive1);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(bonus_starting_sun, Bonus_Starting_Sun);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(start_free_plant, Start_No_CD);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(start_free_plant_new, Start_Free_Plant);
 	REFLECTION_ENUMBUILDER_END(ArtifactBoostType);
 
 	REFLECTION_CLASSBUILDER_BEGIN(ArtifactBoostValueInfo);

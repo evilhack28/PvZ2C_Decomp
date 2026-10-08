@@ -29,7 +29,7 @@ RT_CLASS_IMPLEMENT(PlantAnimRig_LightningReed);
 bool PlantAnimRig_LightningReed::PlayAttackAnim(const std::string& i_attackAnim)
 {
 	AnimHandle handle = PlayAndStop(i_attackAnim);
-	if (handle != -1)
+	if (handle != ANIMHANDLE_NONE)
 	{
 		m_state = PLANTANIM_ATTACK;
 		return true;

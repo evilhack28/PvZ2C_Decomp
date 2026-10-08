@@ -9,7 +9,7 @@ Resolves, inline:
   - member offsets, from the reflected field table of the class named by
     --this and of any class whose fields are already known
   - unnamed local clones (.isra/.part), by disassembling their one-line body
-  - vtable offsets, printed as `vtable+0xNN` so slotprobe.py can name them
+  - vtable offsets, printed as `vtable+0xNN` so `vt.py slot` can name them
 """
 
 import argparse

@@ -22,7 +22,7 @@ PlantFramework* MeleePlantTargeter::getPlantsFramework(Plant* i_plant)
 Rect MeleePlantTargeter::getPlantAttackRect(Plant* i_plant, TargetDirection i_direction, PlantWeapon i_plantWeapon)
 {
 	Rect rect = getPlantsFramework(i_plant)->GetPlantAttackRect(i_plantWeapon);
-	if (i_plantWeapon == 0)
+	if (i_plantWeapon == WEAPON_PRIMARY)
 	{
 		int width = rect.mWidth;
 		rect.mWidth = (int)((float)width * 0.5f);

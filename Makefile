@@ -33,7 +33,7 @@ progress:                     ## full progress table (add `PLANT=Iceburg` to fil
 
 diff:                         ## game-vs-ours listing:  make diff FUNC=<mangled>
 	@test -n "$(FUNC)" || { echo "usage: make diff FUNC=<mangled symbol>"; exit 2; }
-	$(PYTHON) diff.py $(FUNC)
+	$(PYTHON) tools/wd.py $(FUNC)
 
 first-diff:                   ## largest not-yet-matching functions (PLANT= to filter)
 	$(PYTHON) first_diff.py $(PLANT)

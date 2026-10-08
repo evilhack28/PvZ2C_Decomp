@@ -27,7 +27,7 @@ report.json    committed progress baseline (make check fails on regression)
 py -3 tools/configure.py           # detect the toolchain, write config_local.py
 py -3 tools/progress.py            # compile src/, print the match percentage
 py -3 tools/progress.py Iceburg    # one class family
-py -3 diff.py <mangled-symbol>     # game vs ours, one function
+py -3 tools/wd.py <sym> | <Class> <method>   # game vs ours, only what differs
 ```
 
 `make` wraps the same commands — see the `Makefile`.

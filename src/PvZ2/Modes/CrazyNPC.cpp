@@ -889,7 +889,7 @@ void CrazyNPC::drawTextBannerStyle(Graphics* i_g)
 		font = NULL;
 		break;
 	}
-	font->DrawString_Paragraph(i_g, textRect, text, (EA::Text::HAlignment)1, (EA::Text::VAlignment)1, Color::White, NULL);
+	font->DrawString_Paragraph(i_g, textRect, text, EA::Text::kHACenter, EA::Text::kVACenter, Color::White, NULL);
 }
 
 void CrazyNPC::drawSpeechBubbleStyle(Graphics* i_g)
@@ -953,7 +953,7 @@ void CrazyNPC::drawSpeechBubbleStyle(Graphics* i_g)
 			int tx = S(185);
 			int ty = S(-326);
 			int tw = S(280);
-			tapFont->DrawString_Line(i_g, (float)(tx + offset), (float)ty, (float)tw, TodStringTranslate(L"[CLICK_TO_CONTINUE]"), (EA::Text::HAlignment)1, Color(PrimeText_Game::Color_Conversation_Tap_Text), NULL);
+			tapFont->DrawString_Line(i_g, (float)(tx + offset), (float)ty, (float)tw, TodStringTranslate(L"[CLICK_TO_CONTINUE]"), EA::Text::kHACenter, Color(PrimeText_Game::Color_Conversation_Tap_Text), NULL);
 		}
 	}
 	i_g->mTransX = m_sheetPtr->ArtIsMirrored ? (float)gLawnApp->mWidth : 0.0f;

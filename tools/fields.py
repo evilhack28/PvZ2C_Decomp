@@ -1,6 +1,4 @@
-"""Prints the reflected fields a class registers, with their struct offsets.
-
-    py -3 tools/fields.py PlantIceburg
+"""Reads the reflected fields a class registers, with their struct offsets (library; `off.py <Class> --game` prints them).
 
 Reads the StaticClassInit the RT_CLASS macros generate, which passes the
 field-registration function in x2; that function names each field with the
@@ -57,28 +55,6 @@ def fields(elf, fn, limit=9000):
         elif m == 'ret':
             break
     return out
-
-
-def main():
-    elf = Elf(config.TARGET_LIB)
-    for cls in sys.argv[1:]:
-        sym = f'_ZN{len(cls)}{cls}15StaticClassInitEv'
-        found = elf.function(sym)
-        if found is None:
-            print(f'{cls}: no StaticClassInit')
-            continue
-        va, size, _ = found
-        fn = _regfn(elf, va, size)
-        if not fn:
-            print(f'{cls}: StaticClassInit registers nothing ({size} bytes)')
-            continue
-        print(f'{cls}:')
-        for key, off in fields(elf, fn):
-            print(f'    {off:#6x}  {key}')
-
-
-if __name__ == '__main__':
-    main()
 
 
 def fields_typed(elf, fn, limit=9000):
