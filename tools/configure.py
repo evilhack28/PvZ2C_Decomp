@@ -112,10 +112,17 @@ def lib_ok(path):
     return None
 
 
-def write_local(ndk, lib):
+def write_local(ndk, lib, author=None):
+    keep = []
+    if os.path.exists(LOCAL):
+        drop = ('# Written by', 'NDK =', 'TARGET_LIB =') + (('AUTHOR =',) if author else ())
+        keep = [l for l in open(LOCAL) if not l.startswith(drop)]
     with open(LOCAL, 'w') as f:
         f.write('# Written by tools/configure.py -- per-machine, git-ignored.\n')
         f.write(f'NDK = r"{ndk}"\nTARGET_LIB = r"{lib}"\n')
+        if author:
+            f.write(f'AUTHOR = {author!r}\n')
+        f.writelines(keep)
     print(f'wrote {os.path.relpath(LOCAL, HERE)}\n  NDK        {ndk}\n  TARGET_LIB {lib}')
 
 
@@ -123,6 +130,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--ndk')
     ap.add_argument('--lib')
+    ap.add_argument('--author', help='name for new .cpp headers')
     ap.add_argument('--show', action='store_true')
     args = ap.parse_args()
 
@@ -141,7 +149,7 @@ def main():
               'or pass --lib PATH (see INSTALL.md).')
     if not (ndk and lib):
         sys.exit(1)
-    write_local(ndk, lib)
+    write_local(ndk, lib, args.author)
 
 
 if __name__ == '__main__':

@@ -11,7 +11,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config
-from pvzelf import Elf
+from lib.pvzelf import Elf
 
 UNPLACED = os.path.join(config.HERE, 'docs', 'unplaced-symbols.txt')
 GAP = 8192

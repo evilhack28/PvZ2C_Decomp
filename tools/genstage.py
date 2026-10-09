@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Scaffold a <Name>Stage.cpp -- RT_CLASS boilerplate for the two stage classes (genstage.py <Name>)."""
 
+import datetime
 import os
 import re
 import sys
+
+import config
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -12,7 +15,7 @@ TEMPLATE = '''//
 //  {name}Stage.cpp
 //
 //  Base PvZ2C (arm64-v8a, 3.5.7).
-//  Reconstructed by EvilHack28 on 2026-09-02.
+//  Reconstructed by {author} on {date}.
 //
 
 #include "{name}Stage.h"
@@ -78,7 +81,8 @@ def main(argv):
                 blocks.append(f'\n// TODO {cls}::{sig}\n')
                 todo.append(f'{cls}::{sig}')
 
-    out = TEMPLATE.format(name=name, classes='\n'.join(blocks))
+    out = TEMPLATE.format(name=name, classes='\n'.join(blocks), author=config.AUTHOR,
+                          date=datetime.date.today())
     dest = os.path.join(ROOT, 'src', 'PvZ2', 'stages', f'{name}Stage.cpp')
     open(dest, 'w').write(out)
     print(f'wrote {os.path.relpath(dest, ROOT)}')

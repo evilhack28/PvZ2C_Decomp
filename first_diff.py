@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.join(HERE, 'tools'))
 
 import config  # noqa: E402
 import progress  # noqa: E402
-from pvzelf import Elf  # noqa: E402
+from lib.pvzelf import Elf  # noqa: E402
 
 
 def main():

@@ -10,7 +10,7 @@ from capstone import CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN, Cs
 
 import config
 import ghidra
-from pvzelf import Elf
+from lib.pvzelf import Elf
 
 MD = Cs(CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN)
 

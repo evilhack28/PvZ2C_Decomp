@@ -30,6 +30,31 @@ except ImportError:
     # Ghidra loads the .so at a nonzero base: ghidra_addr = ref_addr + BIAS.
     GHIDRA_ADDR_BIAS = int(os.environ.get('PVZ2C_GHIDRA_ADDR_BIAS', '0x100000'), 0)
 
+# Optional IDA 9.x oracle instead of Ghidra: IDA_DB (.i64), IDA_PYTHON (python with idapro), IDA_ADDR_BIAS.
+try:
+    from config_local import IDA_DB
+except ImportError:
+    IDA_DB = os.environ.get('PVZ2C_IDA_DB')
+try:
+    from config_local import IDA_PYTHON
+except ImportError:
+    IDA_PYTHON = os.environ.get('PVZ2C_IDA_PYTHON')
+if IDA_DB and not GHIDRA_HEADLESS:
+    try:
+        from config_local import IDA_ADDR_BIAS as GHIDRA_ADDR_BIAS
+    except ImportError:
+        GHIDRA_ADDR_BIAS = int(os.environ.get('PVZ2C_IDA_ADDR_BIAS', '0'), 0)
+
+# Name written into new .cpp headers: config_local AUTHOR, PVZ2C_AUTHOR, else git user.name.
+try:
+    from config_local import AUTHOR
+except ImportError:
+    AUTHOR = os.environ.get('PVZ2C_AUTHOR')
+if not AUTHOR:
+    import subprocess
+    AUTHOR = subprocess.run(['git', '-C', HERE, 'config', 'user.name'], capture_output=True,
+                            text=True).stdout.strip() or 'unknown'
+
 _hosts = glob.glob(f'{NDK}/toolchains/aarch64-linux-android-4.9/prebuilt/*')
 TOOLCHAIN = _hosts[0] if _hosts else (
     f'{NDK}/toolchains/aarch64-linux-android-4.9/prebuilt/windows-x86_64')

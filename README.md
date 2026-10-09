@@ -10,7 +10,7 @@ size    110723808
 
 The APK is archived at
 <https://archive.org/details/com.popcap.pvz2cthdxy51>. Pull the library out
-with `py -3 tools/extract.py <apk-or-zip>`; it is read in place, never
+with `python tools/extract.py <apk-or-zip>`; it is read in place, never
 modified.
 
 ## Layout
@@ -24,10 +24,10 @@ report.json    committed progress baseline (make check fails on regression)
 ## Use
 
 ```
-py -3 tools/configure.py           # detect the toolchain, write config_local.py
-py -3 tools/progress.py            # compile src/, print the match percentage
-py -3 tools/progress.py Iceburg    # one class family
-py -3 tools/wd.py <sym> | <Class> <method>   # game vs ours, only what differs
+python tools/configure.py           # detect the toolchain, write config_local.py
+python tools/progress.py            # compile src/, print the match percentage
+python tools/progress.py Iceburg    # one class family
+python tools/wd.py <sym> | <Class> <method>   # game vs ours, only what differs
 ```
 
 `make` wraps the same commands — see the `Makefile`.

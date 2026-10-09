@@ -31,7 +31,8 @@ biggest first). `make` wraps all of this — see the top-level `Makefile`.
 | tool | what it does |
 | --- | --- |
 | `wd.py <sym>...` / `<Class> <method>...` / `<file.cpp> <sym>...` | only the instructions that still differ; one compile for many functions. `-s` source + header decl, `--asm [--ours]` clean listing, `--shape` mnemonics only, `-a` all lines, `-c N` context |
-| `recon.py <sym>` | Ghidra decompile + annotated game asm, members / vslots / calls named |
+| `recon.py <sym>` | decompile (Ghidra or IDA) + annotated game asm, members / vslots / calls named |
+| `oracle.py <Script> [args]` | run an `oracle_scripts/` script (`RawFn`, `Grep`, `XrefsTo`, `WhoWrites`, ...) on this machine's Ghidra or IDA 9.x; `--list` names them |
 | `explain.py <sym>` | annotated disassembly: floats resolved, member offsets labelled, unnamed clones followed |
 | `guess.py <sym>` / `--class <Name>` | a draft body from the function's shape (empty, accessor, flag, forwarder, RT_CLASS). A start, never an answer |
 | `autofill.py <file.cpp> [--dry]` | write missing methods, keep only what compiles to OK |
@@ -59,7 +60,7 @@ biggest first). `make` wraps all of this — see the top-level `Makefile`.
 | `vt.py expr ['<params>' '<call>']...` | same for virtuals that take arguments |
 | `vt.py fix <Class>... [--chain]` | pad a header until its slots and size agree with the game |
 
-Headers are found automatically (`hdrindex.py`); `--hdr <path>` overrides.
+Headers are found automatically (`lib/hdrindex.py`); `--hdr <path>` overrides.
 
 ## Running in the game
 
@@ -67,8 +68,21 @@ Headers are found automatically (`hdrindex.py`); `--hdr <path>` overrides.
 | --- | --- |
 | `hybrid.py <src.cpp>...` | build `libpvzours.so` from matched functions + a Frida loader; `hybrid.py run [s]` launches it |
 | `trace/` | Frida boot traces (`trace_run.py`, `trace_live.py`, `trace_all.py`) and their results |
-| `mods/` | cheat menus (3.5.7 / 4.2.4 / 9.6.1), console, and the 4.2.4 / 9.6.1 RE scripts |
+| `mods/` | cheat menus (3.5.7 / 4.2.4 / 9.6.1), console, and the 4.2.4 / 9.6.1 RE scripts (local only) |
 
-Libraries the rest import: `asmdiff.py` (normaliser), `pvzelf.py` (ELF
-reader), `fastcc.py` (cached / PCH compiles), `ghidra.py`, `hdrindex.py`,
-`fields.py`, `layout.py`, `foldcopy.py`, `ctorinit.py`.
+## Layout
+
+```
+tools/*.py            the commands above (plus config.py / config_local.py)
+tools/lib/            modules the commands import, never run directly:
+                      asmdiff (normaliser), pvzelf (ELF reader), fastcc (cached /
+                      PCH compiles), hdrindex, fields, layout, foldcopy, ctorinit
+tools/oracle_scripts/ ghidra/*.java and ida/*.py: the same scripts for each
+                      decompiler (same arguments, same output); ida_api.py is the
+                      IDA side, asmtext.py prints capstone in Ghidra's syntax
+tools/trace/          Frida boot traces
+```
+
+Import a library as `from lib import pvzelf` (run from `tools/`, or put
+`tools/` on `sys.path`). Oracle script addresses are the decompiler's own:
+ref-lib + `GHIDRA_ADDR_BIAS` / `IDA_ADDR_BIAS`.

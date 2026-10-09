@@ -8,7 +8,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config
-import hdrindex
+from lib import hdrindex
 from tidy import strip_comments
 
 SKIP = re.compile(r'^\s*(typedef|using|static|friend|enum|class|struct|union|template|public|protected|private)\b')
@@ -75,14 +75,14 @@ def probe(cls, hdr, members):
         names = [n for i, n in enumerate(names) if i not in bad]
     else:
         sys.exit('could not get a clean probe')
-    from pvzelf import Elf
+    from lib.pvzelf import Elf
     syms = {n: s for n, v, s, sh, t in Elf(obj).symbols()}
     return {n: syms['probe_' + n] - 1 for n in names if 'probe_' + n in syms}, syms.get('probe__size')
 
 
 def game_fields(cls):
-    import fields
-    from pvzelf import Elf
+    from lib import fields
+    from lib.pvzelf import Elf
     elf = Elf(config.TARGET_LIB)
     found = elf.function(f'_ZN{len(cls)}{cls}15StaticClassInitEv')
     fn = found and fields._regfn(elf, found[0], found[1])

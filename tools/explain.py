@@ -23,8 +23,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from capstone import CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN, Cs
 
 import config
-import fields as fieldtool
-from pvzelf import Elf
+from lib import fields as fieldtool
+from lib.pvzelf import Elf
 
 MD = Cs(CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN)
 GREY, CYAN, OFF = '\033[90m', '\033[36m', '\033[0m'

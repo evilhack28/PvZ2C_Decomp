@@ -12,11 +12,11 @@ import time
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-import asmdiff
+from lib import asmdiff
 import config
-import fastcc
+from lib import fastcc
 import wd
-from pvzelf import Elf
+from lib.pvzelf import Elf
 
 FLIP = {'<': '>', '>': '<', '<=': '>=', '>=': '<='}
 ATOM = re.compile(r'^[\w.:]+(\(.*\))?$|^\(.*\)$', re.S)

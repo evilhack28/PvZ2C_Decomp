@@ -19,14 +19,14 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config
-from pvzelf import Elf
+from lib.pvzelf import Elf
 from progress import owned_prefixes, pretty, is_stub, _NAMESPACES
 
 TREE = os.path.join(config.HERE, 'docs', 'original-source-tree.txt')
 UNITS = os.path.join(config.HERE, 'units.json')
 UNPLACED = os.path.join(config.HERE, 'docs', 'unplaced-symbols.txt')
 
-from layout import studio  # noqa: E402
+from lib.layout import studio  # noqa: E402
 
 HANDWRITTEN = {
     'src/PvZ2/plants/Iceburg/Plant_Iceburg.cpp',

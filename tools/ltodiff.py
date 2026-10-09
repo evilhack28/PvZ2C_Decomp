@@ -14,9 +14,9 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-import asmdiff
+from lib import asmdiff
 import config
-from pvzelf import Elf
+from lib.pvzelf import Elf
 
 GREEN, RED, BOLD, OFF = '\033[32m', '\033[31m', '\033[1m', '\033[0m'
 

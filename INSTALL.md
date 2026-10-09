@@ -5,11 +5,14 @@ steps:
 
 ## 1. Python
 
-3.10+, with two packages. On Windows use `py -3`; bare `python` is often a
-broken Store alias.
+3.10+, with two packages. Commands below use `python`. On Windows that name is
+often the Microsoft Store stub instead: turn off the `python.exe` / `python3.exe`
+App execution aliases (Settings > Apps > Advanced app settings), or in Git Bash
+add `~/bin/python` and `~/bin/python3` containing
+`exec "/c/Program Files/Python312/python.exe" "$@"`. `py -3` works either way.
 
 ```
-py -3 -m pip install capstone pyelftools
+python -m pip install capstone pyelftools
 ```
 
 ## 2. Android NDK r10e
@@ -43,7 +46,7 @@ The APK is at <https://archive.org/details/com.popcap.pvz2cthdxy51>
 `./reference/libSrc.so`:
 
 ```
-py -3 tools/extract.py <path or url to the apk/zip>
+python tools/extract.py <path or url to the apk/zip>
 ```
 
 `extract.py` handles a plain APK or a zip-wrapped one, and verifies the
@@ -53,10 +56,38 @@ SHA256. Or place any copy at `./reference/libSrc.so` yourself, or set
 ## 4. Configure
 
 ```
-py -3 tools/configure.py       # writes tools/config_local.py (git-ignored)
-py -3 tools/scaffold.py        # regenerate the src/ stubs + units.json
-py -3 tools/progress.py        # should now compile src/ and print a percentage
+python tools/configure.py       # writes tools/config_local.py (git-ignored)
+python tools/scaffold.py        # regenerate the src/ stubs + units.json
+python tools/progress.py        # should now compile src/ and print a percentage
 ```
 
 Overrides: `configure.py --ndk PATH --lib PATH`, or the `PVZ2C_NDK` /
-`PVZ2C_TARGET_LIB` environment variables.
+`PVZ2C_TARGET_LIB` environment variables. `--author "Name"` sets the name
+written into new `.cpp` headers (default: `git config user.name`).
+
+## 5. Decompiler (optional)
+
+Only `recon.py` and `reflect.py` use one; everything else needs just the NDK.
+Add one of these to `tools/config_local.py`.
+
+Ghidra: `GHIDRA_HEADLESS`, `GHIDRA_PROJECT_DIR`, `GHIDRA_PROJECT`,
+`GHIDRA_PROGRAM`, `GHIDRA_SCRIPTS`, `GHIDRA_ADDR_BIAS` (Ghidra address minus
+`libSrc.so` address, usually `0x100000`).
+
+IDA 9.x with the Hex-Rays ARM64 decompiler, through idalib:
+
+```
+python -m pip install "<IDA dir>/idalib/python"
+python "<IDA dir>/idalib/python/py-activate-idalib.py"
+```
+
+```
+IDA_DB = r"C:\path\libSrc_tools.i64"   # a copy: the GUI locks the one it has open
+IDA_PYTHON = None                      # or the interpreter that has idapro, if not this one
+IDA_ADDR_BIAS = 0                      # IDA address minus libSrc.so address
+```
+
+`IDA_PYTHON` also needs `capstone` (`python -m pip install capstone`).
+
+Check: `python tools/oracle.py Decomp <Class::method>`; `oracle.py --list`
+names every script. The same scripts exist for both decompilers.

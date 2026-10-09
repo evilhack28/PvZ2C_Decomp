@@ -22,10 +22,10 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-import asmdiff
+from lib import asmdiff
 import config
-import fastcc
-from pvzelf import Elf
+from lib import fastcc
+from lib.pvzelf import Elf
 
 _TTY = sys.stdout.isatty() and not os.environ.get('NO_COLOR')
 GREEN, RED, YELLOW, GREY, BOLD, OFF = (

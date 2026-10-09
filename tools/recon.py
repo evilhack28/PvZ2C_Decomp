@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from capstone import CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN, Cs
 
 import config
-from pvzelf import Elf
+from lib.pvzelf import Elf
 import ghidra as ghidramod
 
 MD = Cs(CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN)
@@ -256,8 +256,9 @@ def main():
     print(f'    {size} B @ {addr:#x}   class={cls}  hdr={hdr}  vt={",".join(vts) or "-"}')
 
     if not args.no_ghidra and not args.asm_only:
-        print('\n--- GHIDRA ---')
         try:
+            import oracle
+            print(f'\n--- {oracle.backend().upper()} ---')
             dump = ghidramod.decompile(f'{addr:x}')
             body = re.sub(r'^.*?// =====', '// =====', dump, count=1, flags=re.S)
             body = re.split(r'\n// ===== ', body)[0]

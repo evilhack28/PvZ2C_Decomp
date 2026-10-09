@@ -12,10 +12,10 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-import asmdiff
+from lib import asmdiff
 import config
-import fastcc
-from pvzelf import Elf
+from lib import fastcc
+from lib.pvzelf import Elf
 
 GREEN, RED, GREY, BOLD, OFF = '\033[32m', '\033[31m', '\033[90m', '\033[1m', '\033[0m'
 
@@ -226,7 +226,7 @@ def source_of(source, mangled):
         first = text.count('\n', 0, m.start()) + 1
         out.append((first, text[m.start():end].split('\n')))
     decls = []
-    import hdrindex
+    from lib import hdrindex
     h = hdrindex.header_of(cls)
     want = re.compile((r'~' if meth.startswith('~') else r'(?<!~)\b') + rf'{re.escape(meth.lstrip("~"))}\s*\(')
     if h:

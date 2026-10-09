@@ -13,10 +13,10 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-import asmdiff
+from lib import asmdiff
 import config
-import fastcc
-from pvzelf import Elf
+from lib import fastcc
+from lib.pvzelf import Elf
 
 GREEN, RED, GREY, BOLD, OFF = '\033[32m', '\033[31m', '\033[90m', '\033[1m', '\033[0m'
 

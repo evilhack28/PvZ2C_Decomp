@@ -1,7 +1,15 @@
-# See README.md Windows: `scoop install make`, or run
-# tools/*.py directly.
+# See README.md. Windows: `choco install make` (or `winget install ezwinports.make`),
+# or run tools/*.py directly.
 
-PYTHON ?= $(shell command -v py >/dev/null 2>&1 && echo "py -3" || echo python3)
+# On Windows run every recipe in Git's bash, so make behaves the same from PowerShell or cmd
+ifeq ($(OS),Windows_NT)
+  GITBASH := $(firstword $(wildcard C:/PROGRA~1/Git/bin/bash.exe))
+  ifneq ($(GITBASH),)
+    SHELL := $(GITBASH)
+  endif
+endif
+
+PYTHON ?=$(shell python -c "" >/dev/null 2>&1 && echo python || echo "py -3")
 JOBS   ?= $(shell nproc 2>/dev/null || echo 4)
 FUNC   ?=
 PLANT  ?=
