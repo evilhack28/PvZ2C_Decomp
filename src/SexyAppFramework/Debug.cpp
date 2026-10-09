@@ -14,7 +14,7 @@ namespace Android
 	namespace DEBUG
 	{
 		struct Globals { char pad[0x70]; jmethodID mPauseInJava; };
-		Globals sGlobals;
+		static Globals* volatile sGlobals;
 	}
 }
 
@@ -22,8 +22,9 @@ namespace Android
 
 bool Android::DEBUG::Register(JNIEnv* InEnv, jclass InGameClass)
 {
-	sGlobals.mPauseInJava = InEnv->GetMethodID(InGameClass, "DEBUG_PauseInJava", "(Ljava/lang/String;I)V");
-	return sGlobals.mPauseInJava != NULL;
+	Globals* aGlobals = sGlobals;
+	aGlobals->mPauseInJava = InEnv->GetMethodID(InGameClass, "DEBUG_PauseInJava", "(Ljava/lang/String;I)V");
+	return aGlobals->mPauseInJava != NULL;
 }
 
 void Android::DEBUG::PauseInJava(char const* InFileName, int InLineNo)
@@ -33,7 +34,7 @@ void Android::DEBUG::PauseInJava(char const* InFileName, int InLineNo)
 	{
 		jstring fileName = env->NewStringUTF(InFileName);
 		jobject gameObject = Android::Util::GetGameObject(env);
-		env->CallVoidMethod(gameObject, sGlobals.mPauseInJava, fileName, InLineNo);
+		env->CallVoidMethod(gameObject, sGlobals->mPauseInJava, fileName, InLineNo);
 		env->DeleteLocalRef(fileName);
 	}
 }

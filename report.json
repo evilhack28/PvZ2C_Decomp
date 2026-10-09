@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-09T10:53:40+00:00",
+  "generated": "2026-10-09T18:18:20+00:00",
   "measures": {
-    "total_functions": 85958,
-    "matched_functions": 29894,
-    "matched_functions_percent": 34.78,
-    "total_code": 13039908,
-    "matched_code": 2090120,
-    "matched_code_percent": 16.03,
-    "fuzzy_match_percent": 17.0,
-    "started_units": 2228,
+    "total_functions": 85973,
+    "matched_functions": 29960,
+    "matched_functions_percent": 34.85,
+    "total_code": 13040388,
+    "matched_code": 2100788,
+    "matched_code_percent": 16.11,
+    "fuzzy_match_percent": 17.1,
+    "started_units": 2229,
     "total_units": 2771,
-    "started_code": 10378556,
-    "started_matched_code": 2090120,
-    "started_percent": 20.14,
+    "started_code": 10382448,
+    "started_matched_code": 2100788,
+    "started_percent": 20.23,
     "unplaced_functions": 58654,
     "unplaced_code": 8567392,
     "compile_failures": 0
@@ -387819,22 +387819,22 @@
     {
       "name": "src/SexyAppFramework/Debug.cpp",
       "total_code": 192,
-      "matched_code": 128,
-      "matched_code_percent": 66.67,
+      "matched_code": 192,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 1,
-      "matched_functions_percent": 50.0,
-      "fuzzy_match_percent": 83.33,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "Android::DEBUG::Register",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 50.0
-        },
         {
           "name": "Android::DEBUG::PauseInJava",
           "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Android::DEBUG::Register",
+          "size": 64,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }
@@ -387842,13 +387842,261 @@
     },
     {
       "name": "src/SexyAppFramework/Dialog.cpp",
-      "total_code": 3412,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 26,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 3892,
+      "matched_code": 3412,
+      "matched_code_percent": 87.67,
+      "total_functions": 41,
+      "matched_functions": 26,
+      "matched_functions_percent": 63.41,
+      "fuzzy_match_percent": 87.67,
+      "functions": [
+        {
+          "name": "UI::Dialog::GetChildWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetChildWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetChildWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetChildWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "UI::Dialog::CreateFromLayout",
+          "size": 544,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::InstantiateWidget_Recursively",
+          "size": 296,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::~Dialog",
+          "size": 296,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::~Dialog",
+          "size": 296,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::GetChildWidget",
+          "size": 268,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::CloneWidget",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::UnloadGroups",
+          "size": 188,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::AddResGroup",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::AttachLawnApp",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::DetachLawnApp",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::SetCenter",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::Dialog",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::Dialog",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::GetLayoutName",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::setWindowCenter",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::OnCreate",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::Draw",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::SetWidgetVisible",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::OnClose",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::~Dialog",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::SetButtonListener",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::SetDarkBgAlpha",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::ButtonDepress",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::ButtonPress",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::DrawAll",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "UI::Dialog::GetWidget",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/SexyAppFramework/EATech/EAIO/2.17.03/include/EAIO/internal/Config.cpp",
@@ -468535,12 +468783,12 @@
     {
       "name": "src/SexyAppFramework/ResourceManager.cpp",
       "total_code": 25636,
-      "matched_code": 448,
-      "matched_code_percent": 1.75,
+      "matched_code": 7640,
+      "matched_code_percent": 29.8,
       "total_functions": 74,
-      "matched_functions": 4,
-      "matched_functions_percent": 5.41,
-      "fuzzy_match_percent": 9.26,
+      "matched_functions": 43,
+      "matched_functions_percent": 58.11,
+      "fuzzy_match_percent": 45.35,
       "functions": [
         {
           "name": "Sexy::ResourceManager::ParseResourcesFile",
@@ -468591,26 +468839,8 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::ResourceManager::GetResourceCount",
-          "size": 644,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Sexy::ResourceManager::BuildImage",
           "size": 600,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::RegisterResourceInternal",
-          "size": 536,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetResourceForStringId",
-          "size": 520,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -468621,144 +468851,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::ResourceManager::ReadResourceFileSlotCount",
-          "size": 464,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::AddRsb",
-          "size": 424,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::Init",
-          "size": 404,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::Clear",
-          "size": 396,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::ResizeTables",
-          "size": 372,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetResInfoForPath",
-          "size": 364,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::LoadResourceForStringId",
-          "size": 364,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::PreLoadRsb",
-          "size": 360,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetLocaleSetForLocaleName",
-          "size": 356,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::InitForDecompressRsbFile",
-          "size": 352,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetLoadResourcesListProgress",
-          "size": 340,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::RemoveUngroupedSharedImage",
-          "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::SetSoundBankInvaild",
-          "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::PrepareLoadResourcesList",
-          "size": 260,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::RemoveAllDelayLoadedRSBConfigFiles",
-          "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::AddDLCRsb",
-          "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::OnInstanceTableObjectFault",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::LoadAllRsb",
-          "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::ShowResourceError",
-          "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetLocaleFolder",
-          "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetAllDelayLoadedRSBSlotCount",
-          "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::IsDelayLoadRSB",
-          "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::ReplaceResource",
-          "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Sexy::ResourceManager::GetResourceForStringIdT",
           "size": 164,
           "matched": false,
@@ -468779,54 +468871,6 @@
         {
           "name": "Sexy::ResourceManager::GetResourceForStringIdT",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetResourceGroupNamed",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::RegisterResource",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::Fail",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetImageOptions::operator=",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetImageOptions::GetImageOptions",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetImageOptions::GetImageOptions",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::PreLoadTask::~PreLoadTask",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::PreLoadTask::~PreLoadTask",
-          "size": 52,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -468869,78 +468913,12 @@
         {
           "name": "Sexy::ResourceManager::GetResInfoForStringIdT",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetErrorText",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetImageOptions::~GetImageOptions",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetImageOptions::~GetImageOptions",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::InitDelayLoadedRSBSlotCount",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::PreLoadTask::PreLoadTask",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::PreLoadTask::PreLoadTask",
-          "size": 36,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
           "name": "Sexy::ResourceManager::~ResourceManager",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::HadError",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetLastNonDelayLoadRSBManifestName",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::ClearError",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::GetDelayLoadedRSBSlotCount",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceManager::InitResourceGen",
-          "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -468963,14 +468941,254 @@
           "fuzzy_match_percent": 36.4
         },
         {
+          "name": "Sexy::ResourceManager::RegisterResourceInternal",
+          "size": 536,
+          "matched": false,
+          "fuzzy_match_percent": 80.6
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceForStringId",
+          "size": 520,
+          "matched": false,
+          "fuzzy_match_percent": 80.0
+        },
+        {
+          "name": "Sexy::ResourceManager::AddRsb",
+          "size": 424,
+          "matched": false,
+          "fuzzy_match_percent": 94.34
+        },
+        {
+          "name": "Sexy::ResourceManager::ResizeTables",
+          "size": 372,
+          "matched": false,
+          "fuzzy_match_percent": 98.92
+        },
+        {
+          "name": "Sexy::ResourceManager::InitForDecompressRsbFile",
+          "size": 352,
+          "matched": false,
+          "fuzzy_match_percent": 53.41
+        },
+        {
+          "name": "Sexy::ResourceManager::PrepareLoadResourcesList",
+          "size": 260,
+          "matched": false,
+          "fuzzy_match_percent": 98.46
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceCount",
+          "size": 644,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ReadResourceFileSlotCount",
+          "size": 464,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::Init",
+          "size": 404,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::Clear",
+          "size": 396,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResInfoForPath",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::LoadResourceForStringId",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::PreLoadRsb",
+          "size": 360,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetLocaleSetForLocaleName",
+          "size": 356,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetLoadResourcesListProgress",
+          "size": 340,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::RemoveUngroupedSharedImage",
+          "size": 272,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::SetSoundBankInvaild",
+          "size": 264,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Sexy::ResourceManager::CreateResourceGroup",
           "size": 252,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "Sexy::ResourceManager::RemoveAllDelayLoadedRSBConfigFiles",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::AddDLCRsb",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::OnInstanceTableObjectFault",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::LoadAllRsb",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ShowResourceError",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetLocaleFolder",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetAllDelayLoadedRSBSlotCount",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::IsDelayLoadRSB",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ReplaceResource",
+          "size": 188,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetResourceGroupNamed",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::RegisterResource",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "Sexy::ResourceManager::GetResourceGroupNamed",
           "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::Fail",
+          "size": 128,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetImageOptions::operator=",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetImageOptions::GetImageOptions",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetImageOptions::GetImageOptions",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::PreLoadTask::~PreLoadTask",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::PreLoadTask::~PreLoadTask",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetErrorText",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetImageOptions::~GetImageOptions",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetImageOptions::~GetImageOptions",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::InitDelayLoadedRSBSlotCount",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::PreLoadTask::PreLoadTask",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::PreLoadTask::PreLoadTask",
+          "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -468983,6 +469201,36 @@
         {
           "name": "Sexy::ResourceManager::GetInfoClassIndexed",
           "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::HadError",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetLastNonDelayLoadRSBManifestName",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::ClearError",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::GetDelayLoadedRSBSlotCount",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceManager::InitResourceGen",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }
@@ -471282,13 +471530,13 @@
       "total_functions": 72,
       "matched_functions": 70,
       "matched_functions_percent": 97.22,
-      "fuzzy_match_percent": 99.13,
+      "fuzzy_match_percent": 99.36,
       "functions": [
         {
           "name": "Sexy::Widget::WriteNumberFromStrip",
           "size": 284,
           "matched": false,
-          "fuzzy_match_percent": 80.28
+          "fuzzy_match_percent": 85.92
         },
         {
           "name": "Sexy::Widget::GetColor",
