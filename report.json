@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-09T18:18:20+00:00",
+  "generated": "2026-10-10T16:02:26+00:00",
   "measures": {
-    "total_functions": 85973,
-    "matched_functions": 29960,
-    "matched_functions_percent": 34.85,
-    "total_code": 13040388,
-    "matched_code": 2100788,
-    "matched_code_percent": 16.11,
-    "fuzzy_match_percent": 17.1,
-    "started_units": 2229,
+    "total_functions": 86024,
+    "matched_functions": 30251,
+    "matched_functions_percent": 35.17,
+    "total_code": 13044828,
+    "matched_code": 2136860,
+    "matched_code_percent": 16.38,
+    "fuzzy_match_percent": 17.46,
+    "started_units": 2235,
     "total_units": 2771,
-    "started_code": 10382448,
-    "started_matched_code": 2100788,
-    "started_percent": 20.23,
+    "started_code": 10630368,
+    "started_matched_code": 2136860,
+    "started_percent": 20.1,
     "unplaced_functions": 58654,
     "unplaced_code": 8567392,
     "compile_failures": 0
@@ -333780,13 +333780,447 @@
     },
     {
       "name": "src/PvZ2/Network/MagentoService.cpp",
-      "total_code": 10020,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 46,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 12220,
+      "matched_code": 7844,
+      "matched_code_percent": 64.19,
+      "total_functions": 72,
+      "matched_functions": 64,
+      "matched_functions_percent": 88.89,
+      "fuzzy_match_percent": 94.46,
+      "functions": [
+        {
+          "name": "Magento::GetProductPtr",
+          "size": 1776,
+          "matched": false,
+          "fuzzy_match_percent": 77.35
+        },
+        {
+          "name": "MagentoCategoryProps::CalAllPriceSign",
+          "size": 580,
+          "matched": false,
+          "fuzzy_match_percent": 95.86
+        },
+        {
+          "name": "Magento::EventGetBundleProductPtrByPrice",
+          "size": 396,
+          "matched": false,
+          "fuzzy_match_percent": 90.91
+        },
+        {
+          "name": "Magento::GetBundleProductPtrByPrice",
+          "size": 380,
+          "matched": false,
+          "fuzzy_match_percent": 90.53
+        },
+        {
+          "name": "Magento::GetGesturePtr",
+          "size": 376,
+          "matched": false,
+          "fuzzy_match_percent": 90.43
+        },
+        {
+          "name": "Magento::GetStoreCategory",
+          "size": 340,
+          "matched": false,
+          "fuzzy_match_percent": 89.41
+        },
+        {
+          "name": "Magento::GetPlantLevelUpPlant",
+          "size": 300,
+          "matched": false,
+          "fuzzy_match_percent": 88.0
+        },
+        {
+          "name": "MagentoProductProps::ContainsItem",
+          "size": 228,
+          "matched": false,
+          "fuzzy_match_percent": 68.75
+        },
+        {
+          "name": "MagentoProductProps::StaticClassInit",
+          "size": 752,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetLocalizedPriceString",
+          "size": 632,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Magento::GetPlantPieceProductsData",
+          "size": 380,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Magento::FindStoreProduct",
+          "size": 336,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Magento::FindPlantGiftByLevel",
+          "size": 324,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Magento::GetPlantLevelUp",
+          "size": 316,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Magento::GetStore",
+          "size": 312,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Magento::GetProduct",
+          "size": 288,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::MagentoProductProps",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::MagentoProductProps",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::operator=",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetCombinedSkuTierName",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetPurchaseType",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetPriceByTypeName",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantGiftMagentoProps::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetCurrentLevelPriceData",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::SetPriceTier",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::~MagentoProductProps",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::~MagentoProductProps",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantGiftMagentoProps::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::CheckAllPriceSign",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::MagentoCategoryProps",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::MagentoCategoryProps",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::RestAllPriceSign",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetPriceInUSD",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::~MagentoCategoryProps",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::~MagentoCategoryProps",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::GetLocalizedName",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetLocalizedDescription",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetLocalizedName",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetLocalizedShortDescription",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantGiftMagentoProps::PlantGiftMagentoProps",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantGiftMagentoProps::PlantGiftMagentoProps",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetInternalName",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantGiftMagentoProps::~PlantGiftMagentoProps",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantGiftMagentoProps::~PlantGiftMagentoProps",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::TierPrice::operator=",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::TierPrice::TierPrice",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::TierPrice::TierPrice",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::TierPrice::TierPrice",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::TierPrice::TierPrice",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantGiftMagentoProps::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::GetInternalName",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::~MagentoCategoryProps",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::~MagentoProductProps",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantGiftMagentoProps::~PlantGiftMagentoProps",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetCurrentLevelPriceDataArray",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantGiftMagentoProps::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Magento::InitMagentoDataSign",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Magento::IsMagentoDataSafe",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoCategoryProps::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::TierPrice::TierPrice",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::TierPrice::TierPrice",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::TierPrice::~TierPrice",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "MagentoProductProps::TierPrice::~TierPrice",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantGiftMagentoProps::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Network/Message.cpp",
@@ -343661,12 +344095,152 @@
     {
       "name": "src/PvZ2/Network/NetworkProfileMgr.cpp",
       "total_code": 11568,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 4532,
+      "matched_code_percent": 39.18,
       "total_functions": 23,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 16,
+      "matched_functions_percent": 69.57,
+      "fuzzy_match_percent": 99.52,
+      "functions": [
+        {
+          "name": "NetworkProfileMgr::getAvatarChipList",
+          "size": 1048,
+          "matched": false,
+          "fuzzy_match_percent": 99.24
+        },
+        {
+          "name": "NetworkProfileMgr::getPlantChipList",
+          "size": 1040,
+          "matched": false,
+          "fuzzy_match_percent": 99.23
+        },
+        {
+          "name": "NetworkProfileMgr::getPlantList",
+          "size": 1040,
+          "matched": false,
+          "fuzzy_match_percent": 99.23
+        },
+        {
+          "name": "NetworkProfileMgr::getPendantChipList",
+          "size": 1028,
+          "matched": false,
+          "fuzzy_match_percent": 99.22
+        },
+        {
+          "name": "NetworkProfileMgr::getMaterialList",
+          "size": 1020,
+          "matched": false,
+          "fuzzy_match_percent": 99.22
+        },
+        {
+          "name": "NetworkProfileMgr::getNewAvatarChipList",
+          "size": 992,
+          "matched": false,
+          "fuzzy_match_percent": 99.19
+        },
+        {
+          "name": "NetworkProfileMgr::getAvatarList",
+          "size": 868,
+          "matched": false,
+          "fuzzy_match_percent": 99.08
+        },
+        {
+          "name": "NetworkProfileMgr::DoSync",
+          "size": 1672,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::getNewAvatarList",
+          "size": 780,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::getPendantList",
+          "size": 596,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::getRechargeStatusList",
+          "size": 496,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::GetIdByIdType",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::onMsgError",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::NetworkProfileMgr",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::NetworkProfileMgr",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::SetProfileSync",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::~NetworkProfileMgr",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::~NetworkProfileMgr",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::HasProfileSyncComplete",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::~NetworkProfileMgr",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::NeedSync",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::onSyncFinished",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NetworkProfileMgr::TrySync",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Network/NetworkRequestor.cpp",
@@ -343905,22 +344479,170 @@
     {
       "name": "src/PvZ2/Network/NotificationManagerGame.cpp",
       "total_code": 840,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 840,
+      "matched_code_percent": 100.0,
       "total_functions": 13,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 13,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "NotificationManagerGame::TestPushNotification",
+          "size": 316,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::DidRegisterForRemoteNotifications",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::Init",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::GetCurrentEndpoint",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::NotificationManagerGame",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::NotificationManagerGame",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::AddListener",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::Register",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::DidFailToRegisterForRemoteNotificationsWithError",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::DidReceiveLocalNotification",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::DidReceiveRemoteNotification",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::~NotificationManagerGame",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "NotificationManagerGame::~NotificationManagerGame",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Network/PVZCachedNetworkTable.cpp",
-      "total_code": 2324,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 2396,
+      "matched_code": 2396,
+      "matched_code_percent": 100.0,
+      "total_functions": 11,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "PVZCachedNetworkTableManager::ApplyChanges",
+          "size": 1312,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZCachedNetworkTableManager::getLocalPathForTable",
+          "size": 292,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZCachedNetworkTableManager::Watch",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZCachedNetworkTableManager::onRequestFinished",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZCachedNetworkTableManager::CheckForUpdates",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZCachedNetworkTableManager::operator=",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZCachedNetworkTableManager::NetworkRequestsCompleted",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZCachedNetworkTableManager::PVZCachedNetworkTableManager",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZCachedNetworkTableManager::PVZCachedNetworkTableManager",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZCachedNetworkTableManager::~PVZCachedNetworkTableManager",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZCachedNetworkTableManager::~PVZCachedNetworkTableManager",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Network/PVZManifest.cpp",
@@ -343997,12 +344719,158 @@
     {
       "name": "src/PvZ2/Network/PVZPackageNetwork.cpp",
       "total_code": 5144,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 4196,
+      "matched_code_percent": 81.57,
       "total_functions": 24,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "matched_functions": 23,
+      "matched_functions_percent": 95.83,
+      "fuzzy_match_percent": 99.61,
+      "functions": [
+        {
+          "name": "PVZPackageNetworkManager::LoadPackageFile",
+          "size": 948,
+          "matched": false,
+          "fuzzy_match_percent": 97.89
+        },
+        {
+          "name": "PVZPackageNetworkManager::ApplyChanges",
+          "size": 760,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZPackageNetworkManager::CleanPackageCache",
+          "size": 752,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZLevelNetworkManager::ServiceRequestCompleted",
+          "size": 524,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZPackageNetworkManager::getLocalPathForTable",
+          "size": 324,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZLevelNetworkManager::LoadLevel",
+          "size": 284,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZLevelNetworkManager::GetLevelLocalPath",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZLevelNetworkManager::ServiceRequestFailed",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZPackageNetworkManager::Watch",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZPackageNetworkManager::CheckForUpdates",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZPackageNetworkManager::onRequestFinished",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZPackageNetworkManager::PVZPackageNetworkManager",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZPackageNetworkManager::PVZPackageNetworkManager",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZLevelNetworkManager::PVZLevelNetworkManager",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZLevelNetworkManager::PVZLevelNetworkManager",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZPackageNetworkManager::~PVZPackageNetworkManager",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZPackageNetworkManager::~PVZPackageNetworkManager",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZLevelNetworkManager::~PVZLevelNetworkManager",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZLevelNetworkManager::~PVZLevelNetworkManager",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZPackageNetworkManager::NetworkRequestsCompleted",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZLevelNetworkManager::~PVZLevelNetworkManager",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZPackageNetworkManager::~PVZPackageNetworkManager",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZLevelNetworkManager::ServiceRequestCompleted",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PVZLevelNetworkManager::ServiceRequestCompleted",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Network/PVZRechargeCheckServer.cpp",
@@ -346916,13 +347784,2553 @@
     },
     {
       "name": "src/PvZ2/Network/gameNetWork/NetworkMsgProcess.cpp",
-      "total_code": 213584,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 399,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 215752,
+      "matched_code": 16264,
+      "matched_code_percent": 7.54,
+      "total_functions": 423,
+      "matched_functions": 164,
+      "matched_functions_percent": 38.77,
+      "fuzzy_match_percent": 7.73,
+      "functions": [
+        {
+          "name": "INetworkMsgProcess::RegisterCommonMessages",
+          "size": 6688,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestSinglePlayerInfo",
+          "size": 4140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestLeveloftheDayReward",
+          "size": 2324,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestActivityListWithWorldName",
+          "size": 1728,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestActivityList",
+          "size": 1696,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPBattleEnding",
+          "size": 1676,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestLeveloftheDayReward",
+          "size": 1580,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ShowPVPErrorMessage",
+          "size": 1556,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPPlantInfos",
+          "size": 1484,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestDangerRoomEndLevel",
+          "size": 1372,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetChristmasChargeReward",
+          "size": 1364,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestInstanceStatus",
+          "size": 1348,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestDoNewGacha",
+          "size": 1344,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestBuyShopItem",
+          "size": 1328,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestUseGem",
+          "size": 1320,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestPlantTrial",
+          "size": 1316,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnVerifySalesReward",
+          "size": 1304,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestFamilyRefreshProperty",
+          "size": 1268,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestPlayerDeliveryInfo",
+          "size": 1224,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestSteadyPendant",
+          "size": 1200,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::SendPVP_Ping",
+          "size": 1184,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetServiceStatus",
+          "size": 1172,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetSpringLoginReward",
+          "size": 1168,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestComposePlant",
+          "size": 1164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestDoGacha",
+          "size": 1164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestBossChallengeLevelEnd",
+          "size": 1156,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestDoSecretGacha",
+          "size": 1156,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestSynchronizePlantInfo",
+          "size": 1152,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPChangeEnemy",
+          "size": 1152,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestCarnivalBundle",
+          "size": 1124,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPLogin",
+          "size": 1112,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestGetPVPPlantInfos",
+          "size": 1112,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestBoardInfoGet",
+          "size": 1108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetRechageReward",
+          "size": 1100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestTGAvatarResult",
+          "size": 1096,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestTGResult",
+          "size": 1096,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestMiniGameChallengeLevelEnd",
+          "size": 1084,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetRiftShopData",
+          "size": 1068,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetZMatchShopData",
+          "size": 1068,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestActivityLevelEnd",
+          "size": 1068,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestBuyZMatchTicket",
+          "size": 1064,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestLuaGeneral",
+          "size": 1052,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestDangerRoomStartData",
+          "size": 1044,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestSoccerEndReward",
+          "size": 1044,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestSynchronizeAvatarInfo",
+          "size": 1040,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestDailySignRewardList",
+          "size": 1040,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestGetPVPPlantInfos",
+          "size": 1040,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestAchievementReward",
+          "size": 1036,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestEditPlant",
+          "size": 1036,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPRank",
+          "size": 1036,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestUseGem",
+          "size": 1032,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getAvatarChipList",
+          "size": 1020,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestNewGacha",
+          "size": 1020,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestSkipDangerRoom",
+          "size": 1016,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getOwnFragmentList",
+          "size": 1016,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestSynchronizePlantInfo",
+          "size": 1012,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestConsumeAndReceive",
+          "size": 1008,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetSpringBuyPlant",
+          "size": 992,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestTGAvatarResult",
+          "size": 988,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ProcessMsg",
+          "size": 972,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestUserInfo",
+          "size": 972,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestSynchronizeAvatarInfo",
+          "size": 964,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestTGResult",
+          "size": 932,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestYuanBaoReward",
+          "size": 932,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestActivityList",
+          "size": 928,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetNewPVPShopData",
+          "size": 920,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetPVZ1ModeShopData",
+          "size": 920,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestBuyItem",
+          "size": 916,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetUnlockWorldCupTeam",
+          "size": 916,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPvpShop",
+          "size": 916,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestBuyPvpShopObject",
+          "size": 912,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestBuyLimitLotteryCupShop",
+          "size": 908,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestGacha",
+          "size": 904,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestSummeryLottery",
+          "size": 896,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestSummeryLottery2018",
+          "size": 896,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestActiveActivityStates",
+          "size": 892,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPUpgradeCancel",
+          "size": 888,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestRankList",
+          "size": 888,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestSubPvpCoin",
+          "size": 888,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPlaybackDownload",
+          "size": 884,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestSecretAreaReward",
+          "size": 880,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestLanternRiddlesCompelete",
+          "size": 876,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestYuanBaoReward",
+          "size": 876,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestEncourageLinkMobile",
+          "size": 872,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPiggyBankGems",
+          "size": 872,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPTrainingZombie",
+          "size": 868,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestBindingThirdPartPlatforms",
+          "size": 856,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestSinglePlayerInfo",
+          "size": 856,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestTransferThirdPartPlatforms",
+          "size": 856,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestUnboundThirdPartPlatforms",
+          "size": 856,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPMapInfo",
+          "size": 844,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestBillingPoint",
+          "size": 824,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestResetPendant",
+          "size": 824,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::VerifySalesReward",
+          "size": 808,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::SendHttpRequest",
+          "size": 804,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPLabEnter",
+          "size": 804,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestBuyLimitLotteryCrystal",
+          "size": 800,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestExchangePendant",
+          "size": 800,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetLimitLottery",
+          "size": 800,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestChangePlayer",
+          "size": 800,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestMiniGameRewardEnd",
+          "size": 796,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestChargeRewardID",
+          "size": 792,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestActiveActivityStates",
+          "size": 788,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestDoSecretGacha",
+          "size": 788,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetRechargeReward",
+          "size": 776,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestDangerRoomEndLevel",
+          "size": 776,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestResetPendant",
+          "size": 772,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestSoldPendant",
+          "size": 772,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestSteadyPendant",
+          "size": 772,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestTravelLogWorldChest",
+          "size": 768,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPTrainingSell",
+          "size": 768,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestChangeAvatar",
+          "size": 764,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestChangePlant",
+          "size": 764,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestPlantLevelUp",
+          "size": 764,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestBeginPVPUpgrade",
+          "size": 764,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestAchievementConfig",
+          "size": 764,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestCarnivalBundle",
+          "size": 760,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestToggleArtifactEquip",
+          "size": 760,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestToggleCollectionEquip",
+          "size": 760,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestfirstChargeSucceed",
+          "size": 760,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestPlatformGift",
+          "size": 752,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestBuyPvpCoin",
+          "size": 752,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestWeeklyRechargeReward",
+          "size": 740,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestBoardInfoList",
+          "size": 740,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestDinosaurDanger",
+          "size": 740,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestFamilyReplaceProperty",
+          "size": 740,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestFamilyUnlockProperty",
+          "size": 740,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestSummerPlantComposit",
+          "size": 740,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestChangePlayer",
+          "size": 732,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestOthersZbList",
+          "size": 732,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPAchieve",
+          "size": 732,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPCompensationNoticeInfos",
+          "size": 732,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPUnlock",
+          "size": 732,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestRankListEffect",
+          "size": 728,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestBuyShopItem",
+          "size": 724,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPTrainingFinishAtOnce",
+          "size": 724,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestUserHeadshot",
+          "size": 720,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestArtifactLevelUp",
+          "size": 704,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestArtifactRankUp",
+          "size": 704,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getCacheDressFragmentList",
+          "size": 704,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getCachePendantFragmentList",
+          "size": 704,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getCachePlantFragmentList",
+          "size": 704,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPTrainingInfos",
+          "size": 704,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getAvatarChipList",
+          "size": 700,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getOwnFragmentList",
+          "size": 700,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getPendantChipList",
+          "size": 700,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestEncourageLinkMobile",
+          "size": 696,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestSoldPendant",
+          "size": 696,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetChristmasLoginReward",
+          "size": 692,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetWorldCupBeginGame",
+          "size": 692,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetbuyWorldCupTicket",
+          "size": 692,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestDailySignRewardList",
+          "size": 692,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestCodeReward",
+          "size": 692,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestDailySignWithTw",
+          "size": 692,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestUserName",
+          "size": 688,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestTravelLogIntegralChest",
+          "size": 672,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestArborDayWater",
+          "size": 668,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestArtifactLevelUp",
+          "size": 668,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestArtifactRankUp",
+          "size": 668,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetServiceStatus",
+          "size": 664,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestLevelUpByPlantBook",
+          "size": 664,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestUnlockNewAvatar",
+          "size": 664,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestMiniGameChallengeLevelEnd",
+          "size": 652,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestCompletePVPUpgrade",
+          "size": 652,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestEditPlant",
+          "size": 644,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::requestMsg",
+          "size": 644,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestChangeAvatar",
+          "size": 640,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPUnlock",
+          "size": 636,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPlaybackList",
+          "size": 628,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPvPUpgradeCompleteGem",
+          "size": 628,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetConsumptionReward",
+          "size": 624,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetStoneLottery",
+          "size": 624,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getConstraintIdList",
+          "size": 624,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getAvatarList",
+          "size": 620,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getOwnPlantList",
+          "size": 612,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestInstanceStatus",
+          "size": 604,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPBattleEnding",
+          "size": 604,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestClearworldCupdata",
+          "size": 596,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGet7DaysLoginReward",
+          "size": 596,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestTravelLogIntegralChest",
+          "size": 596,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestTravelLogWorldChest",
+          "size": 596,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPEntry",
+          "size": 592,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPMapInfo",
+          "size": 584,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestChallengeReward",
+          "size": 576,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestBossChallengeReward",
+          "size": 572,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestFamilyGetInfo",
+          "size": 572,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestAuthReward",
+          "size": 568,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestNoviceSevenDaysTrigger",
+          "size": 568,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestAchievementConfig",
+          "size": 568,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPLabEnter",
+          "size": 568,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPTrainingFinishGems",
+          "size": 568,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPVPTrainingInfos",
+          "size": 568,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestStaticConfig",
+          "size": 568,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestWechatReward",
+          "size": 564,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getPendantList",
+          "size": 552,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getPendantChipList",
+          "size": 548,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetConsumptionReward",
+          "size": 544,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestPlaybackUpload",
+          "size": 544,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getCachePendantList",
+          "size": 536,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestSkipDangerRoom",
+          "size": 528,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestArborDayWater",
+          "size": 516,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPTrainingFinishAtOnce",
+          "size": 508,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getDangerRoomUnobtainedBonus",
+          "size": 500,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestSynchronizePlantInfo",
+          "size": 496,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPLogin",
+          "size": 496,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestSynchronizeAvatarInfo",
+          "size": 488,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestExchangePendant",
+          "size": 464,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestPiggyBankGems",
+          "size": 464,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestBuyPvpCoin",
+          "size": 464,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestGeneral",
+          "size": 452,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::GenCommonParaMap",
+          "size": 436,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getDailyRewardList",
+          "size": 436,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestAuthReward",
+          "size": 408,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestDangerRoomStartData",
+          "size": 404,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetStateThirdPartPlatforms",
+          "size": 396,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::getPendantList",
+          "size": 396,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::_processMsg",
+          "size": 392,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestPlantLevelUp",
+          "size": 388,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPlaybackList",
+          "size": 384,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestDisplayID",
+          "size": 364,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetStoneLottery",
+          "size": 360,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestClearNotifyThirdPartPlatforms",
+          "size": 348,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPAchieve",
+          "size": 344,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestClearNotifyThirdPartPlatforms",
+          "size": 336,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::ShowErrorMessage",
+          "size": 332,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPlaybackDownload",
+          "size": 332,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::LoadCache",
+          "size": 328,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestSoccerEndReward",
+          "size": 324,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::GetClientSignature",
+          "size": 320,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::GetServerSignature",
+          "size": 320,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::SendHttpRequest",
+          "size": 308,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::StructuredData2ParaMap",
+          "size": 304,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::UpdatePlayerSupportPlant",
+          "size": 264,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::INetworkMsgProcess",
+          "size": 228,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::INetworkMsgProcess",
+          "size": 228,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPEntry",
+          "size": 192,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::~INetworkMsgProcess",
+          "size": 152,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::~INetworkMsgProcess",
+          "size": 152,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::operator=",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::operator=",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::operator=",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::S2C_PVP_BigMapPVPInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::S2C_PVP_BigMapPVPInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::S2C_PVP_BigMapPVPInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::S2C_PVP_BigMapPVPInfo",
+          "size": 140,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::CheckTime",
+          "size": 120,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::GetHouseID",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::GetHouseID",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::~INetworkMsgProcess",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::IsEvilDavid",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestUnlockNewAvatar",
+          "size": 220,
+          "matched": false,
+          "fuzzy_match_percent": 55.17
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestSummeryLottery2018",
+          "size": 200,
+          "matched": false,
+          "fuzzy_match_percent": 58.0
+        },
+        {
+          "name": "INetworkMsgProcess::IsJsonObj",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 88.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetWorldCupBeginGame",
+          "size": 80,
+          "matched": false,
+          "fuzzy_match_percent": 70.0
+        },
+        {
+          "name": "INetworkMsgProcess::GetRandom",
+          "size": 64,
+          "matched": false,
+          "fuzzy_match_percent": 43.75
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestUserInfo",
+          "size": 376,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestBuyZMatchTicket",
+          "size": 328,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGet7DaysLoginReward",
+          "size": 328,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetChristmasLoginReward",
+          "size": 328,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetSpringLoginReward",
+          "size": 328,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestUserName",
+          "size": 328,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetChristmasChargeReward",
+          "size": 308,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestWeeklyRechargeReward",
+          "size": 308,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestChangePlant",
+          "size": 304,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPCompensationNoticeInfos",
+          "size": 296,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetStateThirdPartPlatforms",
+          "size": 292,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestDailySignWithTW",
+          "size": 292,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestPlantTrial",
+          "size": 276,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestChargeRewardID",
+          "size": 268,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPUpgradeCancel",
+          "size": 264,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestUserHeadshot",
+          "size": 264,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestCollectionEquip",
+          "size": 252,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ShowPvpDialog",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPChangeEnemy",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestArtifactEquip",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetSpringBuyPlant",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestBeginPVPUpgrade",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::GetNetworkCacheQueue",
+          "size": 232,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestDangerRoomBoostEnd",
+          "size": 220,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestSecretAreaReward",
+          "size": 220,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestLanternRiddlesCompelete",
+          "size": 216,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestCompletePVPUpgrade",
+          "size": 216,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestBossChallengeReward",
+          "size": 212,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestTransferThirdPartPlatforms",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPTrainingSell",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestStaticConfig",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPTrainingFinishGems",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetLimitLottery",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetUnlockWorldCupTeam",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestPlatformGift",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestRankListEffect",
+          "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestSummeryLottery",
+          "size": 184,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestAchievementReward",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPTrainingZombie",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestSubPvpCoin",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onSendPVP_Ping",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetRiftShopData",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetZMatchShopData",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestCodeReward",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPvPUpgradeCompleteGem",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestBillingPoint",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestBuyLimitLotteryCrystal",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestBuyLimitLotteryCupShop",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestConsumeAndReceive",
+          "size": 172,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestBossChallengeLevelEnd",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPPlantInfos",
+          "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnError",
+          "size": 164,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestBuyItem",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetNewPVPShopData",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetPVZ1ModeShopData",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestChallengeReward",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestWechatReward",
+          "size": 160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::SaveCache",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestActivityLevelEnd",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::SubtractGems",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestBoardInfoGet",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestBoardInfoList",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPlaybackUpload",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestMiniGameRewardEnd",
+          "size": 132,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestDisplayID",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestBuyPvpShopObject",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestOtherZbList",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPvpShop",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestPVPRank",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestRankList",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestBindingThirdPartPlatforms",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetbuyWorldCupTicket",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestUnboundThirdPartPlatforms",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::S2C_PVP_BigMapPVPInfo",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::S2C_PVP_BigMapPVPInfo",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::S2C_PVP_BigMapInfo",
+          "size": 84,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestClearworldcupdata",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestSummerPlantComposit",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ShowMainMenu",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequest2015NewTearChargeStat",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ShowLogoScreen",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::GetPlayUserId",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestComposePlant",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestLevelUpByPlantBook",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestfirstChargeSucceed",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::getSessionKey",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::getUserID",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::IsLogined",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::flushCache",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::isSessionKeyValid",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::GetMsgID",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::SetICloudState",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::GetICloudState",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestAccessoryStatBuy",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestCalcExploreReward",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestChargeReward",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestCheckRebate",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestChristmasLottery",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestChristmasProtect",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestConsumeLeafs",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestDoGacha",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestEndlessConsumeLife",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestEndlessUpdateScore",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGet2015NewTearChargeReward",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetAccessoryStat",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetEndlessRankAndLife",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetEndlessRankAndLife",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetExplorePlantStatus",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetExploreTeamStatus",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetGoldenEggStat",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetPinataReward",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGetProfile",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGoldcanGacha",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestGoldenEggOpen",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestOpenExploreSurpriseBox",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestPendantGacha",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestProfileList",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestProfileMd5",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestRebate",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestRecoverExplorePlant",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestSingleProfile",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestStartExplore",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestStopExplore",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestUpLoadProfile",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestUploadFirstTime",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequestUploadProfile",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::ICloudRequstLogin",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::IFlushCacheRequestUpdateAddFreeGem",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::IFlushCacheRequestUpdateDateDressFragments",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::IFlushCacheRequestUpdateDatePendantInfo",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::IFlushCacheRequestUpdateDatePlantFragments",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::IRequestFlushCacheObjects",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestADSReward",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::removeRequestMsg",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::~S2C_PVP_BigMapInfo",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "S2C_PVP_BigMapInfo::~S2C_PVP_BigMapInfo",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::~S2C_PVP_BigMapPVPInfo",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "S2C_PVP_BigMapPVPInfo::~S2C_PVP_BigMapPVPInfo",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::HeartBeat",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::HttpReqFriends",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::InitAfterLogin",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::InitPurchaseOrder",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestGetPinataReward",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnICloudRequestNoviceSevenDaysTrigger",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestDinosaurDanger",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::OnRequestLuaGeneral",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestDangerRoomRank",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestFrindGiftList",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestGetRedPackLeaderBoard",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestLostPurchaseOrder",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestRanks",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestSendTLog",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestStartTimeLevelCD",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestTimeLevelList",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestUUIDBind",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestUUIDCheck",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestUUIDInit",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestUUIDLogin",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestUpdateChargeInfo",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::RequestUpdateLevelScore",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::SendGift",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::UploadDangerRoomRank",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "INetworkMsgProcess::onRequestADSReward",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Network/gameNetWork/ServerTime.cpp",
