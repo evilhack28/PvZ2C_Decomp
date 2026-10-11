@@ -94,3 +94,12 @@ HesitationBuffer::HesitationBuffer()
 TodHesitationBracket::TodHesitationBracket(const char* theFormat, ...)
 {
 }
+
+TodHesitationBracket::~TodHesitationBracket()
+{
+	EndBracket();
+}
+
+void TodHesitationBracket::EndBracket()
+{
+}

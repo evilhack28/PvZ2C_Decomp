@@ -30,3 +30,14 @@ void ZombieArtifactAcidBasic::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ZombieArtifactAcidBasic);
 }
+
+void ZombieArtifactAcidBasic::onTakeFatalDamage(const DamageInfo& i_lastDamageReceived)
+{
+	ZombieBasic::onTakeFatalDamage(i_lastDamageReceived);
+	gMessageRouter->Post(&Message::NotifyAcidZombieDie, this);
+}
+
+DamageTypeFlags ZombieArtifactAcidBasic::getEatingDamageType() const
+{
+	return DAMAGE_ARTIFACT_ACID | DAMAGE_POISON;
+}

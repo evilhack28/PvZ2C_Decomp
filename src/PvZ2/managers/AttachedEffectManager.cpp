@@ -48,7 +48,7 @@ AttachedGameObjectNode& AttachedEffectManager::add(const std::string& i_name)
 {
 	AttachedEffect effect(i_name);
 	m_nodes.push_back(effect);
-	return m_nodes.back();
+	return m_nodes[m_nodes.size() - 1];
 }
 
 void AttachedEffectManager::Clear()
@@ -66,17 +66,12 @@ void AttachedEffectManager::remove(int i_index)
 
 int AttachedEffectManager::indexOf(const std::string& i_name) const
 {
-	size_t i = 0;
-	int idx;
-	for (;; idx = i)
+	for (int i = 0; i < m_nodes.size(); i++)
 	{
-		if (i >= m_nodes.size())
-			return -1;
-		const AttachedEffect& n = m_nodes[i];
-		i++;
-		if (n.GetName() == i_name)
-			return idx;
+		if (m_nodes[i].GetName() == i_name)
+			return i;
 	}
+	return -1;
 }
 
 void AttachedEffectManager::update(float i_dt)

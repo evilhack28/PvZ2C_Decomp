@@ -8,6 +8,8 @@
 #include "SexyAppFramework/Common.h"
 
 #include "JoustOrAdventureScreenTopHUD.h"
+#include "GameEventMgr.h"
+#include "AdaptorJoustOrAdventureScreen.h"
 
 JoustOrAdventureScreenTopHUD::JoustOrAdventureScreenTopHUD()
 {
@@ -34,4 +36,9 @@ void JoustOrAdventureScreenTopHUD::StaticClassInit()
 void JoustOrAdventureScreenTopHUD::onShowingFUEChanged(bool i_showingFUE)
 {
 	m_showingFUE = i_showingFUE;
+}
+
+void JoustOrAdventureScreenTopHUD::Open()
+{
+	gMessageRouter->Subscribe(&Message::JoustShowingFUEInAdventureScreen, Sexy::MakeDelegate(*this, &JoustOrAdventureScreenTopHUD::onShowingFUEChanged));
 }

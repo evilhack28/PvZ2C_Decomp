@@ -8,6 +8,7 @@
 #include "SexyAppFramework/Common.h"
 
 #include "HotUIComponent.h"
+#include "HotUIPropertyAnimator.h"
 
 HotUIComponent::HotUIComponent()
 {
@@ -59,3 +60,19 @@ const std::vector<HotUIWidgetPtr>& HotUIComponent::getTargets() const
 {
 	return m_targets;
 }
+
+/////////////// Logic ///////////////
+
+void HotUIComponent::InitializeComponent(HotUIComponentPtr i_thisPtr, HotUIComponentPropertiesPtr i_props)
+{
+	m_thisPtr = i_thisPtr;
+	m_propertySheetPtr = i_props;
+	onInitializeComponent();
+}
+
+void HotUIComponent::AddTarget(HotUIWidgetPtr i_target)
+{
+	m_targets.push_back(i_target);
+}
+
+template const HotUIPropertyAnimatorProperties* HotUIComponent::getProps<HotUIPropertyAnimatorProperties>() const;

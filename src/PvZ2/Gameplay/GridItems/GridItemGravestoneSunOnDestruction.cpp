@@ -8,6 +8,8 @@
 #include "SexyAppFramework/Common.h"
 
 #include "GridItemGravestoneSunOnDestruction.h"
+#include "LawnApp.h"
+#include "Board.h"
 
 GridItemGravestoneSunOnDestruction::GridItemGravestoneSunOnDestruction()
 {
@@ -48,4 +50,12 @@ void GridItemGravestoneSunOnDestructionPropertySheet::StaticClassInit()
 
 		REFLECTION_CLASSBUILDER_FIELD(int32, AmountToSpawn);
 	REFLECTION_CLASSBUILDER_END(GridItemGravestoneSunOnDestructionPropertySheet);
+}
+
+/////////////// Logic ///////////////
+
+void GridItemGravestoneSunOnDestruction::onKilled()
+{
+	const GridItemGravestoneSunOnDestructionPropertySheet* props = GetProps<GridItemGravestoneSunOnDestructionPropertySheet>();
+	gLawnApp->m_board->FanOutSun(GetPosition(), props->AmountToSpawn, false, false, false, false, false);
 }

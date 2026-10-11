@@ -11,7 +11,7 @@
 
 CardEffect::CardEffect()
 {
-	mEffectState = (decltype(mEffectState))0;
+	mEffectState = CES_Invalid;
 }
 
 CardEffect::~CardEffect()
@@ -30,4 +30,28 @@ void CardEffect::StaticClassInit()
 		REFLECTION_CLASSBUILDER_ANCESTOR(GameObject);
 
 	REFLECTION_CLASSBUILDER_END(CardEffect);
+}
+
+/////////////// Logic ///////////////
+
+void CardEffect::InitializaEffect(CardEffectPropsPtr i_effectProps, RtWeakPtr<CardObject> i_cardObject)
+{
+	mEffectProps = i_effectProps;
+	mCardObject = i_cardObject;
+	mEffectState = CES_Initializa;
+}
+
+void CardEffect::DoEffect()
+{
+	mEffectState = CES_Starting;
+}
+
+void CardEffect::Interrupt()
+{
+	mEffectState = CES_Finish;
+}
+
+CardEffectState CardEffect::GetEffctState()
+{
+	return mEffectState;
 }

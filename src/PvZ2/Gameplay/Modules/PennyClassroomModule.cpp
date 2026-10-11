@@ -58,3 +58,17 @@ void PennyClassroomModuleProperties::StaticClassInit()
 void PennyClassroomModule::registerForEvents()
 {
 }
+
+/////////////// Logic ///////////////
+
+void PennyClassroomModuleProperties::GatherResourceRequirements(std::set<std::string>& io_resourceGroupNames) const
+{
+	LevelModuleProperties::GatherResourceRequirements(io_resourceGroupNames);
+}
+
+int PennyClassroomModuleProperties::GetPlantLevel(std::string name)
+{
+	if (PlantMap.find(name) != PlantMap.end())
+		return PlantMap[name];
+	return 1;
+}

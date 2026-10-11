@@ -8,6 +8,8 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CollectablePlantUpgrade.h"
+#include "GameEventMgr.h"
+#include "Board.h"
 
 CollectablePlantUpgrade::CollectablePlantUpgrade()
 {
@@ -53,4 +55,23 @@ void CollectablePlantUpgradeType::StaticClassInit()
 		REFLECTION_CLASSBUILDER_ANCESTOR(CollectableType);
 
 	REFLECTION_CLASSBUILDER_END(CollectablePlantUpgradeType);
+}
+
+/////////////// Logic ///////////////
+
+void CollectablePlantUpgrade::SetSeedName(const std::string& i_seedName)
+{
+	m_seedName = i_seedName;
+}
+
+std::string CollectablePlantUpgrade::GetSeedName()
+{
+	return m_seedName;
+}
+
+void CollectablePlantUpgrade::onFinishMotion()
+{
+	Collectable::onFinishMotion();
+	if (getState() == CS_Collecting)
+		gMessageRouter->Post(&Message::TakePlantWeapon, m_seedName);
 }

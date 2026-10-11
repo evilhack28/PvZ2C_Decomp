@@ -26,3 +26,10 @@ void ComponentProjectileConverterProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(std::vector<ConvertProjectileNameNode>, ConvertProjectiles);
 	REFLECTION_CLASSBUILDER_END(ComponentProjectileConverterProps);
 }
+
+ComponentProjectileConverterProps& ComponentProjectileConverterProps::operator=(const ComponentProjectileConverterProps& i_other)
+{
+	PropertySheetBase::operator=(i_other);
+	ConvertProjectiles = i_other.ConvertProjectiles;
+	return *this;
+}

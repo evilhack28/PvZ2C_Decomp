@@ -46,3 +46,10 @@ void CollectablePresentType::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(CollectablePresentType);
 }
+
+/////////////// Logic ///////////////
+
+bool CollectablePresent::GetIsShiny() const
+{
+	return GetType()->CastChecked<CollectablePresentType>()->IsShiny;
+}

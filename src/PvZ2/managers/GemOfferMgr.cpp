@@ -73,11 +73,12 @@ bool GemOfferMgr::NeedShowHint()
 			{
 				result = false;
 			}
-			return result;
+			goto done;
 		}
 	}
 	result = false;
 	SetActivatedTips(false);
+done:
 	return result;
 }
 
@@ -107,7 +108,7 @@ void GemOfferMgr::RefreshActivity()
 
 void GemOfferMgr::SyncActivityData(const GemOfferInfo& i_data)
 {
-	for (size_t i = 0; i < i_data.hintTimes.size(); i++)
+	for (int i = 0; i < i_data.hintTimes.size(); i++)
 	{
 		int hintTime = i_data.hintTimes[i];
 		m_hintTimes.insert(std::make_pair(hintTime, false));

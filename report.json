@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-11T20:42:10+00:00",
+  "generated": "2026-10-11T22:00:34+00:00",
   "measures": {
     "total_functions": 84655,
-    "matched_functions": 31026,
-    "matched_functions_percent": 36.65,
+    "matched_functions": 31068,
+    "matched_functions_percent": 36.7,
     "total_code": 13042564,
-    "matched_code": 2213276,
-    "matched_code_percent": 16.97,
-    "fuzzy_match_percent": 18.09,
+    "matched_code": 2216744,
+    "matched_code_percent": 17.0,
+    "fuzzy_match_percent": 18.1,
     "started_units": 2238,
     "total_units": 2771,
     "started_code": 10639908,
-    "started_matched_code": 2213276,
-    "started_percent": 20.8,
+    "started_matched_code": 2216744,
+    "started_percent": 20.83,
     "unplaced_functions": 58654,
     "unplaced_code": 8567392,
     "compile_failures": 0
@@ -6341,52 +6341,52 @@
     {
       "name": "src/PvZ2/Core/TodLib/TodDebug.cpp",
       "total_code": 268,
-      "matched_code": 256,
-      "matched_code_percent": 95.52,
+      "matched_code": 268,
+      "matched_code_percent": 100.0,
       "total_functions": 7,
-      "matched_functions": 4,
-      "matched_functions_percent": 57.14,
-      "fuzzy_match_percent": 95.52,
+      "matched_functions": 7,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
+        {
+          "name": "TodHesitationBracket::TodHesitationBracket",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "TodHesitationBracket::TodHesitationBracket",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HesitationBuffer::HesitationBuffer",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HesitationBuffer::HesitationBuffer",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
         {
           "name": "TodHesitationBracket::EndBracket",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TodHesitationBracket::~TodHesitationBracket",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TodHesitationBracket::~TodHesitationBracket",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TodHesitationBracket::TodHesitationBracket",
-          "size": 68,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "TodHesitationBracket::TodHesitationBracket",
-          "size": 68,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "HesitationBuffer::HesitationBuffer",
-          "size": 60,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
-        },
-        {
-          "name": "HesitationBuffer::HesitationBuffer",
-          "size": 60,
           "matched": true,
           "fuzzy_match_percent": 100.0
         }
@@ -30209,31 +30209,13 @@
     {
       "name": "src/PvZ2/Gameplay/Collectables/CollectablePlantUpgrade.cpp",
       "total_code": 1380,
-      "matched_code": 1176,
-      "matched_code_percent": 85.22,
+      "matched_code": 1380,
+      "matched_code_percent": 100.0,
       "total_functions": 23,
-      "matched_functions": 20,
-      "matched_functions_percent": 86.96,
-      "fuzzy_match_percent": 85.22,
+      "matched_functions": 23,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "CollectablePlantUpgrade::onFinishMotion",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CollectablePlantUpgrade::GetSeedName",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CollectablePlantUpgrade::SetSeedName",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "CollectablePlantUpgrade::StaticClassInit",
           "size": 180,
@@ -30243,6 +30225,12 @@
         {
           "name": "CollectablePlantUpgradeType::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CollectablePlantUpgrade::onFinishMotion",
+          "size": 156,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -30307,6 +30295,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "CollectablePlantUpgrade::GetSeedName",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "CollectablePlantUpgrade::~CollectablePlantUpgrade",
           "size": 36,
           "matched": true,
@@ -30332,6 +30326,12 @@
         },
         {
           "name": "CollectablePlantUpgrade::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CollectablePlantUpgrade::SetSeedName",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -30509,19 +30509,13 @@
     {
       "name": "src/PvZ2/Gameplay/Collectables/CollectablePresent.cpp",
       "total_code": 1212,
-      "matched_code": 1104,
-      "matched_code_percent": 91.09,
+      "matched_code": 1212,
+      "matched_code_percent": 100.0,
       "total_functions": 21,
-      "matched_functions": 20,
-      "matched_functions_percent": 95.24,
-      "fuzzy_match_percent": 91.09,
+      "matched_functions": 21,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "CollectablePresent::GetIsShiny",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "CollectablePresent::StaticClassInit",
           "size": 180,
@@ -30543,6 +30537,12 @@
         {
           "name": "CollectablePresentType::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CollectablePresent::GetIsShiny",
+          "size": 108,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -30819,19 +30819,13 @@
     {
       "name": "src/PvZ2/Gameplay/Collectables/CollectableSpacetimeEnergy.cpp",
       "total_code": 1148,
-      "matched_code": 1112,
-      "matched_code_percent": 96.86,
+      "matched_code": 1148,
+      "matched_code_percent": 100.0,
       "total_functions": 22,
-      "matched_functions": 21,
-      "matched_functions_percent": 95.45,
-      "fuzzy_match_percent": 96.86,
+      "matched_functions": 22,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "CollectableSpacetimeEnergy::onFinishMotion",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "CollectableSpacetimeEnergy::StaticClassInit",
           "size": 180,
@@ -30889,6 +30883,12 @@
         {
           "name": "CollectableSpacetimeEnergyType::StaticNew",
           "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CollectableSpacetimeEnergy::onFinishMotion",
+          "size": 36,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -44119,19 +44119,13 @@
     {
       "name": "src/PvZ2/Gameplay/Components/ComponentProjectileConverter.cpp",
       "total_code": 772,
-      "matched_code": 720,
-      "matched_code_percent": 93.26,
+      "matched_code": 772,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 93.26,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "ComponentProjectileConverterProps::operator=",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "ComponentProjectileConverterProps::StaticClassInit",
           "size": 280,
@@ -44153,6 +44147,12 @@
         {
           "name": "ComponentProjectileConverterProps::ComponentProjectileConverterProps",
           "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ComponentProjectileConverterProps::operator=",
+          "size": 52,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -51323,19 +51323,13 @@
     {
       "name": "src/PvZ2/Gameplay/Effects/Effect_GroundEffectStun.cpp",
       "total_code": 612,
-      "matched_code": 548,
-      "matched_code_percent": 89.54,
+      "matched_code": 612,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 89.54,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "Effect_GroundEffectStun::onUpdate",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "Effect_GroundEffectStun::StaticClassInit",
           "size": 180,
@@ -51345,6 +51339,12 @@
         {
           "name": "Effect_GroundEffectStun::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Effect_GroundEffectStun::onUpdate",
+          "size": 64,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -52271,19 +52271,13 @@
     {
       "name": "src/PvZ2/Gameplay/Effects/Effect_MusicalBoom.cpp",
       "total_code": 624,
-      "matched_code": 532,
-      "matched_code_percent": 85.26,
+      "matched_code": 624,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 85.26,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "Effect_MusicalBoom::onUpdate",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "Effect_MusicalBoom::StaticClassInit",
           "size": 180,
@@ -52293,6 +52287,12 @@
         {
           "name": "Effect_MusicalBoom::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Effect_MusicalBoom::onUpdate",
+          "size": 92,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -80349,25 +80349,13 @@
     {
       "name": "src/PvZ2/Gameplay/GridItems/GridItemGravestoneCoinOnDestruction.cpp",
       "total_code": 1212,
-      "matched_code": 1104,
-      "matched_code_percent": 91.09,
+      "matched_code": 1212,
+      "matched_code_percent": 100.0,
       "total_functions": 22,
-      "matched_functions": 20,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 91.09,
+      "matched_functions": 22,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "GridItemGravestoneCoinOnDestruction::GatherPlantingRestrictions",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemGravestoneCoinOnDestruction::onKilled",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "GridItemGravestoneCoinOnDestruction::StaticClassInit",
           "size": 180,
@@ -80389,6 +80377,12 @@
         {
           "name": "GridItemGravestoneCoinOnDestructionPropertySheet::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemGravestoneCoinOnDestruction::GatherPlantingRestrictions",
+          "size": 80,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -80437,6 +80431,12 @@
         {
           "name": "GridItemGravestoneCoinOnDestructionPropertySheet::~GridItemGravestoneCoinOnDestructionPropertySheet",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemGravestoneCoinOnDestruction::onKilled",
+          "size": 28,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -80653,19 +80653,13 @@
     {
       "name": "src/PvZ2/Gameplay/GridItems/GridItemGravestoneSunOnDestruction.cpp",
       "total_code": 1192,
-      "matched_code": 1104,
-      "matched_code_percent": 92.62,
+      "matched_code": 1192,
+      "matched_code_percent": 100.0,
       "total_functions": 21,
-      "matched_functions": 20,
-      "matched_functions_percent": 95.24,
-      "fuzzy_match_percent": 92.62,
+      "matched_functions": 21,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "GridItemGravestoneSunOnDestruction::onKilled",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "GridItemGravestoneSunOnDestruction::StaticClassInit",
           "size": 180,
@@ -80687,6 +80681,12 @@
         {
           "name": "GridItemGravestoneSunOnDestructionPropertySheet::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemGravestoneSunOnDestruction::onKilled",
+          "size": 88,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -81503,25 +81503,13 @@
     {
       "name": "src/PvZ2/Gameplay/GridItems/GridItemHeavyShield.cpp",
       "total_code": 1292,
-      "matched_code": 1112,
-      "matched_code_percent": 86.07,
+      "matched_code": 1292,
+      "matched_code_percent": 100.0,
       "total_functions": 25,
-      "matched_functions": 23,
-      "matched_functions_percent": 92.0,
-      "fuzzy_match_percent": 86.07,
+      "matched_functions": 25,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "GridItemHeavyShield::CalcDamageState",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemHeavyShield::onGridItemInitialize",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "GridItemHeavyShield::StaticClassInit",
           "size": 180,
@@ -81531,6 +81519,12 @@
         {
           "name": "GridItemHeavyShieldProps::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemHeavyShield::CalcDamageState",
+          "size": 136,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -81572,6 +81566,12 @@
         },
         {
           "name": "GridItemHeavyShield::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemHeavyShield::onGridItemInitialize",
           "size": 44,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -86927,19 +86927,13 @@
     {
       "name": "src/PvZ2/Gameplay/GridItems/GridItemMoltenPool.cpp",
       "total_code": 1192,
-      "matched_code": 1096,
-      "matched_code_percent": 91.95,
+      "matched_code": 1192,
+      "matched_code_percent": 100.0,
       "total_functions": 21,
-      "matched_functions": 20,
-      "matched_functions_percent": 95.24,
-      "fuzzy_match_percent": 91.95,
+      "matched_functions": 21,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "GridItemMoltenPool::onCauseDamage",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "GridItemMoltenPool::StaticClassInit",
           "size": 180,
@@ -86961,6 +86955,12 @@
         {
           "name": "GridItemMoltenPoolProps::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "GridItemMoltenPool::onCauseDamage",
+          "size": 96,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -114559,25 +114559,13 @@
     {
       "name": "src/PvZ2/Gameplay/Modules/PennyClassroomModule.cpp",
       "total_code": 1292,
-      "matched_code": 1144,
-      "matched_code_percent": 88.54,
+      "matched_code": 1292,
+      "matched_code_percent": 100.0,
       "total_functions": 24,
-      "matched_functions": 22,
-      "matched_functions_percent": 91.67,
-      "fuzzy_match_percent": 88.54,
+      "matched_functions": 24,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "PennyClassroomModuleProperties::GetPlantLevel",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PennyClassroomModuleProperties::GatherResourceRequirements",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "PennyClassroomModule::StaticClassInit",
           "size": 180,
@@ -114587,6 +114575,12 @@
         {
           "name": "PennyClassroomModuleProperties::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PennyClassroomModuleProperties::GetPlantLevel",
+          "size": 144,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -114694,6 +114688,12 @@
         },
         {
           "name": "PennyClassroomModule::registerForEvents",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PennyClassroomModuleProperties::GatherResourceRequirements",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -152793,19 +152793,13 @@
     {
       "name": "src/PvZ2/Gameplay/Plants/Jalapeno/Plant_Jalapeno.cpp",
       "total_code": 3640,
-      "matched_code": 3536,
-      "matched_code_percent": 97.14,
+      "matched_code": 3640,
+      "matched_code_percent": 100.0,
       "total_functions": 22,
-      "matched_functions": 21,
-      "matched_functions_percent": 95.45,
-      "fuzzy_match_percent": 98.68,
+      "matched_functions": 22,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "PlantJalapeno::stopSpecialEffect",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 53.85
-        },
         {
           "name": "PlantJalapeno::UpdateActions",
           "size": 1288,
@@ -152833,6 +152827,12 @@
         {
           "name": "PlantJalapeno::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PlantJalapeno::stopSpecialEffect",
+          "size": 104,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -217489,25 +217489,13 @@
     {
       "name": "src/PvZ2/Gameplay/Zombies/ArtifactAcidBasic/ZombieArtifactAcidBasic.cpp",
       "total_code": 624,
-      "matched_code": 564,
-      "matched_code_percent": 90.38,
+      "matched_code": 624,
+      "matched_code_percent": 100.0,
       "total_functions": 12,
-      "matched_functions": 10,
-      "matched_functions_percent": 83.33,
-      "fuzzy_match_percent": 90.38,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "ZombieArtifactAcidBasic::onTakeFatalDamage",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombieArtifactAcidBasic::getEatingDamageType",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "ZombieArtifactAcidBasic::StaticClassInit",
           "size": 180,
@@ -217533,6 +217521,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "ZombieArtifactAcidBasic::onTakeFatalDamage",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "ZombieArtifactAcidBasic::StaticNew",
           "size": 44,
           "matched": true,
@@ -217553,6 +217547,12 @@
         {
           "name": "ZombieArtifactAcidBasic::~ZombieArtifactAcidBasic",
           "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ZombieArtifactAcidBasic::getEatingDamageType",
+          "size": 12,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -287969,25 +287969,13 @@
     {
       "name": "src/PvZ2/Managers/AttachedEffectManager.cpp",
       "total_code": 1936,
-      "matched_code": 1648,
-      "matched_code_percent": 85.12,
+      "matched_code": 1936,
+      "matched_code_percent": 100.0,
       "total_functions": 18,
-      "matched_functions": 16,
-      "matched_functions_percent": 88.89,
-      "fuzzy_match_percent": 97.73,
+      "matched_functions": 18,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "AttachedEffectManager::indexOf",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 97.3
-        },
-        {
-          "name": "AttachedEffectManager::add",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 71.43
-        },
         {
           "name": "AttachedEffectManager::UpdateDynamicScaleForAllEffects",
           "size": 336,
@@ -288013,8 +288001,20 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "AttachedEffectManager::indexOf",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "AttachedEffectManager::remove",
           "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "AttachedEffectManager::add",
+          "size": 140,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -289827,28 +289827,28 @@
     {
       "name": "src/PvZ2/Managers/GemOfferMgr.cpp",
       "total_code": 1816,
-      "matched_code": 1340,
-      "matched_code_percent": 73.79,
+      "matched_code": 1816,
+      "matched_code_percent": 100.0,
       "total_functions": 15,
-      "matched_functions": 13,
-      "matched_functions_percent": 86.67,
-      "fuzzy_match_percent": 91.65,
+      "matched_functions": 15,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
+        {
+          "name": "GemOfferMgr::InitTestData",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
         {
           "name": "GemOfferMgr::NeedShowHint",
           "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 89.23
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GemOfferMgr::SyncActivityData",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 43.64
-        },
-        {
-          "name": "GemOfferMgr::InitTestData",
-          "size": 364,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -290409,18 +290409,18 @@
     {
       "name": "src/PvZ2/Managers/PinataManager.cpp",
       "total_code": 3444,
-      "matched_code": 3016,
-      "matched_code_percent": 87.57,
+      "matched_code": 3444,
+      "matched_code_percent": 100.0,
       "total_functions": 21,
-      "matched_functions": 20,
-      "matched_functions_percent": 95.24,
-      "fuzzy_match_percent": 99.19,
+      "matched_functions": 21,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PinataManager::PopPinata",
           "size": 428,
-          "matched": false,
-          "fuzzy_match_percent": 93.46
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PinataManager::SetupPinatas",
@@ -291291,21 +291291,21 @@
     {
       "name": "src/PvZ2/Managers/WorldCupMgr.cpp",
       "total_code": 1656,
-      "matched_code": 1404,
-      "matched_code_percent": 84.78,
+      "matched_code": 1656,
+      "matched_code_percent": 100.0,
       "total_functions": 15,
-      "matched_functions": 14,
-      "matched_functions_percent": 93.33,
-      "fuzzy_match_percent": 97.1,
+      "matched_functions": 15,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
-          "name": "WorldCupMgr::IsPlantDisabled",
+          "name": "WorldCupMgr::InitTestData",
           "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 80.95
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
-          "name": "WorldCupMgr::InitTestData",
+          "name": "WorldCupMgr::IsPlantDisabled",
           "size": 252,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -297855,37 +297855,13 @@
     {
       "name": "src/PvZ2/Modes/CardEffect.cpp",
       "total_code": 764,
-      "matched_code": 668,
-      "matched_code_percent": 87.43,
+      "matched_code": 764,
+      "matched_code_percent": 100.0,
       "total_functions": 14,
-      "matched_functions": 10,
-      "matched_functions_percent": 71.43,
-      "fuzzy_match_percent": 87.43,
+      "matched_functions": 14,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "CardEffect::InitializaEffect",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CardEffect::DoEffect",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CardEffect::Interrupt",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "CardEffect::GetEffctState",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "CardEffect::StaticClassInit",
           "size": 180,
@@ -297911,6 +297887,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "CardEffect::InitializaEffect",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "CardEffect::~CardEffect",
           "size": 60,
           "matched": true,
@@ -297931,6 +297913,24 @@
         {
           "name": "CardEffect::~CardEffect",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CardEffect::DoEffect",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CardEffect::Interrupt",
+          "size": 12,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CardEffect::GetEffctState",
+          "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -299343,19 +299343,13 @@
     {
       "name": "src/PvZ2/Modes/CardRule.cpp",
       "total_code": 712,
-      "matched_code": 660,
-      "matched_code_percent": 92.7,
+      "matched_code": 712,
+      "matched_code_percent": 100.0,
       "total_functions": 12,
-      "matched_functions": 11,
-      "matched_functions_percent": 91.67,
-      "fuzzy_match_percent": 92.7,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "CardRule::InitializaRule",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "CardRule::StaticClassInit",
           "size": 180,
@@ -299389,6 +299383,12 @@
         {
           "name": "CardRule::~CardRule",
           "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CardRule::InitializaRule",
+          "size": 52,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -315751,19 +315751,13 @@
     {
       "name": "src/PvZ2/Modes/PVP/JoustOrAdventureScreenTopHUD.cpp",
       "total_code": 664,
-      "matched_code": 568,
-      "matched_code_percent": 85.54,
+      "matched_code": 664,
+      "matched_code_percent": 100.0,
       "total_functions": 13,
-      "matched_functions": 12,
-      "matched_functions_percent": 92.31,
-      "fuzzy_match_percent": 85.54,
+      "matched_functions": 13,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "JoustOrAdventureScreenTopHUD::Open",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "JoustOrAdventureScreenTopHUD::StaticClassInit",
           "size": 180,
@@ -315773,6 +315767,12 @@
         {
           "name": "JoustOrAdventureScreenTopHUD::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "JoustOrAdventureScreenTopHUD::Open",
+          "size": 96,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -315925,19 +315925,13 @@
     {
       "name": "src/PvZ2/Modes/PVP/JoustPropertySheet.cpp",
       "total_code": 1184,
-      "matched_code": 1032,
-      "matched_code_percent": 87.16,
+      "matched_code": 1184,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 87.16,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "JoustPropertySheet::GetProperties",
-          "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "JoustPropertySheet::StaticClassInit",
           "size": 280,
@@ -315953,6 +315947,12 @@
         {
           "name": "JoustPropertySheet::JoustPropertySheet",
           "size": 168,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "JoustPropertySheet::GetProperties",
+          "size": 152,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -362099,43 +362099,13 @@
     {
       "name": "src/PvZ2/UI/HotUI/HotUIComponent.cpp",
       "total_code": 1544,
-      "matched_code": 1380,
-      "matched_code_percent": 89.38,
+      "matched_code": 1544,
+      "matched_code_percent": 100.0,
       "total_functions": 29,
-      "matched_functions": 24,
-      "matched_functions_percent": 82.76,
-      "fuzzy_match_percent": 89.38,
+      "matched_functions": 29,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "HotUIComponent::InitializeComponent",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "HotUIComponent::GetPtr",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "HotUIComponent::getProps",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "HotUIComponent::AddTarget",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "HotUIComponent::getProps",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "HotUIComponent::StaticClassInit",
           "size": 180,
@@ -362157,6 +362127,12 @@
         {
           "name": "HotUIComponentProperties::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HotUIComponent::InitializeComponent",
+          "size": 88,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -362221,6 +362197,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "HotUIComponent::GetPtr",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "HotUIComponent::~HotUIComponent",
           "size": 36,
           "matched": true,
@@ -362233,7 +362215,25 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "HotUIComponent::getProps",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HotUIComponent::AddTarget",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "HotUIComponent::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HotUIComponent::getProps",
           "size": 8,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -366103,25 +366103,13 @@
     {
       "name": "src/PvZ2/UI/HotUI/HotUIWidgetValue.cpp",
       "total_code": 1084,
-      "matched_code": 972,
-      "matched_code_percent": 89.67,
+      "matched_code": 1084,
+      "matched_code_percent": 100.0,
       "total_functions": 21,
-      "matched_functions": 19,
-      "matched_functions_percent": 90.48,
-      "fuzzy_match_percent": 89.67,
+      "matched_functions": 21,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
-        {
-          "name": "HotUIWidgetValue::HotUIWidgetValue",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "HotUIWidgetValue::HotUIWidgetValue",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "HotUIWidgetValue::StaticClassInit",
           "size": 180,
@@ -366143,6 +366131,18 @@
         {
           "name": "HotUIWidgetValueProperties::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HotUIWidgetValue::HotUIWidgetValue",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "HotUIWidgetValue::HotUIWidgetValue",
+          "size": 56,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },

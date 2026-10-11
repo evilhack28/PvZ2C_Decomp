@@ -8,6 +8,7 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Plant_MeteorFlower.h"
+#include "ZombieExplorer.h"
 
 GridItemMoltenPool::GridItemMoltenPool()
 {
@@ -51,4 +52,16 @@ void GridItemMoltenPoolProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_ANCESTOR(GridItemLavaProps);
 
 	REFLECTION_CLASSBUILDER_END(GridItemMoltenPoolProps);
+}
+
+/////////////// Logic ///////////////
+
+void GridItemMoltenPool::onCauseDamage(Zombie* i_zombie)
+{
+	if (i_zombie != nullptr && i_zombie->IsA<ZombieExplorer>())
+	{
+		ZombieExplorer* explorer = i_zombie->Cast<ZombieExplorer>();
+		if (explorer != nullptr && !explorer->IsTorchBurning())
+			explorer->setIsTorchBurning(true);
+	}
 }

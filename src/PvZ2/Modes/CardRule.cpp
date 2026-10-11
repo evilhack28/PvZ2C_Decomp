@@ -30,3 +30,9 @@ void CardRule::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(CardRule);
 }
+
+void CardRule::InitializaRule(CardRulePropsPtr i_ruleProps, RtWeakPtr<CardObject> i_cardObject)
+{
+	mRuleProps = i_ruleProps;
+	mCardObject = i_cardObject;
+}

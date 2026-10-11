@@ -8,6 +8,7 @@
 #include "SexyAppFramework/Common.h"
 
 #include "JoustPropertySheet.h"
+#include "PVZDB.h"
 
 JoustPropertySheet::~JoustPropertySheet()
 {
@@ -33,4 +34,11 @@ void JoustPropertySheet::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(std::vector<std::vector<PredefinedLoadoutEntry>>, PredefinedLoadouts);
 		REFLECTION_CLASSBUILDER_FIELD(JoustHowToPlayScreenData, HowToPlayData);
 	REFLECTION_CLASSBUILDER_END(JoustPropertySheet);
+}
+
+/////////////// Logic ///////////////
+
+JoustPropertySheet* JoustPropertySheet::GetProperties()
+{
+	return (JoustPropertySheet*)PVZDB::GetInstance().FindObjectByAlias<JoustPropertySheet>(PVZDB::TABLE_JOUST_CONFIG, RtName(L"JoustConfig")).GetObject();
 }

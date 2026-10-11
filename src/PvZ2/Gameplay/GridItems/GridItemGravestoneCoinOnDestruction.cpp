@@ -8,6 +8,7 @@
 #include "SexyAppFramework/Common.h"
 
 #include "GridItemGravestoneSunOnDestruction.h"
+#include "GameEventMgr.h"
 
 GridItemGravestoneCoinOnDestruction::GridItemGravestoneCoinOnDestruction()
 {
@@ -48,4 +49,16 @@ void GridItemGravestoneCoinOnDestructionPropertySheet::StaticClassInit()
 
 		REFLECTION_CLASSBUILDER_FIELD(int32, AmountToSpawn);
 	REFLECTION_CLASSBUILDER_END(GridItemGravestoneCoinOnDestructionPropertySheet);
+}
+
+/////////////// Logic ///////////////
+
+void GridItemGravestoneCoinOnDestruction::GatherPlantingRestrictions(const PlantType* i_plantType, std::vector<PlantingReason>* io_plantingReasons) const
+{
+	io_plantingReasons->push_back(PLANTING_NOT_ON_PIGBANK);
+}
+
+void GridItemGravestoneCoinOnDestruction::onKilled()
+{
+	gMessageRouter->Post(&Message::OnGridItemGravestoneCoinOnDestructionKilled, this);
 }

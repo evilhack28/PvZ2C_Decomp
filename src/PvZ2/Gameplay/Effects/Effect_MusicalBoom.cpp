@@ -30,3 +30,9 @@ void Effect_MusicalBoom::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(Effect_MusicalBoom);
 }
+
+void Effect_MusicalBoom::onUpdate()
+{
+	Effect_PopAnim::onUpdate();
+	GetPopAnimRig()->UpdateAnim(TimeMgr::GetInstancePtr()->CinematicT(), TimeMgr::GetInstancePtr()->CinematicDt());
+}

@@ -70,7 +70,7 @@ void PlantJalapeno::onAnimStoppedCallback(const std::string& i_animLabel)
 
 void PlantJalapeno::stopSpecialEffect()
 {
-	for (size_t i = 0; i < m_effectAnims.size(); i++)
+	for (int i = 0; i < m_effectAnims.size(); i++)
 	{
 		m_effectAnims[i]->GetPopAnimRig()->SetDisabled(true);
 	}

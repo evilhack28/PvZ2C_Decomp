@@ -28,3 +28,10 @@ void Effect_GroundEffectStun::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(Effect_GroundEffectStun);
 }
+
+void Effect_GroundEffectStun::onUpdate()
+{
+	Effect_PopAnim::onUpdate();
+	if (PVZ_T() > m_tEndTime)
+		Destroy();
+}

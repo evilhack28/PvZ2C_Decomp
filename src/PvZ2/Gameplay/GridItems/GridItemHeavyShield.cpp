@@ -69,3 +69,18 @@ PlantingReason GridItemHeavyShield::GetCantPlantReason() const
 {
 	return PLANTING_NOT_ON_FOG;
 }
+
+/////////////// Logic ///////////////
+
+void GridItemHeavyShield::CalcDamageState()
+{
+	m_currDamageState = calcDamageState();
+	GetAnimRig()->Cast<GravestoneAnimRig>()->SetDamageState(m_currDamageState, false);
+}
+
+void GridItemHeavyShield::onGridItemInitialize()
+{
+	m_hasPlayDieAnim = false;
+	GridItemGravestone::onGridItemInitialize();
+	setState(GRAVESTONESTATE_IDLE);
+}

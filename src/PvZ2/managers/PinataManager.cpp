@@ -19,10 +19,6 @@ namespace Message
     void BirthdayZReward(int);
 }
 
-void PinataManager::rewardShown(const TheDayRewardItem* i_reward)
-{
-}
-
 void PinataManager::onAnimationFinished(const std::string& i_animLabel)
 {
 }
@@ -261,7 +257,7 @@ const Pinata* PinataManager::PopPinata(const Sexy::Point& location)
                     {
                         const TheDayRewardItem* reward = m_rewards.back();
                         m_rewards.pop_back();
-                        p.Pop(Sexy::MakeDelegate(this, &PinataManager::onExplodeFinished), reward);
+                        p.Pop(Sexy::MakeDelegate(*this, &PinataManager::onExplodeFinished), reward);
                         m_bOpenFinished = false;
                         rewardShown(reward);
                         return &p;

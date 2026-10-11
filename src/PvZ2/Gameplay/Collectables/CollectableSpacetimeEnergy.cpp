@@ -58,3 +58,9 @@ void CollectableSpacetimeEnergy::setEnergyValue(int i_energyValue)
 {
 	EnergyValue = i_energyValue;
 }
+
+void CollectableSpacetimeEnergy::onFinishMotion()
+{
+	Collectable::onFinishMotion();
+	TryToCollect();
+}

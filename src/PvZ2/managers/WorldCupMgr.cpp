@@ -96,8 +96,7 @@ bool WorldCupMgr::IsPlantDisabled(int i_x, int i_y)
 	bool result = locations.empty();
 	if (!result)
 	{
-		size_t n = locations.size();
-		for (size_t i = 0; i != n; i++)
+		for (size_t i = 0; i != locations.size(); i++)
 		{
 			if (locations[i].GridX != i_x)
 				continue;
