@@ -37,9 +37,6 @@ void PVZRemoteControl::Play()
 {
 }
 
-PVZRemoteControl::PVZRemoteControl()
-{
-}
 
 PVZRemoteControl::~PVZRemoteControl()
 {
