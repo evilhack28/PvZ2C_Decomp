@@ -18,6 +18,10 @@ Ultra& Ultra::PlatformSpecificInstance()
 
 /////////////// UltraAndroid ///////////////
 
+UltraAndroid::~UltraAndroid()
+{
+}
+
 void UltraAndroid::Show()
 {
 }
