@@ -159,6 +159,12 @@ EXTRA_OWNED = {
 }
 
 
+# File -> classes it defines one strong method of but belongs to another file.
+NOT_OWNED = {
+    'UltraAndroid.cpp': {'_ZN5Ultra'},
+}
+
+
 def analyse(source, obj, game, game_syms, game_names, manifest_unit=None):
     """-> rows [(state, same, total, bytes, label)]. state: ok / near / todo.
 
@@ -192,6 +198,8 @@ def analyse(source, obj, game, game_syms, game_names, manifest_unit=None):
     scope = {}
     for zn, (o, mine, mine_strong) in by_class.items():
         owned = bool(mine_strong) or zn in EXTRA_OWNED
+        if zn in NOT_OWNED.get(os.path.basename(source), ()):
+            continue
         if not owned:
             continue
         for name in _range(game_names, o.zn) + _range(game_names, o.znk):
@@ -231,11 +239,38 @@ def _game():
     return _GAME
 
 
+_ROWS_DIR = os.path.join(config.BUILD, 'rows-cache')
+_CODE = [os.path.abspath(__file__)] + [os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lib', f)
+                                       for f in ('asmdiff.py', 'pvzelf.py')]
+
+
+def _rows_key(source, obj, manifest_unit):
+    """Hash of everything analyse() reads: the object bytes, its owner rules, the game and the differ itself."""
+    import hashlib
+    h = hashlib.sha1()
+    lib = os.stat(config.TARGET_LIB)
+    h.update(repr((os.path.basename(source), manifest_unit, lib.st_size, lib.st_mtime_ns)).encode())
+    for f in _CODE:
+        h.update(open(f, 'rb').read())
+    h.update(open(obj, 'rb').read() if obj != STUB else b'stub')
+    return h.hexdigest()
+
+
 def _rows_for(job):
-    """analyse() in a worker: the reference ELF cannot be pickled, so rebuild it."""
+    """analyse() in a worker: the reference ELF cannot be pickled, so rebuild it. Reused while its inputs are byte-identical."""
     source, obj, rel, manifest_unit = job
+    path = os.path.join(_ROWS_DIR, _rows_key(source, obj, manifest_unit) + '.json')
+    try:
+        return source, [tuple(r) for r in json.load(open(path, encoding='utf-8'))]
+    except (OSError, ValueError):
+        pass
     game, game_syms, game_names = _game()
-    return source, analyse(source, obj, game, game_syms, game_names, manifest_unit)
+    rows = analyse(source, obj, game, game_syms, game_names, manifest_unit)
+    os.makedirs(_ROWS_DIR, exist_ok=True)
+    tmp = f'{path}.{os.getpid()}'
+    json.dump(rows, open(tmp, 'w', encoding='utf-8'))
+    os.replace(tmp, path)
+    return source, rows
 
 
 def main():

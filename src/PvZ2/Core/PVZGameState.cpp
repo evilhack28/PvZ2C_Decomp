@@ -8,6 +8,11 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PVZGameState.h"
+#include "ReflectionBuilder.h"
+
+/////////////// Lifecycle ///////////////
+
+RT_CLASS_IMPLEMENT_ABSTRACT(PVZGameState);
 
 PVZGameState::PVZGameState()
 {
@@ -15,4 +20,14 @@ PVZGameState::PVZGameState()
 
 PVZGameState::~PVZGameState()
 {
+}
+
+/////////////// Reflection ///////////////
+
+void PVZGameState::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PVZGameState);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+	REFLECTION_CLASSBUILDER_END(PVZGameState);
 }

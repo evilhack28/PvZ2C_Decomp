@@ -8,7 +8,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config
-from lib import hdrindex
+from lib import fastcc, hdrindex
 from tidy import strip_comments
 
 SKIP = re.compile(r'^\s*(typedef|using|static|friend|enum|class|struct|union|template|public|protected|private)\b')
@@ -58,6 +58,11 @@ def declared_members(cls, hdr):
 
 def probe(cls, hdr, members):
     """{member: offset} (members that do not compile, e.g. bitfields, are left out) and sizeof."""
+    offs, size = fastcc.memo(('off.probe', cls, hdr, list(dict.fromkeys(members))), lambda: _probe(cls, hdr, members))
+    return offs, size
+
+
+def _probe(cls, hdr, members):
     src = os.path.join(config.BUILD, 'offprobe.cpp')
     obj = os.path.join(config.BUILD, 'offprobe.o')
     names = list(dict.fromkeys(members))
@@ -65,19 +70,18 @@ def probe(cls, hdr, members):
         lines = ['#define private public', '#define protected public', f'#include "{hdr}"', '#include <cstddef>',
                  f'char probe__size[sizeof({cls})] = {{}};']
         lines += [f'char probe_{n}[offsetof({cls}, {n}) + 1] = {{}};' for n in names]
-        open(src, 'w').write('\n'.join(lines) + '\n')
-        r = subprocess.run([config.GXX, *config.CXXFLAGS, '-w', '-c', src, '-o', obj], capture_output=True, text=True)
-        if r.returncode == 0:
+        ok, err = fastcc.compile_text(src, '\n'.join(lines) + '\n', obj)
+        if ok:
             break
-        bad = {int(m.group(1)) - 6 for m in re.finditer(r'offprobe\.cpp:(\d+):\d+: error', r.stderr)}
+        bad = {int(m.group(1)) - 6 for m in re.finditer(r'offprobe\.cpp:(\d+):\d+: error', err)}
         if not bad or min(bad) < 0:
-            sys.exit('\n'.join([l[:200] for l in r.stderr.splitlines() if ' error: ' in l][:8]))
+            sys.exit('\n'.join([l[:200] for l in err.splitlines() if ' error: ' in l][:8]))
         names = [n for i, n in enumerate(names) if i not in bad]
     else:
         sys.exit('could not get a clean probe')
     from lib.pvzelf import Elf
     syms = {n: s for n, v, s, sh, t in Elf(obj).symbols()}
-    return {n: syms['probe_' + n] - 1 for n in names if 'probe_' + n in syms}, syms.get('probe__size')
+    return ({n: syms['probe_' + n] - 1 for n in names if 'probe_' + n in syms}, syms.get('probe__size')), obj
 
 
 def game_fields(cls):

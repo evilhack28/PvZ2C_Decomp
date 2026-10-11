@@ -24,3 +24,19 @@ void PropertySheetBase::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PropertySheetBase);
 }
+
+PropertySheetBase::PropertySheetBase(const PropertySheetBase& i_other)
+	: GameObject(i_other)
+{}
+
+PropertySheetBase& PropertySheetBase::operator=(const PropertySheetBase& i_other)
+{
+	GameObject::operator=(i_other);
+	return *this;
+}
+
+PropertySheetBase& PropertySheetBase::operator=(PropertySheetBase&& i_other)
+{
+	GameObject::operator=(i_other);
+	return *this;
+}

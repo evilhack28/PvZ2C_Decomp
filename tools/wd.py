@@ -78,10 +78,12 @@ def _search_objdefs(mangled):
         exact = re.compile(rf'{re.escape(cls)}::{re.escape(meth)}')
         defines = re.compile(rf'{re.escape(cls)}::')
         first = {c + '.cpp' for c in comps}
-        sources = ([x for x in sources if os.path.basename(x) in first]
-                   + [x for x in sources if os.path.basename(x) not in first])
+        text = {x: open(x, encoding='utf-8', errors='replace').read() for x in sources}
+        # files that define cls::meth first, then cls's own file, then anything defining cls::
+        sources.sort(key=lambda x: (not exact.search(text[x]), os.path.basename(x) not in first,
+                                    not defines.search(text[x])))
     for src in sources:
-        obj, _err = fastcc.compile_file(src)
+        obj, _err = fastcc.compile_file(src, pch=True)
         if obj is None:
             continue
         syms = Elf(obj).symbols()

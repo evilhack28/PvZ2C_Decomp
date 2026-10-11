@@ -10,7 +10,8 @@ ifeq ($(OS),Windows_NT)
 endif
 
 PYTHON ?=$(shell python -c "" >/dev/null 2>&1 && echo python || echo "py -3")
-JOBS   ?= $(shell nproc 2>/dev/null || echo 4)
+# each analysis worker holds ~0.5 GB; past ~10 they only cost memory (28 jobs: 84 s, 11: 61 s)
+JOBS   ?= $(shell n=$$(nproc 2>/dev/null || echo 4); [ $$n -gt 10 ] && n=10; echo $$n)
 FUNC   ?=
 PLANT  ?=
 

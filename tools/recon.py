@@ -12,6 +12,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from capstone import CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN, Cs
 
 import config
+from lib import fastcc
 from lib.pvzelf import Elf
 import ghidra as ghidramod
 
@@ -119,19 +120,25 @@ def all_member_names(cls, hdr, _seen=None):
     return out
 
 
-def offset_map(cls, hdr, _seen=None):
+def offset_map(cls, hdr):
     """{offset: member_name} for cls and its visible bases, probed against cls."""
     if not hdr:
         hdr = find_header(cls)
     if not hdr:
         return {}, None
+    found = fastcc.memo(('recon.offset_map', cls, hdr), lambda: _offset_map(cls, hdr))
+    return {int(k): v for k, v in found.items()}, hdr
+
+
+def _offset_map(cls, hdr):
+    """(offset_map without the cache, the headers its probe read)."""
     merged = {}
     names = all_member_names(cls, hdr)
     src = os.path.join(config.BUILD, 'recon_off.cpp')
     os.makedirs(config.BUILD, exist_ok=True)
     for _ in range(4):
         if not names:
-            return {}, hdr
+            return {}, None
         lines = ['#define private public', '#define protected public',
                  f'#include "{hdr}"', '#include <cstddef>',
                  'using namespace Sexy;', 'namespace { }',
@@ -139,11 +146,11 @@ def offset_map(cls, hdr, _seen=None):
         base = cls.split('::')[-1]
         for i, n in enumerate(names):
             lines.append(f'P_<offsetof({base}, {n})> p_{i};')
-        open(src, 'w').write('\n'.join(lines) + '\n')
-        r = subprocess.run([config.GXX, *config.CXXFLAGS, '-fsyntax-only', '-w', src],
-                           capture_output=True, text=True)
+        text = '\n'.join(lines) + '\n'
+        _ok, stderr = fastcc.compile_text(src, text, src[:-4] + '.o')
+        deps = fastcc.header_deps(src, text)
         out, ok_idx, err_idx = {}, set(), set()
-        for l in r.stderr.splitlines():
+        for l in stderr.splitlines():
             m = re.search(r'P_<(\d+)(?:ul|UL)?>[^\n]*?\bp_(\d+)\b', l)
             if m:
                 off, idx = int(m.group(1)), int(m.group(2))
@@ -157,10 +164,10 @@ def offset_map(cls, hdr, _seen=None):
         real_bad = err_idx - ok_idx
         if not real_bad:
             merged.update(out)
-            return merged, hdr
+            return merged, deps
         names = [n for i, n in enumerate(names) if i not in real_bad]
     merged.update(out)
-    return merged, hdr
+    return merged, deps
 
 
 def load_names(elf):
