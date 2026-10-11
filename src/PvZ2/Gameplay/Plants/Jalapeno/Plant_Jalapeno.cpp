@@ -206,7 +206,7 @@ void PlantJalapeno::UpdateActions()
 		for (size_t i = 0; i < entities.size(); i++)
 		{
 			bool alreadyDamaged = false;
-			for (size_t j = 0; j < m_damagedEntities.size(); j++)
+			for (int j = 0; j < m_damagedEntities.size(); j++)
 			{
 				if (m_damagedEntities[j] == entities[i])
 				{

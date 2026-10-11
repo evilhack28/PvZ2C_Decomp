@@ -797,7 +797,7 @@ void CheatUIPanel::SetScrollAmount(int i_scrollAmount)
 
 	float screenHeight = (float)gLawnApp->mHeight;
 	float limit = screenHeight - total;
-	if (!(screenHeight < total))
+	if (__builtin_expect(!(screenHeight < total), 0))
 		limit = 0.0f;
 
 	if ((float)m_scroll < limit)

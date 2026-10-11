@@ -3,6 +3,7 @@
 
 import argparse
 import difflib
+import functools
 import glob
 import json
 import os
@@ -22,6 +23,7 @@ GREEN, RED, GREY, BOLD, OFF = '\033[32m', '\033[31m', '\033[90m', '\033[1m', '\0
 
 # --- resolving a symbol to the file that defines it -------------------------
 
+@functools.lru_cache(None)
 def _units():
     path = os.path.join(HERE, os.pardir, 'units.json')
     if not os.path.exists(path):
@@ -29,31 +31,64 @@ def _units():
     return json.load(open(path)).get('units', {})
 
 
-def resolve(token, method=None):
-    """(mangled symbol, source path). `token` is a mangled name or a class."""
+@functools.lru_cache(None)
+def _game_funcs():
+    return frozenset(n for n, v, s, shndx, t in Elf(config.TARGET_LIB).symbols() if t == 2)
+
+
+@functools.lru_cache(None)
+def _sources():
+    paths = sorted(glob.glob(os.path.join(HERE, os.pardir, 'src', '**', '*.cpp'), recursive=True))
+    return {x: open(x, encoding='utf-8', errors='replace').read() for x in paths}
+
+
+_OPERATORS = {'()': 'cl', '[]': 'ix', '=': 'aS', '==': 'eq', '!=': 'ne', '<': 'lt', '>': 'gt', '<=': 'le',
+              '>=': 'ge', '+': 'pl', '-': 'mi', '*': 'ml', '/': 'dv', '+=': 'pL', '-=': 'mI', '!': 'nt',
+              '->': 'pt', '<<': 'ls', '>>': 'rs', 'new': 'nw', 'delete': 'dl'}
+
+
+def resolve(token, method=None, source=None):
+    """(mangled symbol, source path). `token` is a mangled name or a class (`A::B` if nested); `source` skips the file search."""
     units = _units()
 
     if method is None and token.startswith('_Z'):
+        if token not in _game_funcs():
+            sys.exit(f'{token}: not a game function (check the <length><name> counts)')
+        if source:
+            return token, source
         for rel, u in units.items():
             if any(s == token for s, _ in u.get('funcs', [])):
                 return token, os.path.normpath(os.path.join(HERE, os.pardir, rel))
-        # not mapped -- find it by compiling candidates
         return token, _search_objdefs(token)
 
     # Itanium mangling writes each name <length><name>, so both appear verbatim.
-    parts = [token] + ([method] if method else [])
+    parts = token.split('::') + ([method] if method else [])
     needles = [f'{len(p)}{p}' for p in parts]
+    if len(parts) >= 2:
+        scope, meth = ''.join(needles[:-1]), parts[-1]
+        # a ctor/dtor is mangled C1/C2/D0/D1/D2, not by name
+        tail = 'C[123]' if meth == parts[-2] else 'D[012]' if meth == '~' + parts[-2] else re.escape(needles[-1])
+        if meth.startswith('operator'):
+            tail = _OPERATORS.get(meth[8:].strip(), tail)
+        exact = re.compile(rf'(?<![0-9]){re.escape(scope)}{tail}(?=[EI])')
+        match = exact.search
+    else:
+        match = lambda sym: needles[0] in sym
     hits = []
     for rel, u in units.items():
         for sym, _size in u.get('funcs', []):
-            if all(n in sym for n in needles):
+            if match(sym):
                 hits.append((sym, os.path.normpath(os.path.join(HERE, os.pardir, rel))))
+    # C1/D1 stands for its C2/D2 twin
+    hits = [h for h in hits if not re.search(r'[CD]2E', h[0])
+            or re.sub(r'([CD])2E', r'\g<1>1E', h[0], 1) not in {x[0] for x in hits}]
     if not hits:
         # not in units.json -- get the symbol from the game, the file by compiling
-        game_syms = sorted({n for n, v, s, shndx, t in Elf(config.TARGET_LIB).symbols()
-                            if t == 2 and all(x in n for x in needles)})
+        game_syms = sorted(n for n in _game_funcs() if match(n))
+        game_syms = [n for n in game_syms if not re.search(r'[CD]2E', n)
+                     or re.sub(r'([CD])2E', r'\g<1>1E', n, 1) not in game_syms]
         if len(game_syms) == 1:
-            return game_syms[0], _search_objdefs(game_syms[0])
+            return game_syms[0], source or _search_objdefs(game_syms[0])
         if game_syms:
             sys.exit(f'{" ".join(parts)!r} matches several game symbols, pass one:\n  '
                      + '\n  '.join(game_syms[:12]))
@@ -61,30 +96,32 @@ def resolve(token, method=None):
     if len({h[0] for h in hits}) > 1:
         listing = '\n'.join(f'  {s}   {r}' for s, r in hits[:12])
         sys.exit(f'{" ".join(parts)!r} is ambiguous:\n{listing}')
-    return hits[0][0], hits[0][1]
+    return hits[0][0], source or hits[0][1]
 
 
 def _search_objdefs(mangled):
     os.makedirs(config.BUILD, exist_ok=True)
-    sources = sorted(glob.glob(os.path.join(HERE, os.pardir, 'src', '**', '*.cpp'), recursive=True))
+    text = _sources()
     comps, i = [], re.match(r'_ZN?K?', mangled).end() if mangled.startswith('_Z') else 0
     while i < len(mangled) and mangled[i].isdigit():
         k = re.match(r'\d+', mangled[i:])
         n = int(k.group(0))
         comps.append(mangled[i + k.end():i + k.end() + n])
         i += k.end() + n
-    if len(comps) >= 2:
-        cls, meth = comps[-2], comps[-1]
-        exact = re.compile(rf'{re.escape(cls)}::{re.escape(meth)}')
-        defines = re.compile(rf'{re.escape(cls)}::')
-        first = {c + '.cpp' for c in comps}
-        text = {x: open(x, encoding='utf-8', errors='replace').read() for x in sources}
-        # files that define cls::meth first, then cls's own file, then anything defining cls::
-        sources.sort(key=lambda x: (not exact.search(text[x]), os.path.basename(x) not in first,
-                                    not defines.search(text[x])))
+    if len(comps) < 2:
+        sys.exit(f'{mangled}: no class scope to search by -- pass the file: wd.py <file.cpp> {mangled}')
+    cls, meth = comps[-2], comps[-1]
+    first = {c + '.cpp' for c in comps}
+    # only files that write cls::meth or are named after a scope; never a tree sweep
+    sources = [x for x in sorted(text) if f'{cls}::{meth}' in text[x]]
+    sources += [x for x in sorted(text) if os.path.basename(x) in first and x not in sources]
+    if not sources:
+        sys.exit(f'{mangled}: no file under src/ writes {cls}::{meth} yet -- pass the file: wd.py <file.cpp> {mangled}')
     for src in sources:
-        obj, _err = fastcc.compile_file(src, pch=True)
+        print(f'searching {os.path.relpath(src)}', file=sys.stderr, flush=True)
+        obj, err = fastcc.compile_file(src, pch=True)
         if obj is None:
+            print(f'{RED}{os.path.relpath(src)} failed to compile{OFF}\n{(err or "")[:2000]}', file=sys.stderr)
             continue
         syms = Elf(obj).symbols()
         if any(n == mangled and shndx and t == 2 for n, v, s, shndx, t in syms):
@@ -274,8 +311,11 @@ def targets(items):
         source = first if os.path.isabs(first) else os.path.normpath(os.path.join(os.getcwd(), first))
         out = []
         for n in items[1:]:
-            cls, _, meth = n.replace('::', ' ').partition(' ')
-            out.append((n if n.startswith('_Z') else resolve(cls, meth or None)[0], source))
+            if n.startswith('_Z'):
+                out.append(resolve(n, source=source))
+                continue
+            cls, _, meth = n.replace(' ', '::').rpartition('::')
+            out.append(resolve(cls, meth, source) if cls else resolve(meth, source=source))
         return out
     if first.startswith('_Z'):
         return [resolve(n) for n in items]
@@ -293,15 +333,16 @@ def main():
     ap.add_argument('-s', '--src', action='store_true', help='print our source of just this function (and its header decl) first')
     args = ap.parse_args()
 
-    game_elf, objs, rc = Elf(config.TARGET_LIB), {}, 0
+    game_elf, objs, elfs, rc = Elf(config.TARGET_LIB), {}, {}, 0
     for mangled, source in targets(args.items):
         rel = os.path.relpath(source, os.path.join(HERE, os.pardir))
         if args.src:
             print_source(source, mangled)
         if source not in objs:
             objs[source] = build(source)
+            elfs[source] = Elf(objs[source])
         game = asmdiff.listing(game_elf, mangled)
-        ours = asmdiff.listing(Elf(objs[source]), mangled)
+        ours = asmdiff.listing(elfs[source], mangled)
         if game is None or ours is None:
             print(f'{BOLD}{mangled}{OFF}  {RED}' + ('not in the game' if game is None else f'{rel} does not define it') + OFF)
             rc = 1

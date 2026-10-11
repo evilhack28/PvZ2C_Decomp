@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-11T13:48:30+00:00",
+  "generated": "2026-10-11T20:42:10+00:00",
   "measures": {
-    "total_functions": 84609,
-    "matched_functions": 30918,
-    "matched_functions_percent": 36.54,
-    "total_code": 13038180,
-    "matched_code": 2190532,
-    "matched_code_percent": 16.8,
-    "fuzzy_match_percent": 17.92,
-    "started_units": 2237,
+    "total_functions": 84655,
+    "matched_functions": 31026,
+    "matched_functions_percent": 36.65,
+    "total_code": 13042564,
+    "matched_code": 2213276,
+    "matched_code_percent": 16.97,
+    "fuzzy_match_percent": 18.09,
+    "started_units": 2238,
     "total_units": 2771,
-    "started_code": 10628992,
-    "started_matched_code": 2190532,
-    "started_percent": 20.61,
+    "started_code": 10639908,
+    "started_matched_code": 2213276,
+    "started_percent": 20.8,
     "unplaced_functions": 58654,
     "unplaced_code": 8567392,
     "compile_failures": 0
@@ -667,36 +667,30 @@
     {
       "name": "src/PvZ2/Core/ClassBucketFilter.cpp",
       "total_code": 1584,
-      "matched_code": 604,
-      "matched_code_percent": 38.13,
+      "matched_code": 1584,
+      "matched_code_percent": 100.0,
       "total_functions": 14,
-      "matched_functions": 10,
-      "matched_functions_percent": 71.43,
-      "fuzzy_match_percent": 38.13,
+      "matched_functions": 14,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ClassBucketFilter::FilterToList",
           "size": 448,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ClassBucketFilter::FilterToBuckets",
           "size": 312,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ClassBucketFilter::GetBucket",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ClassBucketFilter::size",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ClassBucketFilter::StaticClassInit",
@@ -747,6 +741,12 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "ClassBucketFilter::size",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "ClassBucketFilter::IsAbstract",
           "size": 8,
           "matched": true,
@@ -762,13 +762,423 @@
     },
     {
       "name": "src/PvZ2/Core/EntityFinder.cpp",
-      "total_code": 6532,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 22,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 10916,
+      "matched_code": 9968,
+      "matched_code_percent": 91.32,
+      "total_functions": 68,
+      "matched_functions": 65,
+      "matched_functions_percent": 95.59,
+      "fuzzy_match_percent": 98.87,
+      "functions": [
+        {
+          "name": "EntityFinder::EntityFinderGridspace",
+          "size": 388,
+          "matched": false,
+          "fuzzy_match_percent": 97.94
+        },
+        {
+          "name": "EntityFinder::PullFirstMatchingEntity",
+          "size": 332,
+          "matched": false,
+          "fuzzy_match_percent": 80.72
+        },
+        {
+          "name": "EntityFinder::CalcAroundGrids",
+          "size": 228,
+          "matched": false,
+          "fuzzy_match_percent": 77.59
+        },
+        {
+          "name": "EntityFinder::GetEntities",
+          "size": 1228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_PreferNewTargets",
+          "size": 472,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesTouchingRay",
+          "size": 384,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesTouchingCircle2D",
+          "size": 372,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesTouchingRectangle",
+          "size": 364,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesTouchingPoint",
+          "size": 348,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetZombiesAtGridSquareWithType",
+          "size": 324,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesAtGridSquareMatchingClass",
+          "size": 316,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_WeightNewRows",
+          "size": 292,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesInRowMatchingClass",
+          "size": 280,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesOnBoard",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetGridItemAt",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetGridItemAt",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetGridItemAt",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetGridItemAt",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetGridItemAt",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetGridItemAt",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_WeightNewRows::findEntityInRow",
+          "size": 224,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesMatchingClass",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesTouchingRectangleWithoutGrid",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_ClosestByColumn",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesInGridSquares",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesInRectangle",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesWithinCircle",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesWithinCircle2D",
+          "size": 200,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_PreferNewTargets::isPreviousTarget",
+          "size": 188,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::HasZombiesAtGridSquareWithType",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_PreferNewTargets::BoardEntitySorter_Closest_PreferNewTargets",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_PreferNewTargets::BoardEntitySorter_Closest_PreferNewTargets",
+          "size": 144,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntitiesAtGridSquare",
+          "size": 120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::GetEntities",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::CheckGridValid",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_WeightNewRows::BoardEntitySorter_Closest_WeightNewRows",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_WeightNewRows::BoardEntitySorter_Closest_WeightNewRows",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_WeightNewRows::BoardEntitySorter_Closest_WeightNewRows",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_WeightNewRows::BoardEntitySorter_Closest_WeightNewRows",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest::BoardEntitySorter_Closest",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest::BoardEntitySorter_Closest",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest::BoardEntitySorter_Closest",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest::BoardEntitySorter_Closest",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_ClosestByColumn::BoardEntitySorter_ClosestByColumn",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_ClosestByColumn::BoardEntitySorter_ClosestByColumn",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_ClosestByColumn::BoardEntitySorter_ClosestByColumn",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_ClosestByColumn::BoardEntitySorter_ClosestByColumn",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_PreferNewTargets::~BoardEntitySorter_Closest_PreferNewTargets",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_PreferNewTargets::~BoardEntitySorter_Closest_PreferNewTargets",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_PreferNewTargets::~BoardEntitySorter_Closest_PreferNewTargets",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_WeightNewRows::~BoardEntitySorter_Closest_WeightNewRows",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter::BoardEntitySorter",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter::BoardEntitySorter",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter::BoardEntitySorter",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter::BoardEntitySorter",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_WeightNewRows::~BoardEntitySorter_Closest_WeightNewRows",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest_WeightNewRows::~BoardEntitySorter_Closest_WeightNewRows",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter::~BoardEntitySorter",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter::~BoardEntitySorter",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter::~BoardEntitySorter",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest::~BoardEntitySorter_Closest",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest::~BoardEntitySorter_Closest",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_Closest::~BoardEntitySorter_Closest",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_ClosestByColumn::~BoardEntitySorter_ClosestByColumn",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_ClosestByColumn::~BoardEntitySorter_ClosestByColumn",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EntityFinder::BoardEntitySorter_ClosestByColumn::~BoardEntitySorter_ClosestByColumn",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Core/FileUtil.cpp",
@@ -809,240 +1219,240 @@
     {
       "name": "src/PvZ2/Core/FishingModuleEditor.cpp",
       "total_code": 10680,
-      "matched_code": 8,
-      "matched_code_percent": 0.07,
+      "matched_code": 10216,
+      "matched_code_percent": 95.66,
       "total_functions": 40,
-      "matched_functions": 2,
-      "matched_functions_percent": 5.0,
-      "fuzzy_match_percent": 0.07,
+      "matched_functions": 39,
+      "matched_functions_percent": 97.5,
+      "fuzzy_match_percent": 99.03,
       "functions": [
-        {
-          "name": "FishingModuleEditor::OnCreate",
-          "size": 1584,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FishingModuleEditor::SaveProperty",
-          "size": 1516,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FishingModuleEditor::LoadProperty",
-          "size": 1160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FishingModuleEditor::ButtonDepress",
-          "size": 648,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "FishingModuleEditor::ItemPanel::AddItem",
-          "size": 632,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "FishingModuleEditor::SetZombieGroup",
           "size": 464,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 77.59
+        },
+        {
+          "name": "FishingModuleEditor::OnCreate",
+          "size": 1584,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FishingModuleEditor::SaveProperty",
+          "size": 1516,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FishingModuleEditor::LoadProperty",
+          "size": 1160,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FishingModuleEditor::ButtonDepress",
+          "size": 648,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "FishingModuleEditor::ItemPanel::AddItem",
+          "size": 632,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::NewItem",
           "size": 412,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::Draw",
           "size": 400,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemPanel::RefreshIDGen",
           "size": 332,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::DeletePoint",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::MouseDown",
           "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::RefreshDrawPoints",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::GetProps",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemPanel::LayoutPanel",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::InitButton",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemPanel::GetSelectedItem",
           "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::FishingModuleEditor",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::FishingModuleEditor",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemPanel::GetItem",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemPanel::InitData",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::~FishingModuleEditor",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::~FishingModuleEditor",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemPanel::RemoveItem",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::CheckSelectItem",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::GetLayoutName",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemPanel::SelectItem",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemData::operator=",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemData::ItemData",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemData::ItemData",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemPanel::ItemPanel",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemPanel::ItemPanel",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemData::ItemData",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemData::ItemData",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemData::~ItemData",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemData::~ItemData",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemPanel::~ItemPanel",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ItemPanel::~ItemPanel",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::~FishingModuleEditor",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "FishingModuleEditor::ScrollTargetInterrupted",
@@ -152383,24 +152793,24 @@
     {
       "name": "src/PvZ2/Gameplay/Plants/Jalapeno/Plant_Jalapeno.cpp",
       "total_code": 3640,
-      "matched_code": 2248,
-      "matched_code_percent": 61.76,
+      "matched_code": 3536,
+      "matched_code_percent": 97.14,
       "total_functions": 22,
-      "matched_functions": 20,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 98.24,
+      "matched_functions": 21,
+      "matched_functions_percent": 95.45,
+      "fuzzy_match_percent": 98.68,
       "functions": [
-        {
-          "name": "PlantJalapeno::UpdateActions",
-          "size": 1288,
-          "matched": false,
-          "fuzzy_match_percent": 98.76
-        },
         {
           "name": "PlantJalapeno::stopSpecialEffect",
           "size": 104,
           "matched": false,
           "fuzzy_match_percent": 53.85
+        },
+        {
+          "name": "PlantJalapeno::UpdateActions",
+          "size": 1288,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantJalapeno::Explode",
@@ -357091,12 +357501,12 @@
     {
       "name": "src/PvZ2/UI/CheatUI.cpp",
       "total_code": 17648,
-      "matched_code": 11652,
-      "matched_code_percent": 66.02,
+      "matched_code": 11952,
+      "matched_code_percent": 67.72,
       "total_functions": 136,
-      "matched_functions": 123,
-      "matched_functions_percent": 90.44,
-      "fuzzy_match_percent": 94.77,
+      "matched_functions": 124,
+      "matched_functions_percent": 91.18,
+      "fuzzy_match_percent": 94.84,
       "functions": [
         {
           "name": "CheatUIPanel::Draw",
@@ -357133,12 +357543,6 @@
           "size": 340,
           "matched": false,
           "fuzzy_match_percent": 92.94
-        },
-        {
-          "name": "CheatUIPanel::SetScrollAmount",
-          "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 96.0
         },
         {
           "name": "CheatUIPanel::TouchBegan",
@@ -357227,6 +357631,12 @@
         {
           "name": "CheatAdjusterWidget::Draw",
           "size": 316,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CheatUIPanel::SetScrollAmount",
+          "size": 300,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
