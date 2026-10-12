@@ -26,3 +26,19 @@ void PVZGameInfo::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PVZGameInfo);
 }
+
+/////////////// Lifecycle ///////////////
+
+PVZGameInfo::PVZGameInfo(const std::string& i_gameName, const std::string& i_buildInfo, uint32 i_launchTime)
+{
+	GameName = i_gameName;
+	BuildInfo = i_buildInfo;
+	m_launchTime = i_launchTime;
+}
+
+/////////////// Accessors ///////////////
+
+uint64 PVZGameInfo::GetUptimeMS() const
+{
+	return Sexy::SexyTime() - m_launchTime;
+}
