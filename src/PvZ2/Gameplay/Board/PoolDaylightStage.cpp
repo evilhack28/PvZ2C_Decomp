@@ -274,7 +274,7 @@ void PoolDaylightStage::gatherPlantingRestrictions(const Sexy::Point& i_gridPosi
 			;
 		else
 			boost = 0;
-		if (!((const PlantPropertySheet*)i_plantType->Properties)->CanLiveOnWaves && boost != 1 && m_WaterGrid[i_gridPosition.mY][i_gridPosition.mX] && i_plantType)
+		if (!__builtin_expect(((const PlantPropertySheet*)i_plantType->Properties)->CanLiveOnWaves, 0) && boost != 1 && m_WaterGrid[i_gridPosition.mY][i_gridPosition.mX] && i_plantType)
 		{
 			int id = PlantNameMapper::GetInstance().GetIdForType(i_plantType);
 			const PlantPropertySheet* props = i_plantType->Properties;

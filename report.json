@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-12T17:15:46+00:00",
+  "generated": "2026-10-13T12:12:43+00:00",
   "measures": {
-    "total_functions": 84655,
-    "matched_functions": 31358,
-    "matched_functions_percent": 37.04,
-    "total_code": 13042564,
-    "matched_code": 2302788,
-    "matched_code_percent": 17.66,
-    "fuzzy_match_percent": 18.86,
-    "started_units": 2238,
+    "total_functions": 84663,
+    "matched_functions": 31477,
+    "matched_functions_percent": 37.18,
+    "total_code": 13042708,
+    "matched_code": 2328220,
+    "matched_code_percent": 17.85,
+    "fuzzy_match_percent": 19.04,
+    "started_units": 2239,
     "total_units": 2771,
-    "started_code": 10639908,
-    "started_matched_code": 2302788,
-    "started_percent": 21.64,
+    "started_code": 10649292,
+    "started_matched_code": 2328220,
+    "started_percent": 21.86,
     "unplaced_functions": 58654,
     "unplaced_code": 8567392,
     "compile_failures": 0
@@ -25606,183 +25606,419 @@
     },
     {
       "name": "src/PvZ2/Gameplay/Board/LawnMower.cpp",
-      "total_code": 9240,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 43,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0
+      "total_code": 9384,
+      "matched_code": 7936,
+      "matched_code_percent": 84.57,
+      "total_functions": 51,
+      "matched_functions": 49,
+      "matched_functions_percent": 96.08,
+      "fuzzy_match_percent": 98.36,
+      "functions": [
+        {
+          "name": "LawnMower::onDraw",
+          "size": 1056,
+          "matched": false,
+          "fuzzy_match_percent": 86.14
+        },
+        {
+          "name": "LawnMower::initializePAM",
+          "size": 392,
+          "matched": false,
+          "fuzzy_match_percent": 97.96
+        },
+        {
+          "name": "LawnMower::onUpdate",
+          "size": 1624,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::StartMower",
+          "size": 468,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::updateGroundEffect",
+          "size": 452,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::CreateSpawnEffect",
+          "size": 444,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::onDrawShadow",
+          "size": 388,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::onTouchEvent",
+          "size": 328,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::SpawnMower",
+          "size": 288,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::tryDestroy",
+          "size": 276,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::MowZombie",
+          "size": 264,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::registerForEvents",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::MowGridItem",
+          "size": 220,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::onAnimStopped",
+          "size": 204,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::LawnMowerInitialize",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerProperties::StaticClassInit",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::ResetStartingLocation",
+          "size": 152,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::GetStartingLocation",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::GetAttackRect",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerProperties::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::GetAttackRect",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::LawnMower",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::LawnMower",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::onDestroy",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::GetArtOffset",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerProperties::LawnMowerProperties",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerProperties::LawnMowerProperties",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::GetAttackRect",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::onInitialized",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::~LawnMower",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::~LawnMower",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::ShouldDrawShadow",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerProperties::~LawnMowerProperties",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerProperties::~LawnMowerProperties",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerProperties::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::CalcRenderOrder",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::~LawnMower",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerProperties::~LawnMowerProperties",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::getRowToPixelY",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::unregisterForEvents",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::clearTouch",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::SetRow",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::ShouldClipWithWater",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerProperties::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMower::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerProperties::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerProperties::GetModuleClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Gameplay/Board/LawnMowerModule.cpp",
       "total_code": 6300,
-      "matched_code": 612,
-      "matched_code_percent": 9.71,
+      "matched_code": 6300,
+      "matched_code_percent": 100.0,
       "total_functions": 37,
-      "matched_functions": 11,
-      "matched_functions_percent": 29.73,
-      "fuzzy_match_percent": 9.71,
+      "matched_functions": 37,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "LawnMowerModule::createMowers",
           "size": 624,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::onUpdate",
           "size": 572,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::initializeModule",
           "size": 564,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::onBuyItemOK",
           "size": 508,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::isNeedBuyMower",
           "size": 500,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::registerForEvents",
           "size": 424,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::onLawnMowerDie",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::getMowerBoardEntitiesInRow",
           "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::AwardMowers",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::prepareMowerForRow",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::initializeMowerRespawn",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::addPreparedMowers",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::GetUntriggeredMowerInRow",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::postInitialize",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::getMowerAnim",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::ShouldRespawnMower",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::onReadyForMowers",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::onBuyItemCancel",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::shouldCreateMowerInRow",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::rowCanAcceptNewMower",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::getIdleAnimWeights",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::AddMowerToSaveData",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::HasUntriggeredMowerInRow",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::hasMowerInSaveData",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::GetEntryAnimDuration",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnMowerModule::getMowerAudio",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnMowerModule::StaticClassInit",
           "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::postInitialize",
+          "size": 140,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25793,6 +26029,42 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "LawnMowerModule::getMowerAnim",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::ShouldRespawnMower",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::onReadyForMowers",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::onBuyItemCancel",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::shouldCreateMowerInRow",
+          "size": 68,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::rowCanAcceptNewMower",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "LawnMowerModule::LawnMowerModule",
           "size": 52,
           "matched": true,
@@ -25813,6 +26085,12 @@
         {
           "name": "LawnMowerModule::~LawnMowerModule",
           "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::getIdleAnimWeights",
+          "size": 48,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25825,6 +26103,36 @@
         {
           "name": "LawnMowerModule::~LawnMowerModule",
           "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::AddMowerToSaveData",
+          "size": 32,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::HasUntriggeredMowerInRow",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::hasMowerInSaveData",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::GetEntryAnimDuration",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnMowerModule::getMowerAudio",
+          "size": 24,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -26235,84 +26543,84 @@
     {
       "name": "src/PvZ2/Gameplay/Board/MiniBoard.cpp",
       "total_code": 3552,
-      "matched_code": 16,
-      "matched_code_percent": 0.45,
+      "matched_code": 3552,
+      "matched_code_percent": 100.0,
       "total_functions": 14,
-      "matched_functions": 2,
-      "matched_functions_percent": 14.29,
-      "fuzzy_match_percent": 0.45,
+      "matched_functions": 14,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "MiniBoard::ResetBoard",
           "size": 1288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::Draw",
           "size": 1152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::InitBoard",
           "size": 304,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::Pause",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::SpawnZombie",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::Update",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::MiniBoard",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::MiniBoard",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::CloseBoard",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::~MiniBoard",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::~MiniBoard",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::~MiniBoard",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MiniBoard::CanSaveGameState",
@@ -26331,114 +26639,114 @@
     {
       "name": "src/PvZ2/Gameplay/Board/ModularBoardEntity.cpp",
       "total_code": 1484,
-      "matched_code": 8,
-      "matched_code_percent": 0.54,
+      "matched_code": 1484,
+      "matched_code_percent": 100.0,
       "total_functions": 19,
-      "matched_functions": 2,
-      "matched_functions_percent": 10.53,
-      "fuzzy_match_percent": 0.54,
+      "matched_functions": 19,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ModularBoardEntity::AddAttachedEffect",
           "size": 412,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::DetachAttachedEffect",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::RemoveAttachedEffect",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::GetAttachedEffect",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::~ModularBoardEntity",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::~ModularBoardEntity",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::ModularBoardEntity",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::ModularBoardEntity",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::~ModularBoardEntity",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::updateOverlayEffects",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::onUpdate",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::clearAttachedEffects",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ModularBoardEntity::onDestroy",
@@ -26457,84 +26765,36 @@
     {
       "name": "src/PvZ2/Gameplay/Board/OfflineBoard.cpp",
       "total_code": 2628,
-      "matched_code": 284,
-      "matched_code_percent": 10.81,
+      "matched_code": 2628,
+      "matched_code_percent": 100.0,
       "total_functions": 15,
-      "matched_functions": 3,
-      "matched_functions_percent": 20.0,
-      "fuzzy_match_percent": 10.81,
+      "matched_functions": 15,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "OfflineBoard::OnCreate",
           "size": 936,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "OfflineBoard::RefreshContent",
           "size": 352,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "OfflineBoard::RefreshTabList",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "OfflineBoard::getTabBtn",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "OfflineBoard::InitInfoList",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "OfflineBoard::GetLayoutName",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "OfflineBoard::RadioSelectionChanged",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "OfflineBoard::~OfflineBoard",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "OfflineBoard::~OfflineBoard",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "OfflineBoard::DrawAll",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "OfflineBoard::~OfflineBoard",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "OfflineBoard::ButtonDepress",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "OfflineBoard::OfflineBoard",
@@ -26545,6 +26805,54 @@
         {
           "name": "OfflineBoard::OfflineBoard",
           "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineBoard::InitInfoList",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineBoard::GetLayoutName",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineBoard::RadioSelectionChanged",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineBoard::~OfflineBoard",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineBoard::~OfflineBoard",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineBoard::DrawAll",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineBoard::~OfflineBoard",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "OfflineBoard::ButtonDepress",
+          "size": 12,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -27069,24 +27377,18 @@
     {
       "name": "src/PvZ2/Gameplay/Board/PoolDaylightStage.cpp",
       "total_code": 9924,
-      "matched_code": 7144,
-      "matched_code_percent": 71.99,
+      "matched_code": 7692,
+      "matched_code_percent": 77.51,
       "total_functions": 43,
-      "matched_functions": 40,
-      "matched_functions_percent": 93.02,
-      "fuzzy_match_percent": 99.72,
+      "matched_functions": 41,
+      "matched_functions_percent": 95.35,
+      "fuzzy_match_percent": 99.76,
       "functions": [
         {
           "name": "PoolDaylightStage::onLoadComplete",
           "size": 1784,
           "matched": false,
           "fuzzy_match_percent": 99.11
-        },
-        {
-          "name": "PoolDaylightStage::gatherPlantingRestrictions",
-          "size": 548,
-          "matched": false,
-          "fuzzy_match_percent": 99.27
         },
         {
           "name": "PoolDaylightStage::renderBackground",
@@ -27115,6 +27417,12 @@
         {
           "name": "PoolDaylightStage::onZombieTypeCountChange",
           "size": 600,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "PoolDaylightStage::gatherPlantingRestrictions",
+          "size": 548,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -27693,19 +28001,13 @@
     {
       "name": "src/PvZ2/Gameplay/Board/SkyCityStage.cpp",
       "total_code": 20504,
-      "matched_code": 13904,
-      "matched_code_percent": 67.81,
+      "matched_code": 17808,
+      "matched_code_percent": 86.85,
       "total_functions": 57,
-      "matched_functions": 53,
-      "matched_functions_percent": 92.98,
-      "fuzzy_match_percent": 97.22,
+      "matched_functions": 55,
+      "matched_functions_percent": 96.49,
+      "fuzzy_match_percent": 99.61,
       "functions": [
-        {
-          "name": "SkyCityStage::autoFire",
-          "size": 2676,
-          "matched": false,
-          "fuzzy_match_percent": 86.25
-        },
         {
           "name": "SkyCityStage::onLevelLoaded",
           "size": 2124,
@@ -27713,20 +28015,26 @@
           "fuzzy_match_percent": 96.42
         },
         {
-          "name": "SkyCityStage::FireCannon",
-          "size": 1228,
-          "matched": false,
-          "fuzzy_match_percent": 90.73
-        },
-        {
           "name": "SkyCityStage::onAirshipTakeDamage",
           "size": 572,
           "matched": false,
-          "fuzzy_match_percent": 97.9
+          "fuzzy_match_percent": 99.3
+        },
+        {
+          "name": "SkyCityStage::autoFire",
+          "size": 2676,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SkyCityStage::onCannonFireAnimCommand",
           "size": 1756,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "SkyCityStage::FireCannon",
+          "size": 1228,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },

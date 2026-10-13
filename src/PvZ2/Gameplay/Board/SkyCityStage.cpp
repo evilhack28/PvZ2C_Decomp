@@ -63,6 +63,9 @@ static WEAKIMAGE(IMAGE_UI_POWERUPS_SHOCK_BORDER_CORNER_BOTTOMRIGHT, "IMAGE_UI_PO
 
 static CachedResourcePtr<Sexy::Image> IMAGE_DOWNARROW("IMAGE_DOWNARROW");
 
+// Not const: folding it only after IPA keeps the >= 0 branch hint away, as in the game.
+static float s_minCannonAngle = 0.0f;
+
 RT_CLASS_IMPLEMENT(SkyCityStage);
 void SkyCityStage::StaticClassInit()
 {
@@ -651,7 +654,7 @@ bool SkyCityStage::FireCannon(const Sexy::Point& i_boardSpace, bool checkBoard)
 	m_isAutoFire = false;
 	float angle = atan2((double)(i_boardSpace.mX - 195), (double)(i_boardSpace.mY - 155));
 	std::string anim = "attack01";
-	if (angle >= 0.5235988f || angle < 0.0f) { if (angle >= 1.0471976f || angle < 0.5235988f) anim = "attack03_2"; else anim = "attack02_2"; } else anim = "attack01_2";
+	if (__builtin_expect(angle < 0.5235988f, 0) && angle >= s_minCannonAngle) anim = "attack01_2"; else if (__builtin_expect(angle < 1.0471976f, 0) && __builtin_expect(angle >= 0.5235988f, 1)) anim = "attack02_2"; else anim = "attack03_2";
 	Sexy::Rect rect(200, 160, BoardConstants::GRIDSQUARE_WIDTH() * 1.2, BoardConstants::GRIDSQUARE_HEIGHT());
 	if (rect.Contains(i_boardSpace.mX, i_boardSpace.mY))
 	{
@@ -709,7 +712,7 @@ void SkyCityStage::autoFire()
 	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_ZOMBIES); it; ++it)
 	{
 		ZombiePtr zombie = *it;
-		if (!zombie->IsDying() && !zombie->IsInvisible() && zombie->IsOnOpposingTeam(TEAM_PLANTS))
+		if (__builtin_expect(!zombie->IsDying() && !zombie->IsInvisible() && zombie->IsOnOpposingTeam(TEAM_PLANTS), 0))
 		{
 			float x = zombie->GetPosition().x;
 			if (!(x > 800.0f) && x < minX)
@@ -726,7 +729,7 @@ void SkyCityStage::autoFire()
 	targetPos = target->CalcProjectileTargetLocation(0.6f);
 	float angle = atan2((double)targetPos.x, (double)targetPos.y);
 	std::string anim = "attack01";
-	if (angle >= 0.5235988f || angle < 0.0f) { if (angle >= 1.0471976f || angle < 0.5235988f) anim = "attack03"; else anim = "attack02"; } else anim = "attack01";
+	if (__builtin_expect(angle < 0.5235988f, 1) && angle >= s_minCannonAngle) anim = "attack01"; else if (angle < 1.0471976f && __builtin_expect(angle >= 0.5235988f, 1)) anim = "attack02"; else anim = "attack03";
 	if (m_cannonEffect)
 	{
 		AnimationSequence sequence;
@@ -1089,7 +1092,7 @@ void SkyCityStage::onAirshipTakeDamage(float i_amount)
 	{
 		gLawnApp->ShowReviveUI(ReviveMode_AirShipCrash);
 	}
-	else if (m_airShipHealth <= 0.0f && !m_playerLost)
+	else if (__builtin_expect(m_airShipHealth <= 0.0f && !m_playerLost, 0))
 	{
 		if (!gLawnApp->IsInModule(Module_Pooyan | Module_Fishing | Module_Besiege) && gLawnApp->m_board->TryTriggerPlayerLoss(OUTRO_FAILURE_FADE_WITH_MESSAGE))
 		{
