@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-13T12:12:43+00:00",
+  "generated": "2026-10-13T23:05:27+00:00",
   "measures": {
     "total_functions": 84663,
-    "matched_functions": 31477,
-    "matched_functions_percent": 37.18,
+    "matched_functions": 31509,
+    "matched_functions_percent": 37.22,
     "total_code": 13042708,
-    "matched_code": 2328220,
-    "matched_code_percent": 17.85,
-    "fuzzy_match_percent": 19.04,
+    "matched_code": 2344492,
+    "matched_code_percent": 17.98,
+    "fuzzy_match_percent": 19.17,
     "started_units": 2239,
     "total_units": 2771,
     "started_code": 10649292,
-    "started_matched_code": 2328220,
-    "started_percent": 21.86,
+    "started_matched_code": 2344492,
+    "started_percent": 22.02,
     "unplaced_functions": 58654,
     "unplaced_code": 8567392,
     "compile_failures": 0
@@ -25217,60 +25217,24 @@
     {
       "name": "src/PvZ2/Gameplay/Board/LawnBrainModule.cpp",
       "total_code": 2524,
-      "matched_code": 536,
-      "matched_code_percent": 21.24,
+      "matched_code": 1096,
+      "matched_code_percent": 43.42,
       "total_functions": 19,
-      "matched_functions": 11,
-      "matched_functions_percent": 57.89,
-      "fuzzy_match_percent": 21.24,
+      "matched_functions": 18,
+      "matched_functions_percent": 94.74,
+      "fuzzy_match_percent": 56.42,
       "functions": [
         {
           "name": "LawnBrainModule::createBrains",
           "size": 1428,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 22.97
         },
         {
           "name": "LawnBrainModule::registerForEvents",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnBrainModule::getMowerAnim",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnBrainModule::onBrainDie",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnBrainModule::initializeModule",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnBrainModule::GetEntryAnimDuration",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnBrainModule::getMowerAudio",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "LawnBrainModule::checkWin",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnBrainModule::StaticClassInit",
@@ -25281,6 +25245,18 @@
         {
           "name": "LawnBrainModule::StaticGetClass",
           "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnBrainModule::getMowerAnim",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnBrainModule::onBrainDie",
+          "size": 80,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25309,6 +25285,24 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "LawnBrainModule::initializeModule",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnBrainModule::GetEntryAnimDuration",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnBrainModule::getMowerAudio",
+          "size": 24,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "LawnBrainModule::~LawnBrainModule",
           "size": 20,
           "matched": true,
@@ -25317,6 +25311,12 @@
         {
           "name": "LawnBrainModule::~LawnBrainModule",
           "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "LawnBrainModule::checkWin",
+          "size": 16,
           "matched": true,
           "fuzzy_match_percent": 100.0
         },
@@ -25343,162 +25343,162 @@
     {
       "name": "src/PvZ2/Gameplay/Board/LawnDialog.cpp",
       "total_code": 8732,
-      "matched_code": 4,
-      "matched_code_percent": 0.05,
+      "matched_code": 7596,
+      "matched_code_percent": 86.99,
       "total_functions": 26,
-      "matched_functions": 1,
-      "matched_functions_percent": 3.85,
-      "fuzzy_match_percent": 0.05,
+      "matched_functions": 25,
+      "matched_functions_percent": 96.15,
+      "fuzzy_match_percent": 99.95,
       "functions": [
-        {
-          "name": "LawnDialog::Draw",
-          "size": 2428,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
         {
           "name": "LawnDialog::SetButtonImage",
           "size": 1136,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 99.65
+        },
+        {
+          "name": "LawnDialog::Draw",
+          "size": 2428,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::CalcSizeWithFont",
           "size": 892,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::CalcSizeWithPrimeFont",
           "size": 848,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::LawnDialog",
           "size": 644,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::LawnDialog",
           "size": 644,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::Resize",
           "size": 388,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::SetPlant",
           "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::SetPopAnim",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::~LawnDialog",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::~LawnDialog",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::Update",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::ButtonDepress",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::AddedToManager",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::RemovedFromManager",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::SetButtonDelay",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::CalcSize",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::KeyDown",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::GetWidth",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::~LawnDialog",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::ButtonPress",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::CheckboxChecked",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::GetTop",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::GetLeft",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::SetStaticImage",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnDialog::OrderInManagerChanged",
@@ -344107,22 +344107,16 @@
     {
       "name": "src/PvZ2/Profile/PlayerInfo.cpp",
       "total_code": 208240,
-      "matched_code": 31160,
-      "matched_code_percent": 14.96,
+      "matched_code": 39280,
+      "matched_code_percent": 18.86,
       "total_functions": 1112,
-      "matched_functions": 663,
-      "matched_functions_percent": 59.62,
-      "fuzzy_match_percent": 15.66,
+      "matched_functions": 664,
+      "matched_functions_percent": 59.71,
+      "fuzzy_match_percent": 19.56,
       "functions": [
         {
           "name": "PlayerInfo::unlockPurchasedItem",
           "size": 8440,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PlayerInfo::StaticClassInit",
-          "size": 8120,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -346807,6 +346801,12 @@
           "size": 52,
           "matched": false,
           "fuzzy_match_percent": 71.43
+        },
+        {
+          "name": "PlayerInfo::StaticClassInit",
+          "size": 8120,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerInfo::~PlayerInfo",

@@ -368,7 +368,7 @@ def mutate(fn, rng):
 
 
 def find_fn(text, cls, method):
-    pat = re.compile(rf'^[^\s/#][^\n]*\b{re.escape(cls)}::{re.escape(method)}\s*\(', re.M)
+    pat = re.compile(rf'^(?:[^\s/#][^\n]*\b)?{re.escape(cls)}::{re.escape(method)}\s*\(', re.M)
     x = pat.search(text)
     if not x:
         sys.exit(f'no definition of {cls}::{method} in the source')
