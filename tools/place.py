@@ -16,7 +16,7 @@ from lib.pvzelf import Elf
 UNPLACED = os.path.join(config.HERE, 'docs', 'unplaced-symbols.txt')
 GAP = 8192
 
-NS_DIRS = {'Lua': 'src/LuaEngine', 'Sexy': 'src/SexyAppFramework'}
+NS_DIRS = {'Lua': 'src/ThirdParty/Lua', 'Sexy': 'src/SexyAppFramework'}
 
 
 def qualifier(sym):

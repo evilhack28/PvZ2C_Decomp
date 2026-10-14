@@ -183,6 +183,40 @@ def _category(s):
     return None
 
 
+_SEXY_HOME = {
+    'Widgets': 'ButtonWidget Checkbox DialogButton EditWidget HyperlinkWidget ScrollbarWidget ScrollbuttonWidget Slider ScrollSnapper DefaultScrollSnapper Overlay Dialog Widget WidgetContainer WidgetManager',
+    'Graphics': 'CachedAtlasUVResult Color LightColors DeviceImage DrawBatcher GLMeshPiece GLTexHolder Graphics3D GraphicsAutoState GraphicsState HRenderContext Insets Level Region Tri TriRep MemoryImage Mesh MeshPiece SWHelper SharedRenderTarget Entry Pool ShaderLayout Transform Graphics SexyGraphics Image TextureRestitchBuffer',
+    'Render': 'NullRenderDevice Context JournalEntry State StateValue',
+    'Font': 'ActiveFontLayer ImageFont Font SysFont',
+    'Math': 'Bezier BSpline CurvedVal CurveCacheRecord FastCurve EaseFunction Interpolator MTRand MTAutoDisallowRand Ratio Point FPoint SPoint SexyMath SexyMathHermite SexyMatrix3 SexyMatrix4 SexyRay2 SexyTransform2D SexyTransform3D SexyVector2 SexyVector3 SexyVector4 SexyVertex2D SimpleMatrix',
+    'Events': 'Delegate0 DelegateBase Event0 EventBase',
+    'Network': 'NetworkServiceManager NetworkServiceRequest Channel Slot IAsyncNetworkTask IHttpListener IHttpTransaction INetworkStatusListener SexyURL',
+    'Leaderboard': 'LeaderboardEntry LeaderboardManager LeaderboardReadContext FieldData',
+    'drivers': 'IAchievementDriver IAntiHackDriver IAppDriver IDiagDriver IFile IFileDriver IFileSearch IGraphicsDriver IHttpDriver IInteractiveAudioCallbackListener IInteractiveAudioDriver ILeaderboardDriver IMEDispatcher IPaymentMonitor IProfileData IProfileDriver IPurchaseDriver IResStreamsDriver ISaveGameContext ISaveGameDriver Product Task TaskResource DriverExtensionSupport',
+    'drivers/app/android': 'CallbackInstanceEquals',
+    'drivers/savegame': 'FilesystemSaveGameContext',
+    'Android': 'ParamCollection ParamData ReceivedDataCallback',
+    'Sound': 'InteractiveSoundManager InteractiveSoundManagerConfig WwiseSoundManagerConfig',
+    'Res': 'ResourceManager ResourceClass ResourceGroup ResourceInfoClass GenericResFile GenericResFileRes ImageRes GetImageOptions PreLoadTask AutoInitResourceGen3 RSBDesc RSBPatcher RSBPatchGenerator',
+    'Parsing': 'JsonReader JsonWriter XMLElement XMLParser EncodingParser DescParser PropertiesParser Base64 Buffer CompiledMap Node',
+    'StructuredData': 'StructuredData StructuredDataValidator Value DataElement ListDataElement SingleDataElement',
+    'Rt': 'JsonParser FeastClient Key ReaderScope OfflineId Uid IteratorStorage SlotCompare TableOptions Reflection',
+    'Feast': 'Feast FeastClient',
+    'PA': 'PopAnimDef PopAnimRes PopLoc PopTransformMatrix PopAnim',
+    'Profile': 'ProfileManager NullProfileData',
+    'App': 'SexyApp SexyAppBase',
+    'System': 'AutoCrit CritSect Condition AutoModalFlags ModalFlags FlagsMod HWBRK PerfTimer ObjectPool SimpleMemPool MetricsManager Report Locale NativeDisplay Touch FileWriter NonCopyableClass SexyFunctions Debug',
+}
+_SEXY_DIR = {n: d for d, s in _SEXY_HOME.items() for n in s.split()}
+
+
+_LIB_HOME = {
+    'std': {'algorithm': '__adjacent_find __adjust_heap __chunk_insertion_sort __count_if __equal __equal_aux __fill_a __fill_n_a __final_insertion_sort __find_if __heap_select __inplace_stable_sort __insertion_sort __introsort_loop __lower_bound __make_heap __merge_adaptive __merge_sort_loop __merge_sort_with_buffer __merge_without_buffer __move_median_to_first __move_merge __move_merge_adaptive __move_merge_adaptive_backward __partial_sort __pop_heap __push_heap __remove_if __rotate __rotate_adaptive __sort __sort_heap __stable_sort __stable_sort_adaptive __unguarded_insertion_sort __unguarded_linear_insert __unguarded_partition __unguarded_partition_pivot __unique __upper_bound accumulate copy copy_backward count equal fill fill_n find find_if iter_swap lower_bound max max_element merge min min_element move move_backward partial_sum random_shuffle remove remove_if replace reverse rotate search set_intersection shuffle sort stable_sort swap swap_ranges transform unique __copy_move __copy_move_a __copy_move_a2 __copy_move_backward __copy_move_backward_a __copy_move_backward_a2', 'container': '_Base_bitset _Bit_const_iterator _Bit_iterator _Bit_iterator_base _Bit_reference _Bvector_base _Deque_base _Deque_iterator _Hash_impl _Hashtable _List_base _List_const_iterator _List_iterator _List_node _Rb_tree _Rb_tree_const_iterator _Rb_tree_iterator _Rb_tree_node _Rb_tree_node_base _Vector_base __shrink_to_fit_aux bitset deque list map multimap queue set stack unordered_map vector __detail', 'iterator': '__miter_base __niter_base __normal_iterator _Iter_base advance back_insert_iterator back_inserter begin distance end make_move_iterator move_iterator reverse_iterator', 'memory': '__aligned_buffer __alloc_traits __shared_count __shared_ptr __uninitialized_construct_buf __uninitialized_construct_buf_dispatch __uninitialized_copy __uninitialized_default_n __uninitialized_default_n_1 __uninitialized_fill_n _Construct _Destroy _Destroy_aux _Sp_counted_base _Sp_counted_deleter _Sp_counted_ptr _Sp_ebo_helper _Temporary_buffer addressof __addressof allocate_shared allocator allocator_traits auto_ptr get_temporary_buffer make_shared pointer_traits return_temporary_buffer shared_ptr uninitialized_copy uninitialized_fill_n unique_ptr new_allocator', 'functional': '_Any_data _Bind _Function_base _Function_handler _Head_base _Maybe_wrap_member_pointer _Mem_fn _Tuple_impl bind forward_as_tuple function make_tuple tuple __get_helper get', 'random': 'discrete_distribution generate_canonical linear_congruential_engine random_device uniform_int_distribution uniform_real_distribution', 'regex': 'basic_regex match_results regex_constants regex_match regex_traits sub_match', 'exception': '__exception_ptr bad_alloc bad_array_length bad_array_new_length bad_cast bad_exception bad_typeid exception', 'string': '__convert_to_v __ctype_abstract_base char_traits ctype ios_base string to_string use_facet', 'utility': '__atomic_base __is_null_pointer __make_move_if_noexcept_iterator __ops __pair_get atomic atomic_bool chrono floor forward initializer_list make_pair numeric_limits pair pow'},
+    'eastl': {'Algorithms': 'copy fill fill_imp find lower_bound upper_bound max_alt min_alt reverse search swap iter_swap iter_swap_impl', 'Iterators': 'advance distance generic_iterator', 'Memory': 'allocate_memory destruct uninitialized_copy_ptr uninitialized_fill_n_ptr CharStringUninitializedCopy', 'Containers': 'basic_string bitset BitsetBase bitvector bitvector_const_iterator bitvector_iterator bitvector_reference hash_map hash_node hash_set hashtable hashtable_find hashtable_iterator hashtable_iterator_base prime_rehash_policy rehash_base list map pair rbtree rbtree_iterator rbtree_node set vector VectorBase'},
+}
+_LIB_DIR = {(ns, n): d for ns, m in _LIB_HOME.items() for d, s in m.items() for n in s.split()}
+
+
 def relocate(repo_path):
     return canon(_relocate(repo_path))
 
@@ -197,6 +231,12 @@ def _relocate(repo_path):
         t = _hdr().get(_norm(stem))
         if t and t.startswith('src/PvZ2/'):
             return t
+    if parts[:2] == ['src', 'SexyAppFramework'] and (len(parts) == 3 or (len(parts) == 4 and len(parts[2]) == 1)):
+        home = _SEXY_DIR.get(stem)
+        if home:
+            return f'src/SexyAppFramework/{home}/{parts[-1]}'
+    if len(parts) == 4 and parts[:2] == ['src', 'ThirdParty'] and (parts[2], stem) in _LIB_DIR:
+        return f'src/ThirdParty/{parts[2]}/{_LIB_DIR[parts[2], stem]}/{parts[-1]}'
     if len(parts) >= 4 and parts[2] in _SUBDIR_MOVE:
         parts[2] = _SUBDIR_MOVE[parts[2]]
         return '/'.join(parts)
@@ -421,8 +461,8 @@ def nonclass_home(sym, hdr):
     ns = _LIB_NS.get(ns, ns)
     if free or not name:
         base = {'Sexy': 'src/SexyAppFramework/SexyFunctions', 'EA': 'src/SexyAppFramework/EATech/EAFunctions',
-                None: 'src/PvZ2/Data/GlobalFunctions', 'c': 'src/ThirdParty/c/RuntimeSymbols',
-                'misc': 'src/ThirdParty/misc/Unclassified'}.get(ns)
+                None: 'src/PvZ2/Data/GlobalFunctions', 'c': 'src/ThirdParty/CLibraries/RuntimeSymbols',
+                'misc': 'src/ThirdParty/Unclassified'}.get(ns)
         return (base or f'src/ThirdParty/{ns}/{ns}Functions') + '.cpp'
     if ns == 'Sexy':
         return hdr.get(_norm(name)) or f'src/SexyAppFramework/Templates/{name}.cpp'
@@ -520,12 +560,6 @@ def split_dir(d, keys, real, limit=30, min_group=4, taken=None):
             for k, nk in inner.items():
                 moves[k] = deeper.get(nk, nk)
     rest = [k for k in keys if k not in moves and k not in real]
-    letters = collections.Counter(lead[k] for k in rest)
-    if len(rest) > 2 * limit and len(letters) >= 6 and max(letters.values()) <= len(rest) // 2:
-        for k in rest:
-            letter = lead[k]
-            if f'{d}/{letter}'.lower() not in (taken or ()):
-                moves[k] = f'{d}/{letter}/{k.rsplit("/", 1)[1]}'
     return moves
 
 
