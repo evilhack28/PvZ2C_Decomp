@@ -8,6 +8,12 @@
 #include "SexyAppFramework/Common.h"
 
 #include "Reflection.h"
+#include "ReflectionBuilder.h"
+#include "Point.h"
+#include "Rect.h"
+#include "Color.h"
+#include "SexyVector.h"
+#include "CurvedVal.h"
 
 RT_CLASS_IMPLEMENT(Reflection::RSymbol);
 RT_CLASS_IMPLEMENT_ABSTRACT(Reflection::RType);
@@ -73,7 +79,7 @@ public:
 
 	virtual RAttribute* BuildAttribute(const std::string& inName, const CRefAttributeVariant& inValue) override;
 
-	void InitCommonTypes();
+	void InitCommonTypes() __attribute__((used));
 };
 
 /////////////// CRefNamedSymbolCollection ///////////////
@@ -1138,13 +1144,13 @@ std::string RClass::InstanceToString(const void* inInstancePtr) const
 	std::vector<CRefInvokeVariant> args;
 	CRefInvokeVariant returnValue;
 	uint32 argCount = methodType->GetArgTypeCount();
-	if (argCount == 3)
+	if (__builtin_expect(argCount == 2, 0))
+		goto addBuffer;
+	if (__builtin_expect(argCount == 3, 0))
 	{
 		args.push_back(CRefInvokeVariant(inInstancePtr));
 		inInstancePtr = NULL;
-	}
-	if (argCount == 2 || argCount == 3)
-	{
+	addBuffer:
 		args.push_back(CRefInvokeVariant((const void*)buffer));
 		args.push_back(CRefInvokeVariant((uint32)sizeof(buffer)));
 	}
@@ -1153,11 +1159,536 @@ std::string RClass::InstanceToString(const void* inInstancePtr) const
 	return StrFormat("(%s)", GetName());
 }
 
+bool RClass::InstanceRtonSync(void* inInstancePtr, RtSerialRtonSync* inSync, const RtSerialRtonKey& inKey, const std::vector<std::string>& inMemberWildcards) const
+{
+	bool result = inSync->SyncBeginObject(inKey);
+	if (result)
+	{
+		const TRefNamedSymbolCollection<RField>* fields = GetFields(true);
+		uint32 fieldCount = fields->GetCount();
+		const TRefNamedSymbolCollection<RProperty>* properties = GetProperties(true);
+		uint32 propertyCount = properties->GetCount();
+		if (inSync->IsReading())
+		{
+			RtSerialRtonReader::Value scope = inSync->GetReader()->GetCurrentScope();
+			for (uint32 i = 0; i < fieldCount; i++)
+			{
+				RField* field = fields->GetIndexed(i);
+				RtSerialRtonReader::Key child = scope.GetChildNamed(field->GetName());
+				if (child.IsValid())
+					field->InstanceRtonSync(inInstancePtr, inSync, field->GetName());
+			}
+			for (uint32 i = 0; i < propertyCount; i++)
+			{
+				RProperty* property = properties->GetIndexed(i);
+				if (property->GetIsShadowed())
+					continue;
+				RtSerialRtonReader::Key child = scope.GetChildNamed(property->GetName());
+				if (!child.IsValid())
+					continue;
+				RMethod* setter = property->GetPropertySetterMethod();
+				if (setter && setter->CanInvokeSerialCommand(inInstancePtr != NULL))
+				{
+					RtSerialRtonWriter writer;
+					writer.BeginDocumentObject();
+					writer.BeginObject("returns");
+					{
+						RtSerialCommand command(1, inSync->GetReader(), &writer, property->GetName(), "*");
+						std::vector<CRefInvokeVariant> args;
+						args.push_back(CRefInvokeVariant(&command));
+						CRefInvokeVariant returnValue;
+						setter->Invoke(&returnValue, inInstancePtr, args);
+					}
+					writer.EndObject();
+					writer.EndDocumentObject();
+				}
+			}
+		}
+		else if (!inMemberWildcards.empty())
+		{
+			uint32 wildcardCount = (uint32)inMemberWildcards.size();
+			for (uint32 i = 0; i < fieldCount; i++)
+			{
+				RField* field = fields->GetIndexed(i);
+				for (uint32 j = 0; j < wildcardCount; j++)
+				{
+					if (StringWildcardMatches(inMemberWildcards[j], field->GetName(), false))
+					{
+						field->InstanceRtonSync(inInstancePtr, inSync, field->GetName());
+						break;
+					}
+				}
+			}
+			for (uint32 i = 0; i < propertyCount; i++)
+			{
+				RProperty* property = properties->GetIndexed(i);
+				if (property->GetIsShadowed())
+					continue;
+				std::string lowerName = Lower(property->GetName());
+				for (uint32 j = 0; j < wildcardCount; j++)
+				{
+					if (StringWildcardMatches(inMemberWildcards[j], lowerName, false))
+					{
+						RMethod* getter = property->GetPropertyGetterMethod();
+						if (getter && getter->CanInvokeSerialCommand(inInstancePtr != NULL))
+						{
+							RtSerialCommand command(0, NULL, inSync->GetWriter(), "", property->GetName());
+							std::vector<CRefInvokeVariant> args;
+							args.push_back(CRefInvokeVariant(&command));
+							CRefInvokeVariant returnValue;
+							getter->Invoke(&returnValue, inInstancePtr, args);
+						}
+						break;
+					}
+				}
+			}
+		}
+		else
+		{
+			for (uint32 i = 0; i < fieldCount; i++)
+			{
+				RField* field = fields->GetIndexed(i);
+				field->InstanceRtonSync(inInstancePtr, inSync, field->GetName());
+			}
+			for (uint32 i = 0; i < propertyCount; i++)
+			{
+				RProperty* property = properties->GetIndexed(i);
+				if (property->GetIsShadowed())
+					continue;
+				RMethod* getter = property->GetPropertyGetterMethod();
+				if (getter && getter->CanInvokeSerialCommand(inInstancePtr != NULL))
+				{
+					RtSerialCommand command(0, NULL, inSync->GetWriter(), "", property->GetName());
+					std::vector<CRefInvokeVariant> args;
+					args.push_back(CRefInvokeVariant(&command));
+					CRefInvokeVariant returnValue;
+					getter->Invoke(&returnValue, inInstancePtr, args);
+				}
+			}
+		}
+		inSync->SyncEndObject();
+	}
+	return result;
+}
+
+bool RClass::InstanceNavigatePath(void*& ioInstancePtr, std::string& ioPath, RType*& outType) const
+{
+	std::string name;
+	std::string rest;
+	size_t dot = ioPath.find('.', 0);
+	size_t bracket = ioPath.find('[', 0);
+	size_t pos = std::string::npos;
+	int skip = 0;
+	if (dot == std::string::npos)
+	{
+		if (bracket != std::string::npos)
+			pos = bracket;
+	}
+	else if (bracket == std::string::npos)
+	{
+		pos = dot;
+		skip = 1;
+	}
+	else if (dot < bracket)
+	{
+		pos = dot;
+		skip = 1;
+	}
+	else
+		pos = bracket;
+	if (pos != std::string::npos)
+	{
+		name = ioPath.substr(0, pos);
+		rest = ioPath.substr(pos + skip);
+	}
+	else
+		name = ioPath;
+
+	RField* field = GetFields(true)->GetNamed(name);
+	if (!field)
+	{
+		RProperty* property = GetProperties(true)->GetNamed(name);
+		if (!property)
+			ioPath = "";
+		return false;
+	}
+	ioInstancePtr = (uint8*)ioInstancePtr + field->GetFieldOffset();
+	ioPath = rest;
+	RType* type = field->GetType();
+	outType = type;
+	if (ioPath.empty())
+		return true;
+	return type->InstanceNavigatePath(ioInstancePtr, ioPath, outType);
+}
+
+RMethod* RClass::FindVirtualBaseMethod(RMethod* inMethod)
+{
+	for (int i = 0; i < (int)mMethods.GetCount(); i++)
+	{
+		RMethod* method = mMethods.GetIndexed(i);
+		if (strcmp(method->GetName(), inMethod->GetName()) == 0)
+		{
+			if (method->GetType()->TypeEquals(inMethod->GetType(), true))
+				return method;
+		}
+	}
+	for (int i = 0; i < (int)mAncestors.GetCount(); i++)
+	{
+		RClass* base = mAncestors.GetIndexed(i)->GetRClass();
+		if (base)
+		{
+			RMethod* found = base->FindVirtualBaseMethod(inMethod);
+			if (found)
+				return found;
+		}
+	}
+	return NULL;
+}
+
+void RClass::ResolveVirtualBases()
+{
+	if (mClassFlags & CF_ResolvedVirtualBases)
+		return;
+	mClassFlags |= CF_ResolvedVirtualBases;
+
+	int a;
+	int m;
+	for (a = 0; a < (int)mAncestors.GetCount(); a++)
+	{
+		RClass* base = mAncestors.GetIndexed(a)->GetRClass();
+		if (base)
+			base->ResolveVirtualBases();
+	}
+	for (m = 0; m < (int)mMethods.GetCount(); m++)
+	{
+		RMethod* method = mMethods.GetIndexed(m);
+		if (!method->GetIsVirtual() || method->GetVirtualBase())
+			continue;
+		for (a = 0; a < (int)mAncestors.GetCount(); a++)
+		{
+			RClass* base = mAncestors.GetIndexed(a)->GetRClass();
+			if (base)
+			{
+				method->mVirtualBase = base->FindVirtualBaseMethod(method);
+				if (method->GetVirtualBase())
+					break;
+			}
+		}
+	}
+	for (m = 0; m < (int)mMethods.GetCount(); m++)
+	{
+		RMethod* method = mMethods.GetIndexed(m);
+		if (method->GetIsVirtual() && method->GetVtblOffset() == (uint32)-1)
+		{
+			for (RMethod* base = method->GetVirtualBase(); base; base = base->GetVirtualBase())
+			{
+				if (base->GetVtblOffset() != (uint32)-1)
+				{
+					method->mVtblOffset = base->GetVtblOffset();
+					break;
+				}
+			}
+		}
+	}
+	for (a = 0; a < (int)mAncestors.GetCount(); a++)
+	{
+		RClass* base = mAncestors.GetIndexed(a)->GetRClass();
+		if (!base)
+			continue;
+		if (mVtblSize < base->GetVtblSize())
+			mVtblSize = base->GetVtblSize();
+	}
+}
+
+/////////////// RMethod ///////////////
+
+bool RMethod::Invoke(CRefInvokeVariant* outReturnValue, void* inThis, const std::vector<CRefInvokeVariant>& inArgs)
+{
+	if (!mMethodDelegate)
+		return false;
+
+	RFunctionType* methodType = (RFunctionType*)GetType();
+	if (methodType->GetThisType() && !mMethodDelegate->NeedsInstanceContext())
+	{
+		std::vector<CRefInvokeVariant> tempArgs = inArgs;
+		tempArgs.insert(tempArgs.begin(), inThis);
+		mMethodDelegate->Invoke(outReturnValue, &tempArgs[0]);
+	}
+	else
+		mMethodDelegate->Invoke(inThis, outReturnValue, inArgs.empty() ? NULL : &inArgs[0]);
+	return true;
+}
+
+/////////////// REvent ///////////////
+
+bool REvent::Connect(void* inThis, void* inMethodContext, RMethod* inMethod)
+{
+	bool result = false;
+	if (inMethod && inMethod->mMethodDelegate)
+	{
+		RFunctionType* methodType = (RFunctionType*)inMethod->GetType();
+		bool isInstanceMethod = methodType->GetThisType() != NULL;
+		if (isInstanceMethod == inMethod->mMethodDelegate->NeedsInstanceContext())
+		{
+			RFunctionType* eventType = (RFunctionType*)GetType();
+			result = methodType->GetReturnType()->TypeEquals(eventType->GetReturnType(), true, false);
+			if (result)
+			{
+				if (methodType->GetArgTypeCount() == eventType->GetArgTypeCount())
+				{
+					for (uint32 i = 0; i < methodType->GetArgTypeCount(); i++)
+					{
+						if (!methodType->GetArgTypeIndexed(i)->TypeEquals(eventType->GetArgTypeIndexed(i), true, false))
+						{
+							result = false;
+							goto done;
+						}
+					}
+					void* oldContext = inMethod->mMethodDelegate->GetInstanceContext();
+					inMethod->mMethodDelegate->SetInstanceContext(inMethodContext);
+					EventBase* event = (EventBase*)((uint8*)inThis + GetEventOffset());
+					event->ConnectUnsafe(inMethod->mMethodDelegate, false);
+					inMethod->mMethodDelegate->SetInstanceContext(oldContext);
+				}
+				else
+					result = false;
+			}
+		}
+	}
+done:
+	return result;
+}
+
+bool REvent::Disconnect(void* inThis, void* inMethodContext, RMethod* inMethod)
+{
+	bool result = false;
+	if (inMethod && inMethod->mMethodDelegate)
+	{
+		RFunctionType* methodType = (RFunctionType*)inMethod->GetType();
+		bool isInstanceMethod = methodType->GetThisType() != NULL;
+		if (isInstanceMethod == inMethod->mMethodDelegate->NeedsInstanceContext())
+		{
+			RFunctionType* eventType = (RFunctionType*)GetType();
+			result = methodType->GetReturnType()->TypeEquals(eventType->GetReturnType(), true, false);
+			if (result)
+			{
+				if (methodType->GetArgTypeCount() == eventType->GetArgTypeCount())
+				{
+					for (uint32 i = 0; i < methodType->GetArgTypeCount(); i++)
+					{
+						if (!methodType->GetArgTypeIndexed(i)->TypeEquals(eventType->GetArgTypeIndexed(i), true, false))
+						{
+							result = false;
+							goto done;
+						}
+					}
+					void* oldContext = inMethod->mMethodDelegate->GetInstanceContext();
+					inMethod->mMethodDelegate->SetInstanceContext(inMethodContext);
+					EventBase* event = (EventBase*)((uint8*)inThis + GetEventOffset());
+					event->DisconnectUnsafe(inMethod->mMethodDelegate);
+					inMethod->mMethodDelegate->SetInstanceContext(oldContext);
+				}
+				else
+					result = false;
+			}
+		}
+	}
+done:
+	return result;
+}
+
+bool REvent::StaticInvokeSerialCommand(RtSerialRtonReader* inReader, RtSerialRtonWriter* inWriter)
+{
+	bool result = !inReader || !inWriter;
+	if (result || !inReader->BeginDocumentObject())
+		return false;
+
+	RtId methodId = inReader->ReadRtId("event");
+	RtId thisId = inReader->ReadRtId("this");
+	REvent* event = RtDb::GetDb()->GetObjectForId(methodId)->Cast<REvent>();
+	RtObject* thisObject = RtDb::GetDb()->GetObjectForId(thisId);
+	if (thisObject && event && event->GetIsSerialCommand())
+	{
+		result = true;
+		uint32 argCount = 0;
+		bool hasArgs = inReader->BeginArray("args", argCount);
+		inWriter->BeginDocumentObject();
+		inWriter->BeginObject("returns");
+		{
+			RtSerialCommand command(argCount, hasArgs ? inReader : NULL, inWriter, "", "*");
+			std::vector<CRefInvokeVariant> args;
+			args.push_back(CRefInvokeVariant(&command));
+			CRefInvokeVariant returnValue;
+			event->Invoke(&returnValue, thisObject, args);
+		}
+		inWriter->EndObject();
+		inWriter->EndDocumentObject();
+		if (hasArgs)
+			inReader->EndArray();
+		inReader->EndDocumentObject();
+	}
+	else
+	{
+		result = false;
+		inReader->EndDocumentObject();
+	}
+	return result;
+}
+
+bool REvent::Invoke(CRefInvokeVariant* outReturnValue, void* inThis, const std::vector<CRefInvokeVariant>& inArgs)
+{
+	if (!inThis)
+		return false;
+	EventBase* event = (EventBase*)((uint8*)inThis + GetEventOffset());
+	event->Invoke(outReturnValue, inArgs.empty() ? NULL : &inArgs[0]);
+	return true;
+}
+
+bool RMethod::StaticInvokeSerialCommand(RtSerialRtonReader* inReader, RtSerialRtonWriter* inWriter)
+{
+	bool result = !inReader || !inWriter;
+	if (result || !inReader->BeginDocumentObject())
+		return false;
+
+	RtId methodId = inReader->ReadRtId("method");
+	RtId thisId = inReader->ReadRtId("this");
+	RMethod* method = RtDb::GetDb()->GetObjectForId(methodId)->Cast<RMethod>();
+	RtObject* thisObject = RtDb::GetDb()->GetObjectForId(thisId);
+	if (method && method->CanInvokeSerialCommand(thisObject != NULL))
+	{
+		result = true;
+		uint32 argCount = 0;
+		bool hasArgs = inReader->BeginArray("args", argCount);
+		inWriter->BeginDocumentObject();
+		inWriter->BeginObject("returns");
+		{
+			RtSerialCommand command(argCount, hasArgs ? inReader : NULL, inWriter, "", "*");
+			std::vector<CRefInvokeVariant> args;
+			args.push_back(CRefInvokeVariant(&command));
+			CRefInvokeVariant returnValue;
+			method->Invoke(&returnValue, thisObject, args);
+		}
+		inWriter->EndObject();
+		inWriter->EndDocumentObject();
+		if (hasArgs)
+			inReader->EndArray();
+		inReader->EndDocumentObject();
+	}
+	else
+	{
+		result = false;
+		inReader->EndDocumentObject();
+	}
+	return result;
+}
+
 /////////////// REnum ///////////////
 
 void REnum::LoadEnum()
 {
 	mSymbolDb->mBuilder->BuildEnum(this);
+}
+
+std::string REnum::InstanceToString(const void* inInstancePtr) const
+{
+	if (GetIsFlags())
+	{
+		uint32 value = *(const uint32*)inInstancePtr;
+		std::string result;
+		const TRefNamedSymbolCollection<REnumMember>* members = GetMembers();
+		for (uint32 i = 0; i < members->GetCount(); i++)
+		{
+			REnumMember* member = members->GetIndexed(i);
+			uint32 memberValue = member->GetValue();
+			if ((memberValue & value) && ((memberValue - 1) & memberValue) == 0)
+			{
+				if (!result.empty())
+					result += "|";
+				result += member->GetName();
+			}
+		}
+		if (result.empty())
+			result = "0";
+		return result;
+	}
+
+	REnumMember* member = GetMembers()->GetByValue(*(const uint32*)inInstancePtr);
+	if (member)
+		return member->GetName();
+	return StrFormat("%d", *(const uint32*)inInstancePtr);
+}
+
+bool REnum::InstanceRtonSync(void* inInstancePtr, RtSerialRtonSync* inSync, const RtSerialRtonKey& inKey) const
+{
+	if (inSync->IsWriting())
+	{
+		RtSerialRtonWriter* writer = inSync->GetWriter();
+		if (GetIsFlags())
+		{
+			std::string result;
+			const TRefNamedSymbolCollection<REnumMember>* members = GetMembers();
+			for (uint32 i = 0; i < members->GetCount(); i++)
+			{
+				REnumMember* member = members->GetIndexed(i);
+				uint32 memberValue = member->GetValue();
+				if ((memberValue & *(uint32*)inInstancePtr) && ((memberValue - 1) & memberValue) == 0)
+				{
+					if (!result.empty())
+						result += "|";
+					result += member->GetName();
+				}
+			}
+			if (result.empty())
+				result = "0";
+			writer->WriteString(inKey, result, true);
+		}
+		else
+		{
+			REnumMember* member = GetMembers()->GetByValue(*(uint32*)inInstancePtr);
+			if (member)
+				writer->WriteString(inKey, member->GetName(), true);
+			else
+				writer->WriteUInt32(inKey, *(uint32*)inInstancePtr);
+		}
+	}
+	else
+	{
+		RtSerialRtonReader* reader = inSync->GetReader();
+		if (GetIsFlags())
+		{
+			std::string text = reader->ReadString(inKey, "");
+			const TRefNamedSymbolCollection<REnumMember>* members = GetMembers();
+			for (;;)
+			{
+				size_t separator = text.find('|', 0);
+				if (separator == std::string::npos)
+					break;
+				std::string name = Trim(text.substr(0, separator));
+				REnumMember* member = members->GetNamed(name);
+				if (member)
+					*(uint32*)inInstancePtr = member->GetValue();
+				else
+					*(uint32*)inInstancePtr = atoi(name.c_str());
+				text = text.substr(separator + 1, std::string::npos);
+			}
+			std::string name = Trim(text);
+			REnumMember* member = members->GetNamed(name);
+			if (member)
+				*(uint32*)inInstancePtr = member->GetValue();
+			else
+				*(uint32*)inInstancePtr = atoi(name.c_str());
+		}
+		else
+		{
+			std::string name = Trim(reader->ReadString(inKey, ""));
+			REnumMember* member = GetMembers()->GetNamed(name);
+			if (member)
+				*(uint32*)inInstancePtr = member->GetValue();
+			else
+				*(uint32*)inInstancePtr = atoi(name.c_str());
+		}
+	}
+	return true;
 }
 
 /////////////// RField ///////////////
@@ -1480,6 +2011,115 @@ RNamedType* CRefManualSymbolBuilder::GetNamedType(const std::string& inName)
 	return type;
 }
 
+inline void CRefManualSymbolBuilder::InitCommonTypes()
+{
+	using namespace Sexy;
+
+	REFLECTION_CLASSBUILDER_BEGIN(Point);
+		REFLECTION_CLASSBUILDER_CLASSATTRIBUTE(PropGrid.PodType, "true");
+		REFLECTION_CLASSBUILDER_FIELD(int, mX);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "X");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.LinkedAxisY, "mY");
+		REFLECTION_CLASSBUILDER_FIELD(int, mY);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "Y");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.LinkedAxisX, "mX");
+	REFLECTION_CLASSBUILDER_END(Point);
+
+	REFLECTION_CLASSBUILDER_BEGIN(FPoint);
+		REFLECTION_CLASSBUILDER_CLASSATTRIBUTE(PropGrid.PodType, "true");
+		REFLECTION_CLASSBUILDER_FIELD(float, mX);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "X");
+		REFLECTION_CLASSBUILDER_FIELD(float, mY);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "Y");
+	REFLECTION_CLASSBUILDER_END(FPoint);
+
+	REFLECTION_CLASSBUILDER_BEGIN(DPoint);
+		REFLECTION_CLASSBUILDER_CLASSATTRIBUTE(PropGrid.PodType, "true");
+		REFLECTION_CLASSBUILDER_FIELD(double, mX);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "X");
+		REFLECTION_CLASSBUILDER_FIELD(double, mY);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "Y");
+	REFLECTION_CLASSBUILDER_END(DPoint);
+
+	REFLECTION_CLASSBUILDER_BEGIN(Rect);
+		REFLECTION_CLASSBUILDER_CLASSATTRIBUTE(PropGrid.PodType, "true");
+		REFLECTION_CLASSBUILDER_FIELD(int, mX);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "X");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.LinkedAxisY, "mY");
+		REFLECTION_CLASSBUILDER_FIELD(int, mY);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "Y");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.LinkedAxisX, "mX");
+		REFLECTION_CLASSBUILDER_FIELD(int, mWidth);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "W");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.LinkedAxisY, "mHeight");
+		REFLECTION_CLASSBUILDER_FIELD(int, mHeight);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "H");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.LinkedAxisX, "mWidth");
+	REFLECTION_CLASSBUILDER_END(Rect);
+
+	REFLECTION_CLASSBUILDER_BEGIN(FRect);
+		REFLECTION_CLASSBUILDER_CLASSATTRIBUTE(PropGrid.PodType, "true");
+		REFLECTION_CLASSBUILDER_FIELD(float, mX);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "X");
+		REFLECTION_CLASSBUILDER_FIELD(float, mY);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "Y");
+		REFLECTION_CLASSBUILDER_FIELD(float, mWidth);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "W");
+		REFLECTION_CLASSBUILDER_FIELD(float, mHeight);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "H");
+	REFLECTION_CLASSBUILDER_END(FRect);
+
+	REFLECTION_CLASSBUILDER_BEGIN(DRect);
+		REFLECTION_CLASSBUILDER_CLASSATTRIBUTE(PropGrid.PodType, "true");
+		REFLECTION_CLASSBUILDER_FIELD(double, mX);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "X");
+		REFLECTION_CLASSBUILDER_FIELD(double, mY);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "Y");
+		REFLECTION_CLASSBUILDER_FIELD(double, mWidth);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "W");
+		REFLECTION_CLASSBUILDER_FIELD(double, mHeight);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "H");
+	REFLECTION_CLASSBUILDER_END(DRect);
+
+	REFLECTION_CLASSBUILDER_BEGIN(Color);
+		REFLECTION_CLASSBUILDER_CLASSATTRIBUTE(PropGrid.PodType, "true");
+		REFLECTION_CLASSBUILDER_FIELD(int, mRed);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "R");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.MaxVal, "255");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.MinVal, "0");
+		REFLECTION_CLASSBUILDER_FIELD(int, mGreen);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "G");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.MaxVal, "255");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.MinVal, "0");
+		REFLECTION_CLASSBUILDER_FIELD(int, mBlue);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "B");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.MaxVal, "255");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.MinVal, "0");
+		REFLECTION_CLASSBUILDER_FIELD(int, mAlpha);
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(DisplayName, "A");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.MaxVal, "255");
+			REFLECTION_CLASSBUILDER_MEMBERATTRIBUTE(PropGrid.MinVal, "0");
+	REFLECTION_CLASSBUILDER_END(Color);
+	REFLECTION_CLASSBUILDER_BEGIN(SexyVector2);
+		REFLECTION_CLASSBUILDER_FIELD(float, x);
+		REFLECTION_CLASSBUILDER_FIELD(float, y);
+	REFLECTION_CLASSBUILDER_END(SexyVector2);
+	REFLECTION_CLASSBUILDER_BEGIN(SexyVector3);
+		REFLECTION_CLASSBUILDER_FIELD(float, x);
+		REFLECTION_CLASSBUILDER_FIELD(float, y);
+		REFLECTION_CLASSBUILDER_FIELD(float, z);
+	REFLECTION_CLASSBUILDER_END(SexyVector3);
+	struct LocalCurvedValProperties
+	{
+		static std::string GetCurveStr(CurvedVal* inCurvedVal) { return inCurvedVal->GetCurveStr(); }
+		static void SetCurveStr(CurvedVal* inCurvedVal, const std::string& inCurveStr) { inCurvedVal->SetCurveStr(inCurveStr); }
+	};
+
+	REFLECTION_CLASSBUILDER_BEGIN(CurvedVal);
+		REFLECTION_CLASSBUILDER_COMMANDPROPERTY_AUTO_STATIC(std::string, Data, LocalCurvedValProperties::GetCurveStr, LocalCurvedValProperties::SetCurveStr);
+	REFLECTION_CLASSBUILDER_END(CurvedVal);
+}
+
 RAncestor* CRefManualSymbolBuilder::BuildAncestor(RClass* inClass, RClass* inAncestorClass, uint32 inOffset)
 {
 	RAncestor* ancestor = new RAncestor;
@@ -1557,6 +2197,544 @@ RAttribute* CRefManualSymbolBuilder::BuildAttribute(const std::string& inName, c
 	attribute->mMethod = NULL;
 	attribute->mValue = inValue;
 	return attribute;
+}
+
+/////////////// CRefManualTypeBuilder ///////////////
+
+RType* CRefManualTypeBuilder::BuildNamedType(IRefManualSymbolBuilder* inBuilder, const std::string& inTypeName)
+{
+	return inBuilder->GetNamedType(inTypeName);
+}
+
+std::string CRefManualTypeBuilder::StripPointerFromTypeName(const std::string& inTypeName)
+{
+	if (inTypeName.empty())
+	{
+		OutputDebugStrF("CRefManualTypeBuilder::StripPointerFromTypeName: empty type name, probably resulting from a GetType<T>() without an inTypeName argument");
+		return "";
+	}
+	size_t last = inTypeName.size() - 1;
+	char c = inTypeName[last];
+	if (c == '&' || c == '*')
+		return inTypeName.substr(0, last);
+	return inTypeName;
+}
+
+std::string CRefManualTypeBuilder::GetInnerTemplateTypeName(const std::string& inTypeName)
+{
+	if (inTypeName.empty())
+	{
+		OutputDebugStrF("CRefManualTypeBuilder::GetInnerTemplateTypeName: empty type name, probably resulting from a GetType<T>() without an inTypeName argument");
+		return "";
+	}
+	size_t last = inTypeName.size() - 1;
+	if (inTypeName[last] != '>')
+		return inTypeName;
+	std::string stripped = inTypeName.substr(0, last);
+	size_t open = stripped.find('<', 0);
+	if (open == std::string::npos)
+		return inTypeName;
+	return Trim(stripped.substr(open + 1, std::string::npos));
+}
+
+std::string CRefManualTypeBuilder::GetMapInnerTemplateTypeName(const std::string& inTypeName)
+{
+	if (__builtin_expect(inTypeName.empty(), 0))
+	{
+		OutputDebugStrF("CRefManualTypeBuilder::GetMapInnerTemplateTypeName: empty type name, probably resulting from a GetType<T>() without an inTypeName argument");
+		return "";
+	}
+	size_t comma;
+	if (inTypeName[inTypeName.size() - 1] == '>' && inTypeName.find('<', 0) != std::string::npos && (comma = inTypeName.find("RT_COMMA", 0)) != std::string::npos)
+	{
+		std::string inner = inTypeName.substr(comma + 8, std::string::npos);
+		inner = inner.substr(0, inner.size() - 1);
+		return Trim(inner);
+	}
+	return inTypeName;
+}
+
+std::string CRefManualTypeBuilder::GetEmbeddedInnerTemplateTypeName(const std::string& inTypeName)
+{
+	if (__builtin_expect(inTypeName.empty(), 0))
+	{
+		OutputDebugStrF("CRefManualTypeBuilder::GetEmbeddedInnerTemplateTypeName: empty type name, probably resulting from a GetType<T>() without an inTypeName argument");
+		return "";
+	}
+	size_t comma;
+	if (inTypeName[inTypeName.size() - 1] == '>' && (comma = inTypeName.find("RT_COMMA", 0)) != std::string::npos)
+	{
+		std::string first = inTypeName.substr(0, comma - 1);
+		size_t open = first.find('<', 0);
+		if (__builtin_expect(open == std::string::npos, 0))
+			return inTypeName;
+		return Trim(first.substr(open + 1, std::string::npos));
+	}
+	return inTypeName;
+}
+
+/////////////// CRefSymbolDb ///////////////
+
+uint32 CRefSymbolDb::sStringFlags = 0;
+
+CRefSymbolDb::CRefSymbolDb()
+: mBuilder(NULL)
+, mManualSymbolBuilder(NULL)
+, mFullyLoaded(false)
+{
+}
+
+CRefSymbolDb::~CRefSymbolDb()
+{
+	if (mBuilder)
+	{
+		mBuilder->BuilderDestroy();
+		mBuilder = NULL;
+	}
+}
+
+CRefSymbolDb* CRefSymbolDb::GetManualReflection()
+{
+	static CRefSymbolDb* sManualReflection = NULL;
+	CRefSymbolDb* db = sManualReflection;
+	if (!db)
+	{
+		db = new CRefSymbolDb;
+		sManualReflection = db;
+		db->GetManualSymbolBuilder();
+		db = sManualReflection;
+	}
+	return db->GetIsInitialized() ? db : NULL;
+}
+
+IRefManualSymbolBuilder* CRefSymbolDb::GetManualSymbolBuilder()
+{
+	if (mManualSymbolBuilder)
+		return mManualSymbolBuilder;
+	CRefManualSymbolBuilder* builder = new CRefManualSymbolBuilder(this);
+	mManualSymbolBuilder = builder;
+	mBuilder = builder;
+	builder->InitCommonTypes();
+	return mManualSymbolBuilder;
+}
+
+static void WriteSymbolAttributes(RSymbol* inSymbol, RtSerialRtonWriter* ioWriter)
+{
+	const TRefNamedSymbolCollection<RAttribute>* attributes = inSymbol->GetAttributes();
+	uint32 count = attributes->GetCount();
+	if (count == 0)
+		return;
+
+	ioWriter->BeginArray("attribs", count, RtSerialRtonTag::Object);
+	for (uint32 i = 0; i < count; i++)
+	{
+		RAttribute* attribute = attributes->GetIndexed(i);
+		const CRefAttributeVariant* value = attribute->GetValue();
+		ioWriter->BeginObject(NULL);
+		ioWriter->WriteString("name", attribute->GetName(), true);
+		switch (value->mType)
+		{
+		case CRefAttributeVariant::VT_Bool:
+			ioWriter->WriteBool("value", value->mUInt32 != 0);
+			break;
+		case CRefAttributeVariant::VT_UInt32:
+			ioWriter->WriteInt32VarU("value", value->mUInt32);
+			break;
+		case CRefAttributeVariant::VT_SInt32:
+			ioWriter->WriteInt32VarS("value", value->mSInt32);
+			break;
+		case CRefAttributeVariant::VT_Float:
+			ioWriter->WriteFloat("value", value->mFloat);
+			break;
+		case CRefAttributeVariant::VT_UInt64:
+			ioWriter->WriteInt64VarU("value", value->mUInt64);
+			break;
+		case CRefAttributeVariant::VT_SInt64:
+			ioWriter->WriteInt64VarS("value", value->mSInt64);
+			break;
+		case CRefAttributeVariant::VT_Double:
+			ioWriter->WriteDouble("value", value->mDouble);
+			break;
+		case CRefAttributeVariant::VT_String:
+			ioWriter->WriteString("value", value->mString, false);
+			break;
+		case CRefAttributeVariant::VT_WString:
+			ioWriter->WriteUTF8String("value", value->mWString, false);
+			break;
+		case CRefAttributeVariant::VT_RtId:
+			ioWriter->WriteRtId("value", RtId(value->mUInt64));
+			break;
+		default:
+			ioWriter->WriteInt32VarU("value", 0);
+			break;
+		}
+		ioWriter->EndObject();
+	}
+	ioWriter->EndArray();
+}
+
+bool CRefSymbolDb::WriteRtonRepresentation(RtSerialBuffer* inBuffer)
+{
+	EnsureFullyLoaded();
+	RtSerialRtonWriter writer(inBuffer);
+	writer.BeginDocumentObject();
+	writer.WriteInt32VarU("version", 1);
+
+	writer.BeginArray("types", mTypes.GetCount(), RtSerialRtonTag::Object);
+	uint32 typeCount = mTypes.GetCount();
+	for (uint32 i = 0; i != typeCount; i++)
+	{
+		writer.BeginObject(NULL);
+		RType* type = mTypes.GetIndexed(i);
+		writer.WriteRtId("id", type->GetRtId());
+		switch (type->GetTypeCategory())
+		{
+		case RType::TC_Named_Unknown:
+			writer.WriteString("category", "named_unknown", true);
+			writer.WriteString("name", ((RNamedType*)type)->GetName(), true);
+			break;
+		case RType::TC_Named_Class:
+			writer.WriteString("category", "class", true);
+			writer.WriteString("name", ((RNamedType*)type)->GetName(), true);
+			break;
+		case RType::TC_Named_ClassRef:
+			writer.WriteString("category", "classref", true);
+			writer.WriteRtId("ref", ((RClassRef*)type)->GetRClass()->GetRtId());
+			break;
+		case RType::TC_Named_Enum:
+			writer.WriteString("category", "enum", true);
+			writer.WriteString("name", ((RNamedType*)type)->GetName(), true);
+			break;
+		case RType::TC_Named_EnumRef:
+			writer.WriteString("category", "enumref", true);
+			writer.WriteRtId("ref", ((REnumRef*)type)->GetREnum()->GetRtId());
+			break;
+		case RType::TC_Simple:
+		{
+			RSimpleType* simpleType = (RSimpleType*)type;
+			writer.WriteString("category", "simple", true);
+			switch (simpleType->GetSimpleTypeCategory())
+			{
+			case RSimpleType::STC_None:
+				writer.WriteString("stc", "none", false);
+				break;
+			case RSimpleType::STC_Ellipsis:
+				writer.WriteString("stc", "ellipsis", false);
+				break;
+			case RSimpleType::STC_Void:
+				writer.WriteString("stc", "void", false);
+				break;
+			case RSimpleType::STC_Bool:
+				writer.WriteString("stc", "bool", false);
+				break;
+			case RSimpleType::STC_AChar:
+				writer.WriteString("stc", "char", false);
+				break;
+			case RSimpleType::STC_WChar:
+				writer.WriteString("stc", "wchar_t", false);
+				break;
+			case RSimpleType::STC_SInt:
+				switch (simpleType->GetSize())
+				{
+				case 1:
+					writer.WriteString("stc", "int8", false);
+					break;
+				case 2:
+					writer.WriteString("stc", "int16", false);
+					break;
+				case 4:
+					writer.WriteString("stc", "int32", false);
+					break;
+				case 8:
+					writer.WriteString("stc", "int64", false);
+					break;
+				default:
+					writer.WriteString("stc", "int_unknownsize", false);
+					break;
+				}
+				break;
+			case RSimpleType::STC_UInt:
+				switch (simpleType->GetSize())
+				{
+				case 1:
+					writer.WriteString("stc", "uint8", false);
+					break;
+				case 2:
+					writer.WriteString("stc", "uint16", false);
+					break;
+				case 4:
+					writer.WriteString("stc", "uint32", false);
+					break;
+				case 8:
+					writer.WriteString("stc", "uint64", false);
+					break;
+				default:
+					writer.WriteString("stc", "uint_unknownsize", false);
+					break;
+				}
+				break;
+			case RSimpleType::STC_Float:
+				if (simpleType->GetSize() == 4)
+					writer.WriteString("stc", "float", false);
+				else if (simpleType->GetSize() == 8)
+					writer.WriteString("stc", "double", false);
+				else
+					writer.WriteString("stc", "floating_unknownsize", false);
+				break;
+			case RSimpleType::STC_HResult:
+				writer.WriteString("stc", "hresult", false);
+				break;
+			default:
+				return false;
+			}
+			writer.WriteInt32VarU("size", simpleType->GetSize());
+			break;
+		}
+		case RType::TC_Reference:
+		{
+			RReferenceType* referenceType = (RReferenceType*)type;
+			if (referenceType->GetInnerType()->GetTypeCategory() == RType::TC_Simple)
+			{
+				if (((RSimpleType*)referenceType->GetInnerType())->GetSimpleTypeCategory() == RSimpleType::STC_AChar)
+				{
+					writer.WriteString("category", "custom", true);
+					writer.WriteString("ctc", "string", false);
+					break;
+				}
+				if (((RSimpleType*)referenceType->GetInnerType())->GetSimpleTypeCategory() == RSimpleType::STC_WChar)
+				{
+					writer.WriteString("category", "custom", true);
+					writer.WriteString("ctc", "wstring", false);
+					break;
+				}
+			}
+			writer.WriteString("category", "reference", true);
+			RReferenceType::EReferenceTypeCategory referenceCategory = referenceType->GetReferenceTypeCategory();
+			if (referenceCategory == RReferenceType::RTC_Pointer || referenceCategory == RReferenceType::RTC_Ampersand)
+			{
+				writer.WriteString("rtc", referenceCategory == RReferenceType::RTC_Pointer ? "ptr" : "amp", false);
+				writer.WriteRtId("inner_type", referenceType->GetInnerType()->GetRtId());
+			}
+			else if (referenceCategory == RReferenceType::RTC_Array)
+			{
+				writer.WriteString("rtc", "array", false);
+				writer.WriteRtId("inner_type", referenceType->GetInnerType()->GetRtId());
+				writer.WriteInt32VarS("array_count", referenceType->GetArrayItemCount());
+			}
+			else
+				return false;
+			break;
+		}
+		case RType::TC_Function:
+		{
+			RFunctionType* functionType = (RFunctionType*)type;
+			writer.WriteString("category", "function", true);
+			RType* thisType = functionType->GetThisType();
+			writer.WriteRtId("this_type", thisType ? thisType->GetRtId() : RtId());
+			RType* returnType = functionType->GetReturnType();
+			writer.WriteRtId("return_type", returnType ? returnType->GetRtId() : RtId());
+			writer.BeginArray("arg_types", functionType->GetArgTypeCount(), RtSerialRtonTag::RtId);
+			for (uint32 j = 0; j < functionType->GetArgTypeCount(); j++)
+			{
+				RType* argType = functionType->GetArgTypeIndexed(j);
+				writer.WriteRtId(NULL, argType ? argType->GetRtId() : RtId());
+			}
+			writer.EndArray();
+			break;
+		}
+		case RType::TC_Custom:
+		{
+			RCustomType* customType = (RCustomType*)type;
+			writer.WriteString("category", "custom", true);
+			switch (customType->GetCustomTypeCategory())
+			{
+			case RCustomType::CTC_StdString:
+				writer.WriteString("ctc", "string", false);
+				break;
+			case RCustomType::CTC_StdWString:
+				writer.WriteString("ctc", "wstring", false);
+				break;
+			case RCustomType::CTC_StdVector:
+				writer.WriteString("ctc", "vector", false);
+				if (customType->GetInnerType())
+					writer.WriteRtId("inner_type", customType->GetInnerType()->GetRtId());
+				break;
+			case RCustomType::CTC_WeakRtId:
+			case RCustomType::CTC_StrongRtId:
+				writer.WriteString("ctc", "rtid", false);
+				if (customType->GetInnerType())
+					writer.WriteRtId("inner_type", customType->GetInnerType()->GetRtId());
+				break;
+			default:
+				return false;
+			}
+			break;
+		}
+		default:
+			return false;
+		}
+		writer.EndObject();
+	}
+	writer.EndArray();
+
+	writer.BeginArray("classes", mClasses.GetCount(), RtSerialRtonTag::Object);
+	uint32 classCount = mClasses.GetCount();
+	for (uint32 i = 0; i != classCount; i++)
+	{
+		writer.BeginObject(NULL);
+		RClass* rclass = mClasses.GetIndexed(i);
+		writer.WriteRtId("id", rclass->GetRtId());
+		writer.WriteString("name", rclass->GetName(), true);
+		if (rclass->GetBoundRtClass())
+			writer.WriteRtId("bound_rtclass", rclass->GetBoundRtClass()->GetRtId());
+
+		const TRefNamedSymbolCollection<RAncestor>* ancestors;
+		writer.BeginArray("bases", (ancestors = rclass->GetAncestors())->GetCount(), RtSerialRtonTag::RtId);
+		for (uint32 j = 0; j < ancestors->GetCount(); j++)
+			writer.WriteRtId(NULL, ancestors->GetIndexed(j)->GetRClass()->GetRtId());
+		writer.EndArray();
+
+		const TRefNamedSymbolCollection<RField>* fields = rclass->GetFields(false);
+		uint32 fieldCount = fields->GetCount();
+		writer.BeginArray("fields", fieldCount, RtSerialRtonTag::Object);
+		for (uint32 j = 0; j != fieldCount; j++)
+		{
+			RField* field = fields->GetIndexed(j);
+			writer.BeginObject(NULL);
+			writer.WriteRtId("id", field->GetRtId());
+			writer.WriteString("name", field->GetName(), true);
+			writer.WriteRtId("type", field->GetType()->GetRtId());
+			writer.WriteInt32VarU("offset", field->GetFieldOffset());
+			WriteSymbolAttributes(field, &writer);
+			writer.EndObject();
+		}
+		writer.EndArray();
+
+		const TRefNamedSymbolCollection<RProperty>* properties = rclass->GetProperties(false);
+		uint32 propertyCount = properties->GetCount();
+		uint32 serializableCount = 0;
+		for (uint32 j = 0; j != propertyCount; j++)
+		{
+			RMethod* getter = properties->GetIndexed(j)->GetPropertyGetterMethod();
+			if (getter && getter->CanInvokeSerialCommand(true))
+				serializableCount++;
+		}
+		writer.BeginArray("properties", serializableCount, RtSerialRtonTag::Object);
+		for (uint32 j = 0; j != propertyCount; j++)
+		{
+			RProperty* property = properties->GetIndexed(j);
+			RMethod* getter = property->GetPropertyGetterMethod();
+			if (getter && getter->CanInvokeSerialCommand(true))
+			{
+				writer.BeginObject(NULL);
+				writer.WriteRtId("id", property->GetRtId());
+				writer.WriteString("name", property->GetName(), true);
+				writer.WriteRtId("type", property->GetType()->GetRtId());
+				RMethod* getterMethod = property->GetPropertyGetterMethod();
+				writer.WriteRtId("getter", getterMethod ? getterMethod->GetRtId() : RtId());
+				RMethod* setterMethod = property->GetPropertySetterMethod();
+				writer.WriteRtId("setter", setterMethod ? setterMethod->GetRtId() : RtId());
+				WriteSymbolAttributes(property, &writer);
+				writer.EndObject();
+			}
+		}
+		writer.EndArray();
+
+		const TRefNamedSymbolCollection<RMethod>* methods = rclass->GetMethods(false);
+		uint32 methodCount = methods->GetCount();
+		writer.BeginArray("methods", methodCount, RtSerialRtonTag::Object);
+		for (uint32 j = 0; j != methodCount; j++)
+		{
+			RMethod* method = methods->GetIndexed(j);
+			writer.BeginObject(NULL);
+			writer.WriteRtId("id", method->GetRtId());
+			writer.WriteString("name", method->GetName(), true);
+			writer.WriteRtId("type", method->GetType()->GetRtId());
+			WriteSymbolAttributes(method, &writer);
+			writer.EndObject();
+		}
+		writer.EndArray();
+
+		WriteSymbolAttributes(rclass, &writer);
+		writer.EndObject();
+	}
+	writer.EndArray();
+
+	writer.BeginArray("enums", mEnums.GetCount(), RtSerialRtonTag::Object);
+	uint32 enumCount = mEnums.GetCount();
+	for (uint32 i = 0; i != enumCount; i++)
+	{
+		writer.BeginObject(NULL);
+		REnum* renum = mEnums.GetIndexed(i);
+		writer.WriteRtId("id", renum->GetRtId());
+		writer.WriteString("name", renum->GetName(), true);
+		writer.WriteBool("isflags", renum->GetIsFlags());
+		const TRefNamedSymbolCollection<REnumMember>* members = renum->GetMembers();
+		uint32 memberCount = members->GetCount();
+		writer.BeginArray("members", memberCount, RtSerialRtonTag::Object);
+		for (uint32 j = 0; j != memberCount; j++)
+		{
+			REnumMember* member = members->GetIndexed(j);
+			writer.BeginObject(NULL);
+			writer.WriteRtId("id", member->GetRtId());
+			writer.WriteString("name", member->GetName(), true);
+			writer.WriteInt32VarU("value", member->GetValue());
+			WriteSymbolAttributes(member, &writer);
+			writer.EndObject();
+		}
+		writer.EndArray();
+		WriteSymbolAttributes(renum, &writer);
+		writer.EndObject();
+	}
+	writer.EndArray();
+	writer.EndDocumentObject();
+	return true;
+}
+
+RNamedType* CRefSymbolDb::GetTypeForRTTITypeName(const char* inTypeName)
+{
+	std::string typeName = inTypeName;
+	RNamedType* result;
+	bool isEnum;
+	size_t prefixLength;
+	if (typeName.substr(0, 5) == "enum ")
+	{
+		isEnum = true;
+		prefixLength = 5;
+	}
+	else if (typeName.substr(0, 6) == "class ")
+	{
+		isEnum = false;
+		prefixLength = 6;
+	}
+	else
+		return NULL;
+	size_t end = typeName.find(' ', prefixLength);
+	std::string name;
+	size_t length = end;
+	if (end != std::string::npos)
+		length = end - prefixLength;
+	name = typeName.substr(prefixLength, length);
+	if (isEnum)
+		result = GetEnums()->GetNamed(name);
+	else
+		result = GetClasses()->GetNamed(name);
+	return result;
+}
+
+void CRefSymbolDb::EnsureFullyLoaded()
+{
+	if (mFullyLoaded)
+		return;
+	const TRefNamedSymbolCollection<RClass>* classes = GetClasses();
+	uint32 classCount = classes->GetCount();
+	for (uint32 i = 0; i < classCount; i++)
+		classes->GetIndexed(i)->LoadClass();
+	const TRefNamedSymbolCollection<REnum>* enums = GetEnums();
+	uint32 enumCount = enums->GetCount();
+	for (uint32 i = 0; i < enumCount; i++)
+		enums->GetIndexed(i)->LoadEnum();
+	mFullyLoaded = true;
 }
 
 /////////////// CRefAttributeVariant ///////////////
