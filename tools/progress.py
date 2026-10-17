@@ -204,6 +204,8 @@ def analyse(source, obj, game, game_syms, game_names, manifest_unit=None):
             continue
         for name in _range(game_names, o.zn) + _range(game_names, o.znk):
             scope[name] = game_syms[name][1]
+    for name in generated():
+        scope.pop(name, None)
     our_funcs = defined
 
     rows = []
@@ -224,6 +226,16 @@ def analyse(source, obj, game, game_syms, game_names, manifest_unit=None):
 
 
 _GAME = None
+_GENERATED = None
+
+
+def generated():
+    """Compiler-made template instantiations, left out of every file's scope."""
+    global _GENERATED
+    if _GENERATED is None:
+        path = os.path.join(config.HERE, 'units.json')
+        _GENERATED = frozenset(json.load(open(path)).get('generated', ())) if os.path.exists(path) else frozenset()
+    return _GENERATED
 
 
 def _game():
@@ -249,7 +261,7 @@ def _rows_key(source, obj, manifest_unit):
     import hashlib
     h = hashlib.sha1()
     lib = os.stat(config.TARGET_LIB)
-    h.update(repr((os.path.basename(source), manifest_unit, lib.st_size, lib.st_mtime_ns)).encode())
+    h.update(repr((os.path.basename(source), manifest_unit, len(generated()), lib.st_size, lib.st_mtime_ns)).encode())
     for f in _CODE:
         h.update(open(f, 'rb').read())
     h.update(open(obj, 'rb').read() if obj != STUB else b'stub')

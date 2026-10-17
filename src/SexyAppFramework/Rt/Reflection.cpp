@@ -192,16 +192,16 @@ std::string RSimpleType::TypeToString(bool inCheckConst) const
 		uint32 size = GetSize();
 		switch (size)
 		{
-		case 1:
+		case sizeof(int8):
 			result += "char";
 			break;
-		case 2:
+		case sizeof(int16):
 			result += "short";
 			break;
-		case 4:
+		case sizeof(int32):
 			result += "long";
 			break;
-		case 8:
+		case sizeof(int64):
 			result += "__int64";
 			break;
 		default:
@@ -215,10 +215,10 @@ std::string RSimpleType::TypeToString(bool inCheckConst) const
 		uint32 size = GetSize();
 		switch (size)
 		{
-		case 4:
+		case sizeof(float):
 			result += "float";
 			break;
-		case 8:
+		case sizeof(double):
 			result += "double";
 			break;
 		default:
@@ -262,16 +262,16 @@ std::string RSimpleType::InstanceToString(const void* inInstancePtr, bool inUseH
 		{
 			switch (GetSize())
 			{
-			case 1:
+			case sizeof(int8):
 				result += StrFormat("0x%02x", *(const int8*)inInstancePtr);
 				break;
-			case 2:
+			case sizeof(int16):
 				result += StrFormat("0x%04x", *(const int16*)inInstancePtr);
 				break;
-			case 4:
+			case sizeof(int32):
 				result += StrFormat("0x%08x", *(const long*)inInstancePtr);
 				break;
-			case 8:
+			case sizeof(int64):
 				result += StrFormat("0x%016I64x", *(const int64*)inInstancePtr);
 				break;
 			default:
@@ -283,16 +283,16 @@ std::string RSimpleType::InstanceToString(const void* inInstancePtr, bool inUseH
 		{
 			switch (GetSize())
 			{
-			case 1:
+			case sizeof(int8):
 				result += StrFormat("%d", *(const int8*)inInstancePtr);
 				break;
-			case 2:
+			case sizeof(int16):
 				result += StrFormat("%d", *(const int16*)inInstancePtr);
 				break;
-			case 4:
+			case sizeof(int32):
 				result += StrFormat("%d", *(const long*)inInstancePtr);
 				break;
-			case 8:
+			case sizeof(int64):
 				result += StrFormat("%li", *(const int64*)inInstancePtr);
 				break;
 			default:
@@ -306,16 +306,16 @@ std::string RSimpleType::InstanceToString(const void* inInstancePtr, bool inUseH
 		{
 			switch (GetSize())
 			{
-			case 1:
+			case sizeof(int8):
 				result += StrFormat("0x%02x", *(const uint8*)inInstancePtr);
 				break;
-			case 2:
+			case sizeof(int16):
 				result += StrFormat("0x%04x", *(const uint16*)inInstancePtr);
 				break;
-			case 4:
+			case sizeof(int32):
 				result += StrFormat("0x%08x", *(const uint32*)inInstancePtr);
 				break;
-			case 8:
+			case sizeof(int64):
 				result += StrFormat("0x%016I64x", *(const uint64*)inInstancePtr);
 				break;
 			default:
@@ -327,16 +327,16 @@ std::string RSimpleType::InstanceToString(const void* inInstancePtr, bool inUseH
 		{
 			switch (GetSize())
 			{
-			case 1:
+			case sizeof(int8):
 				result += StrFormat("%d", *(const uint8*)inInstancePtr);
 				break;
-			case 2:
+			case sizeof(int16):
 				result += StrFormat("%d", *(const uint16*)inInstancePtr);
 				break;
-			case 4:
+			case sizeof(int32):
 				result += StrFormat("%d", *(const uint32*)inInstancePtr);
 				break;
-			case 8:
+			case sizeof(int64):
 				result += StrFormat("%li", *(const uint64*)inInstancePtr);
 				break;
 			default:
@@ -348,10 +348,10 @@ std::string RSimpleType::InstanceToString(const void* inInstancePtr, bool inUseH
 	case STC_Float:
 		switch (GetSize())
 		{
-		case 4:
+		case sizeof(float):
 			result += StrFormat("%f", *(const float*)inInstancePtr);
 			break;
-		case 8:
+		case sizeof(double):
 			result += StrFormat("%f", *(const double*)inInstancePtr);
 			break;
 		default:
@@ -394,16 +394,16 @@ bool RSimpleType::InstanceRtonSync(void* inInstancePtr, RtSerialRtonSync* inSync
 		case STC_SInt:
 			switch (GetSize())
 			{
-			case 1:
+			case sizeof(int8):
 				writer->WriteInt8Fixed(inKey, *(int8*)inInstancePtr);
 				break;
-			case 2:
+			case sizeof(int16):
 				writer->WriteInt16Fixed(inKey, *(int16*)inInstancePtr);
 				break;
-			case 4:
+			case sizeof(int32):
 				writer->WriteInt32(inKey, *(int32*)inInstancePtr);
 				break;
-			case 8:
+			case sizeof(int64):
 				writer->WriteInt64(inKey, *(int64*)inInstancePtr);
 				break;
 			default:
@@ -414,16 +414,16 @@ bool RSimpleType::InstanceRtonSync(void* inInstancePtr, RtSerialRtonSync* inSync
 		case STC_UInt:
 			switch (GetSize())
 			{
-			case 1:
+			case sizeof(int8):
 				writer->WriteUInt8Fixed(inKey, *(uint8*)inInstancePtr);
 				break;
-			case 2:
+			case sizeof(int16):
 				writer->WriteUInt16Fixed(inKey, *(uint16*)inInstancePtr);
 				break;
-			case 4:
+			case sizeof(int32):
 				writer->WriteUInt32(inKey, *(uint32*)inInstancePtr);
 				break;
-			case 8:
+			case sizeof(int64):
 				writer->WriteUInt64(inKey, *(uint64*)inInstancePtr);
 				break;
 			default:
@@ -434,10 +434,10 @@ bool RSimpleType::InstanceRtonSync(void* inInstancePtr, RtSerialRtonSync* inSync
 		case STC_Float:
 			switch (GetSize())
 			{
-			case 4:
+			case sizeof(float):
 				writer->WriteFloat(inKey, *(float*)inInstancePtr);
 				break;
-			case 8:
+			case sizeof(double):
 				writer->WriteDouble(inKey, *(double*)inInstancePtr);
 				break;
 			default:
@@ -471,16 +471,16 @@ bool RSimpleType::InstanceRtonSync(void* inInstancePtr, RtSerialRtonSync* inSync
 		case STC_SInt:
 			switch (GetSize())
 			{
-			case 1:
+			case sizeof(int8):
 				*(int8*)inInstancePtr = reader->ReadInt32(inKey);
 				return true;
-			case 2:
+			case sizeof(int16):
 				*(int16*)inInstancePtr = reader->ReadInt32(inKey);
 				return true;
-			case 4:
+			case sizeof(int32):
 				*(int32*)inInstancePtr = reader->ReadInt32(inKey);
 				return true;
-			case 8:
+			case sizeof(int64):
 				*(int64*)inInstancePtr = reader->ReadInt64(inKey);
 				return true;
 			}
@@ -488,16 +488,16 @@ bool RSimpleType::InstanceRtonSync(void* inInstancePtr, RtSerialRtonSync* inSync
 		case STC_UInt:
 			switch (GetSize())
 			{
-			case 1:
+			case sizeof(int8):
 				*(uint8*)inInstancePtr = reader->ReadUInt32(inKey);
 				return true;
-			case 2:
+			case sizeof(int16):
 				*(uint16*)inInstancePtr = reader->ReadUInt32(inKey);
 				return true;
-			case 4:
+			case sizeof(int32):
 				*(uint32*)inInstancePtr = reader->ReadUInt32(inKey);
 				return true;
-			case 8:
+			case sizeof(int64):
 				*(uint64*)inInstancePtr = reader->ReadUInt64(inKey);
 				return true;
 			}
@@ -505,10 +505,10 @@ bool RSimpleType::InstanceRtonSync(void* inInstancePtr, RtSerialRtonSync* inSync
 		case STC_Float:
 			switch (GetSize())
 			{
-			case 4:
+			case sizeof(float):
 				*(float*)inInstancePtr = reader->ReadFloat(inKey);
 				return true;
-			case 8:
+			case sizeof(double):
 				*(double*)inInstancePtr = reader->ReadDouble(inKey);
 				return true;
 			}
@@ -2436,16 +2436,16 @@ bool CRefSymbolDb::WriteRtonRepresentation(RtSerialBuffer* inBuffer)
 			case RSimpleType::STC_SInt:
 				switch (simpleType->GetSize())
 				{
-				case 1:
+				case sizeof(int8):
 					writer.WriteString("stc", "int8", false);
 					break;
-				case 2:
+				case sizeof(int16):
 					writer.WriteString("stc", "int16", false);
 					break;
-				case 4:
+				case sizeof(int32):
 					writer.WriteString("stc", "int32", false);
 					break;
-				case 8:
+				case sizeof(int64):
 					writer.WriteString("stc", "int64", false);
 					break;
 				default:
@@ -2456,16 +2456,16 @@ bool CRefSymbolDb::WriteRtonRepresentation(RtSerialBuffer* inBuffer)
 			case RSimpleType::STC_UInt:
 				switch (simpleType->GetSize())
 				{
-				case 1:
+				case sizeof(int8):
 					writer.WriteString("stc", "uint8", false);
 					break;
-				case 2:
+				case sizeof(int16):
 					writer.WriteString("stc", "uint16", false);
 					break;
-				case 4:
+				case sizeof(int32):
 					writer.WriteString("stc", "uint32", false);
 					break;
-				case 8:
+				case sizeof(int64):
 					writer.WriteString("stc", "uint64", false);
 					break;
 				default:
@@ -2474,9 +2474,9 @@ bool CRefSymbolDb::WriteRtonRepresentation(RtSerialBuffer* inBuffer)
 				}
 				break;
 			case RSimpleType::STC_Float:
-				if (simpleType->GetSize() == 4)
+				if (simpleType->GetSize() == sizeof(float))
 					writer.WriteString("stc", "float", false);
-				else if (simpleType->GetSize() == 8)
+				else if (simpleType->GetSize() == sizeof(double))
 					writer.WriteString("stc", "double", false);
 				else
 					writer.WriteString("stc", "floating_unknownsize", false);

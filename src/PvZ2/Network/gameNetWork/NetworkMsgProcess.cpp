@@ -96,15 +96,15 @@ void LoginRewardSpringMsg(bool, const S2C_7DaysLoginSpringReward*) asm("_ZN7Mess
 void BuyZMatchTicketMsg(bool) asm("_ZN7Message17GLBuyZMatchTicketEb");
 void DeliverySendMsg(bool) asm("_ZN7Message14GLDeliverySendEb");
 
-void INetworkMsgProcess::OnRequestLuaGeneral(const NetWorkMsg& i_arg)
+void INetworkMsgProcess::OnRequestLuaGeneral(const NetWorkMsg& data)
 {
 }
 
-void INetworkMsgProcess::OnRequestDinosaurDanger(const NetWorkMsg& i_arg)
+void INetworkMsgProcess::OnRequestDinosaurDanger(const NetWorkMsg& data)
 {
 }
 
-void INetworkMsgProcess::OnICloudRequestNoviceSevenDaysTrigger(const NetWorkMsg& i_arg)
+void INetworkMsgProcess::OnICloudRequestNoviceSevenDaysTrigger(const NetWorkMsg& data)
 {
 }
 

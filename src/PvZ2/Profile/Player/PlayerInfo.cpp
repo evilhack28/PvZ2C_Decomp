@@ -198,8 +198,8 @@ void PlayerInfo::StaticClassInit()
 	REFLECTION_CLASSBUILDER_END(GameRankItem);
 
 	REFLECTION_ENUMBUILDER_BEGIN(PlantAvatarType);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(none, (PlantAvatarType)-1);
-		REFLECTION_ENUMBUILDER_MEMBER_RENAME(normal, (PlantAvatarType)0);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(none, E_AVATAR_NONE);
+		REFLECTION_ENUMBUILDER_MEMBER_RENAME(normal, E_AVATAR_NORMAL);
 	REFLECTION_ENUMBUILDER_END(PlantAvatarType);
 
 	REFLECTION_CLASSBUILDER_BEGIN(PlantAvatarInfo);
@@ -4384,7 +4384,7 @@ void PlayerInfo::SetPowerUpProgress(std::vector<PowerUpCollectionProgress>& i_ne
 void PlayerInfo::ClearSavedProgress()
 {
 	m_completedNarrationEvents.clear();
-	m_tutorialNewProgress = (MapTutorialState)0;
+	m_tutorialNewProgress = TUTORIAL_NONE;
 	m_unlockedGameFeatures.clear();
 	SAVE_PROFILE();
 }
