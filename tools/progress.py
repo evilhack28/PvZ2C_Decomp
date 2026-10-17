@@ -389,11 +389,10 @@ def main():
             'matched_functions_percent': round(100.0 * n_ok / len(rows), 2) if rows else 0.0,
             'fuzzy_match_percent': round(100.0 * fuzzy / allb, 2) if allb else 0.0,
         }
-        if n_ok or n_near:                    # detail only for started units
-            u['functions'] = [
-                {'name': label, 'size': size, 'matched': state == 'ok',
-                 'fuzzy_match_percent': round(100.0 * same / tot, 2) if tot else 0.0}
-                for state, same, tot, size, label in rows]
+        u['functions'] = [
+            {'name': label, 'size': size, 'matched': state == 'ok',
+             'fuzzy_match_percent': round(100.0 * same / tot, 2) if tot else 0.0}
+            for state, same, tot, size, label in sorted(rows, key=lambda r: (-r[3], r[4]))]
         units.append(u)
 
         if not args.quiet and (args.all or args.filter or n_ok or n_near):
