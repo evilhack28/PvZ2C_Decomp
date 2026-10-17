@@ -853,6 +853,15 @@ std::string RFunctionType::TypeToString(bool inCheckConst) const
 
 /////////////// RCustomType ///////////////
 
+RCustomType::IStdManipulator::IStdManipulator()
+{
+}
+
+bool RCustomType::InstanceNavigatePath(void*& ioInstancePtr, std::string& ioPath, RType*& outType) const
+{
+	return false;
+}
+
 bool RCustomType::TypeEquals(RType* inType, bool inCheckConst, bool inExactMatch) const
 {
 	if (!inType || inType->GetTypeCategory() != TC_Custom)
@@ -1878,6 +1887,17 @@ RReferenceType* CRefManualSymbolBuilder::GetReferenceType(RReferenceType::ERefer
 	return type;
 }
 
+RFunctionType* IRefManualSymbolBuilder::GetFunctionType(RFunctionType::ECallType inCallType, RType* inThisType, RType* inReturnType, uint32 inArgCount, ...)
+{
+	va_list args;
+	va_start(args, inArgCount);
+	std::vector<RType*> argTypes;
+	for (uint32 i = 0; i < inArgCount; i++)
+		argTypes.push_back(va_arg(args, RType*));
+	va_end(args);
+	return GetFunctionType(inCallType, inThisType, inReturnType, argTypes);
+}
+
 RFunctionType* CRefManualSymbolBuilder::GetFunctionType(RFunctionType::ECallType inCallType, RType* inThisType, RType* inReturnType, const std::vector<RType*>& inArgTypes)
 {
 	bool cacheable = false;
@@ -2738,6 +2758,22 @@ void CRefSymbolDb::EnsureFullyLoaded()
 }
 
 /////////////// CRefAttributeVariant ///////////////
+
+CRefAttributeVariant TRefNamedSymbolCollection<RAttribute>::GetValueForNamed(const std::string& inName, const CRefAttributeVariant& inDefaultValue) const
+{
+	RAttribute* attribute = GetNamed(inName);
+	if (attribute)
+		return *attribute->GetValue();
+	return inDefaultValue;
+}
+
+CRefAttributeVariant::CRefAttributeVariant(bool inValue)
+{
+	mType = VT_Bool;
+	mUInt32 = inValue ? 1 : 0;
+}
+
+CRefAttributeVariant::CRefAttributeVariant(const CRefAttributeVariant& inOther) = default;
 
 CRefAttributeVariant& CRefAttributeVariant::operator=(const CRefAttributeVariant& inOther) = default;
 
