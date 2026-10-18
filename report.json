@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-17T00:51:45+00:00",
+  "generated": "2026-10-18T13:53:04+00:00",
   "measures": {
-    "total_functions": 157956,
-    "matched_functions": 31406,
-    "matched_functions_percent": 19.88,
-    "total_code": 24566764,
-    "matched_code": 2323484,
-    "matched_code_percent": 9.46,
-    "fuzzy_match_percent": 10.21,
-    "started_units": 2266,
+    "total_functions": 157957,
+    "matched_functions": 31899,
+    "matched_functions_percent": 20.19,
+    "total_code": 24566428,
+    "matched_code": 2356500,
+    "matched_code_percent": 9.59,
+    "fuzzy_match_percent": 10.35,
+    "started_units": 2335,
     "total_units": 10449,
-    "started_code": 9782300,
-    "started_matched_code": 2323484,
-    "started_percent": 23.75,
+    "started_code": 9916360,
+    "started_matched_code": 2356500,
+    "started_percent": 23.76,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -778312,728 +778312,685 @@
     {
       "name": "src/PvZ2/Network/Config/LawnStringServerConfig.cpp",
       "total_code": 780,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 780,
+      "matched_code_percent": 100.0,
       "total_functions": 12,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "LawnStringServerConfig::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnStringServerConfig::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnStringServerConfig::LawnStringServerConfig",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnStringServerConfig::LawnStringServerConfig",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnStringServerConfig::~LawnStringServerConfig",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnStringServerConfig::~LawnStringServerConfig",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnStringServerConfig::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnStringServerConfig::GetFileInfoURL",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnStringServerConfig::GetFileURL",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnStringServerConfig::~LawnStringServerConfig",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnStringServerConfig::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnStringServerConfig::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/Config/LogServerConfig.cpp",
       "total_code": 756,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 756,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "LogServerConfig::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LogServerConfig::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LogServerConfig::LogServerConfig",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LogServerConfig::LogServerConfig",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LogServerConfig::~LogServerConfig",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LogServerConfig::~LogServerConfig",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LogServerConfig::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LogServerConfig::~LogServerConfig",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LogServerConfig::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LogServerConfig::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/Config/MagentoServerConfig.cpp",
       "total_code": 828,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 828,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "MagentoServerConfig::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MagentoServerConfig::MagentoServerConfig",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MagentoServerConfig::MagentoServerConfig",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MagentoServerConfig::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MagentoServerConfig::~MagentoServerConfig",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MagentoServerConfig::~MagentoServerConfig",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MagentoServerConfig::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MagentoServerConfig::~MagentoServerConfig",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MagentoServerConfig::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MagentoServerConfig::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/Config/MetricsServerConfig.cpp",
       "total_code": 708,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 708,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "MetricsServerConfig::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MetricsServerConfig::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MetricsServerConfig::MetricsServerConfig",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MetricsServerConfig::MetricsServerConfig",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MetricsServerConfig::~MetricsServerConfig",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MetricsServerConfig::~MetricsServerConfig",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MetricsServerConfig::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MetricsServerConfig::~MetricsServerConfig",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MetricsServerConfig::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "MetricsServerConfig::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/Config/NetworkRichManConfig.cpp",
       "total_code": 712,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 712,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "NetworkRichManConfig::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NetworkRichManConfig::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NetworkRichManConfig::operator=",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NetworkRichManConfig::NetworkRichManConfig",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NetworkRichManConfig::NetworkRichManConfig",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NetworkRichManConfig::~NetworkRichManConfig",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NetworkRichManConfig::~NetworkRichManConfig",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NetworkRichManConfig::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NetworkRichManConfig::~NetworkRichManConfig",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NetworkRichManConfig::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NetworkRichManConfig::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/Config/PHPServerConfig.cpp",
       "total_code": 1292,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1292,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PHPServerConfig::PHPServerConfig",
           "size": 332,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PHPServerConfig::PHPServerConfig",
           "size": 332,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PHPServerConfig::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PHPServerConfig::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PHPServerConfig::~PHPServerConfig",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PHPServerConfig::~PHPServerConfig",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PHPServerConfig::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PHPServerConfig::~PHPServerConfig",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PHPServerConfig::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PHPServerConfig::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/Config/SwrveServerConfig.cpp",
       "total_code": 796,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 796,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "SwrveServerConfig::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SwrveServerConfig::SwrveServerConfig",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SwrveServerConfig::SwrveServerConfig",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SwrveServerConfig::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SwrveServerConfig::~SwrveServerConfig",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SwrveServerConfig::~SwrveServerConfig",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SwrveServerConfig::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SwrveServerConfig::~SwrveServerConfig",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SwrveServerConfig::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SwrveServerConfig::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/Config/TimeServerConfig.cpp",
       "total_code": 724,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 724,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "TimeServerConfig::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TimeServerConfig::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TimeServerConfig::TimeServerConfig",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TimeServerConfig::TimeServerConfig",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TimeServerConfig::~TimeServerConfig",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TimeServerConfig::~TimeServerConfig",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TimeServerConfig::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TimeServerConfig::~TimeServerConfig",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TimeServerConfig::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TimeServerConfig::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/Config/UpdateServerConfig.cpp",
       "total_code": 804,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 804,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "UpdateServerConfig::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UpdateServerConfig::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UpdateServerConfig::UpdateServerConfig",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UpdateServerConfig::UpdateServerConfig",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UpdateServerConfig::~UpdateServerConfig",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UpdateServerConfig::~UpdateServerConfig",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UpdateServerConfig::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UpdateServerConfig::GetUpdateURL",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UpdateServerConfig::~UpdateServerConfig",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UpdateServerConfig::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UpdateServerConfig::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/Config/_NetworkEventConfig.cpp",
-      "total_code": 688,
+      "total_code": 0,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 7,
+      "total_functions": 0,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "_NetworkEventConfig::_NetworkEventConfig",
-          "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "_NetworkEventConfig::_NetworkEventConfig",
-          "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "_NetworkEventConfig::~_NetworkEventConfig",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "_NetworkEventConfig::~_NetworkEventConfig",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "_NetworkEventConfig::HasStageURL",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "_NetworkEventConfig::SetStageURL",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "_NetworkEventConfig::GetStageURL",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
+      "functions": []
     },
     {
       "name": "src/PvZ2/Network/Connectivity.cpp",
@@ -806494,870 +806451,870 @@
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_BuyArtifactPresent.cpp",
       "total_code": 644,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 644,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_BuyArtifactPresent::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyArtifactPresent::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyArtifactPresent::~New_S2C_BuyArtifactPresent",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyArtifactPresent::~New_S2C_BuyArtifactPresent",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyArtifactPresent::New_S2C_BuyArtifactPresent",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyArtifactPresent::New_S2C_BuyArtifactPresent",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyArtifactPresent::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyArtifactPresent::~New_S2C_BuyArtifactPresent",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyArtifactPresent::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyArtifactPresent::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_BuyCardGameReward.cpp",
       "total_code": 644,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 644,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_BuyCardGameReward::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyCardGameReward::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyCardGameReward::~New_S2C_BuyCardGameReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyCardGameReward::~New_S2C_BuyCardGameReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyCardGameReward::New_S2C_BuyCardGameReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyCardGameReward::New_S2C_BuyCardGameReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyCardGameReward::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyCardGameReward::~New_S2C_BuyCardGameReward",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyCardGameReward::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyCardGameReward::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_BuyNewerPresent.cpp",
       "total_code": 644,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 644,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_BuyNewerPresent::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyNewerPresent::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyNewerPresent::~New_S2C_BuyNewerPresent",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyNewerPresent::~New_S2C_BuyNewerPresent",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyNewerPresent::New_S2C_BuyNewerPresent",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyNewerPresent::New_S2C_BuyNewerPresent",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyNewerPresent::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyNewerPresent::~New_S2C_BuyNewerPresent",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyNewerPresent::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuyNewerPresent::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_BuySecretAreaReward.cpp",
       "total_code": 644,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 644,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_BuySecretAreaReward::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuySecretAreaReward::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuySecretAreaReward::~New_S2C_BuySecretAreaReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuySecretAreaReward::~New_S2C_BuySecretAreaReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuySecretAreaReward::New_S2C_BuySecretAreaReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuySecretAreaReward::New_S2C_BuySecretAreaReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuySecretAreaReward::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuySecretAreaReward::~New_S2C_BuySecretAreaReward",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuySecretAreaReward::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_BuySecretAreaReward::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_DangerRoomTrainingInfo.cpp",
       "total_code": 564,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 564,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_DangerRoomTrainingInfo::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_DangerRoomTrainingInfo::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_DangerRoomTrainingInfo::New_S2C_DangerRoomTrainingInfo",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_DangerRoomTrainingInfo::New_S2C_DangerRoomTrainingInfo",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_DangerRoomTrainingInfo::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_DangerRoomTrainingInfo::~New_S2C_DangerRoomTrainingInfo",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_DangerRoomTrainingInfo::~New_S2C_DangerRoomTrainingInfo",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_DangerRoomTrainingInfo::~New_S2C_DangerRoomTrainingInfo",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_DangerRoomTrainingInfo::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_DangerRoomTrainingInfo::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_GiftBoxReward.cpp",
       "total_code": 744,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 744,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_GiftBoxReward::StaticClassInit",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_GiftBoxReward::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_GiftBoxReward::~New_S2C_GiftBoxReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_GiftBoxReward::~New_S2C_GiftBoxReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_GiftBoxReward::New_S2C_GiftBoxReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_GiftBoxReward::New_S2C_GiftBoxReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_GiftBoxReward::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_GiftBoxReward::~New_S2C_GiftBoxReward",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_GiftBoxReward::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_GiftBoxReward::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_ItemAddInfo.cpp",
       "total_code": 744,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 744,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_ItemAddInfo::StaticClassInit",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_ItemAddInfo::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_ItemAddInfo::~New_S2C_ItemAddInfo",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_ItemAddInfo::~New_S2C_ItemAddInfo",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_ItemAddInfo::New_S2C_ItemAddInfo",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_ItemAddInfo::New_S2C_ItemAddInfo",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_ItemAddInfo::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_ItemAddInfo::~New_S2C_ItemAddInfo",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_ItemAddInfo::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_ItemAddInfo::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_Lottery.cpp",
       "total_code": 24,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 24,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_Lottery::New_S2C_Lottery",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_Lottery::New_S2C_Lottery",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_LotteryReward.cpp",
       "total_code": 744,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 744,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_LotteryReward::StaticClassInit",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_LotteryReward::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_LotteryReward::~New_S2C_LotteryReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_LotteryReward::~New_S2C_LotteryReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_LotteryReward::New_S2C_LotteryReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_LotteryReward::New_S2C_LotteryReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_LotteryReward::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_LotteryReward::~New_S2C_LotteryReward",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_LotteryReward::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_LotteryReward::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_MoveResult.cpp",
       "total_code": 776,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 776,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_MoveResult::StaticClassInit",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_MoveResult::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_MoveResult::~New_S2C_MoveResult",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_MoveResult::~New_S2C_MoveResult",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_MoveResult::New_S2C_MoveResult",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_MoveResult::New_S2C_MoveResult",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_MoveResult::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_MoveResult::~New_S2C_MoveResult",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_MoveResult::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_MoveResult::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_RedPackReward.cpp",
       "total_code": 804,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 804,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_RedPackReward::StaticClassInit",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_RedPackReward::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_RedPackReward::~New_S2C_RedPackReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_RedPackReward::~New_S2C_RedPackReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_RedPackReward::New_S2C_RedPackReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_RedPackReward::New_S2C_RedPackReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_RedPackReward::operator=",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_RedPackReward::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_RedPackReward::~New_S2C_RedPackReward",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_RedPackReward::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_RedPackReward::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_RedPackSth.cpp",
       "total_code": 24,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 24,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_RedPackSth::New_S2C_RedPackSth",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_RedPackSth::New_S2C_RedPackSth",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_Reward.cpp",
       "total_code": 24,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 24,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_Reward::New_S2C_Reward",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_Reward::New_S2C_Reward",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Network/New/S2C/New_S/New_S2C_VaseBreakerReward.cpp",
       "total_code": 644,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 644,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "New_S2C_VaseBreakerReward::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_VaseBreakerReward::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_VaseBreakerReward::~New_S2C_VaseBreakerReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_VaseBreakerReward::~New_S2C_VaseBreakerReward",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_VaseBreakerReward::New_S2C_VaseBreakerReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_VaseBreakerReward::New_S2C_VaseBreakerReward",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_VaseBreakerReward::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_VaseBreakerReward::~New_S2C_VaseBreakerReward",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_VaseBreakerReward::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "New_S2C_VaseBreakerReward::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -832052,12 +832009,12 @@
     {
       "name": "src/PvZ2/Profile/ACLogProfile.cpp",
       "total_code": 768,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 424,
+      "matched_code_percent": 55.21,
       "total_functions": 13,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 9,
+      "matched_functions_percent": 69.23,
+      "fuzzy_match_percent": 55.21,
       "functions": [
         {
           "name": "ACLogProfile::StaticClassInit",
@@ -832068,8 +832025,8 @@
         {
           "name": "ACLogProfile::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLogProfile::ACLogProfile",
@@ -832086,32 +832043,32 @@
         {
           "name": "ACLogProfile::ACLogProfile",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLogProfile::ACLogProfile",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLogProfile::~ACLogProfile",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLogProfile::~ACLogProfile",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLogProfile::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLogProfile::operator=",
@@ -832122,20 +832079,20 @@
         {
           "name": "ACLogProfile::~ACLogProfile",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLogProfile::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLogProfile::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -832280,12 +832237,12 @@
     {
       "name": "src/PvZ2/Profile/Avatar/ACLOG_PlantAvatarInfo.cpp",
       "total_code": 344,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 16,
+      "matched_code_percent": 4.65,
       "total_functions": 9,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 22.22,
+      "fuzzy_match_percent": 4.65,
       "functions": [
         {
           "name": "ACLOG_PlantAvatarInfo::operator=",
@@ -832332,26 +832289,26 @@
         {
           "name": "ACLOG_PlantAvatarInfo::~ACLOG_PlantAvatarInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarInfo::~ACLOG_PlantAvatarInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/ACLOG_PlantAvatarPiecesInfo.cpp",
       "total_code": 220,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 16,
+      "matched_code_percent": 7.27,
       "total_functions": 9,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 22.22,
+      "fuzzy_match_percent": 7.27,
       "functions": [
         {
           "name": "ACLOG_PlantAvatarPiecesInfo::ACLOG_PlantAvatarPiecesInfo",
@@ -832398,26 +832355,26 @@
         {
           "name": "ACLOG_PlantAvatarPiecesInfo::~ACLOG_PlantAvatarPiecesInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarPiecesInfo::~ACLOG_PlantAvatarPiecesInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/AccessoryAvatarInfo.cpp",
       "total_code": 292,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 80,
+      "matched_code_percent": 27.4,
       "total_functions": 5,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 40.0,
+      "fuzzy_match_percent": 27.4,
       "functions": [
         {
           "name": "AccessoryAvatarInfo::AccessoryAvatarInfo",
@@ -832440,14 +832397,14 @@
         {
           "name": "AccessoryAvatarInfo::~AccessoryAvatarInfo",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AccessoryAvatarInfo::~AccessoryAvatarInfo",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -832538,12 +832495,12 @@
     {
       "name": "src/PvZ2/Profile/Avatar/AlarmSagittifoliaAvatarSkill.cpp",
       "total_code": 2128,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 540,
+      "matched_code_percent": 25.38,
       "total_functions": 16,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 8,
+      "matched_functions_percent": 50.0,
+      "fuzzy_match_percent": 25.38,
       "functions": [
         {
           "name": "AlarmSagittifoliaAvatarSkill::setInfo",
@@ -832572,14 +832529,14 @@
         {
           "name": "AlarmSagittifoliaAvatarSkill::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::AlarmSagittifoliaAvatarSkill",
@@ -832602,14 +832559,14 @@
         {
           "name": "AlarmSagittifoliaAvatarSkill::~AlarmSagittifoliaAvatarSkill",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::~AlarmSagittifoliaAvatarSkill",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::onDestroy",
@@ -832620,38 +832577,38 @@
         {
           "name": "AlarmSagittifoliaAvatarSkill::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::~AlarmSagittifoliaAvatarSkill",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/AlarmSagittifoliaAvatarSkillSystem.cpp",
       "total_code": 1132,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 360,
+      "matched_code_percent": 31.8,
       "total_functions": 12,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 5,
+      "matched_functions_percent": 41.67,
+      "fuzzy_match_percent": 31.8,
       "functions": [
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::Update",
@@ -832662,8 +832619,8 @@
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::CreateEffect",
@@ -832674,8 +832631,8 @@
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::AlarmSagittifoliaAvatarSkillSystem",
@@ -832704,8 +832661,8 @@
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::~AlarmSagittifoliaAvatarSkillSystem",
@@ -832716,26 +832673,26 @@
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/AvatarPackageItem.cpp",
       "total_code": 1732,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 140,
+      "matched_code_percent": 8.08,
       "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 3,
+      "matched_functions_percent": 27.27,
+      "fuzzy_match_percent": 8.08,
       "functions": [
         {
           "name": "AvatarPackageItem::Draw",
@@ -832770,20 +832727,20 @@
         {
           "name": "AvatarPackageItem::~AvatarPackageItem",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AvatarPackageItem::~AvatarPackageItem",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AvatarPackageItem::~AvatarPackageItem",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AvatarPackageItem::InitView",
@@ -832862,12 +832819,12 @@
     {
       "name": "src/PvZ2/Profile/Avatar/CollectableAvatarPiece.cpp",
       "total_code": 1276,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 380,
+      "matched_code_percent": 29.78,
       "total_functions": 14,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 9,
+      "matched_functions_percent": 64.29,
+      "fuzzy_match_percent": 29.78,
       "functions": [
         {
           "name": "CollectableAvatarPiece::initializeRenderEffect",
@@ -832896,8 +832853,8 @@
         {
           "name": "CollectableAvatarPiece::StaticGetClass",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::GetPlantAvatarType",
@@ -832908,62 +832865,62 @@
         {
           "name": "CollectableAvatarPiece::CollectableAvatarPiece",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::CollectableAvatarPiece",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::~CollectableAvatarPiece",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::~CollectableAvatarPiece",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::~CollectableAvatarPiece",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/CollectableAvatarPieceType.cpp",
       "total_code": 668,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 488,
+      "matched_code_percent": 73.05,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 9,
+      "matched_functions_percent": 90.0,
+      "fuzzy_match_percent": 73.05,
       "functions": [
         {
           "name": "CollectableAvatarPieceType::StaticClassInit",
@@ -832974,68 +832931,68 @@
         {
           "name": "CollectableAvatarPieceType::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPieceType::CollectableAvatarPieceType",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPieceType::CollectableAvatarPieceType",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPieceType::~CollectableAvatarPieceType",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPieceType::~CollectableAvatarPieceType",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPieceType::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPieceType::~CollectableAvatarPieceType",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPieceType::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPieceType::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/CypripediumPlantfoodAvatar.cpp",
       "total_code": 1168,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 564,
+      "matched_code_percent": 48.29,
       "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 90.91,
+      "fuzzy_match_percent": 48.29,
       "functions": [
         {
           "name": "CypripediumPlantfoodAvatar::OnCollideEntity",
@@ -833046,134 +833003,134 @@
         {
           "name": "CypripediumPlantfoodAvatar::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CypripediumPlantfoodAvatar::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CypripediumPlantfoodAvatar::CypripediumPlantfoodAvatar",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CypripediumPlantfoodAvatar::CypripediumPlantfoodAvatar",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CypripediumPlantfoodAvatar::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CypripediumPlantfoodAvatar::~CypripediumPlantfoodAvatar",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CypripediumPlantfoodAvatar::~CypripediumPlantfoodAvatar",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CypripediumPlantfoodAvatar::~CypripediumPlantfoodAvatar",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CypripediumPlantfoodAvatar::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CypripediumPlantfoodAvatar::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/DisplayAvatarActionsPropertySheet.cpp",
       "total_code": 604,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 604,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "DisplayAvatarActionsPropertySheet::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DisplayAvatarActionsPropertySheet::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DisplayAvatarActionsPropertySheet::DisplayAvatarActionsPropertySheet",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DisplayAvatarActionsPropertySheet::DisplayAvatarActionsPropertySheet",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DisplayAvatarActionsPropertySheet::~DisplayAvatarActionsPropertySheet",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DisplayAvatarActionsPropertySheet::~DisplayAvatarActionsPropertySheet",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DisplayAvatarActionsPropertySheet::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DisplayAvatarActionsPropertySheet::~DisplayAvatarActionsPropertySheet",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DisplayAvatarActionsPropertySheet::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DisplayAvatarActionsPropertySheet::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -833252,18 +833209,18 @@
     {
       "name": "src/PvZ2/Profile/Avatar/General/GeneralTaskAvatarTransgenosisListener.cpp",
       "total_code": 800,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 456,
+      "matched_code_percent": 57.0,
       "total_functions": 12,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 7,
+      "matched_functions_percent": 58.33,
+      "fuzzy_match_percent": 57.0,
       "functions": [
         {
           "name": "GeneralTaskAvatarTransgenosisListener::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GeneralTaskAvatarTransgenosisListener::RegisterListener",
@@ -833274,8 +833231,8 @@
         {
           "name": "GeneralTaskAvatarTransgenosisListener::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GeneralTaskAvatarTransgenosisListener::~GeneralTaskAvatarTransgenosisListener",
@@ -833292,20 +833249,20 @@
         {
           "name": "GeneralTaskAvatarTransgenosisListener::GeneralTaskAvatarTransgenosisListener",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GeneralTaskAvatarTransgenosisListener::GeneralTaskAvatarTransgenosisListener",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GeneralTaskAvatarTransgenosisListener::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GeneralTaskAvatarTransgenosisListener::~GeneralTaskAvatarTransgenosisListener",
@@ -833322,14 +833279,14 @@
         {
           "name": "GeneralTaskAvatarTransgenosisListener::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GeneralTaskAvatarTransgenosisListener::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -833510,12 +833467,12 @@
     {
       "name": "src/PvZ2/Profile/Avatar/GiftPlantAvatarData.cpp",
       "total_code": 480,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 80,
+      "matched_code_percent": 16.67,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 25.0,
+      "fuzzy_match_percent": 16.67,
       "functions": [
         {
           "name": "GiftPlantAvatarData::GiftPlantAvatarData",
@@ -833556,14 +833513,14 @@
         {
           "name": "GiftPlantAvatarData::~GiftPlantAvatarData",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GiftPlantAvatarData::~GiftPlantAvatarData",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -833780,156 +833737,156 @@
     {
       "name": "src/PvZ2/Profile/Avatar/NewAvatarGeneralSkillBoost.cpp",
       "total_code": 548,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 548,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "NewAvatarGeneralSkillBoost::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewAvatarGeneralSkillBoost::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewAvatarGeneralSkillBoost::NewAvatarGeneralSkillBoost",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewAvatarGeneralSkillBoost::NewAvatarGeneralSkillBoost",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewAvatarGeneralSkillBoost::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewAvatarGeneralSkillBoost::~NewAvatarGeneralSkillBoost",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewAvatarGeneralSkillBoost::~NewAvatarGeneralSkillBoost",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewAvatarGeneralSkillBoost::~NewAvatarGeneralSkillBoost",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewAvatarGeneralSkillBoost::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewAvatarGeneralSkillBoost::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/PrimitiveAvatar.cpp",
       "total_code": 636,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 636,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PrimitiveAvatar::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PrimitiveAvatar::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PrimitiveAvatar::PrimitiveAvatar",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PrimitiveAvatar::PrimitiveAvatar",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PrimitiveAvatar::~PrimitiveAvatar",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PrimitiveAvatar::~PrimitiveAvatar",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PrimitiveAvatar::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PrimitiveAvatar::~PrimitiveAvatar",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PrimitiveAvatar::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PrimitiveAvatar::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/RankAvatarMapper.cpp",
       "total_code": 4204,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 76,
+      "matched_code_percent": 1.81,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 3,
+      "matched_functions_percent": 50.0,
+      "fuzzy_match_percent": 1.81,
       "functions": [
         {
           "name": "RankAvatarMapper::RankAvatarMapper",
@@ -833952,32 +833909,32 @@
         {
           "name": "RankAvatarMapper::~RankAvatarMapper",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RankAvatarMapper::~RankAvatarMapper",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RankAvatarMapper::~RankAvatarMapper",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/RankAvatarWidget.cpp",
       "total_code": 1284,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 108,
+      "matched_code_percent": 8.41,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 3,
+      "matched_functions_percent": 30.0,
+      "fuzzy_match_percent": 8.41,
       "functions": [
         {
           "name": "RankAvatarWidget::RankAvatarWidget",
@@ -834012,20 +833969,20 @@
         {
           "name": "RankAvatarWidget::~RankAvatarWidget",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RankAvatarWidget::~RankAvatarWidget",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RankAvatarWidget::~RankAvatarWidget",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RankAvatarWidget::ButtonDepress",
@@ -834044,48 +834001,48 @@
     {
       "name": "src/PvZ2/Profile/Avatar/TGAExchangeAvatarData.cpp",
       "total_code": 848,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 848,
+      "matched_code_percent": 100.0,
       "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "TGAExchangeAvatarData::TGAExchangeAvatarData",
           "size": 320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TGAExchangeAvatarData::TGAExchangeAvatarData",
           "size": 320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TGAExchangeAvatarData::~TGAExchangeAvatarData",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TGAExchangeAvatarData::~TGAExchangeAvatarData",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/TGAvatarPieceTableUI.cpp",
       "total_code": 4056,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 252,
+      "matched_code_percent": 6.21,
       "total_functions": 15,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 7,
+      "matched_functions_percent": 46.67,
+      "fuzzy_match_percent": 6.21,
       "functions": [
         {
           "name": "TGAvatarPieceTableUI::InitView",
@@ -834132,32 +834089,32 @@
         {
           "name": "TGAvatarPieceTableUI::TGAvatarPieceTableUI",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TGAvatarPieceTableUI::TGAvatarPieceTableUI",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TGAvatarPieceTableUI::~TGAvatarPieceTableUI",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TGAvatarPieceTableUI::~TGAvatarPieceTableUI",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TGAvatarPieceTableUI::~TGAvatarPieceTableUI",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TGAvatarPieceTableUI::CanSelectBoxAdd",
@@ -834168,26 +834125,26 @@
         {
           "name": "TGAvatarPieceTableUI::CheckIsHighValue",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TGAvatarPieceTableUI::CheckWaste",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Avatar/UINewPlantView_AvatarPackage.cpp",
       "total_code": 8456,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 8,
+      "matched_code_percent": 0.09,
       "total_functions": 19,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 10.53,
+      "fuzzy_match_percent": 0.09,
       "functions": [
         {
           "name": "UINewPlantView_AvatarPackage::InitView",
@@ -834294,14 +834251,14 @@
         {
           "name": "UINewPlantView_AvatarPackage::Draw",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UINewPlantView_AvatarPackage::Update",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -834398,12 +834355,12 @@
     {
       "name": "src/PvZ2/Profile/CheatGameProfileLockToggle.cpp",
       "total_code": 56,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 8,
+      "matched_code_percent": 14.29,
       "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 1,
+      "matched_functions_percent": 33.33,
+      "fuzzy_match_percent": 14.29,
       "functions": [
         {
           "name": "CheatGameProfileLockToggle::GetValue",
@@ -834414,8 +834371,8 @@
         {
           "name": "CheatGameProfileLockToggle::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameProfileLockToggle::GetClass",
@@ -834560,12 +834517,12 @@
     {
       "name": "src/PvZ2/Profile/EditProfileWidget.cpp",
       "total_code": 8816,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 4,
+      "matched_code_percent": 0.05,
       "total_functions": 19,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 1,
+      "matched_functions_percent": 5.26,
+      "fuzzy_match_percent": 0.05,
       "functions": [
         {
           "name": "EditProfileWidget::EditProfileWidget",
@@ -834678,8 +834635,8 @@
         {
           "name": "EditProfileWidget::createPictureButton",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -834902,12 +834859,12 @@
     {
       "name": "src/PvZ2/Profile/PVZ2UIRewardAvatarObjectDisplayer.cpp",
       "total_code": 1244,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 76,
+      "matched_code_percent": 6.11,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 3,
+      "matched_functions_percent": 50.0,
+      "fuzzy_match_percent": 6.11,
       "functions": [
         {
           "name": "PVZ2UIRewardAvatarObjectDisplayer::PVZ2UIRewardAvatarObjectDisplayer",
@@ -834924,20 +834881,20 @@
         {
           "name": "PVZ2UIRewardAvatarObjectDisplayer::~PVZ2UIRewardAvatarObjectDisplayer",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVZ2UIRewardAvatarObjectDisplayer::~PVZ2UIRewardAvatarObjectDisplayer",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVZ2UIRewardAvatarObjectDisplayer::~PVZ2UIRewardAvatarObjectDisplayer",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVZ2UIRewardAvatarObjectDisplayer::SetAvatarIndex",
@@ -834950,12 +834907,12 @@
     {
       "name": "src/PvZ2/Profile/Plant/PlantAvatar.cpp",
       "total_code": 272,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 16,
+      "matched_code_percent": 5.88,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 33.33,
+      "fuzzy_match_percent": 5.88,
       "functions": [
         {
           "name": "PlantAvatar::PlantAvatar",
@@ -834984,14 +834941,14 @@
         {
           "name": "PlantAvatar::~PlantAvatar",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantAvatar::~PlantAvatar",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -835178,12 +835135,12 @@
     {
       "name": "src/PvZ2/Profile/Plant/PlantAvatarInfo.cpp",
       "total_code": 408,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 16,
+      "matched_code_percent": 3.92,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 20.0,
+      "fuzzy_match_percent": 3.92,
       "functions": [
         {
           "name": "PlantAvatarInfo::operator=",
@@ -835236,14 +835193,14 @@
         {
           "name": "PlantAvatarInfo::~PlantAvatarInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantAvatarInfo::~PlantAvatarInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -835466,12 +835423,12 @@
     {
       "name": "src/PvZ2/Profile/Plant/PlantAvatarPackageView.cpp",
       "total_code": 4924,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 8,
+      "matched_code_percent": 0.16,
       "total_functions": 15,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 13.33,
+      "fuzzy_match_percent": 0.16,
       "functions": [
         {
           "name": "PlantAvatarPackageView::InitDialog",
@@ -835554,26 +835511,26 @@
         {
           "name": "PlantAvatarPackageView::ScrollTargetInterrupted",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantAvatarPackageView::ScrollTargetReached",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Plant/PlantAvatarPiecesInfo.cpp",
       "total_code": 272,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 16,
+      "matched_code_percent": 5.88,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 20.0,
+      "fuzzy_match_percent": 5.88,
       "functions": [
         {
           "name": "PlantAvatarPiecesInfo::PlantAvatarPiecesInfo",
@@ -835626,14 +835583,14 @@
         {
           "name": "PlantAvatarPiecesInfo::~PlantAvatarPiecesInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantAvatarPiecesInfo::~PlantAvatarPiecesInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -835790,12 +835747,12 @@
     {
       "name": "src/PvZ2/Profile/Plant/PlantAvatarSwitchButtonScrollWidget.cpp",
       "total_code": 2672,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 368,
+      "matched_code_percent": 13.77,
       "total_functions": 16,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 7,
+      "matched_functions_percent": 43.75,
+      "fuzzy_match_percent": 13.77,
       "functions": [
         {
           "name": "PlantAvatarSwitchButtonScrollWidget::resortButtons",
@@ -835818,8 +835775,8 @@
         {
           "name": "PlantAvatarSwitchButtonScrollWidget::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantAvatarSwitchButtonScrollWidget::Draw",
@@ -835830,8 +835787,8 @@
         {
           "name": "PlantAvatarSwitchButtonScrollWidget::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantAvatarSwitchButtonScrollWidget::~PlantAvatarSwitchButtonScrollWidget",
@@ -835854,8 +835811,8 @@
         {
           "name": "PlantAvatarSwitchButtonScrollWidget::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantAvatarSwitchButtonScrollWidget::SetData",
@@ -835872,26 +835829,26 @@
         {
           "name": "PlantAvatarSwitchButtonScrollWidget::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantAvatarSwitchButtonScrollWidget::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantAvatarSwitchButtonScrollWidget::ScrollTargetInterrupted",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantAvatarSwitchButtonScrollWidget::ScrollTargetReached",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -835922,12 +835879,12 @@
     {
       "name": "src/PvZ2/Profile/Plant/PlantNewAvatarInfo.cpp",
       "total_code": 212,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 16,
+      "matched_code_percent": 7.55,
       "total_functions": 9,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 22.22,
+      "fuzzy_match_percent": 7.55,
       "functions": [
         {
           "name": "PlantNewAvatarInfo::operator=",
@@ -835974,26 +835931,26 @@
         {
           "name": "PlantNewAvatarInfo::~PlantNewAvatarInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantNewAvatarInfo::~PlantNewAvatarInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Plant/PlantNewAvatarMapper.cpp",
       "total_code": 26196,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 76,
+      "matched_code_percent": 0.29,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 3,
+      "matched_functions_percent": 50.0,
+      "fuzzy_match_percent": 0.29,
       "functions": [
         {
           "name": "PlantNewAvatarMapper::PlantNewAvatarMapper",
@@ -836016,32 +835973,32 @@
         {
           "name": "PlantNewAvatarMapper::~PlantNewAvatarMapper",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantNewAvatarMapper::~PlantNewAvatarMapper",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantNewAvatarMapper::~PlantNewAvatarMapper",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Plant/PlantNewAvatarPieceMapper.cpp",
       "total_code": 26196,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 76,
+      "matched_code_percent": 0.29,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 3,
+      "matched_functions_percent": 50.0,
+      "fuzzy_match_percent": 0.29,
       "functions": [
         {
           "name": "PlantNewAvatarPieceMapper::PlantNewAvatarPieceMapper",
@@ -836064,20 +836021,20 @@
         {
           "name": "PlantNewAvatarPieceMapper::~PlantNewAvatarPieceMapper",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantNewAvatarPieceMapper::~PlantNewAvatarPieceMapper",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantNewAvatarPieceMapper::~PlantNewAvatarPieceMapper",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -836108,12 +836065,12 @@
     {
       "name": "src/PvZ2/Profile/Player/DeltaPlayerProfileInfo.cpp",
       "total_code": 1244,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 664,
+      "matched_code_percent": 53.38,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 9,
+      "matched_functions_percent": 90.0,
+      "fuzzy_match_percent": 53.38,
       "functions": [
         {
           "name": "DeltaPlayerProfileInfo::StaticClassInit",
@@ -836124,56 +836081,56 @@
         {
           "name": "DeltaPlayerProfileInfo::DeltaPlayerProfileInfo",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DeltaPlayerProfileInfo::DeltaPlayerProfileInfo",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DeltaPlayerProfileInfo::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DeltaPlayerProfileInfo::~DeltaPlayerProfileInfo",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DeltaPlayerProfileInfo::~DeltaPlayerProfileInfo",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DeltaPlayerProfileInfo::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DeltaPlayerProfileInfo::~DeltaPlayerProfileInfo",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DeltaPlayerProfileInfo::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DeltaPlayerProfileInfo::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -843260,72 +843217,72 @@
     {
       "name": "src/PvZ2/Profile/Player/PlayerProfileProperties.cpp",
       "total_code": 604,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 604,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PlayerProfileProperties::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerProfileProperties::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerProfileProperties::PlayerProfileProperties",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerProfileProperties::PlayerProfileProperties",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerProfileProperties::~PlayerProfileProperties",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerProfileProperties::~PlayerProfileProperties",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerProfileProperties::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerProfileProperties::~PlayerProfileProperties",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerProfileProperties::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerProfileProperties::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -843397,13 +843354,13 @@
     },
     {
       "name": "src/PvZ2/Profile/ProfileConversionResults.cpp",
-      "total_code": 680,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 1032,
+      "matched_code": 192,
+      "matched_code_percent": 18.6,
+      "total_functions": 16,
+      "matched_functions": 4,
+      "matched_functions_percent": 25.0,
+      "fuzzy_match_percent": 18.6,
       "functions": [
         {
           "name": "ProfileConversionResults::operator=",
@@ -843438,20 +843395,68 @@
         {
           "name": "ProfileConversionResults::~ProfileConversionResults",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileConversionResults::~ProfileConversionResults",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfileConversionResults::LevelChange::operator=",
           "size": 52,
           "matched": false,
           "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "ProfileConversionResults::LevelChange::LevelChange",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "ProfileConversionResults::LevelChange::LevelChange",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "ProfileConversionResults::LevelChange::LevelChange",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "ProfileConversionResults::LevelChange::LevelChange",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "ProfileConversionResults::LevelChange::LevelChange",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "ProfileConversionResults::LevelChange::LevelChange",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "ProfileConversionResults::LevelChange::~LevelChange",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "ProfileConversionResults::LevelChange::~LevelChange",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -844094,12 +844099,12 @@
     {
       "name": "src/PvZ2/Profile/ProfilesDialog.cpp",
       "total_code": 1936,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 8,
+      "matched_code_percent": 0.41,
       "total_functions": 9,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 22.22,
+      "fuzzy_match_percent": 0.41,
       "functions": [
         {
           "name": "ProfilesDialog::ProfilesDialog",
@@ -844146,14 +844151,14 @@
         {
           "name": "ProfilesDialog::ScrollTargetInterrupted",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ProfilesDialog::ScrollTargetReached",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -844430,66 +844435,66 @@
     {
       "name": "src/PvZ2/Profile/Save/CaptureSave.cpp",
       "total_code": 192,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 192,
+      "matched_code_percent": 100.0,
       "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ArtifactCameraSubSystem::CaptureSave::CaptureSave",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ArtifactCameraSubSystem::CaptureSave::CaptureSave",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ArtifactCameraSubSystem::CaptureSave::~CaptureSave",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ArtifactCameraSubSystem::CaptureSave::~CaptureSave",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Save/DangerRoomSpecialOfferSaveData.cpp",
       "total_code": 28,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 28,
+      "matched_code_percent": 100.0,
       "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 3,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "DangerRoomSpecialOfferSaveData::Reset",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomSpecialOfferSaveData::DangerRoomSpecialOfferSaveData",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomSpecialOfferSaveData::DangerRoomSpecialOfferSaveData",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -844580,492 +844585,492 @@
     {
       "name": "src/PvZ2/Profile/Save/HeroPlantSaveInfo.cpp",
       "total_code": 152,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 152,
+      "matched_code_percent": 100.0,
       "total_functions": 5,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 5,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "HeroPlantSaveInfo::operator=",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "HeroPlantSaveInfo::HeroPlantSaveInfo",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "HeroPlantSaveInfo::HeroPlantSaveInfo",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "HeroPlantSaveInfo::~HeroPlantSaveInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "HeroPlantSaveInfo::~HeroPlantSaveInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Save/LocalProfileSaveData.cpp",
       "total_code": 6732,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 5128,
+      "matched_code_percent": 76.17,
       "total_functions": 52,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 47,
+      "matched_functions_percent": 90.38,
+      "fuzzy_match_percent": 96.28,
       "functions": [
         {
           "name": "LocalProfileSaveData::GetProfilePicture",
           "size": 556,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 82.27
         },
         {
           "name": "LocalProfileSaveData::UpdatePlantWarsTeamData",
           "size": 492,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetProfilePicture",
           "size": 452,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetOrCreateLocalProfileData",
           "size": 376,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 97.87
         },
         {
           "name": "LocalProfileSaveData::GetPlantWarsLevelTeamData",
           "size": 316,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetCanPostToFacebook",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::CanPostToFacebook",
           "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetOrCreateArcadeLastPlayData",
           "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::RemoveFavoriteArtifact",
           "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetPlantLv5SkillSwitch",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::CheckBattleZTips",
           "size": 232,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 86.21
         },
         {
           "name": "LocalProfileSaveData::CheckPennyTips",
           "size": 224,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 69.64
         },
         {
           "name": "LocalProfileSaveData::CheckPVZ1Tips",
           "size": 216,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 79.63
         },
         {
           "name": "LocalProfileSaveData::GetPlantLv5SkillSwitch",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::RemoveSeedChooserFavorite",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::LoadLocalProfileSaveData",
           "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::CheckDangerRoomTips",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::HasPlantPediaRewarded",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::IsFavoriteArtifact",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::IsSeedChooserFavorite",
           "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::AddFavoriteArtifact",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::UpdateDangerRoomTipsTime",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::UpdateBattleZTipsTime",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::UpdatePVZ1TipsTime",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::UpdatePennyTipsTime",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::UpdateTransGenosisTipsTime",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::ObtainPlantPediaReward",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetHeroPlantArmorflameIntroStatus",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetNetworkArtifactImprovedPropertySheet",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetPlantGeneAdditionVersion",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::AddSeedChooserFavorite",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SaveDangerRoomSelectedList",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetHasJustClearedRiftZomboss",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetHasPurchasedExtraDRCard",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::CheckTransGenosisTips",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetFavoriteArtifactList",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetHeroPlantArmorflameIntroStatus",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetNetworkArtifactImprovedPropertySheet",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetPlantGeneAdditionVersion",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetPlantWarsTeamData",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetCurrentNewPVPCPULevel",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetDangerRoomRandomSeed",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetDangerRoomRepickSeed",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::SetZombossUnlockedTime",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetCurrentNewPVPCPULevel",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetDangerRoomRandomSeed",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetDangerRoomRepickSeed",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetDangerRoomSelectedList",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetHasJustClearedRiftZomboss",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetHasPurchasedExtraDRCard",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetSeedChooserFavorites",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LocalProfileSaveData::GetZombossUnlockedTime",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Save/LootEntrySaveData.cpp",
       "total_code": 264,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 264,
+      "matched_code_percent": 100.0,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "LootEntrySaveData::LootEntrySaveData",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootEntrySaveData::LootEntrySaveData",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootEntrySaveData::LootEntrySaveData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootEntrySaveData::LootEntrySaveData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootEntrySaveData::~LootEntrySaveData",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootEntrySaveData::~LootEntrySaveData",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Save/LootSaveData.cpp",
       "total_code": 956,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 720,
+      "matched_code_percent": 75.31,
       "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 90.91,
+      "fuzzy_match_percent": 98.74,
       "functions": [
         {
           "name": "LootSaveData::StaticClassInit",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootSaveData::GetLootEntryData",
           "size": 236,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 94.92
         },
         {
           "name": "LootSaveData::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootSaveData::LootSaveData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootSaveData::LootSaveData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootSaveData::~LootSaveData",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootSaveData::~LootSaveData",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootSaveData::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootSaveData::~LootSaveData",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootSaveData::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LootSaveData::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -845144,168 +845149,168 @@
     {
       "name": "src/PvZ2/Profile/Save/RichmanBattleEventSaveData.cpp",
       "total_code": 648,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 648,
+      "matched_code_percent": 100.0,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "RichmanBattleEventSaveData::operator=",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RichmanBattleEventSaveData::RichmanBattleEventSaveData",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RichmanBattleEventSaveData::RichmanBattleEventSaveData",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RichmanBattleEventSaveData::Reset",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RichmanBattleEventSaveData::RichmanBattleEventSaveData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RichmanBattleEventSaveData::RichmanBattleEventSaveData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RichmanBattleEventSaveData::~RichmanBattleEventSaveData",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RichmanBattleEventSaveData::~RichmanBattleEventSaveData",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Save/RichmanGameSaveData.cpp",
       "total_code": 40,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 40,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "RichmanGameSaveData::RichmanGameSaveData",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "RichmanGameSaveData::RichmanGameSaveData",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/Save/SaveGameHeader.cpp",
       "total_code": 1020,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 900,
+      "matched_code_percent": 88.24,
       "total_functions": 12,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 11,
+      "matched_functions_percent": 91.67,
+      "fuzzy_match_percent": 97.25,
       "functions": [
         {
           "name": "SaveGameHeader::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameHeader::operator=",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameHeader::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameHeader::VersionCheck",
           "size": 120,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 76.67
         },
         {
           "name": "SaveGameHeader::SaveGameHeader",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameHeader::SaveGameHeader",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameHeader::~SaveGameHeader",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameHeader::~SaveGameHeader",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameHeader::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameHeader::~SaveGameHeader",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameHeader::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SaveGameHeader::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -845420,12 +845425,12 @@
     {
       "name": "src/PvZ2/Profile/SavedWorldMapEventData.cpp",
       "total_code": 808,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 16,
+      "matched_code_percent": 1.98,
       "total_functions": 12,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 16.67,
+      "fuzzy_match_percent": 1.98,
       "functions": [
         {
           "name": "SavedWorldMapEventData::GetName",
@@ -845490,26 +845495,26 @@
         {
           "name": "SavedWorldMapEventData::~SavedWorldMapEventData",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SavedWorldMapEventData::~SavedWorldMapEventData",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Profile/TGAClearProfileData.cpp",
       "total_code": 424,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 80,
+      "matched_code_percent": 18.87,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 33.33,
+      "fuzzy_match_percent": 18.87,
       "functions": [
         {
           "name": "TGAClearProfileData::TGAClearProfileData",
@@ -845538,14 +845543,14 @@
         {
           "name": "TGAClearProfileData::~TGAClearProfileData",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "TGAClearProfileData::~TGAClearProfileData",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -985648,12 +985653,12 @@
     {
       "name": "src/SexyAppFramework/Rt/Reflection.cpp",
       "total_code": 48344,
-      "matched_code": 33072,
-      "matched_code_percent": 68.41,
+      "matched_code": 33796,
+      "matched_code_percent": 69.91,
       "total_functions": 349,
-      "matched_functions": 326,
-      "matched_functions_percent": 93.41,
-      "fuzzy_match_percent": 92.38,
+      "matched_functions": 337,
+      "matched_functions_percent": 96.56,
+      "fuzzy_match_percent": 93.88,
       "functions": [
         {
           "name": "Reflection::CRefSymbolDb::WriteRtonRepresentation",
@@ -985826,8 +985831,8 @@
         {
           "name": "Reflection::IRefManualSymbolBuilder::GetFunctionType",
           "size": 416,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Reflection::REvent::Disconnect",
@@ -986372,14 +986377,14 @@
         {
           "name": "Reflection::CRefAttributeVariant::CRefAttributeVariant",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Reflection::CRefAttributeVariant::CRefAttributeVariant",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Reflection::CRefAttributeVariant::CRefAttributeVariant",
@@ -986432,14 +986437,14 @@
         {
           "name": "Reflection::CRefAttributeVariant::CRefAttributeVariant",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Reflection::CRefAttributeVariant::CRefAttributeVariant",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Reflection::CRefAttributeVariant::CRefAttributeVariant",
@@ -987122,14 +987127,14 @@
         {
           "name": "Reflection::RCustomType::IStdManipulator::IStdManipulator",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Reflection::RCustomType::IStdManipulator::IStdManipulator",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Reflection::REnumRef::~REnumRef",
@@ -987332,8 +987337,8 @@
         {
           "name": "Reflection::RCustomType::InstanceNavigatePath",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Reflection::RCustomType::IsAbstract",
@@ -987608,20 +987613,20 @@
         {
           "name": "Reflection::RCustomType::IStdManipulator::~IStdManipulator",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Reflection::RCustomType::IStdManipulator::~IStdManipulator",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Reflection::RCustomType::IStdManipulator::~IStdManipulator",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Reflection::REnum::GetClass",
@@ -999985,12 +999990,12 @@
     {
       "name": "src/SexyAppFramework/Widgets/Widget.cpp",
       "total_code": 6916,
-      "matched_code": 6484,
-      "matched_code_percent": 93.75,
+      "matched_code": 6768,
+      "matched_code_percent": 97.86,
       "total_functions": 72,
-      "matched_functions": 70,
-      "matched_functions_percent": 97.22,
-      "fuzzy_match_percent": 99.36,
+      "matched_functions": 71,
+      "matched_functions_percent": 98.61,
+      "fuzzy_match_percent": 99.94,
       "functions": [
         {
           "name": "Sexy::Widget::Layout",
@@ -1000025,8 +1000030,8 @@
         {
           "name": "Sexy::Widget::WriteNumberFromStrip",
           "size": 284,
-          "matched": false,
-          "fuzzy_match_percent": 85.92
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Widget::WriteString",

@@ -12,17 +12,6 @@
 
 using namespace Sexy;
 
-RT_CLASS_IMPLEMENT(Widget);
-void Widget::StaticClassInit()
-{
-	REFLECTION_CLASSBUILDER_BEGIN(Widget);
-	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
-
-		REFLECTION_CLASSBUILDER_ANCESTOR(WidgetContainer);
-
-	REFLECTION_CLASSBUILDER_END(Widget);
-}
-
 Widget::Widget()
 {
 	mWidgetManager = NULL;
@@ -400,11 +389,11 @@ void Widget::WriteNumberFromStrip(Graphics* g, int theNumber, int theX, int theY
 	for (int aDigitIdx = 0; aDigitIdx < aNumDigits; aDigitIdx++)
 	{
 		aDivisor /= 10;
+		int aX = theX + aDigitIdx * (aDigitLen + aSpacing);
 		g->PushState();
-		g->ClipRect(theX, theY, aDigitLen, theNumberStrip->GetHeight());
+		g->ClipRect(aX, theY, aDigitLen, theNumberStrip->GetHeight());
 		int aDigit = theNumber / aDivisor % 10;
-		g->DrawImage(theNumberStrip, theX - aDigit * aDigitLen, theY);
-		theX += aDigitLen + aSpacing;
+		g->DrawImage(theNumberStrip, aX - aDigit * aDigitLen, theY);
 		g->PopState();
 	}
 }
@@ -518,4 +507,17 @@ void Widget::ShowFinger(bool on)
 		mWidgetManager->mApp->SetCursor(CURSOR_HAND);
 	else
 		mWidgetManager->mApp->SetCursor(CURSOR_POINTER);
+}
+
+/////////////// Reflection ///////////////
+
+RT_CLASS_IMPLEMENT(Widget);
+void Widget::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(Widget);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(WidgetContainer);
+
+	REFLECTION_CLASSBUILDER_END(Widget);
 }
