@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-18T22:12:59+00:00",
+  "generated": "2026-10-19T16:28:55+00:00",
   "measures": {
-    "total_functions": 157938,
-    "matched_functions": 32033,
-    "matched_functions_percent": 20.28,
-    "total_code": 24566064,
-    "matched_code": 2383132,
-    "matched_code_percent": 9.7,
-    "fuzzy_match_percent": 10.47,
-    "started_units": 2335,
-    "total_units": 10449,
-    "started_code": 9916360,
-    "started_matched_code": 2383132,
-    "started_percent": 24.03,
+    "total_functions": 157940,
+    "matched_functions": 32152,
+    "matched_functions_percent": 20.36,
+    "total_code": 24566076,
+    "matched_code": 2403208,
+    "matched_code_percent": 9.78,
+    "fuzzy_match_percent": 10.56,
+    "started_units": 2348,
+    "total_units": 10447,
+    "started_code": 9924096,
+    "started_matched_code": 2403208,
+    "started_percent": 24.22,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -37230,7 +37230,7 @@
       "total_functions": 102,
       "matched_functions": 95,
       "matched_functions_percent": 93.14,
-      "fuzzy_match_percent": 97.99,
+      "fuzzy_match_percent": 96.85,
       "functions": [
         {
           "name": "PopAnimRig::Serialize",
@@ -37254,7 +37254,7 @@
           "name": "PopAnimRig::getSymbolRect",
           "size": 1336,
           "matched": false,
-          "fuzzy_match_percent": 95.81
+          "fuzzy_match_percent": 79.34
         },
         {
           "name": "PopAnimRig::DrawSprite",
@@ -976592,504 +976592,516 @@
     {
       "name": "src/SexyAppFramework/PA/PACommand.cpp",
       "total_code": 240,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 240,
+      "matched_code_percent": 100.0,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PACommand::PACommand",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PACommand::PACommand",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PACommand::~PACommand",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PACommand::~PACommand",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PACommand::PACommand",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PACommand::PACommand",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PAFrame.cpp",
       "total_code": 272,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 272,
+      "matched_code_percent": 100.0,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PAFrame::PAFrame",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAFrame::PAFrame",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAFrame::PAFrame",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAFrame::PAFrame",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAFrame::~PAFrame",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAFrame::~PAFrame",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PAImage.cpp",
       "total_code": 328,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 328,
+      "matched_code_percent": 100.0,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PAImage::PAImage",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAImage::PAImage",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAImage::PAImage",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAImage::PAImage",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAImage::~PAImage",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAImage::~PAImage",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PAObject/PAObjectDef.cpp",
       "total_code": 24,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 24,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PAObjectDef::PAObjectDef",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAObjectDef::PAObjectDef",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PAObject/PAObjectInst.cpp",
       "total_code": 280,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 280,
+      "matched_code_percent": 100.0,
       "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PAObjectInst::PAObjectInst",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAObjectInst::PAObjectInst",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAObjectInst::PAObjectInst",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAObjectInst::PAObjectInst",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PAObject/PAObjectPos.cpp",
       "total_code": 16,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 16,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PAObjectPos::PAObjectPos",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PAObjectPos::PAObjectPos",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PASpriteDef.cpp",
       "total_code": 1008,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1008,
+      "matched_code_percent": 100.0,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PASpriteDef::GetLabelFrameRange",
           "size": 340,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteDef::GetLabelFrame",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteDef::PASpriteDef",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteDef::PASpriteDef",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteDef::PASpriteDef",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteDef::PASpriteDef",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteDef::~PASpriteDef",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteDef::~PASpriteDef",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PASpriteInst.cpp",
       "total_code": 1268,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1268,
+      "matched_code_percent": 100.0,
       "total_functions": 7,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 7,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PASpriteInst::GetObjectInst",
           "size": 416,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteInst::SetSpriteVisibility",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteInst::GetSpriteVisibility",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteInst::~PASpriteInst",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteInst::~PASpriteInst",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteInst::PASpriteInst",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PASpriteInst::PASpriteInst",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PATransform.cpp",
-      "total_code": 8,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 268,
+      "matched_code": 268,
+      "matched_code_percent": 100.0,
+      "total_functions": 4,
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
-          "name": "Sexy::PATransform::PATransform",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Sexy::PATransform::InterpolateTo",
+          "size": 196,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PATransform::TransformSrc",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PATransform::PATransform",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PATransform::PATransform",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PopAnim/PopAnim.cpp",
       "total_code": 19232,
-      "matched_code": 232,
-      "matched_code_percent": 1.21,
+      "matched_code": 12572,
+      "matched_code_percent": 65.37,
       "total_functions": 48,
-      "matched_functions": 2,
-      "matched_functions_percent": 4.17,
-      "fuzzy_match_percent": 17.2,
+      "matched_functions": 41,
+      "matched_functions_percent": 85.42,
+      "fuzzy_match_percent": 89.75,
       "functions": [
         {
           "name": "Sexy::PopAnim::LoadSpriteDef",
           "size": 3068,
-          "matched": false,
-          "fuzzy_match_percent": 53.98
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::Load_LoadPam",
           "size": 2784,
           "matched": false,
-          "fuzzy_match_percent": 51.01
+          "fuzzy_match_percent": 48.99
         },
         {
           "name": "Sexy::PopAnim::DrawSpriteReplaceLayerWithImage",
           "size": 1432,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::DrawSprite",
           "size": 1408,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::FrameHit",
           "size": 1324,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 86.4
         },
         {
           "name": "Sexy::PopAnim::BlendTo",
           "size": 1048,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 90.08
         },
         {
           "name": "Sexy::PopAnim::Load_GetImageHook",
           "size": 692,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::IncSpriteInstFrame",
           "size": 616,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 83.77
         },
         {
           "name": "Sexy::PopAnim::UpdateTransforms",
           "size": 592,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::SetupSpriteInst",
           "size": 484,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::PrepSpriteInstFrame",
           "size": 444,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::DrawReplaceLayerWithImage",
           "size": 440,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::CalcObjectPos",
           "size": 408,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 78.43
         },
         {
           "name": "Sexy::PopAnim::Draw",
           "size": 408,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::Load_GetImage",
           "size": 360,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::Play",
           "size": 308,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::InitSpriteInst",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::Play",
           "size": 284,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::DoFramesHit",
           "size": 260,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::PopAnim",
           "size": 240,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 83.33
         },
         {
           "name": "Sexy::PopAnim::PopAnim",
           "size": 240,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 83.33
         },
         {
           "name": "Sexy::PopAnim::LoadFile",
@@ -977100,152 +977112,152 @@
         {
           "name": "Sexy::PopAnim::operator=",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::Clear",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::ResetAnimHelper",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::FindSpriteDef",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::GetObjectInst",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::PopAnim",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::PopAnim",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::~PopAnim",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::~PopAnim",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::ResetAnim",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::AnimUpdate",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::Duplicate",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::StaticNew",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::StaticClassInit",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::~PopAnim",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::Fail",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::DrawDebugOverlay",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::UpdateTransforms",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::GetLabelFrame",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::SetPAMColor",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::IsActive",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::DrawDebugOverlayForSprite",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnim::Load_Init",
@@ -977258,228 +977270,258 @@
     {
       "name": "src/SexyAppFramework/PA/PopAnim/PopAnimDef.cpp",
       "total_code": 336,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 336,
+      "matched_code_percent": 100.0,
       "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PopAnimDef::~PopAnimDef",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnimDef::~PopAnimDef",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnimDef::PopAnimDef",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopAnimDef::PopAnimDef",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PopAnim/PopAnimRes.cpp",
-      "total_code": 1288,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 1300,
+      "matched_code": 1300,
+      "matched_code_percent": 100.0,
+      "total_functions": 12,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::ResourceInfoTypes::PopAnimRes::DoLoad",
           "size": 600,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceInfoTypes::PopAnimRes::ParseRton",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceInfoTypes::PopAnimRes::StaticClassInit",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceInfoTypes::PopAnimRes::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceInfoTypes::PopAnimRes::PopAnimRes",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceInfoTypes::PopAnimRes::PopAnimRes",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceInfoTypes::PopAnimRes::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceInfoTypes::PopAnimRes::~PopAnimRes",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceInfoTypes::PopAnimRes::~PopAnimRes",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceInfoTypes::PopAnimRes::~PopAnimRes",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PopAnimRes::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PopAnimRes::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PopLoc.cpp",
       "total_code": 1796,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1796,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PopLoc::Evaluate",
           "size": 548,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopLoc::SetString",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopLoc::GetString",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopLoc::GetString",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopLoc::RemoveString",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopLoc::SetString",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopLoc::RemoveString",
           "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopLoc::~PopLoc",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopLoc::~PopLoc",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopLoc::PopLoc",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopLoc::PopLoc",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PA/PopTransformMatrix.cpp",
-      "total_code": 352,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 5,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 600,
+      "matched_code": 600,
+      "matched_code_percent": 100.0,
+      "total_functions": 8,
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
+        {
+          "name": "Sexy::PopTransformMatrix",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
         {
           "name": "Sexy::PopTransformMatrix::Multiply",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopTransformMatrix::GetMatrix3",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopTransformMatrix::PopTransformMatrix",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopTransformMatrix::PopTransformMatrix",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PopTransformMatrix::operator=",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PopTransformMatrix",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PopTransformMatrix::LoadIdentity",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -996848,30 +996890,6 @@
       ]
     },
     {
-      "name": "src/SexyAppFramework/Templates/PATransform.cpp",
-      "total_code": 260,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::PATransform::InterpolateTo",
-          "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PATransform::TransformSrc",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/SexyAppFramework/Templates/PIInterpolator.cpp",
       "total_code": 36,
       "matched_code": 0,
@@ -996920,36 +996938,6 @@
         {
           "name": "Sexy::PIValue::operator=",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/PopTransformMatrix.cpp",
-      "total_code": 248,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::PopTransformMatrix",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PopTransformMatrix::operator=",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PopTransformMatrix",
-          "size": 48,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
