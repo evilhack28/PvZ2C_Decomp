@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-19T16:28:55+00:00",
+  "generated": "2026-10-19T22:05:51+00:00",
   "measures": {
-    "total_functions": 157940,
-    "matched_functions": 32152,
-    "matched_functions_percent": 20.36,
-    "total_code": 24566076,
-    "matched_code": 2403208,
-    "matched_code_percent": 9.78,
-    "fuzzy_match_percent": 10.56,
-    "started_units": 2348,
+    "total_functions": 157942,
+    "matched_functions": 32308,
+    "matched_functions_percent": 20.46,
+    "total_code": 24566088,
+    "matched_code": 2419496,
+    "matched_code_percent": 9.85,
+    "fuzzy_match_percent": 10.63,
+    "started_units": 2358,
     "total_units": 10447,
-    "started_code": 9924096,
-    "started_matched_code": 2403208,
-    "started_percent": 24.22,
+    "started_code": 9942516,
+    "started_matched_code": 2419496,
+    "started_percent": 24.33,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -980754,440 +980754,248 @@
       ]
     },
     {
-      "name": "src/SexyAppFramework/Prime/PrimeAllocator.cpp",
+      "name": "src/SexyAppFramework/PrimeText/PrimeAllocator.cpp",
       "total_code": 140,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 140,
+      "matched_code_percent": 100.0,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PrimeAllocator::PrimeAllocator",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeAllocator::PrimeAllocator",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeAllocator::Free",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeAllocator::Alloc",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeAllocator::Alloc",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeAllocator::~PrimeAllocator",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeAllocator::~PrimeAllocator",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeAllocator::~PrimeAllocator",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Prime/PrimeFontRes.cpp",
-      "total_code": 760,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::DoLoad",
-          "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::StaticClassInit",
-          "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::StaticGetClass",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::PrimeFontRes",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::PrimeFontRes",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::StaticNew",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::~PrimeFontRes",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::ApplyConfig",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::~PrimeFontRes",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::~PrimeFontRes",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::ParseRton",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Prime/PrimeTextExtraParameters.cpp",
-      "total_code": 32,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::PrimeTextExtraParameters::PrimeTextExtraParameters",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextExtraParameters::PrimeTextExtraParameters",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Prime/PrimeTextWidget.cpp",
-      "total_code": 2892,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 28,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::PrimeTextWidget::DrawWithFont",
-          "size": 500,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::DrawWithPrimeFont",
-          "size": 344,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::GetText",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::SetText",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::SetRect",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::UpdateGlyphMesh",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::SetScale",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::Draw",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::SetPosition",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::Clear",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::GetPosition",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::SetColor",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::SetPotentialText",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::CreateGlyphMesh",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::SetPotentialText",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::ClearGlyphMesh",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::UpdateGlyphMeshCacheVersion",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::~PrimeTextWidget",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::~PrimeTextWidget",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::SetGlyphMesh",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::~PrimeTextWidget",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::PrimeTextWidget::SetDontDrawWhenOffscreen",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PrimeText/PrimeFont.cpp",
       "total_code": 864,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 864,
+      "matched_code_percent": 100.0,
       "total_functions": 14,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 14,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PrimeFont::LoadResourceFile",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::~PrimeFont",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::~PrimeFont",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::LoadFromMem",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::PrimeFont",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::PrimeFont",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::PrimeFont",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::PrimeFont",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::StaticClassInit",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::~PrimeFont",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeFont::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/SexyAppFramework/PrimeText/PrimeFontRes.cpp",
+      "total_code": 772,
+      "matched_code": 772,
+      "matched_code_percent": 100.0,
+      "total_functions": 13,
+      "matched_functions": 13,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::DoLoad",
+          "size": 244,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::StaticClassInit",
+          "size": 140,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::StaticGetClass",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::PrimeFontRes",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::PrimeFontRes",
+          "size": 48,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::StaticNew",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::~PrimeFontRes",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::ApplyConfig",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::~PrimeFontRes",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::~PrimeFontRes",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::IsAbstract",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::ParseRton",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ResourceInfoTypes::PrimeFontRes::GetClass",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -981308,636 +981116,840 @@
     {
       "name": "src/SexyAppFramework/PrimeText/PrimeGlyphMesh.cpp",
       "total_code": 4116,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2484,
+      "matched_code_percent": 60.35,
       "total_functions": 30,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 28,
+      "matched_functions_percent": 93.33,
+      "fuzzy_match_percent": 83.67,
       "functions": [
         {
           "name": "Sexy::PrimeGlyphMesh::BuildPart",
           "size": 1468,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 57.77
         },
         {
           "name": "Sexy::PrimeGlyphMesh::Draw_CharacterTriangles",
           "size": 540,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::Draw_DebugCharacterRects",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::BuildEnd",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::CalculateScaleTransform",
           "size": 164,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 68.29
         },
         {
           "name": "Sexy::PrimeGlyphMesh::AllocateSexyVerts",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::Draw",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::Draw_Characters",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::Init",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::PrimeGlyphMesh",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::PrimeGlyphMesh",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::SetMVPMatrix",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::BuildBegin",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::ClearSexyVerts",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::Build",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::SetMVPMatrix",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::Shutdown",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::SetPostScale",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::~PrimeGlyphMesh",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::~PrimeGlyphMesh",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::SetColor",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::Reserve",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::SetClippingRect",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::IsClippingEnabled",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::SetClippingEnabled",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::SetColorRGBA",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::SetLineLayout",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::SetTextStyleColorEnabled",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::RestoreStates",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphMesh::SaveStates",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PrimeText/PrimeText.cpp",
       "total_code": 2592,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2580,
+      "matched_code_percent": 99.54,
       "total_functions": 24,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 23,
+      "matched_functions_percent": 95.83,
+      "fuzzy_match_percent": 99.85,
       "functions": [
         {
           "name": "Sexy::PrimeText::Init",
           "size": 452,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::Font_DebugOutputAllFontNames",
           "size": 320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::TextStyle_Create",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::DrawDebugText",
           "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::TypefaceSimple",
           "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::String32to16",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::Font_AddTrueType",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::~PrimeText",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::~PrimeText",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::String16ToWString",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::TextStyle_Create",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::Typeface",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::GlyphMesh",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::CalculateGlyphCacheResolution",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::InstanceCreate",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::GlyphCacheVersionIncrement",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::ClearGlyphCache",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::Font_Remove",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::PrimeText",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::PrimeText",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::Instance",
           "size": 12,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 66.67
         },
         {
           "name": "Sexy::PrimeText::DebugDrawCache",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::Font_AddUserEffect",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText::TypefaceDefault",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/SexyAppFramework/PrimeText/PrimeTextExtraParameters.cpp",
+      "total_code": 32,
+      "matched_code": 32,
+      "matched_code_percent": 100.0,
+      "total_functions": 2,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "Sexy::PrimeTextExtraParameters::PrimeTextExtraParameters",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextExtraParameters::PrimeTextExtraParameters",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PrimeText/PrimeTextPotentialText.cpp",
       "total_code": 656,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 656,
+      "matched_code_percent": 100.0,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PrimeText_PotentialText::Prepare",
           "size": 480,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText_PotentialText::PrimeText_PotentialText",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText_PotentialText::PrimeText_PotentialText",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText_PotentialText::SetOptionalParameters",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText_PotentialText::~PrimeText_PotentialText",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText_PotentialText::~PrimeText_PotentialText",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/SexyAppFramework/PrimeText/PrimeTextWidget.cpp",
+      "total_code": 2892,
+      "matched_code": 2892,
+      "matched_code_percent": 100.0,
+      "total_functions": 28,
+      "matched_functions": 28,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "Sexy::PrimeTextWidget::DrawWithFont",
+          "size": 500,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::DrawWithPrimeFont",
+          "size": 344,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::GetText",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::SetText",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::SetRect",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::UpdateGlyphMesh",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::SetScale",
+          "size": 96,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::Draw",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::SetPosition",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::Clear",
+          "size": 88,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::GetPosition",
+          "size": 80,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::PrimeTextWidget",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::SetColor",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::SetPotentialText",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::CreateGlyphMesh",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::SetPotentialText",
+          "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::ClearGlyphMesh",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::UpdateGlyphMeshCacheVersion",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::~PrimeTextWidget",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::~PrimeTextWidget",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::SetGlyphMesh",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::~PrimeTextWidget",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::PrimeTextWidget::SetDontDrawWhenOffscreen",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PrimeText/PrimeText_SimpleFormatter.cpp",
       "total_code": 1336,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1336,
+      "matched_code_percent": 100.0,
       "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 3,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PrimeText_SimpleFormatter::PrepareFormattedText",
           "size": 768,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText_SimpleFormatter::ProcessFormatter",
           "size": 316,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText_SimpleFormatter::DrawFormattedText",
           "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/PrimeText/PrimeTypeface.cpp",
       "total_code": 5020,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 4532,
+      "matched_code_percent": 90.28,
       "total_functions": 33,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 31,
+      "matched_functions_percent": 93.94,
+      "fuzzy_match_percent": 94.66,
       "functions": [
         {
           "name": "Sexy::PrimeTypeface::PrepareString_Paragraph",
           "size": 544,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::PrepareString_Line",
           "size": 432,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::DrawString_Paragraph",
           "size": 328,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::PrepareString_Simple",
           "size": 324,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::DrawString_Paragraph",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::FitString_Paragraph",
           "size": 276,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 42.03
         },
         {
           "name": "Sexy::PrimeTypeface::DrawString_Line",
           "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::SizeString_Paragraph",
           "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::DrawString_Simple",
           "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::SizeString_Line",
           "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::FitString_Line",
           "size": 212,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 49.06
         },
         {
           "name": "Sexy::PrimeTypeface::PrepareString_Typesetter",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::PrepareTypesetter",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::PrepareGlyphMesh",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::StringWidth",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::GetAscent",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::GetDescent",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::GetHeight",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::GetLineHeight",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::GetLineSpacing",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::DrawString_Typesetter",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::PrimeTypeface",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::PrimeTypeface",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::ApplyOptionalParameters",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::~PrimeTypeface",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::~PrimeTypeface",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::GetAscentPadding",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::GetCharWidth",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::GetCharWidthKern",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::GetDefaultStyle",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::SetTypefaceIfShrunk",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::ShrunkTypeface",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::CharWidth",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
