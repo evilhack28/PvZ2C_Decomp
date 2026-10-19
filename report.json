@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-18T13:53:04+00:00",
+  "generated": "2026-10-18T22:12:59+00:00",
   "measures": {
-    "total_functions": 157957,
-    "matched_functions": 31899,
-    "matched_functions_percent": 20.19,
-    "total_code": 24566428,
-    "matched_code": 2356500,
-    "matched_code_percent": 9.59,
-    "fuzzy_match_percent": 10.35,
+    "total_functions": 157938,
+    "matched_functions": 32033,
+    "matched_functions_percent": 20.28,
+    "total_code": 24566064,
+    "matched_code": 2383132,
+    "matched_code_percent": 9.7,
+    "fuzzy_match_percent": 10.47,
     "started_units": 2335,
     "total_units": 10449,
     "started_code": 9916360,
-    "started_matched_code": 2356500,
-    "started_percent": 23.76,
+    "started_matched_code": 2383132,
+    "started_percent": 24.03,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -528066,12 +528066,12 @@
     {
       "name": "src/PvZ2/Gameplay/SeedBank/SeedChooser.cpp",
       "total_code": 49916,
-      "matched_code": 32,
-      "matched_code_percent": 0.06,
+      "matched_code": 21072,
+      "matched_code_percent": 42.21,
       "total_functions": 109,
-      "matched_functions": 6,
-      "matched_functions_percent": 5.5,
-      "fuzzy_match_percent": 0.06,
+      "matched_functions": 88,
+      "matched_functions_percent": 80.73,
+      "fuzzy_match_percent": 44.84,
       "functions": [
         {
           "name": "SeedChooser::setSeedPreview",
@@ -528172,476 +528172,476 @@
         {
           "name": "SeedChooser::VerifyAndSelectSeeds",
           "size": 1000,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::initializeSeedPacket",
           "size": 984,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 42.28
         },
         {
           "name": "SeedChooser::onEnterState_Initializing",
           "size": 904,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::finalizeSelection",
           "size": 780,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::~SeedChooser",
           "size": 724,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::~SeedChooser",
           "size": 724,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::SeedChooser",
           "size": 652,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::SeedChooser",
           "size": 652,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::drawHeroPlant",
           "size": 652,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::refreshCurrentArtifact",
           "size": 596,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::updateState_Ready",
           "size": 592,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::GetSelectedPlantTypes",
           "size": 476,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::OverrideValidPlants",
           "size": 472,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::ForceSelection",
           "size": 440,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 50.0
         },
         {
           "name": "SeedChooser::createAccessoryButton",
           "size": 432,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::createFavoriteButton",
           "size": 424,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::OnGameStartAdFinished",
           "size": 416,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::panBoardLeft",
           "size": 396,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::panBoardRight",
           "size": 392,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::findPlantTypeChooserPacketIndex",
           "size": 376,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onItemPurchasedFromStore",
           "size": 364,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::reindexBankPackets",
           "size": 364,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 63.74
         },
         {
           "name": "SeedChooser::toggleSelectArtifact",
           "size": 364,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::createSortedPlantList",
           "size": 352,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::ShowArtifactDetails",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::toggleSelectHeroPlant",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::updateState_Initializing",
           "size": 340,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::ShowHeroPlantDetails",
           "size": 332,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::togglePlantFavorite",
           "size": 328,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 93.9
         },
         {
           "name": "SeedChooser::OnServerGemCallBack",
           "size": 320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::deleteChooserPackets",
           "size": 320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::updateImitaterChooserPacketState",
           "size": 312,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::calcPacketPositionInChooser",
           "size": 308,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::OnOrientationChanged",
           "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onMsgBorrowFriendPlant",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::calcPacketPositionInBank",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::IsMouseOver",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::SetSeedBankProperties",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::isCurrentPlantFavorite",
           "size": 260,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::setPlantPreview",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::getBattleArrayType",
           "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::isCurPlantExp",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::isCurPlantAlreadyBuy",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::addToolToChooserPackets",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::refreshCurrentHeroPlant",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::updateFavoriteButton",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::ShowSeedChooserArtifactSelectWidget",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::ShowSeedChooserHeroPlantSelectWidget",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::initLoadingResourcesGroupList",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::showBuyPlantUI",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::AutoSelectSeedsAndFinalize",
           "size": 196,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 67.35
         },
         {
           "name": "SeedChooser::onSlideOutFinished",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::touchAccessoryButton",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::toggleHideChooser",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::isPlantTypeAPvZ1Plant",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::calcInfoCardRect",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::isPlantTypeAFavorite",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onPanBoardLeftFinished",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::drawTranslatedWidget",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::findImitaterChooserPacketIndex",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::CloseSeedChooserArtifactSelectWidget",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::CloseSeedChooserHeroPlantSelectWidget",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onPlantAccessoryActionComplete",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::sendBorrowRequestBeforeFinalize",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onMsgError",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::isPlantTypeATrialPlant",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onPanBoardRightFinished",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onPlayButtonPressed",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::~SeedChooser",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onCheatDisabled",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onCheatEnabled",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onRepickButtonPressed",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::ButtonPress",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::SetSeedPacketType",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::SetSpecialSeedPacketType",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::checkForZombieTouch",
@@ -528652,14 +528652,14 @@
         {
           "name": "SeedChooser::drawAccessoryButton",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::drawFavoriteButton",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::isFavoritesFeatureToggleEnabled",
@@ -528670,14 +528670,14 @@
         {
           "name": "SeedChooser::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::InitRecordPacket",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onBuyPlantButtonPressed",
@@ -528694,26 +528694,26 @@
         {
           "name": "SeedChooser::onEnterState_Ready",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onExitState_Initializing",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onExitState_Ready",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onLandInBank",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SeedChooser::onNarrationFinished",
@@ -832237,54 +832237,54 @@
     {
       "name": "src/PvZ2/Profile/Avatar/ACLOG_PlantAvatarInfo.cpp",
       "total_code": 344,
-      "matched_code": 16,
-      "matched_code_percent": 4.65,
+      "matched_code": 344,
+      "matched_code_percent": 100.0,
       "total_functions": 9,
-      "matched_functions": 2,
-      "matched_functions_percent": 22.22,
-      "fuzzy_match_percent": 4.65,
+      "matched_functions": 9,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ACLOG_PlantAvatarInfo::operator=",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarInfo::ACLOG_PlantAvatarInfo",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarInfo::ACLOG_PlantAvatarInfo",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarInfo::ACLOG_PlantAvatarInfo",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarInfo::ACLOG_PlantAvatarInfo",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarInfo::ACLOG_PlantAvatarInfo",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarInfo::ACLOG_PlantAvatarInfo",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarInfo::~ACLOG_PlantAvatarInfo",
@@ -832303,54 +832303,54 @@
     {
       "name": "src/PvZ2/Profile/Avatar/ACLOG_PlantAvatarPiecesInfo.cpp",
       "total_code": 220,
-      "matched_code": 16,
-      "matched_code_percent": 7.27,
+      "matched_code": 220,
+      "matched_code_percent": 100.0,
       "total_functions": 9,
-      "matched_functions": 2,
-      "matched_functions_percent": 22.22,
-      "fuzzy_match_percent": 7.27,
+      "matched_functions": 9,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "ACLOG_PlantAvatarPiecesInfo::ACLOG_PlantAvatarPiecesInfo",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarPiecesInfo::ACLOG_PlantAvatarPiecesInfo",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarPiecesInfo::operator=",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarPiecesInfo::ACLOG_PlantAvatarPiecesInfo",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarPiecesInfo::ACLOG_PlantAvatarPiecesInfo",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarPiecesInfo::ACLOG_PlantAvatarPiecesInfo",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarPiecesInfo::ACLOG_PlantAvatarPiecesInfo",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "ACLOG_PlantAvatarPiecesInfo::~ACLOG_PlantAvatarPiecesInfo",
@@ -832369,30 +832369,30 @@
     {
       "name": "src/PvZ2/Profile/Avatar/AccessoryAvatarInfo.cpp",
       "total_code": 292,
-      "matched_code": 80,
-      "matched_code_percent": 27.4,
+      "matched_code": 292,
+      "matched_code_percent": 100.0,
       "total_functions": 5,
-      "matched_functions": 2,
-      "matched_functions_percent": 40.0,
-      "fuzzy_match_percent": 27.4,
+      "matched_functions": 5,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "AccessoryAvatarInfo::AccessoryAvatarInfo",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AccessoryAvatarInfo::AccessoryAvatarInfo",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AccessoryAvatarInfo::operator=",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AccessoryAvatarInfo::~AccessoryAvatarInfo",
@@ -832495,36 +832495,36 @@
     {
       "name": "src/PvZ2/Profile/Avatar/AlarmSagittifoliaAvatarSkill.cpp",
       "total_code": 2128,
-      "matched_code": 540,
-      "matched_code_percent": 25.38,
+      "matched_code": 2128,
+      "matched_code_percent": 100.0,
       "total_functions": 16,
-      "matched_functions": 8,
-      "matched_functions_percent": 50.0,
-      "fuzzy_match_percent": 25.38,
+      "matched_functions": 16,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "AlarmSagittifoliaAvatarSkill::setInfo",
           "size": 528,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::takeEffect",
           "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::AlarmSagittifoliaAvatarSkill",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::AlarmSagittifoliaAvatarSkill",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::StaticClassInit",
@@ -832541,20 +832541,20 @@
         {
           "name": "AlarmSagittifoliaAvatarSkill::AlarmSagittifoliaAvatarSkill",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::AlarmSagittifoliaAvatarSkill",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::operator=",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::~AlarmSagittifoliaAvatarSkill",
@@ -832571,8 +832571,8 @@
         {
           "name": "AlarmSagittifoliaAvatarSkill::onDestroy",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkill::StaticNew",
@@ -832603,18 +832603,18 @@
     {
       "name": "src/PvZ2/Profile/Avatar/AlarmSagittifoliaAvatarSkillSystem.cpp",
       "total_code": 1132,
-      "matched_code": 360,
-      "matched_code_percent": 31.8,
+      "matched_code": 1132,
+      "matched_code_percent": 100.0,
       "total_functions": 12,
-      "matched_functions": 5,
-      "matched_functions_percent": 41.67,
-      "fuzzy_match_percent": 31.8,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::Update",
           "size": 320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::StaticClassInit",
@@ -832625,8 +832625,8 @@
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::CreateEffect",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::StaticGetClass",
@@ -832637,26 +832637,26 @@
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::AlarmSagittifoliaAvatarSkillSystem",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::AlarmSagittifoliaAvatarSkillSystem",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::~AlarmSagittifoliaAvatarSkillSystem",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::~AlarmSagittifoliaAvatarSkillSystem",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::StaticNew",
@@ -832667,8 +832667,8 @@
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::~AlarmSagittifoliaAvatarSkillSystem",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AlarmSagittifoliaAvatarSkillSystem::IsAbstract",
@@ -832687,12 +832687,12 @@
     {
       "name": "src/PvZ2/Profile/Avatar/AvatarPackageItem.cpp",
       "total_code": 1732,
-      "matched_code": 140,
-      "matched_code_percent": 8.08,
+      "matched_code": 548,
+      "matched_code_percent": 31.64,
       "total_functions": 11,
-      "matched_functions": 3,
-      "matched_functions_percent": 27.27,
-      "fuzzy_match_percent": 8.08,
+      "matched_functions": 10,
+      "matched_functions_percent": 90.91,
+      "fuzzy_match_percent": 31.64,
       "functions": [
         {
           "name": "AvatarPackageItem::Draw",
@@ -832703,26 +832703,26 @@
         {
           "name": "AvatarPackageItem::Refresh",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AvatarPackageItem::TouchEnded",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AvatarPackageItem::AvatarPackageItem",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AvatarPackageItem::AvatarPackageItem",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AvatarPackageItem::~AvatarPackageItem",
@@ -832745,20 +832745,20 @@
         {
           "name": "AvatarPackageItem::InitView",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AvatarPackageItem::TouchBegan",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AvatarPackageItem::SelectPackageItem",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -832819,36 +832819,36 @@
     {
       "name": "src/PvZ2/Profile/Avatar/CollectableAvatarPiece.cpp",
       "total_code": 1276,
-      "matched_code": 380,
-      "matched_code_percent": 29.78,
+      "matched_code": 1276,
+      "matched_code_percent": 100.0,
       "total_functions": 14,
-      "matched_functions": 9,
-      "matched_functions_percent": 64.29,
-      "fuzzy_match_percent": 29.78,
+      "matched_functions": 14,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "CollectableAvatarPiece::initializeRenderEffect",
           "size": 352,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::onUpdate",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::GetPlantName",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::GetTypeName",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::StaticGetClass",
@@ -832859,8 +832859,8 @@
         {
           "name": "CollectableAvatarPiece::GetPlantAvatarType",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPiece::CollectableAvatarPiece",
@@ -832915,18 +832915,18 @@
     {
       "name": "src/PvZ2/Profile/Avatar/CollectableAvatarPieceType.cpp",
       "total_code": 668,
-      "matched_code": 488,
-      "matched_code_percent": 73.05,
+      "matched_code": 668,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 9,
-      "matched_functions_percent": 90.0,
-      "fuzzy_match_percent": 73.05,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "CollectableAvatarPieceType::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CollectableAvatarPieceType::StaticGetClass",
@@ -832987,18 +832987,18 @@
     {
       "name": "src/PvZ2/Profile/Avatar/CypripediumPlantfoodAvatar.cpp",
       "total_code": 1168,
-      "matched_code": 564,
-      "matched_code_percent": 48.29,
+      "matched_code": 1168,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 10,
-      "matched_functions_percent": 90.91,
-      "fuzzy_match_percent": 48.29,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "CypripediumPlantfoodAvatar::OnCollideEntity",
           "size": 604,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CypripediumPlantfoodAvatar::StaticClassInit",
@@ -833467,48 +833467,48 @@
     {
       "name": "src/PvZ2/Profile/Avatar/GiftPlantAvatarData.cpp",
       "total_code": 480,
-      "matched_code": 80,
-      "matched_code_percent": 16.67,
+      "matched_code": 480,
+      "matched_code_percent": 100.0,
       "total_functions": 8,
-      "matched_functions": 2,
-      "matched_functions_percent": 25.0,
-      "fuzzy_match_percent": 16.67,
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "GiftPlantAvatarData::GiftPlantAvatarData",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GiftPlantAvatarData::GiftPlantAvatarData",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GiftPlantAvatarData::GiftPlantAvatarData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GiftPlantAvatarData::GiftPlantAvatarData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GiftPlantAvatarData::GiftPlantAvatarData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GiftPlantAvatarData::GiftPlantAvatarData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "GiftPlantAvatarData::~GiftPlantAvatarData",
@@ -847799,129 +847799,14 @@
     },
     {
       "name": "src/PvZ2/TalkingGame/talking_game.cpp",
-      "total_code": 364,
+      "total_code": 0,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 19,
+      "total_functions": 0,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "talkingGame::talkingGame",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::talkingGame",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::~talkingGame",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::~talkingGame",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::~talkingGame",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::beginLevel",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::completeLevel",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::failLevel",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::getGold",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::onPay",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::onPayComplete",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::onReward",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::onUseGem",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::onUseItem",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::setAccount",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::setGameServer",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::setLevel",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::stayPlayer",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "talkingGame::useGold",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
+      "functions": []
     },
     {
       "name": "src/PvZ2/Tools/UIEditor/StringHelper.cpp",
