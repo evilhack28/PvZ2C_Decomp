@@ -95,6 +95,14 @@ def compile_one(source):
     return source, obj, None
 
 
+# Dev classes whose names start lowercase (the uppercase test below would drop them).
+_LOWERCASE_CLASSES = {
+    'androidNetworkMsgProcess', 'talkingGame', 'mutationParkourProjectile', 'cactusBoostReShoot',
+    'plantInfo', 'recordData', 'targetData', 'swallZombieData', 'stMiniGame_rankItemInfo',
+    'stMiniGame_rank', 'stRewardInfo', 'stThirdAwardInfo', 'stActivity_iconInfo', 'stExPlantData',
+    'stExperPlantInfo', 'stSpringRewardInfo', 'st_resultInfo', 'stAward', 'stFirstChargeAward',
+    'stMiniGameAward_Bonus', 'stMiniGame_Bonus', 'stThirdAward',
+}
 _NAMESPACES = {'Sexy', 'std', 'EA', 'eastl', '__gnu_cxx', 'EATech', '__cxxabiv1'}
 
 
@@ -136,7 +144,7 @@ def owned_prefixes(sym):
     if not class_comps:
         return None
     cls = class_comps[-1][0]
-    if len(cls) < 3 or not cls[0].isupper() or cls in _NAMESPACES:
+    if len(cls) < 3 or not (cls[0].isupper() or cls in _LOWERCASE_CLASSES) or cls in _NAMESPACES:
         return None
     if marker == 'I':                          # template: ...Class I<args> E
         return None

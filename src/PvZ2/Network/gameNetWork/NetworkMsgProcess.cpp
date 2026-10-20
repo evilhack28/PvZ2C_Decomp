@@ -42,6 +42,9 @@
 #include "UINewPVPShop.h"
 #include "ADManager.h"
 #include "Social/Widgets/AccountBindDialog.h"
+#include "PvZ/logServer/md5.h"
+#include <sstream>
+#include "PvZ/gameNetWork/pcpEncrypty/PCPEncrypt.h"
 
 void MiniGameRewardEndMsg(bool) asm("_ZN7Message23NotifyMiniGameRewardEndEb");
 void WorldCupBeginGameMsg(bool) asm("_ZN7Message19GLWorldCupBeginGameEb");
@@ -160,15 +163,93 @@ int INetworkMsgProcess::GetMsgID(const std::string& i_msgID)
 	return atoi(&i_msgID[1]);
 }
 
+static __attribute__((noinline)) unsigned long SeedFromTime(unsigned long t) { return t; }
+
 long INetworkMsgProcess::GetRandom()
 {
 	if (m_random == 0)
 	{
-		Sexy::SexyTime();
-		srand(0);
+		srand(SeedFromTime(Sexy::SexyTime()));
 		m_random = rand();
 	}
 	return m_random;
+}
+
+std::string INetworkMsgProcess::GetClientSignature(const std::string& i_definedId)
+{
+	std::stringstream stream(std::ios_base::out | std::ios_base::in);
+	stream << i_definedId;
+	stream << GetRandom();
+	stream << "B7108D8B5TABE";
+	MD5 md5;
+	md5.update(stream.str().c_str(), stream.str().size());
+	return md5.toString();
+}
+
+std::string INetworkMsgProcess::GetServerSignature()
+{
+	std::stringstream stream(std::ios_base::out | std::ios_base::in);
+	stream << m_UserId;
+	stream << m_sk;
+	stream << GetRandom();
+	stream << "EA82E716DBA67";
+	MD5 md5;
+	md5.update(stream.str().c_str(), stream.str().size());
+	return md5.toString();
+}
+
+void INetworkMsgProcess::SendHttpRequest(ParaMap& params, bool bWait, const std::string& i_hint, bool bPause, bool bFlush)
+{
+	params["ver_"] = PVPManager::GetInstancePtr()->GetProductVersion();
+
+	std::string req = params.find("req")->second;
+	if (bFlush)
+		gLawnApp->IsNetworkModuleOK();
+	if (bWait)
+		gLawnApp->ShowNetConnectingUI(i_hint);
+
+	std::string json;
+	ParaIter it = params.begin();
+	json = "{";
+	while (it != params.end())
+	{
+		if (it->first != "req")
+		{
+			json += "\"";
+			json += it->first;
+			json += "\":";
+			if (IsJsonObj(it->second))
+			{
+				json += it->second;
+			}
+			else
+			{
+				json += "\"";
+				json += it->second;
+				json += "\"";
+			}
+			json += ",";
+		}
+		++it;
+	}
+	json = json.substr(0, json.size() - 1);
+	json += "}";
+
+	int msgID = GetMsgID(req);
+	std::string body = PCPEncryptSendDataStr(json.c_str(), json.size(), msgID, req);
+	m_pHttpRequest->StartRequest(req, body);
+}
+
+void INetworkMsgProcess::SendHttpRequest(std::string& req, const std::string& msg, bool bWait, bool bPause, bool bFlush)
+{
+	if (bFlush)
+		gLawnApp->IsConnected();
+	if (bWait)
+		gLawnApp->ShowNetConnectingUI("[NET_CONNECTING]");
+
+	int msgID = GetMsgID(req);
+	std::string body = PCPEncryptSendDataStr(msg.c_str(), msg.size(), msgID, req);
+	m_pHttpRequest->StartRequest(req, body);
 }
 
 bool INetworkMsgProcess::IsJsonObj(const std::string& i_text)

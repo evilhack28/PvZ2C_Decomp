@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-19T22:05:51+00:00",
+  "generated": "2026-10-20T17:18:08+00:00",
   "measures": {
-    "total_functions": 157942,
-    "matched_functions": 32308,
-    "matched_functions_percent": 20.46,
-    "total_code": 24566088,
-    "matched_code": 2419496,
-    "matched_code_percent": 9.85,
-    "fuzzy_match_percent": 10.63,
-    "started_units": 2358,
-    "total_units": 10447,
-    "started_code": 9942516,
-    "started_matched_code": 2419496,
-    "started_percent": 24.33,
+    "total_functions": 157955,
+    "matched_functions": 32466,
+    "matched_functions_percent": 20.55,
+    "total_code": 24538076,
+    "matched_code": 2472968,
+    "matched_code_percent": 10.08,
+    "fuzzy_match_percent": 10.9,
+    "started_units": 2361,
+    "total_units": 10446,
+    "started_code": 10007864,
+    "started_matched_code": 2472968,
+    "started_percent": 24.71,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -782089,24 +782089,6 @@
       ]
     },
     {
-      "name": "src/PvZ2/Network/INetworkMsgProcess.cpp",
-      "total_code": 8,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 1,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "INetworkMsgProcess::GetICloudState",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/PvZ2/Network/Info/ADServerInfo.cpp",
       "total_code": 48,
       "matched_code": 0,
@@ -828085,12 +828067,12 @@
     {
       "name": "src/PvZ2/Network/gameNetWork/NetworkMsgProcess.cpp",
       "total_code": 215752,
-      "matched_code": 16264,
-      "matched_code_percent": 7.54,
+      "matched_code": 17276,
+      "matched_code_percent": 8.01,
       "total_functions": 423,
-      "matched_functions": 164,
-      "matched_functions_percent": 38.77,
-      "fuzzy_match_percent": 7.73,
+      "matched_functions": 168,
+      "matched_functions_percent": 39.72,
+      "fuzzy_match_percent": 8.5,
       "functions": [
         {
           "name": "INetworkMsgProcess::RegisterCommonMessages",
@@ -828660,7 +828642,7 @@
           "name": "INetworkMsgProcess::SendHttpRequest",
           "size": 804,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 85.22
         },
         {
           "name": "INetworkMsgProcess::onRequestPVPLabEnter",
@@ -829499,14 +829481,14 @@
         {
           "name": "INetworkMsgProcess::GetClientSignature",
           "size": 320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "INetworkMsgProcess::GetServerSignature",
           "size": 320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "INetworkMsgProcess::OnICloudRequestGetChristmasChargeReward",
@@ -829523,8 +829505,8 @@
         {
           "name": "INetworkMsgProcess::SendHttpRequest",
           "size": 308,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "INetworkMsgProcess::OnICloudRequestChangePlant",
@@ -830087,8 +830069,8 @@
         {
           "name": "INetworkMsgProcess::GetRandom",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 43.75
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "INetworkMsgProcess::onRequestSummerPlantComposit",
@@ -830634,45 +830616,14 @@
     },
     {
       "name": "src/PvZ2/Network/gameNetWork/PacketID.cpp",
-      "total_code": 28368,
+      "total_code": 0,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 5,
+      "total_functions": 0,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "_PacketId::_PacketId",
-          "size": 10116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "_PacketId::_PacketId",
-          "size": 10116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "_PacketId::~_PacketId",
-          "size": 3320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "_PacketId::~_PacketId",
-          "size": 3320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "_PacketId::InitCommon",
-          "size": 1496,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
+      "functions": []
     },
     {
       "name": "src/PvZ2/Network/gameNetWork/ServerTime.cpp",
@@ -830815,804 +830766,804 @@
     {
       "name": "src/PvZ2/Network/gameNetWork/androidNetworkMsgProcess.cpp",
       "total_code": 62036,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 49148,
+      "matched_code_percent": 79.22,
       "total_functions": 132,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 118,
+      "matched_functions_percent": 89.39,
+      "fuzzy_match_percent": 95.34,
       "functions": [
         {
           "name": "androidNetworkMsgProcess::Initialize",
           "size": 2944,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequstLogin",
           "size": 2112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::onRequestUUIDLogin",
           "size": 1924,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequstLogin",
           "size": 1788,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 85.68
         },
         {
           "name": "androidNetworkMsgProcess::onRequestSyncPlayerData",
           "size": 1460,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestChargeReward",
           "size": 1456,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::UploadDangerRoomRank",
           "size": 1408,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestSyncPlayerData",
           "size": 1152,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 98.96
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestUpLoadProfile",
           "size": 1136,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 88.89
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestStartExplore",
           "size": 1096,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 94.55
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestSyncWithIdAndSource",
           "size": 1080,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 83.33
         },
         {
           "name": "androidNetworkMsgProcess::SendHttpRequest",
           "size": 1048,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::UploadIdentification",
           "size": 1028,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestStartExplore",
           "size": 1016,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 53.54
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestStopExplore",
           "size": 1000,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestRecoverExplorePlant",
           "size": 992,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestSyncObjectListWithSource",
           "size": 988,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 72.87
         },
         {
           "name": "androidNetworkMsgProcess::RequestUpdateChargeInfo",
           "size": 988,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestCalcExploreReward",
           "size": 964,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 88.35
         },
         {
           "name": "androidNetworkMsgProcess::RequestUUIDLogin",
           "size": 948,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestUpdateLevelScore",
           "size": 880,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestChargeReward",
           "size": 820,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 61.95
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestOpenExploreSurpriseBox",
           "size": 812,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestGetExplorePlantStatus",
           "size": 804,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestUUIDInit",
           "size": 804,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestGetExploreTeamStatus",
           "size": 780,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestACLog",
           "size": 780,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::onRequestDownloadPlayerData",
           "size": 780,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestAccessoryStatBuy",
           "size": 776,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 61.03
         },
         {
           "name": "androidNetworkMsgProcess::RequestADSReward",
           "size": 752,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestBindingUniqueID",
           "size": 736,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestCalcExploreReward",
           "size": 708,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::SendGift",
           "size": 668,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestGoldenEggOpen",
           "size": 652,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 67.27
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestChristmasLottery",
           "size": 644,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestGetExploreTeamStatus",
           "size": 644,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::FreshGems",
           "size": 636,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::getObjectJsons",
           "size": 632,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestStopExplore",
           "size": 620,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestSyncCachedObjects",
           "size": 608,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 49.02
         },
         {
           "name": "androidNetworkMsgProcess::RequestUUIDCheck",
           "size": 600,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestUUIDBind",
           "size": 576,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestUpLoadProfile",
           "size": 552,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestDownloadPlayerData",
           "size": 536,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestTimeLevelList",
           "size": 524,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestGetProfile",
           "size": 508,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestProfileMd5",
           "size": 508,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::BorrowFriendPlant",
           "size": 504,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestDangerRoomRank",
           "size": 504,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestFriendLeaderBoard",
           "size": 504,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestIncreaseGems",
           "size": 504,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestStartTimeLevelCD",
           "size": 504,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::getObjectJsons",
           "size": 488,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::DoContinuedLoginV202",
           "size": 484,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestGetProfile",
           "size": 484,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 58.87
         },
         {
           "name": "androidNetworkMsgProcess::RequestUpdateProfile",
           "size": 476,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestGetRedPackLeaderBoard",
           "size": 472,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestGetRedPackLeaderBoard",
           "size": 432,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::InitPurchaseOrder",
           "size": 408,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestAcceptFriendGitf",
           "size": 408,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestSendTLog",
           "size": 408,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestGetExplorePlantStatus",
           "size": 400,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ShowClearProfileHint",
           "size": 384,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestUpdateChargeInfo",
           "size": 372,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestBindingUniqueID",
           "size": 364,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::HttpReqFriends",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestAddFriendShip",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestBorrowedPlantList",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestFrindGiftList",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestLostPurchaseOrder",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestPlayInfo",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestProfile",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestRandReward",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestTodaySendGiftList",
           "size": 348,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestSyncWithNameAndSource",
           "size": 328,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 79.27
         },
         {
           "name": "androidNetworkMsgProcess::onRequestADSReward",
           "size": 312,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::GetDefineId",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::HeartBeat",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestLogin",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestOpenExploreSurpriseBox",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestChristmasLottery",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::onInitPurchaseOrder",
           "size": 260,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::onRequestUUIDInit",
           "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestProfileMd5",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestAcceptFriendGitf",
           "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestGetAccessoryStat",
           "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::ICloudRequestGetGoldenEggStat",
           "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestDangerRoomRank",
           "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestLostPurchaseOrder",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::onRequestUUIDCheck",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnICloudRequestRecoverExplorePlant",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestFreshGems",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestIncreaseGems",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::onRequestUUIDBind",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRquestPlayerInfo",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::IRequestFlushCacheObjects",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestProfile",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnUploadDangerRoomRank",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::androidNetworkMsgProcess",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::androidNetworkMsgProcess",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::~androidNetworkMsgProcess",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::~androidNetworkMsgProcess",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::DoContinuedLoginV202ClearProfile",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestSendTLog",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::InitAfterLogin",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestSurportPlant",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::~androidNetworkMsgProcess",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::CheckACLogOpen",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestHeartBeat",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestRanks",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestTimeLevelList",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::onRequestACLog",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::CheckACLogFirstLogin",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::CheckUseACLogKey",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::EnableBindForUUID",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::EnableBindUniqueID",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::Login",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestAddFriendShip",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestFriedBorrowPlant",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestFriendBorrowedPlantList",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestFriendLeaderBoard",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestFriendList",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestFrindGiftList",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestLaunchSave",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestRandReward",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestRanks",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestStartTimeLevelCD",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestTodaySendGiftList",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestUpdateLevelScore",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRequestUpdateProfile",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::OnRquestSendGift",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "androidNetworkMsgProcess::RequestLaunchSave",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -847799,14 +847750,129 @@
     },
     {
       "name": "src/PvZ2/TalkingGame/talking_game.cpp",
-      "total_code": 0,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 0,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": []
+      "total_code": 364,
+      "matched_code": 364,
+      "matched_code_percent": 100.0,
+      "total_functions": 19,
+      "matched_functions": 19,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "talkingGame::talkingGame",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::talkingGame",
+          "size": 116,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::~talkingGame",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::~talkingGame",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::~talkingGame",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::beginLevel",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::completeLevel",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::failLevel",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::getGold",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::onPay",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::onPayComplete",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::onReward",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::onUseGem",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::onUseItem",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::setAccount",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::setGameServer",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::setLevel",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::stayPlayer",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "talkingGame::useGold",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
     },
     {
       "name": "src/PvZ2/Tools/UIEditor/StringHelper.cpp",
@@ -981002,114 +981068,114 @@
     {
       "name": "src/SexyAppFramework/PrimeText/PrimeGlyphCache.cpp",
       "total_code": 2948,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2948,
+      "matched_code_percent": 100.0,
       "total_functions": 17,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 17,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PrimeGlyphCache::EndUpdate",
           "size": 1376,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::WriteTextureArea",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::CreateTexture",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::BeginUpdate",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::CopyEntireGlyphImage",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::PrepareGlyphImage",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::DestroyTexture",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::PrimeGlyphCache",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::PrimeGlyphCache",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::DebugDrawCache",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::Clear",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::~PrimeGlyphCache",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::WriteTextureArea",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::~PrimeGlyphCache",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::~PrimeGlyphCache",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::GetGlyphImage",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeGlyphCache::SetGlyphPadding",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
