@@ -173,6 +173,13 @@ NOT_OWNED = {
 }
 
 
+# File -> nested-class symbol prefixes that live in their own files.
+NESTED_ELSEWHERE = {
+    'AndroidGL20RenderEffect.cpp': ('_ZN4Sexy23AndroidGL20RenderEffect15ParamCollection',
+                                    '_ZN4Sexy23AndroidGL20RenderEffect9ParamData'),
+}
+
+
 def analyse(source, obj, game, game_syms, game_names, manifest_unit=None):
     """-> rows [(state, same, total, bytes, label)]. state: ok / near / todo.
 
@@ -214,6 +221,9 @@ def analyse(source, obj, game, game_syms, game_names, manifest_unit=None):
             scope[name] = game_syms[name][1]
     for name in generated():
         scope.pop(name, None)
+    for name in list(scope):
+        if name.startswith(NESTED_ELSEWHERE.get(os.path.basename(source), ())) and name in game_syms and not name.endswith('aSEOS1_'):
+            del scope[name]
     our_funcs = defined
 
     rows = []
