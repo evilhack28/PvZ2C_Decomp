@@ -9,10 +9,6 @@
 
 #include "AdaptorJoustLeagueInfoScreen.h"
 
-AdaptorJoustLeagueInfoScreen::AdaptorJoustLeagueInfoScreen()
-{
-}
-
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(AdaptorJoustLeagueInfoScreen);
