@@ -8,7 +8,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import config
-from lib import hdrindex
+from lib import fastcc, hdrindex
 from capstone import CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN, Cs
 from lib.pvzelf import Elf
 
@@ -68,18 +68,26 @@ def offsets(cls):
     names = member_names(body) if body else []
     if not names:
         return {}
-    probe = os.path.join(config.BUILD, 'ctorprobe_%d.cpp' % os.getpid())
-    with open(probe, 'w') as f:
-        f.write('#define private public\n#define protected public\n#include "SexyAppFramework/Common.h"\n#include "%s"\n'
-                '#include <stddef.h>\ntemplate<int N> struct Show;\n' % os.path.basename(rel))
-        for i, n in enumerate(names):
-            f.write('Show<(int)offsetof(%s, %s)> p%d;\n' % (cls, n, i))
-    r = subprocess.run([config.GXX, *config.CXXFLAGS, '-w', '-I', os.path.dirname(os.path.join(ROOT, rel)), '-fsyntax-only', probe],
-                       capture_output=True, text=True)
-    os.remove(probe)
-    got = {}
-    for m in re.finditer(r'Show<(\d+)> p(\d+)', r.stderr):
-        got.setdefault(int(m.group(1)), names[int(m.group(2))])
+    def run():
+        probe = os.path.join(config.BUILD, 'ctorprobe_%d.cpp' % os.getpid())
+        dep = probe[:-4] + '.d'
+        with open(probe, 'w') as f:
+            f.write('#define private public\n#define protected public\n#include "SexyAppFramework/Common.h"\n#include "%s"\n'
+                    '#include <stddef.h>\ntemplate<int N> struct Show;\n' % os.path.basename(rel))
+            for i, n in enumerate(names):
+                f.write('Show<(int)offsetof(%s, %s)> p%d;\n' % (cls, n, i))
+        r = subprocess.run([config.GXX, *config.CXXFLAGS, '-w', '-I', os.path.dirname(os.path.join(ROOT, rel)), '-fsyntax-only',
+                            '-MMD', '-MT', 'o', '-MF', dep, probe], capture_output=True, text=True)
+        deps = [f for f in (fastcc._deps(dep) or []) if os.path.abspath(f) != os.path.abspath(probe)]
+        for f in (probe, dep):
+            if os.path.exists(f):
+                os.remove(f)
+        got = {}
+        for m in re.finditer(r'Show<(\d+)> p(\d+)', r.stderr):
+            got.setdefault(int(m.group(1)), names[int(m.group(2))])
+        return sorted(got.items()), deps
+    # reused until a header the probe read changes
+    got = {int(k): v for k, v in fastcc.memo(('ctorinit.offsets', cls, names), run)}
     _OFFS[cls] = got
     return got
 

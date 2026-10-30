@@ -10,6 +10,7 @@ A function that survives that identically is the same code.
 """
 
 import difflib
+import functools
 import re
 
 from capstone import CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN, Cs
@@ -130,10 +131,7 @@ def listing(elf, name, symbolise=True):
             if rel:
                 ops = f'<{rel[0]}{_tail(rel[2])}{_empty_tag_sym(elf, rel[0])}>'
             else:
-                target = _imm(ops)
-                names = _syms_at(elf, target) if target is not None else set()
-                tag = '|'.join(sorted(names)) if names else 'call'
-                ops = f'<{tag}{_empty_tag_addr(elf, target)}>'
+                ops = f'<{_call_tag(elf, _imm(ops))}>'
 
         elif m.startswith('b.') or m in ('cbz', 'cbnz', 'tbz', 'tbnz'):
             # only the final operand is a branch target; a tbz/tbnz bit index
@@ -209,14 +207,25 @@ def _page_step(ins, rel, pages):
         pages.pop(ops.split(',')[0].strip(), None)
 
 
+_THROW = re.compile(r'_ZSt\d+__throw')
+
+
+def _is_noreturn(n):
+    return n in _NORETURN or _THROW.match(n) is not None
+
+
 def _noreturn(elf, ins, rel):
     """True for a `bl` into a function that never returns."""
     if rel:
-        names = {rel[0]}
-    else:
-        t = _imm(ins.op_str)
-        names = (_syms_at(elf, t) | _plt_names(elf, t)) if t is not None else set()
-    return any(n in _NORETURN or re.match(r'_ZSt\d+__throw', n) for n in names)
+        return _is_noreturn(rel[0])
+    t = _imm(ins.op_str)
+    if t is None:
+        return False
+    # a folded target carries thousands of names: answer once per address
+    cache = elf.__dict__.setdefault('_asmdiff_noret', {})
+    if t not in cache:
+        cache[t] = any(_is_noreturn(n) for n in _syms_at(elf, t) | _plt_names(elf, t))
+    return cache[t]
 
 
 def _plt_names(elf, addr):
@@ -380,6 +389,15 @@ def _syms_at(elf, addr):
     return _addr_table(elf, '_asmdiff_funcs', (2,)).get(addr, set())
 
 
+def _call_tag(elf, target):
+    """The label of an unrelocated branch target, cached per address (a folded one sorts thousands of names)."""
+    cache = elf.__dict__.setdefault('_asmdiff_calltag', {})
+    if target not in cache:
+        names = _syms_at(elf, target) if target is not None else set()
+        cache[target] = ('|'.join(sorted(names)) if names else 'call') + _empty_tag_addr(elf, target)
+    return cache[target]
+
+
 def _any_sym_at(elf, addr):
     return _addr_table(elf, '_asmdiff_objs', (1, 2)).get(addr, set())
 
@@ -496,6 +514,7 @@ def _same(x, y):
     return bool(set(a.split('|')) & set(b.split('|')))
 
 
+@functools.lru_cache(maxsize=1 << 16)
 def _key(line):
     """A line reduced so two spellings of the same reference compare equal."""
     m = _TAGGED.match(line)
@@ -503,19 +522,22 @@ def _key(line):
         return line
     tag = m.group(3)
     tag = tag[4:] if tag.startswith('got:') else tag
-    return f'{m.group(1)}|{m.group(2)}|{sorted(tag.split("|"))[0]}|{m.group(4)}'
+    return f'{m.group(1)}|{m.group(2)}|{min(tag.split("|"))}|{m.group(4)}'
 
 
-def compare(expected_rows, actual_rows):
-    """(aligned, total, unified diff lines).
+def compare(expected_rows, actual_rows, diff=False):
+    """(aligned, total, unified diff lines; [] unless diff=True).
 
     Aligned rather than positional: one extra instruction on either side
     would otherwise throw every line after it out of step and make a near
     match look like a total one."""
     a, b = render(expected_rows), render(actual_rows)
+    if a == b:
+        return len(a), len(a), []
+    ka, kb = [_key(x) for x in a], [_key(y) for y in b]
     same = 0
-    sm = difflib.SequenceMatcher(None, [_key(x) for x in a], [_key(y) for y in b], autojunk=False)
-    for op, i1, i2, j1, j2 in sm.get_opcodes():
+    sm = difflib.SequenceMatcher(None, ka, kb, autojunk=False)
+    for op, i1, i2, j1, j2 in sm.get_opcodes() if ka != kb else [('equal', 0, len(a), 0, len(b))]:
         if op == 'equal':
             same += i2 - i1
         elif op == 'replace':
@@ -523,6 +545,8 @@ def compare(expected_rows, actual_rows):
                 if _same(x, y):
                     same += 1
     total = max(len(a), len(b))
+    if not diff:
+        return same, total, []
     diff = list(difflib.unified_diff([_short(x) for x in a], [_short(y) for y in b],
                                      'original', 'ours', lineterm='', n=2))
     return same, total, diff

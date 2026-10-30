@@ -13,6 +13,20 @@
 #include "ArenaEditPlantCursor.h"
 #include "AudioMgr.h"
 #include "HardLevelModule.h"
+#include "ScaledApp.h"
+#include "CollectableAdBoxMgr.h"
+#include "CollectableGem.h"
+#include "CollectableCoin.h"
+#include "CollectableSpring.h"
+#include "CollectablePlantUpgrade.h"
+#include "CollectablePowerup.h"
+#include "CollectableSun.h"
+#include "CollectableSpacetimeEnergy.h"
+#include "CollectablePlantUpgrade.h"
+#include "PlantPot.h"
+#include "CrazyNPCManager.h"
+#include "BoardSaveState.h"
+#include "WaveGeneratorModule.h"
 #include "Creature.h"
 #include "Projectile.h"
 #include "LawnMower.h"
@@ -20,9 +34,14 @@
 #include "MessageWidget.h"
 #include "TransitionOverlayWidget.h"
 #include "PVPManager.h"
-namespace RiftUtils { bool IsPlayingRiftLevel(); int GetZombieLevel(); }
+#include "FestivalManager.h"
+#include "TGALogMgr.h"
 #include "Artifact.h"
 #include "ArtifactArcadeTools.h"
+#include "ChallengeModule.h"
+#include "TalkingGame/talking_game.h"
+#include "CustomLevelUtils.h"
+#include "Toggles.h"
 #include "ArtifactDinosaurHornTools.h"
 #include "ArtifactGashaponTools.h"
 #include "ArtifactGuitarTools.h"
@@ -166,6 +185,15 @@ namespace RiftUtils { bool IsPlayingRiftLevel(); int GetZombieLevel(); }
 #include "Zombie_Chicken_Subsystem.h"
 #include "Zombie_IceYearMonster.h"
 #include "Zombie_Piano_Subsystem.h"
+#include "WorldMapUtils.h"
+
+namespace RiftUtils { bool IsRiftTimedLevel(); bool IsPlayingRiftLevel(); int GetZombieLevel(); }
+namespace MiniGameCollectionUtils { bool IsPlayingMiniGameCollectionLevel(); }
+
+namespace BoardHelpers
+{
+	std::string ApplyLevelOverride_PowerupSet(std::string& i_originalValue);
+}
 
 /////////////// Reflection ///////////////
 
@@ -304,6 +332,577 @@ bool Board::IsDisablePeavine()
 	return false;
 }
 
+static const std::vector<PlantPtr> s_noPlants;
+
+const std::vector<PlantPtr>& Board::GetPlantsAt(const Sexy::Point& i_gridPosition)
+{
+	PlantGroup* group = GetPlantGroupAt(i_gridPosition);
+	if (group)
+		return group->Plants();
+	return s_noPlants;
+}
+
+bool Board::GetActiveChallengeAwardedThisPlaythrough()
+{
+	ChallengeModule* module = m_levelModuleManager->GetModuleByClass<ChallengeModule>();
+	if (module)
+		return module->GetChallengesWereCompleted();
+	return false;
+}
+
+void Board::InitPlantGroupSystem()
+{
+	PlantGroupSubsystem* subsystem = GetGameSubSystem<PlantGroupSubsystem>();
+	if (subsystem)
+	{
+		subsystem->DebugTestPlantGroupsCorrect();
+		m_plantGroupSubsystemCache = subsystem;
+	}
+}
+
+void Board::TranslateScreenPositionToBoardPosition(Sexy::Point& io_position)
+{
+	float x = io_position.mX + mX - m_boardScaleOffsetX;
+	float y = io_position.mY + mY - m_boardScaleOffsetY;
+	double offsetX = m_boardScaleOffsetX - mX;
+	double offsetY = m_boardScaleOffsetY - mY;
+	io_position.mX = (int)(floorf(x / m_boardScale) + offsetX);
+	io_position.mY = (int)(floorf(y / m_boardScale) + offsetY);
+}
+
+void Board::TranslateScreenRectToBoardRect(Rect& io_rect)
+{
+	float x = io_rect.mX + mX - m_boardScaleOffsetX;
+	float y = io_rect.mY + mY - m_boardScaleOffsetY;
+	double offsetX = m_boardScaleOffsetX - mX;
+	double offsetY = m_boardScaleOffsetY - mY;
+	io_rect.mWidth = (int)(io_rect.mWidth * m_boardScale);
+	io_rect.mHeight = (int)(io_rect.mHeight * m_boardScale);
+	io_rect.mX = (int)(floorf(x / m_boardScale) + offsetX);
+	io_rect.mY = (int)(floorf(y / m_boardScale) + offsetY);
+}
+
+void Board::TranslateBoardPositionToScreenPosition(Sexy::Point& io_position)
+{
+	float x = io_position.mX + mX - m_boardScaleOffsetX;
+	float y = io_position.mY + mY - m_boardScaleOffsetY;
+	double offsetX = m_boardScaleOffsetX - mX;
+	double offsetY = m_boardScaleOffsetY - mY;
+	io_position.mX = (int)(ceilf(x * m_boardScale) + offsetX);
+	io_position.mY = (int)(ceilf(y * m_boardScale) + offsetY);
+}
+
+void Board::OffsetYForPlanting(int& i_y, PlantTypePtr i_seedType)
+{
+	if (i_seedType.IsValid())
+	{
+		float offset = i_seedType->Properties->PlantingOffsetY;
+		i_y = (int)(i_y + offset);
+	}
+}
+
+void Board::TranslateUIWidgetPositionToBoardPosition(Sexy::Point& io_position)
+{
+	io_position.mX = (int)(floorf((io_position.mX - m_boardScaleOffsetX) / m_boardScale) + (double)m_boardScaleOffsetX);
+	io_position.mY = (int)(floorf((io_position.mY - m_boardScaleOffsetY) / m_boardScale) + (double)m_boardScaleOffsetY);
+}
+
+void Board::TranslateBoardPositionToUIWidgetPosition(Sexy::Point& io_position)
+{
+	float x = io_position.mX - m_boardScaleOffsetX;
+	float y = io_position.mY - m_boardScaleOffsetY;
+	io_position.mX = (int)(floorf(x * m_boardScale) + (double)m_boardScaleOffsetX);
+	io_position.mY = (int)(floorf(y * m_boardScale) + (double)m_boardScaleOffsetY);
+}
+
+PlantGroup* Board::GetPlantGroupAt(const Sexy::Point& i_gridPosition)
+{
+	return GetPlantGroupSubsystem()->FindPlantGroup(i_gridPosition).operator->();
+}
+
+void Board::PushAnimationMgr()
+{
+	m_pushedAnimationMgr.push_back(m_animationMgr);
+	m_animationMgr = AnimationMgr::Create()->GetPtr();
+}
+
+void Board::PopAnimationMgr()
+{
+	if (m_pushedAnimationMgr.size())
+	{
+		if (m_animationMgr.IsValid())
+			m_animationMgr->Destroy();
+		m_animationMgr.ClearId();
+		m_animationMgr = m_pushedAnimationMgr.back();
+		m_pushedAnimationMgr.pop_back();
+	}
+}
+
+Zombie* Board::SpawnZombie(ZombieTypePtr i_zombieType, int i_spawnedFromWave, SpawnZombieParams* pParams)
+{
+	return SpawnZombieHelper(i_zombieType, i_spawnedFromWave, true, pParams);
+}
+
+Plant* Board::GetPlantAt(const Sexy::Point& i_gridPosition, MultiPlantGridLayer i_layer)
+{
+	PlantGroup* group = GetPlantGroupAt(i_gridPosition);
+	if (group)
+		return group->GetPlantAtLayer(i_layer).operator->();
+	return nullptr;
+}
+
+bool Board::CanPlantAt(const Sexy::Point& i_gridPosition, PlantTypePtr i_plantType)
+{
+	return GetCanPlantAtReason(i_gridPosition, i_plantType) == 0;
+}
+
+void Board::calculateGridBoundingRect()
+{
+	int gridY = m_gridSizeY;
+	int gridX = m_gridSizeX;
+	int width = BoardConstants::GRIDSQUARE_WIDTH();
+	int height = BoardConstants::GRIDSQUARE_HEIGHT();
+	m_gridBoundingRect = Sexy::Rect(200, 160, gridX * width, gridY * height);
+}
+
+void Board::OnGameOverRetryLevel()
+{
+	gLawnApp->KillPVZ2Dialog();
+	talkingGame::GetInstancePtr()->failLevel(m_level.c_str(), "retry");
+	if (!CustomLevelUtils::IsCustomLevel() && !MiniGameCollectionUtils::IsPlayingMiniGameCollectionLevel())
+	{
+		EndLevel();
+		return;
+	}
+	gLawnApp->m_board->RestartLevel();
+}
+
+void Board::OnGameOverExitLevel()
+{
+	gLawnApp->KillPVZ2Dialog();
+	int logId = FestivalManager::GetInstance().IsFestivalLevel(GetLevel(), (FestivalGameMode)-1) ? TGA_LOG_LEVEL_ACTIVITY_FIGHT_ID : TGA_LOG_LEVEL_FIGHT_ID;
+	TGALogMgr::GetInstance().LogSegments(logId, 0, "true");
+	gLawnApp->m_board->Quit();
+}
+
+int Board::CountSunBeingCollected()
+{
+	int total = 0;
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_COLLECTABLES); it; ++it)
+	{
+		RtWeakPtr<Collectable> collectable = *it;
+		CollectableSun* sun = collectable->Cast<CollectableSun>();
+		if (sun && sun->IsCollecting() && !sun->IsBanked())
+			total += sun->GetSunValue();
+	}
+	return total;
+}
+
+Zombie* Board::GetWinningZombie()
+{
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_ZOMBIES); it; ++it)
+	{
+		RtWeakPtr<Zombie> weakZombie = *it;
+		Zombie* zombie = weakZombie;
+		if (zombie->IsDying())
+			continue;
+		if (zombie->GetSpawnedFromWave() == -4)
+			return zombie;
+	}
+	return nullptr;
+}
+
+void Board::DoRainZombieAtGridSingle(ZombieTypePtr i_zombieType, int i_gridX, int i_gridY)
+{
+	Zombie* zombie = SpawnZombie(i_zombieType, 0, nullptr);
+	SexyVector3 position(0.0f, 0.0f, 0.0f);
+	position.x = (float)BoardTransforms::GridToBoardSpaceX(i_gridX);
+	position.y = (float)BoardTransforms::GridToBoardSpaceY(i_gridY);
+	zombie->JoinTeam(TEAM_PLANTS);
+	zombie->SetFacing(ZFACING_Right);
+	zombie->PlaceOnBoard(position);
+	gMessageRouter->Post(&Message::ZombiePlanted, zombie);
+}
+
+void Board::PlaceCreatureInRow(Creature* i_creature, int i_row, int i_waveToLeave)
+{
+	SexyVector3 position(0.0f, 0.0f, 0.0f);
+	position.x = (float)(Sexy::Rand(40) + 820);
+	position.y = (float)BoardTransforms::GridToBoardSpaceY(i_row);
+	if (GetStage())
+	{
+		position.x = (float)(GetStage()->GetDefaultZombieSpawnPositionX(i_row) + Sexy::Rand(40));
+		position.y = (float)BoardTransforms::GridToBoardSpaceY(i_row);
+	}
+	i_creature->SetWaveToLeave(i_waveToLeave);
+	i_creature->PlaceOnBoard(position);
+}
+
+void Board::GetGridItemsAt(int i_gridX, int i_gridY, std::vector<GridItem*>& o_gridItems)
+{
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_GRIDITEMS); it; ++it)
+	{
+		GridItem* gridItem = RtWeakPtr<GridItem>(*it);
+		if (gridItem->GetGridX() == i_gridX && gridItem->GetGridY() == i_gridY)
+			o_gridItems.push_back(gridItem);
+	}
+}
+
+void Board::RemoveDeferredDeleteCachedZombies()
+{
+	for (size_t i = 0; i < m_cachedZombiesToRemove.size(); i++)
+	{
+		std::vector<Zombie*>::iterator it = std::find(m_cachedZombies.begin(), m_cachedZombies.end(), m_cachedZombiesToRemove[i]);
+		if (it != m_cachedZombies.end())
+			m_cachedZombies.erase(it);
+	}
+	m_cachedZombiesToRemove.clear();
+}
+
+void Board::onWaveStarted(int i_wave, WaveType::WaveType i_type, bool i_isFinal)
+{
+	if (i_isFinal && !gLawnApp->IsInModule(Module_Pooyan))
+		gLawnApp->m_board->DisplayAdviceAgain(_S("[WARNING_FINAL_WAVE]"), MESSAGE_STYLE_FINAL_WAVE, ADVICE_PRIORITY_HIGH);
+	if (i_wave == 0)
+		gAudioMgr->SendEvent("Play_Awooga");
+	if (i_type == WaveType::Huge)
+		gAudioMgr->SendEvent("Play_Siren");
+}
+
+void Board::loadDefinitions()
+{
+	m_boardProps = PVZDB::GetInstance().FindObjectByAlias<BoardPropertySheet>(PVZDB::TABLE_PROPERTYSHEETS, RtName(L"DefaultBoardProps"));
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_PLANTS); it; ++it)
+	{
+		RtWeakPtr<Plant> plant = *it;
+		plant->InitializeFromPropertySheet();
+	}
+}
+
+int Board::GetPlantsCountInARow(int i_row, bool i_considerMoreThanOnePlantInACellAsOne)
+{
+	int count = 0;
+	int col = 0;
+	if (!i_considerMoreThanOnePlantInACellAsOne)
+	{
+		while (BoardConstants::NUMBER_OF_COLUMNS() > col)
+		{
+			PlantGroup* group = GetPlantGroupAt(Sexy::Point(col, i_row));
+			if (group && !group->Empty())
+				count += group->Count();
+			col++;
+		}
+	}
+	else
+	{
+		for (; col < BoardConstants::NUMBER_OF_COLUMNS(); col++)
+		{
+			PlantGroup* group = GetPlantGroupAt(Sexy::Point(col, i_row));
+			if (group && !group->Empty())
+				count++;
+		}
+	}
+	return count;
+}
+
+int Board::GetPlantsCostInRow(int i_row)
+{
+	int cost = 0;
+	std::vector<BoardEntity*> plants;
+	Sexy::Rect searchRect(0, i_row, m_gridSizeX, 1);
+	EntityFinder::GetEntitiesInGridSquares(plants, ENTITYTYPE_PLANT, searchRect);
+	std::vector<BoardEntity*>::iterator it = plants.begin();
+	std::vector<BoardEntity*>::iterator end = plants.end();
+	for (; it != end; ++it)
+	{
+		Plant* plant = (*it)->Cast<Plant>();
+		PlantTypePtr type = plant->GetType();
+		cost += type->GetCost();
+	}
+	return cost;
+}
+
+void Board::TestPlantFoodAllPlants()
+{
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_PLANTS); it; ++it)
+	{
+		RtWeakPtr<Plant> plant = *it;
+		if (plant->m_isOnBoard && plant->CanApplyPlantfood())
+			plant->m_plantFramework->ApplyPlantfood();
+	}
+}
+
+Zombie* Board::AddZombie(ZombieTypePtr i_zombieType, int i_fromWaveNumber, int i_level, bool i_isIntro, bool i_skipDifficultLevel)
+{
+	int row = PickRowForNewZombie(i_zombieType);
+	SpawnZombieParams params;
+	params.m_level = i_level;
+	params.m_bIntro = i_isIntro;
+	params.m_bSkipDifficultLevel = i_skipDifficultLevel;
+	return AddZombieInRow(i_zombieType, row, i_fromWaveNumber, &params);
+}
+
+SeedBankNew* Board::GetSeedBank()
+{
+	if (m_levelModuleManager)
+	{
+		SeedBankModule* module = m_levelModuleManager->GetModuleByClass<SeedBankModule>();
+		SeedBankPtr seedBank = module ? module->GetSeedBank() : SeedBankPtr(nullptr);
+		return seedBank;
+	}
+	return nullptr;
+}
+
+SeedChooser* Board::GetSeedChooser()
+{
+	if (m_levelModuleManager)
+	{
+		SeedBankModule* module = m_levelModuleManager->GetModuleByClass<SeedBankModule>();
+		SeedChooserPtr seedChooser = module ? module->GetSeedChooser() : SeedChooserPtr(nullptr);
+		return seedChooser;
+	}
+	return nullptr;
+}
+
+void Board::InitBoardArtifactManager()
+{
+	gLawnApp->m_board->GetArtifactManager()->InitialArtifactIcon();
+	gLawnApp->m_board->GetArtifactManager()->InitialArtifactMower(gLawnApp->m_board->m_animationMgr);
+}
+
+Creature* Board::SpawnCreature(CreatureTypePtr i_creatureType)
+{
+	Creature* creature = GameObject::Create(RtClass::StaticGetClassNamed(i_creatureType->CreatureClass.c_str()), PVZDB::TABLE_CREATURES)->CastChecked<Creature>();
+	creature->CreatureInitialize(i_creatureType);
+	creature->StartRushOnScreen();
+	return creature;
+}
+
+Creature* Board::AddCreatureInRow(CreatureTypePtr i_creatureType, int i_spawnInRow, int i_duration)
+{
+	Creature* creature = SpawnCreature(i_creatureType);
+	PlaceCreatureInRow(creature, i_spawnInRow, i_duration);
+	return creature;
+}
+
+Creature* Board::AddCreature(CreatureTypePtr i_creatureType)
+{
+	int row = RandRangeInt(0, 4);
+	return AddCreatureInRow(i_creatureType, row);
+}
+
+void Board::PlaceZombieInRow(Zombie* i_zombie)
+{
+	int row = PickRowForNewZombie(i_zombie->GetType());
+	PlaceZombieInRow(i_zombie, row);
+}
+
+void Board::DeleteResourceGroupForGameplay(const std::string& i_resourceGroup)
+{
+	gLawnApp->DeleteGroup(i_resourceGroup);
+	m_gameplayResources.erase(std::find(m_gameplayResources.begin(), m_gameplayResources.end(), i_resourceGroup));
+}
+
+BoardRegion* Board::AddRegion(RtClass* i_regionClass)
+{
+	BoardRegion* region = GameObject::Create(i_regionClass, PVZDB::TABLE_GAMEOBJECTS)->CastChecked<BoardRegion>();
+	m_boardRegions.push_back(region->GetPtr());
+	return region;
+}
+
+void Board::SetPlantfoodCount(int i_count)
+{
+	m_plantfoodCount = std::min(std::max(i_count, 0), (int)m_plantfoodCountMax);
+	gMessageRouter->Post(&Message::PlantfoodCountChanged, m_plantfoodCount);
+}
+
+bool Board::OnNextWaveButtonPressed()
+{
+	WaveGenerator* waveGenerator = GetWaveGenerator();
+	if (waveGenerator)
+	{
+		if (waveGenerator->GetCurrentWave() >= waveGenerator->GetNumWaves())
+			return true;
+		if (waveGenerator->GetHugeWaveTime() < PVZ_EOT())
+			waveGenerator->SetHugeWaveTime(PVZ_T());
+		else
+			waveGenerator->SpawnNextWaveIn(0.1f);
+		waveGenerator->SetIsNextWave();
+	}
+	WaveManager* waveManager = GetWaveManager();
+	if (waveManager)
+		waveManager->ForceSpawnWave();
+	return true;
+}
+
+void Board::OnGesturePinch(Sexy::Point i_centerPoint, int i_distanceBetweenFingersSquared, float i_scaleDelta)
+{
+	if (m_gameInputHandler)
+	{
+		TranslateUIWidgetPositionToBoardPosition(i_centerPoint);
+		m_gameInputHandler->OnGestureEvent(i_centerPoint, i_distanceBetweenFingersSquared, i_scaleDelta);
+	}
+}
+
+static int ScaleNum(int i_num)
+{
+	return ((ScaledApp*)gSexyApp)->ScaleNum(i_num);
+}
+
+float Board::calculateRoofOffsetZ(float i_positionX)
+{
+	float startX = 200.0f;
+	if (i_positionX < startX)
+		return 20.0f - BoardConstants::GRIDSQUARE_HEIGHT();
+	if (i_positionX <= startX + BoardConstants::GRIDSQUARE_WIDTH() * 5.0f)
+		return (20.0f - BoardConstants::GRIDSQUARE_HEIGHT()) + i_positionX * (BoardConstants::GRIDSQUARE_HEIGHT() / (BoardConstants::GRIDSQUARE_WIDTH() * 5.0f)) - (BoardConstants::GRIDSQUARE_HEIGHT() * startX) / (BoardConstants::GRIDSQUARE_WIDTH() * 5.0f);
+	return 20.0f;
+}
+
+void Board::TranslateBoardRectToScreenRect(Rect& io_rect)
+{
+	float offsetX = m_boardScaleOffsetX;
+	float x = ScaleNum(io_rect.mX);
+	float scale = m_boardScale;
+	io_rect.mX = (int)(floorf((mX - offsetX + x) * scale) + (double)offsetX);
+	float offsetY = m_boardScaleOffsetY;
+	float y = ScaleNum(io_rect.mY);
+	io_rect.mY = (int)(floorf((mY - offsetY + y) * scale) + (double)offsetY);
+	io_rect.mWidth = (int)(ScaleNum(io_rect.mWidth) * scale);
+	io_rect.mHeight = (int)(ScaleNum(io_rect.mHeight) * scale);
+}
+
+void Board::TranslateUIWidgetRectToBoardRect(Rect& io_rect)
+{
+	io_rect.mX = (int)(floorf((io_rect.mX - m_boardScaleOffsetX) / m_boardScale) + (double)m_boardScaleOffsetX);
+	io_rect.mY = (int)(floorf((io_rect.mY - m_boardScaleOffsetY) / m_boardScale) + (double)m_boardScaleOffsetY);
+	io_rect.mWidth = (int)(io_rect.mWidth * m_boardScale);
+	io_rect.mHeight = (int)(io_rect.mHeight * m_boardScale);
+}
+
+EffectObject* Board::AddEffectObject(EffectObjectTypePtr i_type, int i_gridX, int i_gridY)
+{
+	EffectObject* effectObject = GameObject::Create(RtClass::StaticGetClassNamed(i_type->EffectObjectClass.c_str()), PVZDB::TABLE_EFFECTOBJECTS)->CastChecked<EffectObject>();
+	effectObject->EffectObjectInitialize(i_type, i_gridX, i_gridY);
+	return effectObject;
+}
+
+EffectObject* Board::AddEffectObject(const std::string& i_effectObjectTypeName, int i_gridX, int i_gridY)
+{
+	EffectObjectTypePtr type = ObjectTypeDirectory<EffectObjectType>::GetInstancePtr()->GetTypeFromTypeName(i_effectObjectTypeName);
+	return AddEffectObject(type, i_gridX, i_gridY);
+}
+
+GridItem* Board::AddGridItem(GridItemTypePtr i_gridItemType, int i_gridX, int i_gridY, int i_level)
+{
+	GridItem* gridItem = GameObject::Create(RtClass::StaticGetClassNamed(i_gridItemType->GridItemClass.c_str()), PVZDB::TABLE_GRIDITEMS)->CastChecked<GridItem>();
+	gridItem->GridItemInitialize(i_gridItemType, i_gridX, i_gridY, i_level);
+	return gridItem;
+}
+
+GridItem* Board::AddGridItem(const std::string& i_gridItemTypeName, int i_gridX, int i_gridY, int i_level)
+{
+	GridItemTypePtr type = ObjectTypeDirectory<GridItemType>::GetInstancePtr()->GetTypeFromTypeName(i_gridItemTypeName);
+	return AddGridItem(type, i_gridX, i_gridY, i_level);
+}
+
+Plant* Board::AddPlant(int i_gridX, int i_gridY, const std::string& i_plantTypeName, int i_level, bool i_useBoost, bool duplicate, bool ignore_plantfood, bool i_extraFlag)
+{
+	PlantTypePtr type = ObjectTypeDirectory<PlantType>::GetInstancePtr()->GetTypeFromTypeName(i_plantTypeName);
+	return AddPlant(i_gridX, i_gridY, type, true, true, i_level, i_useBoost, true, true, duplicate, ignore_plantfood, 0, 0.0f, i_extraFlag);
+}
+
+std::vector<Plant*> Board::AddPlants(const std::string& i_plantTypeName, int i_minColumn, int i_maxColumn, int i_count, int i_level)
+{
+	PlantTypePtr type = ObjectTypeDirectory<PlantType>::GetInstancePtr()->GetTypeFromTypeName(i_plantTypeName);
+	if (!type.IsValid())
+		return std::vector<Plant*>();
+	return AddPlants(type, i_minColumn, i_maxColumn, i_count, i_level);
+}
+
+GridItem* Board::AddGridItemUnbounded(GridItemTypePtr i_gridItemType, int i_gridX, int i_gridY, int i_level)
+{
+	GridItem* gridItem = GameObject::Create(RtClass::StaticGetClassNamed(i_gridItemType->GridItemClass.c_str()), PVZDB::TABLE_GRIDITEMS)->CastChecked<GridItem>();
+	gridItem->GridItemInitializeUnbounded(i_gridItemType, i_gridX, i_gridY, i_level);
+	SexyVector3 position;
+	position.x = (float)BoardTransforms::GridToBoardSpaceXUnbounded(i_gridX);
+	position.y = (float)BoardTransforms::GridToBoardSpaceYUnbounded(i_gridY);
+	position.z = 0.0f;
+	gridItem->PlaceOnBoard(position);
+	return gridItem;
+}
+
+GridItem* Board::AddGridItemUnbounded(const std::string& i_gridItemTypeName, int i_gridX, int i_gridY, int i_level)
+{
+	GridItemTypePtr type = ObjectTypeDirectory<GridItemType>::GetInstancePtr()->GetTypeFromTypeName(i_gridItemTypeName);
+	return AddGridItemUnbounded(type, i_gridX, i_gridY, 1);
+}
+
+void Board::AddPendingPresentReward(const std::string& i_presentTableName)
+{
+	PresentRecord record;
+	record.PresentTableName = i_presentTableName;
+	record.TimeOpened = 0;
+	record.TimeAwarded = (uint32)PVZ_T();
+	record.Seed = CalcRandomSeed(SEED_CurrentTime) + m_pendingPresentRewards.size();
+	m_pendingPresentRewards.push_back(record);
+}
+
+Zombie* Board::GetZombieAt(int i_gridX, int i_gridY)
+{
+	std::vector<BoardEntity*> entities;
+	EntityFinder::GetEntitiesAtGridSquare(entities, ENTITYTYPE_ZOMBIE, i_gridX, i_gridY);
+	if (entities.size())
+		return entities[0]->CastChecked<Zombie>();
+	return nullptr;
+}
+
+void Board::OnSetNextWaveVisible(bool i_visible)
+{
+	UIWidget* nextWaveButton = UIWidget::GetWidgetBySheetName(RiftUtils::IsRiftTimedLevel() ? "UINextWaveInstantButton" : "UINextWaveButton");
+	if (nextWaveButton)
+		nextWaveButton->SetVisible(i_visible);
+}
+
+void Board::SunIsInsufficient()
+{
+	gMessageRouter->Post(&Message::SunIsInsufficient);
+	DisplayAdvice(SexyString(L"[ADVICE_NOT_ENOUGH_SUN]"), MESSAGE_STYLE_HINT_FAST, ADVICE_PRIORITY_LOW);
+	AudioMgr::GetInstancePtr()->SendEvent("Play_Buzzer");
+}
+
+void Board::OnChangeSpeedButtonPressed(float i_speed)
+{
+	TimeMgr::GetInstancePtr()->SetTimeScale(i_speed);
+	if (i_speed == 1.0f)
+		Message::ToggleOverrideSet("FastForward", true);
+	else
+		Message::ToggleOverrideSet("FastForward", false);
+}
+
+void Board::OnArenaChangeSpeedButtonPressed(float i_speed)
+{
+	TimeMgr::GetInstancePtr()->SetTimeScale(i_speed);
+	if (i_speed == 1.0f)
+		Message::ToggleOverrideSet("ArenaFastForward", true);
+	else
+		Message::ToggleOverrideSet("ArenaFastForward", false);
+}
+
+PlantGroup* Board::FindPlantGroup(Plant* i_plant)
+{
+	return GetPlantGroupSubsystem()->FindPlantGroup(i_plant->GetPtr()).operator->();
+}
+
+void Board::collectAllCoins()
+{
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_COLLECTABLES); it; ++it)
+	{
+		CollectablePtr collectable = *it;
+		collectable->TryToCollect();
+	}
+}
+
 /////////////// Logic ///////////////
 
 void Board::DestroyZomboss()
@@ -410,11 +1009,46 @@ void Board::updateState_ZOMBOSS()
 {
 }
 
+int Board::GetInitialLawnItemsCount() const
+{
+	Board* board = gLawnApp->m_board;
+	int count = 0;
+	for (int row = 0; row < board->m_gridSizeY; row++)
+	{
+		if (board->m_plantRow[row] != PLANTROW_DIRT)
+			count++;
+	}
+	return count;
+}
+
 bool Board::RowCanHaveZombies(int i_row)
 {
 	if (i_row < 0 || i_row >= m_gridSizeY)
 		return false;
 	return m_plantRow[i_row] != PLANTROW_DIRT;
+}
+
+void Board::DoEntityLandedEffects(const SexyVector3& i_entityLocation, BoardEntity* i_landingEntity)
+{
+	std::vector<BoardRegion*> regions = findAllContainingRegions(i_entityLocation);
+	for (BoardRegion* region : regions)
+		region->DoEntityEnteredEffects(i_entityLocation, i_landingEntity);
+}
+
+void Board::DoPitOfDoomEffects(const SexyVector3& i_entityLocation, BoardEntity* i_doomedEntity)
+{
+	std::vector<BoardRegion*> regions = findAllContainingRegions(i_entityLocation);
+	for (BoardRegion* region : regions)
+		region->DoEntityEnteredEffects(i_entityLocation, i_doomedEntity);
+}
+
+bool Board::RowCanHaveZombieType(int i_row, ZombieTypePtr i_zombieType)
+{
+	if (!RowCanHaveZombies(i_row))
+		return false;
+	if (i_row < i_zombieType->GetProps()->GridExtents.mY - 1)
+		return false;
+	return GetStage() && GetStage()->CanZombieSpawnInRow(i_row, i_zombieType);
 }
 
 bool Board::CanTakeSunMoney(const int i_amount)
@@ -461,6 +1095,407 @@ bool Board::IsStarChallengeActive()
 bool Board::IsLevelEnded()
 {
 	return m_boardState == BOARDSTATE_ENDLEVEL;
+}
+
+void Board::TouchesCanceled()
+{
+	ClearCursors();
+	UIWidget::ProcessedMouseUp(-100, -100, 0);
+}
+
+void Board::GetOpenedActivityPresentContents(std::vector<RtWeakPtr<const PresentType> >& o_openedActivityPresents)
+{
+	o_openedActivityPresents = m_opendActivityPresentContents;
+}
+
+void Board::GetOpenedPresentTablesAndContents(std::vector<RtWeakPtr<const PresentTable> >& o_openedTables, std::vector<RtWeakPtr<const PresentType> >& o_openedPresents)
+{
+	o_openedTables = m_openedPresentTables;
+	o_openedPresents = m_openedPresentContents;
+}
+
+void Board::AddCachedZombie(Zombie* i_zombie)
+{
+	m_cachedZombies.push_back(i_zombie);
+}
+
+void Board::RemoveCachedZombie(Zombie* i_zombie)
+{
+	m_cachedZombiesToRemove.push_back(i_zombie);
+}
+
+void Board::OnZombieDestroyed(Zombie* i_zombie)
+{
+	RemoveCachedZombie(i_zombie);
+	m_finalDestroyedZombiePosition = i_zombie->GetPosition();
+}
+
+bool Board::ChooseSeedsOnCurrentLevel()
+{
+	SeedBankModule* seedBank = m_levelModuleManager ? m_levelModuleManager->GetModuleByClass<SeedBankModule>() : nullptr;
+	if (seedBank)
+		return seedBank->UsesSeedChooser();
+	return false;
+}
+
+void Board::PlaceStreetDinos()
+{
+	CreateStreetDinos(gLawnApp->m_board->GetBoardPanLocations()->BoardEdgeX + m_boardBaseOffset.mX, false);
+}
+
+void Board::SpawnStreetDinos()
+{
+	CreateStreetDinos(gLawnApp->m_board->GetBoardPanLocations()->ZombieX + m_boardBaseOffset.mX, true);
+}
+
+bool Board::Contains(int i_mouseX, int i_mouseY)
+{
+	return i_mouseX >= mX - m_boardBaseOffset.mX && i_mouseX < mX + mWidth && i_mouseY >= mY - m_boardBaseOffset.mY && i_mouseY < mY + mHeight;
+}
+
+void Board::PausePlantGrowthAndDecay(bool i_paused)
+{
+	if (i_paused)
+	{
+		m_plantGrowthAndDecayPaused = true;
+		gMessageRouter->Broadcast(&Message::PlantGrowthAndDecayPaused);
+	}
+	else
+	{
+		m_plantGrowthAndDecayPaused = false;
+		gMessageRouter->Broadcast(&Message::PlantGrowthAndDecayResumed);
+	}
+}
+
+void Board::MakeCachedCursorRealCursor()
+{
+	if (m_gameInputHandler)
+		m_gameInputHandler->ChangePriority(m_cachedCursor, 5);
+	m_cachedCursor->SetWasCachedCursor();
+	m_cursors.push_back(m_cachedCursor);
+	m_cachedCursor = nullptr;
+}
+
+void Board::SaveGameState(bool i_special)
+{
+	BoardSaveState* saveState = GameObject::Create<BoardSaveState>(PVZDB::TABLE_BOARDSTATE);
+	PreSave(saveState);
+	PVZDB::GetInstance().SaveGameState(i_special);
+	saveState->Destroy();
+}
+
+void Board::updateState_LAUNCHING()
+{
+	if (MoveToDestination(BoardTransforms::GridToBoardSpaceX(m_destCol), BoardTransforms::GridToBoardSpaceY(m_destRow)))
+		setState(IntroState_END);
+}
+
+void Board::OnSeedChooserDone()
+{
+	gLawnApp->mWidgetManager->SetFocus(this);
+	RemoveSeedChooser();
+	m_animationMgr->Pause(false);
+}
+
+void Board::OnPowerupChooserDone()
+{
+	gLawnApp->mWidgetManager->SetFocus(this);
+	m_animationMgr->Pause(false);
+}
+
+void Board::SetSoftPause(bool i_paused)
+{
+	SuppressSunSpawners(i_paused);
+	PausePlantGrowthAndDecay(i_paused);
+	if (GetWaveGenerator())
+		GetWaveGenerator()->PauseNextWave(i_paused);
+	if (GetWaveManager())
+		GetWaveManager()->SetPause(i_paused);
+}
+
+void Board::UpdateGame()
+{
+	UpdateGameObjects();
+	UpdateProgressMeter();
+	if (GetState() == BOARDSTATE_PLAYER_LOSS_AVERSION_PLAYING)
+		m_levelModuleManager->OnLossAversionUpsellUpdate();
+	else if (m_levelModuleManager)
+		m_levelModuleManager->OnUpdate();
+	m_IntroState.UpdateState();
+	if (CollectableAdBoxMgr::GetInstance().HasAdService())
+		CollectableAdBoxMgr::GetInstance().Update();
+}
+
+void Board::OnWaveStartCreatZombieEnd()
+{
+	if (!GetLevelDefinition() || !GetLevelDefinition()->IsDangerRoom)
+		return;
+	if (m_stDangerRoomDropInfo.IsInWaves(GetCurrentWave()))
+		m_stDangerRoomDropInfo.OrderDropZombie(GetCurrentWave());
+}
+
+void Board::DeleteResourceGroupsForGameplay(const std::vector<std::string>& i_resourceGroups)
+{
+	for (int i = 0; i < i_resourceGroups.size(); i++)
+		DeleteResourceGroupForGameplay(i_resourceGroups[i]);
+}
+
+bool Board::PauseOnInterrupt()
+{
+	if (!m_paused && (m_boardState == BOARDSTATE_TUTORIAL || m_boardState == BOARDSTATE_PLAYING_LEVEL))
+	{
+		if (!gLawnApp->GetNarrationSystem()->IsNarrationActive())
+		{
+			OnPauseButtonPressed();
+			gLawnApp->UpdateAudio();
+			return true;
+		}
+	}
+	return false;
+}
+
+void Board::RegisterGesture(GestureDelegate i_gestureDelegate)
+{
+	if (m_gameInputHandler)
+		m_gameInputHandler->RegisterGesture(i_gestureDelegate);
+}
+
+void Board::RegisterLongPress(LongPressDelegate i_longPressDelegate)
+{
+	if (m_gameInputHandler)
+		m_gameInputHandler->RegisterLongPress(i_longPressDelegate);
+}
+
+void Board::drawAdviceText(Sexy::Graphics* g)
+{
+	int transX = (int)g->mTransX;
+	int transY = (int)g->mTransY;
+	g->mTransX = 0;
+	g->mTransY = 0;
+	m_advice->Draw(g);
+	g->mTransX = transX;
+	g->mTransY = transY;
+}
+
+static int ScreenScaleNum(int i_num)
+{
+	return ((ScaledApp*)gSexyApp)->ScreenScaleNum(i_num);
+}
+
+Sexy::Point Board::GetTargetGridPosition(Sexy::Point i_location)
+{
+	int boardX = ScreenScaleNum(i_location.mX);
+	int boardY = ScreenScaleNum(i_location.mY);
+	return Sexy::Point(BoardTransforms::BoardSpaceToGridX((float)boardX), BoardTransforms::BoardSpaceToGridY((float)boardY));
+}
+
+void Board::ClearZombie()
+{
+	m_cachedZombies.clear();
+	m_cachedZombiesToRemove.clear();
+}
+
+void Board::RemoveSeedChooser()
+{
+	SeedBankModule* seedBank = m_levelModuleManager ? m_levelModuleManager->GetModuleByClass<SeedBankModule>() : nullptr;
+	if (seedBank)
+		seedBank->RemoveSeedChooser();
+}
+
+WaveGenerator* Board::GetWaveGenerator()
+{
+	WaveGeneratorModule* module = m_levelModuleManager ? m_levelModuleManager->GetModuleByClass<WaveGeneratorModule>() : nullptr;
+	if (module)
+		return module->GetWaveGenerator();
+	return nullptr;
+}
+
+WaveManager* Board::GetWaveManager()
+{
+	WaveManagerModule* module = m_levelModuleManager ? m_levelModuleManager->GetModuleByClass<WaveManagerModule>() : nullptr;
+	if (module)
+		return &module->GetWaveManager();
+	return nullptr;
+}
+
+void Board::BeginPlayingLossAversionUpsellEffect()
+{
+	ClearCursors();
+	SetState(BOARDSTATE_PLAYER_LOSS_AVERSION_PLAYING);
+}
+
+void Board::InitBoardHeroPlantManager()
+{
+	gLawnApp->m_board->GetBoardHeroPlantManager()->InitialHeroPlantButton();
+}
+
+void Board::EnableGridItems()
+{
+	if (m_gridItemsEnabled)
+		return;
+	m_gridItemsEnabled = true;
+	gMessageRouter->Broadcast(&Message::EnableGridItems);
+}
+
+void Board::SetSunMoney(int i_amount)
+{
+	m_sunCurrency = i_amount;
+	gMessageRouter->Broadcast(&Message::SunChanged, i_amount);
+}
+
+Collectable* Board::AddCollectableWithDefaultMotion(const std::string& i_collectableTypeName, const SexyVector3& i_pos)
+{
+	Collectable* collectable = AddCollectable(i_collectableTypeName);
+	collectable->PlaceOnBoard(i_pos);
+	return collectable;
+}
+
+CollectableSpacetimeEnergy* Board::AddSpacetimeEnergy(const SexyVector3& i_position, int i_energyValue)
+{
+	Collectable* collectable = gLawnApp->m_board->AddCollectable("spacetime_energy");
+	collectable->SetNeverExpire(true);
+	collectable->SetPosition(i_position);
+	collectable->TryToCollect();
+	CollectableSpacetimeEnergy* energy = collectable->CastChecked<CollectableSpacetimeEnergy>();
+	energy->setEnergyValue(i_energyValue);
+	return energy;
+}
+
+CollectableHeroPlantFakeSun* Board::AddHeroPlantFakeSun(const SexyVector3& i_position, int i_sunValue)
+{
+	Collectable* collectable = gLawnApp->m_board->AddCollectable("hero_plant_fake_sun");
+	collectable->SetNeverExpire(true);
+	collectable->SetPosition(i_position);
+	collectable->TryToCollect();
+	CollectableHeroPlantFakeSun* sun = collectable->CastChecked<CollectableHeroPlantFakeSun>();
+	sun->setSunValue(i_sunValue);
+	return sun;
+}
+
+CollectablePowerup* Board::AddPowerupCollectable(const SexyVector3& i_position, const std::string& i_powerupType)
+{
+	Collectable* collectable = AddCollectable(i_powerupType);
+	collectable->SetPosition(i_position);
+	SexyVector3 velocity;
+	velocity.x = Sexy::Rand(100.0f) - 50.0f;
+	velocity.z = Sexy::Rand(200.0f) + 300.0f;
+	collectable->SetMotionNewtonian(velocity, SexyVector3(0, 0, -600.0f), true);
+	collectable->SetKeepOnBoard(true);
+	collectable->StartExpirationTimerAfterMotion();
+	return collectable->CastChecked<CollectablePowerup>();
+}
+
+CollectablePlantUpgrade* Board::AddPlantUpgrade(const SexyVector3& i_position)
+{
+	Collectable* collectable = AddCollectable("plantupgrade");
+	collectable->SetPosition(i_position);
+	collectable->SetMotionDrunk();
+	collectable->StartExpirationTimer();
+	collectable->SetNeverExpire(true);
+	collectable->TryToCollect();
+	gMessageRouter->Post(Message::PlantUpgradeSpawned, static_cast<CollectablePlantUpgrade*>(collectable));
+	return collectable->CastChecked<CollectablePlantUpgrade>();
+}
+
+CollectableDRMadal* Board::AddDRMadal(const SexyVector3& i_position, const std::string& i_TypeName)
+{
+	Collectable* collectable = AddCollectable(i_TypeName);
+	collectable->SetPosition(i_position);
+	collectable->StartExpirationTimerAfterMotion();
+	SexyVector3 velocity;
+	velocity.x = Sexy::Rand(100.0f) - 50.0f;
+	velocity.z = Sexy::Rand(200.0f) + 100.0f;
+	SexyVector3 acceleration;
+	acceleration.z = -600.0f;
+	collectable->SetMotionNewtonian(velocity, acceleration, true);
+	collectable->SetKeepOnBoard(true);
+	return collectable->CastChecked<CollectableDRMadal>();
+}
+
+CollectableCoinFake* Board::AddCoinFake(const SexyVector3& i_position, const std::string& i_coinType)
+{
+	CollectableCoinFake* coin = AddCollectable(i_coinType)->CastChecked<CollectableCoinFake>();
+	SexyVector3 position = i_position;
+	position.z = Sexy::Rand(20) + 45 + position.z;
+	coin->SetPosition(position);
+	SexyVector3 velocity;
+	velocity.x = Sexy::Rand(100.0f) - 50.0f;
+	velocity.z = Sexy::Rand(200.0f) + 100.0f;
+	SexyVector3 acceleration;
+	acceleration.z = -600.0f;
+	coin->SetMotionNewtonian(velocity, acceleration, true);
+	coin->SetKeepOnBoard(false);
+	coin->StartExpirationTimerAfterMotion();
+	coin->ForceUpdateEffect();
+	gMessageRouter->Post(Message::CoinFakeSpawned, coin);
+	return coin;
+}
+
+CollectableGemFake* Board::AddGemFake(const SexyVector3& i_position, const std::string& i_coinType)
+{
+	CollectableGemFake* gem = AddCollectable(i_coinType)->CastChecked<CollectableGemFake>();
+	SexyVector3 position = i_position;
+	position.z = Sexy::Rand(20) + 45 + position.z;
+	gem->SetPosition(position);
+	SexyVector3 velocity;
+	velocity.x = Sexy::Rand(100.0f) - 50.0f;
+	velocity.z = Sexy::Rand(200.0f) + 100.0f;
+	SexyVector3 acceleration;
+	acceleration.z = -600.0f;
+	gem->SetMotionNewtonian(velocity, acceleration, true);
+	gem->SetKeepOnBoard(false);
+	gem->StartExpirationTimerAfterMotion();
+	gem->ForceUpdateEffect();
+	gMessageRouter->Post(Message::GemFakeSpawned, gem);
+	return gem;
+}
+
+PlantPot* Board::AddPlantPot(int i_gridX, int i_gridY, ImagePtr potImage, float offsetY)
+{
+	PlantPot* plantPot = AddGridItem("plantpot", i_gridX, i_gridY)->CastChecked<PlantPot>();
+	plantPot->Init(potImage, offsetY);
+	return plantPot;
+}
+
+StandaloneEffect* Board::AddEffect(RtClass* i_effectClass)
+{
+	return GameObject::Create(i_effectClass, PVZDB::TABLE_EFFECTS)->CastChecked<StandaloneEffect>();
+}
+
+const std::vector<PlantGroupPtr>& Board::GetAllActivePlantGroups()
+{
+	return GetPlantGroupSubsystem()->GetAllActiveGroups();
+}
+
+void Board::PlaceLawnItems()
+{
+	gMessageRouter->Post(&Message::ReadyForLawnItems);
+}
+
+int Board::MakeRenderOrder(RenderLayer i_renderLayer, int i_row, int i_layerOffset)
+{
+	return i_row * 10000 + (i_renderLayer + i_layerOffset);
+}
+
+void Board::RegisterTouchGameplayObject(GameInputDelegate i_touchDelegate, const int i_priority, BoardEntityPtr i_boardEntity, CancelInputDelegate i_cancelDelegate)
+{
+	if (m_gameInputHandler)
+		m_gameInputHandler->RegisterTouchGameplayObject(i_touchDelegate, i_priority, i_boardEntity, i_cancelDelegate);
+}
+
+GameSubSystem* Board::FindGameSubSystem(RtClass* i_class)
+{
+	for (auto subsystem : m_gameSubsystemMap)
+	{
+		if (subsystem.first->IsDerivedFrom(i_class))
+			return subsystem.second;
+	}
+	return nullptr;
+}
+
+GameSubSystem* Board::CreateGameSubSystem(RtClass* i_class)
+{
+	return GetGameSubSystem(i_class);
 }
 
 StageModule* Board::GetStage()
@@ -562,6 +1597,56 @@ void Board::OnZombieAddedToBoard(Zombie* i_zombie)
 		AudioMgr::GetInstancePtr()->SendEvent("Play_Zomb_Global_Nitro_Mvmt_Glow", nullptr);
 }
 
+const std::string Board::GetLevelPowerupSet()
+{
+	std::string powerupSet = GetLevelDefinition()->LevelPowerupSet;
+	if (powerupSet.empty())
+		powerupSet = GetLevelDefinition()->StageModule->LevelPowerupSet;
+	powerupSet = BoardHelpers::ApplyLevelOverride_PowerupSet(powerupSet);
+	return powerupSet;
+}
+
+std::string Board::TryGetYetiDirectDropItemName(std::string& strWorldName, std::string& strDifficult)
+{
+	return gLawnApp->GetActivityDropGroup()->GetDropItemName(strWorldName, E_Activity_YETI_DIRECT, strDifficult);
+}
+
+std::string Board::TryGargantuarDirectDropItemName(std::string& strWorldName, std::string& strDifficult)
+{
+	return gLawnApp->GetActivityDropGroup()->GetDropItemName(strWorldName, E_Activity_GARGANTUAR_DIRECT, strDifficult);
+}
+
+std::string Board::TryDevilDirectDropItemName(std::string& strWorldName, std::string& strDifficult)
+{
+	return gLawnApp->GetActivityDropGroup()->GetDropItemName(strWorldName, E_Activity_DEVIL_DIRECT, strDifficult);
+}
+
+int Board::GetExtraMaxCoinSpecialCollected()
+{
+	ArtifactMidasTouch* midasTouch = nullptr;
+	{
+		ArtifactPtr activated = ArtifactMgr::GetInstance().GetActivatedArtifact();
+		if (activated)
+		{
+			ArtifactPtr artifact = ArtifactMgr::GetInstance().GetActivatedArtifact();
+			midasTouch = artifact.GetObject()->Cast<ArtifactMidasTouch>();
+		}
+	}
+	int extraMax = 0;
+	if (midasTouch)
+		extraMax = midasTouch->GetExtraCoinMax();
+	return extraMax;
+}
+
+std::string Board::TryGetYetiDropItemName()
+{
+	std::string levelName = GetLevel();
+	WorldData* worldData = WorldMapUtils::GetWorldData()->FindWorldDataByLevelName(levelName);
+	std::string worldName = worldData->m_worldName;
+	std::string difficult = "normal";
+	return gLawnApp->GetActivityDropGroup()->GetDropItemName(worldName, E_Activity_YETI, difficult);
+}
+
 /////////////// Powerups ///////////////
 
 void Board::AddPowerup(const std::string& i_powerupName)
@@ -633,6 +1718,30 @@ void Board::RemoveBoardResource()
 		m_levelModuleManager->UnloadAllZombies();
 }
 
+void Board::StartBoardFade(const Color& i_startColor, const Color& i_endColor, pvztime_t i_duration, Delegate0 i_onCompletion)
+{
+	if (m_onBoardFadeEnd)
+	{
+		Delegate0 onFadeEnd = m_onBoardFadeEnd;
+		m_onBoardFadeEnd = Delegate0();
+		onFadeEnd();
+	}
+	m_boardFadeStartColor = i_startColor;
+	m_boardFadeEndColor = i_endColor;
+	m_boardFadeStartTime = gTimeMgr->CinematicT();
+	m_boardFadeEndTime = gTimeMgr->CinematicT() + i_duration;
+	m_onBoardFadeEnd = i_onCompletion;
+	AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Map_Screen_Dissolve");
+}
+
+void Board::StartBoardFade(const Color& i_endColor, pvztime_t i_duration, Delegate0 i_onCompletion)
+{
+	Color startColor = i_endColor;
+	startColor.mAlpha = 0;
+	StartBoardFade(startColor, i_endColor, i_duration, i_onCompletion);
+	gMessageRouter->Post(&Message::StartBoardFade);
+}
+
 void Board::KillBoardFadeOverlay()
 {
 	m_boardFadeStartTime = m_boardFadeEndTime = PVZ_EOT();
@@ -677,6 +1786,16 @@ void Board::DisplayAdviceAgain(const SexyString& i_advice, MessageStyle i_messag
 	DisplayAdvice(i_advice, i_messageStyle, i_advicePriority);
 }
 
+void Board::ClearAdvice(const SexyString& i_advice)
+{
+	if (i_advice.size() == 0 || !(i_advice != m_currentAdvice))
+	{
+		m_advice->Clear();
+		m_currentAdvice.clear();
+		m_currentAdvicePriority = ADVICE_PRIORITY_NONE;
+	}
+}
+
 ZombieTypePtr Board::GetZombieType(const std::string& i_zombieName)
 {
 	ZombieTypePtr zombieType = ObjectTypeDirectory<ZombieType>::GetInstancePtr()->GetTypeFromTypeName(i_zombieName);
@@ -708,6 +1827,63 @@ void Board::Pause(bool i_pauseGame)
 	m_paused = i_pauseGame;
 }
 
+void Board::DrawDebugLifeBars(Sexy::Graphics* g)
+{
+	if (m_debugTextMode != DEBUG_TEXT_LIFEBARS)
+		return;
+
+	int barWidth = ScaleNum(50);
+	int barHeight = ScaleNum(20);
+	{
+		float barWidthF = barWidth;
+		for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_PLANTS); it; ++it)
+		{
+			Sexy::RtWeakPtr<Plant> plant(*it);
+			Sexy::Rect rect = plant->GetCollisionRect();
+			rect.mWidth = barWidth;
+			rect.mHeight = barHeight;
+			rect.mX = ScaleNum(rect.mX) + ScaleNum(0);
+			rect.mY = ScaleNum(rect.mY) + ScaleNum(0);
+			g->SetColor(Sexy::Color(Sexy::Color::Black));
+			g->FillRect(rect);
+			g->SetColor(Sexy::Color(0, 255, 0));
+			{
+				float scaledHealth = barWidthF * plant->m_PlantHealth;
+				PlantPropsPtr props = plant->GetProps();
+				float hitpoints = props->Hitpoints;
+				float ratio = scaledHealth / (plant->GetExtraHp() + hitpoints);
+				float extraHpRate = plant->GetExtraHpRate();
+				float modifier = plant->GetExtraHitPointsmodifier();
+				rect.mWidth = (int)(modifier * extraHpRate * ratio);
+			}
+			g->FillRect(rect);
+			g->SetColor(Sexy::Color(Sexy::Color::White));
+			rect.mWidth = barWidth;
+			g->DrawRect(rect);
+		}
+	}
+
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_ZOMBIES); it; ++it)
+	{
+		Sexy::RtWeakPtr<Zombie> zombie(*it);
+		if (zombie->IsDying())
+			continue;
+		Sexy::Rect rect = zombie->GetCollisionRect();
+		rect.mWidth = barWidth;
+		rect.mHeight = barHeight;
+		rect.mX = ScaleNum(rect.mX) + ScaleNum(0);
+		rect.mY = ScaleNum(rect.mY) + ScaleNum(0);
+		g->SetColor(Sexy::Color(Sexy::Color::Black));
+		g->FillRect(rect);
+		g->SetColor(Sexy::Color(0, 255, 0));
+		rect.mWidth = (int)((zombie->GetHitpoints() * barWidth) / zombie->GetMaxHitpoints());
+		g->FillRect(rect);
+		g->SetColor(Sexy::Color(Sexy::Color::White));
+		rect.mWidth = barWidth;
+		g->DrawRect(rect);
+	}
+}
+
 void Board::DestroyAllMowers()
 {
 	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_BOARDENTITIES); it; ++it)
@@ -716,6 +1892,76 @@ void Board::DestroyAllMowers()
 		if (mower)
 			mower->Destroy();
 	}
+}
+
+int Board::GetUntriggeredLawnMowerCount()
+{
+	int count = 0;
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_BOARDENTITIES); it; ++it)
+	{
+		LawnMower* mower = Sexy::RtWeakPtr<Sexy::RtObject>(*it)->Cast<LawnMower>();
+		if (mower && mower->GetMowerState() == MOWER_READY)
+			count++;
+	}
+	return count;
+}
+
+void Board::DestroyAllZombies()
+{
+	bool canDropLoot;
+	if (GetLevelDefinition() && GetLevelDefinition()->IsArenaBattle)
+		canDropLoot = false;
+	else
+		canDropLoot = true;
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_ZOMBIES); it; ++it)
+	{
+		Sexy::RtWeakPtr<Zombie> zombie(*it);
+		zombie->SetDropLoot(canDropLoot);
+		zombie->Destroy();
+	}
+}
+
+void Board::DestroyCutsceneZombies()
+{
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_ZOMBIES); it; ++it)
+	{
+		Sexy::RtWeakPtr<Zombie> zombie(*it);
+		if (zombie->GetSpawnedFromWave() == ZOMBIE_WAVE_CUTSCENE)
+			zombie->Destroy();
+	}
+}
+
+void Board::DestroyCutsceneCreatures()
+{
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_CREATURES); it; ++it)
+	{
+		Sexy::RtWeakPtr<Creature> creature(*it);
+		if (creature->IsStreetCreature())
+			creature->Destroy();
+	}
+}
+
+void Board::DestroyPlantfoodCollectables()
+{
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_COLLECTABLES); it; ++it)
+	{
+		CollectablePtr collectable = *it;
+		if (collectable && collectable->IsA<CollectablePlantfood>())
+			collectable->Destroy();
+	}
+}
+
+int Board::CountDamagableGridItemsOnScreen()
+{
+	int count = 0;
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_GRIDITEMS); it; ++it)
+	{
+		Sexy::RtWeakPtr<GridItem> gridItem(*it);
+		if (!gridItem->IsDamageable())
+			continue;
+		count++;
+	}
+	return count;
 }
 
 void Board::Quit()
@@ -779,6 +2025,26 @@ void Board::DestroyAllPlants()
 		plants[index]->Destroy();
 }
 
+void Board::KillPlantAt(int i_x, int i_y)
+{
+	std::vector<BoardEntity*> plants;
+	EntityFinder::GetEntitiesAtGridSquare(plants, ENTITYTYPE_PLANT, i_x, i_y);
+	std::vector<BoardEntity*>::iterator it = plants.begin();
+	std::vector<BoardEntity*>::iterator end = plants.end();
+	for (; it != end; ++it)
+		(*it)->Destroy();
+}
+
+void Board::KillPlantIn(const Sexy::Rect& i_searchRectGridSquares)
+{
+	std::vector<BoardEntity*> plants;
+	EntityFinder::GetEntitiesInGridSquares(plants, ENTITYTYPE_PLANT, i_searchRectGridSquares);
+	std::vector<BoardEntity*>::iterator it = plants.begin();
+	std::vector<BoardEntity*>::iterator end = plants.end();
+	for (; it != end; ++it)
+		(*it)->Destroy();
+}
+
 void Board::DestroyAllZombieProjectiles()
 {
 	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_PROJECTILES); it; ++it)
@@ -801,6 +2067,40 @@ void Board::OnStealChristmasProtect()
 
 /////////////// Street ///////////////
 
+void Board::PlaceZombieInRow(Zombie* i_zombie, int i_spawnInRow, bool i_random, bool i_placeOnBoard)
+{
+	SexyVector3 position(0, 0, 0);
+	position.x = i_random ? (float)(Rand(40) + 820) : 820.0f;
+	position.y = BoardTransforms::GridToBoardSpaceY(i_spawnInRow);
+	if (i_placeOnBoard)
+		i_zombie->PlaceOnBoard(position);
+	else
+		i_zombie->SetPosition(position);
+}
+
+Armor* Board::AddArmor(ArmorPropertySheetPtr i_armorProps, BoardEntity* i_owner)
+{
+	Armor* armor = GameObject::Create(RtClass::StaticGetClassNamed(i_armorProps->ClassName.c_str()), PVZDB::TABLE_GAMEOBJECTS)->CastChecked<Armor>();
+	armor->InitializeArmor(i_armorProps, i_owner->GetPtr());
+	return armor;
+}
+
+Zombie* Board::AddZombieInRow(ZombieTypePtr i_zombieType, int i_spawnInRow, int i_fromWaveNumber, SpawnZombieParams* pParams, bool i_random, bool i_placeOnBoard)
+{
+	Zombie* zombie = SpawnZombie(i_zombieType, i_fromWaveNumber, pParams);
+	PlaceZombieInRow(zombie, i_spawnInRow, i_random, i_placeOnBoard);
+	return zombie;
+}
+
+void Board::PlaceAStreetCreature(CreatureTypePtr i_creatureType, int i_row, int i_placementX, bool i_walkIn)
+{
+	Creature* creature = AddCreatureInRow(i_creatureType, i_row);
+	if (i_walkIn)
+		creature->SpawnOnStreet(i_placementX);
+	else
+		creature->PlaceOnStreet(i_placementX);
+}
+
 Point Board::GetStreetDimensions(ZombieTypePtr i_zombieType)
 {
 	const ZombiePropertySheet* props = i_zombieType->GetProps();
@@ -821,6 +2121,43 @@ Point Board::GetStreetOffset(ZombieTypePtr i_zombieType)
 
 /////////////// Cursors ///////////////
 
+void Board::ClearCursors()
+{
+	for (auto& cursor : m_cursors)
+	{
+		cursor->Destroy();
+		delete cursor;
+	}
+	m_cursors.clear();
+	if (m_cachedCursor)
+	{
+		m_cachedCursor->Destroy();
+		if (m_cachedCursor)
+		{
+			delete m_cachedCursor;
+			m_cachedCursor = nullptr;
+		}
+	}
+	if (m_gameInputHandler)
+		m_gameInputHandler->SendCancelDelegate();
+}
+
+GridItemGravestone* Board::GetGridItemGravestone(int i_gridX, int i_gridY)
+{
+	std::vector<GridItem*> gridItems;
+	GetGridItemsAt(i_gridX, i_gridY, gridItems);
+	for (auto gridItem : gridItems)
+	{
+		if (gridItem)
+		{
+			GridItemGravestone* gravestone = gridItem->Cast<GridItemGravestone>();
+			if (gravestone)
+				return gravestone;
+		}
+	}
+	return nullptr;
+}
+
 void Board::ClearCachedCursor()
 {
 	if (m_cachedCursor)
@@ -832,6 +2169,20 @@ void Board::ClearCachedCursor()
 			m_cachedCursor = nullptr;
 		}
 	}
+}
+
+void Board::updateZombiePlantFoodAudio()
+{
+	std::vector<BoardEntity*> zombies;
+	EntityFinder::GetEntities(zombies, ENTITYTYPE_ZOMBIE);
+	for (auto entity : zombies)
+	{
+		if (entity->CastChecked<Zombie>()->GetHasPlantFood())
+			goto done;
+	}
+	AudioMgr::GetInstancePtr()->SendEvent("Stop_Zomb_Global_Nitro_Mvmt_Glow");
+done:
+	return;
 }
 
 bool Board::IsGameplayEnded()
@@ -957,6 +2308,11 @@ void Board::onExitState_END(IntroState i_toState)
 {
 }
 
+void Board::onEnterState_ZOMBOSS(IntroState i_fromState)
+{
+	gLawnApp->GetNarrationSystem()->StartNarrativeID(m_warningText, Sexy::MakeDelegate(this, &Board::onZombossIntroCompleted));
+}
+
 void Board::onExitState_ZOMBOSS(IntroState i_toState)
 {
 }
@@ -972,6 +2328,29 @@ void Board::updateState_END()
 	{
 		setState(IntroState_ZOMBOSS);
 	}
+}
+
+void Board::setState(IntroState i_newState)
+{
+	StateDefinition<IntroState> newState =
+		StateMachineTableBuilder::GetInstancePtr()->GetTable<IntroState>(GetClass())->GetStateDefinition(i_newState);
+	newState.SetContext(this);
+	m_IntroState.SetState(newState);
+}
+
+void Board::setIntroStateSerialization(int32 i_state)
+{
+	StateDefinition<IntroState> newState =
+		StateMachineTableBuilder::GetInstancePtr()->GetTable<IntroState>(GetClass())->GetStateDefinition((IntroState)i_state);
+	newState.SetContext(this);
+	m_IntroState.SetStateNoTransition(newState);
+}
+
+void Board::fragmentUnload()
+{
+	for (auto& groupName : m_loadedGroupName)
+		gLawnApp->DeleteGroup(groupName);
+	m_loadedGroupName.clear();
 }
 
 int32 Board::getIntroStateSerialization()
@@ -992,6 +2371,109 @@ void Board::TouchBegan(const Sexy::Touch& i_touch)
 void Board::TouchEnded(const Sexy::Touch& i_touch)
 {
 	handleTouch(i_touch);
+}
+
+void Board::TouchMoved(const Sexy::Touch& i_touch)
+{
+	if (IsPaused())
+		return;
+	UIWidget::ProcessedMouseMove(mX + i_touch.location.mX, mY + i_touch.location.mY, 200 - 256);
+	if (UIWidget::ProcessedTouch(i_touch))
+		return;
+	BoardState state = GetState();
+	if (state == BOARDSTATE_PLAYER_LOSS_AVERSION_PLAYING || state == BOARDSTATE_PLAYER_LOST_OUTRO || state == BOARDSTATE_ENDLEVEL)
+		return;
+	if (state == BOARDSTATE_LOADING_LEVEL || state == BOARDSTATE_LOADING_SAVE)
+		return;
+	if (!m_gameInputHandler)
+		return;
+	Sexy::Touch touch(i_touch);
+	TranslateScreenPositionToBoardPosition(touch.location);
+	m_gameInputHandler->OnGameplayTouchEvent(touch);
+}
+
+
+void Board::OnGestureLongPress(Sexy::Point i_startingLocation)
+{
+	BoardState state = GetState();
+	bool loading = state == BOARDSTATE_LOADING_LEVEL || state == BOARDSTATE_LOADING_SAVE;
+	bool ending = state == BOARDSTATE_PLAYER_LOSS_AVERSION_PLAYING || state == BOARDSTATE_PLAYER_LOST_OUTRO || state == BOARDSTATE_ENDLEVEL;
+	if (loading | ending || state == BOARDSTATE_CINEMA)
+		return;
+	if (IsPaused() || !m_gameInputHandler)
+		return;
+	Sexy::Point location(i_startingLocation);
+	Sexy::Point absPos = GetAbsPos();
+	location.mX -= absPos.mX;
+	location.mY -= absPos.mY;
+	TranslateScreenPositionToBoardPosition(location);
+	m_gameInputHandler->OnLongPress(location);
+}
+
+bool Board::handleUITouchEvent(const Sexy::Touch& i_touch)
+{
+	Sexy::Touch touch(i_touch);
+	TranslateBoardPositionToScreenPosition(touch.location);
+	int x = mX + touch.location.mX;
+	int y = mY + touch.location.mY;
+	if (touch.phase == TOUCH_BEGAN)
+	{
+		UIWidget::ProcessedMouseDown(x, y, GetState() == BOARDSTATE_LEVEL_INTRO ? 1 : 200);
+		return UIWidget::ProcessedTouch(touch);
+	}
+	if (touch.phase == TOUCH_ENDED)
+	{
+		UIWidget::ProcessedMouseUp(x, y, -1);
+		return UIWidget::ProcessedTouch(touch);
+	}
+	return false;
+}
+
+
+void Board::CalculateBoardScaleAndOffset()
+{
+	int boardWidth = m_gridBoundingRect.mWidth;
+	m_boardScaleOffsetX = ScaleNum(boardWidth + m_gridBoundingRect.mX) + m_boardBaseOffset.mX;
+	float screenHeight = gLawnApp->mHeight;
+	m_boardScaleOffsetY = screenHeight - ScaleNum(60);
+	float scaleY = screenHeight / S(m_gridBoundingRect.mHeight + 120.0f);
+	float scaleX = gLawnApp->mWidth / S(boardWidth + 140.0f);
+	m_boardScale = std::max(1.0f, std::min(scaleY, scaleX));
+}
+
+void Board::GetGameplayResourceGroups(std::vector<std::string>& o_resourceGroups)
+{
+	o_resourceGroups.insert(o_resourceGroups.begin(), m_gameplayResources.begin(), m_gameplayResources.end());
+	if (m_levelModuleManager)
+	{
+		const std::set<std::string>& moduleGroups = m_levelModuleManager->GetLoadedResourceGroups();
+		o_resourceGroups.insert(o_resourceGroups.begin(), moduleGroups.begin(), moduleGroups.end());
+	}
+	UIWidget::GetLoadedResourceGroupsForAllWidgets(o_resourceGroups);
+}
+
+void Board::LoadResourceGroupsForGameplay(const std::vector<std::string>& i_groupNames)
+{
+	for (int i = 0; i < i_groupNames.size(); i++)
+		m_resourceGroupNeedRelease.push_back(i_groupNames[i]);
+	gLawnApp->LoadGroups(i_groupNames);
+	m_gameplayResources.insert(m_gameplayResources.end(), i_groupNames.begin(), i_groupNames.end());
+}
+
+void Board::setBoardSizeAndPanData()
+{
+	int leftWidth = GetStage()->GetBackgroundLeftImageWidth();
+	int middleWidth = GetStage()->GetBackgroundMiddleImageWidth();
+	int rightWidth = GetStage()->GetBackgroundRightImageWidth();
+	m_boardPanLocations.HouseX = -leftWidth;
+	m_boardPanLocations.GameX = m_boardBaseOffset.mX;
+	int width = middleWidth + rightWidth;
+	mWidth = width;
+	if (gLawnApp->IsFullScreen())
+		m_boardPanLocations.GameX -= gLawnApp->CalcFullScreenOffset();
+	int screenWidth = gLawnApp->mScreenBounds.mWidth;
+	m_boardPanLocations.BoardEdgeX = width - screenWidth;
+	m_boardPanLocations.ZombieX = ScaleNum(275) + middleWidth - screenWidth;
 }
 
 
@@ -1253,3 +2735,9 @@ template ZombieTosserInSkySubSystem* Board::GetGameSubSystem<ZombieTosserInSkySu
 template ZombieTosserSubSystem* Board::GetGameSubSystem<ZombieTosserSubSystem>();
 template ZombieWalkOutSubSystem* Board::GetGameSubSystem<ZombieWalkOutSubSystem>();
 template ZombossRobotRappellingSubSystem* Board::GetGameSubSystem<ZombossRobotRappellingSubSystem>();
+
+void Board::ClearAdvice()
+{
+	ClearAdvice(SexyString(L""));
+}
+

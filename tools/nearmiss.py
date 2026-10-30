@@ -5,6 +5,7 @@ import argparse
 import concurrent.futures as cf
 import difflib
 import itertools
+import json
 import os
 import random
 import re
@@ -59,6 +60,9 @@ def find_defs(text, dem):
     qual, nargs = qual_and_args(dem)
     if not qual:
         return []
+    # written inside `namespace X {`: drop leading qualifiers down to Class::method
+    while qual.count('::') > 1 and not re.search(rf'{re.escape(qual)}\s*\(', text):
+        qual = qual.split('::', 1)[1]
     pat = re.compile(rf'^(?:[^\s#/][^\n;]*?\b)?{re.escape(qual).replace(r"\ ", r"\s*")}\s*\(', re.M)
     spans = []
     for m in pat.finditer(text):
@@ -553,6 +557,35 @@ FIRST = {
     'mixed': [r_const, r_andor, r_expect, r_single_exit, r_loop_bound, r_back, r_delegate, r_ifelse, r_inline_bool,
               r_member_local, r_types, r_ternary_flip],
 }
+WINS = os.path.join(config.BUILD, 'nm', 'wins.json')
+
+
+def load_wins():
+    try:
+        return json.load(open(WINS, encoding='utf-8'))
+    except (OSError, ValueError):
+        return {}
+
+
+def record_win(kind, path, ok):
+    """count each recipe on a winning path: [OKs, partial gains] per diff kind."""
+    wins = load_wins()
+    for name in set(path):
+        row = wins.setdefault(kind, {}).setdefault(name, [0, 0])
+        row[0 if ok else 1] += 1
+    os.makedirs(os.path.dirname(WINS), exist_ok=True)
+    tmp = WINS + f'.{os.getpid()}'
+    json.dump(wins, open(tmp, 'w', encoding='utf-8'), indent=1, sort_keys=True)
+    os.replace(tmp, WINS)
+
+
+def first_recipes(kind):
+    """round-1 recipes for a kind: the ones that have won for it before first, then the hand-picked list."""
+    by_name = {r.__name__[2:]: r for r in RECIPES}
+    stats = load_wins().get(kind, {})
+    base = FIRST.get(kind, RECIPES)
+    extra = [by_name[n] for n in stats if n in by_name and by_name[n] not in base and n != 'mutators']
+    return sorted(base + extra, key=lambda r: [-x for x in stats.get(r.__name__[2:], [0, 0])])
 
 
 def classify(g, o):
@@ -598,6 +631,15 @@ def evaluate(job):
         return None
 
 
+def bounded_map(ex, jobs, deadline):
+    """evaluate() over jobs; the ones not started by the deadline are dropped (None)."""
+    futs = [ex.submit(evaluate, j) for j in jobs]
+    cf.wait(futs, timeout=max(deadline - time.time(), 0))
+    for f in futs:
+        f.cancel()                  # queued ones only; the running ones finish
+    return [None if f.cancelled() else f.result() for f in futs]
+
+
 def src_diff(a, b):
     d = difflib.unified_diff(a.split('\n'), b.split('\n'), n=0, lineterm='')
     return '\n'.join('      ' + l for l in d if not l.startswith(('---', '+++', '@@')))
@@ -625,14 +667,19 @@ def focus(source, mangled, dem, args, ex):
 
         def job(tag, fn):
             return (src_dir, stem, tag, text[:a] + enc(fn) + text[b:], mangled, build_dir)
-        ours = evaluate(job('base', orig))
+        ours = permute.cached_listing(source, mangled) or evaluate(job('base', orig))
         base = permute.rank(game, ours)
+        fast = permute.fast_ok(src_dir, stem, text, a, b, enc, orig, mangled, build_dir, ours)
+
+        def sjob(tag, fn, fast=fast):
+            return (src_dir, stem, tag, fast[0] + enc(fn) + fast[1], mangled, build_dir) if fast else job(tag, fn)
+        tried = []
         kind = classify(game, ours) if ours else 'count'
         print(f'    {base[0]}/{len(game)}, kind: {kind}', flush=True)
         if kind == 'call' and not children(orig, FIRST['call']):
             print('    only callee names differ (linker folding / lambda symbols): no source rewrite changes that')
             return None
-        first = FIRST.get(kind, RECIPES)
+        first = first_recipes(kind)
         beam, best, trail, stale = [(base, orig, [])], (base, orig, []), {orig}, 0
         for rnd in range(args.rounds):
             if time.time() > deadline:
@@ -643,6 +690,9 @@ def focus(source, mangled, dem, args, ex):
             kids = []
             for _, fn, path in beam:
                 kids += [(n, c, path) for n, c in children(fn, recipes) if c not in trail]
+            if not kids and rnd == 0:
+                for _, fn, path in beam:
+                    kids += [(n, c, path) for n, c in children(fn, RECIPES) if c not in trail]
             trail |= {c for _, c, _ in kids}
             fixed = [k for k in kids if k[0] != 'mutators']
             rest = [k for k in kids if k[0] == 'mutators']
@@ -652,9 +702,10 @@ def focus(source, mangled, dem, args, ex):
             kids = fixed + (rng.sample(rest, room) if len(rest) > room else rest)
             if not kids:
                 break
-            res = list(ex.map(evaluate, [job(f'{rnd}_{i}', c) for i, (_, c, _) in enumerate(kids)]))
+            res = bounded_map(ex, [sjob(f'{rnd}_{i}', c) for i, (_, c, _) in enumerate(kids)], deadline)
             scored = sorted(((permute.rank(game, r), c, p + [n]) for (n, c, p), r in zip(kids, res)),
                             key=lambda x: x[0], reverse=True)
+            tried += scored
             top = scored[0][0][0] if scored else '-'
             print(f'    round {rnd + 1}: {len(kids)} variants, best {top}/{len(game)}  ({time.time() - t0:.0f} s)', flush=True)
             if scored and scored[0][0] > best[0]:
@@ -664,13 +715,19 @@ def focus(source, mangled, dem, args, ex):
             if best[0] == (len(game), 0) or stale >= 2:
                 break
             beam = scored[:args.beam] if scored and scored[0][0] >= beam[0][0] else beam
+        if fast and best[0] > base:
+            # stripped scores only rank; the full file decides
+            top = sorted({c: (sc, c, p) for sc, c, p in tried if sc > base}.values(), key=lambda x: x[0], reverse=True)[:4]
+            full = permute.confirm(ex, game, [job(f'c{i}', c) for i, (_, c, _) in enumerate(top)])
+            best = max(((f, c, p) for f, (_, c, p) in zip(full, top)), key=lambda x: x[0], default=(base, orig, []))
         if best[0] > base and (found is None or best[0] > found[0]):
-            found = (best[0], best[1], best[2], a, b, base, orig)
+            found = (best[0], best[1], best[2], a, b, base, orig, kind)
     if not found:
         print(f'    no gain  ({time.time() - t0:.0f} s)')
         return None
-    sc, fn, path, a, b, base, orig = found
+    sc, fn, path, a, b, base, orig, kind = found
     ok = sc == (len(game), 0)
+    record_win(kind, path, ok)
     out = os.path.join(build_dir, f'{mangled[:80]}.best.cpp')
     open(out, 'w', encoding='utf-8', newline='').write(fn)
     print(f'    {"OK" if ok else f"{sc[0]}/{len(game)}"} (was {base[0]}) via {" + ".join(path)}  ({time.time() - t0:.0f} s)')
@@ -701,12 +758,13 @@ def main():
     ap.add_argument('target', nargs='+', help='<Class> <method> | <mangled> | <file.cpp> [pattern...]')
     ap.add_argument('--apply', action='store_true', help='write an OK into the source (reverted if another function drops)')
     ap.add_argument('--keep-gains', action='store_true', help='with --apply, also write a partial gain')
-    ap.add_argument('--minutes', type=float, default=3, help='budget per function')
+    ap.add_argument('--minutes', type=float, default=1.5, help='budget per function (rounds stop at it)')
     ap.add_argument('--rounds', type=int, default=4)
     ap.add_argument('--beam', type=int, default=3)
     ap.add_argument('--cap', type=int, default=120, help='max variants compiled per round')
     ap.add_argument('--jobs', type=int, default=12)
     ap.add_argument('--seed', type=int, default=0)
+    ap.add_argument('--min', type=float, default=0, help='file mode: only functions at least this %% matched')
     args = ap.parse_args()
     t = args.target
     if t[0].endswith('.cpp'):
@@ -714,7 +772,8 @@ def main():
         before = file_scores(source)
         if before is None:
             sys.exit('compile failed')
-        todo = [n for n, (sc, tot) in sorted(before.items(), key=lambda x: x[1][1]) if sc != (tot, 0)]
+        todo = [n for n, (sc, tot) in sorted(before.items(), key=lambda x: x[1][1])
+                if sc != (tot, 0) and sc[0] * 100 >= args.min * tot]
         todo = [n for n in todo if not pats or any(p in n for p in pats)]
     else:
         mangled, source = wd.resolve(t[0], t[1] if len(t) > 1 else None)

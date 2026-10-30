@@ -194,6 +194,45 @@ def _with_pch(source, text, obj):
     return obj, r.stderr
 
 
+def _alive(pid):
+    if os.name != 'nt':
+        try:
+            os.kill(pid, 0)
+            return True
+        except OSError:
+            return False
+    import ctypes
+    k = ctypes.windll.kernel32
+    h = k.OpenProcess(0x100000, False, pid)     # SYNCHRONIZE
+    if not h:
+        return False
+    try:
+        return k.WaitForSingleObject(h, 0) == 0x102   # WAIT_TIMEOUT: still running
+    finally:
+        k.CloseHandle(h)
+
+
+def _lock(obj):
+    """Hold obj + '.lock' so two processes (warm-up, wd.py, make check) never write one .o at once. -> True if another holder finished first."""
+    lock, waited = obj + '.lock', False
+    while True:
+        try:
+            fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            os.write(fd, str(os.getpid()).encode())
+            os.close(fd)
+            return waited
+        except FileExistsError:
+            try:
+                pid = int(open(lock).read() or 0)
+                if (pid and not _alive(pid)) or time.time() - os.path.getmtime(lock) > 900:
+                    os.remove(lock)     # left by a killed process
+                    continue
+            except (OSError, ValueError):
+                continue
+            waited = True
+            time.sleep(0.5)
+
+
 def compile_file(source, obj=None, force=False, pch=False):
     """-> (obj or None, stderr). Skips the compiler when nothing obj depends on changed."""
     source = os.path.abspath(source)
@@ -201,11 +240,29 @@ def compile_file(source, obj=None, force=False, pch=False):
     if not force and up_to_date(source, obj):
         return obj, ''
     os.makedirs(os.path.dirname(os.path.abspath(obj)), exist_ok=True)
-    if pch and os.name == 'nt':
-        done = _with_pch(source, open(source, encoding='utf-8', errors='replace').read(), obj)
-        if done is not None:
-            return done
-    return _plain(source, obj)
+    waited = _lock(obj)
+    try:
+        if waited and not force and up_to_date(source, obj):
+            return obj, ''
+        if pch and os.name == 'nt':
+            done = _with_pch(source, open(source, encoding='utf-8', errors='replace').read(), obj)
+            if done is not None:
+                return done
+        return _plain(source, obj)
+    finally:
+        try:
+            os.remove(obj + '.lock')
+        except OSError:
+            pass
+
+
+def warm_pch(source):
+    """Build source's precompiled #include block now, so its next edit compiles in seconds. -> True if one exists."""
+    bdir = _pch_compiler()
+    source = os.path.abspath(source)
+    lines = open(source, encoding='utf-8', errors='replace').read().replace('\r\n', '\n').split('\n')
+    n = split_prefix(lines)
+    return bool(bdir and n and _gch_for(source, '\n'.join(lines[:n]) + '\n', bdir))
 
 
 def compile_text(source, text, obj):

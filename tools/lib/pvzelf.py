@@ -155,14 +155,20 @@ class Elf:
         off = sec[3] + (addr if sec[2] == 0 else addr - sec[2])
         return addr, size, self.data[off:off + size]
 
+    _first_shndx = None
+
     def section_of(self, name):
         best = self._function_index().get(name)
         if best is not None:
             return self._sh[best[2]][-1]
-        for nm, value, size, shndx, styp in self.symbols():
-            if nm == name and shndx != 0:
-                return self._sh[shndx][-1]
-        return None
+        if self._first_shndx is None:
+            first = {}
+            for nm, value, size, shndx, styp in self.symbols():
+                if shndx != 0:
+                    first.setdefault(nm, shndx)
+            self._first_shndx = first
+        shndx = self._first_shndx.get(name)
+        return None if shndx is None else self._sh[shndx][-1]
 
     # ── relocations ──────────────────────────────────────────────────────
 

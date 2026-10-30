@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-28T22:57:48+00:00",
+  "generated": "2026-10-30T02:22:10+00:00",
   "measures": {
     "total_functions": 157958,
-    "matched_functions": 33264,
-    "matched_functions_percent": 21.06,
+    "matched_functions": 33441,
+    "matched_functions_percent": 21.17,
     "total_code": 24538144,
-    "matched_code": 2556132,
-    "matched_code_percent": 10.42,
-    "fuzzy_match_percent": 11.27,
-    "started_units": 2370,
+    "matched_code": 2587172,
+    "matched_code_percent": 10.54,
+    "fuzzy_match_percent": 11.41,
+    "started_units": 2372,
     "total_units": 10446,
-    "started_code": 10022668,
-    "started_matched_code": 2556132,
-    "started_percent": 25.5,
+    "started_code": 10022876,
+    "started_matched_code": 2587172,
+    "started_percent": 25.81,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -130302,12 +130302,12 @@
     {
       "name": "src/PvZ2/Gameplay/Board/Board.cpp",
       "total_code": 155992,
-      "matched_code": 5764,
-      "matched_code_percent": 3.7,
+      "matched_code": 28260,
+      "matched_code_percent": 18.12,
       "total_functions": 458,
-      "matched_functions": 140,
-      "matched_functions_percent": 30.57,
-      "fuzzy_match_percent": 4.11,
+      "matched_functions": 288,
+      "matched_functions_percent": 62.88,
+      "fuzzy_match_percent": 20.11,
       "functions": [
         {
           "name": "Board::GiveAdvice",
@@ -130499,7 +130499,7 @@
           "name": "Board::DrawDebugLifeBars",
           "size": 1020,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 97.65
         },
         {
           "name": "Board::SpawnZombieHelper",
@@ -131008,14 +131008,14 @@
         {
           "name": "Board::AddCoinFake",
           "size": 328,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddGemFake",
           "size": 328,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DoDangerRoomDrop",
@@ -131153,7 +131153,7 @@
           "name": "Board::GetPlantsCostInRow",
           "size": 296,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 60.0
         },
         {
           "name": "Board::OnZombieDied",
@@ -131177,7 +131177,7 @@
           "name": "Board::GetPlantsCountInARow",
           "size": 288,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 94.44
         },
         {
           "name": "Board::OnDangerRoomReady",
@@ -131188,134 +131188,134 @@
         {
           "name": "Board::TryGetYetiDropItemName",
           "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetGridItemsAt",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::RemoveDeferredDeleteCachedZombies",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::StartBoardFade",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnGestureLongPress",
           "size": 276,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 61.43
         },
         {
           "name": "Board::AddPlant",
           "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::loadDefinitions",
           "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::onWaveStarted",
           "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DestroyAllZombies",
           "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetWinningZombie",
           "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddPlants",
           "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::CountSunBeingCollected",
           "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DoRainZombieAtGridSingle",
           "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::PlaceCreatureInRow",
           "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::CalculateBoardScaleAndOffset",
           "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetGameplayResourceGroups",
           "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::LoadResourceGroupsForGameplay",
           "size": 252,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddZombie",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::ClearCursors",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::TestPlantFoodAllPlants",
           "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddDRMadal",
           "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddGridItemUnbounded",
           "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::FindRegionWithFlags",
@@ -131327,31 +131327,31 @@
           "name": "Board::calculateRoofOffsetZ",
           "size": 240,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 56.67
         },
         {
           "name": "Board::AddPowerupCollectable",
           "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::CountDamagableGridItemsOnScreen",
           "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DestroyPlantfoodCollectables",
           "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetGridItemGravestone",
           "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::Quit",
@@ -131362,62 +131362,62 @@
         {
           "name": "Board::AddPlantUpgrade",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DoEntityLandedEffects",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DoPitOfDoomEffects",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetInitialLawnItemsCount",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnGameOverExitLevel",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::RowCanHaveZombieType",
           "size": 232,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 63.79
         },
         {
           "name": "Board::GetUntriggeredLawnMowerCount",
           "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::TouchMoved",
           "size": 228,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 89.47
         },
         {
           "name": "Board::AddHeroPlantFakeSun",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddSpacetimeEnergy",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DestroyAllZombieProjectiles",
@@ -131428,26 +131428,26 @@
         {
           "name": "Board::DestroyCutsceneCreatures",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DestroyCutsceneZombies",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::KillPlantAt",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddPlantPot",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DestroyAllMowers",
@@ -131458,20 +131458,20 @@
         {
           "name": "Board::TranslateBoardRectToScreenRect",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::handleUITouchEvent",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddArmor",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::Pause",
@@ -131488,44 +131488,44 @@
         {
           "name": "Board::onEnterState_ZOMBOSS",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::setBoardSizeAndPanData",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::updateZombiePlantFoodAudio",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::FindGameSubSystem",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::PlaceZombieInRow",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::KillPlantIn",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddZombieInRow",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DestroyAllCreatures",
@@ -131542,32 +131542,32 @@
         {
           "name": "Board::FindPlantGroup",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::TryDevilDirectDropItemName",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::TryGargantuarDirectDropItemName",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::TryGetYetiDirectDropItemName",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::collectAllCoins",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DestroyAllPlants",
@@ -131578,92 +131578,92 @@
         {
           "name": "Board::GetExtraMaxCoinSpecialCollected",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnArenaChangeSpeedButtonPressed",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnChangeSpeedButtonPressed",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::RegisterTouchGameplayObject",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::fragmentUnload",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetLevelPowerupSet",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetZombieAt",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnSetNextWaveVisible",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::StartBoardFade",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::SunIsInsufficient",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::PlaceAStreetCreature",
           "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::setIntroStateSerialization",
           "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::setState",
           "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddGridItem",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddGridItem",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DisplayAdvice",
@@ -131680,44 +131680,44 @@
         {
           "name": "Board::AddGridItemUnbounded",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddPendingPresentReward",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::TranslateScreenRectToBoardRect",
           "size": 168,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 30.95
         },
         {
           "name": "Board::AddEffectObject",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddEffectObject",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnNextWaveButtonPressed",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddRegion",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::HasPlantAt",
@@ -131728,50 +131728,50 @@
         {
           "name": "Board::SetPlantfoodCount",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DeleteResourceGroupForGameplay",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::PlaceZombieInRow",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::SpawnCreature",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::InitBoardArtifactManager",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddCreature",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetSeedBank",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetSeedChooser",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DisplayAdviceAgain",
@@ -131782,8 +131782,8 @@
         {
           "name": "Board::AddCreatureInRow",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::FindRegionWithFlags",
@@ -131795,37 +131795,37 @@
           "name": "Board::OnGameOverRetryLevel",
           "size": 140,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 69.44
         },
         {
           "name": "Board::OnGesturePinch",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::calculateGridBoundingRect",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::CanPlantAt",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetPlantAt",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::TranslateUIWidgetRectToBoardRect",
           "size": 136,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 38.24
         },
         {
           "name": "Board::IsPitOfDoom",
@@ -131854,20 +131854,20 @@
         {
           "name": "Board::PopAnimationMgr",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::SpawnZombie",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::ClearAdvice",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::ClearAdviceImmediately",
@@ -131879,13 +131879,13 @@
           "name": "Board::TranslateBoardPositionToScreenPosition",
           "size": 128,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 37.5
         },
         {
           "name": "Board::TranslateScreenPositionToBoardPosition",
           "size": 128,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 46.88
         },
         {
           "name": "Board::StaticGetClass",
@@ -131896,56 +131896,56 @@
         {
           "name": "Board::GetPlantGroupAt",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::PushAnimationMgr",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::ClearAdvice",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::SetSoftPause",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::UpdateGame",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetTargetGridPosition",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnWaveStartCreatZombieEnd",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DeleteResourceGroupsForGameplay",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::PauseOnInterrupt",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetNumWaves",
@@ -131956,44 +131956,44 @@
         {
           "name": "Board::RegisterGesture",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::RegisterLongPress",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::drawAdviceText",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetPlantGroupAt",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::SetGridSquareLocked",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::TranslateBoardPositionToUIWidgetPosition",
           "size": 96,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 58.33
         },
         {
           "name": "Board::TranslateUIWidgetPositionToBoardPosition",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetCurrentWave",
@@ -132010,32 +132010,32 @@
         {
           "name": "Board::OffsetYForPlanting",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::SaveGameState",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::updateState_LAUNCHING",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::Contains",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnSeedChooserDone",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnZombieWarned",
@@ -132046,8 +132046,8 @@
         {
           "name": "Board::SetLevelNumber",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetSunCurrencyMax",
@@ -132058,14 +132058,14 @@
         {
           "name": "Board::MakeCachedCursorRealCursor",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnPowerupChooserDone",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetStreetCriticalDimensions",
@@ -132112,20 +132112,20 @@
         {
           "name": "Board::PausePlantGrowthAndDecay",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::PlaceStreetDinos",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::SpawnStreetDinos",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::Unload",
@@ -132142,8 +132142,8 @@
         {
           "name": "Board::ChooseSeedsOnCurrentLevel",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnPlantWarsNextLevel",
@@ -132160,8 +132160,8 @@
         {
           "name": "Board::GetOpenedPresentTablesAndContents",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnZombieAddedToBoard",
@@ -132184,26 +132184,26 @@
         {
           "name": "Board::SetSunMoney",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddCollectableWithDefaultMotion",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnZombieDestroyed",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::InitPlantGroupSystem",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::IsBattleZ",
@@ -132226,8 +132226,8 @@
         {
           "name": "Board::EnableGridItems",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetFinalDestroyedZombiePosition",
@@ -132238,14 +132238,14 @@
         {
           "name": "Board::GetWaveGenerator",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetWaveManager",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::HasPlantAt",
@@ -132310,20 +132310,20 @@
         {
           "name": "Board::BeginPlayingLossAversionUpsellEffect",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::ClearZombie",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetActiveChallengeAwardedThisPlaythrough",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetBoardBaseOffset",
@@ -132340,26 +132340,26 @@
         {
           "name": "Board::GetGridBoundingRect",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetLevelDefinitionPtr",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetPlantsAt",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::RemoveSeedChooser",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::isInState",
@@ -132370,20 +132370,20 @@
         {
           "name": "Board::AddCachedZombie",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::InitBoardHeroPlantManager",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::IsGridSquareLocked",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::IsWorldNeedDropKey",
@@ -132400,14 +132400,14 @@
         {
           "name": "Board::RemoveCachedZombie",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::SetBoardBaseOffset",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::updateState_END",
@@ -132442,8 +132442,8 @@
         {
           "name": "Board::IsPlaying",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::IsRoof",
@@ -132466,8 +132466,8 @@
         {
           "name": "Board::TouchesCanceled",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddConveyorPowerup",
@@ -132478,14 +132478,14 @@
         {
           "name": "Board::AddEffect",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetGridSquareType",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::RemovePowerup",
@@ -132496,14 +132496,14 @@
         {
           "name": "Board::SetGridSquareType",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetAllActivePlantGroups",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetPlantfoodCount",
@@ -132520,8 +132520,8 @@
         {
           "name": "Board::PlaceLawnItems",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::ActivatePowerup",
@@ -132580,8 +132580,8 @@
         {
           "name": "Board::GetOpenedActivityPresentContents",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetStage",
@@ -132616,8 +132616,8 @@
         {
           "name": "Board::MakeRenderOrder",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnStealChristmasProtect",
@@ -132886,8 +132886,8 @@
         {
           "name": "Board::CreateGameSubSystem",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::DestroyZomboss",
@@ -136560,12 +136560,12 @@
     {
       "name": "src/PvZ2/Gameplay/Board/Lawn/LawnApp.cpp",
       "total_code": 140588,
-      "matched_code": 70276,
-      "matched_code_percent": 49.99,
+      "matched_code": 78612,
+      "matched_code_percent": 55.92,
       "total_functions": 816,
-      "matched_functions": 720,
-      "matched_functions_percent": 88.24,
-      "fuzzy_match_percent": 52.97,
+      "matched_functions": 739,
+      "matched_functions_percent": 90.56,
+      "fuzzy_match_percent": 60.51,
       "functions": [
         {
           "name": "LawnApp::GetAppNameForiCloud",
@@ -136828,8 +136828,8 @@
         {
           "name": "LawnApp::ShowStoneLottery",
           "size": 536,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::CheckVersion",
@@ -136852,20 +136852,20 @@
         {
           "name": "LawnApp::ShowGLDeliveryUI",
           "size": 496,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowGLStoneLotInfoWidget",
           "size": 496,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowMessageDialogWithOKButton",
           "size": 496,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowFakeSaveWarning",
@@ -136900,92 +136900,92 @@
         {
           "name": "LawnApp::ShowGeilivableLottery",
           "size": 476,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowAvatarRewardDialog",
           "size": 472,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::GetLevelDaysByLevelString",
           "size": 452,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::OnLuaNotify",
           "size": 448,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowTransGenosisUI",
           "size": 448,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 81.25
         },
         {
           "name": "LawnApp::GetChallengeDropItemsList",
           "size": 444,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 76.58
         },
         {
           "name": "LawnApp::ShowAccessoryAwardDialog",
           "size": 440,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowSalesUI",
           "size": 440,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::loadPlayerProfiles",
           "size": 440,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 63.64
         },
         {
           "name": "LawnApp::ShowPlantRewardDialog",
           "size": 436,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::GetAboutContentStringId",
           "size": 428,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::RefreshGeilivableLottery",
           "size": 428,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 99.07
         },
         {
           "name": "LawnApp::ShowMessageDialogNoCallback",
           "size": 424,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::CheckNetWork",
           "size": 420,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::internalLoadGroup",
           "size": 408,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::GetGroupLoadProgress",
@@ -136996,14 +136996,14 @@
         {
           "name": "LawnApp::ShowMessageDialog",
           "size": 392,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::UIOrientationChanged",
           "size": 392,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowWorldMap",
@@ -137026,14 +137026,14 @@
         {
           "name": "LawnApp::ShowAdventureBonusUI",
           "size": 344,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowFakeAlert",
           "size": 340,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::GetPlatformName",
@@ -137069,7 +137069,7 @@
           "name": "LawnApp::RefreshStoneLottery",
           "size": 328,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 98.78
         },
         {
           "name": "LawnApp::ShowPlantLevelUpInfoDialog",
@@ -137093,7 +137093,7 @@
           "name": "LawnApp::NeedDelayLoadRSB",
           "size": 320,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 83.75
         },
         {
           "name": "LawnApp::ShowAdventureTeamEditorUI",
@@ -137105,7 +137105,7 @@
           "name": "LawnApp::NeedDecompressRsbsExtra",
           "size": 316,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 82.28
         },
         {
           "name": "LawnApp::ShowPlantLevelUpListView",
@@ -230306,7 +230306,7 @@
       "total_functions": 660,
       "matched_functions": 472,
       "matched_functions_percent": 71.52,
-      "fuzzy_match_percent": 18.08,
+      "fuzzy_match_percent": 18.38,
       "functions": [
         {
           "name": "Zombie::NotifyApplyCondition",
@@ -230582,7 +230582,7 @@
           "name": "Zombie::DrawHealthBar",
           "size": 672,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 69.05
         },
         {
           "name": "Zombie::doSpreadChemistPoison",
@@ -382555,48 +382555,48 @@
     {
       "name": "src/PvZ2/Gameplay/Misc/Item/MissionEndItem.cpp",
       "total_code": 104,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 104,
+      "matched_code_percent": 100.0,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Board::MissionEndItem::MissionEndItem",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::MissionEndItem::MissionEndItem",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::MissionEndItem::MissionEndItem",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::MissionEndItem::MissionEndItem",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::MissionEndItem::~MissionEndItem",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::MissionEndItem::~MissionEndItem",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -658907,36 +658907,36 @@
     {
       "name": "src/PvZ2/Gameplay/Zombies/Spawn/SpawnZombieParams.cpp",
       "total_code": 104,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 104,
+      "matched_code_percent": 100.0,
       "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Board::SpawnZombieParams::SpawnZombieParams",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::SpawnZombieParams::SpawnZombieParams",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::SpawnZombieParams::~SpawnZombieParams",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::SpawnZombieParams::~SpawnZombieParams",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },

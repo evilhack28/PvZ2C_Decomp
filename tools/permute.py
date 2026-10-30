@@ -376,6 +376,158 @@ def find_fn(text, cls, method):
     return x.start(), end
 
 
+def _skip(s, i):
+    """Index past a string, char literal or comment starting at i (i itself if none starts there)."""
+    c = s[i]
+    if c in '"\'':
+        j = i + 1
+        while j < len(s) and s[j] != c:
+            j += 2 if s[j] == '\\' else 1
+        return j + 1
+    if s.startswith('//', i):
+        j = s.find('\n', i)
+        return len(s) if j < 0 else j
+    if s.startswith('/*', i):
+        j = s.find('*/', i + 2)
+        return len(s) if j < 0 else j + 2
+    return i
+
+
+def _block_end(s, i):
+    """Index past the {...} block opening at s[i]."""
+    depth = 0
+    while i < len(s):
+        j = _skip(s, i)
+        if j != i:
+            i = j
+            continue
+        if s[i] == '{':
+            depth += 1
+        elif s[i] == '}':
+            depth -= 1
+            if depth == 0:
+                return i + 1
+        i += 1
+    return len(s)
+
+
+_CLONE_NO = re.compile(r'(\.(?:isra|constprop|part|cold))\.\d+')
+_MACRO_LINE = re.compile(r'[A-Z_][A-Z0-9_]*\s*\(.*\)\s*$')
+_KEEP_HEAD = re.compile(r'^\s*(namespace|class|struct|union|enum|extern|template|typedef|using)\b')
+
+
+def _def_name(flat):
+    """The unqualified name a definition head declares (`Board::Get` -> `Get`)."""
+    return (flat[:flat.index('(')].split() or [''])[-1].rpartition('::')[2]
+
+
+def strip_bodies(s, keep=frozenset(), defs=None):
+    """Top-level member function definitions dropped, free ones turned into declarations; names in `keep` and everything else kept.
+    `defs` (a list) collects (name, body) of every function definition seen."""
+    out, i, n = [], 0, len(s)
+    while i < n:
+        if s[i].isspace():
+            out.append(s[i])
+            i += 1
+            continue
+        j = _skip(s, i)
+        if j != i:
+            out.append(s[i:j])
+            i = j
+            continue
+        if s[i] == '#':
+            j = i
+            while True:
+                k = s.find('\n', j)
+                if k < 0:
+                    k = n
+                    break
+                if s[k - 1] != '\\' and not (s[k - 1] == '\r' and s[k - 2] == '\\'):
+                    break
+                j = k + 1
+            out.append(s[i:k])
+            i = k
+            continue
+        # one construct: up to a top-level ';' or through a {...} block
+        start, j, paren = i, i, 0
+        while j < n:
+            k = _skip(s, j)
+            if k != j:
+                j = k
+                continue
+            c = s[j]
+            if c in '([':
+                paren += 1
+            elif c in ')]':
+                paren -= 1
+            elif paren == 0 and c in ';{':
+                break
+            elif paren == 0 and c == '\n' and _MACRO_LINE.match(s, start, j):
+                break               # a `MACRO(x)` line with no ';' is a construct of its own
+            j += 1
+        if j < n and s[j] == '\n':
+            out.append(s[start:j])
+            i = j
+            continue
+        if j >= n or s[j] == ';':
+            out.append(s[start:j + 1])
+            i = j + 1
+            continue
+        head, end = s[start:j], _block_end(s, j)
+        flat = re.sub(r'//[^\n]*|/\*.*?\*/', ' ', head, flags=re.S)
+        if defs is not None and '(' in flat and not _KEEP_HEAD.match(flat):
+            defs.append((_def_name(flat), s[j:end]))
+        if _KEEP_HEAD.match(flat) or '(' not in flat or re.search(r'=\s*$', flat) or _def_name(flat) in keep:
+            out.append(s[start:end])
+        elif '::' in (flat[:flat.index('(')].split() or [''])[-1]:
+            out.append('\n' * s.count('\n', start, end))
+        else:
+            out.append(head.rstrip() + ';' + '\n' * s.count('\n', j, end))
+        i = end
+    return ''.join(out)
+
+
+_CALL = re.compile(r'\b([A-Za-z_]\w*)\s*\(')
+
+
+def focus_text(text, names):
+    """text with only the definitions of `names` and of everything they call (by name, transitively) kept whole."""
+    defs = []
+    strip_bodies(text, defs=defs)
+    keep, todo = set(), set(names)
+    while todo:
+        keep |= todo
+        todo = {c for name, body in defs if name in todo for c in _CALL.findall(body)} - keep
+    return strip_bodies(text, frozenset(keep))
+
+
+def fast_text(text, a, b):
+    """(pre, post) around text[a:b] with every other function body stripped, for quick scoring."""
+    return strip_bodies(text[:a]), strip_bodies(text[b:])
+
+
+def fast_ok(src_dir, stem, text, a, b, enc, orig, mangled, build_dir, full):
+    """(pre, post) when the stripped file compiles orig to exactly the listing the full file gives, else None."""
+    if full is None:
+        return None
+    pre, post = fast_text(text, a, b)
+    got = evaluate((src_dir, stem, 'fastbase', pre + enc(orig) + post, mangled, build_dir))
+    # a clone's number (.isra.3 vs .isra.18) counts the functions before it, which the stripped file lacks
+    norm = lambda rows: [(m, _CLONE_NO.sub(r'\1', o)) for m, o in rows or []]
+    return (pre, post) if got is not None and norm(got) == norm(full) else None
+
+
+def cached_listing(source, mangled):
+    """The function's listing from the shared object of the file as it is on disk (rebuilt only if stale)."""
+    obj, _err = fastcc.compile_file(source, pch=True)
+    return asmdiff.listing(Elf(obj), mangled) if obj else None
+
+
+def confirm(ex, game, jobs):
+    """Full-file rank of each (tag, full text) job, in order."""
+    return [rank(game, r) for r in ex.map(evaluate, jobs)]
+
+
 def evaluate(job):
     src_dir, stem, tag, full, mangled, build_dir = job
     obj = os.path.join(build_dir, f'pm{tag}.o')
@@ -419,7 +571,8 @@ def main():
     def job(tag, fn):
         return (src_dir, stem, tag, text[:a] + enc(fn) + text[b:], mangled, build_dir)
 
-    base = rank(game, evaluate(job('base', orig)))
+    ours = cached_listing(source, mangled) or evaluate(job('base', orig))
+    base = rank(game, ours)
     pool = {orig: base}
     print(f'{mangled}: baseline score {base[0]} of {len(game)}', flush=True)
     if args.variants:
@@ -429,6 +582,12 @@ def main():
         for i, r in enumerate(res):
             print(f'variant {i}: {rank(game, r)[0]}/{len(game)}')
         return
+    fast = fast_ok(src_dir, stem, text, a, b, enc, orig, mangled, build_dir, ours)
+    if fast:
+        print('scoring on a stripped copy of the file, confirming the best on the full one', flush=True)
+
+    def sjob(tag, fn):
+        return (src_dir, stem, tag, fast[0] + enc(fn) + fast[1], mangled, build_dir) if fast else job(tag, fn)
     best, seen, gen, deadline = orig, {orig}, 0, time.time() + args.minutes * 60
     with cf.ThreadPoolExecutor(args.jobs) as ex:
         while time.time() < deadline and pool[best][0] < len(game):
@@ -445,7 +604,7 @@ def main():
             if not batch:
                 print('search space exhausted', flush=True)
                 break
-            results = list(ex.map(evaluate, [job(f'{gen}_{i}', c) for i, c in enumerate(batch)]))
+            results = list(ex.map(evaluate, [sjob(f'{gen}_{i}', c) for i, c in enumerate(batch)]))
             for c, r in zip(batch, results):
                 sc = rank(game, r)
                 if sc[0] >= 0 and (len(pool) < 6 or sc >= min(pool.values())):
@@ -458,6 +617,10 @@ def main():
                 print(f'gen {gen}: {pool[best][0]}/{len(game)}', flush=True)
             elif gen % 10 == 0:
                 print(f'gen {gen}: still {pool[best][0]}/{len(game)}  ({len(seen)} tried)', flush=True)
+        if fast:
+            top = [k for k in sorted(pool, key=lambda k: pool[k], reverse=True) if k != orig]
+            pool = {orig: base, **dict(zip(top, confirm(ex, game, [job(f'c{i}', c) for i, c in enumerate(top)])))}
+            best = max(pool, key=lambda k: pool[k])
 
     out = os.path.join(build_dir, f'{args.cls}_{args.method}.best.cpp')
     open(out, 'w', encoding='utf-8', newline='').write(best)

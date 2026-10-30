@@ -15,6 +15,9 @@
 #include "GridItemArmrack.h"
 #include "GridItemFlame.h"
 #include "Plant_StreetLamp.h"
+#include "UIHelper.h"
+#include "ScaledApp.h"
+#include "BoardConstants.h"
 #include "BoardPropertySheet.h"
 #include "LawnApp.h"
 #include "DangerRoomModule.h"
@@ -74,7 +77,6 @@
 // TODO    680 B  Zombie::FindRangedTarget                             _ZN6Zombie16FindRangedTargetESt6vectorIN4Sexy9RtWeakPtrI11BoardEntityEESaIS4_EE
 // TODO    680 B  Zombie::eatZombie                                    _ZN6Zombie9eatZombieEPS_
 // TODO    680 B  Zombie::initializeAnimRigForType                     _ZN6Zombie24initializeAnimRigForTypeEN4Sexy9RtWeakPtrIK10ZombieTypeEE
-// TODO    672 B  Zombie::DrawHealthBar                                _ZN6Zombie13DrawHealthBarEPN4Sexy8GraphicsE
 // TODO    672 B  Zombie::doSpreadChemistPoison                        _ZN6Zombie21doSpreadChemistPoisonEii
 // TODO    664 B  Zombie::eatPlant                                     _ZN6Zombie8eatPlantEP5Plant
 // TODO    656 B  Zombie::onDrawShadow                                 _ZN6Zombie12onDrawShadowEPN4Sexy8GraphicsE
@@ -3017,4 +3019,49 @@ ZombieResistenceRank Zombie::GetResistenceRank(float i_value)
 			rank = (ZombieResistenceRank)std::distance(config->ResistenceValueInfos.begin(), it);
 	}
 	return rank;
+}
+
+static WEAKIMAGE(IMAGE_UI_HUD_INGAME_ELITE_PROGRESS_BG_NEW, "IMAGE_UI_HUD_INGAME_ELITE_PROGRESS_BG_NEW");
+static WEAKIMAGE(IMAGE_UI_HUD_INGAME_ELITE_PROGRESS_NEW, "IMAGE_UI_HUD_INGAME_ELITE_PROGRESS_NEW");
+
+__attribute__((noclone)) static float UIScaleNum(float i_num)
+{
+	return ((ScaledApp*)gSexyApp)->UIScaleNum(i_num);
+}
+
+__attribute__((noclone)) static int ScaleNum(int i_num)
+{
+	return ((ScaledApp*)gSexyApp)->ScaleNum(i_num);
+}
+
+__attribute__((noclone)) static float ScaleNum(float i_num)
+{
+	return ((ScaledApp*)gSexyApp)->ScaleNum(i_num);
+}
+
+void Zombie::DrawHealthBar(Sexy::Graphics* i_g)
+{
+	float borderX = UIScaleNum(2.5f);
+	float borderY = UIScaleNum(2.0f);
+	float barWidth;
+	if (GetMergeLevel() > 0)
+		barWidth = ScaleNum(BoardConstants::GRIDSQUARE_WIDTH());
+	else
+		barWidth = ((Sexy::Image*)IMAGE_UI_HUD_INGAME_ELITE_PROGRESS_BG_NEW)->GetWidth();
+	int barHeight = ((Sexy::Image*)IMAGE_UI_HUD_INGAME_ELITE_PROGRESS_BG_NEW)->GetHeight();
+	float fillMaxWidth = barWidth - borderX * 2.0f;
+	int fillHeight = (int)(barHeight - borderY * 2.0f);
+	float healthRatio = std::max(0.0f, GetHitpoints() / GetMaxHitpoints());
+	float fillWidth = std::max(0.0f, healthRatio * fillMaxWidth);
+
+	int offsetXInt = 0;
+	if (GetMergeLevel() > 0)
+		offsetXInt = (int)((((Sexy::Image*)IMAGE_UI_HUD_INGAME_ELITE_PROGRESS_BG_NEW)->GetWidth() - barWidth) * 0.5f - 55.0f);
+	float offsetX = GetMergeLevel() > 0 ? (float)offsetXInt : -55.0f;
+	float offsetY = GetMergeLevel() > 0 ? 5.0f : 15.0f;
+
+	Sexy::GraphicsAutoState state(i_g);
+	Draw3SliceImage(i_g, Sexy::Rect(ScaleNum(offsetX + m_position.x), ScaleNum(offsetY + m_position.y), barWidth, barHeight), IMAGE_UI_HUD_INGAME_ELITE_PROGRESS_BG_NEW);
+	i_g->ClipRect(ScaleNum(offsetX + m_position.x) + borderX, ScaleNum(offsetY + m_position.y) + borderY, fillWidth, fillHeight);
+	i_g->DrawImage(IMAGE_UI_HUD_INGAME_ELITE_PROGRESS_NEW, ScaleNum(offsetX + m_position.x) + borderX, ScaleNum(offsetY + m_position.y) + borderY, fillMaxWidth, fillHeight);
 }

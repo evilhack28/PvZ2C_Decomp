@@ -136,6 +136,18 @@ def _search_objdefs(mangled):
 
 # --- build ---------------------------------------------------------------
 
+def fast_build(source, names):
+    """Object of source with only `names` and what they call kept whole (permute.focus_text), or None."""
+    import permute
+    text = open(source, encoding='utf-8', newline='').read()
+    obj = os.path.join(config.BUILD, 'wdfast', os.path.basename(source)[:-4] + '.o')
+    try:
+        done, _err = fastcc.compile_text(source, permute.focus_text(text, names), obj)
+    except Exception:
+        return None
+    return done
+
+
 def build(source):
     # recompiles only when the source or a header in its depfile changed
     obj, err = fastcc.compile_file(source, pch=True)
@@ -145,6 +157,14 @@ def build(source):
         print('\n'.join(lines[:40]) or err[:2000])
         sys.exit(f'{RED}compile failed{OFF}')
     return obj
+
+
+_CLONE_NO = re.compile(r'(\.(?:isra|constprop|part|cold))\.\d+')
+
+
+def _unclone(rows):
+    """Listing with clone numbers dropped: the stripped file numbers its clones differently."""
+    return [tuple(_CLONE_NO.sub(r'\1', x) if isinstance(x, str) else x for x in r) for r in rows]
 
 
 # --- annotation ----------------------------------------------------------
@@ -331,18 +351,42 @@ def main():
     ap.add_argument('--ours', action='store_true', help='with --asm, our listing not the game')
     ap.add_argument('--shape', action='store_true', help='mnemonics only: find added or missing instructions')
     ap.add_argument('-s', '--src', action='store_true', help='print our source of just this function (and its header decl) first')
+    ap.add_argument('--full', action='store_true', help='always compile the whole file (no stripped first pass)')
     args = ap.parse_args()
 
     game_elf, objs, elfs, rc = Elf(config.TARGET_LIB), {}, {}, 0
-    for mangled, source in targets(args.items):
+    items = targets(args.items)
+    # an edited file is first compiled stripped to its targets (~2x faster); only a match pays for the full compile
+    fast = {}
+    if not args.full:
+        import progress
+        for source in {s for _, s in items}:
+            if not fastcc.up_to_date(source, fastcc.object_path(source)):
+                names = {progress.pretty(m).split('::')[-1] for m, s in items if s == source}
+                obj = fast_build(source, names)
+                if obj:
+                    fast[source] = Elf(obj)
+    for mangled, source in items:
         rel = os.path.relpath(source, os.path.join(HERE, os.pardir))
         if args.src:
             print_source(source, mangled)
-        if source not in objs:
-            objs[source] = build(source)
-            elfs[source] = Elf(objs[source])
         game = asmdiff.listing(game_elf, mangled)
-        ours = asmdiff.listing(elfs[source], mangled)
+        ours, note = None, ''
+        if source in fast and source not in objs:
+            ours = asmdiff.listing(fast[source], mangled)
+            if ours is not None and game is not None:
+                same, total, _ = asmdiff.compare(game, _unclone(ours))
+                if same == total and len(game) == len(ours):
+                    ours = None             # looks like a match: only the full file may say OK
+                else:
+                    note = f'  {GREY}(stripped compile; --full for the whole file){OFF}'
+            else:
+                ours = None
+        if ours is None:
+            if source not in objs:
+                objs[source] = build(source)
+                elfs[source] = Elf(objs[source])
+            ours = asmdiff.listing(elfs[source], mangled)
         if game is None or ours is None:
             print(f'{BOLD}{mangled}{OFF}  {RED}' + ('not in the game' if game is None else f'{rel} does not define it') + OFF)
             rc = 1
@@ -351,7 +395,7 @@ def main():
         ok = same == total and len(game) == len(ours)
         tag = f'{GREEN}OK{OFF}' if ok else f'{RED}{same}/{total} ({100 * same // max(total, 1)}%){OFF}'
         countnote = '' if len(game) == len(ours) else f'  {RED}[game {len(game)} insns, ours {len(ours)}]{OFF}'
-        print(f'{BOLD}{mangled}{OFF}  {rel}   {tag}{countnote}')
+        print(f'{BOLD}{mangled}{OFF}  {rel}   {tag}{countnote}{note}')
         if args.asm:
             members = member_names(mangled)
             for line in asmdiff.render(ours if args.ours else game):

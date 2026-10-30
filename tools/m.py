@@ -58,7 +58,7 @@ def main():
             continue
 
         total_fn += 1
-        same, total, diff = asmdiff.compare(theirs, mine)
+        same, total, diff = asmdiff.compare(theirs, mine, diff=True)
         pct = 100.0 * same / total if total else 0.0
         ok = same == total and len(theirs) == len(mine)
         if ok:

@@ -24,6 +24,9 @@ CD = re.compile(r'^_ZN(?:\d+[A-Za-z_]\w*?)*?(C[12]|D[012])E')
 
 
 def write(path, text):
+    # an unchanged header keeps its mtime, so its precompiled header stays valid
+    if os.path.exists(path) and read(path) == text:
+        return
     open(path, 'w', encoding='utf-8', newline='').write(text)
 
 
@@ -345,7 +348,9 @@ def main():
                 % (os.path.basename(src), config.AUTHOR, datetime.date.today()))
         orig = head + '#include "SexyAppFramework/Common.h"\n\n' + ''.join('#include "%s"\n' % h for h in heads)
     write(src, orig)
-    ok, errs = compile_obj(src, obj)
+    # the base file is the shared cached object unless it is a fresh stub
+    base, err = fastcc.compile_file(src, pch=True)
+    ok, errs = base is not None, [l for l in (err or '').splitlines() if 'error:' in l]
     if not ok:
         write(src, orig0)
         sys.exit('base file does not compile:\n' + '\n'.join(errs[:3]))
@@ -353,7 +358,7 @@ def main():
     game, gsyms, _ = P._game()
     gelf = Elf(config.TARGET_LIB)
     gs = G.load_syms(gelf)
-    todo = sorted({f for f, _ in funcs}) if stub else todo_symbols(obj)
+    todo = sorted({f for f, _ in funcs}) if stub else todo_symbols(base)
     cands = ctor_dtor_candidates(todo, gsyms) + rt_candidates(todo) + method_candidates(todo, gelf, gs, args.min)
     have = {x for c in cands for x in c[2]}
     rest = [x for x in todo if x not in have]
@@ -371,17 +376,17 @@ def main():
     backups = {}
 
     def apply(active):
-        for p, t in backups.items():
-            write(p, t)
+        want = dict(backups)
         text = orig.rstrip('\n') + '\n\n' + '\n'.join(c[3] for c in active)
         for c in active:
             if c[4]:
                 hp = header_path(c[1])
-                cur = read(hp)
-                backups.setdefault(hp, cur)
+                cur = want[hp] if hp in want else backups.setdefault(hp, read(hp))
                 new = declify(cur, c[1], c[4][1]) if isinstance(c[4], tuple) else insert_member(cur, c[1], c[4])
                 if new:
-                    write(hp, new)
+                    want[hp] = new
+        for p, t in want.items():
+            write(p, t)
         write(src, text)
         return text
 
@@ -391,7 +396,6 @@ def main():
 
     active = list(cands)
     for _ in range(12):
-        restore_headers()
         text = apply(active)
         ok, errs = compile_obj(src, obj)
         if ok:
@@ -461,7 +465,6 @@ def main():
         active = good
         if not active:
             break
-        restore_headers()
         apply(active)
         ok, _ = compile_obj(src, obj)
         if not ok:

@@ -34,6 +34,7 @@ GREEN, RED, YELLOW, GREY, BOLD, OFF = (
 
 _COMP = re.compile(r'(\d+)')
 _CACHE = False
+_PCH = False
 
 
 def pretty(sym):
@@ -88,7 +89,7 @@ def is_stub(source):
 def compile_one(source):
     if is_stub(source):
         return source, STUB, None
-    obj, err = fastcc.compile_file(source, force=not _CACHE)
+    obj, err = fastcc.compile_file(source, force=not _CACHE, pch=_PCH)
     if obj is None:
         errs = [l for l in err.splitlines() if ' error: ' in l]
         return source, None, errs[:8] or [err.strip()[:400]]
@@ -320,10 +321,11 @@ def main():
                     help='recompile every unit from scratch')
     args = ap.parse_args()
 
-    global _CACHE
+    global _CACHE, _PCH
     _CACHE = args.cache
-
     files = [s for s in sources() if not args.filter or args.filter.lower() in s.lower()]
+    # a look at a few files uses wd.py's precompiled headers; the tree check keeps the stock compiler
+    _PCH = bool(args.filter) and len(files) <= 3 and not args.check
     if not files:
         print('no source files')
         return 0
@@ -336,8 +338,10 @@ def main():
     game, game_syms, game_names = _game()
 
     objs, fails = {}, {}
+    # biggest objects first, so one slow file does not run alone at the end
+    cost = lambda s: os.path.getsize(fastcc.object_path(s)) if os.path.exists(fastcc.object_path(s)) else 1 << 40
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as ex:
-        for source, obj, errs in ex.map(compile_one, files):
+        for source, obj, errs in ex.map(compile_one, sorted(files, key=cost, reverse=True)):
             if obj:
                 objs[source] = obj
             else:
