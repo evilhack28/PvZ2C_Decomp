@@ -170,10 +170,23 @@ EXTRA_OWNED = {
 
 # Header-only classes every includer emits: only their own file owns them, or each includer counts them again.
 OWNED_BY = {
+    '_ZN4Sexy8RtSerial10JsonParser13ConvertToRton': 'JsonParser.cpp', '_ZN4Sexy8RtSerial10JsonParser11InitGrammar': 'JsonParser.cpp',
+    '_ZZN4Sexy8RtSerial10JsonParser11InitGrammar': 'JsonParser.cpp', '_ZZN4Sexy8RtSerial10JsonParser11ExecuteTree': 'JsonParser.cpp',
     '_ZN4Sexy5Point': 'Point.cpp', '_ZN4Sexy6FPoint': 'FPoint.cpp',
     '_ZN4Sexy8SexyMath': 'SexyMath.cpp', '_ZN4Sexy15SexyMathHermite': 'SexyMathHermite.cpp',
     '_ZN4Sexy12SexyVertex2D': 'SexyVertex2D.cpp', '_ZN4Sexy12SimpleMatrix': 'SimpleMatrix.cpp',
     '_ZN4Sexy18MTAutoDisallowRand': 'MTAutoDisallowRand.cpp',
+    '_ZN4Sexy9RtDbTable12TableOptions': 'TableOptions.cpp',
+    '_ZN4Sexy13RtWeakPtrBase': 'RtWeakPtrBase.cpp',
+    '_ZN4Sexy18RtSerializeContext': 'RtSerializeContext.cpp',
+    '_ZN4Sexy6RtName': 'RtName.cpp',
+    '_ZN4Sexy4RtId': 'RtId.cpp',
+    '_ZN4Sexy14RtMixedPtrBase': 'RtMixedPtrBase.cpp',
+    '_ZN4Sexy15RtInvokeVariant': 'RtInvokeVariant.cpp',
+    '_ZN4Sexy18RtSerialRtonReader3Key': 'Key.cpp', '_ZN4Sexy18RtSerialRtonReader11ReaderScope': 'ReaderScope.cpp',
+    '_ZN4Sexy15RtSerialRtonKey': 'RtSerialRtonKey.cpp', '_ZN4Sexy15RtSerialCommand': 'RtSerialCommand.cpp',
+    '_ZN4Sexy16RtSerialRtonSync': 'RtSerialRtonSync.cpp',
+    '_ZN4Sexy18RtSerialRtonWriter': 'RtSerialRtonWriter.cpp',
 }
 
 
@@ -185,6 +198,7 @@ NOT_OWNED = {
 
 # File -> nested-class symbol prefixes that live in their own files.
 NESTED_ELSEWHERE = {
+    'RtId.cpp': ('_ZN4Sexy4RtId3Uid', '_ZNK4Sexy4RtId3Uid', '_ZN4Sexy4RtId9OfflineId', '_ZNK4Sexy4RtId9OfflineId'),
     'AndroidGL20RenderEffect.cpp': ('_ZN4Sexy23AndroidGL20RenderEffect15ParamCollection',
                                     '_ZN4Sexy23AndroidGL20RenderEffect9ParamData'),
 }
