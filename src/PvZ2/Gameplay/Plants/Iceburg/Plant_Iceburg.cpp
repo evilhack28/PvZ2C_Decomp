@@ -1,3 +1,12 @@
+//
+//  Plant_Iceburg.cpp
+//
+//  Base PvZ2C (arm64-v8a, 3.5.7).
+//  Reconstructed by EvilHack28 on 2026-10-31.
+//
+
+#include "SexyAppFramework/Common.h"
+
 #include "Plant_Iceburg.h"
 #include "PlantAnimRig_Iceburg.h"
 #include "PVZ1WhackZombieModule.h"
@@ -23,41 +32,19 @@
 #include "LawnApp.h"
 #include "TodCommon.h"
 
-RT_CLASS_IMPLEMENT(PlantTypeIceburg);
-RT_CLASS_IMPLEMENT(PlantIceburg);
+/////////////// Accessors ///////////////
 
-void PlantIceburg::StaticClassInit()
+bool PlantIceburg::HasShadow()
 {
-	REFLECTION_CLASSBUILDER_BEGIN(PlantIceburg);
-	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
-
-		REFLECTION_CLASSBUILDER_ANCESTOR(PlantFramework);
-
-		REFLECTION_CLASSBUILDER_FIELD(bool, m_exploded);
-		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, m_nextLaunchTime);
-		REFLECTION_CLASSBUILDER_COMMANDPROPERTY_AUTO_INSTANCE(int32, LaunchState, getLaunchStateSerialization, setLaunchStateSerialization);
-		REFLECTION_CLASSBUILDER_FIELD(int, m_launchNumbers);
-		REFLECTION_CLASSBUILDER_FIELD(std::vector<BoardEntityPtr>, m_validTargets);
-		REFLECTION_CLASSBUILDER_FIELD(std::vector<BoardEntityPtr>, m_hittedTargets);
-
-	REFLECTION_CLASSBUILDER_END(PlantIceburg);
-
-	STATEMACHINE_BUILDER_BEGIN(LaunchState);
-		STATEMACHINE_BUILDER_ADDSTATE(INIT, LaunchState_INIT);
-		STATEMACHINE_BUILDER_ADDSTATE(LAUNCHING, LaunchState_LAUNCHING);
-		STATEMACHINE_BUILDER_ADDSTATE(END, LaunchState_END);
-	STATEMACHINE_BUILDER_END();
+	return !m_exploded;
 }
 
-void PlantTypeIceburg::StaticClassInit()
+CollisionTypeFlags PlantIceburg::GetCollisionFlags(PlantWeapon i_plantWeapon)
 {
-	REFLECTION_CLASSBUILDER_BEGIN(PlantTypeIceburg);
-	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
-
-		REFLECTION_CLASSBUILDER_ANCESTOR(PlantType);
-
-	REFLECTION_CLASSBUILDER_END(PlantTypeIceburg);
+	return COLLIDE_GROUND_ZOMBIES | COLLIDE_DYING_ZOMBIES;
 }
+
+/////////////// Logic ///////////////
 
 int PlantTypeIceburg::GetCost(PlantAvatarType i_avatarType) const
 {
@@ -158,11 +145,6 @@ bool PlantIceburg::CanTargetZombie(ZombiePtr i_zombie, PlantWeapon i_plantWeapon
 	return !i_zombie->IsBleedingOut();
 }
 
-bool PlantIceburg::HasShadow()
-{
-	return !m_exploded;
-}
-
 Sexy::Rect PlantIceburg::GetPlantAttackGridRect(PlantWeapon i_plantWeapon)
 {
 	Sexy::Rect rect = PlantFramework::GetPlantAttackGridRect(i_plantWeapon);
@@ -206,11 +188,6 @@ Sexy::Rect PlantIceburg::GetPlantAttackRect(PlantWeapon i_plantWeapon)
 bool PlantIceburg::CanApplyPlantfood()
 {
 	return m_plant->m_state == STATE_IDLE || m_plant->m_state == STATE_SHOOT;
-}
-
-CollisionTypeFlags PlantIceburg::GetCollisionFlags(PlantWeapon i_plantWeapon)
-{
-	return COLLIDE_GROUND_ZOMBIES | COLLIDE_DYING_ZOMBIES;
 }
 
 bool PlantIceburg::TryBlockZombossRush(Zombie* i_zomboss)
@@ -270,10 +247,8 @@ void PlantIceburg::FindValidZombiesAndAttack()
 			const SexyVector3& position = zombie->GetPosition();
 			float x = position.x;
 			float y = position.y;
-			int column = BoardTransforms::BoardSpaceToGridX(x);
-			int row = BoardTransforms::BoardSpaceToGridY(y);
-			(void)column;
-			(void)row;
+			BoardTransforms::BoardSpaceToGridX(x);
+			BoardTransforms::BoardSpaceToGridY(y);
 
 			std::vector<BoardEntityPtr>::iterator found =
 			    std::find(m_hittedTargets.begin(), m_hittedTargets.end(),
@@ -566,4 +541,43 @@ void PlantIceburg::updateState_END()
 
 void PlantIceburg::onExitState_END(LaunchState i_toState)
 {
+}
+
+/////////////// Reflection ///////////////
+
+RT_CLASS_IMPLEMENT(PlantTypeIceburg);
+
+RT_CLASS_IMPLEMENT(PlantIceburg);
+
+void PlantIceburg::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PlantIceburg);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(PlantFramework);
+
+		REFLECTION_CLASSBUILDER_FIELD(bool, m_exploded);
+		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, m_nextLaunchTime);
+		REFLECTION_CLASSBUILDER_COMMANDPROPERTY_AUTO_INSTANCE(int32, LaunchState, getLaunchStateSerialization, setLaunchStateSerialization);
+		REFLECTION_CLASSBUILDER_FIELD(int, m_launchNumbers);
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<BoardEntityPtr>, m_validTargets);
+		REFLECTION_CLASSBUILDER_FIELD(std::vector<BoardEntityPtr>, m_hittedTargets);
+
+	REFLECTION_CLASSBUILDER_END(PlantIceburg);
+
+	STATEMACHINE_BUILDER_BEGIN(LaunchState);
+		STATEMACHINE_BUILDER_ADDSTATE(INIT, LaunchState_INIT);
+		STATEMACHINE_BUILDER_ADDSTATE(LAUNCHING, LaunchState_LAUNCHING);
+		STATEMACHINE_BUILDER_ADDSTATE(END, LaunchState_END);
+	STATEMACHINE_BUILDER_END();
+}
+
+void PlantTypeIceburg::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PlantTypeIceburg);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(PlantType);
+
+	REFLECTION_CLASSBUILDER_END(PlantTypeIceburg);
 }
