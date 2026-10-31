@@ -1,18 +1,18 @@
 {
-  "generated": "2026-10-30T02:22:10+00:00",
+  "generated": "2026-10-30T17:57:13+00:00",
   "measures": {
     "total_functions": 157958,
-    "matched_functions": 33441,
-    "matched_functions_percent": 21.17,
-    "total_code": 24538144,
-    "matched_code": 2587172,
-    "matched_code_percent": 10.54,
-    "fuzzy_match_percent": 11.41,
-    "started_units": 2372,
+    "matched_functions": 33600,
+    "matched_functions_percent": 21.27,
+    "total_code": 24539484,
+    "matched_code": 2596768,
+    "matched_code_percent": 10.58,
+    "fuzzy_match_percent": 11.45,
+    "started_units": 2388,
     "total_units": 10446,
-    "started_code": 10022876,
-    "started_matched_code": 2587172,
-    "started_percent": 25.81,
+    "started_code": 10038324,
+    "started_matched_code": 2596768,
+    "started_percent": 25.87,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -777760,12 +777760,12 @@
     {
       "name": "src/PvZ2/Network/AssetsManagerEx.cpp",
       "total_code": 12564,
-      "matched_code": 12008,
-      "matched_code_percent": 95.57,
+      "matched_code": 12564,
+      "matched_code_percent": 100.0,
       "total_functions": 45,
-      "matched_functions": 44,
-      "matched_functions_percent": 97.78,
-      "fuzzy_match_percent": 99.84,
+      "matched_functions": 45,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "AssetsManagerEx::startUpdate",
@@ -777806,8 +777806,8 @@
         {
           "name": "AssetsManagerEx::initManifests",
           "size": 556,
-          "matched": false,
-          "fuzzy_match_percent": 96.4
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AssetsManagerEx::parseVersion",
@@ -974233,13 +974233,13 @@
     },
     {
       "name": "src/SexyAppFramework/Math/CurvedVal.cpp",
-      "total_code": 6516,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 43,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 6796,
+      "matched_code": 1824,
+      "matched_code_percent": 26.84,
+      "total_functions": 49,
+      "matched_functions": 33,
+      "matched_functions_percent": 67.35,
+      "fuzzy_match_percent": 32.2,
       "functions": [
         {
           "name": "Sexy::CurvedVal::ParseDataString",
@@ -974263,7 +974263,7 @@
           "name": "Sexy::CurvedVal::GetInVal",
           "size": 340,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 65.88
         },
         {
           "name": "Sexy::CurvedVal::FindClosestInToOutVal",
@@ -974275,37 +974275,37 @@
           "name": "Sexy::CurvedVal::CheckClamping",
           "size": 208,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 26.92
         },
         {
           "name": "Sexy::CurvedVal::SetCurve",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::CheckCurveChange",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::SetInVal",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::InitVarDefaults",
           "size": 132,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 63.64
         },
         {
           "name": "Sexy::CurvedVal::IncInVal",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::Intercept",
@@ -974322,89 +974322,119 @@
         {
           "name": "Sexy::CurvedVal::CheckInThreshold",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::SetCurve",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::SetCurveMult",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::SetCurveMult",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::HasBeenTriggered",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::CurvedVal",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::CurvedVal",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::CurvedVal",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::CurvedVal",
           "size": 64,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::CurvedVal::CurveCacheRecord::CurveCacheRecord",
+          "size": 60,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::CurvedVal::CurveCacheRecord::CurveCacheRecord",
+          "size": 60,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
           "name": "Sexy::CurvedVal::IsDoingCurve",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::CheckUpdatesFromEndThreshold",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::GetLengthInUpdates",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::GetOutVal",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::SetConstant",
           "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::CurvedVal::CurveCacheRecord::CurveCacheRecord",
+          "size": 40,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::CurvedVal::CurvedVal",
+          "name": "Sexy::CurvedVal::CurveCacheRecord::CurveCacheRecord",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::CurvedVal::CurveCacheRecord::~CurveCacheRecord",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::CurvedVal::CurveCacheRecord::~CurveCacheRecord",
           "size": 40,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -974412,86 +974442,92 @@
         {
           "name": "Sexy::CurvedVal::CurvedVal",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::CurvedVal::CurvedVal",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::GetCurveStr",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::GetOutValDelta",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::IncInVal",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::GetInValAtUpdate",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::IsInitialized",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::SetInRange",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::SetOutRange",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::ClearTrigger",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::SetCurveStr",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::SetMode",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::SetRamp",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::~CurvedVal",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal::~CurvedVal",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::CurvedVal",
@@ -974504,120 +974540,120 @@
     {
       "name": "src/SexyAppFramework/Math/EaseFunction.cpp",
       "total_code": 316,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 68,
+      "matched_code_percent": 21.52,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 6,
+      "matched_functions_percent": 75.0,
+      "fuzzy_match_percent": 70.89,
       "functions": [
         {
           "name": "Sexy::EaseFunction::setup",
           "size": 156,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 46.15
         },
         {
           "name": "Sexy::EaseFunction",
           "size": 92,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 91.3
         },
         {
           "name": "Sexy::EaseFunction::EaseFunction",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::EaseFunction::EaseFunction",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::EaseFunction",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::EaseFunction",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::EaseFunction::EaseFunction",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::EaseFunction::EaseFunction",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/FPoint.cpp",
       "total_code": 32,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 32,
+      "matched_code_percent": 100.0,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::FPoint::FPoint",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::FPoint::FPoint",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::FPoint::FPoint",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::FPoint::FPoint",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::FPoint::FPoint",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::FPoint::FPoint",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::FPoint::FPoint",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::FPoint::FPoint",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -974738,960 +974774,919 @@
     {
       "name": "src/SexyAppFramework/Math/Interpolator.cpp",
       "total_code": 156,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 156,
+      "matched_code_percent": 100.0,
       "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 3,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::Interpolator::SetupEaseFunc",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Interpolator::Interpolator",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Interpolator::Interpolator",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/MTAutoDisallowRand.cpp",
       "total_code": 32,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 32,
+      "matched_code_percent": 100.0,
       "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::MTAutoDisallowRand::MTAutoDisallowRand",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTAutoDisallowRand::MTAutoDisallowRand",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTAutoDisallowRand::~MTAutoDisallowRand",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTAutoDisallowRand::~MTAutoDisallowRand",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/MTRand.cpp",
       "total_code": 1184,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 632,
+      "matched_code_percent": 53.38,
       "total_functions": 18,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 16,
+      "matched_functions_percent": 88.89,
+      "fuzzy_match_percent": 94.61,
       "functions": [
         {
           "name": "Sexy::MTRand::SRand",
           "size": 460,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 95.69
         },
         {
           "name": "Sexy::MTRand::NextNoAssert",
           "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::SRand",
           "size": 92,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 52.17
         },
         {
           "name": "Sexy::MTRand::Serialize",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::NextNoAssert",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::SetRandAllowed",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::MTRand",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::MTRand",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::NextRange",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::NextNoAssert",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::MTRand",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::MTRand",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::Next",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::MTRand",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::MTRand",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::Next",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::Next",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MTRand::Next",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/Point.cpp",
-      "total_code": 56,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 32,
+      "matched_code": 32,
+      "matched_code_percent": 100.0,
+      "total_functions": 8,
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
-          "name": "EA::Text::Point::Point",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Text::Point::Point",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Sexy::Point::Point",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Point::Point",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Point::Point",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Point::Point",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Point::Point",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Point::Point",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Point::Point",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Point::Point",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Point::Point",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/Ratio.cpp",
       "total_code": 128,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 128,
+      "matched_code_percent": 100.0,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::Ratio::Set",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Ratio::Get",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Ratio::Ratio",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Ratio::Ratio",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Ratio::Ratio",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Ratio::Ratio",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/SPoint.cpp",
-      "total_code": 32,
+      "total_code": 0,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 2,
+      "total_functions": 0,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::SexyMathHermite::SPoint::SPoint",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyMathHermite::SPoint::SPoint",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
+      "functions": []
     },
     {
       "name": "src/SexyAppFramework/Math/SexyMath.cpp",
       "total_code": 116,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 116,
+      "matched_code_percent": 100.0,
       "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 4,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::SexyMath::QuadraticFormula",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMath::DegToRad",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMath::RadToDeg",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMath::Fabs",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/SexyMathHermite.cpp",
-      "total_code": 756,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 788,
+      "matched_code": 788,
+      "matched_code_percent": 100.0,
+      "total_functions": 10,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::SexyMathHermite::Evaluate",
           "size": 284,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMathHermite::BuildCurve",
           "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMathHermite::SexyMathHermite",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMathHermite::SexyMathHermite",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMathHermite::SexyMathHermite",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMathHermite::SexyMathHermite",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMathHermite::~SexyMathHermite",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMathHermite::~SexyMathHermite",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyMathHermite::SPoint::SPoint",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyMathHermite::SPoint::SPoint",
+          "size": 16,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/SexyMatrix3.cpp",
-      "total_code": 444,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 5,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 872,
+      "matched_code": 236,
+      "matched_code_percent": 27.06,
+      "total_functions": 9,
+      "matched_functions": 4,
+      "matched_functions_percent": 44.44,
+      "fuzzy_match_percent": 32.57,
       "functions": [
         {
           "name": "Sexy::SexyMatrix3::Multiply",
           "size": 208,
           "matched": false,
+          "fuzzy_match_percent": 23.08
+        },
+        {
+          "name": "Sexy::SexyMatrix3",
+          "size": 168,
+          "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "Sexy::SexyMatrix3::SexyMatrix3",
-          "size": 72,
+          "name": "Sexy::SexyMatrix3",
+          "size": 148,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
           "name": "Sexy::SexyMatrix3::SexyMatrix3",
           "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyMatrix3::SexyMatrix3",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyMatrix3",
+          "size": 64,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::SexyMatrix3",
+          "size": 48,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
           "name": "Sexy::SexyMatrix3::LoadIdentity",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMatrix3::ZeroMatrix",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/SexyMatrix4.cpp",
-      "total_code": 276,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 1220,
+      "matched_code": 1220,
+      "matched_code_percent": 100.0,
+      "total_functions": 7,
+      "matched_functions": 7,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
-          "name": "Sexy::SexyMatrix4::SexyMatrix4",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "name": "Sexy::SexyMatrix4",
+          "size": 484,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyMatrix4",
+          "size": 208,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyMatrix4",
+          "size": 180,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMatrix4::SexyMatrix4",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyMatrix4::SexyMatrix4",
+          "size": 100,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyMatrix4::LoadIdentity",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyMatrix4",
+          "size": 72,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/SexyRay2.cpp",
-      "total_code": 216,
+      "total_code": 0,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 2,
+      "total_functions": 0,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::SexyRay2::SexyRay2",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyRay2::SexyRay2",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
+      "functions": []
     },
     {
       "name": "src/SexyAppFramework/Math/SexyTransform2D.cpp",
-      "total_code": 1704,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 21,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 1888,
+      "matched_code": 1888,
+      "matched_code_percent": 100.0,
+      "total_functions": 23,
+      "matched_functions": 23,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::SexyTransform2D::CreateTransformWithPivot",
           "size": 352,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::RotateRad",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyTransform2D",
+          "size": 156,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::CreateTransformWithPivot",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::SkewRad",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::CreateRotationWithPivot",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::CreateTransform",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::CreateTransform",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::CreateScale",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::Scale",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::CreateTranslation",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::CreateScale",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::CreateRotation",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::SexyTransform2D",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::SexyTransform2D",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyTransform2D::operator=",
+          "size": 28,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::SexyTransform2D",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::SexyTransform2D",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::RotateDeg",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::SexyTransform2D",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::SexyTransform2D",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::SexyTransform2D",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform2D::SexyTransform2D",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/SexyTransform3D.cpp",
-      "total_code": 940,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 976,
+      "matched_code": 976,
+      "matched_code_percent": 100.0,
+      "total_functions": 12,
+      "matched_functions": 12,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::SexyTransform3D::RotateRadX",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform3D::RotateRadY",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform3D::RotateRadZ",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform3D::Scale",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform3D::Translate",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform3D::SexyTransform3D",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform3D::SexyTransform3D",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::SexyTransform3D::operator=",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform3D::SexyTransform3D",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform3D::SexyTransform3D",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform3D::SexyTransform3D",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyTransform3D::SexyTransform3D",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/SexyVector/SexyVector2.cpp",
-      "total_code": 132,
+      "total_code": 0,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 5,
+      "total_functions": 0,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::SexyVector2::AngleBetween",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyVector2::SexyVector2",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyVector2::SexyVector2",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyVector2::SexyVector2",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyVector2::SexyVector2",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
+      "functions": []
     },
     {
       "name": "src/SexyAppFramework/Math/SexyVector/SexyVector3.cpp",
-      "total_code": 72,
+      "total_code": 0,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 4,
+      "total_functions": 0,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::SexyVector3::SexyVector3",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyVector3::SexyVector3",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyVector3::SexyVector3",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyVector3::SexyVector3",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
+      "functions": []
     },
     {
       "name": "src/SexyAppFramework/Math/SexyVector/SexyVector4.cpp",
-      "total_code": 88,
+      "total_code": 0,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 4,
+      "total_functions": 0,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::SexyVector4::SexyVector4",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyVector4::SexyVector4",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyVector4::SexyVector4",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SexyVector4::SexyVector4",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
+      "functions": []
     },
     {
       "name": "src/SexyAppFramework/Math/SexyVertex2D.cpp",
       "total_code": 232,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 232,
+      "matched_code_percent": 100.0,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 6,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::SexyVertex2D::SexyVertex2D",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyVertex2D::SexyVertex2D",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyVertex2D::SexyVertex2D",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyVertex2D::SexyVertex2D",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyVertex2D::SexyVertex2D",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyVertex2D::SexyVertex2D",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Math/SimpleMatrix.cpp",
       "total_code": 680,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 680,
+      "matched_code_percent": 100.0,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::SimpleMatrix::RotateRad",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SimpleMatrix::Concat",
           "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SimpleMatrix::Invert",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SimpleMatrix::TransformPoint",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SimpleMatrix::Scale",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SimpleMatrix::Identity",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SimpleMatrix::SimpleMatrix",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SimpleMatrix::SimpleMatrix",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },

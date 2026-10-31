@@ -168,6 +168,15 @@ EXTRA_OWNED = {
 }
 
 
+# Header-only classes every includer emits: only their own file owns them, or each includer counts them again.
+OWNED_BY = {
+    '_ZN4Sexy5Point': 'Point.cpp', '_ZN4Sexy6FPoint': 'FPoint.cpp',
+    '_ZN4Sexy8SexyMath': 'SexyMath.cpp', '_ZN4Sexy15SexyMathHermite': 'SexyMathHermite.cpp',
+    '_ZN4Sexy12SexyVertex2D': 'SexyVertex2D.cpp', '_ZN4Sexy12SimpleMatrix': 'SimpleMatrix.cpp',
+    '_ZN4Sexy18MTAutoDisallowRand': 'MTAutoDisallowRand.cpp',
+}
+
+
 # File -> classes it defines one strong method of but belongs to another file.
 NOT_OWNED = {
     'UltraAndroid.cpp': {'_ZN5Ultra'},
@@ -213,7 +222,9 @@ def analyse(source, obj, game, game_syms, game_names, manifest_unit=None):
 
     scope = {}
     for zn, (o, mine, mine_strong) in by_class.items():
-        owned = bool(mine_strong) or zn in EXTRA_OWNED
+        owned = bool(mine_strong) or zn in EXTRA_OWNED or OWNED_BY.get(zn) == os.path.basename(source)
+        if zn in OWNED_BY and OWNED_BY[zn] != os.path.basename(source):
+            continue
         if zn in NOT_OWNED.get(os.path.basename(source), ()):
             continue
         if not owned:

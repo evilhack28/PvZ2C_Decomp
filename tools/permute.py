@@ -554,11 +554,19 @@ def main():
     ap.add_argument('--variants', help='file of whole-function variants split by ===== lines; just score them')
     ap.add_argument('--seed', type=int, default=None)
     ap.add_argument('--apply', action='store_true', help='write the best variant into the source file')
+    ap.add_argument('--file', help='source file, when units.json names a same-named stub')
     args = ap.parse_args()
 
-    mangled, source = wd.resolve(args.symbol or args.cls, None if args.symbol else args.method)
+    mangled, source = wd.resolve(args.symbol or args.cls, None if args.symbol else args.method,
+                                 os.path.abspath(args.file) if args.file else None)
     text = open(source, encoding='utf-8', newline='').read()
-    a, b = find_fn(text, args.cls, args.method)
+    # an overload is found by the variant's own first line
+    head = open(args.variants, encoding='utf-8').read().split('\n', 1)[0].strip() if args.variants else ''
+    if head and head in text:
+        a = text.index(head)
+        b = re.compile(r'\n\}\r?\n').search(text, a).end()
+    else:
+        a, b = find_fn(text, args.cls, args.method)
     crlf = '\r\n' in text
     orig = text[a:b].replace('\r\n', '\n')
     enc = (lambda t: t.replace('\n', '\r\n')) if crlf else (lambda t: t)
