@@ -214,7 +214,10 @@ void ActivityManager::OnBuyItemFinish(MsgResultInfo* io_result,
 		const S2C_ICloud_GetConsumeGemInfo* pInfo,
 		const S2C_PlayerInfo* pGemChanged)
 {
-	if (io_result && pInfo && io_result->m_errorID == 0)
+	bool success = false;
+	if (io_result && pInfo)
+		success = io_result->m_errorID == 0;
+	if (success)
 		Cpp2Lua(std::string("OnBuyItemFinish"), pInfo->m_actid);
 }
 
@@ -393,9 +396,9 @@ void ActivityManager::Initialse()
 	}
 
 #define REFRESH_CHRISTMAS_CHARGE(ID, HINT) \
-	if (__builtin_expect(changeList.find(ID) != changeList.end(), HINT)) { \
+	if (changeList.find(ID) != changeList.end()) { \
 		ActiveItem item = ActivityManager::GetInstancePtr()->GetActiveItem(ID); \
-		if (item.IsValid() && __builtin_expect(item.m_bOpen, 0)) { \
+		if (item.IsValid() && item.m_bOpen) { \
 			ChagreDoubleFesivalConfig config; \
 			if (item.GetDataSerialized(config)) { \
 				if (!gLawnApp->isSameDay(config.m_tGivePlantIDTime, ServerTime::Instance()->GetServerTime())) { \
@@ -431,7 +434,7 @@ void ActivityManager::onNotifyRefreshActivityList(bool i_success,
 	REFRESH_LEVEL_OF_THE_DAY(Activity_TimeTravel)
 	if (changeList.find(Activity_MiniGameRank) != changeList.end()) {
 		ActiveItem item = ActivityManager::GetInstancePtr()->GetActiveItem(Activity_MiniGameRank);
-		if (item.IsValid() && __builtin_expect(item.m_bOpen, 0)) {
+		if (item.IsValid() && item.m_bOpen) {
 			MiniGameRankItemConfig config;
 			if (item.GetDataSerialized(config) && !config.m_vecMiniGameAward.empty() && changeList.size() > 2) {
 				UIMiniGameRankAward* dialog = UISingletonDialog<UIMiniGameRankAward>::ShowDialog();
@@ -442,7 +445,7 @@ void ActivityManager::onNotifyRefreshActivityList(bool i_success,
 	}
 	if (changeList.find(Activity_Spring_ConsumeAndReceive) != changeList.end()) {
 		ActiveItem item = ActivityManager::GetInstancePtr()->GetActiveItem(Activity_Spring_ConsumeAndReceive);
-		if (__builtin_expect(item.m_bOpen, 0)) {
+		if (item.m_bOpen) {
 			NetworkConsumeAndReceive data;
 			bool success = item.GetDataSerialized(data);
 			PlayerInfo* profile = ProfileMgr::GetInstance().GetCurrentProfile();
@@ -486,7 +489,7 @@ void ActivityManager::onNotifyRefreshActivityList(bool i_success,
 	REFRESH_CHRISTMAS_CHARGE(Activity_NewYear_2018_Recharge, 0)
 	if (changeList.find(Activity_FestivalRechargeReward_2019) != changeList.end()) {
 		ActiveItem item = ActivityManager::GetInstancePtr()->GetActiveItem(Activity_FestivalRechargeReward_2019);
-		if (item.IsValid() && __builtin_expect(item.m_bOpen, 0)) {
+		if (item.IsValid() && item.m_bOpen) {
 			NewYearChargeConfig config;
 			if (item.GetDataSerialized(config)) {
 				if (NewYearChargeManager::GetInstancePtr()->IsDuringAcivity())
@@ -516,7 +519,7 @@ void ActivityManager::onNotifyRefreshActivityList(bool i_success,
 	}
 	if (changeList.find(Activity_LanternRiddle) != changeList.end()) {
 		ActiveItem item = ActivityManager::GetInstancePtr()->GetActiveItem(Activity_LanternRiddle);
-		if (__builtin_expect(item.m_bOpen, 0)) {
+		if (item.m_bOpen) {
 			LanternRiddlesInfo info;
 			if (item.GetDataSerialized(info)) {
 				PlayerInfo* profile = ProfileMgr::GetInstance().GetCurrentProfile();
@@ -542,7 +545,7 @@ void ActivityManager::onNotifyRefreshActivityList(bool i_success,
 	}
 	if (changeList.find(Activity_MysteryStore) != changeList.end()) {
 		ActiveItem item = ActivityManager::GetInstancePtr()->GetActiveItem(Activity_MysteryStore);
-		if (__builtin_expect(item.m_bOpen, 0))
+		if (item.m_bOpen)
 			MysteryCrystalMgr::GetInstance().Init(false);
 	}
 	if (changeList.find(Activity_UnchartedMode) != changeList.end()) {
@@ -581,7 +584,7 @@ void ActivityManager::onNotifyRefreshActivityList(bool i_success,
 		Sexy::OutputDebugStrF("ChristmasChargeManager::GetInstancePtr() Activity_Turn_charge ");
 		if (changeList.size() > 2) {
 			ActiveItem item = ActivityManager::GetInstancePtr()->GetActiveItem(Activity_Turn_charge);
-			if (item.IsValid() && __builtin_expect(item.m_bOpen, 0)) {
+			if (item.IsValid() && item.m_bOpen) {
 				ActivityTurnChangeConfig config;
 				if (item.GetDataSerialized(config))
 					WorldMapActivityBtnTurnChangeManager::GetInstancePtr()->loadData(config);

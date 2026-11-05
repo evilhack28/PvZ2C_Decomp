@@ -8,6 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "DinoStage.h"
+#include "ReflectionBuilder.h"
+
+static CachedResourcePtr<Sexy::Image> g_dinoPlants("IMAGE_BACKGROUNDS_DINO_PLANTS");
 
 DinoStageProperties::DinoStageProperties()
 {
@@ -25,8 +28,6 @@ DinoStage::~DinoStage()
 {
 }
 
-#include "ReflectionBuilder.h"
-
 RT_CLASS_IMPLEMENT(DinoStageProperties);
 
 void DinoStageProperties::StaticClassInit()
@@ -37,6 +38,22 @@ void DinoStageProperties::StaticClassInit()
 		REFLECTION_CLASSBUILDER_ANCESTOR(StageModuleProperties);
 
 	REFLECTION_CLASSBUILDER_END(DinoStageProperties);
+}
+
+void DinoStage::registerForEvents()
+{
+	StageModule::registerForEvents();
+	getManager()->RegisterAddToRenderQueue(Sexy::MakeDelegate(*this, &DinoStage::addForegroundToRenderQueue));
+}
+
+void DinoStage::addForegroundToRenderQueue(RenderQueue* i_queue)
+{
+	i_queue->Add(RENDER_LAYER_TOP, Sexy::MakeDelegate(*this, &DinoStage::renderForeground));
+}
+
+void DinoStage::renderForeground(Sexy::Graphics* i_g)
+{
+	i_g->DrawImage(g_dinoPlants, (int)S(744.5f), (int)S(318.0f));
 }
 
 #include "ReflectionBuilder.h"

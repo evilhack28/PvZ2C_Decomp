@@ -187,6 +187,10 @@ OWNED_BY = {
     '_ZN4Sexy15RtSerialRtonKey': 'RtSerialRtonKey.cpp', '_ZN4Sexy15RtSerialCommand': 'RtSerialCommand.cpp',
     '_ZN4Sexy16RtSerialRtonSync': 'RtSerialRtonSync.cpp',
     '_ZN4Sexy18RtSerialRtonWriter': 'RtSerialRtonWriter.cpp',
+    '_ZN21CSelectChangedHandler': 'CSelectChangedHandler.cpp', '_ZN11SnapHandler': 'SnapHandler.cpp',
+    '_ZN2UI18TabControlListener': 'TabControlListener.cpp',
+    '_ZN2UI12PageListener': 'PageListener.cpp', '_ZN2UI13RadioListener': 'RadioListener.cpp',
+    '_ZN11JamListener': 'JamListener.cpp', '_ZN20NullRsbPatchListener': 'NullRsbPatchListener.cpp',
 }
 
 

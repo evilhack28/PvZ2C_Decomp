@@ -23,6 +23,7 @@
 #include "PvZ/SeedChooser.h"
 #include "PvZ/StageModule.h"
 #include "SexyAppFramework/ResStreamsManager.h"
+#include "PvZ/NullRsbPatchListener.h"
 #include "PvZ/Zombie.h"
 #include "PvZ/ZombieType.h"
 #include "PvZ/PlantType.h"
@@ -386,15 +387,6 @@ std::string PVZRemoteControl::SpawnPlant(std::string& i_plantType, int i_col, in
 	plant->GetPtr().GetId().ToString(result);
 	return result;
 }
-
-class NullRsbPatchListener : public Sexy::IRSBPatcherListener
-{
-public:
-	virtual void PatchStarted(const Sexy::RSBPatcher* inPatcher, void* inListenerContext) {}
-	virtual void PatchComplete(const Sexy::RSBPatcher* inPatcher, void* inListenerContext) {}
-	virtual void PatchError(const Sexy::RSBPatcher* inPatcher, void* inListenerContext) {}
-	virtual void PatchCanceled(const Sexy::RSBPatcher* inPatcher, void* inListenerContext) {}
-};
 
 bool PVZRemoteControl::ApplyRsbPatch()
 {
