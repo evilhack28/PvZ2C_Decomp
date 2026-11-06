@@ -190,13 +190,17 @@ OWNED_BY = {
     '_ZN21CSelectChangedHandler': 'CSelectChangedHandler.cpp', '_ZN11SnapHandler': 'SnapHandler.cpp',
     '_ZN2UI18TabControlListener': 'TabControlListener.cpp',
     '_ZN2UI12PageListener': 'PageListener.cpp', '_ZN2UI13RadioListener': 'RadioListener.cpp',
-    '_ZN11JamListener': 'JamListener.cpp', '_ZN20NullRsbPatchListener': 'NullRsbPatchListener.cpp',
+    '_ZN11JamListener': 'JamListener.cpp',
+    '_ZN4Sexy18ResStreamsLoadDesc': 'ResStreamsLoadDesc.cpp', '_ZN4Sexy17IResStreamsDriver': 'IResStreamsDriver.cpp', '_ZNK4Sexy17IResStreamsDriver': 'IResStreamsDriver.cpp', '_ZN20NullRsbPatchListener': 'NullRsbPatchListener.cpp',
+    '_ZN4Sexy20BaseResStreamsDriver': 'BaseResStreamsDriver.cpp',
+    '_ZN4Sexy15ResourceManager15GetImageOptions': 'GetImageOptions.cpp',
 }
 
 
 # File -> classes it defines one strong method of but belongs to another file.
 NOT_OWNED = {
     'UltraAndroid.cpp': {'_ZN5Ultra'},
+    'GetImageOptions.cpp': {'_ZN4Sexy15ResourceManager'},
 }
 
 

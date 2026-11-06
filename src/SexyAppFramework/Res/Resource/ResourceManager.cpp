@@ -367,20 +367,6 @@ void ResourceManager::RegisterResource(RtMixedPtrBase& outId, BaseResource* inRe
 	RegisterResourceInternal(&outId, inRes, RtId(), BaseResource::RRT_Ungrouped);
 }
 
-ResourceManager::GetImageOptions& ResourceManager::GetImageOptions::operator=(GetImageOptions&& theOther)
-{
-	mTestOnly = theOther.mTestOnly;
-	mAllowTriReps = theOther.mAllowTriReps;
-	mIsInAtlas = theOther.mIsInAtlas;
-	mNoShare = theOther.mNoShare;
-	mInfoId = theOther.mInfoId;
-	mResGroup = theOther.mResGroup;
-	mUseWidth = theOther.mUseWidth;
-	mUseHeight = theOther.mUseHeight;
-	mVariant = theOther.mVariant;
-	return *this;
-}
-
 bool ResourceManager::ReplaceResource(ResourceInfoClass* theType, const std::string& theId, BaseResource* theRes)
 {
 	ResourceInfo* aResInfo = GetResInfoForStringId(theType, theId);
