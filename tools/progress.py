@@ -194,6 +194,7 @@ OWNED_BY = {
     '_ZN4Sexy18ResStreamsLoadDesc': 'ResStreamsLoadDesc.cpp', '_ZN4Sexy17IResStreamsDriver': 'IResStreamsDriver.cpp', '_ZNK4Sexy17IResStreamsDriver': 'IResStreamsDriver.cpp', '_ZN20NullRsbPatchListener': 'NullRsbPatchListener.cpp',
     '_ZN4Sexy20BaseResStreamsDriver': 'BaseResStreamsDriver.cpp',
     '_ZN4Sexy15ResourceManager15GetImageOptions': 'GetImageOptions.cpp',
+    '_ZN4Sexy29InteractiveSoundManagerConfig': 'InteractiveSoundManagerConfig.cpp',
 }
 
 
