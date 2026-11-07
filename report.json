@@ -1,18 +1,18 @@
 {
-  "generated": "2026-11-07T02:11:45+00:00",
+  "generated": "2026-11-07T03:56:34+00:00",
   "measures": {
-    "total_functions": 154775,
-    "matched_functions": 36474,
-    "matched_functions_percent": 23.57,
-    "total_code": 24324580,
-    "matched_code": 2829076,
-    "matched_code_percent": 11.63,
-    "fuzzy_match_percent": 12.54,
-    "started_units": 2419,
+    "total_functions": 154768,
+    "matched_functions": 36526,
+    "matched_functions_percent": 23.6,
+    "total_code": 24324468,
+    "matched_code": 2832888,
+    "matched_code_percent": 11.65,
+    "fuzzy_match_percent": 12.56,
+    "started_units": 2422,
     "total_units": 8368,
-    "started_code": 10302680,
-    "started_matched_code": 2829076,
-    "started_percent": 27.46,
+    "started_code": 10307032,
+    "started_matched_code": 2832888,
+    "started_percent": 27.49,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -964545,397 +964545,355 @@
     },
     {
       "name": "src/SexyAppFramework/drivers/audio/wwise/WwiseInteractiveAudioDriver.cpp",
-      "total_code": 2652,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 41,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 2540,
+      "matched_code": 2000,
+      "matched_code_percent": 78.74,
+      "total_functions": 34,
+      "matched_functions": 33,
+      "matched_functions_percent": 97.06,
+      "fuzzy_match_percent": 99.37,
       "functions": [
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::InitInteractiveAudioDriver",
           "size": 540,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 97.04
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::HACK_SetAndroidAssetInfo",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SetListenerPosition",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SetGameObjectPosition",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::GetRTPCValue",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::GetRTPCValue",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SendEvent",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SendEvent",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SendEventCallback",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SendEventCallback",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::TermInteractiveAudioDriver",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::WwiseInteractiveAudioDriver",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::WwiseInteractiveAudioDriver",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SetRTPCValue",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SetRTPCValue",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SetSwitch",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SetSwitch",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::CreateSoundManager",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::~WwiseInteractiveAudioDriver",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::~WwiseInteractiveAudioDriver",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SetState",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::SetState",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::~WwiseInteractiveAudioDriver",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AkChannelConfig::AkChannelConfig",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AkChannelConfig::AkChannelConfig",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::Update",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::GetIdFromString",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::LostFocus",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::RegisterGameObject",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AK::IAkStreamMgr::Get",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::GotFocus",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::UnregisterGameObject",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::HACK_SetPvZStreamingFilePathMap",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AkInitSettings::AkInitSettings",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AkInitSettings::AkInitSettings",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AkOutputSettings::AkOutputSettings",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "AkOutputSettings::AkOutputSettings",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::CancelEventCallback",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::CancelEventCallbackByContext",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::GetEventIdFromString",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseInteractiveAudioDriver::GetRtpcIdFromString",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/drivers/audio/wwise/WwiseSoundManager.cpp",
       "total_code": 188,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 188,
+      "matched_code_percent": 100.0,
       "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 3,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::WwiseSoundManager::Initialize",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundManager::WwiseSoundManager",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundManager::WwiseSoundManager",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/drivers/audio/wwise/WwiseSoundbank.cpp",
       "total_code": 1624,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1624,
+      "matched_code_percent": 100.0,
       "total_functions": 16,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 16,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::WwiseSoundBank::Load",
           "size": 580,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::Prepare",
           "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::destroy",
           "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::SetBankError",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::StaticGetClass",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::WwiseSoundBank",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::WwiseSoundBank",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::~WwiseSoundBank",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::~WwiseSoundBank",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::GetBankName",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::~WwiseSoundBank",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::IsValidBank",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::GetBankId",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WwiseSoundBank::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },

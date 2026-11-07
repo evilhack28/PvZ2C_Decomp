@@ -54,7 +54,7 @@ AKRESULT SexyIOHookBlocking::Open_Aux(std::string thePathName, AkOpenMode in_eOp
 	AKRESULT eResult;
 	if (Sexy::gSexyAppBase->mResStreamsManager != NULL)
 	{
-		if (__builtin_expect(Sexy::gSexyAppBase->mResStreamsManager->IsInitialized("dynamic.rsb"), 1))
+		if (Sexy::gSexyAppBase->mResStreamsManager->IsInitialized("dynamic.rsb"))
 		{
 			uint32 aGroupId = Sexy::gSexyAppBase->mResStreamsManager->GetGroupForFile(thePathName, false, false);
 			if (aGroupId != 0xFFFFFFFF)
@@ -89,12 +89,12 @@ AKRESULT SexyIOHookBlocking::Open_Aux(std::string thePathName, AkOpenMode in_eOp
 		std::string aFullPath = Sexy::gSexyAppBase->mFileDriver->GetLoadDataPath() + thePathName;
 		const char* aFullFile = aFullPath.c_str();
 		eResult = AK_Fail;
-		if (__builtin_expect(aFile != 0 || (eResult = CAkFileHelpers::OpenFile(aFullFile, in_eOpenMode, false, false, aFile)) == AK_Success, 1))
+		if (aFile != 0 || (eResult = CAkFileHelpers::OpenFile(aFullFile, in_eOpenMode, false, false, aFile)) == AK_Success)
 		{
 			out_fileDesc.hFile = aFile;
 			eResult = AK_Fail;
 			struct stat aStat;
-			if (__builtin_expect(stat(aFullFile, &aStat) == 0, 0))
+			if (stat(aFullFile, &aStat) == 0)
 			{
 				eResult = AK_Success;
 				out_fileDesc.iFileSize = 0;
@@ -108,6 +108,7 @@ AKRESULT SexyIOHookBlocking::Open_Aux(std::string thePathName, AkOpenMode in_eOp
 done:
 	return eResult;
 }
+
 
 AKRESULT SexyIOHookBlocking::Open(AkFileID in_fileID, AkOpenMode in_eOpenMode, AkFileSystemFlags* in_pFlags, bool& io_bSyncOpen, AkFileDesc& out_fileDesc)
 {
