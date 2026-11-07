@@ -18,32 +18,6 @@ static std::string sLastNonDelayLoadRSBManifestName;
 
 static std::map<std::string, std::string> sDelayLoadedRSBs;
 
-/////////////// Lifecycle ///////////////
-
-ResourceManager::GetImageOptions::GetImageOptions()
-	: mTestOnly(false)
-	, mAllowTriReps(true)
-	, mIsInAtlas(false)
-	, mNoShare(false)
-	, mResGroup(NULL)
-	, mUseWidth(0), mUseHeight(0)
-{
-}
-
-ResourceManager::GetImageOptions::~GetImageOptions()
-{
-}
-
-ResourceManager::PreLoadTask::PreLoadTask()
-{
-	RSBBuffer = NULL;
-}
-
-ResourceManager::PreLoadTask::~PreLoadTask()
-{
-	delete RSBBuffer;
-}
-
 /////////////// Accessors ///////////////
 
 ResourceGroup* ResourceManager::GetResourceGroupNamed(const RtName& inName)

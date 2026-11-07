@@ -9,6 +9,8 @@
 
 #include "gameNetWork/NetworkMgr.h"
 
+std::string _NetworkEventConfig::m_stageURL;
+
 /////////////// Lifecycle ///////////////
 
 NetWorkEvent::NetWorkEvent()

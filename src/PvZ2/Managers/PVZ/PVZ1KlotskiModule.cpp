@@ -31,3 +31,49 @@
 // TODO      8 B  PVZ1KlotskiModule::IsAbstract                        _ZNK17PVZ1KlotskiModule10IsAbstractEv
 // TODO      4 B  PVZ1KlotskiModule::onNarrationFinished               _ZN17PVZ1KlotskiModule19onNarrationFinishedEv
 // TODO      4 B  PVZ1KlotskiModule::GetClass                          _ZNK17PVZ1KlotskiModule8GetClassEv
+
+#include "SexyAppFramework/Common.h"
+#include "BoardEntity.h"
+#include "SexyVector.h"
+
+class GridItemRecordInfo
+{
+public:
+	GridItemRecordInfo(Sexy::RtWeakPtr<BoardEntity> i_boardEntity, const Sexy::SexyVector3& i_position);
+	GridItemRecordInfo(const GridItemRecordInfo& i_other);
+	GridItemRecordInfo(GridItemRecordInfo&& i_other);
+	~GridItemRecordInfo();
+
+	GridItemRecordInfo& operator=(const GridItemRecordInfo& i_other);
+
+	Sexy::RtWeakPtr<BoardEntity> m_boardEntity;
+	Sexy::SexyVector3 m_position;
+};
+inline __attribute__((used)) GridItemRecordInfo::GridItemRecordInfo(Sexy::RtWeakPtr<BoardEntity> i_boardEntity, const Sexy::SexyVector3& i_position)
+	: m_boardEntity(i_boardEntity)
+	, m_position(i_position)
+{
+}
+
+inline __attribute__((used)) GridItemRecordInfo::GridItemRecordInfo(const GridItemRecordInfo& i_other)
+	: m_boardEntity(i_other.m_boardEntity)
+	, m_position(i_other.m_position)
+{
+}
+
+inline __attribute__((used)) GridItemRecordInfo::GridItemRecordInfo(GridItemRecordInfo&& i_other)
+	: m_boardEntity(i_other.m_boardEntity)
+	, m_position(i_other.m_position)
+{
+}
+
+inline __attribute__((used)) GridItemRecordInfo::~GridItemRecordInfo()
+{
+}
+
+inline __attribute__((used)) GridItemRecordInfo& GridItemRecordInfo::operator=(const GridItemRecordInfo& i_other)
+{
+	m_boardEntity = i_other.m_boardEntity;
+	m_position = i_other.m_position;
+	return *this;
+}
