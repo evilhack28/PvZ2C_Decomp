@@ -28,6 +28,7 @@
 #include "BoardSaveState.h"
 #include "WaveGeneratorModule.h"
 #include "Creature.h"
+#include "PVZ2UIAwardScreen.h"
 #include "Projectile.h"
 #include "LawnMower.h"
 #include "UISpringFestivalActivity.h"
@@ -186,6 +187,8 @@
 #include "Zombie_IceYearMonster.h"
 #include "Zombie_Piano_Subsystem.h"
 #include "WorldMapUtils.h"
+#include "CollectableWorldKey.h"
+#include "DangerRoomModule.h"
 
 namespace RiftUtils { bool IsRiftTimedLevel(); bool IsPlayingRiftLevel(); int GetZombieLevel(); }
 namespace MiniGameCollectionUtils { bool IsPlayingMiniGameCollectionLevel(); }
@@ -198,6 +201,53 @@ namespace BoardHelpers
 /////////////// Reflection ///////////////
 
 RT_CLASS_IMPLEMENT(Board);
+
+/////////////// Lifecycle ///////////////
+
+Board::~Board()
+{
+	EASquared::Instance().CloseBanner(BANNER_BOARD_TOP);
+	fragmentUnload();
+	if (m_advice)
+	{
+		delete m_advice;
+		m_advice = nullptr;
+	}
+	if (m_animationMgr.IsValid())
+		m_animationMgr->Destroy();
+	m_animationMgr.ClearId();
+	if (m_levelTextWidget)
+	{
+		delete m_levelTextWidget;
+		m_levelTextWidget = nullptr;
+	}
+	if (m_authorTextWidget)
+	{
+		delete m_authorTextWidget;
+		m_authorTextWidget = nullptr;
+	}
+	if (m_levelModuleManager)
+	{
+		delete m_levelModuleManager;
+		m_levelModuleManager = nullptr;
+	}
+	if (m_awardScreen)
+	{
+		delete m_awardScreen;
+		m_awardScreen = nullptr;
+	}
+	if (m_gameInputHandler)
+	{
+		delete m_gameInputHandler;
+		m_gameInputHandler = nullptr;
+	}
+	if (m_arenaCursorAnimRig)
+	{
+		delete m_arenaCursorAnimRig;
+		m_arenaCursorAnimRig = nullptr;
+	}
+	RemoveAllWidgets(true, true);
+}
 
 /////////////// Accessors ///////////////
 
@@ -1176,6 +1226,28 @@ void Board::MakeCachedCursorRealCursor()
 	m_cachedCursor = nullptr;
 }
 
+void Board::SetCachedCursor(BaseCursor* i_cursor)
+{
+	for (int i = 0; i < m_cursors.size(); i++)
+	{
+		if (m_cursors[i] == i_cursor)
+		{
+			m_cursors.erase(m_cursors.begin() + i);
+			if (m_cachedCursor)
+			{
+				m_cachedCursor->Destroy();
+				delete m_cachedCursor;
+			}
+			m_cachedCursor = i_cursor;
+			i_cursor->ClearTouchIdentity();
+			if (m_gameInputHandler)
+				m_gameInputHandler->ChangePriority(i_cursor, 8);
+			GetGameSubSystem<PowerupManager>()->CancelActivePowerup();
+			return;
+		}
+	}
+}
+
 void Board::SaveGameState(bool i_special)
 {
 	BoardSaveState* saveState = GameObject::Create<BoardSaveState>(PVZDB::TABLE_BOARDSTATE);
@@ -1232,6 +1304,46 @@ void Board::OnWaveStartCreatZombieEnd()
 		return;
 	if (m_stDangerRoomDropInfo.IsInWaves(GetCurrentWave()))
 		m_stDangerRoomDropInfo.OrderDropZombie(GetCurrentWave());
+}
+
+void Board::OnDangerRoomReady()
+{
+	if (!GetLevelDefinition() || !GetLevelDefinition()->IsDangerRoom)
+		return;
+	m_stDangerRoomDropInfo.ClearDate();
+	PlayerInfo* profile = ProfileMgr::GetInstance().GetCurrentProfile();
+	const DangerRoomInfo& info = profile->GetDangerRoomInfo(gLawnApp->GetDangerRoomLevelName());
+	WorldGateLevelKey key;
+	key.SetValue(DangerRoomModule::GetDangerRoomPropertySheet()->DangerRoomName, profile->GetCurrentDangerRoomLevel(), info.CurrentLevel);
+	m_stDangerRoomDropInfo.OrderDropWave(key, GetNumWaves());
+}
+
+void Board::ProcessDeleteQueue()
+{
+	RemoveDeferredDeleteCachedZombies();
+	RtDb::GetDb()->RunDeferredDeletions(0xFFFFFFFF);
+	for (int i = (int)m_cursors.size() - 1; i >= 0; i--)
+	{
+		BaseCursor* cursor = m_cursors[i];
+		if (cursor->IsDestroyed())
+		{
+			delete cursor;
+			m_cursors.erase(m_cursors.begin() + i);
+		}
+	}
+}
+
+bool Board::CanSpawnIcePitAt(int i_gridX, int i_gridY)
+{
+	if (i_gridX < 0 || i_gridY < 0 || i_gridY >= m_gridSizeY || i_gridX >= m_gridSizeX)
+		return false;
+	if (IsGridSquareLocked(i_gridX, i_gridY))
+		return false;
+	if (GetStage() && !GetStage()->CanGraveStoneSpawnAt(i_gridX, i_gridY))
+		return false;
+	if (IsSky(Point(i_gridX, i_gridY)))
+		return false;
+	return !IsShallowWater(Point(i_gridX, i_gridY));
 }
 
 void Board::DeleteResourceGroupsForGameplay(const std::vector<std::string>& i_resourceGroups)
@@ -1341,6 +1453,20 @@ void Board::SetSunMoney(int i_amount)
 {
 	m_sunCurrency = i_amount;
 	gMessageRouter->Broadcast(&Message::SunChanged, i_amount);
+}
+
+Collectable* Board::AddCollectable(const std::string& i_collectableTypeName)
+{
+	CollectableTypePtr type = Sexy::LazySingleton<ObjectTypeDirectory<CollectableType> >::GetInstancePtr()->GetTypeFromTypeName(i_collectableTypeName);
+	if (!type.IsValid())
+		return nullptr;
+	Collectable* collectable = GameObject::Create(RtClass::StaticGetClassNamed(type->CollectableClass.c_str()), PVZDB::TABLE_COLLECTABLES)->CastChecked<Collectable>();
+	collectable->CollectableInitialize(type);
+	if (collectable->IsA<CollectableCoin>())
+		gMessageRouter->Post(&Message::CoinCurrencySpawned, static_cast<CollectableCoin*>(collectable));
+	else if (collectable->IsA<CollectableWorldKey>())
+		ProfileMgr::GetInstance().GetCurrentProfile()->AddWorldKeys(1);
+	return collectable;
 }
 
 Collectable* Board::AddCollectableWithDefaultMotion(const std::string& i_collectableTypeName, const SexyVector3& i_pos)
