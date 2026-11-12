@@ -64,11 +64,17 @@ def find_defs(text, dem):
     while qual.count('::') > 1 and not re.search(rf'{re.escape(qual)}\s*\(', text):
         qual = qual.split('::', 1)[1]
     pat = re.compile(rf'^(?:[^\s#/][^\n;]*?\b)?{re.escape(qual).replace(r"\ ", r"\s*")}\s*\(', re.M)
+    free = '::' in qual and not pat.search(text)
+    if free:
+        # a free function written unqualified inside its `namespace X {` blocks
+        pat = re.compile(rf'^[ \t]*(?!return\b)[\w:<>*& ]+?[ \t*&]{re.escape(qual.rsplit("::", 1)[1])}\s*\(', re.M)
     spans = []
     for m in pat.finditer(text):
         close = wd._body_end(text, m.end() - 1)
         body_start = text.find('{', m.end())
         if body_start < 0 or body_start > close:
+            continue
+        if free and text[text.rfind(')', m.end(), body_start) + 1:body_start].strip():
             continue
         spans.append((m.start(), close, len(split_args(text[m.end():text.rfind(')', m.end(), body_start)]))))
     exact = [(a, b) for a, b, n in spans if n == nargs]
@@ -340,15 +346,6 @@ def r_ternary_flip(fn):
     return out
 
 
-def r_expect(fn):
-    out = []
-    for a, p, q in ifs(fn):
-        c = fn[p + 1:q]
-        if '__builtin_expect' not in c:
-            out += [fn[:p + 1] + f'__builtin_expect(!!({c}), {v})' + fn[q:] for v in ('0', '1')]
-    return out
-
-
 def r_null(fn):
     out = []
     m = permute.mask(fn)
@@ -538,7 +535,7 @@ def r_delegate(fn):
 
 
 RECIPES = [r_const, r_andor, r_inline_bool, r_member_local, r_ternary, r_types, r_ifelse, r_ternary_flip, r_switch,
-           r_for_while, r_split_decl, r_param_local, r_null, r_expect, r_loop_bound, r_back, r_single_exit,
+           r_for_while, r_split_decl, r_param_local, r_null, r_loop_bound, r_back, r_single_exit,
            r_delegate, r_mutators]
 
 
@@ -547,14 +544,14 @@ BRANCH = re.compile(r'^(b\.\w+|b|cbz|cbnz|tbz|tbnz)$')
 
 # recipes most likely to move each kind of diff, tried first
 FIRST = {
-    'regs': [r_const, r_param_local, r_member_local, r_types, r_loop_bound, r_split_decl, r_inline_bool, r_expect],
-    'branch': [r_expect, r_ifelse, r_single_exit, r_andor, r_ternary_flip, r_switch, r_null],
+    'regs': [r_const, r_param_local, r_member_local, r_types, r_loop_bound, r_split_decl, r_inline_bool],
+    'branch': [r_ifelse, r_single_exit, r_andor, r_ternary_flip, r_switch, r_null],
     'sched': [r_const, r_split_decl, r_member_local, r_param_local, r_inline_bool, r_andor],
     'const': [r_types, r_ternary_flip, r_ifelse],
     'call': [r_delegate, r_back],
     'count': [r_types, r_loop_bound, r_back, r_single_exit, r_ifelse, r_switch, r_ternary, r_inline_bool,
               r_for_while, r_andor, r_ternary_flip],
-    'mixed': [r_const, r_andor, r_expect, r_single_exit, r_loop_bound, r_back, r_delegate, r_ifelse, r_inline_bool,
+    'mixed': [r_const, r_andor, r_single_exit, r_loop_bound, r_back, r_delegate, r_ifelse, r_inline_bool,
               r_member_local, r_types, r_ternary_flip],
 }
 WINS = os.path.join(config.BUILD, 'nm', 'wins.json')
@@ -768,7 +765,7 @@ def main():
     args = ap.parse_args()
     t = args.target
     if t[0].endswith('.cpp'):
-        source, pats = os.path.abspath(t[0]), t[1:]
+        source, pats = wd.find_source(t[0]), t[1:]
         before = file_scores(source)
         if before is None:
             sys.exit('compile failed')

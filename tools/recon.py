@@ -1,6 +1,7 @@
 """recon.py <mangled-sym> [--hdr path] [--this Class] [--vt _ZTV..] -- one-call function recon: Ghidra + annotated asm + resolved calls/vslots/members."""
 
 import argparse
+import json
 import os
 import re
 import struct
@@ -17,7 +18,7 @@ from lib.pvzelf import Elf
 import ghidra as ghidramod
 
 MD = Cs(CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN)
-GREY, CYAN, YEL, OFF = '\033[90m', '\033[36m', '\033[33m', '\033[0m'
+GREY, CYAN, YEL, OFF = config.colors(90, 36, 33, 0)
 
 _DEMANGLE = os.path.join(os.path.dirname(config.GXX), 'aarch64-linux-android-c++filt' +
                          ('.exe' if config.GXX.endswith('.exe') else ''))
@@ -25,7 +26,7 @@ _DEMANGLE = os.path.join(os.path.dirname(config.GXX), 'aarch64-linux-android-c++
 
 def demangle(sym):
     try:
-        r = subprocess.run([_DEMANGLE], input=sym, capture_output=True, text=True)
+        r = subprocess.run([_DEMANGLE], input=sym, capture_output=True, text=True, encoding='utf-8', errors='replace')
         return r.stdout.strip() or sym
     except OSError:
         return sym
@@ -222,7 +223,8 @@ def clone_body(elf, addr, names, got=None):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('symbol')
+    ap.add_argument('symbol', nargs='+', help='symbols, or a .cpp: every function of it that is not matched yet, smallest first')
+    ap.add_argument('--max', type=int, default=0, help='with a .cpp: only functions up to this many bytes')
     ap.add_argument('--hdr', help='header (under include/) for member naming')
     ap.add_argument('--this', help='class for member naming (default: inferred)')
     ap.add_argument('--vt', action='append', default=[],
@@ -238,7 +240,28 @@ def main():
     except Exception:
         got = {}
 
-    cls = args.this or owner_class(args.symbol)
+    symbols = []
+    for sym in args.symbol:
+        symbols += unmatched(sym, args.max) if sym.endswith('.cpp') else [sym]
+    if len(symbols) > 1:
+        args.asm_only = True
+    for sym in symbols:
+        show(sym, args, elf, names, got)
+        print()
+
+
+def unmatched(source, limit):
+    """Game symbols of a .cpp (units.json) that report.json does not have as matched, smallest first."""
+    rel = os.path.relpath(os.path.abspath(source), config.HERE).replace(os.sep, '/')
+    load = lambda name: json.load(open(os.path.join(config.HERE, name), encoding='utf-8'))
+    funcs = sorted(load('units.json')['units'].get(rel, {}).get('funcs', []), key=lambda f: f[1])
+    done = {f['name'] for u in load('report.json')['units'] if u['name'] == rel for f in u.get('functions', []) if f['matched']}
+    plain = demangle('\n'.join(f[0] for f in funcs)).split('\n')
+    return [f[0] for f, name in zip(funcs, plain) if name.split('(')[0] not in done and (not limit or f[1] <= limit)]
+
+
+def show(symbol, args, elf, names, got):
+    cls = args.this or owner_class(symbol)
     members, hdr = ({}, args.hdr)
     if cls:
         members, hdr = offset_map(cls, args.hdr)
@@ -253,13 +276,13 @@ def main():
     for t in vts:
         vrows[t] = vtable_rows(elf, t, names)
 
-    found = elf.function(args.symbol)
+    found = elf.function(symbol)
     if found is None:
-        print(f'{args.symbol}: not found'); return
+        print(f'{symbol}: not found'); return
     addr, size, code = found
 
-    print(f'=== {args.symbol}')
-    print(f'    {demangle(args.symbol)}')
+    print(f'=== {symbol}')
+    print(f'    {demangle(symbol)}')
     print(f'    {size} B @ {addr:#x}   class={cls}  hdr={hdr}  vt={",".join(vts) or "-"}')
 
     if not args.no_ghidra and not args.asm_only:

@@ -77,7 +77,7 @@ def offsets(cls):
             for i, n in enumerate(names):
                 f.write('Show<(int)offsetof(%s, %s)> p%d;\n' % (cls, n, i))
         r = subprocess.run([config.GXX, *config.CXXFLAGS, '-w', '-I', os.path.dirname(os.path.join(ROOT, rel)), '-fsyntax-only',
-                            '-MMD', '-MT', 'o', '-MF', dep, probe], capture_output=True, text=True)
+                            '-MMD', '-MT', 'o', '-MF', dep, probe], capture_output=True, text=True, encoding='utf-8', errors='replace')
         deps = [f for f in (fastcc._deps(dep) or []) if os.path.abspath(f) != os.path.abspath(probe)]
         for f in (probe, dep):
             if os.path.exists(f):

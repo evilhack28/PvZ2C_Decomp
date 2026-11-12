@@ -8,12 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "FishingModuleEditor.h"
-#include "PvZ/ScaledApp.h"
-#include "RedPacketRewardInfo.h"
 #include "PvZ/LawnApp.h"
 #include "PvZ/UIHelper.h"
 #include "PvZ/Board.h"
-#include "PvZ/LevelModuleManager.h"
 
 static WEAKIMAGE(IMAGE_UI_STORE_BUTTON_PURPLE, "IMAGE_UI_STORE_BUTTON_PURPLE")
 static WEAKIMAGE(IMAGE_UI_STORE_BUTTON_GREEN, "IMAGE_UI_STORE_BUTTON_GREEN")

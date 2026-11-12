@@ -21,6 +21,12 @@
 #include "Plant_Cobcannon.h"
 #include "ChildrenDayUI.h"
 #include "LogCollector.h"
+#include "DebugLog.h"
+#include "UIPrivacyDialog.h"
+#include "Achievement.h"
+#include "Leaderboard.h"
+#include "TodLib/FilterEffect.h"
+#include "logServer/LogServer.h"
 #include "PVZ2UIDialog.h"
 #include "ProbabilityDLG.h"
 #include "AdventureTeamEditorUI.h"
@@ -168,7 +174,7 @@ namespace Lua
 class CLuaEngine : public Sexy::LazySingleton<CLuaEngine>
 {
 public:
-	char m_pad[0xe51];
+	char m_pad[0xe49];
 	bool m_disabled;
 	bool IsDisabled() { return m_disabled; }
 	void ExecuteTableFunction(const char* i_table, const char* i_function);
@@ -314,6 +320,1085 @@ bool LawnApp::NeedDelayLoadRSB()
 			return false;
 	}
 	return true;
+}
+
+PlatformType LawnApp::GetPlatform()
+{
+	std::string name = Android::Util::GetPackageName();
+	PlatformType platform;
+	if (name == "com.popcap.pvz2cm")
+		platform = PLATFORM_CHINA_MOBILE;
+	else if (name == "com.popcap.pvz2cu" || name == "com.popcap.pvz2cugd" || name == "com.popcap.pvz2cuhb" || name == "com.popcap.pvz2cuhn" || name == "com.popcap.pvz2cucq")
+		platform = PLATFORM_CHINA_UNICOM;
+	else if (name == "com.popcap.pvz2cukd")
+		platform = PLATFORM_CHINA_UNICOM_WIDEBAND;
+	else if (name == "com.popcap.pvz2ct")
+		platform = PLATFORM_CHINA_TELECOM;
+	else if (name == "com.popcap.pvz2mm")
+		platform = PLATFORM_CHINA_MOBILE_MM;
+	else if (name == "com.popcap.pvz2qq")
+		platform = PLATFORM_QQ;
+	else if (name == "com.popcap.pvz291")
+		platform = PLATFORM_91;
+	else if (name == "com.popcap.pvz2bddk")
+		platform = PLATFORM_BAIDU_DUOKU;
+	else if (name == "com.popcap.pvz2bdyx")
+		platform = PLATFORM_BAIDU_YOUXI;
+	else if (name == "com.popcap.pvz2bdaqy")
+		platform = PLATFORM_BAIDU_IQIYI;
+	else if (name == "com.popcap.pvz2az")
+		platform = PLATFORM_ANZHI;
+	else if (name == "com.popcap.pvz2uc")
+		platform = PLATFORM_UC;
+	else if (name == "com.popcap.pvz2wdj")
+		platform = PLATFORM_WANDOULABS;
+	else if (name == "com.popcap.pvz2xm")
+		platform = PLATFORM_XIAOMI;
+	else if (name == "com.popcap.pvz2yyh")
+		platform = PLATFORM_YINGYONGHUI;
+	else if (name == "com.popcap.pvz2xl")
+		platform = PLATFORM_XINLANG;
+	else if (name == "com.popcap.pvz2sg")
+		platform = PLATFORM_SHOUGOU;
+	else if (name == "com.popcap.pvz2dl")
+		platform = PLATFORM_DANGLE;
+	else if (name == "com.popcap.pvz2jl")
+		platform = PLATFORM_JINLI;
+	else if (name == "com.popcap.pvz2mpt")
+		platform = PLATFORM_MAOPAOTANG;
+	else if (name == "com.popcap.pvz2360")
+		platform = PLATFORM_360;
+	else if (name == "com.popcap.pvz2mmy")
+		platform = PLATFORM_MUMAYI;
+	else if (name == "com.popcap.pvz2js")
+		platform = PLATFORM_JINSHAN;
+	else if (name == "com.popcap.pvz2mt")
+		platform = PLATFORM_MOTO;
+	else if (name == "com.popcap.pvz2zx")
+		platform = PLATFORM_ZHONGXING;
+	else if (name == "com.popcap.pvz2op")
+		platform = PLATFORM_OPPO;
+	else if (name == "com.popcap.pvz2lx")
+		platform = PLATFORM_LENOVO;
+	else if (name == "com.popcap.pvz2cw")
+		platform = PLATFORM_CHUANGWEI;
+	else if (name == "com.popcap.pvz2HWCM")
+		platform = PLATFORM_HUAWEI;
+	else if (name == "com.popcap.pvz27k")
+		platform = PLATFORM_7K;
+	else if (name == "com.popcap.pvz24399")
+		platform = PLATFORM_4399;
+	else if (name == "com.popcap.pvz2sn")
+		platform = PLATFORM_SUNING;
+	else if (name == "com.popcap.pvz2bk")
+		platform = PLATFORM_POPCAP;
+	else if (name == "com.popcap.pvz2lwy")
+		platform = PLATFORM_LEWANYOU;
+	else if (name == "com.popcap.pvz2kpct")
+		platform = PLATFORM_TELECOM_KUPAI;
+	else if (name == "com.popcap.pvz2lxct")
+		platform = PLATFORM_TELECOM_LENOVO;
+	else if (name == "com.popcap.pvz2hwct")
+		platform = PLATFORM_TELECOM_HUAWEI;
+	else if (name == "com.popcap.pvz2zxct")
+		platform = PLATFORM_TELECOM_ZHONGXING;
+	else if (name == "com.popcap.pvz2zxyxct")
+		platform = PLATFORM_TELECOM_ZHONGXINGYOUXI;
+	else if (name == "com.popcap.pvz2sh")
+		platform = PLATFORM_SHOUHU;
+	else if (name == "com.popcap.pvz2pps")
+		platform = PLATFORM_PPS;
+	else if (name == "com.popcap.pvz2aqypc")
+		platform = PLATFORM_AIQIYI;
+	else if (name == "com.popcap.pvz2yyss")
+		platform = PLATFORM_YOUYI;
+	else if (name == "com.popcap.pvz2nd")
+		platform = PLATFORM_NDUO;
+	else if (name == "com.popcap.pvz2ttdt")
+		platform = PLATFORM_TIANTIANDONGTING;
+	else if (name == "com.popcap.pvz2yk")
+		platform = PLATFORM_YOUKU;
+	else if (name == "com.popcap.pvz2tyd")
+		platform = PLATFORM_TIANYIDA;
+	else if (name == "com.popcap.pvz2bbg")
+		platform = PLATFORM_BUBUGAO;
+	else if (name == "com.popcap.pvz2hzmp")
+		platform = PLATFORM_HANGZHOUMOPIN;
+	else if (name == "com.popcap.pvz2xchdmp")
+		platform = PLATFORM_XUANCAIHUDONGMOPO;
+	else if (name == "com.tencent.tmgp.pvz2tx")
+		platform = PLATFORM_TENCENT;
+	else if (name == "com.popcap.pvz2ls")
+		platform = PLATFORM_LESHI;
+	else if (name == "com.popcap.pvz2amz")
+		platform = PLATFORM_MEIZU;
+	else if (name == "com.popcap.pvz2kpsj")
+		platform = PLATFORM_KUPAI;
+	else if (name == "com.popcap.pvz2cmhd")
+		platform = PLATFORM_CHINA_MOBILE_HD;
+	else if (name == "com.popcap.pvz2cuhd" || name == "com.popcap.pvz2cthdcugd" || name == "com.popcap.pvz2cthdcuhb" || name == "com.popcap.pvz2cthdcuhn" || name == "com.popcap.pvz2cthdcucq" || name == "com.popcap.pvz2cthdcuhlj" || name == "com.popcap.pvz2cthdsfqd" || name == "com.popcap.pvz2cthdshqd" || name == "com.popcap.pvz2cuhdsh")
+		platform = PLATFORM_CHINA_UNICOM_HD;
+	else if (name == "com.popcap.pvz2cthdyyt")
+		platform = PLATFORM_CHINA_UNICOM_YINGYETING_HD;
+	else if (name == "com.popcap.pvz2cukdhd")
+		platform = PLATFORM_CHINA_UNICOM_WIDEBAND_HD;
+	else if (name == "com.popcap.pvz2cthd")
+		platform = PLATFORM_CHINA_TELECOM_HD;
+	else if (name == "com.popcap.pvz2mmhd")
+		platform = PLATFORM_CHINA_MOBILE_MM_HD;
+	else if (name == "com.popcap.pvz2mmschd")
+		platform = PLATFORM_CHINA_MOBILE_MM_SICHUAN_HD;
+	else if (name == "com.popcap.pvz2qqhd")
+		platform = PLATFORM_QQ_HD;
+	else if (name == "com.popcap.pvz2cthd91")
+		platform = PLATFORM_91_HD;
+	else if (name == "com.popcap.pvz2cthdbddk")
+		platform = PLATFORM_BAIDU_DUOKU_HD;
+	else if (name == "com.popcap.pvz2cthdbdyx")
+		platform = PLATFORM_BAIDU_YOUXI_HD;
+	else if (name == "com.popcap.pvz2cthdbdaqy")
+		platform = PLATFORM_BAIDU_IQIYI_HD;
+	else if (name == "com.popcap.pvz2cthdaz")
+		platform = PLATFORM_ANZHI_HD;
+	else if (name == "com.popcap.pvz2cthduc")
+		platform = PLATFORM_UC_HD;
+	else if (name == "com.popcap.pvz2cthdwdj")
+		platform = PLATFORM_WANDOULABS_HD;
+	else if (name == "com.popcap.pvz2cthdxm")
+		platform = PLATFORM_XIAOMI_HD;
+	else if (name == "com.popcap.pvz2cthdyyh")
+		platform = PLATFORM_YINGYONGHUI_HD;
+	else if (name == "com.popcap.pvz2cthdxl")
+		platform = PLATFORM_XINLANG_HD;
+	else if (name == "com.popcap.pvz2cthdsg")
+		platform = PLATFORM_SHOUGOU_HD;
+	else if (name == "com.popcap.pvz2cthddl")
+		platform = PLATFORM_DANGLE_HD;
+	else if (name == "com.popcap.pvz2cthdjl")
+		platform = PLATFORM_JINLI_HD;
+	else if (name == "com.popcap.pvz2cthdmpt")
+		platform = PLATFORM_MAOPAOTANG_HD;
+	else if (name == "com.popcap.pvz2cthd360")
+		platform = PLATFORM_360_HD;
+	else if (name == "com.popcap.pvz2cthdmumayi")
+		platform = PLATFORM_MUMAYI_HD;
+	else if (name == "com.popcap.pvz2cthdjs")
+		platform = PLATFORM_JINSHAN_HD;
+	else if (name == "com.popcap.pvz2cthdmt")
+		platform = PLATFORM_MOTO_HD;
+	else if (name == "com.popcap.pvz2cthdzx")
+		platform = PLATFORM_ZHONGXING_HD;
+	else if (name == "com.popcap.pvz2cthdop")
+		platform = PLATFORM_OPPO_HD;
+	else if (name == "com.popcap.pvz2cthdlx")
+		platform = PLATFORM_LENOVO_HD;
+	else if (name == "com.popcap.pvz2cthdcw")
+		platform = PLATFORM_CHUANGWEI_HD;
+	else if (name == "com.popcap.pvz2cthdhwct")
+		platform = PLATFORM_HUAWEI_HD;
+	else if (name == "com.popcap.pvz2cthd7k")
+		platform = PLATFORM_7K_HD;
+	else if (name == "com.popcap.pvz2cthd4399")
+		platform = PLATFORM_4399_HD;
+	else if (name == "com.popcap.pvz2cthdsn")
+		platform = PLATFORM_SUNING_HD;
+	else if (name == "com.popcap.pvz2cthdbk")
+		platform = PLATFORM_POPCAP_HD;
+	else if (name == "com.popcap.pvz2cthdlwy")
+		platform = PLATFORM_LEWANYOU_HD;
+	else if (name == "com.popcap.pvz2cthdayyct")
+		platform = PLATFORM_TELECOM_ANHUIYITUO_HD;
+	else if (name == "com.popcap.pvz2cthdahytct")
+		platform = PLATFORM_TELECOM_KUPAI_HD;
+	else if (name == "com.popcap.pvz2cthdkpct")
+		platform = PLATFORM_TELECOM_LENOVO_HD;
+	else if (name == "com.popcap.pvz2cthdlxct")
+		platform = PLATFORM_TELECOM_HUAWEI_HD;
+	else if (name == "com.popcap.pvz2cthdhwct")
+		platform = PLATFORM_TELECOM_ZHONGXING_HD;
+	else if (name == "com.popcap.pvz2cthdzxct")
+		platform = PLATFORM_TELECOM_ZHONGXINGYOUXI_HD;
+	else if (name == "com.popcap.pvz2cthdzxyxct")
+		platform = PLATFORM_TELECOM_SUZHOURUIYI_HD;
+	else if (name == "com.popcap.pvz2cthdszryct")
+		platform = PLATFORM_TELECOM_GUANGDONGGUANGXIN_HD;
+	else if (name == "com.popcap.pvz2cthdgdgx")
+		platform = PLATFORM_TELECOM_SICHUANSIFANG_HD;
+	else if (name == "com.popcap.pvz2cthdscsf")
+		platform = PLATFORM_TELECOM_WUHANCHAOWAN_HD;
+	else if (name == "com.popcap.pvz2cthdwhcw")
+		platform = PLATFORM_TELECOM_GUANGZHOUDIANXIN_HD;
+	else if (name == "com.popcap.pvz2cthdgzdx")
+		platform = PLATFORM_TELECOM_WUDIANSHIYE_HD;
+	else if (name == "com.popcap.pvz2cthdwdsy")
+		platform = PLATFORM_TELECOM_SUZHOUKUYOU_HD;
+	else if (name == "com.popcap.pvz2cthdszkyct")
+		platform = PLATFORM_TELECOM_CHANNEL_HD_END;
+	else if (name == "com.popcap.pvz2cthdsh")
+		platform = PLATFORM_SHOUHU_HD;
+	else if (name == "com.popcap.pvz2cthdpps")
+		platform = PLATFORM_PPS_HD;
+	else if (name == "com.popcap.pvz2cthdaqypc")
+		platform = PLATFORM_AIQIYI_HD;
+	else if (name == "com.popcap.pvz2cthdyyss")
+		platform = PLATFORM_YOUYI_HD;
+	else if (name == "com.popcap.pvz2cthdnd")
+		platform = PLATFORM_NDUO_HD;
+	else if (name == "com.popcap.pvz2cthdttdt")
+		platform = PLATFORM_TIANTIANDONGTING_HD;
+	else if (name == "com.popcap.pvz2cthdyk")
+		platform = PLATFORM_YOUKU_HD;
+	else if (name == "com.popcap.pvz2cthdtyd")
+		platform = PLATFORM_TIANYIDA_HD;
+	else if (name == "com.popcap.pvz2cthdbbg")
+		platform = PLATFORM_BUBUGAO_HD;
+	else if (name == "com.popcap.pvz2cthdhzmp")
+		platform = PLATFORM_HANGZHOUMOPIN_HD;
+	else if (name == "com.popcap.pvz2cthdhlg")
+		platform = PLATFORM_HONGLONGGUO_HD;
+	else if (name == "com.popcap.pvz2cthdzm")
+		platform = PLATFORM_ZHANGMENG_HD;
+	else if (name == "com.popcap.pvz2cthdxchdmp")
+		platform = PLATFORM_XUANCAIHUDONGMOPO_HD;
+	else if (name == "com.popcap.pvz2cthdPVZ2Prototype")
+		platform = PLATFORM_PROTOTYPE_HD;
+	else if (name == "com.popcap.pvz2cthdls")
+		platform = PLATFORM_LESHI_HD;
+	else if (name == "com.popcap.pvz2cthdjj")
+		platform = PLATFORM_JJ_HD;
+	else if (name == "com.popcap.pvz2cthdppzs")
+		platform = PLATFORM_PPZHUSHOU_HD;
+	else if (name == "com.popcap.pvz2cthdsx")
+		platform = PLATFORM_SAMSUNG_HD;
+	else if (name == "com.tencent.tmgp.pvz2hdtxyyb")
+		platform = PLATFORM_TENCENT_HD;
+	else if (name == "com.popcap.pvz2cthdamz")
+		platform = PLATFORM_MEIZU_HD;
+	else if (name == "com.popcap.pvz2cthdkpsj")
+		platform = PLATFORM_KUPAI_HD;
+	else if (name == "com.popcap.pvz2cthdbr")
+		platform = PLATFORM_BAORUAN_HD;
+	else if (name == "com.popcap.pvz2cthdyq")
+		platform = PLATFORM_PENGYOUWAN_HD;
+	else if (name == "com.popcap.pvz2cthdnby")
+		platform = PLATFORM_NUBIYA_HD;
+	else if (name == "com.popcap.pvz2cthdqxz")
+		platform = PLATFORM_QIXIAZI_HD;
+	else if (name == "com.popcap.pvz2cthdltbl")
+		platform = PLATFORM_TIANTIAN_HD;
+	else if (name == "com.popcap.pvz2cthdczsj")
+		platform = PLATFORM_CHUIZI_HD;
+	else if (name == "com.popcap.pvz2cthdkubi")
+		platform = PLATFORM_KUBI_HD;
+	else if (name == "com.popcap.pvz2cthdshumazy")
+		platform = PLATFORM_SHUMA_HD;
+	else if (name == "com.popcap.pvz2cthdnkzs")
+		platform = PLATFORM_NIUKOU_HD;
+	else if (name == "com.popcap.pvz2cthdwanka")
+		platform = PLATFORM_WANKA_HD;
+	else if (name == "com.popcap.pvz2cthdwrsj")
+		platform = PLATFORM_VR_HD;
+	else if (name == "com.popcap.pvz2cthdppyx")
+		platform = PLATFORM_PAPA_HD;
+	else if (name == "com.popcap.pvz2cthddev")
+		platform = PLATFORM_DEV_HD;
+	else if (name == "com.popcap.pvz2cthdharmony")
+		platform = PLATFORM_THIRD_CHANNEL_HD_END;
+	else if (name == "com.popcap.pvz2cthdxyaz")
+		platform = PLATFORM_XYANDROID_HD;
+	else if (name == "com.popcap.pvz2cthdqn")
+		platform = PLATFORM_QINGNING_HD;
+	else if (name == "com.popcap.pvz2cthddianyou")
+		platform = PLATFORM_DIANYOU_HD;
+	else if (name == "com.popcap.pvz2cthdzhongxin")
+		platform = PLATFORM_NEW_ZHONGXING_HD;
+	else if (name == "com.popcap.pvz2cthdshqc")
+		platform = PLATFORM_SHQC_HD;
+	else if (name == "com.popcap.pvz2cthd2345")
+		platform = PLATFORM_2345_HD;
+	else if (name == "com.popcap.pvz2cthdxly")
+		platform = PLATFORM_JINLIYU_HD;
+	else if (name == "com.popcap.pvz2cthddwmc")
+		platform = PLATFORM_DUOWANMC_HD;
+	else if (name == "com.popcap.pvz2cthdywwl")
+		platform = PLATFORM_YUEWAN_HD;
+	else if (name == "com.popcap.pvz2cthdxiaoqi")
+		platform = PLATFORM_XIAOQI_HD;
+	else if (name == "com.popcap.pvz2cthdccyx" || name == "com.popcap.pvz2cthdylehihi")
+		platform = PLATFORM_CCYX_HD;
+	else if (name == "com.popcap.pvz2cthdccyx")
+		platform = PLATFORM_LEHIHI_HD;
+	else if (name == "com.popcap.pvz2cthdqishizs")
+		platform = PLATFORM_QISHIZHUSHOU_HD;
+	else if (name == "com.popcap.pvz2cthdxxrjy")
+		platform = PLATFORM_XIXIRJY_HD;
+	else if (name == "com.popcap.pvz2cthdshxb")
+		platform = PLATFORM_BAIXUN_HD;
+	else if (name == "com.popcap.pvz2cthdxiaoha")
+		platform = PLATFORM_XIAOHA_HD;
+	else if (name == "com.popcap.pvz2cthdjrtt")
+		platform = PLATFORM_DOUYIN_HD;
+	else if (name == "com.popcap.pvz2cthd233qd")
+		platform = PLATFORM_233QD_HD;
+	else if (name == "com.popcap.pvz2cthdhaoyoukb")
+		platform = PLATFORM_HAOYOUKB_HD;
+	else if (name == "com.popcap.pvz2cthd.g.baidu")
+		platform = PLATFORM_BAIDU_GAME_HD;
+	else if (name == "com.popcap.pvz2cthdtw")
+		platform = PLATFORM_TEST_TW_HD;
+	else if (name == "com.popcap.pvz2cthdbmsq")
+		platform = PLATFORM_CHINA_TELECOM_MSQ_HD;
+	else if (name == "com.popcap.pvz2cthdhbili")
+		platform = PLATFORM_HBILI;
+	else if (name == "com.popcap.pvz2cthdhourplay")
+		platform = PLATFORM_HOURPLAY;
+	else if (name == "com.popcap.pvz2cthd.bilibili")
+		platform = PLATFORM_BILIBILI_HD;
+	else if (name == "com.popcap.pvz2cthd07")
+		platform = PLATFORM_GONGHUI_HD;
+	else if (name == "com.popcap.pvz2cthd1test")
+		platform = PLATFORM_TEST1_HD;
+	else if (name == "com.popcap.pvz2cthd2test")
+		platform = PLATFORM_TEST2_HD;
+	else if (name == "com.popcap.pvz2cthd3test")
+		platform = PLATFORM_TEST3_HD;
+	else if (name == "com.popcap.pvz2cthd4test")
+		platform = PLATFORM_TEST4_HD;
+	else if (name == "com.popcap.pvz2cthdkuaishou")
+		platform = PLATFORM_KUAISHOU_HD;
+	else if (name == "com.popcap.pvz2cthd.kuaishou")
+		platform = PLATFORM_KUAISHOUSHOU_HD;
+	else if (name == "com.popcap.pvz2cthdhwctdp")
+		platform = PLATFORM_HUAWEI_TV_HD;
+	else if (name == "com.popcap.pvz2cthd.honor")
+		platform = PLATFORM_HONOR_HD;
+	else if (name == "com.popcap.pvz2cthd2345m")
+		platform = PLATFORM_NEW_2345_HD;
+	else if (name == "com.popcap.pvz2cthdmeituxx")
+		platform = PLATFORM_NEW_MEITU_HD;
+	else if (name == "com.popcap.pvz2cthd.bytedance.gamecenter")
+		platform = PLATFORM_BYTEDANCE_HD;
+	else if (name == "com.popcap.pvz2cthdpapa")
+		platform = PLATFORM_NEW_PAPA_HD;
+	else if (name == "com.popcap.pvz2cthdshark")
+		platform = PLATFORM_SHARK_HD;
+	else if (name == "com.popcap.pvz2cthdks")
+		platform = PLATFORM_KS_HD;
+	else if (name == "com.popcap.pvz2cthdbazhang")
+		platform = PLATFORM_BAZHANG_HD;
+	else if (name == "com.popcap.pvz2cthd.todaygame")
+		platform = PLATFORM_TODAYGAME_HD;
+	else if (name == "com.popcap.pvz2cthdccplay")
+		platform = PLATFORM_CCPLAY_HD;
+	else if (name == "com.popcap.pvz2cthdqszs")
+		platform = PLATFORM_QSZS_HD;
+	else if (name == "com.popcap.pvz2cthdmigu")
+		platform = PLATFORM_MIGU_HD;
+	else if (name == "com.popcap.pvz2cthd4migu")
+		platform = PLATFORM_MIGU4_HD;
+	else if (name == "com.popcap.pvz2cthdmgtv")
+		platform = PLATFORM_MANGGUO_HD;
+	else if (name == "com.popcap.pvz2cthdxy51")
+		platform = PLATFORM_XIAOY_HD;
+	else
+		platform = GetPlatformByNewPackageName();
+	return platform;
+}
+
+std::string LawnApp::GetAppNameForiCloud()
+{
+	switch (GetPlatform())
+	{
+	case PLATFORM_CHINA_MOBILE:
+		return "PLATFORM_CHINA_MOBILE";
+	case PLATFORM_CHINA_UNICOM:
+		return "PLATFORM_CHINA_UNICOM";
+	case PLATFORM_CHINA_UNICOM_WIDEBAND:
+		return "PLATFORM_CHINA_UNICOM_WIDEBAND";
+	case PLATFORM_CHINA_TELECOM:
+		return "PLATFORM_CHINA_TELECOM";
+	case PLATFORM_CHINA_MOBILE_MM:
+		return "PLATFORM_CHINA_MOBILE_MM";
+	case PLATFORM_CHINA_MOBILE_HD:
+		return "PLATFORM_CHINA_MOBILE";
+	case PLATFORM_CHINA_MOBILE_MM_SICHUAN_HD:
+		return "PLATFORM_CHINA_MOBILE_MM_SICHUAN";
+	case PLATFORM_CHINA_UNICOM_HD:
+		return "PLATFORM_CHINA_UNICOM";
+	case PLATFORM_CHINA_UNICOM_WIDEBAND_HD:
+		return "PLATFORM_CHINA_UNICOM_WIDEBAND";
+	case PLATFORM_CHINA_UNICOM_YINGYETING_HD:
+		return "PLATFORM_CHINA_UNICOM";
+	case PLATFORM_CHINA_MOBILE_MM_HD:
+		return "PLATFORM_CHINA_MOBILE_MM";
+	case PLATFORM_QQ:
+		return "PLATFORM_QQ";
+	case PLATFORM_QQ_HD:
+		return "PLATFORM_QQ";
+	case PLATFORM_91:
+		return "PLATFORM_91";
+	case PLATFORM_BAIDU_DUOKU:
+		return "PLATFORM_BAIDU_DUOKU";
+	case PLATFORM_BAIDU_YOUXI:
+		return "PLATFORM_BAIDU_YOUXI";
+	case PLATFORM_BAIDU_IQIYI:
+		return "PLATFORM_BAIDU_IQIYI";
+	case PLATFORM_ANZHI:
+		return "PLATFORM_ANZHI";
+	case PLATFORM_UC:
+		return "PLATFORM_UC";
+	case PLATFORM_WANDOULABS:
+		return "PLATFORM_WANDOULABS";
+	case PLATFORM_XIAOMI:
+		return "PLATFORM_XIAOMI";
+	case PLATFORM_YINGYONGHUI:
+		return "PLATFORM_YINGYONGHUI";
+	case PLATFORM_XINLANG:
+		return "PLATFORM_XINLANG";
+	case PLATFORM_SHOUGOU:
+		return "PLATFORM_SHOUGOU";
+	case PLATFORM_DANGLE:
+		return "PLATFORM_DANGLE";
+	case PLATFORM_JINLI:
+		return "PLATFORM_JINLI";
+	case PLATFORM_MAOPAOTANG:
+		return "PLATFORM_MAOPAOTANG";
+	case PLATFORM_360:
+		return "PLATFORM_360";
+	case PLATFORM_MUMAYI:
+		return "PLATFORM_MUMAYI";
+	case PLATFORM_JINSHAN:
+		return "PLATFORM_JINSHAN";
+	case PLATFORM_MOTO:
+		return "PLATFORM_MOTO";
+	case PLATFORM_LENOVO:
+		return "PLATFORM_LENOVO";
+	case PLATFORM_ZHONGXING:
+		return "PLATFORM_ZHONGXING";
+	case PLATFORM_CHUANGWEI:
+		return "PLATFORM_CHUANGWEI";
+	case PLATFORM_7K:
+		return "PLATFORM_7K";
+	case PLATFORM_OPPO:
+		return "PLATFORM_OPPO";
+	case PLATFORM_HUAWEI:
+		return "PLATFORM_TELECOM_HUAWEI";
+	case PLATFORM_4399:
+		return "PLATFORM_4399";
+	case PLATFORM_SUNING:
+		return "PLATFORM_SUNING";
+	case PLATFORM_POPCAP:
+		return "PLATFORM_POPCAP";
+	case PLATFORM_LEWANYOU:
+		return "PLATFORM_LEWANYOU";
+	case PLATFORM_SHOUHU:
+		return "PLATFORM_SHOUHU";
+	case PLATFORM_PPS:
+		return "PLATFORM_PPS";
+	case PLATFORM_AIQIYI:
+		return "PLATFORM_AIQIYI";
+	case PLATFORM_YOUYI:
+		return "PLATFORM_YOUYI";
+	case PLATFORM_YOUKU:
+		return "PLATFORM_YOUKU";
+	case PLATFORM_NDUO:
+		return "PLATFORM_NDUO";
+	case PLATFORM_TIANTIANDONGTING:
+		return "PLATFORM_TIANTIANDONGTING";
+	case PLATFORM_TIANYIDA:
+		return "PLATFORM_TIANYIDA";
+	case PLATFORM_BUBUGAO:
+		return "PLATFORM_BUBUGAO";
+	case PLATFORM_HANGZHOUMOPIN:
+		return "PLATFORM_HANGZHOUMOPIN";
+	case PLATFORM_XUANCAIHUDONGMOPO:
+		return "PLATFORM_XUANCAIHUDONGMOPO";
+	case PLATFORM_TENCENT:
+		return "PLATFORM_TENCENT";
+	case PLATFORM_LESHI:
+		return "PLATFORM_LESHI";
+	case PLATFORM_MEIZU:
+		return "PLATFORM_MEIZU";
+	case PLATFORM_KUPAI:
+		return "PLATFORM_KUPAI";
+	case PLATFORM_TELECOM_KUPAI:
+		return "PLATFORM_TELECOM_KUPAI";
+	case PLATFORM_TELECOM_LENOVO:
+		return "PLATFORM_TELECOM_LENOVO";
+	case PLATFORM_TELECOM_HUAWEI:
+		return "PLATFORM_TELECOM_HUAWEI";
+	case PLATFORM_TELECOM_ZHONGXING:
+		return "PLATFORM_TELECOM_ZHONGXING";
+	case PLATFORM_TELECOM_ZHONGXINGYOUXI:
+		return "PLATFORM_TELECOM_ZHONGXINGYOUXI";
+	case PLATFORM_91_HD:
+		return "PLATFORM_91";
+	case PLATFORM_BAIDU_DUOKU_HD:
+		return "PLATFORM_BAIDU_DUOKU";
+	case PLATFORM_BAIDU_YOUXI_HD:
+		return "PLATFORM_BAIDU_YOUXI";
+	case PLATFORM_BAIDU_IQIYI_HD:
+		return "PLATFORM_BAIDU_IQIYI";
+	case PLATFORM_ANZHI_HD:
+		return "PLATFORM_ANZHI";
+	case PLATFORM_UC_HD:
+		return "PLATFORM_UC";
+	case PLATFORM_WANDOULABS_HD:
+		return "PLATFORM_WANDOULABS";
+	case PLATFORM_XIAOMI_HD:
+		return "PLATFORM_XIAOMI";
+	case PLATFORM_YINGYONGHUI_HD:
+		return "PLATFORM_YINGYONGHUI";
+	case PLATFORM_XINLANG_HD:
+		return "PLATFORM_XINLANG";
+	case PLATFORM_SHOUGOU_HD:
+		return "PLATFORM_SHOUGOU";
+	case PLATFORM_DANGLE_HD:
+		return "PLATFORM_DANGLE";
+	case PLATFORM_JINLI_HD:
+		return "PLATFORM_JINLI_HD";
+	case PLATFORM_MAOPAOTANG_HD:
+		return "PLATFORM_MAOPAOTANG";
+	case PLATFORM_360_HD:
+		return "PLATFORM_360";
+	case PLATFORM_MUMAYI_HD:
+		return "PLATFORM_MUMAYI";
+	case PLATFORM_JINSHAN_HD:
+		return "PLATFORM_JINSHAN";
+	case PLATFORM_MOTO_HD:
+		return "PLATFORM_MOTO";
+	case PLATFORM_LENOVO_HD:
+		return "PLATFORM_LENOVO";
+	case PLATFORM_ZHONGXING_HD:
+		return "PLATFORM_ZHONGXING";
+	case PLATFORM_CHUANGWEI_HD:
+		return "PLATFORM_CHUANGWEI";
+	case PLATFORM_7K_HD:
+		return "PLATFORM_7K";
+	case PLATFORM_OPPO_HD:
+		return "PLATFORM_OPPO";
+	case PLATFORM_HUAWEI_HD:
+		return "PLATFORM_TELECOM_HUAWEI";
+	case PLATFORM_4399_HD:
+		return "PLATFORM_4399";
+	case PLATFORM_SUNING_HD:
+		return "PLATFORM_SUNING";
+	case PLATFORM_POPCAP_HD:
+		return "PLATFORM_POPCAP";
+	case PLATFORM_LEWANYOU_HD:
+		return "PLATFORM_LEWANYOU";
+	case PLATFORM_SHOUHU_HD:
+		return "PLATFORM_SHOUHU";
+	case PLATFORM_PPS_HD:
+		return "PLATFORM_PPS";
+	case PLATFORM_AIQIYI_HD:
+		return "PLATFORM_AIQIYI";
+	case PLATFORM_YOUYI_HD:
+		return "PLATFORM_YOUYI";
+	case PLATFORM_YOUKU_HD:
+		return "PLATFORM_YOUKU";
+	case PLATFORM_NDUO_HD:
+		return "PLATFORM_NDUO";
+	case PLATFORM_TIANTIANDONGTING_HD:
+		return "PLATFORM_TIANTIANDONGTING";
+	case PLATFORM_TIANYIDA_HD:
+		return "PLATFORM_TIANYIDA";
+	case PLATFORM_BUBUGAO_HD:
+		return "PLATFORM_BUBUGAO";
+	case PLATFORM_HANGZHOUMOPIN_HD:
+		return "PLATFORM_HANGZHOUMOPIN";
+	case PLATFORM_HONGLONGGUO_HD:
+		return "PLATFORM_HONGLONGGUO";
+	case PLATFORM_ZHANGMENG_HD:
+		return "PLATFORM_ZHANGMENG";
+	case PLATFORM_XUANCAIHUDONGMOPO_HD:
+		return "PLATFORM_XUANCAIHUDONGMOPO";
+	case PLATFORM_JJ_HD:
+		return "PLATFORM_JJ_HD";
+	case PLATFORM_LESHI_HD:
+		return "PLATFORM_LESHI_HD";
+	case PLATFORM_PPZHUSHOU_HD:
+		return "PLATFORM_PPZHUSHOU_HD";
+	case PLATFORM_MEIZU_HD:
+		return "PLATFORM_MEIZU_HD";
+	case PLATFORM_KUPAI_HD:
+		return "PLATFORM_KUPAI_HD";
+	case PLATFORM_TENCENT_HD:
+		return "PLATFORM_TENCENT_HD";
+	case PLATFORM_SAMSUNG_HD:
+		return "PLATFORM_SAMSUNG";
+	case PLATFORM_BAORUAN_HD:
+		return "PLATFORM_BAORUAN";
+	case PLATFORM_PENGYOUWAN_HD:
+		return "PLATFORM_PENGYOUWAN_HD";
+	case PLATFORM_NUBIYA_HD:
+		return "PLATFORM_NUBIYA";
+	case PLATFORM_QIXIAZI_HD:
+		return "PLATFORM_QIXIAZI";
+	case PLATFORM_TIANTIAN_HD:
+		return "PLATFORM_TIANTIAN";
+	case PLATFORM_CHUIZI_HD:
+		return "PLATFORM_CHUIZI";
+	case PLATFORM_KUBI_HD:
+		return "PLATFORM_KUBI";
+	case PLATFORM_SHUMA_HD:
+		return "PLATFORM_SHUMA";
+	case PLATFORM_NIUKOU_HD:
+		return "PLATFORM_NIUKOU";
+	case PLATFORM_WANKA_HD:
+		return "PLATFORM_WANKA";
+	case PLATFORM_VR_HD:
+		return "PLATFORM_VR";
+	case PLATFORM_PAPA_HD:
+		return "PLATFORM_PAPA";
+	case PLATFORM_DEV_HD:
+		return "PLATFORM_DEV";
+	case PLATFORM_XYANDROID_HD:
+		return "PLATFORM_XYANDROID";
+	case PLATFORM_QINGNING_HD:
+		return "PLATFORM_QINGNING";
+	case PLATFORM_DIANYOU_HD:
+		return "PLATFORM_DIANYOU";
+	case PLATFORM_NEW_ZHONGXING_HD:
+		return "PLATFORM_NEW_ZHONGXING";
+	case PLATFORM_SHQC_HD:
+		return "PLATFORM_SHQC";
+	case PLATFORM_2345_HD:
+		return "PLATFORM_2345";
+	case PLATFORM_JINLIYU_HD:
+		return "PLATFORM_JINLIYU";
+	case PLATFORM_DUOWANMC_HD:
+		return "PLATFORM_DUOWANMC";
+	case PLATFORM_YUEWAN_HD:
+		return "PLATFORM_YUEWAN_HD";
+	case PLATFORM_XIAOQI_HD:
+		return "PLATFORM_XIAOQI";
+	case PLATFORM_CCYX_HD:
+		return "PLATFORM_CCYX";
+	case PLATFORM_LEHIHI_HD:
+		return "PLATFORM_LEHIHI_HD";
+	case PLATFORM_QISHIZHUSHOU_HD:
+		return "PLATFORM_QISHIZHUSHOU_HD";
+	case PLATFORM_XIXIRJY_HD:
+		return "PLATFORM_XIXIRJY_HD";
+	case PLATFORM_BAIXUN_HD:
+		return "PLATFORM_BAIXUN_HD";
+	case PLATFORM_XIAOHA_HD:
+		return "PLATFORM_XIAOHA_HD";
+	case PLATFORM_DOUYIN_HD:
+		return "PLATFORM_DOUYIN_HD";
+	case PLATFORM_233QD_HD:
+		return "PLATFORM_233QD_HD";
+	case PLATFORM_HAOYOUKB_HD:
+		return "PLATFORM_HAOYOUKB_HD";
+	case PLATFORM_BAIDU_GAME_HD:
+		return "PLATFORM_BAIDU_GAME_HD";
+	case PLATFORM_KUAISHOU_HD:
+		return "PLATFORM_KUAISHOU_HD";
+	case PLATFORM_NEW_PAPA_HD:
+		return "PLATFORM_NEW_PAPA_HD";
+	case PLATFORM_NEW_2345_HD:
+		return "PLATFORM_NEW_2345_HD";
+	case PLATFORM_NEW_MEITU_HD:
+		return "PLATFORM_NEW_MEITU_HD";
+	case PLATFORM_BYTEDANCE_HD:
+		return "PLATFORM_BYTEDANCE_HD";
+	case PLATFORM_SHARK_HD:
+		return "PLATFORM_SHARK_HD";
+	case PLATFORM_KS_HD:
+		return "PLATFORM_KS_HD";
+	case PLATFORM_BAZHANG_HD:
+		return "PLATFORM_BAZHANG_HD";
+	case PLATFORM_TODAYGAME_HD:
+		return "PLATFORM_TODAYGAME_HD";
+	case PLATFORM_CCPLAY_HD:
+		return "PLATFORM_CCPLAY_HD";
+	case PLATFORM_QSZS_HD:
+		return "PLATFORM_QSZS_HD";
+	case PLATFORM_MIGU_HD:
+		return "PLATFORM_MIGU_HD";
+	case PLATFORM_MIGU4_HD:
+		return "PLATFORM_MIGU4_HD";
+	case PLATFORM_MANGGUO_HD:
+		return "PLATFORM_MANGGUO_HD";
+	case PLATFORM_XIAOY_HD:
+		return "PLATFORM_XIAOY_HD";
+	case PLATFORM_TEST_TW_HD:
+		return "PLATFORM_TEST_TW_HD";
+	case PLATFORM_CHINA_TELECOM_HD:
+		return "PLATFORM_CHINA_TELECOM";
+	case PLATFORM_CHINA_TELECOM_MSQ_HD:
+		return "PLATFORM_CHINA_TELECOM_MSQ_HD";
+	case PLATFORM_HBILI:
+		return "PLATFORM_HBILI";
+	case PLATFORM_HOURPLAY:
+		return "PLATFORM_HOURPLAY";
+	case PLATFORM_BILIBILI_HD:
+		return "PLATFORM_BILIBILI_HD";
+	case PLATFORM_GONGHUI_HD:
+		return "PLATFORM_GONGHUI_HD";
+	case PLATFORM_TEST1_HD:
+		return "PLATFORM_TEST1_HD";
+	case PLATFORM_TEST2_HD:
+		return "PLATFORM_TEST2_HD";
+	case PLATFORM_TEST3_HD:
+		return "PLATFORM_TEST3_HD";
+	case PLATFORM_TEST4_HD:
+		return "PLATFORM_TEST4_HD";
+	case PLATFORM_KUAISHOUSHOU_HD:
+		return "PLATFORM_KUAISHOUSHOU_HD";
+	case PLATFORM_HUAWEI_TV_HD:
+		return "PLATFORM_HUAWEI_TV_HD";
+	case PLATFORM_HONOR_HD:
+		return "PLATFORM_HONOR_HD";
+	case PLATFORM_THIRD_CHANNEL_HD_END:
+		return "PLATFORM_OHOS";
+	case PLATFORM_TELECOM_ANHUIYITUO_HD:
+		return "PLATFORM_TELECOM_AIYINYUE";
+	case PLATFORM_TELECOM_KUPAI_HD:
+		return "PLATFORM_TELECOM_ANHUIYITUO";
+	case PLATFORM_TELECOM_LENOVO_HD:
+		return "PLATFORM_TELECOM_KUPAI";
+	case PLATFORM_TELECOM_HUAWEI_HD:
+		return "PLATFORM_TELECOM_LENOVO";
+	case PLATFORM_TELECOM_ZHONGXING_HD:
+		return "PLATFORM_TELECOM_HUAWEI";
+	case PLATFORM_TELECOM_ZHONGXINGYOUXI_HD:
+		return "PLATFORM_TELECOM_ZHONGXING";
+	case PLATFORM_TELECOM_SUZHOURUIYI_HD:
+		return "PLATFORM_TELECOM_ZHONGXINGYOUXI";
+	case PLATFORM_TELECOM_GUANGDONGGUANGXIN_HD:
+		return "PLATFORM_TELECOM_SUZHOURUIYI";
+	case PLATFORM_TELECOM_SICHUANSIFANG_HD:
+		return "PLATFORM_TELECOM_GUANGDONGGUANGXIN";
+	case PLATFORM_TELECOM_WUHANCHAOWAN_HD:
+		return "PLATFORM_TELECOM_SICHUANSIFANG";
+	case PLATFORM_TELECOM_GUANGZHOUDIANXIN_HD:
+		return "PLATFORM_TELECOM_WUHANCHAOWAN";
+	case PLATFORM_TELECOM_WUDIANSHIYE_HD:
+		return "PLATFORM_TELECOM_GUANGZHOUDIANXIN";
+	case PLATFORM_TELECOM_SUZHOUKUYOU_HD:
+		return "PLATFORM_TELECOM_WUDIANSHIYE";
+	case PLATFORM_TELECOM_CHANNEL_HD_END:
+		return "PLATFORM_TELECOM_SUZHOUKUYOU";
+	default:
+		return "com.popcap.android.pvz2";
+	}
+}
+
+PlatformType LawnApp::GetPlatformByNewPackageName()
+{
+	std::string name = Android::Util::GetPackageName();
+	PlatformType platform;
+	if (name == "com.popcap.pvz2ncm")
+		platform = PLATFORM_CHINA_MOBILE;
+	else if (name == "com.popcap.pvz2ncu" || name == "com.popcap.pvz2ncugd" || name == "com.popcap.pvz2ncuhb" || name == "com.popcap.pvz2ncuhn" || name == "com.popcap.pvz2ncucq" || name == "com.popcap.pvz2ncuhlj")
+		platform = PLATFORM_CHINA_UNICOM;
+	else if (name == "com.popcap.pvz2ncukd")
+		platform = PLATFORM_CHINA_UNICOM_WIDEBAND;
+	else if (name == "com.popcap.pvz2nct")
+		platform = PLATFORM_CHINA_TELECOM;
+	else if (name == "com.popcap.pvz2nmm")
+		platform = PLATFORM_CHINA_MOBILE_MM;
+	else if (name == "com.popcap.pvz2nqq")
+		platform = PLATFORM_QQ;
+	else if (name == "com.popcap.pvz2n91")
+		platform = PLATFORM_91;
+	else if (name == "com.popcap.pvz2nbddk")
+		platform = PLATFORM_BAIDU_DUOKU;
+	else if (name == "com.popcap.pvz2nbdyx")
+		platform = PLATFORM_BAIDU_YOUXI;
+	else if (name == "com.popcap.pvz2nbdaqy")
+		platform = PLATFORM_BAIDU_IQIYI;
+	else if (name == "com.popcap.pvz2naz")
+		platform = PLATFORM_ANZHI;
+	else if (name == "com.popcap.pvz2nuc")
+		platform = PLATFORM_UC;
+	else if (name == "com.popcap.pvz2nwdj")
+		platform = PLATFORM_WANDOULABS;
+	else if (name == "com.popcap.pvz2nxm")
+		platform = PLATFORM_XIAOMI;
+	else if (name == "com.popcap.pvz2nyyh")
+		platform = PLATFORM_YINGYONGHUI;
+	else if (name == "com.popcap.pvz2nxl")
+		platform = PLATFORM_XINLANG;
+	else if (name == "com.popcap.pvz2nsg")
+		platform = PLATFORM_SHOUGOU;
+	else if (name == "com.popcap.pvz2ndl")
+		platform = PLATFORM_DANGLE;
+	else if (name == "com.popcap.pvz2njl")
+		platform = PLATFORM_JINLI;
+	else if (name == "com.popcap.pvz2nmpt")
+		platform = PLATFORM_MAOPAOTANG;
+	else if (name == "com.popcap.pvz2n360")
+		platform = PLATFORM_360;
+	else if (name == "com.popcap.pvz2nmmy")
+		platform = PLATFORM_MUMAYI;
+	else if (name == "com.popcap.pvz2njs")
+		platform = PLATFORM_JINSHAN;
+	else if (name == "com.popcap.pvz2nmt")
+		platform = PLATFORM_MOTO;
+	else if (name == "com.popcap.pvz2nzx")
+		platform = PLATFORM_ZHONGXING;
+	else if (name == "com.popcap.pvz2nop")
+		platform = PLATFORM_OPPO;
+	else if (name == "com.popcap.pvz2nlx")
+		platform = PLATFORM_LENOVO;
+	else if (name == "com.popcap.pvz2ncw")
+		platform = PLATFORM_CHUANGWEI;
+	else if (name == "com.popcap.pvz2nHWCM")
+		platform = PLATFORM_HUAWEI;
+	else if (name == "com.popcap.pvz2n7k")
+		platform = PLATFORM_7K;
+	else if (name == "com.popcap.pvz2n4399")
+		platform = PLATFORM_4399;
+	else if (name == "com.popcap.pvz2nsn")
+		platform = PLATFORM_SUNING;
+	else if (name == "com.popcap.pvz2nbk")
+		platform = PLATFORM_POPCAP;
+	else if (name == "com.popcap.pvz2nlwy")
+		platform = PLATFORM_LEWANYOU;
+	else if (name == "com.popcap.pvz2nkpct")
+		platform = PLATFORM_TELECOM_KUPAI;
+	else if (name == "com.popcap.pvz2nlxct")
+		platform = PLATFORM_TELECOM_LENOVO;
+	else if (name == "com.popcap.pvz2nhwct")
+		platform = PLATFORM_TELECOM_HUAWEI;
+	else if (name == "com.popcap.pvz2nzxct")
+		platform = PLATFORM_TELECOM_ZHONGXING;
+	else if (name == "com.popcap.pvz2nzxyxct")
+		platform = PLATFORM_TELECOM_ZHONGXINGYOUXI;
+	else if (name == "com.popcap.pvz2nsh")
+		platform = PLATFORM_SHOUHU;
+	else if (name == "com.popcap.pvz2npps")
+		platform = PLATFORM_PPS;
+	else if (name == "com.popcap.pvz2naqypc")
+		platform = PLATFORM_AIQIYI;
+	else if (name == "com.popcap.pvz2nyyss")
+		platform = PLATFORM_YOUYI;
+	else if (name == "com.popcap.pvz2nnd")
+		platform = PLATFORM_NDUO;
+	else if (name == "com.popcap.pvz2nttdt")
+		platform = PLATFORM_TIANTIANDONGTING;
+	else if (name == "com.popcap.pvz2nyk")
+		platform = PLATFORM_YOUKU;
+	else if (name == "com.popcap.pvz2ntyd")
+		platform = PLATFORM_TIANYIDA;
+	else if (name == "com.popcap.pvz2nbbg")
+		platform = PLATFORM_BUBUGAO;
+	else if (name == "com.popcap.pvz2nhzmp")
+		platform = PLATFORM_HANGZHOUMOPIN;
+	else if (name == "com.popcap.pvz2nxchdmp")
+		platform = PLATFORM_XUANCAIHUDONGMOPO;
+	else if (name == "com.popcap.pvz2cmhd" || name == "com.popcap.pvz2ncmhd")
+		platform = PLATFORM_CHINA_MOBILE_HD;
+	else if (name == "com.popcap.pvz2ncuhd" || name == "com.popcap.pvz2cthdncugd" || name == "com.popcap.pvz2cthdncuhb" || name == "com.popcap.pvz2cthdncuhn" || name == "com.popcap.pvz2cthdncucq" || name == "com.popcap.pvz2cthdsfqd" || name == "com.popcap.pvz2cthdshqd" || name == "com.popcap.pvz2ncuhdsh")
+		platform = PLATFORM_CHINA_UNICOM_HD;
+	else if (name == "com.popcap.pvz2cthdnyyt")
+		platform = PLATFORM_CHINA_UNICOM_YINGYETING_HD;
+	else if (name == "com.popcap.pvz2ncukdhd")
+		platform = PLATFORM_CHINA_UNICOM_WIDEBAND_HD;
+	else if (name == "com.popcap.pvz2cthdn")
+		platform = PLATFORM_CHINA_TELECOM_HD;
+	else if (name == "com.popcap.pvz2nmmhd")
+		platform = PLATFORM_CHINA_MOBILE_MM_HD;
+	else if (name == "com.popcap.pvz2nmmschd")
+		platform = PLATFORM_CHINA_MOBILE_MM_SICHUAN_HD;
+	else if (name == "com.popcap.pvz2nqqhd")
+		platform = PLATFORM_QQ_HD;
+	else if (name == "com.popcap.pvz2cthdn91")
+		platform = PLATFORM_91_HD;
+	else if (name == "com.popcap.pvz2cthdnbddk")
+		platform = PLATFORM_BAIDU_DUOKU_HD;
+	else if (name == "com.popcap.pvz2cthdnbdyx")
+		platform = PLATFORM_BAIDU_YOUXI_HD;
+	else if (name == "com.popcap.pvz2cthdnbdaqy")
+		platform = PLATFORM_BAIDU_IQIYI_HD;
+	else if (name == "com.popcap.pvz2cthdnaz")
+		platform = PLATFORM_ANZHI_HD;
+	else if (name == "com.popcap.pvz2cthdnuc")
+		platform = PLATFORM_UC_HD;
+	else if (name == "com.popcap.pvz2cthdnwdj")
+		platform = PLATFORM_WANDOULABS_HD;
+	else if (name == "com.popcap.pvz2cthdnxm")
+		platform = PLATFORM_XIAOMI_HD;
+	else if (name == "com.popcap.pvz2cthdnyyh")
+		platform = PLATFORM_YINGYONGHUI_HD;
+	else if (name == "com.popcap.pvz2cthdnxl")
+		platform = PLATFORM_XINLANG_HD;
+	else if (name == "com.popcap.pvz2cthdnsg")
+		platform = PLATFORM_SHOUGOU_HD;
+	else if (name == "com.popcap.pvz2cthdndl")
+		platform = PLATFORM_DANGLE_HD;
+	else if (name == "com.popcap.pvz2cthdnjl")
+		platform = PLATFORM_JINLI_HD;
+	else if (name == "com.popcap.pvz2cthdnmpt")
+		platform = PLATFORM_MAOPAOTANG_HD;
+	else if (name == "com.popcap.pvz2cthdn360")
+		platform = PLATFORM_360_HD;
+	else if (name == "com.popcap.pvz2cthdnmumayi")
+		platform = PLATFORM_MUMAYI_HD;
+	else if (name == "com.popcap.pvz2cthdnjs")
+		platform = PLATFORM_JINSHAN_HD;
+	else if (name == "com.popcap.pvz2cthdnmt")
+		platform = PLATFORM_MOTO_HD;
+	else if (name == "com.popcap.pvz2cthdnzx")
+		platform = PLATFORM_ZHONGXING_HD;
+	else if (name == "com.popcap.pvz2cthdnop")
+		platform = PLATFORM_OPPO_HD;
+	else if (name == "com.popcap.pvz2cthdnlx")
+		platform = PLATFORM_LENOVO_HD;
+	else if (name == "com.popcap.pvz2cthdncw")
+		platform = PLATFORM_CHUANGWEI_HD;
+	else if (name == "com.popcap.pvz2cthdnhwct")
+		platform = PLATFORM_HUAWEI_HD;
+	else if (name == "com.popcap.pvz2cthdn7k")
+		platform = PLATFORM_7K_HD;
+	else if (name == "com.popcap.pvz2cthdn4399")
+		platform = PLATFORM_4399_HD;
+	else if (name == "com.popcap.pvz2cthdnsn")
+		platform = PLATFORM_SUNING_HD;
+	else if (name == "com.popcap.pvz2cthdnbk")
+		platform = PLATFORM_POPCAP_HD;
+	else if (name == "com.popcap.pvz2cthdnlwy")
+		platform = PLATFORM_LEWANYOU_HD;
+	else if (name == "com.popcap.pvz2cthdnayyct")
+		platform = PLATFORM_TELECOM_ANHUIYITUO_HD;
+	else if (name == "com.popcap.pvz2cthdnahytct")
+		platform = PLATFORM_TELECOM_KUPAI_HD;
+	else if (name == "com.popcap.pvz2cthdnkpct")
+		platform = PLATFORM_TELECOM_LENOVO_HD;
+	else if (name == "com.popcap.pvz2cthdnlxct")
+		platform = PLATFORM_TELECOM_HUAWEI_HD;
+	else if (name == "com.popcap.pvz2cthdnhwct")
+		platform = PLATFORM_TELECOM_ZHONGXING_HD;
+	else if (name == "com.popcap.pvz2cthdnzxct")
+		platform = PLATFORM_TELECOM_ZHONGXINGYOUXI_HD;
+	else if (name == "com.popcap.pvz2cthdnzxyxct")
+		platform = PLATFORM_TELECOM_SUZHOURUIYI_HD;
+	else if (name == "com.popcap.pvz2cthdnszryct")
+		platform = PLATFORM_TELECOM_GUANGDONGGUANGXIN_HD;
+	else if (name == "com.popcap.pvz2cthdngdgx")
+		platform = PLATFORM_TELECOM_SICHUANSIFANG_HD;
+	else if (name == "com.popcap.pvz2cthdnscsf")
+		platform = PLATFORM_TELECOM_WUHANCHAOWAN_HD;
+	else if (name == "com.popcap.pvz2cthdnwhcw")
+		platform = PLATFORM_TELECOM_GUANGZHOUDIANXIN_HD;
+	else if (name == "com.popcap.pvz2cthdngzdx")
+		platform = PLATFORM_TELECOM_WUDIANSHIYE_HD;
+	else if (name == "com.popcap.pvz2cthdnwdsy")
+		platform = PLATFORM_TELECOM_SUZHOUKUYOU_HD;
+	else if (name == "com.popcap.pvz2cthdnszkyct")
+		platform = PLATFORM_TELECOM_CHANNEL_HD_END;
+	else if (name == "com.popcap.pvz2cthdnsh")
+		platform = PLATFORM_SHOUHU_HD;
+	else if (name == "com.popcap.pvz2ncthdpps")
+		platform = PLATFORM_PPS_HD;
+	else if (name == "com.popcap.pvz2ncthdaqypc")
+		platform = PLATFORM_AIQIYI_HD;
+	else if (name == "com.popcap.pvz2ncthdyyss")
+		platform = PLATFORM_YOUYI_HD;
+	else if (name == "com.popcap.pvz2ncthdnd")
+		platform = PLATFORM_NDUO_HD;
+	else if (name == "com.popcap.pvz2ncthdttdt")
+		platform = PLATFORM_TIANTIANDONGTING_HD;
+	else if (name == "com.popcap.pvz2ncthdyk")
+		platform = PLATFORM_YOUKU_HD;
+	else if (name == "com.popcap.pvz2cthdntyd")
+		platform = PLATFORM_TIANYIDA_HD;
+	else if (name == "com.popcap.pvz2ncthdbbg")
+		platform = PLATFORM_BUBUGAO_HD;
+	else if (name == "com.popcap.pvz2cthdnhzmp")
+		platform = PLATFORM_HANGZHOUMOPIN_HD;
+	else if (name == "com.popcap.pvz2cthdnxchdmp")
+		platform = PLATFORM_XUANCAIHUDONGMOPO_HD;
+	else if (name == "com.popcap.pvz2cthdshqc")
+		platform = PLATFORM_SHQC_HD;
+	else if (name == "com.popcap.pvz2cthd2345")
+		platform = PLATFORM_2345_HD;
+	else if (name == "com.popcap.pvz2cthdxly")
+		platform = PLATFORM_JINLIYU_HD;
+	else if (name == "com.popcap.pvz2cthddwmc")
+		platform = PLATFORM_DUOWANMC_HD;
+	else if (name == "com.popcap.pvz2cthdywwl")
+		platform = PLATFORM_YUEWAN_HD;
+	else if (name == "com.popcap.pvz2cthdxiaoqi")
+		platform = PLATFORM_XIAOQI_HD;
+	else if (name == "com.popcap.pvz2cthdccyx")
+		platform = PLATFORM_LEHIHI_HD;
+	else if (name == "com.popcap.pvz2cthdqishizs")
+		platform = PLATFORM_QISHIZHUSHOU_HD;
+	else if (name == "com.popcap.pvz2cthdxxrjy")
+		platform = PLATFORM_XIXIRJY_HD;
+	else if (name == "com.popcap.pvz2cthdshxb")
+		platform = PLATFORM_BAIXUN_HD;
+	else if (name == "com.popcap.pvz2cthdxiaoha")
+		platform = PLATFORM_XIAOHA_HD;
+	else if (name == "com.popcap.pvz2cthdjrtt")
+		platform = PLATFORM_DOUYIN_HD;
+	else if (name == "com.popcap.pvz2cthd233qd")
+		platform = PLATFORM_233QD_HD;
+	else if (name == "com.popcap.pvz2cthdhaoyoukb")
+		platform = PLATFORM_HAOYOUKB_HD;
+	else if (name == "com.popcap.pvz2cthd.g.baidu")
+		platform = PLATFORM_BAIDU_GAME_HD;
+	else if (name == "com.popcap.pvz2cthdtw")
+		platform = PLATFORM_TEST_TW_HD;
+	else if (name == "com.popcap.pvz2cthdbmsq")
+		platform = PLATFORM_CHINA_TELECOM_MSQ_HD;
+	else if (name == "com.popcap.pvz2cthdhbili")
+		platform = PLATFORM_HBILI;
+	else if (name == "com.popcap.pvz2cthdhourplay")
+		platform = PLATFORM_HOURPLAY;
+	else if (name == "com.popcap.pvz2cthd.bilibili")
+		platform = PLATFORM_BILIBILI_HD;
+	else if (name == "com.popcap.pvz2cthd1test")
+		platform = PLATFORM_TEST1_HD;
+	else if (name == "com.popcap.pvz2cthd2test")
+		platform = PLATFORM_TEST2_HD;
+	else if (name == "com.popcap.pvz2cthd3test")
+		platform = PLATFORM_TEST3_HD;
+	else if (name == "com.popcap.pvz2cthd4test")
+		platform = PLATFORM_TEST4_HD;
+	else if (name == "com.popcap.pvz2cthdkuaishou")
+		platform = PLATFORM_KUAISHOU_HD;
+	else if (name == "com.popcap.pvz2cthd.kuaishou")
+		platform = PLATFORM_KUAISHOUSHOU_HD;
+	else if (name == "com.popcap.pvz2cthdhwctdp")
+		platform = PLATFORM_HUAWEI_TV_HD;
+	else if (name == "com.popcap.pvz2cthd.honor")
+		platform = PLATFORM_HONOR_HD;
+	else if (name == "com.popcap.pvz2cthd2345m")
+		platform = PLATFORM_NEW_2345_HD;
+	else if (name == "com.popcap.pvz2cthdmeituxx")
+		platform = PLATFORM_NEW_MEITU_HD;
+	else if (name == "com.popcap.pvz2cthd.bytedance.gamecenter")
+		platform = PLATFORM_BYTEDANCE_HD;
+	else if (name == "com.popcap.pvz2cthdpapa")
+		platform = PLATFORM_NEW_PAPA_HD;
+	else if (name == "com.popcap.pvz2cthdshark")
+		platform = PLATFORM_SHARK_HD;
+	else if (name == "com.popcap.pvz2cthdks")
+		platform = PLATFORM_KS_HD;
+	else if (name == "com.popcap.pvz2cthdbazhang")
+		platform = PLATFORM_BAZHANG_HD;
+	else if (name == "com.popcap.pvz2cthd.todaygame")
+		platform = PLATFORM_TODAYGAME_HD;
+	else if (name == "com.popcap.pvz2cthdccplay")
+		platform = PLATFORM_CCPLAY_HD;
+	else if (name == "com.popcap.pvz2cthdqszs")
+		platform = PLATFORM_QSZS_HD;
+	else if (name == "com.popcap.pvz2cthdmigu")
+		platform = PLATFORM_MIGU_HD;
+	else if (name == "com.popcap.pvz2cthd4migu")
+		platform = PLATFORM_MIGU4_HD;
+	else if (name == "com.popcap.pvz2cthdmgtv")
+		platform = PLATFORM_MANGGUO_HD;
+	else if (name == "com.popcap.pvz2cthdxy51")
+		platform = PLATFORM_XIAOY_HD;
+	else
+		platform = PLATFORM_NULL;
+	return platform;
 }
 
 bool LawnApp::NeedDecompressRsbsExtra()
@@ -786,7 +1871,7 @@ void LawnApp::OnFinishedInitDangerRoom(bool i_success)
 	else
 	{
 		PVZ2UIDialog* dialog = ShowPVZ2Dialog(L"[NOT_IN_ACTIVITY_TITLE]", L"[NOT_IN_ACTIVITY_TEXT]");
-		dialog->AddButton(L"[BUTTON_OK]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::KillPVZ2Dialog)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+		dialog->AddButton(L"[BUTTON_OK]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::KillPVZ2Dialog)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_SECONDARY);
 	}
 }
 
@@ -867,29 +1952,24 @@ void LawnApp::onSyncProfileSummaryFinish(bool i_success)
 
 void LawnApp::onProfileSummarySelectResult(int i_result)
 {
-	if (gLawnApp->canDealProfile())
+	if (!gLawnApp->canDealProfile())
+		return;
+	setProfileOpened(false);
+	switch (i_result)
 	{
-		setProfileOpened(false);
-		if (i_result == 0)
-		{
-			Sexy::LazySingleton<ProfileMgr>::GetInstance().Save(true, true);
-			setSyncProfileSuccess(true);
-			m_selfSync = true;
-			closeDiffProfileSummary();
-		}
+	case 0:
+		Sexy::LazySingleton<ProfileMgr>::GetInstance().Save(true, true);
+		setSyncProfileSuccess(true);
+		break;
+	case 1:
+		if (!Sexy::LazySingleton<ProfileMgr>::GetInstance().SyncProfileFromServer())
+			gLawnApp->CheckNetWork(L"[NETWORK_NOT_CONNECTED_TITLE]", L"[NETWORK_NOT_CONNECTED_TEXT_FOR_SYNC_PLAYERINFO]");
 		else
-		{
-			if (i_result == 1)
-			{
-				if (!Sexy::LazySingleton<ProfileMgr>::GetInstance().SyncProfileFromServer())
-					gLawnApp->CheckNetWork(L"[NETWORK_NOT_CONNECTED_TITLE]", L"[NETWORK_NOT_CONNECTED_TEXT_FOR_SYNC_PLAYERINFO]");
-				else
-					setSyncProfileSuccess(true);
-			}
-			m_selfSync = true;
-			closeDiffProfileSummary();
-		}
+			setSyncProfileSuccess(true);
+		break;
 	}
+	m_selfSync = true;
+	closeDiffProfileSummary();
 }
 
 void LawnApp::ShowWorldMap()
@@ -3008,16 +4088,20 @@ void LawnApp::KillPlantLevelUpListView()
 	mWidgetManager->RemoveWidget(m_plantLevelUpListView);
 	SafeDeleteWidget(m_plantLevelUpListView);
 	m_plantLevelUpListView = NULL;
-	AudioMgr::GetInstancePtr()->SendEvent("AutoTestPlantLevelUp");
+	if (CheatManager::GetInstancePtr() && CheatManager::GetInstancePtr()->GetToggleValue("AutoTestPlantLevelUp"))
+		CheatManager::GetInstancePtr()->SetToggleValue("AutoTestPlantLevelUp", false);
 }
 
 void LawnApp::KillWorldMap()
 {
-	AudioMgr::GetInstancePtr()->SendEvent("UIWorldMapLuaVirtualBtns");
+	UIWidget* virtualBtns = UIWidget::GetWidgetBySheetName("UIWorldMapLuaVirtualBtns");
+	if (virtualBtns)
+		virtualBtns->SetVisible(false);
+	m_worldMap->PurgeWorldMapActions();
 	mWidgetManager->RemoveWidget(m_worldMap);
 	SafeDeleteWidget(m_worldMap);
 	m_worldMap = NULL;
-	AudioMgr::GetInstancePtr()->SendEvent("WorldMap Shown");
+	BehaviorLog::funnelEnd("WorldMap Shown", false);
 }
 
 void LawnApp::KillBoard()
@@ -3678,10 +4762,10 @@ void LawnApp::RefreshGeilivableLottery()
 	if (m_geilivableLottery)
 	{
 		ActiveItem item = ActivityManager::GetInstancePtr()->GetActiveItem(Activity_Consumption_Reward);
-		if (__builtin_expect(!!(item.IsValid()), 0))
+		if (item.IsValid())
 		{
 			GeilivableLotteryConfig config;
-			if (gLawnApp->IsChannelWithBigDeal() && item.GetDataSerialized(config) && item.m_bOpen > ((int)config.Bonus.size() < 1))
+			if (gLawnApp->IsChannelWithBigDeal() && item.GetDataSerialized(config) && item.m_bOpen && (int)config.Bonus.size() > 0)
 			{
 				m_geilivableLottery->SetDeliveryInfo(config.PlayerAddress.Tel, config.PlayerAddress.Email);
 				m_geilivableLottery->SetPrizeWinOrNot(config.DollWon > 0);
@@ -3703,10 +4787,10 @@ void LawnApp::RefreshStoneLottery()
 	if (m_pStoneLottery)
 	{
 		ActiveItem item = ActivityManager::GetInstancePtr()->GetActiveItem(Activity_NationdayWheelLuck2018);
-		if (__builtin_expect(!!(item.IsValid()), 0))
+		if (item.IsValid())
 		{
 			StoneLotteryConfig config;
-			if (gLawnApp->IsChannelWithBigDeal() && item.GetDataSerialized(config) && item.m_bOpen > ((int)config.Bonus.size() < 1))
+			if (gLawnApp->IsChannelWithBigDeal() && item.GetDataSerialized(config) && item.m_bOpen && (int)config.Bonus.size() > 0)
 			{
 				m_pStoneLottery->SetInitInfo(config.Period, config.OncePay, config.TotalChance, config.LeftChance, config.IsFirstToLottery);
 				m_pStoneLottery->SetBonusList(config.Bonus);
@@ -3799,9 +4883,9 @@ void LawnApp::KillCBTutorialUI()
 		mWidgetManager->RemoveWidget(m_cbTutorialUI);
 		SafeDeleteWidget(m_cbTutorialUI);
 		m_cbTutorialUI = NULL;
-		if (m_board)
-			m_board->StartLevel();
 	}
+	if (m_board)
+		m_board->StartLevel();
 }
 
 void LawnApp::KillPlantAdventureUI()
@@ -4293,11 +5377,12 @@ HintUI* LawnApp::CreateHintUI()
 
 bool LawnApp::TestCanPopWorldmapActive()
 {
-	if (!TestCanShowWorldmapButton())
-		return false;
-	if (IsStoreUIShowing())
-		return false;
-	return !IsSalesUIValid();
+	bool result = TestCanShowWorldmapButton();
+	if (result && IsStoreUIShowing())
+		result = false;
+	else if (result)
+		result = !IsSalesUIValid();
+	return result;
 }
 
 void LawnApp::PlayMusicCallback(const char* i_event, IInteractiveAudioCallbackListener* i_listener)
@@ -4431,9 +5516,9 @@ void LawnApp::InitServerTimeOffset(long i_serverTime)
 void LawnApp::ButtonDepress(int i_id)
 {
 	int id = i_id % 10000;
-	if (__builtin_expect((unsigned)(id - 2000) < 1000, 1))
+	if (id >= 2000 && id < 3000)
 		KillDialog(i_id - 2000);
-	else if ((unsigned)(id - 3000) < 1000)
+	else if (id >= 3000 && id < 4000)
 		KillDialog(i_id - 3000);
 }
 
@@ -5011,10 +6096,10 @@ float LawnApp::GetGroupLoadProgress(const std::vector<std::string>& i_groupNames
 			uint32 groupId = mResStreamsManager->LookupGroup(i_groupNames[i]);
 			if (groupId != 0xffffffff)
 			{
-				int bytes = mResStreamsManager->GetBytesLoadedForGroup(groupId);
-				loaded = loaded + bytes;
-				bytes = mResStreamsManager->GetTotalBytesForGroup(groupId);
-				total = total + bytes;
+				int loadedBytes = mResStreamsManager->GetBytesLoadedForGroup(groupId);
+				int totalBytes = mResStreamsManager->GetTotalBytesForGroup(groupId);
+				loaded += loadedBytes;
+				total += totalBytes;
 			}
 			mResourceManager->mCurArtRes = savedRes;
 		}
@@ -5078,9 +6163,11 @@ bool LawnApp::IsGroupLoadComplete(const std::string& i_groupName)
 			}
 			else
 			{
-				dlcLoaded = mResStreamsManager->IsGroupLoaded(dlcName);
-				if (dlcLoaded)
+				if (mResStreamsManager->IsGroupLoaded(dlcName))
+				{
+					dlcLoaded = true;
 					progress = GetGroupLoadProgress(dlcName);
+				}
 			}
 		}
 	}
@@ -5983,16 +7070,14 @@ bool LawnApp::ShowDailySignReward(bool i_action)
 
 void LawnApp::ShowEndLevelUI()
 {
-	if (m_endLevelUI)
+	if (!m_endLevelUI)
 	{
-		mWidgetManager->SetFocus(m_endLevelUI);
-		return;
+		m_endLevelUI = new EndLevelUI();
+		m_endLevelUI->Resize(0, 0, mWidth, mHeight);
+		mWidgetManager->AddWidget(m_endLevelUI);
+		mWidgetManager->BringToFront(m_endLevelUI);
+		PushOverlaysToTop();
 	}
-	m_endLevelUI = new EndLevelUI();
-	m_endLevelUI->Resize(0, 0, mWidth, mHeight);
-	mWidgetManager->AddWidget(m_endLevelUI);
-	mWidgetManager->BringToFront(m_endLevelUI);
-	PushOverlaysToTop();
 	mWidgetManager->SetFocus(m_endLevelUI);
 }
 
@@ -6329,8 +7414,11 @@ bool LawnApp::IsNationalDay(bool i_canUseLocalTime)
 		now = Sexy::SexyTime() / 1000;
 	}
 	struct tm* date = gLawnApp->BeijingTime(&now);
-	if (date->tm_year == 113 && date->tm_mon == 9 && date->tm_mday >= 1 && date->tm_mday <= 7)
-		return true;
+	if (date->tm_year == 113)
+	{
+		if (date->tm_mon == 9 && date->tm_mday >= 1 && date->tm_mday <= 7)
+			return true;
+	}
 	return false;
 }
 
@@ -7797,4 +8885,911 @@ void LawnApp::ShowPlantAccessoryUI(int iInitTab, PlantTypePtr i_plantType)
 	if (iInitTab >= 0)
 		m_plantAccessoryUI->ToPanel(iInitTab);
 	m_plantAccessoryUI->TriggerTutorial();
+}
+
+void LawnApp::SetLocalizedLawnStringFile()
+{
+	std::string path = mResourceManager->GetLocaleFolder(true) + "properties/LawnStrings.txt";
+	mResStreamsManager->ForceLoadGroup("LawnStrings");
+	mResStreamsManager->ForceLoadGroup("CFDLC_LawnStrings");
+	TodStringListLoad(path.c_str());
+	mResStreamsManager->DeleteGroup("LawnStrings");
+	mResStreamsManager->DeleteGroup("CFDLC_LawnStrings");
+}
+
+void LawnApp::RequestGetRechargeAmoutFromServer()
+{
+	gLawnApp->KillPVZ2Dialog();
+	m_bRechargeCheckCompleted = false;
+	PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(490), ::UIScaleNum(280));
+	dialog->SetHeaderLabel(L"[NEED_CONNTECT_INTERNET_FOR_RECHARGE_CHECK_HEAD]");
+	dialog->SetHeaderFont(PrimeText_Game::Typeface_FZShaoEr_28_Outline->Typeface(), PrimeText_Game::Color_Generic_Title);
+	dialog->SetFooterLabel(L"[NEED_CONNTECT_INTERNET_FOR_RECHARGE_CHECK_TEXT]");
+	dialog->SetFooterFont(PrimeText_Game::Typeface_FZCuYuan_19_HardShadow->Typeface(), Sexy::Color(Sexy::Color::White));
+	dialog->SetBackgroundDarken(true, 0.5f);
+	dialog->AddButton(L"[DIALOG_STRING_OK]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::StartRechargeCheck)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Menu_PopUp_General");
+}
+
+void LawnApp::ShowRechargeNotice()
+{
+	PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(756), ::UIScaleNum(390));
+	dialog->SetHeaderLabel(L"[RECHARGE_NOTICE_TITLE]");
+	int platform = gLawnApp->GetPlatform();
+	if (Android::Diag::IsMobileCardType(MobileCard_ChinaMobile) && (platform == PLATFORM_CHINA_MOBILE || platform == PLATFORM_CHINA_MOBILE_HD || (platform >= PLATFORM_91 && platform <= PLATFORM_KUPAI) || (platform >= PLATFORM_91_HD && platform <= PLATFORM_THIRD_CHANNEL_HD_END)))
+		dialog->SetFooterLabel(L"[RECHARGE_NOTICE_DESC_FOR_LOTTERY]");
+	else
+		dialog->SetFooterLabel(L"[RECHARGE_NOTICE_DESC]");
+	dialog->SetFooterAlign(DS_ALIGN_LEFT_VERTICAL_MIDDLE);
+	dialog->SetBackgroundDarken(true, 0.5f);
+	dialog->AddButton(L"[BUTTON_OK]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::KillPVZ2Dialog)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Menu_PopUp_General");
+}
+
+void LawnApp::ShowFakeSaveWarning(int32 i_errorCode)
+{
+	m_bCheckCopyCompleted = false;
+	gLawnApp->KillPVZ2Dialog();
+	PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(490), ::UIScaleNum(280));
+	dialog->SetHeaderLabel(L"[DIALOG_WARNING]");
+	dialog->SetHeaderFont(PrimeText_Game::Typeface_FZShaoEr_28_Outline->Typeface(), PrimeText_Game::Color_Generic_Title);
+	dialog->SetFooterLabel(Sexy::StrFormat(L"[DIA_FAKE_SAVE_WARNING_%d]", i_errorCode));
+	dialog->SetFooterFont(PrimeText_Game::Typeface_FZCuYuan_19_HardShadow->Typeface(), Sexy::Color(Sexy::Color::White));
+	dialog->SetBackgroundDarken(true, 0.5f);
+	dialog->AddButton(L"[DIALOG_STRING_OK]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::onCopySaveWarningOK)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Menu_PopUp_General");
+}
+
+void LawnApp::ShowYetiEscapeDialog()
+{
+	if (m_board)
+		m_board->Pause(true);
+	PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(490), ::UIScaleNum(280));
+	dialog->SetHeaderLabel(L"[YETI_ESCAPE_DIALOG_TITLE]");
+	dialog->SetHeaderFont(PrimeText_Game::Typeface_FZShaoEr_28_Outline->Typeface(), PrimeText_Game::Color_Generic_Title);
+	dialog->SetFooterLabel(L"[YETI_ESCAPE_DIALOG_TEXT]");
+	dialog->SetFooterFont(PrimeText_Game::Typeface_FZCuYuan_19_HardShadow->Typeface(), Sexy::Color(Sexy::Color::White));
+	dialog->SetBackgroundDarken(true, 0.5f);
+	dialog->AddButton(L"[RESTART_BUTTON]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::YetiEscapeRestartLevel)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Menu_PopUp_General");
+}
+
+void LawnApp::ShowLostNetActivityUI()
+{
+	if (!m_lostNetActivityUI)
+	{
+		AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Menu_Store_Open");
+		m_lostNetActivityUI = new LostNetActivityUI();
+		mWidgetManager->AddWidget(m_lostNetActivityUI);
+	}
+	mWidgetManager->BringToFront(m_lostNetActivityUI);
+	PushOverlaysToTop();
+	mWidgetManager->AddBaseModal(m_lostNetActivityUI);
+	mWidgetManager->SetFocus(m_lostNetActivityUI);
+	if (gLawnApp->GetLostNetActivityConfig().GetCurrentBonus() <= 0)
+	{
+		HintUI* hint = CreateHintUI();
+		if (hint)
+		{
+			hint->Default1Init();
+			hint->SetContentString(L"[NOT_IN_ACTIVITY_TITLE]");
+			hint->ShowHintUI();
+		}
+		UIWidget* offlineBtn = UIWidget::GetWidgetBySheetName("UIWorldMapOfflineBundleButton");
+		if (offlineBtn)
+			offlineBtn->SetVisible(false);
+		KillLostNetActivityUI();
+	}
+	else if (m_lostNetActivityUI)
+	{
+		m_lostNetActivityUI->InitView();
+		m_lostNetActivityUI->NormalInit(PT_FromCenter | PT_FromMiddle | PT_Scaled | PT_Fade, 0.2f);
+		m_lostNetActivityUI->StartPop();
+	}
+}
+
+bool LawnApp::CheckVersion()
+{
+	if (m_versionNetworkManager.CheckVersionApp() == VersionState_Force)
+	{
+		PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(490), ::UIScaleNum(280));
+		dialog->SetHeaderLabel(L"[VERSION_FORCE_UPDATE_HEAD]");
+		dialog->SetHeaderFont(PrimeText_Game::Typeface_FZShaoEr_28_Outline->Typeface(), PrimeText_Game::Color_Generic_Title);
+		dialog->SetFooterLabel(L"[VERSION_FORCE_UPDATE_TEXT]");
+		dialog->SetFooterFont(PrimeText_Game::Typeface_FZCuYuan_19_HardShadow->Typeface(), Sexy::Color(Sexy::Color::White));
+		dialog->SetBackgroundDarken(true, 0.5f);
+		dialog->AddButton(L"[DIALOG_STRING_OK]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::VersionForceUpdate)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+		AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Menu_PopUp_General");
+		return false;
+	}
+	return true;
+}
+
+void LawnApp::PrepareLoadGroup(const std::string& i_groupName)
+{
+	ResourceGroup* group = mResourceManager->GetResourceGroupNamed(i_groupName);
+	if (!group)
+	{
+		CrashTracking::Log(Sexy::StrFormat("[Resources][ERROR] Failed to find resgroup: %s", i_groupName.c_str()));
+		return;
+	}
+	m_preloadGroupRefCounts[i_groupName]++;
+	if (m_groupRefCounts.find(i_groupName) == m_groupRefCounts.end())
+		m_groupRefCounts[i_groupName] = 0;
+	if (m_groupRefCounts[i_groupName] == 0)
+	{
+		int savedRes = mResourceManager->mCurArtRes;
+		if (IsUIGroup(i_groupName))
+			mResourceManager->mCurArtRes = mHeight;
+		group->Preload();
+		mResourceManager->mCurArtRes = savedRes;
+	}
+	m_groupRefCounts[i_groupName]++;
+	std::string dynamicName = i_groupName + "_Dynamic";
+	if (mResourceManager->GetResourceGroupNamed(dynamicName))
+		PrepareLoadGroup(dynamicName);
+	std::string dlcName = "CFDLC_" + i_groupName;
+	if (mResourceManager->GetResourceGroupNamed(dlcName))
+		PrepareLoadGroup(dlcName);
+}
+
+void LawnApp::LoadGroup(const std::string& i_groupName)
+{
+	CrashTracking::SetString("LoadGroup", i_groupName);
+	if (!internalLoadGroup(i_groupName))
+	{
+		std::string log = Sexy::StrFormat("[%s] LoadGroup failed. Error: %s more info: %s", i_groupName.c_str(), mResourceManager->GetErrorText().c_str(), mErrorLog.c_str());
+		gDebugLog->SendLog(log, DebugLog_LoadGroup, DebugPath_File | DebugPath_NetWork);
+		mErrorLog.clear();
+		return;
+	}
+	if (m_groupRefCounts.find(i_groupName) == m_groupRefCounts.end())
+		m_groupRefCounts[i_groupName] = 0;
+	m_groupRefCounts[i_groupName]++;
+	std::string dynamicName = i_groupName + "_Dynamic";
+	if (mResourceManager->GetResourceGroupNamed(dynamicName))
+		LoadGroup(dynamicName);
+	std::string dlcName = "CFDLC_" + i_groupName;
+	if (mResourceManager->GetResourceGroupNamed(dlcName))
+		LoadGroup(dlcName);
+}
+
+void LawnApp::FinalizeGroupLoad(const std::string& i_groupName)
+{
+	if (!internalLoadGroup(i_groupName))
+	{
+		std::string log = Sexy::StrFormat("[%s] FinalizeGroupLoad failed. Error: %s more info: %s", i_groupName.c_str(), mResourceManager->GetErrorText().c_str(), mErrorLog.c_str());
+		gDebugLog->SendLog(log, DebugLog_LoadGroup, DebugPath_File | DebugPath_NetWork);
+		mErrorLog.clear();
+		return;
+	}
+	m_preloadGroupRefCounts[i_groupName]--;
+	if (m_preloadGroupRefCounts[i_groupName] < 0)
+	{
+		int refCount = 0;
+		if (m_groupRefCounts.find(i_groupName) != m_groupRefCounts.end())
+			refCount = m_groupRefCounts[i_groupName];
+		CrashTracking::Log(Sexy::StrFormat("[Resources][ERROR] FinalizeGroupLoad on %s dropped preload refcount below 0!!! {preload refcount: %d, refcount %d}", i_groupName.c_str(), m_preloadGroupRefCounts[i_groupName], refCount));
+	}
+	if (m_preloadGroupRefCounts[i_groupName] == 0)
+		m_preloadGroupRefCounts.erase(i_groupName);
+	std::string dynamicName = i_groupName + "_Dynamic";
+	if (mResourceManager->GetResourceGroupNamed(dynamicName))
+		FinalizeGroupLoad(dynamicName);
+	std::string dlcName = "CFDLC_" + i_groupName;
+	if (mResourceManager->GetResourceGroupNamed(dlcName))
+		FinalizeGroupLoad(dlcName);
+}
+
+void LawnApp::DeleteGroup(const std::string& i_groupName)
+{
+	CrashTracking::SetString("DeleteGroup", i_groupName);
+	if (mShutdown)
+		return;
+	ResourceGroup* group = mResourceManager->GetResourceGroupNamed(i_groupName);
+	if (!group)
+		CrashTracking::Log(Sexy::StrFormat("[Resources][ERROR] Failed to find resgroup: %s", i_groupName.c_str()));
+	if (m_groupRefCounts.find(i_groupName) == m_groupRefCounts.end())
+		m_groupRefCounts[i_groupName] = 0;
+	m_groupRefCounts[i_groupName]--;
+	if (m_groupRefCounts[i_groupName] == 0)
+	{
+		int savedRes = mResourceManager->mCurArtRes;
+		if (IsUIGroup(i_groupName))
+			mResourceManager->mCurArtRes = mHeight;
+		if (group)
+		{
+			if (!group->Unload())
+				CrashTracking::Log(Sexy::StrFormat("[Resources][ERROR] DeleteGroup failed to ->Unload resgroup %s!", i_groupName.c_str()));
+		}
+		mResourceManager->mCurArtRes = savedRes;
+		m_groupRefCounts.erase(i_groupName);
+	}
+	else if (m_groupRefCounts[i_groupName] < 0)
+	{
+		std::string log = Sexy::StrFormat("[%s] DeleteGroup, ref: %d more info: %s", i_groupName.c_str(), m_groupRefCounts[i_groupName], mErrorLog.c_str());
+		gDebugLog->SendLog(log, DebugLog_LoadGroup, DebugPath_File | DebugPath_NetWork);
+		mErrorLog.clear();
+		m_groupRefCounts.erase(i_groupName);
+	}
+	std::string dynamicName = i_groupName + "_Dynamic";
+	if (mResourceManager->GetResourceGroupNamed(dynamicName))
+		DeleteGroup(dynamicName);
+	std::string dlcName = "CFDLC_" + i_groupName;
+	if (mResourceManager->GetResourceGroupNamed(dlcName))
+		DeleteGroup(dlcName);
+}
+
+std::string LawnApp::GetFormation()
+{
+	int* formation = (int*)malloc(5 * 9 * sizeof(int));
+	for (int i = 0; i < 5 * 9; i++)
+		formation[i] = 0;
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_PLANTS); it; ++it)
+	{
+		RtWeakPtr<Plant> plant = *it;
+		if (plant->IsOnBoard())
+		{
+			int index = plant->m_row * 9 + plant->m_column;
+			formation[index] = PlantNameMapper::GetInstance().GetIdForName(plant->GetType()->TypeName);
+		}
+	}
+	std::string result;
+	result = Sexy::StrFormat("%d,%d", 5, 9);
+	for (int i = 0; i < 5 * 9; i++)
+		result += Sexy::StrFormat(",%d", formation[i]);
+	free(formation);
+	return result;
+}
+
+WorldData* LawnApp::LoadSerializedMapData(const std::string& i_mapName)
+{
+	PVZDB::GetInstance().GetTable(PVZDB::TABLE_WORLDRESOURCES)->Reset(true);
+	std::string resourceName;
+	resourceName += k_worldResourcePrefix;
+	resourceName += i_mapName;
+	resourceName = Sexy::Upper(resourceName);
+	{
+		RtWeakPtr<GenericResFile> package = gLawnApp->mResourceManager->GetResourceForStringIdT<GenericResFile>(resourceName);
+		if (!package.IsValid())
+			return NULL;
+		PVZDB::GetInstance().LoadPackageForTable(PVZDB::TABLE_WORLDRESOURCES, package);
+	}
+	WorldData* worldData = NULL;
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_WORLDRESOURCES); it; ++it)
+	{
+		RtWeakPtr<RtObject> object = *it;
+		if (object && (worldData = object->Cast<WorldData>()))
+		{
+			PVZDB::GetInstance().GetTable(PVZDB::TABLE_WORLDRESOURCES)->SetObjectDeletionMode(object.GetId(), Sexy::RtDbTable::ODM_Never);
+			break;
+		}
+	}
+	PVZDB::GetInstance().GetTable(PVZDB::TABLE_WORLDRESOURCES)->Reset(false);
+	return worldData;
+}
+
+void LawnApp::LaunchTmallSotreWebpage()
+{
+	std::string locale;
+	{
+		std::map<std::string, std::string> localeMap;
+		localeMap["pt"] = "br";
+		localeMap["zh"] = "sc";
+		std::string language = Sexy::GetLocale();
+		if (language.size() > 2)
+			language.erase(2);
+		locale = localeMap[language];
+		if (locale.empty())
+			locale = language;
+	}
+	std::string urlTemplate = Sexy::WStringToString(TodStringTranslate(L"[TMALL_STORE_URL]"));
+	std::string url = urlTemplate;
+	url = TodReplaceString(url, "{LOCALE}", locale);
+	OpenURL(url, false);
+}
+
+void LawnApp::LaunchPrivacyWebpage()
+{
+	std::string packageName = GetPackageName();
+	if (packageName == "com.popcap.pvz2cthdhwctdp")
+	{
+		UIPrivacyDialog::ShowDialog()->SetType();
+		return;
+	}
+	std::string locale;
+	{
+		std::map<std::string, std::string> localeMap;
+		localeMap["pt"] = "br";
+		localeMap["zh"] = "sc";
+		std::string language = Sexy::GetLocale();
+		if (language.size() > 2)
+			language.erase(2);
+		locale = localeMap[language];
+		if (locale.empty())
+			locale = language;
+	}
+	std::string urlTemplate = Sexy::WStringToString(TodStringTranslate(L"[SETTINGS_PRIVACY_URL_ANDROID]"));
+	std::string url = urlTemplate;
+	url = TodReplaceString(url, "{LOCALE}", locale);
+	OpenURL(url, false);
+}
+
+void LawnApp::LaunchEULAWebpage()
+{
+	std::string packageName = GetPackageName();
+	if (packageName == "com.popcap.pvz2cthdhwctdp")
+	{
+		UISettingLargeTextEnunciation::ShowDialog()->Init("EULA_TXT");
+		return;
+	}
+	std::string locale;
+	{
+		std::map<std::string, std::string> localeMap;
+		localeMap["pt"] = "br";
+		localeMap["zh"] = "sc";
+		std::string language = Sexy::GetLocale();
+		if (language.size() > 2)
+			language.erase(2);
+		locale = localeMap[language];
+		if (locale.empty())
+			locale = language;
+	}
+	std::string urlTemplate = Sexy::WStringToString(TodStringTranslate(L"[SETTINGS_EULA_URL_ANDROID]"));
+	std::string url = urlTemplate;
+	url = TodReplaceString(url, "{LOCALE}", locale);
+	OpenURL(url, false);
+}
+
+void LawnApp::LaunchTermsOfServiceWebpage()
+{
+	std::string packageName = GetPackageName();
+	if (packageName == "com.popcap.pvz2cthdhwctdp")
+	{
+		UISettingLargeTextEnunciation::ShowDialog()->Init("EULA_TXT");
+		return;
+	}
+	std::string locale;
+	{
+		std::map<std::string, std::string> localeMap;
+		localeMap["pt"] = "br";
+		localeMap["zh"] = "sc";
+		std::string language = Sexy::GetLocale();
+		if (language.size() > 2)
+			language.erase(2);
+		locale = localeMap[language];
+		if (locale.empty())
+			locale = language;
+	}
+	std::string urlTemplate = Sexy::WStringToString(TodStringTranslate(L"[SETTINGS_TERMSOFSERVICE_URL_ANDROID]"));
+	std::string url = urlTemplate;
+	url = TodReplaceString(url, "{LOCALE}", locale);
+	OpenURL(url, false);
+}
+
+void LawnApp::LaunchPersonalWebpage()
+{
+	std::string packageName = GetPackageName();
+	if (packageName == "com.popcap.pvz2cthdhwctdp")
+	{
+		UISettingLargeTextEnunciation::ShowDialog()->Init("EULA_TXT");
+		return;
+	}
+	std::string locale;
+	{
+		std::map<std::string, std::string> localeMap;
+		localeMap["pt"] = "br";
+		localeMap["zh"] = "sc";
+		std::string language = Sexy::GetLocale();
+		if (language.size() > 2)
+			language.erase(2);
+		locale = localeMap[language];
+		if (locale.empty())
+			locale = language;
+	}
+	std::string urlTemplate = Sexy::WStringToString(TodStringTranslate(L"[SETTINGS_PERSONAL_URL_ANDROID]"));
+	std::string url = urlTemplate;
+	url = TodReplaceString(url, "{LOCALE}", locale);
+	OpenURL(url, false);
+}
+
+void LawnApp::LaunchInventoryWebpage()
+{
+	std::string packageName = GetPackageName();
+	if (packageName == "com.popcap.pvz2cthdhwctdp")
+	{
+		UISettingLargeTextEnunciation::ShowDialog()->Init("EULA_TXT");
+		return;
+	}
+	std::string locale;
+	{
+		std::map<std::string, std::string> localeMap;
+		localeMap["pt"] = "br";
+		localeMap["zh"] = "sc";
+		std::string language = Sexy::GetLocale();
+		if (language.size() > 2)
+			language.erase(2);
+		locale = localeMap[language];
+		if (locale.empty())
+			locale = language;
+	}
+	std::string urlTemplate = Sexy::WStringToString(TodStringTranslate(L"[SETTINGS_INVENTORY_URL_ANDROID]"));
+	std::string url = urlTemplate;
+	url = TodReplaceString(url, "{LOCALE}", locale);
+	OpenURL(url, false);
+}
+
+void LawnApp::LaunchFAQWebpage()
+{
+	std::string locale;
+	{
+		std::map<std::string, std::string> localeMap;
+		localeMap["fr"] = "fr/";
+		localeMap["es"] = "sp/";
+		localeMap["it"] = "it/";
+		localeMap["de"] = "gr/";
+		localeMap["pt"] = "pt-br/";
+		std::string language = Sexy::GetLocale();
+		if (language.size() > 2)
+			language.erase(2);
+		locale = localeMap[language];
+	}
+	std::string urlTemplate = Sexy::WStringToString(TodStringTranslate(L"[SETTINGS_HELP_URL]"));
+	std::string url = urlTemplate;
+	url = TodReplaceString(url, "{LOCALEINSERT}", locale);
+	url = TodReplaceString(url, "{PCPID}", Sexy::LazySingleton<ProfileMgr>::GetInstance().GetAccountName());
+	OpenURL(url, false);
+}
+
+PVZ2UIDialog* LawnApp::ShowDataErrorDialog()
+{
+	gMessageRouter->Post(&Message::Fake, 106);
+	if (m_dataErrorDialog)
+		KillDataErrorDialog();
+	if (m_board)
+	{
+		m_board->ClearCursors();
+		m_board->Pause(true);
+	}
+	int height = ::UIScaleNum(250);
+	int width = ::UIScaleNum(400);
+	m_dataErrorDialog = new PVZ2UIDialog();
+	m_dataErrorDialog->SetHeaderLabel(TodStringTranslate(L"[DATA_ERROR_HEADER]"));
+	m_dataErrorDialog->SetFooterLabel(TodStringTranslate(L"[DATA_ERROR_CONTENT]"));
+	m_dataErrorDialog->AddButton(L"[DIALOG_STRING_OK]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::LaunchFAQWebpage)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	m_dataErrorDialog->Resize((mScreenBounds.mWidth - width) / 2, (mScreenBounds.mHeight - height) / 2, width, height);
+	mWidgetManager->AddWidget(m_dataErrorDialog);
+	mWidgetManager->BringToFront(m_dataErrorDialog);
+	PushOverlaysToTop();
+	mWidgetManager->AddBaseModal(m_dataErrorDialog);
+	mWidgetManager->SetFocus(m_dataErrorDialog);
+	return m_dataErrorDialog;
+}
+
+void LawnApp::ShowConfirmExitGame()
+{
+	gLawnApp->KillPVZ2Dialog();
+	PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(490), ::UIScaleNum(280));
+	dialog->SetHeaderLabel(L"[EXIT_GAME_HEADER]");
+	dialog->SetHeaderFont(PrimeText_Game::Typeface_FZShaoEr_28_Outline->Typeface(), PrimeText_Game::Color_Generic_Title);
+	dialog->SetFooterLabel(L"[EXIT_GAME_INFO]");
+	dialog->SetFooterFont(PrimeText_Game::Typeface_FZCuYuan_19_HardShadow->Typeface(), Sexy::Color(Sexy::Color::White));
+	dialog->SetBackgroundDarken(true, 0.5f);
+	dialog->AddButton(L"[BUTTON_OK]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::onConfirmExitGame)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	dialog->AddButton(L"[BUTTON_CANCEL]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::onCancelExitGame)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Menu_PopUp_General");
+}
+
+void LawnApp::CheckNetWorkWifiIssue()
+{
+	if (!IsNetworkModuleOK())
+	{
+		PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(400), ::UIScaleNum(250));
+		dialog->SetHeaderLabel(L"[NETWORK_NOT_CONNECTED_TITLE]");
+		dialog->SetFooterLabel(L"[NETWORK_NOT_CONNECTED_TEXT_FOR_SYNC_PLAYERINFO]");
+		dialog->SetHeaderFont(PrimeText_Game::Typeface_FZShaoEr_28_Outline->Typeface(), PrimeText_Game::Color_Generic_Title);
+		dialog->SetFooterFont(PrimeText_Game::Typeface_FZCuYuan_19_HardShadow->Typeface(), Sexy::Color(Sexy::Color::White));
+		dialog->SetBackgroundDarken(true, 0.5f);
+		dialog->AddButton(L"[SETTINGS_TITLE]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::OnOpenSystemSetting)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+		dialog->AddButton(L"[DIALOG_YES_SKIP_TUTORIAL]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::OnCancelStartGameOffLine)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+		AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Menu_PopUp_General");
+	}
+}
+
+bool LawnApp::CheckNetWork(const SexyString& i_errorTitle, const SexyString& i_errorText)
+{
+	bool ok = IsNetworkModuleOK();
+	if (!ok)
+	{
+		gLawnApp->KillPVZ2Dialog();
+		PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(400), ::UIScaleNum(250));
+		dialog->SetHeaderLabel(i_errorTitle);
+		dialog->SetFooterLabel(i_errorText);
+		dialog->SetHeaderFont(PrimeText_Game::Typeface_FZShaoEr_28_Outline->Typeface(), PrimeText_Game::Color_Generic_Title);
+		dialog->SetFooterFont(PrimeText_Game::Typeface_FZCuYuan_19_HardShadow->Typeface(), Sexy::Color(Sexy::Color::White));
+		dialog->SetBackgroundDarken(true, 0.5f);
+		dialog->AddButton(L"[SETTINGS_TITLE]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::OnOpenSystemSetting)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+		dialog->AddButton(L"[DIALOG_YES_SKIP_TUTORIAL]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::OnCancelStore)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+		AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Menu_PopUp_General");
+		if (m_board)
+		{
+			m_board->ClearCursors();
+			m_board->Pause(true);
+		}
+	}
+	return ok;
+}
+
+void LawnApp::ShowBoard()
+{
+	CrashTracking::SetBool("Board Shown", true);
+	m_board = new Board();
+	int width = (int)std::max(m_contentResolutionWidth, (float)mWidth);
+	m_board->Resize(0, 0, width, mHeight);
+	int screenWidth = 0;
+	int screenHeight = 0;
+	Android::Graphics::GetScreenSizeInPixels((Sexy::AndroidAppDriver*)gSexyAppBase->mAppDriver, &screenWidth, &screenHeight);
+	float ratio = (float)screenWidth / (float)screenHeight;
+	int offsetX;
+	if (((screenWidth == 2400 || screenWidth == 2460 || screenWidth == 2520 || screenWidth == 2316 || screenWidth == 2340) && screenHeight == 1080) || ratio >= 2.1f)
+		offsetX = (int)(200.0f - BoardConstants::GRIDSQUARE_WIDTH() * 0.5f) + 231;
+	else
+		offsetX = (int)(gLawnApp->mScreenBounds.mWidth - m_contentResolutionWidth);
+	Sexy::Point offset;
+	offset.mX = offsetX;
+	offset.mY = (int)(gLawnApp->mScreenBounds.mHeight - m_contentResolutionHeight);
+	m_board->SetBoardBaseOffset(offset);
+	m_board->Resize(offset.mX, offset.mY, m_board->mWidth, (int)m_contentResolutionHeight);
+	mWidgetManager->AddWidget(m_board);
+	mWidgetManager->BringToBack(m_board);
+	mWidgetManager->SetFocus(m_board);
+}
+
+void LawnApp::OnHandleUpdateGame()
+{
+	if (IsConnectOnWifi())
+	{
+		goToUpdateGame();
+		return;
+	}
+	KillPVZ2Dialog();
+	PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(400), ::UIScaleNum(250));
+	dialog->SetHeaderLabel(L"[REVIVE_TIP]");
+	dialog->SetFooterLabel(L"[PVZ_LOGIN_LOW_VERSION_WWAN]");
+	dialog->SetHeaderFont(PrimeText_Game::Typeface_FZShaoEr_28_Outline->Typeface(), PrimeText_Game::Color_Generic_Title);
+	dialog->SetFooterFont(PrimeText_Game::Typeface_FZCuYuan_19_HardShadow->Typeface(), Sexy::Color(Sexy::Color::White));
+	dialog->SetBackgroundDarken(true, 0.5f);
+	dialog->AddButton(L"[PVZ_LOGIN_LOW_SETTING_WIFI]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::OnOpenSystemSettingUpdateGame)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_SECONDARY);
+	PVZ2UIButton* updateButton = dialog->AddButton(L"[PVZ_LOGIN_LOW_ALSO_UPDATE]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::goToUpdateGame)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	dialog->SetAlwaysExist(true);
+	if (!IsConnected())
+		updateButton->SetDisabled(true);
+}
+
+
+void LawnApp::ShowShareDialog(SexyString i_ShareText)
+{
+	PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(572), ::UIScaleNum(600));
+	dialog->SetHeaderLabel(i_ShareText);
+	if (Sexy::LazySingleton<SocialMgr>::GetInstance().GetSocialPlatformType() == SPT_QQMobile)
+	{
+		dialog->AddButton(L"[SHARE_TO_QQ]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::ShareBtnCallBack)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+		dialog->AddButton(L"[SHARE_CANCLE]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::KillShareDialog)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	}
+	else if (Sexy::LazySingleton<SocialMgr>::GetInstance().GetSocialPlatformType() == SPT_WeChat)
+	{
+		dialog->AddButton(L"[SHARE_TO_WECHAT_FRIEND]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::ShareBtnCallBack)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+		dialog->AddButton(L"[SHARE_TO_WECHAT_ZONE]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::ShareBtnCallBack)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+		dialog->AddButton(L"[SHARE_CANCLE]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::KillShareDialog)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	}
+	else
+		dialog->AddButton(L"[SHARE_CANCLE]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::KillShareDialog)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	mWidgetManager->BringToFront(dialog);
+}
+
+bool LawnApp::IsWorldHaveMower(std::string theWorldName)
+{
+	if (theWorldName == "egypt")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_1);
+	if (theWorldName == "pirate")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_2);
+	if (theWorldName == "cowboy")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_3);
+	if (theWorldName == "kongfu")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_4);
+	if (theWorldName == "future")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_5);
+	if (theWorldName == "dark")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_6);
+	if (theWorldName == "beach")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_7);
+	if (theWorldName == "iceage")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_8);
+	if (theWorldName == "skycity")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_9);
+	if (theWorldName == "lostcity")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_10);
+	if (theWorldName == "eighties")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_11);
+	if (theWorldName == "dino")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_12);
+	if (theWorldName == "modern")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_13);
+	if (theWorldName == "steam")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_14);
+	if (theWorldName == "renai")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_15);
+	if (theWorldName == "heian")
+		return HasPlayerUnlockedFeature(FEATURE_UPGRADE_LAWNMOWER_TYPE_16);
+	return true;
+}
+
+void LawnApp::Shutdown()
+{
+	SaveGameMgr::GetInstance().TrySaveGame(false);
+	AudioMgr::GetInstancePtr()->SendEvent("Stop_Master_Audio_Bus");
+	TGALogMgr::GetInstance().Log("10002", std::vector<std::string>());
+	if (m_titleScreen)
+	{
+		mLoadingFailed = true;
+		return;
+	}
+	if (mShutdown)
+		return;
+	mShutdown = true;
+	for (int i = 0; i < 5; i++)
+		KillDialog(i);
+	if (m_board)
+	{
+		m_board->EndLevel();
+		ProfileMgr::GetInstance().Save(false, false);
+	}
+	m_gameStateMgr.ShutDown();
+	ProcessSafeDeleteList();
+	if (m_gcp)
+	{
+		Achievement::Shutdown();
+		Leaderboard::Shutdown();
+		delete m_gcp;
+		m_gcp = NULL;
+	}
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_CURRENTLEVEL); it; ++it)
+	{
+		RtWeakPtr<RtObject> object = *it;
+		if (object && object->IsA<GameObject>())
+		{
+			GameObject* gameObject = object->CastChecked<GameObject>();
+			if (gameObject)
+				gameObject->Destroy();
+		}
+	}
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_CUSTOM_LEVEL_DATA); it; ++it)
+	{
+		RtWeakPtr<RtObject> object = *it;
+		if (object && object->IsA<GameObject>())
+		{
+			GameObject* gameObject = object->CastChecked<GameObject>();
+			if (gameObject)
+				gameObject->Destroy();
+		}
+	}
+	PVZDB::GetInstance().Shutdown();
+	FilterEffectDisposeForApp();
+	FreeGlobalAllocators();
+	extern Sexy::ResourceManager* gResourceManager;
+	gResourceManager = NULL;
+	extern int gAppHeight;
+	gAppHeight = 0;
+	SexyAppBase::Shutdown();
+	LogServer::Instance()->Stop();
+}
+
+void LawnApp::GatherGachaLogInfo(std::vector<GachaRewardUI*> i_vecReward)
+{
+	m_vecGachaGetInfo.clear();
+	for (size_t i = 0; i < i_vecReward.size(); i++)
+	{
+		GachaGet info;
+		if (i_vecReward[i]->m_type == "plant")
+		{
+			MagentoProductPropsPtr product = Magento::FindStoreProduct("iOS PvZ2 Plant Store", "Plant Pieces", "plant", i_vecReward[i]->m_sku);
+			if (product.IsValid())
+			{
+				int count = product->ObjectCount;
+				info.sku = i_vecReward[i]->m_sku;
+				info.type = i_vecReward[i]->m_type;
+				info.count = count;
+				m_vecGachaGetInfo.push_back(info);
+			}
+		}
+		else if (i_vecReward[i]->m_type == "plant_piece" || i_vecReward[i]->m_type == "avatar_piece")
+		{
+			info.sku = i_vecReward[i]->m_sku;
+			info.type = i_vecReward[i]->m_type;
+			info.count = i_vecReward[i]->mPieceCount;
+			m_vecGachaGetInfo.push_back(info);
+		}
+		else
+		{
+			info.sku = i_vecReward[i]->m_sku;
+			info.type = i_vecReward[i]->m_type;
+			info.count = i_vecReward[i]->mPieceCount;
+			m_vecGachaGetInfo.push_back(info);
+		}
+	}
+}
+
+
+void LawnApp::LogGroupLoadCounts() const
+{
+	std::stringstream stream;
+	stream.str("");
+	Sexy::OutputDebugStrF("===================================\n");
+	Sexy::OutputDebugStrF("LawnApp::LoadGroup Call Counts: \n");
+	stream << "LawnApp::LoadGroup Call Counts: \n";
+	for (std::map<std::string, int>::const_iterator it = m_groupRefCounts.begin(); it != m_groupRefCounts.end(); ++it)
+	{
+		Sexy::OutputDebugStrF(" [%3d] %s\n", it->second, it->first.c_str());
+		stream << " [" << it->second << "] " << it->first.c_str() << "\n";
+	}
+	Sexy::OutputDebugStrF("LawnApp::PrepareLoadGroup Call Counts: \n");
+	stream << "LawnApp::PrepareLoadGroup Call Counts: \n";
+	for (std::map<std::string, int>::const_iterator it = m_preloadGroupRefCounts.begin(); it != m_preloadGroupRefCounts.end(); ++it)
+	{
+		Sexy::OutputDebugStrF(" [%3d] %s\n", it->second, it->first.c_str());
+		stream << " [" << it->second << "] " << it->first.c_str() << "\n";
+	}
+	Sexy::OutputDebugStrF("-----------------------------------\n");
+	gDebugLog->SendLog(stream.str(), DebugLog_LoadGroup, DebugPath_File);
+}
+
+void LawnApp::ShowAccessorySwitchDialog(PlantTypePtr i_plant)
+{
+	AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Map_PopUp_Reward");
+	PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(572), ::UIScaleNum(373));
+	PVZ2UIRewardObjectDisplayer* displayer = new PVZ2UIRewardObjectDisplayer(i_plant);
+	SexyString plantName = Plant::GetFormattedNameString(i_plant);
+	displayer->SetOverlayTitleText(L"");
+	displayer->SetName(TodStringTranslate(L"[SWITCH_CONFIRM_TITLE]"));
+	SexyString message = TodStringTranslate(L"[SWITCH_CONFIRM_MESSAGE]");
+	message = TodReplaceString(message, L"{PLANT_NAME_1}", plantName.c_str());
+	message = TodReplaceString(message, L"{PLANT_NAME_2}", plantName.c_str());
+	displayer->SetDescription(message);
+	dialog->SetContents(displayer);
+	dialog->AddButton(L"[BUTTON_SWITCH]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::DoSwitchAccessory)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	dialog->AddCancelButton();
+	dialog->SetBackgroundDarken(true, 0.7f);
+}
+
+void LawnApp::RemoveAllCaches()
+{
+	{
+		FileSearchInfo info;
+		std::string folder = GetFolder(Sexy::IFileDriver::PathType_NoBackup);
+		IFileSearch* search = gFileDriver->FileSearchStart(folder, &info);
+		do
+		{
+			if (!info.is_directory)
+			{
+				std::string fileName = info.file_name;
+				gFileDriver->DeleteFile(folder + fileName);
+			}
+		} while (gFileDriver->FileSearchNext(search, &info));
+		gFileDriver->FileSearchEnd(search);
+	}
+	{
+		FileSearchInfo info;
+		std::string folder = GetFolder(Sexy::IFileDriver::PathType_Backup);
+		IFileSearch* search = gFileDriver->FileSearchStart(folder, &info);
+		do
+		{
+			if (!info.is_directory)
+			{
+				std::string fileName = info.file_name;
+				gFileDriver->DeleteFile(folder + fileName);
+			}
+		} while (gFileDriver->FileSearchNext(search, &info));
+		gFileDriver->FileSearchEnd(search);
+	}
+	{
+		FileSearchInfo info;
+		std::string folder = GetFolder(Sexy::IFileDriver::PathType_Cache);
+		IFileSearch* search = gFileDriver->FileSearchStart(folder, &info);
+		do
+		{
+			if (!info.is_directory)
+			{
+				std::string fileName = info.file_name;
+				gFileDriver->DeleteFile(folder + fileName);
+			}
+		} while (gFileDriver->FileSearchNext(search, &info));
+		gFileDriver->FileSearchEnd(search);
+	}
+	ProfileMgr::GetInstance().ClearAllProfile();
+}
+
+void LawnApp::ShowNewWorldDialog(std::string i_newLevelName)
+{
+	m_newLevelToJump = i_newLevelName;
+	gLawnApp->LoadGroup("UI_WorldPreview");
+	AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Map_PopUp_Reward");
+	if (m_board)
+	{
+		m_board->ClearCursors();
+		m_board->Pause(true);
+	}
+	PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(572), ::UIScaleNum(500));
+	dialog->AddButton(L"[GOTO_NEW_WORLD]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::GotoNewWorld)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	MapEventItem* event = WorldMapUtils::GetWorldDataForEdit()->FindEventByLevelName(m_newLevelToJump);
+	Sexy::Image* image;
+	if (event->m_worldDataPtr->m_worldName == "pirate")
+		image = CachedUIResourcePtr<Sexy::Image>("IMAGE_UI_WORLD_PREVIEW_WORLD_PREVIEW_PIRATE");
+	else if (event->m_worldDataPtr->m_worldName == "cowboy")
+		image = CachedUIResourcePtr<Sexy::Image>("IMAGE_UI_WORLD_PREVIEW_WORLD_PREVIEW_COWBOY");
+	else if (event->m_worldDataPtr->m_worldName == "kongfu")
+		image = CachedUIResourcePtr<Sexy::Image>("IMAGE_UI_WORLD_PREVIEW_WORLD_PREVIEW_KONGFU");
+	else if (event->m_worldDataPtr->m_worldName == "future")
+		image = CachedUIResourcePtr<Sexy::Image>("IMAGE_UI_WORLD_PREVIEW_WORLD_PREVIEW_FUTURE");
+	else if (event->m_worldDataPtr->m_worldName == "dark")
+		image = CachedUIResourcePtr<Sexy::Image>("IMAGE_UI_WORLD_PREVIEW_WORLD_PREVIEW_DARK");
+	else if (event->m_worldDataPtr->m_worldName == "beach")
+		image = CachedUIResourcePtr<Sexy::Image>("IMAGE_UI_WORLD_PREVIEW_WORLD_PREVIEW_BEACH");
+	else if (event->m_worldDataPtr->m_worldName == "iceage")
+		image = CachedUIResourcePtr<Sexy::Image>("IMAGE_UI_WORLD_PREVIEW_WORLD_PREVIEW_ICEAGE");
+	else if (event->m_worldDataPtr->m_worldName == "skycity")
+		image = CachedUIResourcePtr<Sexy::Image>("IMAGE_UI_WORLD_PREVIEW_WORLD_PREVIEW_SKYCITY");
+	else if (event->m_worldDataPtr->m_worldName == "lostcity")
+		image = CachedUIResourcePtr<Sexy::Image>("IMAGE_UI_WORLD_PREVIEW_WORLD_PREVIEW_LOSTCITY");
+	else
+		image = CachedUIResourcePtr<Sexy::Image>("IMAGE_UI_WORLD_PREVIEW_WORLD_PREVIEW_FUTURE");
+	dialog->SetImage(image, Sexy::Point(20, 0));
+	dialog->SetBackgroundDarken(true, 0.5f);
+}
+
+void LawnApp::ShowGemStoreConfirm(StoreType i_type, bool i_quick)
+{
+	if (m_board && !m_coinStore)
+	{
+		m_board->ClearCursors();
+		PauseMusic();
+		m_board->Pause(true);
+	}
+	m_storeType = i_type;
+	PVZ2UIDialog* dialog = gLawnApp->ShowPVZ2Dialog(::UIScaleNum(400), ::UIScaleNum(250));
+	if (m_storeType == STORE_TYPE_COIN)
+	{
+		dialog->SetHeaderLabel(L"[COIN_NOT_ENOUGH_DIALOG_TITLE]");
+		dialog->SetFooterLabel(L"[COIN_NOT_ENOUGH_DIALOG_TEXT]");
+	}
+	else if (m_storeType == STORE_TYPE_GEM)
+	{
+		dialog->SetHeaderLabel(L"[GEM_NOT_ENOUGH_DIALOG_TITLE]");
+		dialog->SetFooterLabel(L"[GEM_NOT_ENOUGH_DIALOG_TEXT]");
+	}
+	else if (m_storeType == STORE_TYPE_STAMINA)
+	{
+		dialog->SetHeaderLabel(L"[STAMINA_NOT_ENOUGH_DIALOG_TITLE]");
+		dialog->SetFooterLabel(L"[STAMINA_NOT_ENOUGH_DIALOG_TEXT]");
+	}
+	else if (m_storeType == STORE_TYPE_LEAF)
+	{
+		dialog->SetHeaderLabel(L"[LEAF_NOT_ENOUGH_DIALOG_TITLE]");
+		dialog->SetFooterLabel(L"[LEAF_NOT_ENOUGH_DIALOG_TEXT]");
+	}
+	else if (m_storeType == STORE_TYPE_STONE)
+	{
+		dialog->SetHeaderLabel(L"[STONE_NOT_ENOUGH_DIALOG_TITLE]");
+		dialog->SetFooterLabel(L"[STONE_NOT_ENOUGH_DIALOG_TEXT]");
+	}
+	dialog->SetBackgroundDarken(true, 0.5f);
+	dialog->AddButton(L"[BUTTON_CANCEL]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::OnCancelStore)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_SECONDARY);
+	if (i_quick)
+		dialog->AddButton(L"[GEM_NOT_ENOUGH_DIALOG_YES]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::OnConfirmQuickGemStore)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	else if (m_storeType == STORE_TYPE_LEAF)
+		dialog->AddButton(L"[LEAF_NOT_ENOUGH_DIALOG_YES]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::OnConfirmGemStore)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	else if (m_storeType == STORE_TYPE_STONE)
+		dialog->AddButton(L"[STONE_NOT_ENOUGH_DIALOG_YES]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::OnConfirmGemStore)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	else
+		dialog->AddButton(L"[GEM_NOT_ENOUGH_DIALOG_YES]", Sexy::Delegate0(Sexy::MakeDelegate(*this, &LawnApp::OnConfirmGemStore)), PVZ2UIDialog::BUTTON_TYPE_GENERIC_PRIMARY);
+	AudioMgr::GetInstancePtr()->SendEvent("Play_UI_Menu_PopUp_General");
 }

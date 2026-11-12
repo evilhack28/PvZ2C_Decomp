@@ -16,7 +16,9 @@ def main():
     args = sys.argv[1:]
     diff = '-d' in args
     args = [a for a in args if a != '-d']
-    src, pats = os.path.abspath(args[0]), args[1:]
+    if not args:
+        sys.exit(__doc__)
+    src, pats = wd.find_source(args[0]), args[1:]
     obj, err = fastcc.compile_file(src, pch=True)
     if obj is None:
         sys.exit('\n'.join([l for l in err.splitlines() if 'error:' in l][:20]))

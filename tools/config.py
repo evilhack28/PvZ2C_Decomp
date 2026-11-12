@@ -3,10 +3,40 @@
 Flag rationale: docs/toolchain.md.
 """
 
+import atexit
 import glob
 import os
+import sys
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# piped output: no CR, no crash on a character the console codepage lacks, no colour codes
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(errors='replace', newline='\n')
+    except (AttributeError, ValueError):
+        pass
+
+
+@atexit.register
+def _closed_pipe():
+    """`tool | head` closes stdout early: drop the rest instead of printing an error at exit."""
+    try:
+        sys.stdout.flush()
+    except (OSError, ValueError):
+        try:
+            os.dup2(os.open(os.devnull, os.O_WRONLY), sys.stdout.fileno())
+        except (OSError, ValueError):
+            pass
+
+
+COLOR = sys.stdout.isatty() and not os.environ.get('NO_COLOR')
+
+
+def colors(*codes):
+    """ANSI escapes for a terminal, empty strings when piped."""
+    return tuple(f'\033[{c}m' if COLOR else '' for c in codes)
+
 
 try:
     from config_local import NDK, TARGET_LIB

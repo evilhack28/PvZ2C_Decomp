@@ -558,7 +558,7 @@ def main():
     args = ap.parse_args()
 
     mangled, source = wd.resolve(args.symbol or args.cls, None if args.symbol else args.method,
-                                 os.path.abspath(args.file) if args.file else None)
+                                 wd.find_source(args.file) if args.file else None)
     text = open(source, encoding='utf-8', newline='').read()
     # an overload is found by the variant's own first line
     head = open(args.variants, encoding='utf-8').read().split('\n', 1)[0].strip() if args.variants else ''

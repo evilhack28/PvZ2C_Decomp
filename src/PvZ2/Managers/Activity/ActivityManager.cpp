@@ -8,19 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ActivityManager.h"
-#include "TimeMgr.h"
 #include "LawnApp.h"
 #include "ProfileMgr.h"
-#include "ProfileUtils.h"
-#include "MapEventItem.h"
-#include "PlayerInfo.h"
 #include "WorldMapActivityHome.h"
-#include "SexyAppFramework/RtSerial.h"
-#include "GameCommon.h"
-#include "gameNetWork/NetworkData.h"
-#include "gameNetWork/NetworkMgr.h"
-#include "gameNetWork/NetworkMsgProcess.h"
-#include "gameNetWork/ServerTime.h"
 #include "TimeUtil.h"
 #include "UIWishingPool.h"
 #include "UIMiniGameRank.h"
@@ -35,7 +25,6 @@
 #include "UIDaveTreasure.h"
 #include "RechargeDailySignActivity.h"
 #include "DiscountShopActivity.h"
-#include "PVZ2UnchartedModeNetworkMgr.h"
 #include "CardGameNetworkMgr.h"
 
 class ActivityTurnChangeConfig : public Sexy::RtObject {

@@ -18,7 +18,7 @@ import config
 from lib import fastcc
 from lib.pvzelf import Elf
 
-GREEN, RED, GREY, BOLD, OFF = '\033[32m', '\033[31m', '\033[90m', '\033[1m', '\033[0m'
+GREEN, RED, GREY, BOLD, OFF = config.colors(32, 31, 90, 1, 0)
 
 
 # --- resolving a symbol to the file that defines it -------------------------
@@ -45,6 +45,19 @@ def _sources():
 _OPERATORS = {'()': 'cl', '[]': 'ix', '=': 'aS', '==': 'eq', '!=': 'ne', '<': 'lt', '>': 'gt', '<=': 'le',
               '>=': 'ge', '+': 'pl', '-': 'mi', '*': 'ml', '/': 'dv', '+=': 'pL', '-=': 'mI', '!': 'nt',
               '->': 'pt', '<<': 'ls', '>>': 'rs', 'new': 'nw', 'delete': 'dl'}
+
+
+def find_source(token):
+    """Absolute path of a .cpp given as a path (from the cwd or the repo root) or as a bare file name."""
+    root = os.path.join(HERE, os.pardir)
+    for base in (os.getcwd(), root):
+        path = os.path.normpath(os.path.join(base, token))
+        if os.path.isfile(path):
+            return path
+    hits = glob.glob(os.path.join(root, 'src', '**', os.path.basename(token)), recursive=True)
+    if len(hits) != 1:
+        sys.exit(f'{token}: ' + ('no such file' if not hits else 'several files, give the path: ' + ' '.join(hits)))
+    return os.path.normpath(hits[0])
 
 
 def resolve(token, method=None, source=None):
@@ -93,6 +106,9 @@ def resolve(token, method=None, source=None):
             sys.exit(f'{" ".join(parts)!r} matches several game symbols, pass one:\n  '
                      + '\n  '.join(game_syms[:12]))
         sys.exit(f'no symbol contains {" + ".join(needles)}')
+    if source and len({h[0] for h in hits}) > 1:
+        # a file was named: its own functions win over same-named ones elsewhere
+        hits = [h for h in hits if os.path.normcase(h[1]) == os.path.normcase(source)] or hits
     if len({h[0] for h in hits}) > 1:
         listing = '\n'.join(f'  {s}   {r}' for s, r in hits[:12])
         sys.exit(f'{" ".join(parts)!r} is ambiguous:\n{listing}')
@@ -328,7 +344,9 @@ def targets(items):
     """[(mangled, source)] from `sym...`, `Class method...` or `file.cpp sym|Class::method...`."""
     first = items[0]
     if first.endswith('.cpp') or '/' in first or os.sep in first:
-        source = first if os.path.isabs(first) else os.path.normpath(os.path.join(os.getcwd(), first))
+        source = find_source(first)
+        if len(items) < 2:
+            sys.exit('name a function: wd.py <file.cpp> <sym|Class::method>...  (chk.py <file.cpp> lists the whole file)')
         out = []
         for n in items[1:]:
             if n.startswith('_Z'):

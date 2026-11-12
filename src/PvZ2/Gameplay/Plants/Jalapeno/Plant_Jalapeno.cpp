@@ -1,16 +1,9 @@
 #include "Plant_Jalapeno.h"
-#include "Effect_PopAnim.h"
 #include "EffectAnimRig_JalapenoFireSquare.h"
 #include "Board.h"
-#include "LawnApp.h"
 #include "BoardTransforms.h"
-#include "ResourceHelpers.h"
-#include "GameEventMgr.h"
-#include "EntityFinder.h"
-#include "Zombie.h"
 #include "GridItemFlame.h"
 #include "ZombieZombossMech_PVZ1_Robot.h"
-#include <algorithm>
 #include "Effect_WalrusEarthTile.h"
 
 RT_CLASS_IMPLEMENT(PlantJalapeno);

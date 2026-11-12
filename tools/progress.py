@@ -1682,7 +1682,7 @@ OWNED_BY = {
     '_ZN4Sexy8AutoCrit': 'ResumableRequestInfo.cpp',
     '_ZN4Sexy8CritSect': 'RSBPatcher.cpp',
     '_ZN4Sexy8FlagsMod': 'WidgetManager.cpp',
-    '_ZN4Sexy9Condition': 'AndroidDiagDriver.cpp',
+    '_ZN4Sexy9Condition': 'AsyncTaskManager.cpp',
     '_ZN4Sexy9Delegate0': 'Board.cpp',
     '_ZN4Sexy9EventBase': 'PVZDB.cpp',
     '_ZN4Sexy9GLContext': 'OpenGLIdRegistry.cpp',
@@ -1867,6 +1867,7 @@ NESTED_ELSEWHERE = {
                                     '_ZN4Sexy23AndroidGL20RenderEffect9ParamData'),
     'IResStreamsDriver.cpp': ('_ZN4Sexy17IResStreamsDriver4Task', '_ZN4Sexy17IResStreamsDriver12TaskResource'),
     'RtSerialRtonReader.cpp': ('_ZN4Sexy18RtSerialRtonReader3Key',),
+    'AndroidGraphicsDriver.cpp': ('_ZN4Sexy12MeshListener14MeshPreDeleted',),
 }
 
 

@@ -308,7 +308,7 @@ def game_size(cls):
 def our_size(cls, header):
     path = os.path.join(config.BUILD, 'vtfix_%d.cpp' % os.getpid())
     _write(path, '#include "SexyAppFramework/Common.h"\n#include "%s"\ntemplate<int N> struct Show;\nShow<(int)sizeof(%s)> s;\n' % (header, cls))
-    r = subprocess.run([config.GXX, *config.CXXFLAGS, '-w', '-fsyntax-only', path], capture_output=True, text=True)
+    r = subprocess.run([config.GXX, *config.CXXFLAGS, '-w', '-fsyntax-only', path], capture_output=True, text=True, encoding='utf-8', errors='replace')
     os.remove(path)
     m = re.search(r'Show<(\d+)> s', r.stderr)
     return int(m.group(1)) if m else None

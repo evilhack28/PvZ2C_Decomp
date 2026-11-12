@@ -18,7 +18,7 @@ from lib import asmdiff
 import config
 from lib.pvzelf import Elf
 
-GREEN, RED, BOLD, OFF = '\033[32m', '\033[31m', '\033[1m', '\033[0m'
+GREEN, RED, BOLD, OFF = config.colors(32, 31, 1, 0)
 
 
 def main():

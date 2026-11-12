@@ -8,13 +8,9 @@
 #include "SexyAppFramework/Common.h"
 
 #include "GridItem.h"
-#include "GameEventMgr.h"
-#include "Board.h"
 #include "BoardTransforms.h"
-#include "LawnApp.h"
 #include "PoolDaylightStage.h"
 #include "Effect_GroundEffects.h"
-#include "StandaloneEffect.h"
 #include "Artifact.h"
 
 /////////////// GridItem ///////////////

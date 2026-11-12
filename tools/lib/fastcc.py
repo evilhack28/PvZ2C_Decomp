@@ -4,6 +4,7 @@ import glob
 import hashlib
 import json
 import os
+import random
 import re
 import shutil
 import subprocess
@@ -15,7 +16,29 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import config
 
-_FLAG_FILES = [os.path.join(config.HERE, 'tools', f) for f in ('config.py', 'config_local.py')] + [config.GXX]
+
+def _flag_stamp():
+    """A file whose mtime moves only when the compiler or its flags change, so another edit to config.py keeps every object."""
+    path = os.path.join(config.BUILD, 'flags.stamp')
+    want = hashlib.sha256(repr((config.GXX, config.CXXFLAGS)).encode()).hexdigest()
+    try:
+        if open(path).read() == want:
+            return path
+        born = None
+    except OSError:
+        # first use: as old as the config files, which is what objects were compared with before
+        born = max(os.path.getmtime(f) for f in (os.path.join(config.HERE, 'tools', n) for n in ('config.py', 'config_local.py'))
+                   if os.path.exists(f))
+    os.makedirs(config.BUILD, exist_ok=True)
+    tmp = f'{path}.{os.getpid()}'
+    open(tmp, 'w').write(want)
+    if born:
+        os.utime(tmp, (born, born))
+    os.replace(tmp, path)
+    return path
+
+
+_FLAG_FILES = [_flag_stamp(), config.GXX]
 PCH_DIR = os.path.join(config.BUILD, 'pch')
 PCH_KEEP = 8
 
@@ -42,15 +65,55 @@ def _deps(dep):
     return [p.replace('\\ ', ' ') for p in re.split(r'(?<!\\)\s+', body[1].strip()) if p]
 
 
+_sha_memo = {}
+
+
+def _sha(path):
+    st = os.stat(path)
+    key = (path, st.st_mtime_ns, st.st_size)
+    if key not in _sha_memo:
+        _sha_memo[key] = hashlib.sha1(open(path, 'rb').read()).hexdigest()
+    return _sha_memo[key]
+
+
+def _digest(files):
+    """One hash over the content of every file, in order."""
+    return hashlib.sha1(' '.join(_sha(f) for f in files).encode()).hexdigest()
+
+
+def _stamp(target, files, since=None):
+    """Record what `target` was built from in target + '.sum'; skipped if an input changed after `since`."""
+    try:
+        if since is None or all(os.path.getmtime(f) <= since for f in files):
+            tmp = f'{target}.sum.{os.getpid()}_{threading.get_ident()}'
+            open(tmp, 'w').write(_digest(files))
+            os.replace(tmp, target + '.sum')
+    except OSError:
+        pass
+
+
 def _fresh(target, dep, extra=()):
+    """Inputs older than target, or newer with the content target was built from (edit-and-revert, a sync rewriting files)."""
     if not (os.path.exists(target) and os.path.exists(dep)):
         return False
     files = _deps(dep)
     if not files:
         return False
-    t = os.path.getmtime(target)
+    files, stamp = [*files, *extra], target + '.sum'
     try:
-        return all(os.path.getmtime(f) <= t for f in [*files, *extra, *(f for f in _FLAG_FILES if os.path.exists(f))])
+        t = os.path.getmtime(target)
+        if any(os.path.getmtime(f) > t for f in _FLAG_FILES if os.path.exists(f)):
+            return False
+        # a stamp older than the target is from an earlier build of it
+        seen = os.path.getmtime(stamp) if os.path.exists(stamp) else 0
+        if all(os.path.getmtime(f) <= max(t, seen) for f in files):
+            if seen < t:
+                _stamp(target, files)
+            return True
+        if seen >= t and open(stamp).read() == _digest(files):
+            os.utime(stamp)
+            return True
+        return False
     except OSError:
         return False
 
@@ -63,8 +126,72 @@ def up_to_date(source, obj):
     return _fresh(obj, dep, [source])
 
 
+def _compilers(psutil):
+    """Memory held by running compilers, in bytes."""
+    held = 0
+    for p in psutil.process_iter(['name']):
+        if (p.info['name'] or '').startswith('cc1plus'):
+            try:
+                held += p.memory_info().rss
+            except psutil.Error:
+                pass
+    return held
+
+
+def _room():
+    """Wait while free memory is short and other compiles hold enough to free it: a Board-level compile peaks at 1.3 GB and several tools compile in parallel."""
+    try:
+        import psutil
+    except ImportError:
+        return
+    need = int(os.environ.get('PVZ2C_MIN_FREE_MB', '4096')) << 20
+    end = time.time() + 300
+    while time.time() < end:
+        free = psutil.virtual_memory().available
+        # memory other programs hold does not come back by waiting
+        if free >= need or free >= (1024 << 20) and _compilers(psutil) < (1024 << 20):
+            return
+        time.sleep(1 + 2 * random.random())
+
+
+def _try_lock(fd):
+    if os.name == 'nt':
+        import msvcrt
+        msvcrt.locking(fd, msvcrt.LK_NBLCK, 1)
+    else:
+        import fcntl
+        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+
+
+def run(cmd, **kw):
+    """subprocess.run of a compiler inside one of the machine-wide slots every tool shares (a locked file, freed by the OS if the holder dies)."""
+    total = int(os.environ.get('PVZ2C_SLOTS', '0')) or min(16, os.cpu_count() or 4)
+    # night queues and the warm-up leave a quarter for the tool someone is waiting on
+    usable = total - total // 4 if os.environ.get('PVZ2C_BACKGROUND') else total
+    where = os.path.join(config.BUILD, 'slots')
+    os.makedirs(where, exist_ok=True)
+    held, end = None, time.time() + 600
+    while held is None and time.time() < end:
+        for k in random.sample(range(usable), usable):
+            fd = os.open(os.path.join(where, str(k)), os.O_CREAT | os.O_RDWR)
+            try:
+                _try_lock(fd)
+                held = fd
+                break
+            except OSError:
+                os.close(fd)
+        else:
+            time.sleep(0.1 + 0.2 * random.random())
+    try:
+        _room()
+        return subprocess.run(cmd, **kw)
+    finally:
+        if held is not None:
+            os.close(held)
+
+
 def _fail(obj, dep, err):
-    for f in (obj, dep):
+    for f in (obj, dep, obj + '.sum'):
         if os.path.exists(f):
             os.remove(f)
     return None, err
@@ -72,9 +199,13 @@ def _fail(obj, dep, err):
 
 def _plain(source, obj):
     dep = obj[:-2] + '.d'
-    r = subprocess.run([config.GXX, *config.CXXFLAGS, '-MMD', '-MT', 'o', '-MF', dep, '-c', source, '-o', obj],
-                       capture_output=True, text=True)
-    return (obj, r.stderr) if r.returncode == 0 else _fail(obj, dep, r.stderr)
+    began = time.time()
+    r = run([config.GXX, *config.CXXFLAGS, '-MMD', '-MT', 'o', '-MF', dep, '-c', source, '-o', obj],
+                       capture_output=True, text=True, encoding='utf-8', errors='replace')
+    if r.returncode != 0:
+        return _fail(obj, dep, r.stderr)
+    _stamp(obj, [*(_deps(dep) or []), source], began)
+    return obj, r.stderr
 
 
 def _pch_compiler():
@@ -151,13 +282,15 @@ def _gch_for(source, prefix, bdir):
             return hdr
         open(hdr, 'w', encoding='utf-8', newline='').write(prefix)
         tmp = f'{gch}.{os.getpid()}'
-        r = subprocess.run([config.GXX, *config.CXXFLAGS, '-B', bdir, '-iquote', os.path.dirname(source),
+        began = time.time()
+        r = run([config.GXX, *config.CXXFLAGS, '-B', bdir, '-iquote', os.path.dirname(source),
                             '-x', 'c++-header', hdr, '-o', tmp, '-MMD', '-MT', 'o', '-MF', hdep],
-                           capture_output=True, text=True)
+                           capture_output=True, text=True, encoding='utf-8', errors='replace')
         if r.returncode != 0:
             _fail(tmp, hdep, '')
             return None
         os.replace(tmp, gch)
+        _stamp(gch, _deps(hdep) or [], began)
         _prune()
         return hdr
 
@@ -181,8 +314,9 @@ def _with_pch(source, text, obj):
     open(body, 'w', encoding='utf-8', newline='').write(
         f'#include "{hdr.replace(os.sep, "/")}"\n#line {n + 1} "{source.replace(os.sep, "/")}"\n' + '\n'.join(lines[n:]))
     dep, bdep = obj[:-2] + '.d', os.path.join(jobdir, 'body.d')
-    r = subprocess.run([config.GXX, *config.CXXFLAGS, '-B', bdir, '-iquote', os.path.dirname(source),
-                        '-MMD', '-MT', 'o', '-MF', bdep, '-c', body, '-o', obj], capture_output=True, text=True)
+    began = time.time()
+    r = run([config.GXX, *config.CXXFLAGS, '-B', bdir, '-iquote', os.path.dirname(source),
+                        '-MMD', '-MT', 'o', '-MF', bdep, '-c', body, '-o', obj], capture_output=True, text=True, encoding='utf-8', errors='replace')
     if r.returncode != 0:
         if 'error' not in r.stderr:
             return None             # cc1plus could not map the .gch; a plain compile still can
@@ -191,6 +325,8 @@ def _with_pch(source, text, obj):
     files = [source] + [f for f in (_deps(hdr + '.d') or []) + (_deps(bdep) or [])
                         if os.path.normcase(os.path.abspath(f)) not in skip]
     open(dep, 'w', encoding='utf-8').write('o: ' + ' \\\n '.join(f.replace(' ', '\\ ') for f in files) + '\n')
+    if os.path.exists(source) and open(source, encoding='utf-8', errors='replace').read() == text:
+        _stamp(obj, [*files, source], began)
     return obj, r.stderr
 
 
@@ -277,8 +413,8 @@ def compile_text(source, text, obj):
     os.makedirs(jobdir, exist_ok=True)
     path = os.path.join(jobdir, os.path.basename(source))
     open(path, 'w', encoding='utf-8', newline='').write(f'#line 1 "{source.replace(os.sep, "/")}"\n' + text)
-    r = subprocess.run([config.GXX, *config.CXXFLAGS, '-iquote', os.path.dirname(source), '-c', path, '-o', obj],
-                       capture_output=True, text=True)
+    r = run([config.GXX, *config.CXXFLAGS, '-iquote', os.path.dirname(source), '-c', path, '-o', obj],
+                       capture_output=True, text=True, encoding='utf-8', errors='replace')
     return (obj, r.stderr) if r.returncode == 0 else _fail(obj, obj[:-2] + '.d', r.stderr)
 
 
@@ -299,8 +435,12 @@ def memo(key, run):
     try:
         saved = json.load(open(path, encoding='utf-8'))
         t = os.path.getmtime(path)
-        if all(os.path.getmtime(f) <= t for f in saved['deps'] + [f for f in _FLAG_FILES if os.path.exists(f)]):
-            return saved['value']
+        if all(os.path.getmtime(f) <= t for f in _FLAG_FILES if os.path.exists(f)):
+            if all(os.path.getmtime(f) <= t for f in saved['deps']):
+                return saved['value']
+            if saved.get('sum') == _digest(saved['deps']):
+                os.utime(path)
+                return saved['value']
     except (OSError, ValueError, KeyError):
         pass
     value, obj = run()
@@ -309,7 +449,11 @@ def memo(key, run):
         # the probe's own .cpp is rewritten each run; only what it includes decides the answer
         deps = [os.path.abspath(f) for f in (deps if isinstance(obj, list) else deps[1:])]
         os.makedirs(os.path.dirname(path), exist_ok=True)
-        json.dump({'deps': deps, 'value': value}, open(path, 'w', encoding='utf-8'))
+        try:
+            digest = _digest(deps)
+        except OSError:
+            digest = None
+        json.dump({'deps': deps, 'sum': digest, 'value': value}, open(path, 'w', encoding='utf-8'))
     return value
 
 

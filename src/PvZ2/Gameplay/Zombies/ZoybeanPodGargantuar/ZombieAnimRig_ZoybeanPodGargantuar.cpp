@@ -8,7 +8,6 @@
 #include "SexyAppFramework/Common.h"
 
 #include "ZombieZoybeanPodGargantuar.h"
-#include "ReflectionBuilder.h"
 
 /////////////// Lifecycle ///////////////
 

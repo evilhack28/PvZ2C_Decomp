@@ -23,8 +23,7 @@ import config
 from lib import fastcc
 from lib.pvzelf import Elf
 
-GREEN, RED, YELLOW, GREY, BOLD, OFF = (
-    '\033[32m', '\033[31m', '\033[33m', '\033[90m', '\033[1m', '\033[0m')
+GREEN, RED, YELLOW, GREY, BOLD, OFF = config.colors(32, 31, 33, 90, 1, 0)
 
 
 def classes_for(name):

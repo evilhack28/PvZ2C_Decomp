@@ -27,7 +27,7 @@ from lib import fields as fieldtool
 from lib.pvzelf import Elf
 
 MD = Cs(CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN)
-GREY, CYAN, OFF = '\033[90m', '\033[36m', '\033[0m'
+GREY, CYAN, OFF = config.colors(90, 36, 0)
 
 
 def field_table(elf, classes):

@@ -405,7 +405,7 @@ def tidy_layout(path, dry):
         if not b.startswith('#include'):
             groups.setdefault(classify(b), []).append(b)
     out = head + ('\n' + '\n'.join(incs) if incs else '')
-    for g in ['Lifecycle', 'Reflection', 'Accessors', 'Logic']:
+    for g in ['Lifecycle', 'Accessors', 'Logic', 'Reflection']:
         if g in groups:
             out += '\n\n' + SECTION % g + '\n\n' + '\n\n'.join(groups[g])
     if not dry:

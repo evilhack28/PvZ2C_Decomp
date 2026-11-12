@@ -578,23 +578,22 @@ void Graphics::DrawImageMirror(Image* theImage, const Rect& theDestRect, const R
 
 void Graphics::DrawImage(Image* theImage, int theX, int theY)
 {
-	if (mScaleX == 1.0f && mScaleY == 1.0f)
-	{
-		int aX = (int)mTransX + theX;
-		int aY = (int)mTransY + theY;
-
-		Rect aClippedRect = Rect(aX, aY, theImage->GetWidth(), theImage->GetHeight()).Intersection(mClipRect);
-		Rect aSrcRect(aClippedRect.mX - aX, aClippedRect.mY - aY, aClippedRect.mWidth, aClippedRect.mHeight);
-
-		if (aSrcRect.mWidth > 0 && aSrcRect.mHeight > 0)
-		{
-			SetAsCurrentContext();
-			mRenderDevice->Blt(theImage, aClippedRect.mX, aClippedRect.mY, aSrcRect, GetImageColor(), mDrawMode);
-		}
-	}
-	else
+	if (mScaleX != 1.0f || mScaleY != 1.0f)
 	{
 		DrawImage(theImage, theX, theY, Rect(0, 0, theImage->mWidth, theImage->mHeight));
+		return;
+	}
+
+	int aX = (int)mTransX + theX;
+	int aY = (int)mTransY + theY;
+
+	Rect aClippedRect = Rect(aX, aY, theImage->GetWidth(), theImage->GetHeight()).Intersection(mClipRect);
+	Rect aSrcRect(aClippedRect.mX - aX, aClippedRect.mY - aY, aClippedRect.mWidth, aClippedRect.mHeight);
+
+	if (aSrcRect.mWidth > 0 && aSrcRect.mHeight > 0)
+	{
+		SetAsCurrentContext();
+		mRenderDevice->Blt(theImage, aClippedRect.mX, aClippedRect.mY, aSrcRect, GetImageColor(), mDrawMode);
 	}
 }
 

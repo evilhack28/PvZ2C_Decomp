@@ -8,16 +8,7 @@
 #include "EgyptStage.h"
 
 #include "AudioMgr.h"
-#include "Board.h"
-#include "GameEventMgr.h"
-#include "LawnApp.h"
-#include "LevelDefinition.h"
-#include "LevelModuleManager.h"
-#include "ObjectTypeDirectory.h"
 #include "ProfileUtils.h"
-#include "ReflectionBuilder.h"
-#include "RtDelegate.h"
-#include "ZombieType.h"
 
 /////////////// Reflection ///////////////
 

@@ -17,9 +17,11 @@ from lib import ctorinit
 from lib import foldcopy
 from lib import hdrindex
 import progress as P
+import wd
 from lib.pvzelf import Elf
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir)
+NL, TAB = chr(10), chr(9)
 CD = re.compile(r'^_ZN(?:\d+[A-Za-z_]\w*?)*?(C[12]|D[012])E')
 
 
@@ -323,13 +325,31 @@ def rt_candidates(todo):
     return out
 
 
+def hoist(orig, bodies):
+    """The finished file with each draft's #include moved up into the include block (None if there is none)."""
+    incs, kept = [], []
+    for body in bodies:
+        lines = body.split(NL)
+        incs += [l for l in lines if l.startswith('#include ')]
+        kept.append(NL.join(l for l in lines if not l.startswith('#include ')).strip(NL).replace(TAB + ' ', TAB) + NL)
+    head = orig.rstrip(NL).split(NL)
+    at = [k for k, l in enumerate(head) if l.startswith('#include ')]
+    if not at:
+        return None
+    new = [i for i in dict.fromkeys(incs) if i not in head]
+    new.sort(key=lambda i: 'ReflectionBuilder.h' in i)
+    head[at[-1] + 1:at[-1] + 1] = new
+    return NL.join(head) + NL + NL + NL.join(kept)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('source')
     ap.add_argument('--min', type=int, default=60)
     ap.add_argument('--dry', action='store_true')
+    ap.add_argument('--no-header', action='store_true', help='skip drafts that need a header edit (safe to run on many files at once)')
     args = ap.parse_args()
-    src = os.path.abspath(args.source)
+    src = wd.find_source(args.source)
     orig0 = orig = read(src)
     obj = os.path.join(config.BUILD, 'autofill_%d.o' % os.getpid())
     os.makedirs(config.BUILD, exist_ok=True)
@@ -360,6 +380,8 @@ def main():
     gs = G.load_syms(gelf)
     todo = sorted({f for f, _ in funcs}) if stub else todo_symbols(base)
     cands = ctor_dtor_candidates(todo, gsyms) + rt_candidates(todo) + method_candidates(todo, gelf, gs, args.min)
+    if args.no_header:
+        cands = [c for c in cands if not c[4]]
     have = {x for c in cands for x in c[2]}
     rest = [x for x in todo if x not in have]
     cands += [('F', cls, [sym], text + '\n', None) for sym, cls, text in foldcopy.candidates(rest)]
@@ -373,7 +395,13 @@ def main():
             print(c[3])
         return
 
-    backups = {}
+    backups, mtimes = {}, {}
+
+    def put(path, text):
+        # a header back to its first text gets its first mtime too, so no includer looks stale
+        write(path, text)
+        if text == backups.get(path) and path in mtimes:
+            os.utime(path, (mtimes[path], mtimes[path]))
 
     def apply(active):
         want = dict(backups)
@@ -381,18 +409,19 @@ def main():
         for c in active:
             if c[4]:
                 hp = header_path(c[1])
+                mtimes.setdefault(hp, os.path.getmtime(hp))
                 cur = want[hp] if hp in want else backups.setdefault(hp, read(hp))
                 new = declify(cur, c[1], c[4][1]) if isinstance(c[4], tuple) else insert_member(cur, c[1], c[4])
                 if new:
                     want[hp] = new
         for p, t in want.items():
-            write(p, t)
+            put(p, t)
         write(src, text)
         return text
 
     def restore_headers():
         for p, t in backups.items():
-            write(p, t)
+            put(p, t)
 
     active = list(cands)
     for _ in range(12):
@@ -440,26 +469,23 @@ def main():
     if os.environ.get('AF_KEEP'):
         print('kept all drafts for inspection')
         return
+    def matches(ours, c):
+        for sym in c[2]:
+            th, mn = asmdiff.listing(game, sym), asmdiff.listing(ours, sym)
+            if th is None:
+                continue
+            if mn is None:
+                return False
+            same, tot, _ = asmdiff.compare(th, mn)
+            if not (same == tot and len(th) == len(mn)):
+                if os.environ.get('AF_DEBUG'):
+                    print('  miss %d/%d (game %d ours %d) %s' % (same, tot, len(th), len(mn), P.pretty(sym)))
+                return False
+        return True
+
     for _ in range(3):
         ours = Elf(obj)
-        good = []
-        for c in active:
-            allok = True
-            for sym in c[2]:
-                th, mn = asmdiff.listing(game, sym), asmdiff.listing(ours, sym)
-                if th is None:
-                    continue
-                if mn is None:
-                    allok = False
-                    break
-                same, tot, _ = asmdiff.compare(th, mn)
-                if not (same == tot and len(th) == len(mn)):
-                    if os.environ.get('AF_DEBUG'):
-                        print('  miss %d/%d (game %d ours %d) %s' % (same, tot, len(th), len(mn), P.pretty(sym)))
-                    allok = False
-                    break
-            if allok:
-                good.append(c)
+        good = [c for c in active if matches(ours, c)]
         if len(good) == len(active):
             break
         active = good
@@ -476,6 +502,13 @@ def main():
         write(src, orig0)
         print('0/%d drafts OK' % len(cands))
         return
+    # includes go to the top of the file; kept only if every draft still matches
+    neat = hoist(orig, [c[3] for c in active])
+    if neat and neat != read(src):
+        write(src, neat)
+        ok, _ = compile_obj(src, obj)
+        if not (ok and all(matches(Elf(obj), c) for c in active)):
+            apply(active)
     print('%d/%d drafts OK:' % (len(active), len(cands)))
     for c in active:
         print('  ' + c[1] + ('::~' if c[0] == 'D' else '::ctor' if c[0] == 'C' else ' ') + ('' if c[0] != 'M' else P.pretty(c[2][0]).split('::')[-1]) + ('  [header patched]' if c[4] else ''))

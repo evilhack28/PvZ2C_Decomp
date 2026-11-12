@@ -8,28 +8,16 @@
 #include "SexyAppFramework/Common.h"
 
 #include "PVZTypes.h"
-#include "PVZDB.h"
 #include "ProjectilePropertySheet.h"
 #include "ZombieType.h"
 #include "Zombie.h"
-#include "CreatureType.h"
 #include "Creature.h"
-#include "WorldData.h"
 #include "WorldMapUtils.h"
-#include "MapEventItem.h"
-#include "LevelUtils.h"
-#include "LevelDefinition.h"
-#include "LevelModule.h"
 #include "StageModule.h"
-#include "PlantType.h"
 #include "PlantFramework.h"
-#include "PlantPropertySheet.h"
 #include "PlantHeadshot.h"
-#include "MagentoService.h"
 #include "CollectableType.h"
-#include "ObjectTypeDirectory.h"
 #include "UIEditor/StringHelper.h"
-#include "LawnApp.h"
 
 PVZTypes::PVZTypes()
 {

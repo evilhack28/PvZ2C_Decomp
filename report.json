@@ -1,18 +1,18 @@
 {
-  "generated": "2026-11-07T03:56:34+00:00",
+  "generated": "2026-11-07T18:19:20+00:00",
   "measures": {
     "total_functions": 154768,
-    "matched_functions": 36526,
-    "matched_functions_percent": 23.6,
+    "matched_functions": 36719,
+    "matched_functions_percent": 23.73,
     "total_code": 24324468,
-    "matched_code": 2832888,
-    "matched_code_percent": 11.65,
-    "fuzzy_match_percent": 12.56,
-    "started_units": 2422,
+    "matched_code": 2873208,
+    "matched_code_percent": 11.81,
+    "fuzzy_match_percent": 12.72,
+    "started_units": 2427,
     "total_units": 8368,
-    "started_code": 10307032,
-    "started_matched_code": 2832888,
-    "started_percent": 27.49,
+    "started_code": 10321056,
+    "started_matched_code": 2873208,
+    "started_percent": 27.84,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -116765,12 +116765,12 @@
     {
       "name": "src/PvZ2/Gameplay/Board/Lawn/LawnApp.cpp",
       "total_code": 142188,
-      "matched_code": 79336,
-      "matched_code_percent": 55.8,
+      "matched_code": 104224,
+      "matched_code_percent": 73.3,
       "total_functions": 839,
-      "matched_functions": 753,
-      "matched_functions_percent": 89.75,
-      "fuzzy_match_percent": 60.34,
+      "matched_functions": 796,
+      "matched_functions_percent": 94.87,
+      "fuzzy_match_percent": 76.62,
       "functions": [
         {
           "name": "LawnApp::GetAppNameForiCloud",
@@ -116823,8 +116823,8 @@
         {
           "name": "LawnApp::ShowGemStoreConfirm",
           "size": 1012,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::~LawnApp",
@@ -116841,14 +116841,14 @@
         {
           "name": "LawnApp::ShowNewWorldDialog",
           "size": 876,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::DeleteGroup",
           "size": 836,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::GetRelativeParentPosition",
@@ -116859,86 +116859,86 @@
         {
           "name": "LawnApp::RemoveAllCaches",
           "size": 804,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::LaunchFAQWebpage",
           "size": 796,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::LogGroupLoadCounts",
           "size": 784,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowAccessorySwitchDialog",
           "size": 744,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::Shutdown",
           "size": 744,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::IsWorldHaveMower",
           "size": 740,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::GatherGachaLogInfo",
           "size": 716,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::LaunchEULAWebpage",
           "size": 708,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::LaunchInventoryWebpage",
           "size": 708,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::LaunchPersonalWebpage",
           "size": 708,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::LaunchTermsOfServiceWebpage",
           "size": 708,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::FinalizeGroupLoad",
           "size": 684,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::LaunchPrivacyWebpage",
           "size": 664,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowShareDialog",
           "size": 644,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::RefreshSalesInfo",
@@ -116949,44 +116949,44 @@
         {
           "name": "LawnApp::OnHandleUpdateGame",
           "size": 632,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowBoard",
           "size": 604,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::CheckNetWork",
           "size": 592,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::CheckNetWorkWifiIssue",
           "size": 584,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::LoadGroup",
           "size": 576,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowConfirmExitGame",
           "size": 568,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowDataErrorDialog",
           "size": 564,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowActivityInnerWidget",
@@ -117003,20 +117003,20 @@
         {
           "name": "LawnApp::LaunchTmallSotreWebpage",
           "size": 540,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::LoadSerializedMapData",
           "size": 540,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::GetFormation",
           "size": 536,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::GetNameMapperInfo",
@@ -117027,8 +117027,8 @@
         {
           "name": "LawnApp::PrepareLoadGroup",
           "size": 536,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowStoneLottery",
@@ -117039,20 +117039,20 @@
         {
           "name": "LawnApp::CheckVersion",
           "size": 520,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowLostNetActivityUI",
           "size": 512,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowYetiEscapeDialog",
           "size": 504,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowGLDeliveryUI",
@@ -117075,32 +117075,32 @@
         {
           "name": "LawnApp::ShowFakeSaveWarning",
           "size": 492,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowRechargeNotice",
           "size": 492,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::RequestGetRechargeAmoutFromServer",
           "size": 488,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::IsGroupLoadComplete",
           "size": 480,
-          "matched": false,
-          "fuzzy_match_percent": 98.33
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::SetLocalizedLawnStringFile",
           "size": 476,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowGeilivableLottery",
@@ -117172,7 +117172,7 @@
           "name": "LawnApp::RefreshGeilivableLottery",
           "size": 428,
           "matched": false,
-          "fuzzy_match_percent": 99.07
+          "fuzzy_match_percent": 81.31
         },
         {
           "name": "LawnApp::ShowMessageDialogNoCallback",
@@ -117219,8 +117219,8 @@
         {
           "name": "LawnApp::onProfileSummarySelectResult",
           "size": 356,
-          "matched": false,
-          "fuzzy_match_percent": 56.18
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::IsNameMapperContains",
@@ -117249,8 +117249,8 @@
         {
           "name": "LawnApp::OnFinishedInitDangerRoom",
           "size": 336,
-          "matched": false,
-          "fuzzy_match_percent": 91.76
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::URLOpenFailed",
@@ -117274,7 +117274,7 @@
           "name": "LawnApp::RefreshStoneLottery",
           "size": 328,
           "matched": false,
-          "fuzzy_match_percent": 98.78
+          "fuzzy_match_percent": 91.46
         },
         {
           "name": "LawnApp::ShowPlantLevelUpInfoDialog",
@@ -117441,8 +117441,8 @@
         {
           "name": "LawnApp::KillPlantLevelUpListView",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 26.03
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::PhysicalKeyDown",
@@ -117525,8 +117525,8 @@
         {
           "name": "LawnApp::KillWorldMap",
           "size": 260,
-          "matched": false,
-          "fuzzy_match_percent": 24.62
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::onSyncProfileFromServer",
@@ -117807,8 +117807,8 @@
         {
           "name": "LawnApp::IsNationalDay",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 86.27
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::IsQQAndSingleDay",
@@ -117837,8 +117837,8 @@
         {
           "name": "LawnApp::ShowEndLevelUI",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 98.04
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::ShowGachaUI",
@@ -118827,8 +118827,8 @@
         {
           "name": "LawnApp::KillCBTutorialUI",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 93.55
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LawnApp::OnCancelStartGameOffLine",
@@ -119434,7 +119434,7 @@
           "name": "LawnApp::ButtonDepress",
           "size": 84,
           "matched": false,
-          "fuzzy_match_percent": 95.45
+          "fuzzy_match_percent": 52.0
         },
         {
           "name": "LawnApp::InitServerTimeOffset",
@@ -119680,7 +119680,7 @@
           "name": "LawnApp::TestCanPopWorldmapActive",
           "size": 76,
           "matched": false,
-          "fuzzy_match_percent": 54.17
+          "fuzzy_match_percent": 77.27
         },
         {
           "name": "LawnApp::TestLuaExecute",
@@ -914698,12 +914698,12 @@
     {
       "name": "src/SexyAppFramework/App/SexyAppBase.cpp",
       "total_code": 25000,
-      "matched_code": 896,
-      "matched_code_percent": 3.58,
+      "matched_code": 2796,
+      "matched_code_percent": 11.18,
       "total_functions": 219,
-      "matched_functions": 51,
-      "matched_functions_percent": 23.29,
-      "fuzzy_match_percent": 4.64,
+      "matched_functions": 59,
+      "matched_functions_percent": 26.94,
+      "fuzzy_match_percent": 11.18,
       "functions": [
         {
           "name": "Sexy::SexyAppBase::ReadFromRegistry",
@@ -914810,14 +914810,14 @@
         {
           "name": "Sexy::SexyAppBase::CreateReadBufferFromFile",
           "size": 404,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyAppBase::UpdateFrames",
           "size": 388,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyAppBase::AddDialog",
@@ -914828,8 +914828,8 @@
         {
           "name": "Sexy::SexyAppBase::ProcessSafeDeleteList",
           "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 97.06
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyAppBase::SetString",
@@ -914852,20 +914852,20 @@
         {
           "name": "Sexy::SexyAppBase::Init",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyAppBase::LostFocus",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyAppBase::GotFocus",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyAppBase::DeleteNativeImageData",
@@ -915050,8 +915050,8 @@
         {
           "name": "Sexy::SexyAppBase::SetResumeCachedFolder",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyAppBase::NewDialog",
@@ -915062,8 +915062,8 @@
         {
           "name": "Sexy::SexyAppBase::SafeDeleteWidget",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::SexyAppBase::DialogButtonDepress",
@@ -916395,10 +916395,10 @@
     },
     {
       "name": "src/SexyAppFramework/Async/AsyncTaskManager.cpp",
-      "total_code": 2760,
+      "total_code": 3228,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 20,
+      "total_functions": 27,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -916418,6 +916418,12 @@
         {
           "name": "Sexy::AsyncTaskManager::RequestQueueDelete",
           "size": 244,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Condition::Wait",
+          "size": 232,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -916482,6 +916488,36 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "Sexy::Condition::Notify",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Condition::Condition",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Condition::Condition",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Condition::~Condition",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Condition::~Condition",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "Sexy::AsyncTaskManager::IsQueueEmpty",
           "size": 36,
           "matched": false,
@@ -916508,6 +916544,12 @@
         {
           "name": "Sexy::AsyncTaskManager::AddTaskToQueue",
           "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Condition::Reset",
+          "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -935733,10 +935775,10 @@
     },
     {
       "name": "src/SexyAppFramework/Graphics/Mesh.cpp",
-      "total_code": 664,
+      "total_code": 668,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 6,
+      "total_functions": 7,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -935774,6 +935816,12 @@
         {
           "name": "Sexy::Mesh::SetListener",
           "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::MeshListener::MeshPreDeleted",
+          "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
@@ -935956,12 +936004,12 @@
     {
       "name": "src/SexyAppFramework/Graphics/SexyGraphics.cpp",
       "total_code": 26676,
-      "matched_code": 8552,
-      "matched_code_percent": 32.06,
+      "matched_code": 8968,
+      "matched_code_percent": 33.62,
       "total_functions": 109,
-      "matched_functions": 82,
-      "matched_functions_percent": 75.23,
-      "fuzzy_match_percent": 50.1,
+      "matched_functions": 83,
+      "matched_functions_percent": 76.15,
+      "fuzzy_match_percent": 50.31,
       "functions": [
         {
           "name": "Sexy::Graphics::DrawImageBox",
@@ -936050,8 +936098,8 @@
         {
           "name": "Sexy::Graphics::DrawImage",
           "size": 416,
-          "matched": false,
-          "fuzzy_match_percent": 86.54
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::Graphics::DrawImage",
@@ -964461,13 +964509,13 @@
       "total_functions": 13,
       "matched_functions": 12,
       "matched_functions_percent": 92.31,
-      "fuzzy_match_percent": 98.74,
+      "fuzzy_match_percent": 93.08,
       "functions": [
         {
           "name": "SexyIOHookBlocking::Open_Aux",
           "size": 632,
           "matched": false,
-          "fuzzy_match_percent": 96.2
+          "fuzzy_match_percent": 79.11
         },
         {
           "name": "SexyIOHookBlocking::Open",
@@ -964942,468 +964990,426 @@
     {
       "name": "src/SexyAppFramework/drivers/diag/BaseDiagDriver.cpp",
       "total_code": 392,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 392,
+      "matched_code_percent": 100.0,
       "total_functions": 8,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 8,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::BaseDiagDriver::GetInfoStringSafe",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::BaseDiagDriver::EnsureInfoStringCapacity",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::BaseDiagDriver::BaseDiagDriver",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::BaseDiagDriver::BaseDiagDriver",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::BaseDiagDriver::~BaseDiagDriver",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::BaseDiagDriver::~BaseDiagDriver",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::BaseDiagDriver::~BaseDiagDriver",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::BaseDiagDriver::GetInfoNumber",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/drivers/diag/android/AndroidDiagDriver.cpp",
-      "total_code": 1500,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 22,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 1032,
+      "matched_code": 1032,
+      "matched_code_percent": 100.0,
+      "total_functions": 15,
+      "matched_functions": 15,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::AndroidDiagDriver::SetHardwareBreakpoint",
           "size": 260,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Condition::Wait",
-          "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::GetInfoString",
           "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::ClearHardwareBreakpoint",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::GetInfoNumber",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Condition::Notify",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::AndroidDiagDriver",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::AndroidDiagDriver",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Condition::Condition",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Condition::Condition",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Condition::~Condition",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Condition::~Condition",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::~AndroidDiagDriver",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::HWBRK::HWBRK",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::HWBRK::HWBRK",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::~AndroidDiagDriver",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::~AndroidDiagDriver",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::GetCallStack",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::GetTextForCallStack",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::Init",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Condition::Reset",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidDiagDriver::Update",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/drivers/file/android/AndroidAsyncIOFileDriver.cpp",
       "total_code": 5828,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 5828,
+      "matched_code_percent": 100.0,
       "total_functions": 42,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 42,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::FileSearchStart",
           "size": 412,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::InitFileDriver",
           "size": 360,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::FileSearchNext",
           "size": 324,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::CreateFile",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::CreateFileWithBuffer",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::MakeFolders",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::AsyncIOThreadMain",
           "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::AndroidAsyncIOFileDriver",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::AndroidAsyncIOFileDriver",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::CreateFileDirect",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetDataPath",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::FileExists",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::FixPath",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::IsDataPathValid",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetFileSize",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetAsyncReadJob",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetFileLastAccessTime",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetFileTime",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetCurPath",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::SubmitAsyncRead",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::DeleteFile",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::FileSearchEnd",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::~AndroidAsyncIOFileDriver",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::~AndroidAsyncIOFileDriver",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::CreateFileWithBufferAndAttrData",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::DestroyIOThread",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetVolumeStatistics",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::CreateIOThread",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetDataPathSupportDataBackup",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetDataPathSupportDataNoBackup",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::IsAssetFilename",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetCacheDataPath",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetDataPathCacheData",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetDataPathLoadData",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetDataPathSaveData",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetLoadDataPath",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetSaveDataPath",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::~AndroidAsyncIOFileDriver",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::DeleteTree",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::GetFileBirthTime",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::InitSaveDataFolder",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidAsyncIOFileDriver::StaticAsyncIOThreadMain",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -965428,492 +965434,486 @@
     {
       "name": "src/SexyAppFramework/drivers/graphics/android/AndroidGL20StateManager.cpp",
       "total_code": 4112,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 4112,
+      "matched_code_percent": 100.0,
       "total_functions": 24,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 24,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::AndroidGL20StateManager::GenerateGPUResources",
           "size": 960,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::DoCommitGL20State",
           "size": 548,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::DoCommitTexGL20State",
           "size": 524,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::InitStates",
           "size": 428,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::SetOrthoProjection",
           "size": 328,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::ReleaseGPUResources",
           "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::ResetStates",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::InvalidateShader",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::Init",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::IsDefaultShader",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::AndroidGL20StateManager",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::AndroidGL20StateManager",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::GetCommitFunc",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::SetShader",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::~AndroidGL20StateManager",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::~AndroidGL20StateManager",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::GotFocus",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::GetShader",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::Reset",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::~AndroidGL20StateManager",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::SetDefaultMultiShader",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::SetDefaultShader",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::LostFocus",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGL20StateManager::SetTexture",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/drivers/graphics/android/AndroidGraphicsDriver.cpp",
-      "total_code": 2664,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 54,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 2660,
+      "matched_code": 1752,
+      "matched_code_percent": 65.86,
+      "total_functions": 53,
+      "matched_functions": 52,
+      "matched_functions_percent": 98.11,
+      "fuzzy_match_percent": 98.36,
       "functions": [
         {
           "name": "Sexy::AndroidGraphicsDriver::ReinitForSurfaceChange",
           "size": 908,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 95.2
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::LoadMesh",
           "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::ClearBuffers",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::Redraw",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::AndroidGraphicsDriver",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::AndroidGraphicsDriver",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetRenderModeString",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::DetermineScreenImageType",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetAspectRatio",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::Remove3DData",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::~AndroidGraphicsDriver",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetOptimizedImage",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::~AndroidGraphicsDriver",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::~AndroidGraphicsDriver",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetOptimizedImage",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetRenderDevice",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetRenderDevice3D",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetScreenImage",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::IGraphicsDriver::IGraphicsDriver",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::IGraphicsDriver::IGraphicsDriver",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetImageFromResStream",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::CreateDeviceSurface",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::CreateRenderEffectDefinition",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetCritSect",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetDisplayHeight",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetDisplayWidth",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetNativeDisplayInfo",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetRenderMode",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetRenderModeFlags",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::GetVersion",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::Is3D",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::SetCursorImage",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::SetRenderMode",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::SetRenderModeFlags",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::AddDeviceImage",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::AddMesh",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::Init",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::RemapMouse",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::RemoveDeviceImage",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::RemoveMesh",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::RemoveShader",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::SetCursorPos",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::SetRotationForDeviceOrientation",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AndroidGraphicsDriver::WindowResize",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::IGraphicsDriver::~IGraphicsDriver",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::IGraphicsDriver::~IGraphicsDriver",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::IGraphicsDriver::~IGraphicsDriver",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MeshListener::MeshHandleProperty",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MeshListener::MeshPostDraw",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MeshListener::MeshPostDrawSet",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::MeshListener::MeshPreDeleted",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MeshListener::MeshPreDraw",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MeshListener::MeshPreDrawSet",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::MeshListener::MeshPreLoad",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },

@@ -16,8 +16,7 @@ from lib import fields as fieldtool
 from lib.pvzelf import Elf
 
 MD = Cs(CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN)
-GREEN, YELLOW, RED, GREY, BOLD, OFF = (
-    '\033[32m', '\033[33m', '\033[31m', '\033[90m', '\033[1m', '\033[0m')
+GREEN, YELLOW, RED, GREY, BOLD, OFF = config.colors(32, 33, 31, 90, 1, 0)
 
 LDR_SZ = {'B': 'uint8', 'H': 'int16', 'W': 'int', 'b': 'uint8', 'h': 'uint16', 'w': 'int', 'x': 'int64', 's': 'float', 'd': 'double'}
 
