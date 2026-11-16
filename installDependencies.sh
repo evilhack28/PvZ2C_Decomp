@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Python deps + Android NDK r10e, then configure. Run from a bash shell.
-# Windows PowerShell: run `py -3 tools/configure.py` after `pip install
+# Windows PowerShell: run `py -3 tools/setup.py configure` after `pip install
 # capstone pyelftools` instead.
 set -u
 cd "$(dirname "$0")" || exit 1
@@ -57,8 +57,8 @@ else
 fi
 
 echo ">> configure"
-$PY tools/configure.py || {
-    echo "   get libSrc.so:  py -3 tools/extract.py <3.5.7 apk/zip>   (see INSTALL.md)"
+$PY tools/setup.py configure || {
+    echo "   get libSrc.so:  py -3 tools/setup.py extract <3.5.7 apk/zip>   (see INSTALL.md)"
     exit 1
 }
 echo "   done -- try: make progress"

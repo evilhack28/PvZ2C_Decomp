@@ -1,6 +1,6 @@
 """Paths and build flags. Per-machine paths come from config_local.py
 (written by configure.py) or the PVZ2C_NDK / PVZ2C_TARGET_LIB env vars.
-Flag rationale: docs/toolchain.md.
+Flag rationale: docs/guide/toolchain.md.
 """
 
 import atexit
@@ -44,9 +44,9 @@ except ImportError:
     NDK = os.environ.get('PVZ2C_NDK')
     TARGET_LIB = os.environ.get('PVZ2C_TARGET_LIB')
     if not (NDK and TARGET_LIB):
-        raise SystemExit('not configured -- run: py -3 tools/configure.py  (see INSTALL.md)')
+        raise SystemExit('not configured -- run: py -3 tools/setup.py configure  (see INSTALL.md)')
 
-# Optional Ghidra oracle (used by tools/ghidra.py, tools/reflect.py). Set in
+# Optional Ghidra oracle (used by tools/ghidra.py, tools/gen.py reflect). Set in
 # config_local.py or the PVZ2C_GHIDRA_* env vars; tools that need it say so.
 try:
     from config_local import GHIDRA_HEADLESS, GHIDRA_PROJECT_DIR, GHIDRA_PROJECT, \

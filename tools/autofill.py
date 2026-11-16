@@ -15,6 +15,7 @@ from lib import fastcc
 import guess as G
 from lib import ctorinit
 from lib import foldcopy
+from lib import twincopy
 from lib import hdrindex
 import progress as P
 import wd
@@ -38,7 +39,7 @@ def read(path):
 
 def compile_obj(src, obj):
     o, err = fastcc.compile_file(src, obj, force=True, pch=True)
-    return o is not None, [l for l in err.splitlines() if 'error:' in l]
+    return o is not None, [l for l in err.splitlines() if 'error:' in l or 'required from' in l]
 
 
 def header_path(cls):
@@ -385,6 +386,25 @@ def main():
     have = {x for c in cands for x in c[2]}
     rest = [x for x in todo if x not in have]
     cands += [('F', cls, [sym], text + '\n', None) for sym, cls, text in foldcopy.candidates(rest)]
+    have = {x for c in cands for x in c[2]}
+    try:
+        twin = twincopy.candidates([x for x in rest if x not in have])
+    except Exception as exc:
+        twin = []
+        print('twin candidates skipped: %r' % exc)
+    for sym, cls, meth, ret, params, body in twin:
+        d = decl_unique(cls, meth)
+        if d and (d[0] == 'void') != (ret.strip() == 'void'):
+            # same bytes through a tail call, but the body would lack or have a stray return
+            continue
+        theirs = split_params(params)
+        if d and len(d[1]) == len(theirs):
+            ret = d[0]
+            names = [re.search(r'(\w+)\s*$', p) for p in theirs]
+            if all(names):
+                params = ', '.join(re.sub(r'\bi_arg\d*$', n.group(1), p) for p, n in zip(name_params(d[1]), names))
+        const = ' const' if sym.startswith('_ZNK') else ''
+        cands.append(('T', cls, [sym], '%s %s::%s(%s)%s\n%s\n\n' % (ret, cls, meth, params, const, body), None))
     if not cands:
         write(src, orig0)
         print('nothing to fill')
@@ -439,11 +459,21 @@ def main():
             n = c[3].count('\n')
             spans.append((pos, pos + n + 1, c))
             pos += n + 1
+        here = None
         for e in errs:
+            m = re.search(r'([^:\s][^:]*):(\d+):\d+:\s+required from', e)
+            if m:
+                # an error inside a header belongs to the draft that instantiated it
+                if os.path.abspath(m.group(1)) == src:
+                    here = int(m.group(2))
+                continue
             m = re.search(r'([^:\s][^:]*):(\d+):\d+: error', e)
-            if not m:
+            if not m or 'error: candidate' in e:
                 continue
             f, ln = m.group(1), int(m.group(2))
+            if os.path.abspath(f) != src and here is not None:
+                f, ln = src, here
+            here = None
             if os.path.abspath(f) == src:
                 for lo, hi, c in spans:
                     if lo <= ln < hi:
@@ -511,7 +541,7 @@ def main():
             apply(active)
     print('%d/%d drafts OK:' % (len(active), len(cands)))
     for c in active:
-        print('  ' + c[1] + ('::~' if c[0] == 'D' else '::ctor' if c[0] == 'C' else ' ') + ('' if c[0] != 'M' else P.pretty(c[2][0]).split('::')[-1]) + ('  [header patched]' if c[4] else ''))
+        print('  ' + c[1] + ('::~' if c[0] == 'D' else '::ctor' if c[0] == 'C' else ' ') + ('' if c[0] not in 'MFT' else P.pretty(c[2][0]).split('::')[-1]) + ('  [header patched]' if c[4] else ''))
 
 
 if __name__ == '__main__':

@@ -10,7 +10,7 @@ size    110723808
 
 The APK is archived at
 <https://archive.org/details/com.popcap.pvz2cthdxy51>. Pull the library out
-with `python tools/extract.py <apk-or-zip>`; it is read in place, never
+with `python tools/setup.py extract <apk-or-zip>`; it is read in place, never
 modified.
 
 ## Layout
@@ -24,7 +24,7 @@ report.json    committed progress baseline (make check fails on regression)
 ## Use
 
 ```
-python tools/configure.py           # detect the toolchain, write config_local.py
+python tools/setup.py configure           # detect the toolchain, write config_local.py
 python tools/progress.py            # compile src/, print the match percentage
 python tools/progress.py Iceburg    # one class family
 python tools/wd.py <sym> | <Class> <method>   # game vs ours, only what differs

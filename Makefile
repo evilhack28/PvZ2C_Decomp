@@ -26,13 +26,13 @@ setup:                        ## install Python deps, the NDK, and the reference
 
 extract:                      ## pull libSrc.so from the APK:  make extract APK=<path-or-url>
 	@test -n "$(APK)" || { echo "usage: make extract APK=<3.5.7 apk or zip>"; exit 2; }
-	$(PYTHON) tools/extract.py $(APK)
+	$(PYTHON) tools/setup.py extract $(APK)
 
 configure:                    ## (re)detect the NDK and libSrc.so on this machine
-	$(PYTHON) tools/configure.py
+	$(PYTHON) tools/setup.py configure
 
 report:                       ## refresh the report.json progress baseline
-	$(PYTHON) tools/progress.py --report report.json
+	$(PYTHON) tools/progress.py --report report.json --jobs $(JOBS)
 
 check:                        ## compile all of src/ and fail on any regression vs report.json
 	$(PYTHON) tools/progress.py --cache --check report.json --jobs $(JOBS) --quiet
@@ -49,10 +49,10 @@ first-diff:                   ## largest not-yet-matching functions (PLANT= to f
 
 plant:                        ## one plant's methods:  make plant PLANT=Iceburg
 	@test -n "$(PLANT)" || { echo "usage: make plant PLANT=<Name>"; exit 2; }
-	$(PYTHON) tools/plant.py $(PLANT) --todo
+	$(PYTHON) tools/check.py plant $(PLANT) --todo
 
 scaffold:                     ## regenerate the src/ stubs + units.json
-	$(PYTHON) tools/scaffold.py
+	$(PYTHON) tools/setup.py scaffold
 
 format:                       ## clang-format every source file in place
 	@command -v clang-format >/dev/null || { echo "clang-format not found"; exit 2; }

@@ -19,7 +19,7 @@ def build():
     base = os.path.join(ROOT, 'include')
     for d, _, fs in os.walk(base):
         for f in fs:
-            if not f.endswith('.h'):
+            if not f.endswith(('.h', '.hpp')):
                 continue
             p = os.path.join(d, f)
             try:

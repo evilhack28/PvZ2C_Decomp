@@ -46,7 +46,7 @@ The APK is at <https://archive.org/details/com.popcap.pvz2cthdxy51>
 `./reference/libSrc.so`:
 
 ```
-python tools/extract.py <path or url to the apk/zip>
+python tools/setup.py extract <path or url to the apk/zip>
 ```
 
 `extract.py` handles a plain APK or a zip-wrapped one, and verifies the
@@ -56,8 +56,8 @@ SHA256. Or place any copy at `./reference/libSrc.so` yourself, or set
 ## 4. Configure
 
 ```
-python tools/configure.py       # writes tools/config_local.py (git-ignored)
-python tools/scaffold.py        # regenerate the src/ stubs + units.json
+python tools/setup.py configure       # writes tools/config_local.py (git-ignored)
+python tools/setup.py scaffold        # regenerate the src/ stubs + units.json
 python tools/progress.py        # should now compile src/ and print a percentage
 ```
 

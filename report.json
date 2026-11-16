@@ -1,18 +1,18 @@
 {
-  "generated": "2026-11-12T02:40:03+00:00",
+  "generated": "2026-11-16T02:30:49+00:00",
   "measures": {
-    "total_functions": 154856,
-    "matched_functions": 38262,
-    "matched_functions_percent": 24.71,
-    "total_code": 24333476,
-    "matched_code": 3002656,
-    "matched_code_percent": 12.34,
-    "fuzzy_match_percent": 13.24,
+    "total_functions": 154523,
+    "matched_functions": 38382,
+    "matched_functions_percent": 24.84,
+    "total_code": 24311108,
+    "matched_code": 3016248,
+    "matched_code_percent": 12.41,
+    "fuzzy_match_percent": 13.31,
     "started_units": 2570,
-    "total_units": 8368,
-    "started_code": 10497964,
-    "started_matched_code": 3002656,
-    "started_percent": 28.6,
+    "total_units": 8293,
+    "started_code": 10498712,
+    "started_matched_code": 3016248,
+    "started_percent": 28.73,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -72951,66 +72951,6 @@
       ]
     },
     {
-      "name": "src/PvZ2/Data/Properties/Intro/PowerupCukeTutorialIntroProperties.cpp",
-      "total_code": 16,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupCukeTutorialIntroProperties::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntroProperties::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupCukeTutorialIntroProperties::GetModuleClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Data/Properties/Intro/PowerupPurchaseIntroProperties.cpp",
-      "total_code": 16,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupPurchaseIntroProperties::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupPurchaseIntroProperties::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupPurchaseIntroProperties::GetModuleClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/PvZ2/Data/Properties/Intro/ResilienceTutorialIntroProperties.cpp",
       "total_code": 756,
       "matched_code": 0,
@@ -110026,13 +109966,13 @@
     },
     {
       "name": "src/PvZ2/Gameplay/Board/Board.cpp",
-      "total_code": 159400,
-      "matched_code": 31032,
-      "matched_code_percent": 19.47,
-      "total_functions": 507,
-      "matched_functions": 336,
-      "matched_functions_percent": 66.27,
-      "fuzzy_match_percent": 21.5,
+      "total_code": 160148,
+      "matched_code": 33916,
+      "matched_code_percent": 21.18,
+      "total_functions": 526,
+      "matched_functions": 353,
+      "matched_functions_percent": 67.11,
+      "fuzzy_match_percent": 23.2,
       "functions": [
         {
           "name": "Board::GiveAdvice",
@@ -110301,14 +110241,14 @@
         {
           "name": "Board::~Board",
           "size": 640,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::~Board",
           "size": 640,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddPlants",
@@ -110853,8 +110793,8 @@
         {
           "name": "Board::SetCachedCursor",
           "size": 304,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddCoinDangerDrop",
@@ -110865,14 +110805,14 @@
         {
           "name": "Board::CanSpawnIcePitAt",
           "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddCollectable",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::GetPlantsCostInRow",
@@ -110889,8 +110829,8 @@
         {
           "name": "Board::ProcessDeleteQueue",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::findAllContainingRegions",
@@ -110907,8 +110847,8 @@
         {
           "name": "Board::OnDangerRoomReady",
           "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::TryGetYetiDropItemName",
@@ -111955,6 +111895,30 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "CollectedPiece::CollectedPiece",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "CollectedPiece::CollectedPiece",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "CollectedPiece::CollectedPiece",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "CollectedPiece::CollectedPiece",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "Board::MakeGroundRenderOrder",
           "size": 64,
           "matched": true,
@@ -112057,6 +112021,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "WorldGateLevelKey::SetValue",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldGateLevelKey::operator=",
+          "size": 56,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "Board::AddCollectableWithDefaultMotion",
           "size": 52,
           "matched": true,
@@ -112069,6 +112045,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "CollectedPiece::CollectedPiece",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "CollectedPiece::CollectedPiece",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "Sexy::SexyVector3",
           "size": 52,
           "matched": true,
@@ -112079,6 +112067,30 @@
           "size": 52,
           "matched": true,
           "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldGateLevelKey::WorldGateLevelKey",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "WorldGateLevelKey::WorldGateLevelKey",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "WorldGateLevelKey::WorldGateLevelKey",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "WorldGateLevelKey::WorldGateLevelKey",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
         },
         {
           "name": "Board::InitPlantGroupSystem",
@@ -112353,8 +112365,8 @@
         {
           "name": "Board::~Board",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::AddPowerup",
@@ -112451,6 +112463,12 @@
           "size": 28,
           "matched": true,
           "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldGateLevelKey",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
         },
         {
           "name": "Board::GetAllActivePlantGroups",
@@ -112959,14 +112977,14 @@
         {
           "name": "Board::MissionEndItem::~MissionEndItem",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::MissionEndItem::~MissionEndItem",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Board::OnAppLostFocus",
@@ -113065,6 +113083,18 @@
           "fuzzy_match_percent": 100.0
         },
         {
+          "name": "CollectedPiece::~CollectedPiece",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "CollectedPiece::~CollectedPiece",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "PresentRecord::~PresentRecord",
           "size": 4,
           "matched": true,
@@ -113072,6 +113102,30 @@
         },
         {
           "name": "PresentRecord::~PresentRecord",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldGateLevelKey::WorldGateLevelKey",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldGateLevelKey::WorldGateLevelKey",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldGateLevelKey::~WorldGateLevelKey",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldGateLevelKey::~WorldGateLevelKey",
           "size": 4,
           "matched": true,
           "fuzzy_match_percent": 100.0
@@ -116693,11 +116747,11 @@
     {
       "name": "src/PvZ2/Gameplay/Board/Lawn/LawnApp.cpp",
       "total_code": 142188,
-      "matched_code": 121184,
-      "matched_code_percent": 85.23,
+      "matched_code": 121012,
+      "matched_code_percent": 85.11,
       "total_functions": 839,
-      "matched_functions": 801,
-      "matched_functions_percent": 95.47,
+      "matched_functions": 800,
+      "matched_functions_percent": 95.35,
       "fuzzy_match_percent": 88.24,
       "functions": [
         {
@@ -117142,7 +117196,7 @@
           "name": "LawnApp::ShowWorldMap",
           "size": 372,
           "matched": false,
-          "fuzzy_match_percent": 86.02
+          "fuzzy_match_percent": 87.1
         },
         {
           "name": "LawnApp::onProfileSummarySelectResult",
@@ -118119,8 +118173,8 @@
         {
           "name": "LawnApp::ShowPVPMapUI",
           "size": 172,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
+          "matched": false,
+          "fuzzy_match_percent": 97.67
         },
         {
           "name": "LawnApp::showSpecifiedWidget",
@@ -160077,54 +160131,6 @@
       ]
     },
     {
-      "name": "src/PvZ2/Gameplay/Combat/Projectile/EffectAnimRig_StunionProjectile.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "EffectAnimRig_StunionProjectile::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EffectAnimRig_StunionProjectile::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Combat/Projectile/Effect_ProjectileHit.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Effect_ProjectileHit::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Effect_ProjectileHit::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/PvZ2/Gameplay/Combat/Projectile/Elaeocarpus/ElaeocarpusDefaultProjectile.cpp",
       "total_code": 2172,
       "matched_code": 0,
@@ -196846,10 +196852,10 @@
     },
     {
       "name": "src/PvZ2/Gameplay/Effects/Effect_SmallSoundWave.cpp",
-      "total_code": 596,
+      "total_code": 608,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 10,
+      "total_functions": 12,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -196911,6 +196917,18 @@
         {
           "name": "Effect_SmallSoundWave::SetSpawnPoint",
           "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Effect_SmallSoundWave::IsAbstract",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Effect_SmallSoundWave::GetClass",
+          "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
@@ -239170,10 +239188,10 @@
     },
     {
       "name": "src/PvZ2/Gameplay/GridItems/GridItemZombossPortal.cpp",
-      "total_code": 952,
+      "total_code": 964,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 11,
+      "total_functions": 13,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -239239,8 +239257,20 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "GridItemZombossPortal::IsAbstract",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "GridItemZombossPortal::setZomBoss",
           "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "GridItemZombossPortal::GetClass",
+          "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
@@ -371541,474 +371571,6 @@
       ]
     },
     {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupBeghouledShovel.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupBeghouledShovel::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupBeghouledShovel::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupBeghouledShuffle.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupBeghouledShuffle::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupBeghouledShuffle::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupMiniGamePerkBowling.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupMiniGamePerkBowling::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupMiniGamePerkBowling::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupMiniGamePerkRefreshCard.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupMiniGamePerkRefreshCard::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupMiniGamePerkRefreshCard::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupMiniGamePerkSelector.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupMiniGamePerkSelector::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupMiniGamePerkSelector::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupMiniGamePerkTimeBack.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupMiniGamePerkTimeBack::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupMiniGamePerkTimeBack::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupMiniGamePerkXRay.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupMiniGamePerkXRay::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupMiniGamePerkXRay::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupTouchBased.cpp",
-      "total_code": 28,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupTouchBased::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTouchBased::getActiveTouchIdent",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTouchBased::getLastTouchEvent",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTouchBased::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupTypeBeghouledShovel.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupTypeBeghouledShovel::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTypeBeghouledShovel::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupTypeBeghouledShuffle.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupTypeBeghouledShuffle::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTypeBeghouledShuffle::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupTypeVaseBreakerButter.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupTypeVaseBreakerButter::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTypeVaseBreakerButter::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupTypeVaseBreakerMove.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupTypeVaseBreakerMove::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupTypeVaseBreakerMove::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupVaseBreakerButter.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupVaseBreakerButter::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerButter::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupVaseBreakerColor.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupVaseBreakerColor::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerColor::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupVaseBreakerMove.cpp",
-      "total_code": 648,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 9,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupVaseBreakerMove::getFirstVaseAt",
-          "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtWeakPtrBase",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtWeakPtrBase",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtWeakPtrBase::GetObject",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtWeakPtrBase::IsValid",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtWeakPtrBase::GetId",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtWeakPtrBase::NotValid",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerMove::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerMove::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupVaseBreakerReveal.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupVaseBreakerReveal::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseBreakerReveal::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Misc/Powerup/PowerupVaseSelector.cpp",
-      "total_code": 224,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupVaseSelector::getFirstVaseAt",
-          "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseSelector::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupVaseSelector::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/PvZ2/Gameplay/Misc/Present/PresentTypeCoin.cpp",
       "total_code": 580,
       "matched_code": 0,
@@ -478306,10 +477868,10 @@
     },
     {
       "name": "src/PvZ2/Gameplay/Plants/SunPod/PlantAnimRig_Sunpod.cpp",
-      "total_code": 1580,
+      "total_code": 1592,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 11,
+      "total_functions": 13,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -478377,6 +477939,18 @@
         {
           "name": "PlantAnimRig_Sunpod::~PlantAnimRig_Sunpod",
           "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PlantAnimRig_Sunpod::IsAbstract",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "PlantAnimRig_Sunpod::GetClass",
+          "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
@@ -521133,30 +520707,6 @@
       ]
     },
     {
-      "name": "src/PvZ2/Gameplay/Waves/Sound/Effect_SmallSoundWave.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Effect_SmallSoundWave::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Effect_SmallSoundWave::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/PvZ2/Gameplay/Waves/Sound/SoundWaveCircle.cpp",
       "total_code": 2348,
       "matched_code": 0,
@@ -532613,60 +532163,60 @@
     {
       "name": "src/PvZ2/Gameplay/WorldMap/WorldData.cpp",
       "total_code": 8048,
-      "matched_code": 656,
-      "matched_code_percent": 8.15,
+      "matched_code": 8048,
+      "matched_code_percent": 100.0,
       "total_functions": 21,
-      "matched_functions": 9,
-      "matched_functions_percent": 42.86,
-      "fuzzy_match_percent": 8.15,
+      "matched_functions": 21,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "WorldData::StaticClassInit",
           "size": 5408,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::DeletePopAnimRigData",
           "size": 540,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::FindEventOfTypeByDataName",
           "size": 284,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::FindEventOfTypeByName",
           "size": 284,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::FindEvent",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::CountMainSpineLevels",
           "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::GetNextEventId",
           "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::FindEventByEventId",
           "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::WorldData",
@@ -532701,8 +532251,8 @@
         {
           "name": "WorldData::ContainsEvent",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::StaticNew",
@@ -532713,8 +532263,8 @@
         {
           "name": "WorldData::GetLocalizedWorldName",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::~WorldData",
@@ -532725,14 +532275,14 @@
         {
           "name": "WorldData::FindEventByDataName",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::FindEventByName",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldData::IsAbstract",
@@ -532751,12 +532301,12 @@
     {
       "name": "src/PvZ2/Gameplay/WorldMap/WorldMap.cpp",
       "total_code": 89156,
-      "matched_code": 208,
-      "matched_code_percent": 0.23,
+      "matched_code": 3696,
+      "matched_code_percent": 4.15,
       "total_functions": 266,
-      "matched_functions": 43,
-      "matched_functions_percent": 16.17,
-      "fuzzy_match_percent": 0.23,
+      "matched_functions": 135,
+      "matched_functions_percent": 50.75,
+      "fuzzy_match_percent": 4.21,
       "functions": [
         {
           "name": "WorldMap::initLoadedWorldResources",
@@ -533505,8 +533055,8 @@
         {
           "name": "WorldMap::TouchBegan",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::initializeZombossSoundRTPC",
@@ -533517,14 +533067,14 @@
         {
           "name": "WorldMap::StaticGetClass",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::showZenGardenReminder",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::snapToCurrentLocation",
@@ -533535,14 +533085,14 @@
         {
           "name": "WorldMap::RemovedFromManager",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::CenterOnMapEvent",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::EditorGetEventNamePrefix",
@@ -533559,8 +533109,8 @@
         {
           "name": "WorldMap::EditorClearSelectionGroup",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onContinueButtonPressed",
@@ -533571,224 +533121,224 @@
         {
           "name": "WorldMap::updateState_Loading",
           "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::TouchesCanceled",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onAppEnteredBackground",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::PrepForLoading",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SetStartingMouseDownPos",
           "size": 88,
           "matched": false,
-          "fuzzy_match_percent": 0.0
+          "fuzzy_match_percent": 63.64
         },
         {
           "name": "WorldMap::setCurrentMapEventItem",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::DrawPopanimRig",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::DrawWorldPopanimRig",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::CancelTutorial",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onEnterState_BackgroundInit",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onStartPVZ1Level",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::updateState_BackgroundLoading",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::OnGesturePinch",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::PlacePathDestinationAnimationOnEvent",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::ZoomOutNoAnimation",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::DoRewardUpgradeDialog",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::IsLoaded",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onEnterState_Loading",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::CanBeClosed",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::IsValidStateForInput",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::QueueForLoadLevel",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::initializeToUniverseMap",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::setupMap",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::updateState_BackgroundInit",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::IsUserInputEnabled",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::PlayZombossSound",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::StopActions",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SetupRiftEventBar",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::loadMap",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onRiftOverAcknowledged",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::refreshMapPathGroups",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::IsInState",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::remapWorldMapEvents",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::DrawZombossHologram",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::cleanupZombossSoundRTPC",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onServerTimeReceived",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::~WorldMap",
@@ -533799,110 +533349,110 @@
         {
           "name": "WorldMap::GetPopAnimRigByID",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::IsActionQueued",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onWorldMapShown",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::OnUnlockAllLevels",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::QueueForTransition",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onGateCancelButtonPressed",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onExitState_BackgroundLoading",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::CalculateMinMaxZoomForWorld",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::KillTutorialInput",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::ResetCameraVelocity",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::isTutorialDeprecated",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onYetiFUEDialogYesButton",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::PlayRandomZombossTaunts",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SetBaseOffset",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SetMouseDownPos",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::cleanUpCurrentEditEvent",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onAdBeginShowing",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onEnterState_Ready",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::EditorGetAnyMapArtEventAtLocation",
@@ -533931,32 +533481,32 @@
         {
           "name": "WorldMap::ForceTutorialToFinish",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::GetActionsMgr",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::GetMapPathGroups",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::GetMouseDownPos",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::GetPopAnimRigs",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::GetSpeedFactorNodeReveal",
@@ -533967,14 +533517,14 @@
         {
           "name": "WorldMap::GetStartingMouseDownPos",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::IsYetiBadgeVisible",
@@ -533985,92 +533535,92 @@
         {
           "name": "WorldMap::OnPathDestinationAnimationFinished",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::PurgeWorldMapActions",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SetAdviceText",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SetPreviousState",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SetupUnchartedBirthdayEventBar",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SwitchToArtifact",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SwitchToCustomLevelView",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SwitchToLevelUp",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SwitchToLottery",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SwitchToNostalgiaPVZGameView",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SwitchToPlantAvatar",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SwitchToPlantFamily",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::SwitchToPlantGeneEnhancement",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::getState",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onAdEnded",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::shouldPlayUniverseIntroTutorial",
@@ -534093,8 +533643,8 @@
         {
           "name": "WorldMap::updateStateMachine",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::DoWorldMapPlantRewardDialog",
@@ -534207,8 +533757,8 @@
         {
           "name": "WorldMap::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::KeyChar",
@@ -534249,8 +533799,8 @@
         {
           "name": "WorldMap::initLoadingResourcesGroupList",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::newMap",
@@ -534267,44 +533817,44 @@
         {
           "name": "WorldMap::onEnterState_BackgroundLoading",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onEnterState_WaitingToDie",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onExitState_BackgroundInit",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onExitState_Initializing",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onExitState_Loading",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onExitState_Ready",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onExitState_WaitingToDie",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap::onFinalizeStarGateAnimationFinished",
@@ -558267,54 +557817,6 @@
       ]
     },
     {
-      "name": "src/PvZ2/Gameplay/Zombies/EffectAnimRig_ZombieStatue.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "EffectAnimRig_ZombieStatue::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EffectAnimRig_ZombieStatue::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Effect_ZombieIceMove.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Effect_ZombieIceMove::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Effect_ZombieIceMove::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/PvZ2/Gameplay/Zombies/EggShell/ZombieAnimRig_EggShell.cpp",
       "total_code": 2380,
       "matched_code": 564,
@@ -571953,216 +571455,6 @@
       ]
     },
     {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemCardGameGravestoneZombieDeathSpawner.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemCardGameGravestoneZombieDeathSpawner::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCardGameGravestoneZombieDeathSpawner::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemCardGameGravestoneZombieTimeSpawner.cpp",
-      "total_code": 20,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemCardGameGravestoneZombieTimeSpawner::CollidesWithType",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCardGameGravestoneZombieTimeSpawner::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCardGameGravestoneZombieTimeSpawner::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemCardGameGravestoneZombieTimeSpawnerEnemy.cpp",
-      "total_code": 20,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemCardGameGravestoneZombieTimeSpawnerEnemy::CollidesWithType",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCardGameGravestoneZombieTimeSpawnerEnemy::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCardGameGravestoneZombieTimeSpawnerEnemy::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemCardGameZombieAction.cpp",
-      "total_code": 48,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemCardGameZombieAction::GetCooldownRound",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCardGameZombieAction::GetCurrentCooldownRound",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCardGameZombieAction::GetCurrentIntentionRound",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCardGameZombieAction::GetIndex",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCardGameZombieAction::GetIntentionRound",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCardGameZombieAction::GetRatio",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemCoalSteamZomboss.cpp",
-      "total_code": 52,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemCoalSteamZomboss::CollidesWithType",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCoalSteamZomboss::CanBeTargetedBy",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCoalSteamZomboss::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemCoalSteamZomboss::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemFestivalZombieTent.cpp",
-      "total_code": 68,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 5,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemFestivalZombieTent::CalcRenderOrder",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemFestivalZombieTent::GetCantPlantReason",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemFestivalZombieTent::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemFestivalZombieTent::ShouldBlockLevelCompletion",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemFestivalZombieTent::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemGravestoneZombieTimeSpawnerPropertySheet.cpp",
       "total_code": 12,
       "matched_code": 0,
@@ -572180,450 +571472,6 @@
         },
         {
           "name": "GridItemGravestoneZombieTimeSpawnerPropertySheet::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemSpeakerZomboss.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemSpeakerZomboss::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemSpeakerZomboss::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombieBoundTile.cpp",
-      "total_code": 124,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombieBoundTile::GatherPlantingRestrictions",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieBoundTile::CanBeTargetedBy",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieBoundTile::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieBoundTile::IsDamageableByPlants",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieBoundTile::ShouldClipWithWater",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieBoundTile::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombieBuffTileCondition.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombieBuffTileCondition::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieBuffTileCondition::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombieBuffTileShield.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombieBuffTileShield::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieBuffTileShield::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombieChanger.cpp",
-      "total_code": 220,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 7,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombieChanger::GatherPlantingRestrictions",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieChanger::IsDamageableByPlants",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieChanger::CalcRenderOrder",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieChanger::CanBeTargetedBy",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieChanger::CollidesWithType",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieChanger::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieChanger::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombieGasSmoke.cpp",
-      "total_code": 44,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombieGasSmoke::CanBeTargetedBy",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieGasSmoke::CollidesWithType",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieGasSmoke::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieGasSmoke::IsDamageable",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieGasSmoke::IsDamageableByPlants",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieGasSmoke::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombieMirrorQueenMirror.cpp",
-      "total_code": 184,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 7,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombieMirrorQueenMirror::GatherPlantingRestrictions",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenMirror::CalcRenderOrder",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenMirror::CollidesWithType",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenMirror::IsDamageable",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenMirror::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenMirror::CanBeTargetedBy",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenMirror::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombieMirrorQueenMirrorAnimRig.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombieMirrorQueenMirrorAnimRig::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenMirrorAnimRig::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombieMirrorQueenMirrorSubSystem.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombieMirrorQueenMirrorSubSystem::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenMirrorSubSystem::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombieMirrorQueenPoisonApplePuree.cpp",
-      "total_code": 92,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 5,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombieMirrorQueenPoisonApplePuree::CalcRenderOrder",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenPoisonApplePuree::CanBeTargetedBy",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenPoisonApplePuree::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenPoisonApplePuree::IsDamageable",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombieMirrorQueenPoisonApplePuree::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombiePortal_AnimRig.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombiePortal_AnimRig::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombiePortal_AnimRig::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombossPortal.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombossPortal::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombossPortal::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Grid/Item/GridItemZombossRobotBall.cpp",
-      "total_code": 76,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "GridItemZombossRobotBall::CalcRenderOrder",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombossRobotBall::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "GridItemZombossRobotBall::GetClass",
           "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -606158,30 +605006,6 @@
         },
         {
           "name": "ZombiePotionModuleProperties::GetModuleClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/PowerupMiniGamePerkKillAllZombies.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "PowerupMiniGamePerkKillAllZombies::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "PowerupMiniGamePerkKillAllZombies::GetClass",
           "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -639759,408 +638583,6 @@
       ]
     },
     {
-      "name": "src/PvZ2/Gameplay/Zombies/Zomboss.cpp",
-      "total_code": 5836,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 65,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Zomboss::StaticClassInit",
-          "size": 1172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onEnterState_Death",
-          "size": 432,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onUpdate",
-          "size": 384,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::showBossProgressMeter",
-          "size": 304,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onChangeActiveStage",
-          "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onEnterState_ChangeStage",
-          "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onEnterState_Epilogue",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onEnterState_Intro",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossProps::StaticClassInit",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::tryChangeStage",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::updateProgressMeter",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::IsInRow",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::hideProgressMeter",
-          "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::StaticGetClass",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossProps::StaticGetClass",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::setStartStageIndex",
-          "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onApplyCondition",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::IsDying",
-          "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onIntroAnimDone",
-          "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::TakeDamage",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::~Zomboss",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::~Zomboss",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::Zomboss",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::Zomboss",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::shouldZombossDie",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onZombieInitialize",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossProps::ZombossProps",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossProps::ZombossProps",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::introduceMyself",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::StaticNew",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossProps::StaticNew",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::getHeadIcon",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::~Zomboss",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossProps::~ZombossProps",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::setActiveStageIndex",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::shouldZombossChangeStages",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onEpilogueAnimDone",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossProps::~ZombossProps",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossProps::~ZombossProps",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onDieAnimDone",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::CanBeBlovered",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::CanBeFlickedOff",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::CanBeMowed",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::CanBePoisoned",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::CanBeStabbed",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::allowAshState",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::allowElectrocuteState",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::canChangeStage",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::isImmuneToShrinking",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::chooseDeathState",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onChangeStageAnimDone",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onEnterState_None",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onExitState_ChangeStage",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onExitState_Death",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onExitState_Epilogue",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onExitState_Intro",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::onExitState_None",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::startFunctioning",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::updateState_ChangeStage",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::updateState_Death",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::updateState_Epilogue",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::updateState_Intro",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Zomboss::updateState_None",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/PvZ2/Gameplay/Zombies/Zomboss/ActionShowZombossHologram.cpp",
       "total_code": 444,
       "matched_code": 0,
@@ -640353,192 +638775,6 @@
       ]
     },
     {
-      "name": "src/PvZ2/Gameplay/Zombies/Zomboss/Battle/ZombossBattleIntro.cpp",
-      "total_code": 2956,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 29,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "ZombossBattleIntro::startHealthMeterFill",
-          "size": 420,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::onUpdate",
-          "size": 332,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::AddReadySetPlantToAnimMgr",
-          "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::StaticClassInit",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntroProperties::StaticClassInit",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::ZombossBattleIntro",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::ZombossBattleIntro",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::continueReadySetPlant",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::onLoadComplete",
-          "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::registerForEvents",
-          "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::StaticGetClass",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntroProperties::StaticGetClass",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::OnLuaNotify",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::PlayIntro",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntroProperties::ZombossBattleIntroProperties",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntroProperties::ZombossBattleIntroProperties",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::StaticNew",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::initializeModule",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntroProperties::StaticNew",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::showZomboss",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::~ZombossBattleIntro",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntroProperties::~ZombossBattleIntroProperties",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::~ZombossBattleIntro",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::~ZombossBattleIntro",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntroProperties::~ZombossBattleIntroProperties",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntroProperties::~ZombossBattleIntroProperties",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleIntro::OnZombossIntroDone",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/PvZ2/Gameplay/Zombies/Zomboss/Battle/ZombossBattleIntroProperties.cpp",
       "total_code": 16,
       "matched_code": 0,
@@ -640562,324 +638798,6 @@
         },
         {
           "name": "ZombossBattleIntroProperties::GetModuleClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Zomboss/Battle/ZombossBattleModule.cpp",
-      "total_code": 5264,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 51,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "ZombossBattleModule::HandleStateMachine_ZombossBattleState",
-          "size": 1000,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::registerForEvents",
-          "size": 756,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::hideProgressMeter",
-          "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::onLoadComplete",
-          "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::updateProgressMeter",
-          "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::StaticClassInit",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModuleProperties::StaticClassInit",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::getBossMeterUIName",
-          "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::playZombossFailureMusic",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::playZombossIntroMusic",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::playZombossOutroMusic",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::StaticGetClass",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModuleProperties::StaticGetClass",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::gatherPlantingRestrictions",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::startZombossBattling",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::setState_ZombossBattleState",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::TriggerZombossExit",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModuleProperties::ZombossBattleModuleProperties",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModuleProperties::ZombossBattleModuleProperties",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::GetDeathLocation",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::ZombossBattleModule",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::ZombossBattleModule",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::onUpdate",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::~ZombossBattleModule",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::~ZombossBattleModule",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::GetRetreatColumn",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::SendZombossMusicEvent",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModuleProperties::~ZombossBattleModuleProperties",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModuleProperties::~ZombossBattleModuleProperties",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::GetZombossMechType",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::StaticNew",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModuleProperties::StaticNew",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::ShowZombossIntro",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::onPostLoad",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::checkWinCondition",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::~ZombossBattleModule",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModuleProperties::~ZombossBattleModuleProperties",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::IsZombossDone",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::onInitialized",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::spawnInitialZomboss",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::GetZombossStageCount",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::GetZombossStartStageIndex",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::initializeModule",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::OnGameplayStarted",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::onLastStandInit",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::onLastStandStart",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::spawnZomboss",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::HandleSuperFSMAction_ZombossBattleState",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossBattleModule::showProgressMeter",
           "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -646538,228 +644456,6 @@
         },
         {
           "name": "ModernZombossBattleModule::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/PvZ2/Gameplay/Zombies/Zomboss/Rift/ZombossRiftBattleModule.cpp",
-      "total_code": 3220,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 35,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "ZombossRiftBattleModule::registerForEvents",
-          "size": 540,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::gatherExtraChallenges",
-          "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::onShowProgressMeter",
-          "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::onLossImminent",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::onGameplayStarted",
-          "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::CheatSetTime",
-          "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::StaticClassInit",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::onSetCurrentPhase",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModuleProperties::StaticClassInit",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::StaticGetClass",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModuleProperties::StaticGetClass",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModuleProperties::ZombossRiftBattleModuleProperties",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModuleProperties::ZombossRiftBattleModuleProperties",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::AddTime",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::ZombossRiftBattleModule",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::ZombossRiftBattleModule",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::endLevel",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::IsVictory",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::StaticNew",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModuleProperties::StaticNew",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::HandlePointOfLoss",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::~ZombossRiftBattleModule",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModuleProperties::~ZombossRiftBattleModuleProperties",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::GetTotalZombossStages",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::onLoadComplete",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::~ZombossRiftBattleModule",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::~ZombossRiftBattleModule",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModuleProperties::~ZombossRiftBattleModuleProperties",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModuleProperties::~ZombossRiftBattleModuleProperties",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::CheatForceVictory",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::getPreventSave",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::onGameplayEnded",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ZombossRiftBattleModule::onGameplayUpdate",
           "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -916731,10 +914427,10 @@
     },
     {
       "name": "src/SexyAppFramework/Async/AsyncQueueCompletedSuccessfullyTask.cpp",
-      "total_code": 496,
+      "total_code": 504,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 7,
+      "total_functions": 8,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -916780,15 +914476,21 @@
           "size": 20,
           "matched": false,
           "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::AsyncQueueCompletedSuccessfullyTask::IsQueueSuccessTask",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Async/AsyncRemakeRequestTask.cpp",
-      "total_code": 400,
+      "total_code": 408,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 7,
+      "total_functions": 8,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -916834,15 +914536,21 @@
           "size": 20,
           "matched": false,
           "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::AsyncRemakeRequestTask::IsQueueSuccessTask",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Async/AsyncResumeRequestErrorTask.cpp",
-      "total_code": 884,
+      "total_code": 892,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 12,
+      "total_functions": 13,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -916915,6 +914623,12 @@
         },
         {
           "name": "Sexy::AsyncMainThreadTask::IsMainThreadTask",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::AsyncResumeRequestErrorTask::IsErrorReportingTask",
           "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -917097,10 +914811,10 @@
     },
     {
       "name": "src/SexyAppFramework/Async/AsyncTaskQueue.cpp",
-      "total_code": 1596,
+      "total_code": 1784,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 19,
+      "total_functions": 22,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -917148,8 +914862,20 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "Sexy::AsyncTaskQueue::HasPendingErrorTask",
+          "size": 104,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "Sexy::AsyncTaskQueue::RemoveCompletedTasks",
           "size": 88,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::AsyncTaskQueue::IsQueueEmpty",
+          "size": 76,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -917192,6 +914918,12 @@
         {
           "name": "Sexy::AsyncTaskQueue::GetPendingErrorTask",
           "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::AsyncTaskQueue::GetTasks",
+          "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -917271,10 +915003,10 @@
     },
     {
       "name": "src/SexyAppFramework/Base/BaseResource.cpp",
-      "total_code": 800,
+      "total_code": 872,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 11,
+      "total_functions": 14,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -917305,6 +915037,12 @@
         },
         {
           "name": "Sexy::BaseResource::BaseResource",
+          "size": 60,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::BaseResource::operator=",
           "size": 60,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -917342,6 +915080,18 @@
         {
           "name": "Sexy::BaseResource::~BaseResource",
           "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::BaseResource::IsAbstract",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::BaseResource::GetClass",
+          "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
@@ -921314,438 +919064,6 @@
         {
           "name": "Sexy::RtDbTable::Iterator::~Iterator",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/EATech/EAStdC/1.10.02/include/EAStdC/internal/Thread.cpp",
-      "total_code": 4432,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 70,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "EA::Thread::Thread::WaitForEnd",
-          "size": 412,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::AssertionFailureV",
-          "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetPthreadStackInfo",
-          "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::EnumerateThreads",
-          "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::AllocateThreadDynamicData",
-          "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::FreeThreadDynamicData",
-          "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetCallstackContext",
-          "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::SetPriority",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetThreadStackBase",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetCallstack",
-          "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetStackBase",
-          "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::SetThreadPriority",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::android_fake_atomic_cmpxchg_64",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::Begin",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::Begin",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::SetName",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetStackLimit",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::android_fake_atomic_swap_64",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetThreadPriority",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetThreadTime",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::SetThreadAffinityMask",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetThreadAffinityMask",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::android_fake_atomic_read_64",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::operator=",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::ThreadEnd",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::ThreadSleep",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::FindThreadDynamicData",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::AssertionFailure",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetThreadAffinityMask",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::SetThreadAffinityMask",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::__atomic_swap_ex2",
-          "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::SetStackBase",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::__atomic_cmpxchg_ex2",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetCallstackContext",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetThreadId",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::SetAssertionFailureFunction",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::GetAffinityMask",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::SetGlobalRunnableClassUserWrapper",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::SetGlobalRunnableFunctionUserWrapper",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetProcessorCount",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::Thread",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::Thread",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::__atomic_dec_ex2",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::__atomic_inc_ex2",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::EAThreadGlobalVars::EAThreadGlobalVars",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::EAThreadGlobalVars::EAThreadGlobalVars",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetInstructionPointer",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::SetAffinityMask",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::SetProcessor",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetAllocator",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetModuleFromAddress",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::SetAllocator",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::SetAllocator",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::GetGlobalRunnableClassUserWrapper",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::GetGlobalRunnableFunctionUserWrapper",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::~Thread",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::~Thread",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::EAThreadGlobalVars::~EAThreadGlobalVars",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::EAThreadGlobalVars::~EAThreadGlobalVars",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetModuleHandleFromAddress",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetThreadProcessor",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::Thread",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::Thread",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetCallstackContextSysThreadId",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetSysThreadId",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::GetThreadId",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::InitCallstack",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::SetThreadProcessor",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::ShutdownCallstack",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "EA::Thread::Thread::Wake",
-          "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
@@ -931539,17 +928857,179 @@
     },
     {
       "name": "src/SexyAppFramework/EATech/Thread/Thread.cpp",
-      "total_code": 304,
+      "total_code": 4736,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 8,
+      "total_functions": 78,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
       "functions": [
         {
+          "name": "EA::Thread::Thread::WaitForEnd",
+          "size": 412,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::AssertionFailureV",
+          "size": 272,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetPthreadStackInfo",
+          "size": 220,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::EnumerateThreads",
+          "size": 196,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::AllocateThreadDynamicData",
+          "size": 184,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::FreeThreadDynamicData",
+          "size": 180,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetCallstackContext",
+          "size": 172,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::SetPriority",
+          "size": 164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetThreadStackBase",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::Thread::GetPriority",
           "size": 128,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetCallstack",
+          "size": 120,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetStackBase",
+          "size": 120,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SetThreadPriority",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::android_fake_atomic_cmpxchg_64",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::Begin",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::Begin",
+          "size": 108,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::SetName",
+          "size": 104,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetStackLimit",
+          "size": 92,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::android_fake_atomic_swap_64",
+          "size": 92,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetThreadPriority",
+          "size": 88,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetThreadTime",
+          "size": 88,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SetThreadAffinityMask",
+          "size": 88,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetThreadAffinityMask",
+          "size": 80,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::android_fake_atomic_read_64",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::operator=",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadEnd",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadSleep",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::FindThreadDynamicData",
+          "size": 60,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -931560,8 +929040,68 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::AssertionFailure",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::Thread::GetStatus",
           "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetThreadAffinityMask",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SetThreadAffinityMask",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::__atomic_swap_ex2",
+          "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SetStackBase",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::__atomic_cmpxchg_ex2",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetCallstackContext",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetThreadId",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SetAssertionFailureFunction",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::GetAffinityMask",
+          "size": 28,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -931572,7 +929112,115 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::Thread::SetGlobalRunnableClassUserWrapper",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::SetGlobalRunnableFunctionUserWrapper",
+          "size": 28,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetProcessorCount",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::Thread",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::Thread",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::__atomic_dec_ex2",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::__atomic_inc_ex2",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::EAThreadGlobalVars::EAThreadGlobalVars",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::EAThreadGlobalVars::EAThreadGlobalVars",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetInstructionPointer",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::SetAffinityMask",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::SetProcessor",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetAllocator",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetModuleFromAddress",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::Mutex::HasLock",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SetAllocator",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SetAllocator",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::GetGlobalRunnableClassUserWrapper",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::GetGlobalRunnableFunctionUserWrapper",
           "size": 16,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -931580,6 +929228,42 @@
         {
           "name": "EA::Thread::Thread::GetId",
           "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::~Thread",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::~Thread",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::EAThreadGlobalVars::~EAThreadGlobalVars",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::EAThreadGlobalVars::~EAThreadGlobalVars",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetModuleHandleFromAddress",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetThreadProcessor",
+          "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -931592,6 +929276,60 @@
         {
           "name": "EA::Thread::Semaphore::GetCount",
           "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::Thread",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::Thread",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetCallstackContextSysThreadId",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetSysThreadId",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::GetThreadId",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::InitCallstack",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SetThreadProcessor",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ShutdownCallstack",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Thread::Wake",
+          "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
@@ -931904,29 +929642,11 @@
       ]
     },
     {
-      "name": "src/SexyAppFramework/EATech/coreallocator/Allocator.cpp",
-      "total_code": 88,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 1,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "EA::Allocator::StackAllocator::ValidateAddress",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/SexyAppFramework/EATech/coreallocator/StackAllocator.cpp",
-      "total_code": 1860,
+      "total_code": 1948,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 16,
+      "total_functions": 17,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -931988,6 +929708,12 @@
         {
           "name": "EA::Allocator::StackAllocator::StackAllocator",
           "size": 96,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Allocator::StackAllocator::ValidateAddress",
+          "size": 88,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -937323,10 +935049,10 @@
     },
     {
       "name": "src/SexyAppFramework/Graphics/Transform.cpp",
-      "total_code": 708,
+      "total_code": 908,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 9,
+      "total_functions": 11,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -937334,6 +935060,12 @@
         {
           "name": "Sexy::Transform::Scale",
           "size": 264,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Transform::CalcMatrix",
+          "size": 164,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -937370,6 +935102,12 @@
         {
           "name": "Sexy::Transform::Transform",
           "size": 40,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::Transform::GetMatrix",
+          "size": 36,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -937605,10 +935343,10 @@
     },
     {
       "name": "src/SexyAppFramework/Info/ResourceInfo.cpp",
-      "total_code": 1148,
+      "total_code": 1160,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 14,
+      "total_functions": 16,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -937680,6 +935418,12 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "Sexy::ResourceInfo::IsAbstract",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "Sexy::ResourceInfo::SetRtId",
           "size": 8,
           "matched": false,
@@ -937696,15 +935440,21 @@
           "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResourceInfo::GetClass",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Info/ResumableRequestInfo.cpp",
-      "total_code": 7220,
+      "total_code": 7912,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 33,
+      "total_functions": 39,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -937818,8 +935568,38 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "Sexy::ResumableRequestInfo::IsQueueEmpty",
+          "size": 124,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "Sexy::ResumableRequestInfo::SetParentRequest",
           "size": 120,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResumableRequestInfo::GetCachedFileName",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResumableRequestInfo::GetTargetFilePath",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResumableRequestInfo::getLastModifiedTimeStamp",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResumableRequestInfo::getQueueName",
+          "size": 116,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -937843,6 +935623,12 @@
         },
         {
           "name": "Sexy::ResumableRequestInfo::GetPos",
+          "size": 104,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ResumableRequestInfo::getParentRequest",
           "size": 104,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -938007,10 +935793,10 @@
     },
     {
       "name": "src/SexyAppFramework/Leaderboard/LeaderboardEntry.cpp",
-      "total_code": 272,
+      "total_code": 1000,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 7,
+      "total_functions": 16,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -938018,6 +935804,60 @@
         {
           "name": "Sexy::LeaderboardEntry::SetField",
           "size": 248,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::LeaderboardEntry::GetField",
+          "size": 192,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::LeaderboardEntry::GetStringValue",
+          "size": 164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::LeaderboardEntry::GetBinaryValue",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::LeaderboardEntry::GetDoubleValue",
+          "size": 56,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::LeaderboardEntry::GetFloatValue",
+          "size": 56,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::LeaderboardEntry::GetInt64Value",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::LeaderboardEntry::GetIntValue",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::LeaderboardEntry::operator=",
+          "size": 36,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::LeaderboardEntry::HasField",
+          "size": 28,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -939543,17 +937383,29 @@
     },
     {
       "name": "src/SexyAppFramework/Network/IAsyncNetworkTask.cpp",
-      "total_code": 824,
+      "total_code": 1112,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 12,
+      "total_functions": 16,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
       "functions": [
         {
+          "name": "Sexy::IAsyncNetworkTask::getParentQueueName",
+          "size": 168,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "Sexy::IAsyncNetworkTask::Run",
           "size": 160,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::IAsyncNetworkTask::GetState",
+          "size": 104,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -939614,6 +937466,18 @@
         {
           "name": "Sexy::IAsyncNetworkTask::SetPendingRunState",
           "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::IAsyncNetworkTask::IsErrorReportingTask",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::IAsyncNetworkTask::IsQueueSuccessTask",
+          "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -945651,10 +943515,10 @@
     },
     {
       "name": "src/SexyAppFramework/Profile/NullProfileData.cpp",
-      "total_code": 384,
+      "total_code": 392,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 24,
+      "total_functions": 25,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -945686,6 +943550,12 @@
         {
           "name": "Sexy::NullProfileData::~NullProfileData",
           "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::NullProfileData::GetGamepadIndex",
+          "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -951063,10 +948933,10 @@
     },
     {
       "name": "src/SexyAppFramework/Rt/RtClass.cpp",
-      "total_code": 2524,
+      "total_code": 2880,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 18,
+      "total_functions": 23,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
@@ -951108,6 +948978,12 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "Sexy::RtClass::FindProtocol",
+          "size": 172,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "Sexy::RtClass::ClassInit",
           "size": 168,
           "matched": false,
@@ -951144,6 +949020,18 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "Sexy::RtClass::IsDerivedFrom",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::RtClass::GetBoundReflectionClass",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "Sexy::RtClass::StaticNew",
           "size": 44,
           "matched": false,
@@ -951176,6 +949064,18 @@
         {
           "name": "Sexy::RtClass::StaticGetClassCount",
           "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::RtClass::IsAbstract",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::RtClass::GetClass",
+          "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
@@ -954789,14 +952689,20 @@
     },
     {
       "name": "src/SexyAppFramework/StructuredData/ListDataElement.cpp",
-      "total_code": 1000,
+      "total_code": 1296,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 8,
+      "total_functions": 9,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
       "functions": [
+        {
+          "name": "Sexy::ListDataElement::operator=",
+          "size": 296,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
         {
           "name": "Sexy::ListDataElement::ListDataElement",
           "size": 216,
@@ -959084,324 +956990,6 @@
       ]
     },
     {
-      "name": "src/SexyAppFramework/Templates/Async/AsyncQueueCompletedSuccessfullyTask.cpp",
-      "total_code": 8,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 1,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::AsyncQueueCompletedSuccessfullyTask::IsQueueSuccessTask",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Async/AsyncRemakeRequestTask.cpp",
-      "total_code": 8,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 1,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::AsyncRemakeRequestTask::IsQueueSuccessTask",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Async/AsyncResumeRequestErrorTask.cpp",
-      "total_code": 8,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 1,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::AsyncResumeRequestErrorTask::IsErrorReportingTask",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Async/AsyncTaskQueue.cpp",
-      "total_code": 188,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::AsyncTaskQueue::HasPendingErrorTask",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::AsyncTaskQueue::IsQueueEmpty",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::AsyncTaskQueue::GetTasks",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/BaseResource.cpp",
-      "total_code": 72,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::BaseResource::operator=",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::BaseResource::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::BaseResource::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/GenericResFile.cpp",
-      "total_code": 20,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::GenericResFile::GetFilePath",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::GenericResFile::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::GenericResFile::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/IAsyncNetworkTask.cpp",
-      "total_code": 288,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::IAsyncNetworkTask::getParentQueueName",
-          "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::IAsyncNetworkTask::GetState",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::IAsyncNetworkTask::IsErrorReportingTask",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::IAsyncNetworkTask::IsQueueSuccessTask",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/LeaderboardEntry.cpp",
-      "total_code": 728,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 9,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::LeaderboardEntry::GetField",
-          "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::LeaderboardEntry::GetStringValue",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::LeaderboardEntry::GetBinaryValue",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::LeaderboardEntry::GetDoubleValue",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::LeaderboardEntry::GetFloatValue",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::LeaderboardEntry::GetInt64Value",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::LeaderboardEntry::GetIntValue",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::LeaderboardEntry::operator=",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::LeaderboardEntry::HasField",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/ListDataElement.cpp",
-      "total_code": 296,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 1,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ListDataElement::operator=",
-          "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/NullProfileData.cpp",
-      "total_code": 8,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 1,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::NullProfileData::GetGamepadIndex",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/RSBPatcher.cpp",
-      "total_code": 348,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 4,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::RSBPatcher::GetProgress",
-          "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RSBPatcher::GetErrorReason",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RSBPatcher::GetStatus",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RSBPatcher::IsFinished",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
       "name": "src/SexyAppFramework/Templates/RenderEffectDefinition.cpp",
       "total_code": 12,
       "matched_code": 0,
@@ -959419,138 +957007,6 @@
         },
         {
           "name": "Sexy::RenderEffectDefinition::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/ResStreamsGroup.cpp",
-      "total_code": 296,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 1,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ResStreamsGroup::operator=",
-          "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/ResStreamsPool.cpp",
-      "total_code": 332,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 1,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ResStreamsPool::operator=",
-          "size": 332,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Resource/ResourceClass.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ResourceClass::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceClass::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Resource/ResourceGroup.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ResourceGroup::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceGroup::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Resource/ResourceInfo.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ResourceInfo::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfo::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Resource/ResourceInfoClass.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ResourceInfoClass::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResourceInfoClass::GetClass",
           "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -959672,360 +957128,6 @@
         {
           "name": "Sexy::ResourceInfoTypes::SoundRes::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/ResumableRequestInfo.cpp",
-      "total_code": 692,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ResumableRequestInfo::IsQueueEmpty",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResumableRequestInfo::GetCachedFileName",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResumableRequestInfo::GetTargetFilePath",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResumableRequestInfo::getLastModifiedTimeStamp",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResumableRequestInfo::getQueueName",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ResumableRequestInfo::getParentRequest",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Rt/RtClass.cpp",
-      "total_code": 356,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 5,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::RtClass::FindProtocol",
-          "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtClass::IsDerivedFrom",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtClass::GetBoundReflectionClass",
-          "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtClass::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtClass::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Rt/RtDbTable.cpp",
-      "total_code": 2580,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 22,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::RtDbTable::WriteTableRtonKeys",
-          "size": 536,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::WriteRtonRtIdList",
-          "size": 436,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::GetIdForUid",
-          "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::GetIdForAlias",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::GetUidForId",
-          "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::GetSlotForId",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::SetObjectIsStandalone",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::SetObjectIsWatched",
-          "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::Iterator",
-          "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::GetObjectForId",
-          "size": 96,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::SetObjectDeletionMode",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::GetObjectDeletionMode",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::GetCurrentPackageName",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::SetSlotObjectDeletionMode",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::ReplaceObjectForId",
-          "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::GetObjectIsStandalone",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::GetObjectIsWatched",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::GetRefCountForId",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::Iterator",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::Iterator",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::GetTableOptions",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtDbTable::HasCurrentPackage",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Rt/RtIdProtocol.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::RtIdProtocol::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtIdProtocol::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Rt/RtProtocol.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::RtProtocol::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtProtocol::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Rt/RtProtocolClass.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::RtProtocolClass::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtProtocolClass::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/SoundResource.cpp",
-      "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::SoundResource::IsAbstract",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::SoundResource::GetClass",
-          "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/Templates/Transform.cpp",
-      "total_code": 200,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::Transform::CalcMatrix",
-          "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::Transform::GetMatrix",
-          "size": 36,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
