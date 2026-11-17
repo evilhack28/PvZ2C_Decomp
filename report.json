@@ -1,18 +1,18 @@
 {
-  "generated": "2026-11-16T02:30:49+00:00",
+  "generated": "2026-11-17T20:00:44+00:00",
   "measures": {
     "total_functions": 154523,
-    "matched_functions": 38382,
-    "matched_functions_percent": 24.84,
+    "matched_functions": 38592,
+    "matched_functions_percent": 24.97,
     "total_code": 24311108,
-    "matched_code": 3016248,
-    "matched_code_percent": 12.41,
-    "fuzzy_match_percent": 13.31,
-    "started_units": 2570,
+    "matched_code": 3037376,
+    "matched_code_percent": 12.49,
+    "fuzzy_match_percent": 13.4,
+    "started_units": 2586,
     "total_units": 8293,
-    "started_code": 10498712,
-    "started_matched_code": 3016248,
-    "started_percent": 28.73,
+    "started_code": 10533920,
+    "started_matched_code": 3037376,
+    "started_percent": 28.83,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -78762,90 +78762,90 @@
     {
       "name": "src/PvZ2/Data/Plant/PlantWarsEndOfPlayData.cpp",
       "total_code": 956,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 956,
+      "matched_code_percent": 100.0,
       "total_functions": 13,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 13,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PlantWarsEndOfPlayData::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::PlantWarsEndOfPlayData",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::PlantWarsEndOfPlayData",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::operator=",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::~PlantWarsEndOfPlayData",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::~PlantWarsEndOfPlayData",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::PlantWarsEndOfPlayData",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::PlantWarsEndOfPlayData",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::~PlantWarsEndOfPlayData",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsEndOfPlayData::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -78912,12 +78912,12 @@
     {
       "name": "src/PvZ2/Data/Plant/PlantWarsLevelTempData.cpp",
       "total_code": 1260,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 804,
+      "matched_code_percent": 63.81,
       "total_functions": 26,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 16,
+      "matched_functions_percent": 61.54,
+      "fuzzy_match_percent": 63.81,
       "functions": [
         {
           "name": "PlantWarsLevelTempData::DeleteNode",
@@ -78928,20 +78928,20 @@
         {
           "name": "PlantWarsLevelTempData::FillData",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelTempData::Assign",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelTempData::GetNodePlantPacket",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNodeData::operator=",
@@ -78952,32 +78952,32 @@
         {
           "name": "PlantWarsNodeData::PlantWarsNodeData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNodeData::PlantWarsNodeData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNodeData::PlantWarsNodeData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNodeData::PlantWarsNodeData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelTempData::GetNodePlantPackets",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNodeData::PlantWarsNodeData",
@@ -78994,38 +78994,38 @@
         {
           "name": "PlantWarsLevelTempData::PlantWarsLevelTempData",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelTempData::PlantWarsLevelTempData",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelTempData::AddNode",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelTempData::SetLevelTime",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelTempData::GetLevelTime",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelTempData::ClearNode",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelTempData::PlantWarsLevelTempData",
@@ -79066,308 +79066,308 @@
         {
           "name": "PlantWarsNodeData::~PlantWarsNodeData",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNodeData::~PlantWarsNodeData",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Data/Plant/PlantWarsMainEntryData.cpp",
       "total_code": 1584,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1584,
+      "matched_code_percent": 100.0,
       "total_functions": 11,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 11,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PlantWarsMainEntryData::StaticClassInit",
           "size": 980,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsMainEntryData::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsMainEntryData::PlantWarsMainEntryData",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsMainEntryData::PlantWarsMainEntryData",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsMainEntryData::operator=",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsMainEntryData::~PlantWarsMainEntryData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsMainEntryData::~PlantWarsMainEntryData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsMainEntryData::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsMainEntryData::~PlantWarsMainEntryData",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsMainEntryData::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsMainEntryData::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Data/Plant/PlantWarsStarRewardNetworkData.cpp",
       "total_code": 644,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 644,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PlantWarsStarRewardNetworkData::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStarRewardNetworkData::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStarRewardNetworkData::~PlantWarsStarRewardNetworkData",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStarRewardNetworkData::~PlantWarsStarRewardNetworkData",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStarRewardNetworkData::PlantWarsStarRewardNetworkData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStarRewardNetworkData::PlantWarsStarRewardNetworkData",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStarRewardNetworkData::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStarRewardNetworkData::~PlantWarsStarRewardNetworkData",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStarRewardNetworkData::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStarRewardNetworkData::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Data/Plant/PlantWarsStartOfPlayData.cpp",
       "total_code": 564,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 564,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PlantWarsStartOfPlayData::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStartOfPlayData::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStartOfPlayData::PlantWarsStartOfPlayData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStartOfPlayData::PlantWarsStartOfPlayData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStartOfPlayData::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStartOfPlayData::~PlantWarsStartOfPlayData",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStartOfPlayData::~PlantWarsStartOfPlayData",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStartOfPlayData::~PlantWarsStartOfPlayData",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStartOfPlayData::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsStartOfPlayData::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Data/Plant/PlantWarsTransferOfPlayData.cpp",
       "total_code": 564,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 564,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PlantWarsTransferOfPlayData::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsTransferOfPlayData::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsTransferOfPlayData::PlantWarsTransferOfPlayData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsTransferOfPlayData::PlantWarsTransferOfPlayData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsTransferOfPlayData::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsTransferOfPlayData::~PlantWarsTransferOfPlayData",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsTransferOfPlayData::~PlantWarsTransferOfPlayData",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsTransferOfPlayData::~PlantWarsTransferOfPlayData",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsTransferOfPlayData::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsTransferOfPlayData::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -181200,12 +181200,12 @@
     {
       "name": "src/PvZ2/Debug/AutoTest/AutoTestAllLevel.cpp",
       "total_code": 7824,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2428,
+      "matched_code_percent": 31.03,
       "total_functions": 29,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 23,
+      "matched_functions_percent": 79.31,
+      "fuzzy_match_percent": 31.03,
       "functions": [
         {
           "name": "AutoTestAllLevel::updateState",
@@ -181240,80 +181240,80 @@
         {
           "name": "AutoTestAllLevel::RefreshNewLevelList",
           "size": 320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoTestPLantDie",
           "size": 308,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoStartFirstLevel",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoTestAllLevel",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoTestAllLevel",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoEnterLevel",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::ForceFinishLevel",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoStartLevelFight",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::StaticGetClass",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::~AutoTestAllLevel",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::~AutoTestAllLevel",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoEnterWorld",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoTestSkyCityDamage",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::SkipPooyan",
@@ -181324,74 +181324,74 @@
         {
           "name": "AutoTestAllLevel::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::SkipSeedChooser",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::~AutoTestAllLevel",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoTestZombieCloseToHouse",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoFinishLoseLevel",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoFinishWinLevel",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::ConfirmStartMiniGame",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::AutoConfirmOver",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevel::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Debug/AutoTest/AutoTestAllLevelUnlock.cpp",
       "total_code": 3224,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2104,
+      "matched_code_percent": 65.26,
       "total_functions": 17,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 15,
+      "matched_functions_percent": 88.24,
+      "fuzzy_match_percent": 65.26,
       "functions": [
         {
           "name": "AutoTestAllLevelUnlock::UpdateUnlockState",
@@ -181402,56 +181402,56 @@
         {
           "name": "AutoTestAllLevelUnlock::updateState",
           "size": 648,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::EnterWorldMap",
           "size": 412,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::ChangeWorldMap",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::AutoTestAllLevelUnlock",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::AutoTestAllLevelUnlock",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::StaticGetClass",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::EnterUniverse",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::~AutoTestAllLevelUnlock",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::~AutoTestAllLevelUnlock",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::ShowWorldPrebview",
@@ -181462,38 +181462,38 @@
         {
           "name": "AutoTestAllLevelUnlock::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::~AutoTestAllLevelUnlock",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::AutoConfirmOver",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::EnterWorldMapFinish",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestAllLevelUnlock::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -181530,126 +181530,126 @@
     {
       "name": "src/PvZ2/Debug/AutoTest/AutoTestPlantLevelUp.cpp",
       "total_code": 2932,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2932,
+      "matched_code_percent": 100.0,
       "total_functions": 17,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 17,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "AutoTestPlantLevelUp::updateState",
           "size": 800,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::PlantTestSelectedOk",
           "size": 680,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::PlantTestAddPiceceToServer",
           "size": 496,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::PlantTestSyncPlantFinish",
           "size": 496,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::StaticGetClass",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::AutoTestPlantLevelUp",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::AutoTestPlantLevelUp",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::PlantTestShowUI",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::~AutoTestPlantLevelUp",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::~AutoTestPlantLevelUp",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::~AutoTestPlantLevelUp",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::AutoConfirmOver",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::PlantTestLevelUpOver",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::PlantTestUnlockOver",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantLevelUp::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Debug/AutoTest/AutoTestPlantsVsZombies.cpp",
       "total_code": 6580,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2672,
+      "matched_code_percent": 40.61,
       "total_functions": 32,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 24,
+      "matched_functions_percent": 75.0,
+      "fuzzy_match_percent": 40.61,
       "functions": [
         {
           "name": "AutoTestPlantsVsZombies::updateState",
@@ -181684,20 +181684,20 @@
         {
           "name": "AutoTestPlantsVsZombies::addZombie",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::addPlant",
           "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::GetPlants",
           "size": 260,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::changeStartWorld",
@@ -181708,8 +181708,8 @@
         {
           "name": "AutoTestPlantsVsZombies::PlantsVsZombiesUpdate",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::checkAndAddZombie",
@@ -181726,140 +181726,140 @@
         {
           "name": "AutoTestPlantsVsZombies::PlantsVsZombiesStart",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::AutoTestPlantsVsZombies",
           "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::AutoTestPlantsVsZombies",
           "size": 176,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::QuitLevel",
           "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::OnZombieCloseToHouse",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::StaticGetClass",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::onZombieDied",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::getWorld",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::~AutoTestPlantsVsZombies",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::~AutoTestPlantsVsZombies",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::AutoTestSkyCityDamage",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::onPlantDied",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::~AutoTestPlantsVsZombies",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::AutoFinishWinLevel",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::killZombie",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::AutoConfirmOver",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::AutoStartNextLevel",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "AutoTestPlantsVsZombies::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Debug/AutoTest/PVZAutoTest.cpp",
       "total_code": 4,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 4,
+      "matched_code_percent": 100.0,
       "total_functions": 1,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 1,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "PVZAutoTest::SetupAutoTest",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -182754,96 +182754,96 @@
     {
       "name": "src/PvZ2/Debug/Cheat/GameSpawn/CheatGameSpawnCollectable.cpp",
       "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 12,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "CheatGameSpawnCollectable::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameSpawnCollectable::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Debug/Cheat/GameSpawn/CheatGameSpawnCreatureCommand.cpp",
       "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 12,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "CheatGameSpawnCreatureCommand::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameSpawnCreatureCommand::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Debug/Cheat/GameSpawn/CheatGameSpawnPlantCommand.cpp",
       "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 12,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "CheatGameSpawnPlantCommand::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameSpawnPlantCommand::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/PvZ2/Debug/Cheat/GameSpawn/CheatGameSpawnZombieCommand.cpp",
       "total_code": 12,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 12,
+      "matched_code_percent": 100.0,
       "total_functions": 2,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "CheatGameSpawnZombieCommand::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CheatGameSpawnZombieCommand::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -703684,12 +703684,12 @@
     {
       "name": "src/PvZ2/Managers/Plant/PlantWarsNetworkMgr.cpp",
       "total_code": 9024,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 5824,
+      "matched_code_percent": 64.54,
       "total_functions": 61,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 52,
+      "matched_functions_percent": 85.25,
+      "fuzzy_match_percent": 64.54,
       "functions": [
         {
           "name": "PlantWarsNetworkMgr::RequestEndPlayData",
@@ -703712,14 +703712,14 @@
         {
           "name": "PlantWarsNetworkMgr::syncWorldMapInfo",
           "size": 444,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::syncMainEntryInfo",
           "size": 440,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetLevelStarNumber",
@@ -703730,62 +703730,62 @@
         {
           "name": "PlantWarsNetworkMgr::GetCurrentLevelData",
           "size": 320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::SetCurrentLevelNodeScore",
           "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetLevelStatus",
           "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::PlantWarsNetworkMgr",
           "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::PlantWarsNetworkMgr",
           "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::ObtainLeaderBoardBonus",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::ObtainStarReward",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetCurrentWorldData",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::onNotifyRefreshActivityList",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::RequestMainEntryData",
           "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetTitleDescription",
@@ -703808,8 +703808,8 @@
         {
           "name": "PlantWarsNetworkMgr::GetCurrentLevelScoreList",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetTitleIconImage",
@@ -703820,38 +703820,38 @@
         {
           "name": "PlantWarsNetworkMgr::GetLeaderBoardBonusCurrentIndex",
           "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::AddNodePlant",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::DeleteNodePlant",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::RequestNetwork",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::~PlantWarsNetworkMgr",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::~PlantWarsNetworkMgr",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelData::operator=",
@@ -703862,200 +703862,200 @@
         {
           "name": "PlantWarsLevelData::PlantWarsLevelData",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelData::PlantWarsLevelData",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelData::PlantWarsLevelData",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelData::PlantWarsLevelData",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::CalcNodeType",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetLevelTime",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetNodePlantPacket",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetLevelTotalScore",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetLevelScore",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetLevelTargetScore",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetLevelTargetStarInfoScore",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetLevelTargetStarInfoStatus",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetNodePlantPackets",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelData::~PlantWarsLevelData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelData::~PlantWarsLevelData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelData::PlantWarsLevelData",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsLevelData::PlantWarsLevelData",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::SetLevelTime",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetLevelTargetStatus",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetLevelTargetTotalScore",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::ClearNode",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetCurrentLevel",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetLevelTime",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::~PlantWarsNetworkMgr",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetCurrentLevelInfo",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetCurrentWorldId",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetEndPlayData",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetMainEntryData",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::GetPrefixWorld",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::IsOffSeason",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::SetCurrentLevel",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::RequestStartPlayData",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlantWarsNetworkMgr::RequestTransferPlayData",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
