@@ -74,13 +74,23 @@ void AndroidGraphicsDriver::ReinitForSurfaceChange(UI_ORIENTATION theOrientation
 
 	if (Android::Graphics::CanSetGLViewScaleFactor(mAppDriver))
 	{
+		float aSW;
+		float aSH;
 		float aScale;
 		if (abs(mScreenWidth - aWidth) > abs(mScreenHeight - aHeight))
-			aScale = (float)aWidth / mScreenWidth;
+		{
+			aSW = mScreenWidth;
+			aSH = mScreenHeight;
+			aScale = aWidth / aSW;
+		}
 		else
-			aScale = (float)aHeight / mScreenHeight;
-		int aScaledHeight = (int)(aScale * mScreenHeight);
-		int aScaledWidth = (int)(aScale * mScreenWidth);
+		{
+			aSW = mScreenWidth;
+			aSH = mScreenHeight;
+			aScale = aHeight / aSH;
+		}
+		int aScaledHeight = (int)(aSH * aScale);
+		int aScaledWidth = (int)(aSW * aScale);
 		if (aScaledWidth < aWidth || aScaledHeight < aHeight)
 		{
 			if (aWidth - aScaledWidth > aHeight - aScaledHeight)
