@@ -31,3 +31,8 @@ void Effect_Barrage::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(Effect_Barrage *, viceBarrage);
 	REFLECTION_CLASSBUILDER_END(Effect_Barrage);
 }
+
+Effect_Barrage* Effect_Barrage::GetViceBarrage()
+{
+	return viceBarrage;
+}

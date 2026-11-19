@@ -8,6 +8,7 @@
 #include "SexyAppFramework/Common.h"
 
 #include "UIWidgetText.h"
+#include "StringHelper.h"
 
 void UIWidgetText::Update()
 {
@@ -15,4 +16,9 @@ void UIWidgetText::Update()
 
 UIWidgetText::~UIWidgetText()
 {
+}
+
+void UIWidgetText::SetFontIndex(int idx)
+{
+	SetFont(StringHelper::ToFont(idx));
 }

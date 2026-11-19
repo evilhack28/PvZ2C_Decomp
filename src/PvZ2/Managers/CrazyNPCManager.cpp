@@ -30,3 +30,9 @@ void CrazyNPCManager::ForceEndNarrative()
 void CrazyNPCManager::addToLoadingResourcesGroupList(const std::string& i_groupName)
 {
 }
+
+void CrazyNPCManager::FinisAllTalking()
+{
+	stopAllTalking();
+	finishNarrative();
+}

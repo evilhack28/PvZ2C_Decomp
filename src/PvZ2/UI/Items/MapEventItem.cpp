@@ -12,3 +12,17 @@
 void MapEventItem::DrawMapAdventurePlant(Sexy::Graphics* i_g, WorldMapCamera* i_camera)
 {
 }
+
+uint16 MapEventItem::GetEventId() const
+{
+	return m_eventId;
+}
+
+void MapEventItem::ResetPointers()
+{
+	m_parent = NULL;
+	m_unlockedFromEvent = NULL;
+	m_visibleFromEvent = NULL;
+	m_worldDataPtr = NULL;
+	m_children.clear();
+}

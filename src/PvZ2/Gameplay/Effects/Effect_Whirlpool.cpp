@@ -12,3 +12,8 @@
 Effect_Whirlpool::~Effect_Whirlpool()
 {
 }
+
+bool Effect_Whirlpool::IsEnd()
+{
+	return m_finished;
+}

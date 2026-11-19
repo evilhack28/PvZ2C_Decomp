@@ -32,3 +32,8 @@ void ZombossRocket::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(pvztime_t, m_AutoDestoryTime);
 	REFLECTION_CLASSBUILDER_END(ZombossRocket);
 }
+
+const Point& ZombossRocket::GetTargetSquare() const
+{
+	return m_targetSquare;
+}

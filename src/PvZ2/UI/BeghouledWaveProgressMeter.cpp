@@ -28,3 +28,8 @@ void BeghouledWaveProgressMeter::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(float, m_currentDisplayPercent);
 	REFLECTION_CLASSBUILDER_END(BeghouledWaveProgressMeter);
 }
+
+void BeghouledWaveProgressMeter::setFillPercentage(const int i_fillPercentage)
+{
+	m_targetFillPercent = i_fillPercentage;
+}

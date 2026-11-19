@@ -20,3 +20,9 @@ void CollectableAdUI::ButtonPress(int i_id)
 void CollectableAdUI::onNotifyRefreshActivityList(bool i_success, const std::set<int>& changeList)
 {
 }
+
+void CollectableAdUI::RefreshActivity(const NDLoginRewardBonus& i_reward)
+{
+	m_reward = i_reward;
+	InitView();
+}

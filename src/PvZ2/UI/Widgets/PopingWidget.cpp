@@ -20,3 +20,15 @@ void PopingWidget::RecoverAllButtonAndAnims()
 void PopingWidget::Draw(Graphics* i_g)
 {
 }
+
+void PopingWidget::SetPopingTime(pvztime_t i_popingTime)
+{
+	m_popingTime = i_popingTime;
+}
+
+void PopingWidget::SetPopingScales(float i_start, float i_dest)
+{
+	m_destScale = i_dest;
+	m_currentScale = i_start;
+	m_startScale = i_start;
+}

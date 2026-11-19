@@ -38,3 +38,22 @@ void ZombieBumperCarProps::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(std::vector<ChargeInfo>, ChargeInfos);
 	REFLECTION_CLASSBUILDER_END(ZombieBumperCarProps);
 }
+
+bool ZombieBumperCar::canThrowProjectile(class Projectile* i_projectile)
+{
+	const ProjectilePropertySheet* props = i_projectile->GetProps();
+	return canJuggleProjectile(i_projectile) && m_unthrowableProjectiles.find(props) == m_unthrowableProjectiles.end();
+}
+
+void ZombieBumperCar::dropAllProjectiles()
+{
+	std::vector<RiftProjectileTimer>::iterator it = m_juggledProjectiles.begin();
+	std::vector<RiftProjectileTimer>::iterator end = m_juggledProjectiles.end();
+	for (; it != end; ++it)
+	{
+		RiftProjectileTimer timer = *it;
+		if (timer.JuggledProjectile)
+			timer.JuggledProjectile->Destroy();
+	}
+	m_juggledProjectiles.clear();
+}

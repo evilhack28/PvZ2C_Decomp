@@ -12,3 +12,8 @@
 void BoxOpenUI::ButtonDepress(int i_id)
 {
 }
+
+void BoxOpenUI::SetPlayingAnimTime(pvztime_t delay_time)
+{
+	m_animPlayTime = PVZ_T() + delay_time;
+}

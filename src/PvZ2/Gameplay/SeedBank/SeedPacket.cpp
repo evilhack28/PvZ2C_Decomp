@@ -16,3 +16,8 @@ void SeedPacket::initLoadingResourcesGroupList()
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(SeedPacket);
+
+const std::string& SeedPacket::GetContentsTypeName() const
+{
+	return m_contentsTypeName;
+}

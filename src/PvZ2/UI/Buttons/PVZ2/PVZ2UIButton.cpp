@@ -12,3 +12,13 @@
 void PVZ2UIButton::MouseDown(int i_x, int i_y, int i_btnNum, int i_clickCount)
 {
 }
+
+void PVZ2UIButton::SetFont(PrimeTypeface* theFont)
+{
+	ButtonWidget::SetFont(theFont);
+}
+
+void PVZ2UIButton::SetContentsRect(const Sexy::Rect& i_rect)
+{
+	m_contentsRect = i_rect;
+}

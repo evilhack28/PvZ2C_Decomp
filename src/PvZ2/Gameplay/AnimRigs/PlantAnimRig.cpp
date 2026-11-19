@@ -45,3 +45,8 @@ void PlantAnimRig::onAvatarUpdate()
 void PlantAnimRig::InitAnimRig_ZenGarden()
 {
 }
+
+void PlantAnimRig::SetAvatarIndex(int i_avatarIndex)
+{
+	m_avatarIndex = i_avatarIndex;
+}

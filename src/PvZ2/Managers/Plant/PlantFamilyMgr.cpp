@@ -13,3 +13,8 @@ bool PlantFamilyMgr::IsPlantFamilyTutorialActivated()
 {
 	return false;
 }
+
+void PlantFamilyMgr::PlantFamilyReset()
+{
+	m_plantFamilyInfos.clear();
+}

@@ -14,3 +14,8 @@ void CollectableAdBoxMgr::onLevelEnded()
 {
 	 CollectableAdBoxMgr::ResetSpawns();
 }
+
+bool CollectableAdBoxMgr::HasAdService()
+{
+	return m_hasAdService;
+}

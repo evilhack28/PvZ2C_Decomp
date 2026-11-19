@@ -21,3 +21,9 @@ RT_CLASS_IMPLEMENT(UIWidget);
 void UIWidget::Draw(Graphics* i_g)
 {
 }
+
+void UIWidget::ClearPositionOffsetOverride()
+{
+	m_positionOffsetOverriden = false;
+	calculatePosition();
+}

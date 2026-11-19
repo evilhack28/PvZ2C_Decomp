@@ -12,3 +12,10 @@
 UIWidgetImage::~UIWidgetImage()
 {
 }
+
+void UIWidgetImage::SetImage(Sexy::Image* pImage)
+{
+	m_image.m_singleImage = pImage;
+	if (m_image.m_imageType == PVZ2UIIMAGE_INITIALIZED)
+		m_image.m_imageType = PVZ2UIIMAGE_SINGLE;
+}

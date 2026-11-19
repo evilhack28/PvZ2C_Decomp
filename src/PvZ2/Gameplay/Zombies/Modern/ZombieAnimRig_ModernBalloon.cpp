@@ -27,3 +27,8 @@ void ZombieAnimRig_ModernBalloon::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(bool, m_hasBalloon);
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_ModernBalloon);
 }
+
+void ZombieAnimRig_ModernBalloon::SetHasBalloon(bool i_hasBalloon)
+{
+	m_hasBalloon = i_hasBalloon;
+}

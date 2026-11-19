@@ -40,3 +40,8 @@ const std::string ZombieAnimRig::getWalkAnimationName()
 	return "walk";
 }
 
+
+void ZombieAnimRig::SetGroundTrackName(const std::string& i_groundTrackName)
+{
+	m_groundTrackName = i_groundTrackName;
+}

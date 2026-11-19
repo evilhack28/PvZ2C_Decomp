@@ -12,3 +12,8 @@
 LevelUtils::~LevelUtils()
 {
 }
+
+bool LevelUtils::DoesLevelExist(const std::string& i_levelName)
+{
+	return GetLevelInfo(i_levelName) != NULL;
+}

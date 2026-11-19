@@ -13,3 +13,22 @@ bool PVZ2UIAwardScreen::onNextStarClick()
 {
 	return true;
 }
+
+void PVZ2UIAwardScreen::addLeafHint()
+{
+	if (leafWidget)
+	{
+		delete leafWidget;
+		leafWidget = NULL;
+	}
+}
+
+int PVZ2UIAwardScreen::GetScreenCount() const
+{
+	return static_cast<int>(m_screens.size());
+}
+
+int PVZ2UIAwardScreen::GetCurrentScreen() const
+{
+	return m_screenIndex;
+}

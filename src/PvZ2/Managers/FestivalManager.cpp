@@ -12,3 +12,8 @@
 FestivalManager::~FestivalManager()
 {
 }
+
+bool FestivalManager::IsSummerVacationLevel(const std::string& i_level)
+{
+	return i_level.find("vacation_boss_") != std::string::npos;
+}
