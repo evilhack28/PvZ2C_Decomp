@@ -1,18 +1,18 @@
 {
-  "generated": "2026-11-18T21:28:05+00:00",
+  "generated": "2026-11-19T17:16:34+00:00",
   "measures": {
-    "total_functions": 154408,
-    "matched_functions": 39503,
-    "matched_functions_percent": 25.58,
-    "total_code": 24294364,
-    "matched_code": 3111836,
-    "matched_code_percent": 12.81,
-    "fuzzy_match_percent": 13.72,
-    "started_units": 2622,
+    "total_functions": 154416,
+    "matched_functions": 39854,
+    "matched_functions_percent": 25.81,
+    "total_code": 24294628,
+    "matched_code": 3163456,
+    "matched_code_percent": 13.02,
+    "fuzzy_match_percent": 13.93,
+    "started_units": 2642,
     "total_units": 8277,
-    "started_code": 10633016,
-    "started_matched_code": 3111836,
-    "started_percent": 29.27,
+    "started_code": 10724336,
+    "started_matched_code": 3163456,
+    "started_percent": 29.5,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -30087,12 +30087,12 @@
     {
       "name": "src/PvZ2/Core/Prime/PrimeText_PotentialTypefaceDictionary.cpp",
       "total_code": 360,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 36,
+      "matched_code_percent": 10.0,
       "total_functions": 3,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 66.67,
+      "fuzzy_match_percent": 10.0,
       "functions": [
         {
           "name": "PrimeText_PotentialTypefaceDictionary::GetPotentialTypeface",
@@ -30103,14 +30103,14 @@
         {
           "name": "PrimeText_PotentialTypefaceDictionary::GetTypeface",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PrimeText_PotentialTypefaceDictionary::SetDefaultTypeface",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -218784,12 +218784,12 @@
     {
       "name": "src/PvZ2/Gameplay/Board/UnchartedModeBoardRecord.cpp",
       "total_code": 2792,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 324,
+      "matched_code_percent": 11.6,
       "total_functions": 24,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 2,
+      "matched_functions_percent": 8.33,
+      "fuzzy_match_percent": 11.6,
       "functions": [
         {
           "name": "UnchartedModeBoardRecord::StaticClassInit",
@@ -218824,14 +218824,14 @@
         {
           "name": "UnchartedModeBoardRecord::SerializeObj",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UnchartedModeBoardRecord::SerializeJson",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UnchartedModeBoardRecord::UnchartedModeBoardRecord",
@@ -908109,67 +908109,115 @@
     },
     {
       "name": "src/PvZ2/WorldMap/WorldMapActionCaches.cpp",
-      "total_code": 656,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 9,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 920,
+      "matched_code": 920,
+      "matched_code_percent": 100.0,
+      "total_functions": 17,
+      "matched_functions": 17,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "WorldMapActionCaches::Add",
           "size": 372,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapActionCaches::Start",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapActionCaches::ActionCached::operator=",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldMapActionCaches::ActionCached::ActionCached",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldMapActionCaches::ActionCached::ActionCached",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldMapActionCaches::ActionCached::ActionCached",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldMapActionCaches::ActionCached::ActionCached",
+          "size": 44,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldMapActionCaches::ActionCached::ActionCached",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldMapActionCaches::ActionCached::ActionCached",
+          "size": 40,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapActionCaches::End",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapActionCaches::WorldMapActionCaches",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapActionCaches::WorldMapActionCaches",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldMapActionCaches::ActionCached::~ActionCached",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "WorldMapActionCaches::ActionCached::~ActionCached",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapActionCaches::Clear",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapActionCaches::~WorldMapActionCaches",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapActionCaches::~WorldMapActionCaches",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -908494,12 +908542,12 @@
     {
       "name": "src/PvZ2/WorldMap/WorldMapCamera.cpp",
       "total_code": 4464,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 3012,
+      "matched_code_percent": 67.47,
       "total_functions": 24,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 20,
+      "matched_functions_percent": 83.33,
+      "fuzzy_match_percent": 67.47,
       "functions": [
         {
           "name": "WorldMapCamera::DrawImageRotated",
@@ -908516,14 +908564,14 @@
         {
           "name": "WorldMapCamera::DrawPopAnimRig",
           "size": 460,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::DrawTexturedQuad",
           "size": 408,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::DrawString",
@@ -908534,62 +908582,62 @@
         {
           "name": "WorldMapCamera::DrawImageRotated",
           "size": 344,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::DrawImage",
           "size": 320,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::FillPoly",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::WorldMapCamera",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::WorldMapCamera",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::DrawRect",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::FillRect",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::SetGraphics",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::DrawLine",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::rebuildViewMatrices",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::TransformPointFromCamera",
@@ -908600,50 +908648,50 @@
         {
           "name": "WorldMapCamera::TransformPointToCamera",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::SetCameraCenter",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::SetCameraScale",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::GetCameraScale",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::SetUseClipViewport",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::~WorldMapCamera",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::~WorldMapCamera",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapCamera::~WorldMapCamera",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -908812,96 +908860,96 @@
     {
       "name": "src/PvZ2/WorldMap/WorldMapList.cpp",
       "total_code": 1280,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1280,
+      "matched_code_percent": 100.0,
       "total_functions": 14,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 14,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "WorldMapList::StaticClassInit",
           "size": 280,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::GetMapListNodeByName",
           "size": 192,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::GetMapListNodeById",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::WorldMapList",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::WorldMapList",
           "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::IsWorldComingSoon",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::~WorldMapList",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::~WorldMapList",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::IsWorldEnabled",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::~WorldMapList",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMapList::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -908926,90 +908974,90 @@
     {
       "name": "src/PvZ2/WorldMap/WorldMap_GiftFoReturn.cpp",
       "total_code": 1132,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1132,
+      "matched_code_percent": 100.0,
       "total_functions": 13,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 13,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "WorldMap_GiftFoReturn::StaticClassInit",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::onNotifyRefreshActivityListReal",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::WorldMap_GiftFoReturn",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::WorldMap_GiftFoReturn",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::CheckActivated",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::StaticGetClass",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::onButtonClicked",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::StaticNew",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::~WorldMap_GiftFoReturn",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::~WorldMap_GiftFoReturn",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::~WorldMap_GiftFoReturn",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::IsAbstract",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldMap_GiftFoReturn::GetClass",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -909316,12 +909364,12 @@
     {
       "name": "src/PvZ2/WorldMap/WorldMap_LuaButtonsImpl.cpp",
       "total_code": 292,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 8,
+      "matched_code_percent": 2.74,
       "total_functions": 7,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 1,
+      "matched_functions_percent": 14.29,
+      "fuzzy_match_percent": 2.74,
       "functions": [
         {
           "name": "WorldMap_LuaButtonsImpl::NotifyLua",
@@ -909362,8 +909410,8 @@
         {
           "name": "WorldMap_LuaButtonsImpl::RegisterHandler",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -909824,242 +909872,722 @@
       ]
     },
     {
+      "name": "src/SexyAppFramework/Adapter/ChinaMobileChannelPurchaseAdapter.cpp",
+      "total_code": 3104,
+      "matched_code": 3104,
+      "matched_code_percent": 100.0,
+      "total_functions": 20,
+      "matched_functions": 20,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::GetProductInfo",
+          "size": 1000,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::PaymentHook",
+          "size": 300,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::OnResume",
+          "size": 292,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::BindJavaMethods",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::RequestPay",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::BindNativeMethods",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::ChinaMobileChannelPurchaseAdapter",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::ChinaMobileChannelPurchaseAdapter",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::GetAboutContentStringId",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::GetPurchasePlatform",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::Initialize",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::~ChinaMobileChannelPurchaseAdapter",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::~ChinaMobileChannelPurchaseAdapter",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::ExitGame",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::LaunchMoreGamesWebpage",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::ExitGameHook",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::~ChinaMobileChannelPurchaseAdapter",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::CanPay",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::GetMonthRechargeMax",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::GetTodayRechargeMax",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/SexyAppFramework/Adapter/ChinaMobileMMChannelPurchaseAdapter.cpp",
+      "total_code": 4852,
+      "matched_code": 1784,
+      "matched_code_percent": 36.77,
+      "total_functions": 16,
+      "matched_functions": 15,
+      "matched_functions_percent": 93.75,
+      "fuzzy_match_percent": 36.77,
+      "functions": [
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::GetProductInfo",
+          "size": 3068,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::Initialize",
+          "size": 444,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::PaymentHook",
+          "size": 272,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::RequestPay",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::ChinaMobileMMChannelPurchaseAdapter",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::ChinaMobileMMChannelPurchaseAdapter",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::BindNativeMethods",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::GetAboutContentStringId",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::GetPurchasePlatform",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::BindJavaMethods",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::~ChinaMobileMMChannelPurchaseAdapter",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::~ChinaMobileMMChannelPurchaseAdapter",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::~ChinaMobileMMChannelPurchaseAdapter",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::CanPay",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::GetMonthRechargeMax",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::GetTodayRechargeMax",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/SexyAppFramework/Adapter/ChinaMobileMMPurchaseAdapter.cpp",
+      "total_code": 4828,
+      "matched_code": 4828,
+      "matched_code_percent": 100.0,
+      "total_functions": 16,
+      "matched_functions": 16,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::GetProductInfo",
+          "size": 3032,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::Initialize",
+          "size": 416,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::PaymentHook",
+          "size": 272,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::RequestPay",
+          "size": 268,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::ChinaMobileMMPurchaseAdapter",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::ChinaMobileMMPurchaseAdapter",
+          "size": 124,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::BindNativeMethods",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::GetAboutContentStringId",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::GetPurchasePlatform",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::BindJavaMethods",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::~ChinaMobileMMPurchaseAdapter",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::~ChinaMobileMMPurchaseAdapter",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::~ChinaMobileMMPurchaseAdapter",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::CanPay",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::GetMonthRechargeMax",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobileMMPurchaseAdapter::GetTodayRechargeMax",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
+      "name": "src/SexyAppFramework/Adapter/ChinaMobilePurchaseAdapter.cpp",
+      "total_code": 3104,
+      "matched_code": 3104,
+      "matched_code_percent": 100.0,
+      "total_functions": 20,
+      "matched_functions": 20,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
+      "functions": [
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::GetProductInfo",
+          "size": 1000,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::PaymentHook",
+          "size": 300,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::OnResume",
+          "size": 292,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::BindJavaMethods",
+          "size": 236,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::RequestPay",
+          "size": 228,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::BindNativeMethods",
+          "size": 148,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::ChinaMobilePurchaseAdapter",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::ChinaMobilePurchaseAdapter",
+          "size": 136,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::GetAboutContentStringId",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::GetPurchasePlatform",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::Initialize",
+          "size": 76,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::~ChinaMobilePurchaseAdapter",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::~ChinaMobilePurchaseAdapter",
+          "size": 60,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::ExitGame",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::LaunchMoreGamesWebpage",
+          "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::ExitGameHook",
+          "size": 52,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::~ChinaMobilePurchaseAdapter",
+          "size": 36,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::CanPay",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::GetMonthRechargeMax",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "Sexy::ChinaMobilePurchaseAdapter::GetTodayRechargeMax",
+          "size": 8,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        }
+      ]
+    },
+    {
       "name": "src/SexyAppFramework/Adapter/QQGameCenterPurchaseAdapter.cpp",
       "total_code": 1720,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1720,
+      "matched_code_percent": 100.0,
       "total_functions": 17,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 17,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::PaymentHook",
           "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::RequestPay",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::BindJavaMethods",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::GetProductCode",
           "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::QQGameCenterPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::QQGameCenterPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::BindNativeMethods",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::GetAboutContentStringId",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::GetPurchasePlatform",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::Initialize",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::~QQGameCenterPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::~QQGameCenterPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::GetMonthRechargeMax",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::GetTodayRechargeMax",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::~QQGameCenterPurchaseAdapter",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::CanPay",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterPurchaseAdapter::NeedShowDialog",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Adapter/QQGameCenterUnicomPurchaseAdapter.cpp",
       "total_code": 1792,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1792,
+      "matched_code_percent": 100.0,
       "total_functions": 17,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 17,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::PaymentHook",
           "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::RequestPay",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::GetProductCode",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::BindJavaMethods",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::QQGameCenterUnicomPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::QQGameCenterUnicomPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::BindNativeMethods",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::GetAboutContentStringId",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::GetPurchasePlatform",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::Initialize",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::~QQGameCenterUnicomPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::~QQGameCenterUnicomPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::GetMonthRechargeMax",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::GetTodayRechargeMax",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::~QQGameCenterUnicomPurchaseAdapter",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::CanPay",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::QQGameCenterUnicomPurchaseAdapter::NeedShowDialog",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Adapter/TWPurchaseAdapter.cpp",
       "total_code": 40924,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 9632,
+      "matched_code_percent": 23.54,
       "total_functions": 58,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 55,
+      "matched_functions_percent": 94.83,
+      "fuzzy_match_percent": 23.54,
       "functions": [
         {
           "name": "Sexy::TWPurchaseAdapter::TWPurchaseAdapter",
@@ -910076,86 +910604,86 @@
         {
           "name": "Sexy::TWPurchaseAdapter::BindJavaMethods",
           "size": 832,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetRedeemOrders",
           "size": 772,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::ValidationPaymentHook",
           "size": 644,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::PaymentHook",
           "size": 636,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetSkuFromPayCode",
           "size": 456,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::Initialize",
           "size": 416,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::RequestValidationPayment",
           "size": 384,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::RequestPay",
           "size": 328,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::SetIDsInTwSDK",
           "size": 316,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::SDKLoginEndHook",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::SDKInitEndHook",
           "size": 244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::QueryOrder",
           "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::SDKQueryOrderHook",
           "size": 208,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetGameCenterUrlHook",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetProductInfo",
@@ -910166,260 +910694,260 @@
         {
           "name": "Sexy::TWPurchaseAdapter::SDKLoginStartHook",
           "size": 204,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::Consume",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetChannelUpdateUrl",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetDeviceID",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetGameCenterUrl",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetSignature",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetTWRequestHead",
           "size": 196,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetChannelID",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetDeclare",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetUniqueCharacterID",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetUniqueID",
           "size": 184,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetAboutContentStringId",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::BindNativeMethods",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetPurchasePlatform",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RedeemInfo::RedeemInfo",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RedeemInfo::RedeemInfo",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::CheckSpecialRedeem",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::SDKInitStartHook",
           "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::NeedPurchaseWhite",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::NeedShowChannelActivity",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::~TWPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::~TWPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::ExitGame",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::CallCertificationHook",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::ExitGameHook",
           "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::CheckGameCenterStatus",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::CheckRedeemOrders",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::ShowGameCommunity",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RedeemInfo::RedeemInfo",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RedeemInfo::RedeemInfo",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RedeemInfo::RedeemInfo",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RedeemInfo::RedeemInfo",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RedeemInfo::~RedeemInfo",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RedeemInfo::~RedeemInfo",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::~TWPurchaseAdapter",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::CheckGameCenterStatusHook",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::CheckSpecialRedeemHook",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::CanPay",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetMonthRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::GetTodayRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TWPurchaseAdapter::NeedShowDialog",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Adapter/TelecomChannelPurchaseAdapter.cpp",
       "total_code": 3440,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2108,
+      "matched_code_percent": 61.28,
       "total_functions": 19,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 18,
+      "matched_functions_percent": 94.74,
+      "fuzzy_match_percent": 61.28,
       "functions": [
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::GetProductInfo",
@@ -910430,122 +910958,122 @@
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::RequestPay",
           "size": 604,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::PaymentHook",
           "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::LaunchMoreGamesWebpage",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::BindJavaMethods",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::TelecomChannelPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::TelecomChannelPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::BindNativeMethods",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::GetAboutContentStringId",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::GetPurchasePlatform",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::Destory",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::Initialize",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::~TelecomChannelPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::~TelecomChannelPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::~TelecomChannelPurchaseAdapter",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::CanPay",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::GetMonthRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::GetTodayRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomChannelPurchaseAdapter::NeedShowDialog",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Adapter/TelecomPurchaseAdapter.cpp",
       "total_code": 3420,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2108,
+      "matched_code_percent": 61.64,
       "total_functions": 19,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 18,
+      "matched_functions_percent": 94.74,
+      "fuzzy_match_percent": 61.64,
       "functions": [
         {
           "name": "Sexy::TelecomPurchaseAdapter::GetProductInfo",
@@ -910556,122 +911084,122 @@
         {
           "name": "Sexy::TelecomPurchaseAdapter::RequestPay",
           "size": 604,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::PaymentHook",
           "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::LaunchMoreGamesWebpage",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::BindJavaMethods",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::TelecomPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::TelecomPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::BindNativeMethods",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::GetAboutContentStringId",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::GetPurchasePlatform",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::Destory",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::Initialize",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::~TelecomPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::~TelecomPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::~TelecomPurchaseAdapter",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::CanPay",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::GetMonthRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::GetTodayRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::TelecomPurchaseAdapter::NeedShowDialog",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Adapter/UnicomChannelPurchaseAdapter.cpp",
       "total_code": 3588,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1928,
+      "matched_code_percent": 53.73,
       "total_functions": 17,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 16,
+      "matched_functions_percent": 94.12,
+      "fuzzy_match_percent": 53.73,
       "functions": [
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::GetProductInfo",
@@ -910682,110 +911210,110 @@
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::RequestPay",
           "size": 484,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::PaymentHook",
           "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::Initialize",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::UnicomChannelPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::UnicomChannelPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::BindNativeMethods",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::GetAboutContentStringId",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::GetPurchasePlatform",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::BindJavaMethods",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::~UnicomChannelPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::~UnicomChannelPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::~UnicomChannelPurchaseAdapter",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::CanPay",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::GetMonthRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::GetTodayRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomChannelPurchaseAdapter::NeedShowDialog",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Adapter/UnicomPurchaseAdapter.cpp",
       "total_code": 3572,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1928,
+      "matched_code_percent": 53.98,
       "total_functions": 17,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 16,
+      "matched_functions_percent": 94.12,
+      "fuzzy_match_percent": 53.98,
       "functions": [
         {
           "name": "Sexy::UnicomPurchaseAdapter::GetProductInfo",
@@ -910796,380 +911324,380 @@
         {
           "name": "Sexy::UnicomPurchaseAdapter::RequestPay",
           "size": 484,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::PaymentHook",
           "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::Initialize",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::UnicomPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::UnicomPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::BindNativeMethods",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::GetAboutContentStringId",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::GetPurchasePlatform",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::BindJavaMethods",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::~UnicomPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::~UnicomPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::~UnicomPurchaseAdapter",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::CanPay",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::GetMonthRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::GetTodayRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomPurchaseAdapter::NeedShowDialog",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Adapter/UnicomWidebandPurchaseAdapter.cpp",
       "total_code": 2384,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 2384,
+      "matched_code_percent": 100.0,
       "total_functions": 17,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 17,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::RequestPay",
           "size": 664,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::GetProductInfo",
           "size": 496,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::PaymentHook",
           "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::UnicomWidebandPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::UnicomWidebandPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::BindNativeMethods",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::GetAboutContentStringId",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::GetPurchasePlatform",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::BindJavaMethods",
           "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::Initialize",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::~UnicomWidebandPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::~UnicomWidebandPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::~UnicomWidebandPurchaseAdapter",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::CanPay",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::GetMonthRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::GetTodayRechargeMax",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::UnicomWidebandPurchaseAdapter::NeedShowDialog",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
     {
       "name": "src/SexyAppFramework/Adapter/WeChatPurchaseAdapter.cpp",
       "total_code": 3352,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 3352,
+      "matched_code_percent": 100.0,
       "total_functions": 26,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 26,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::WeChatPurchaseAdapter::BindJavaMethods",
           "size": 400,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::GetProductCode",
           "size": 340,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::SetPayParam",
           "size": 232,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::PaymentHook",
           "size": 212,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::RequestLaunchSave",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::RequestPay",
           "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::SetPf",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::SetPfKey",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::SetResId",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::SetSaveValue",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::SetSessionId",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::SetSessionType",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::SetUserId",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::SetUserKey",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::WeChatPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::WeChatPurchaseAdapter",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::BindNativeMethods",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::GetAboutContentStringId",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::GetPurchasePlatform",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::Initialize",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::~WeChatPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::~WeChatPurchaseAdapter",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::~WeChatPurchaseAdapter",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::GetMonthRechargeMax",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::GetTodayRechargeMax",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::WeChatPurchaseAdapter::CanPay",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -914282,486 +914810,6 @@
         {
           "name": "Sexy::CharDataHashEntry::CharDataHashEntry",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/China/ChinaMobileChannelPurchaseAdapter.cpp",
-      "total_code": 3104,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 20,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::GetProductInfo",
-          "size": 1000,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::PaymentHook",
-          "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::OnResume",
-          "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::BindJavaMethods",
-          "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::RequestPay",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::BindNativeMethods",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::ChinaMobileChannelPurchaseAdapter",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::ChinaMobileChannelPurchaseAdapter",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::GetAboutContentStringId",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::GetPurchasePlatform",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::Initialize",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::~ChinaMobileChannelPurchaseAdapter",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::~ChinaMobileChannelPurchaseAdapter",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::ExitGame",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::LaunchMoreGamesWebpage",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::ExitGameHook",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::~ChinaMobileChannelPurchaseAdapter",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::CanPay",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::GetMonthRechargeMax",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileChannelPurchaseAdapter::GetTodayRechargeMax",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/China/ChinaMobileMMChannelPurchaseAdapter.cpp",
-      "total_code": 4852,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 16,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::GetProductInfo",
-          "size": 3068,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::Initialize",
-          "size": 444,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::PaymentHook",
-          "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::RequestPay",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::ChinaMobileMMChannelPurchaseAdapter",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::ChinaMobileMMChannelPurchaseAdapter",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::BindNativeMethods",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::GetAboutContentStringId",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::GetPurchasePlatform",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::BindJavaMethods",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::~ChinaMobileMMChannelPurchaseAdapter",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::~ChinaMobileMMChannelPurchaseAdapter",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::~ChinaMobileMMChannelPurchaseAdapter",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::CanPay",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::GetMonthRechargeMax",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMChannelPurchaseAdapter::GetTodayRechargeMax",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/China/ChinaMobileMMPurchaseAdapter.cpp",
-      "total_code": 4828,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 16,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::GetProductInfo",
-          "size": 3032,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::Initialize",
-          "size": 416,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::PaymentHook",
-          "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::RequestPay",
-          "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::ChinaMobileMMPurchaseAdapter",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::ChinaMobileMMPurchaseAdapter",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::BindNativeMethods",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::GetAboutContentStringId",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::GetPurchasePlatform",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::BindJavaMethods",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::~ChinaMobileMMPurchaseAdapter",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::~ChinaMobileMMPurchaseAdapter",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::~ChinaMobileMMPurchaseAdapter",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::CanPay",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::GetMonthRechargeMax",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobileMMPurchaseAdapter::GetTodayRechargeMax",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
-    },
-    {
-      "name": "src/SexyAppFramework/China/ChinaMobilePurchaseAdapter.cpp",
-      "total_code": 3104,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 20,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::GetProductInfo",
-          "size": 1000,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::PaymentHook",
-          "size": 300,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::OnResume",
-          "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::BindJavaMethods",
-          "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::RequestPay",
-          "size": 228,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::BindNativeMethods",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::ChinaMobilePurchaseAdapter",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::ChinaMobilePurchaseAdapter",
-          "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::GetAboutContentStringId",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::GetPurchasePlatform",
-          "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::Initialize",
-          "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::~ChinaMobilePurchaseAdapter",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::~ChinaMobilePurchaseAdapter",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::ExitGame",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::LaunchMoreGamesWebpage",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::ExitGameHook",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::~ChinaMobilePurchaseAdapter",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::CanPay",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::GetMonthRechargeMax",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::ChinaMobilePurchaseAdapter::GetTodayRechargeMax",
-          "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
@@ -945268,12 +945316,12 @@
     {
       "name": "src/SexyAppFramework/Res/Resource/ResourceManager.cpp",
       "total_code": 24644,
-      "matched_code": 7416,
-      "matched_code_percent": 30.09,
+      "matched_code": 12552,
+      "matched_code_percent": 50.93,
       "total_functions": 63,
-      "matched_functions": 39,
-      "matched_functions_percent": 61.9,
-      "fuzzy_match_percent": 46.27,
+      "matched_functions": 50,
+      "matched_functions_percent": 79.37,
+      "fuzzy_match_percent": 67.11,
       "functions": [
         {
           "name": "Sexy::ResourceManager::ParseResourcesFile",
@@ -945296,8 +945344,8 @@
         {
           "name": "Sexy::ResourceManager::GetImage",
           "size": 1244,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceManager::ParseGroupResources",
@@ -945308,20 +945356,20 @@
         {
           "name": "Sexy::ResourceManager::ResetTables",
           "size": 784,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceManager::~ResourceManager",
           "size": 772,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceManager::~ResourceManager",
           "size": 772,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceManager::GetLocSetForLocaleName",
@@ -945332,14 +945380,14 @@
         {
           "name": "Sexy::ResourceManager::ResourceManager",
           "size": 652,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceManager::ResourceManager",
           "size": 652,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceManager::GetResourceCount",
@@ -945548,14 +945596,14 @@
         {
           "name": "Sexy::ResourceManager::GetImageOptions::GetImageOptions",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceManager::GetImageOptions::GetImageOptions",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceManager::PreLoadTask::~PreLoadTask",
@@ -945578,14 +945626,14 @@
         {
           "name": "Sexy::ResourceManager::GetImageOptions::~GetImageOptions",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceManager::GetImageOptions::~GetImageOptions",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceManager::InitDelayLoadedRSBSlotCount",
@@ -945608,8 +945656,8 @@
         {
           "name": "Sexy::ResourceManager::~ResourceManager",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResourceManager::GetInfoClassCount",
