@@ -11,6 +11,9 @@
 #include "SexyAppFramework/ResStreamsManager.h"
 #include "SexyAppFramework/SoundBank.h"
 #include "SexyAppFramework/SexyTime.h"
+#include "SexyAppFramework/DeviceImage.h"
+#include "SexyAppFramework/ImageLib/ImageLib.h"
+#include "SexyAppFramework/drivers/app/android/JavaInterface.h"
 
 using namespace Sexy;
 
@@ -570,6 +573,231 @@ void ResourceManager::PreLoadRsb(const std::string& inRSBFileName)
 
 	if (aTask->RSBBuffer != NULL)
 		mPreLoadList.push_back(aTask);
+}
+
+ResourceManager::ResourceManager(SexyAppBase* theApp)
+	: mResGroupTable(NULL)
+	, mInfoTable(NULL)
+	, mHiddenInfoTable(NULL)
+	, mInstanceTable(NULL)
+	, mHiddenInstanceTable(NULL)
+	, mUngroupedInstanceTable(NULL)
+	, mbResetTable(false)
+	, mDelayLoadedRSBSlotCount(0)
+	, mBaseArtRes(0)
+	, mCurArtRes(0)
+	, mCurLocSet('ENUS')
+{
+	mApp = theApp;
+	mCurArtResCached = -1;
+	mReloadIdx = 0;
+
+	unsigned long aClassCount = RtClass::StaticGetClassCount();
+	for (unsigned long i = 0; i < aClassCount; i++)
+	{
+		ResourceInfoClass* aClass = RtClass::StaticGetClassIndexed(i)->Cast<ResourceInfoClass>();
+		if (aClass != NULL)
+		{
+			mResInfoClasses.push_back(aClass);
+			RtName aName = aClass->GetManifestTypeName();
+			if (aName)
+				mManifestTypeNameToInfoClassMap[aName] = aClass;
+		}
+	}
+
+	RtDbTable::TableOptions anOptions;
+	anOptions.mDisplayName = "Ungrouped Resource Table";
+	anOptions.mTableName = L"ResourceManager.UngroupedResources";
+	mUngroupedInstanceTable = RtDb::GetDb()->CreateTable(RtDb::SYSTEMTABLE_ResourceInstancesUngrouped, &anOptions);
+
+	ResetTables(0);
+
+	mPhonePath = Android::Resources::GetUserDataFolder((AndroidAppDriver*)mApp);
+	mSDCardPath = Android::Resources::GetExternalFilesDirectory((AndroidAppDriver*)mApp);
+	i_phoneBlockFree = Android::Resources::GetFileSystemBlocksFree(mPhonePath);
+	i_phoneBlockSize = Android::Resources::GetFileSystemBlockSize(mPhonePath);
+	i_sdcardBlockFree = Android::Resources::GetFileSystemBlocksFree(mSDCardPath);
+	i_sdcardBlockSize = Android::Resources::GetFileSystemBlockSize(mSDCardPath);
+}
+
+ResourceManager::~ResourceManager()
+{
+	for (RtDbTable::Iterator anItr(mResGroupTable, mResGroupTable->GetSharedIteratorStorage()); anItr; ++anItr)
+	{
+		ResourceGroup* aGroup = RtWeakPtr<ResourceGroup>(*anItr);
+		aGroup->Unload();
+	}
+
+	int aCount = (int)mResInfoClasses.size();
+	for (int i = 0; i < aCount; i++)
+		mResInfoClasses[i]->mResMap.clear();
+
+	mUngroupedSharedImageMap.clear();
+
+	delete mInstanceTable;
+	delete mHiddenInstanceTable;
+	delete mInfoTable;
+	delete mHiddenInfoTable;
+	delete mResGroupTable;
+
+	for (RtDbTable::Iterator anItr(mUngroupedInstanceTable, mUngroupedInstanceTable->GetSharedIteratorStorage()); anItr; ++anItr)
+	{
+		RtWeakPtr<ResourceInfo> aRes(*anItr);
+		ResourceInfo* anInfo = aRes;
+		std::string anIdStr;
+		aRes.GetId().ToString(anIdStr, true);
+	}
+
+	delete mUngroupedInstanceTable;
+}
+
+void ResourceManager::GetImage(RtMixedPtr<Image>& outImage, const std::string& theFileName, const GetImageOptions* theOpts, bool* isNew)
+{
+	outImage.SetId(RtId(), false);
+
+	GetImageOptions aDefaultOpts;
+	if (theOpts == NULL)
+		theOpts = &aDefaultOpts;
+
+	SharedImageMap& aSharedImageMap = theOpts->mResGroup != NULL ? theOpts->mResGroup->mSharedImageMap : mUngroupedSharedImageMap;
+
+	std::string aFileName;
+	int aPipePos = (int)theFileName.find('|');
+	if (aPipePos == -1)
+	{
+		aFileName = theFileName;
+	}
+	else
+	{
+		ResourceInfo* aResInfo = GetResInfoForStringIdT<Image>(theFileName.substr(aPipePos + 1));
+		if (aResInfo != NULL && aResInfo->GetInstancePtr() != NULL)
+		{
+			outImage.SetId(aResInfo->GetInstanceRtId(), false);
+			return;
+		}
+		aFileName = theFileName.substr(0, aPipePos);
+	}
+
+	bool aNoShare = theOpts->mNoShare;
+	std::pair<std::string, std::string> anImageKey;
+	if (!aNoShare)
+	{
+		AutoCrit anAutoCrit(gSexyAppBase->mCritSect);
+		std::string anUpperName = StringToUpper(aFileName);
+		std::string anUpperVariant = StringToUpper(theOpts->mVariant);
+		anImageKey = std::pair<std::string, std::string>(anUpperName, anUpperVariant);
+
+		SharedImageMap::iterator anItr = aSharedImageMap.find(anImageKey);
+		if (anItr != aSharedImageMap.end())
+		{
+			if (isNew != NULL)
+				*isNew = false;
+			outImage.SetId(anItr->second, &aSharedImageMap == &mUngroupedSharedImageMap);
+			return;
+		}
+
+		if (isNew != NULL)
+			*isNew = true;
+		if (theOpts->mTestOnly)
+			return;
+	}
+	else
+	{
+		if (isNew != NULL)
+			*isNew = true;
+		if (theOpts->mTestOnly)
+			return;
+	}
+
+	DeviceImage* anImage;
+	if (aFileName.size() == 0 || aFileName[0] != '!')
+	{
+		if (theOpts->mIsInAtlas)
+		{
+			anImage = new DeviceImage(gSexyAppBase);
+			anImage->AddImageFlags(ImageFlag_NoTriRep);
+			anImage->mWidth = theOpts->mUseWidth;
+			anImage->mHeight = theOpts->mUseHeight;
+			anImage->mFilePath = aFileName;
+		}
+		else
+		{
+			anImage = BuildImage(aFileName, false, theOpts->mAllowTriReps);
+			if (anImage == NULL)
+				return;
+		}
+	}
+	else
+	{
+		anImage = new DeviceImage(gSexyAppBase);
+		anImage->AddImageFlags(ImageFlag_NoTriRep);
+		if (!aNoShare)
+			anImage->mFilePath = aFileName;
+	}
+
+	if (theOpts->mInfoId)
+	{
+		if (theOpts->mInfoId.GetTableIndex() == RtDb::SYSTEMTABLE_ResourceInfo)
+			RegisterResourceInternal(&outImage, anImage, theOpts->mInfoId, BaseResource::RRT_Normal);
+		else
+			RegisterResourceInternal(&outImage, anImage, theOpts->mInfoId, BaseResource::RRT_Hidden);
+	}
+	else
+	{
+		RegisterResourceInternal(&outImage, anImage, RtId(), BaseResource::RRT_Ungrouped);
+	}
+
+	if (!aNoShare)
+	{
+		aSharedImageMap[anImageKey] = outImage.GetId();
+		if (&aSharedImageMap == &mUngroupedSharedImageMap)
+			anImage->AddImageFlags(ImageFlag_UngroupedSharedImage);
+	}
+}
+
+void ResourceManager::ResetTables(uint32 inSlotCount)
+{
+	delete mInstanceTable;
+	delete mHiddenInstanceTable;
+	delete mInfoTable;
+	delete mHiddenInfoTable;
+	delete mResGroupTable;
+
+	RtDbTable::TableOptions anOptions;
+	anOptions.mDisplayName = "Resource Groups";
+	anOptions.mTableName = L"ResourceManager.ResourceGroups";
+	mResGroupTable = RtDb::GetDb()->CreateTable(RtDb::SYSTEMTABLE_ResourceGroups, &anOptions);
+
+	anOptions = RtDbTable::TableOptions();
+	anOptions.mDisplayName = "Resource Info";
+	anOptions.mTableName = L"ResourceManager.ResourceInfo";
+	anOptions.mInitialSlotCount = inSlotCount;
+	mInfoTable = RtDb::GetDb()->CreateTable(RtDb::SYSTEMTABLE_ResourceInfo, &anOptions);
+
+	anOptions = RtDbTable::TableOptions();
+	anOptions.mDisplayName = "Resource Info (Hidden)";
+	anOptions.mTableName = L"ResourceManager.ResourceInfoHidden";
+	anOptions.mInitialSlotCount = inSlotCount;
+	mHiddenInfoTable = RtDb::GetDb()->CreateTable(RtDb::SYSTEMTABLE_ResourceInfoHidden, &anOptions);
+
+	anOptions = RtDbTable::TableOptions();
+	anOptions.mDisplayName = "Resource Instances";
+	anOptions.mTableName = L"ResourceManager.ResourceInstances";
+	anOptions.mInitialSlotCount = inSlotCount;
+	mInstanceTable = RtDb::GetDb()->CreateTable(RtDb::SYSTEMTABLE_ResourceInstances, &anOptions);
+	mInstanceTable->OnWatchedIdObjectAccessFault.Connect(*this, &ResourceManager::OnInstanceTableObjectFault);
+
+	anOptions = RtDbTable::TableOptions();
+	anOptions.mDisplayName = "Resource Instances (Hidden)";
+	anOptions.mTableName = L"ResourceManager.ResourceInstancesHidden";
+	mHiddenInstanceTable = RtDb::GetDb()->CreateTable(RtDb::SYSTEMTABLE_ResourceInstancesHidden, &anOptions);
+
+	for (uint32 i = 0; i < inSlotCount; i++)
+	{
+		RtId anInfoId = mInfoTable->AllocId(NULL, RtDbTable::ODM_Auto, true, NULL);
+		anInfoId = mInstanceTable->AllocId(NULL, RtDbTable::ODM_Auto, true, NULL);
+		mInstanceTable->SetObjectIsWatched(anInfoId, true);
+	}
 }
 
 bool ResourceManager::ResizeTables(uint32 iAdvancedSlotCount, const std::string& theFilename)
