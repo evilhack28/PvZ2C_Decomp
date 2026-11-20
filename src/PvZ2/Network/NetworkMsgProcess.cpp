@@ -1513,3 +1513,31 @@ void INetworkMsgProcess::onRequestUserInfo(const NetWorkMsg& i_data)
 		gMessageRouter->Post(DeliverySendMsg, false);
 	}
 }
+
+INetworkMsgProcess::INetworkMsgProcess()
+{
+	m_pHttpRequest = 0;
+	m_isNewAccount = 0;
+	m_needPurge = 0;
+	m_nCloudLoginCount = 0;
+	m_waitingPurgeResponse = 0;
+	m_waitingPVPResponse = 0;
+	m_ICIoudState = 0;
+	m_random = 0;
+}
+
+void INetworkMsgProcess::ICloudRequestClearNotifyThirdPartPlatforms()
+{
+	ParaMap params;
+	params["req"] = m_pktID.ID_GET_FRIEDN_LIST;
+	params["ui"] = m_UserId;
+	params["sk"] = m_sk;
+	SendHttpRequest(params);
+}
+
+
+bool S2C_PVP_BigMapPVPInfo::IsEvilDavid()
+{
+	return iDavidMaxCompleteCount != 0;
+}
+

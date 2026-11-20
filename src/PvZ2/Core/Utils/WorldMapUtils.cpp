@@ -31,3 +31,8 @@ bool WorldMapUtils::IsCardGameWorld(const std::string& i_worldName)
 {
 	return GetWorldMapList()->GetMapListNodeByName(i_worldName)->IsCardGameWorld;
 }
+
+std::string WorldMapUtils::DetermineNextLevelToPlay()
+{
+	return "";
+}

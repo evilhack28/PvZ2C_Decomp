@@ -11,6 +11,8 @@
 
 using namespace Sexy;
 
+namespace Sexy { extern CritSect gNetworkServiceRequestLock; }
+
 /////////////// Lifecycle ///////////////
 
 NetworkServiceManager::NetworkServiceManager()
@@ -30,4 +32,306 @@ NetworkServiceManager::~NetworkServiceManager()
 {
 	delete mResumeRequestTaskManager;
 	mResumeRequestTaskManager = NULL;
+}
+
+/////////////// Channels ///////////////
+
+void NetworkServiceManager::FillWithChannels( ChannelPtrs& outChannels )
+{
+	outChannels.clear();
+	outChannels[DefaultChannelName] = &mDefaultChannel;
+	Channels::iterator it;
+	for ( it = mNamedChannels.begin(); it != mNamedChannels.end(); ++it )
+	{
+		outChannels[it->first] = &it->second;
+	}
+}
+
+void NetworkServiceManager::EnqueueRequest( StructuredData::String channelName, const NetworkServiceRequest& request )
+{
+	Channel* channel = GetChannel( channelName );
+	if ( channel->slots.empty() )
+	{
+		channel->slots.resize( 2 );
+	}
+	channel->requests.push_back( request );
+	SlotNextRequest( channel );
+}
+
+NetworkServiceManager::RequestId NetworkServiceManager::GetNextRequestId()
+{
+	RequestId requestId = mNextRequestId;
+	if ( ++mNextRequestId < 0 )
+	{
+		mNextRequestId = 1;
+	}
+	return requestId;
+}
+
+void NetworkServiceManager::ConfigureChannel( StructuredData::String channelName, uint32 slotCount )
+{
+	GetChannel( channelName )->slots.resize( slotCount );
+}
+
+void NetworkServiceManager::SetLogLevel( LogLevel level )
+{
+	mLogLevel = level;
+}
+
+/////////////// Cancellation ///////////////
+
+void NetworkServiceManager::AddPendingCancelSlot( Slot* slot )
+{
+	AutoCrit aCrit( mLock );
+	mPendingCancels.push_back( slot );
+}
+
+bool NetworkServiceManager::UpdateRequestsPendingCancel( Slot* slot )
+{
+	bool result = false;
+	if ( !slot->IsFree() )
+	{
+		NetworkServiceRequest& request = slot->request;
+		int cancelState = request.GetCancelState();
+		if ( cancelState == NetworkServiceRequest::CancelState_Canceled )
+		{
+			result = true;
+		}
+		else
+		{
+			if ( cancelState == NetworkServiceRequest::CancelState_CancelRequested )
+			{
+				result = true;
+				request.CancelHttpTransactionAndEnterPendingCancel( slot );
+			}
+			else
+			{
+				result = false;
+			}
+			if ( request.GetCancelState() == NetworkServiceRequest::CancelState_CancelPending )
+			{
+				if ( !request.IsResumableRequest() || request.GetResumableRequestInfo() == NULL )
+				{
+					result = true;
+					request.CancelImmediate();
+					SlotNextRequest( slot->channel );
+				}
+				else if ( request.GetResumableRequestInfo()->IsQueueEmpty() )
+				{
+					result = true;
+					request.GetResumableRequestInfo()->MarkQueueForDelete();
+					request.CancelImmediate();
+					SlotNextRequest( slot->channel );
+				}
+			}
+		}
+	}
+	return result;
+}
+
+void NetworkServiceManager::Update()
+{
+	AutoCrit aCrit( mLock );
+	std::vector<Slot*>::iterator it = mPendingCancels.begin();
+	while ( it != mPendingCancels.end() )
+	{
+		UpdateRequestsPendingCancel( *it );
+		if ( (*it)->IsFree() )
+		{
+			it = mPendingCancels.erase( it );
+		}
+		else
+		{
+			++it;
+		}
+	}
+}
+
+void NetworkServiceManager::CancelRequests( Channel* channel )
+{
+	while ( !channel->requests.empty() )
+	{
+		NetworkServiceRequest& request = channel->requests.back();
+		request.MarkForCancellation( true );
+		request.CancelImmediate();
+		channel->requests.pop_back();
+	}
+	for ( Slots::iterator it = channel->slots.begin(); it != channel->slots.end(); ++it )
+	{
+		Slot& slot = *it;
+		if ( !slot.IsFree() )
+		{
+			slot.request.MarkForCancellation( true );
+			if ( !slot.request.IsResumableRequest() )
+			{
+				slot.request.CancelImmediate();
+			}
+		}
+	}
+}
+
+void NetworkServiceManager::CancelAllRequests()
+{
+	ChannelPtrs channels;
+	FillWithChannels( channels );
+	ChannelPtrs::iterator it;
+	for ( it = channels.begin(); it != channels.end(); ++it )
+	{
+		CancelRequests( it->second );
+	}
+}
+
+/////////////// Slots ///////////////
+
+NetworkServiceManager::Slot* NetworkServiceManager::Channel::FreeSlot()
+{
+	for ( Slots::iterator it = slots.begin(); it != slots.end(); ++it )
+	{
+		Slot& slot = *it;
+		if ( slot.IsFree() )
+		{
+			return &slot;
+		}
+	}
+	return NULL;
+}
+
+void NetworkServiceManager::SlotNextRequest( Channel* channel )
+{
+	Slot* slot;
+	while ( !channel->requests.empty() && ( slot = channel->FreeSlot() ) != NULL )
+	{
+		slot->channel = channel;
+		slot->response.Clear();
+		slot->responseBuffer = NULL;
+		slot->request = channel->requests.front();
+		channel->requests.pop_front();
+		slot->request.Refresh();
+		slot->request.httpTransaction->SetListener( this );
+		slot->request.httpTransaction->SetUserData( slot );
+		slot->request.httpTransaction->Start();
+	}
+}
+
+/////////////// NetworkServiceRequest ///////////////
+
+NetworkServiceRequest::NetworkServiceRequest(ResumableRequestInfo* inResumableRequestInfo, int32 inRequestId)
+	: httpTransaction(NULL)
+	, requestBody(NULL)
+	, requestId(inRequestId)
+	, mIsResumableRequest(inResumableRequestInfo != NULL)
+	, mResumeInfo(inResumableRequestInfo)
+	, mCancelState(CancelState_NotCanceled)
+	, mShouldNotifyListenerOnCancel(false)
+{
+	httpTransaction = NULL;
+	if (inResumableRequestInfo != NULL)
+		inResumableRequestInfo->SetParentRequest(this);
+}
+
+void NetworkServiceRequest::Refresh()
+{
+	if (mResumeInfo != NULL)
+		mResumeInfo->SetParentRequest(this);
+}
+
+void NetworkServiceRequest::Release()
+{
+	CancelHttpTransaction();
+	if (mResumeInfo != NULL)
+		delete mResumeInfo;
+	mResumeInfo = NULL;
+	SetCancelState(CancelState_Canceled);
+}
+
+void NetworkServiceRequest::ConvertToNonResumableRequest()
+{
+	mIsResumableRequest = false;
+	if (mResumeInfo != NULL)
+		delete mResumeInfo;
+	mResumeInfo = NULL;
+}
+
+/////////////// Cancellation ///////////////
+
+NetworkServiceRequest::CancelState NetworkServiceRequest::GetCancelState()
+{
+	AutoCrit aCrit(gNetworkServiceRequestLock);
+	return mCancelState;
+}
+
+void NetworkServiceRequest::SetCancelState(CancelState inState)
+{
+	AutoCrit aCrit(gNetworkServiceRequestLock);
+	mCancelState = inState;
+}
+
+ResumableRequestInfo* NetworkServiceRequest::GetResumableRequestInfo()
+{
+	AutoCrit aCrit(gNetworkServiceRequestLock);
+	return mResumeInfo;
+}
+
+void NetworkServiceRequest::MarkForCancellation(bool inShouldNotifyListener)
+{
+	AutoCrit aCrit(gNetworkServiceRequestLock);
+	SetCancelState(CancelState_CancelRequested);
+	mShouldNotifyListenerOnCancel = inShouldNotifyListener;
+}
+
+ResumableRequestInfo* NetworkServiceRequest::TakeResumableInfoAndMarkForCancellation(bool inShouldNotifyListener)
+{
+	AutoCrit aCrit(gNetworkServiceRequestLock);
+	ResumableRequestInfo* aResumeInfo = mResumeInfo;
+	if (aResumeInfo != NULL)
+	{
+		MarkForCancellation(inShouldNotifyListener);
+		aResumeInfo->SetParentRequest(NULL);
+	}
+	mResumeInfo = NULL;
+	return aResumeInfo;
+}
+
+void NetworkServiceRequest::AbortCancelRequest()
+{
+	SetCancelState(CancelState_NotCanceled);
+}
+
+void NetworkServiceRequest::NotifyCancel()
+{
+	bool aShouldNotify;
+	{
+		AutoCrit aCrit(gNetworkServiceRequestLock);
+		aShouldNotify = mShouldNotifyListenerOnCancel;
+	}
+	if (aShouldNotify)
+		listener->ServiceRequestCanceled(context);
+}
+
+void NetworkServiceRequest::CancelHttpTransaction()
+{
+	if (httpTransaction != NULL)
+	{
+		httpTransaction->Release();
+		httpTransaction = NULL;
+	}
+	if (requestBody != NULL)
+	{
+		delete requestBody;
+		requestBody = NULL;
+	}
+}
+
+void NetworkServiceRequest::CancelHttpTransactionAndEnterPendingCancel(void* slot)
+{
+	CancelHttpTransaction();
+	SetCancelState(CancelState_CancelPending);
+	NetworkServiceManager::DefaultNetworkServiceManager()->AddPendingCancelSlot((NetworkServiceManager::Slot*)slot);
+}
+
+void NetworkServiceRequest::CancelImmediate()
+{
+	NotifyCancel();
+	Release();
+	SetCancelState(CancelState_Canceled);
 }

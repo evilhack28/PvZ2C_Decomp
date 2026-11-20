@@ -36,3 +36,7 @@ void UIMessageBox::SetTextColor(Sexy::Color color)
 	if (m_pText)
 		m_pText->SetColor(0, color);
 }
+
+UIMessageBox::~UIMessageBox()
+{
+}

@@ -211,3 +211,25 @@ void MainMenu::CreateWelcomeDialog(PlayerInfoPtr i_playerInfo)
 	m_scrollingPaneWidget->ScrollRight(new EditProfileWidget(i_playerInfo));
 	BringToFront(m_scrollingPaneWidget);
 }
+
+MainMenu::MainMenu()
+{
+}
+
+MainMenu::~MainMenu()
+{
+}
+
+bool MainMenu::NeedDecompressRsbsExtra()
+{
+	std::vector<CheckRsbInfo>::iterator it = sExtraRsbs.begin();
+	std::vector<CheckRsbInfo>::iterator end = sExtraRsbs.end();
+	for (; it != end; ++it)
+	{
+		CheckRsbInfo& info = *it;
+		if (gLawnApp->mResStreamsManager->NeedDecompressRsb(info.RsbName, std::string(""), std::string("")))
+			return true;
+	}
+	return false;
+}
+

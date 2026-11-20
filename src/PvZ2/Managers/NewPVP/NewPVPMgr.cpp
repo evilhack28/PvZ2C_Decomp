@@ -20,3 +20,8 @@ bool NewPVPMgr::canStartFrameCalc()
 {
 	return m_nextFramesCalcTime == PVZ_EOT();
 }
+
+bool NewPVPMgr::IsPreviousMatchingTimeout()
+{
+	return true;
+}

@@ -44,3 +44,7 @@ bool WorldDataManager::IsValidWorldId(int i_worldID)
 	const WorldMapList* worldMapList = WorldMapUtils::GetWorldMapList();
 	return worldMapList && worldMapList->GetMapListNodeById(i_worldID) != NULL;
 }
+
+WorldDataManager::WorldDataManager()
+{
+}

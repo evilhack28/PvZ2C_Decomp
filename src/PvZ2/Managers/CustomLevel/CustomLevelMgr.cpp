@@ -24,3 +24,9 @@ const CustomLevelConfig* CustomLevelMgr::GetConfig() const
 {
 	return CustomLevelMgr::getConfig();
 }
+
+void CustomLevelMgr::InitModules(const CustomLevelWorldParams& i_g)
+{
+	initializeDefaultModules();
+	CustomLevelMgr::initOtherModules(i_g);
+}

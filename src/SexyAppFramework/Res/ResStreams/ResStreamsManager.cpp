@@ -55,3 +55,21 @@ uint32 ResStreamsManager::GetTotalBytesForGroup(RSBDesc* pRsbDesc, uint32 theGro
 	ResStreamGroupDescriptor* aDesc = pRsbDesc->mGroups[theGroupId].mDesc;
 	return aDesc->data_gpu_total_size + aDesc->data_resident_total_size + aDesc->data_transient_total_size;
 }
+
+void ResStreamsManager::ExecuteTasks()
+{
+}
+
+void ResStreamsManager::LostFocus()
+{
+}
+
+bool ResStreamsManager::LoadGroupFileIndex(const std::string& theGroupName)
+{
+	return LoadGroupFileIndex(LookupGroup(theGroupName));
+}
+
+bool ResStreamsManager::UnloadGroupFileIndex(const std::string& theGroupName)
+{
+	return UnloadGroupFileIndex(LookupGroup(theGroupName));
+}

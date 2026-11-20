@@ -36,3 +36,11 @@ void CrazyNPCManager::FinisAllTalking()
 	stopAllTalking();
 	finishNarrative();
 }
+
+void CrazyNPCManager::setStateHelper(const StateDefinition<CrazyNPCManagerState>& i_newStateDefinition)
+{
+	if (m_stateMachine.SetState(i_newStateDefinition))
+	{
+		m_stateEnterTime = PVZ_T();
+	}
+}

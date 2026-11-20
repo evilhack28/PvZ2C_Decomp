@@ -5982,3 +5982,139 @@ int PlayerInfo::GetLevelPlayCount(const std::string& i_levelName)
 		return m_worldMapEventList[index].PlayCount;
 	return 0;
 }
+
+TravelLogTaskSaveInfo PlayerInfo::GetDaveTaskSaveInfo(int i_id)
+{
+	for (size_t i = 0; i < m_daveTaskInfos.size(); i++)
+	{
+		if (m_daveTaskInfos[i].ID == i_id)
+			return m_daveTaskInfos[i];
+	}
+	TravelLogTaskSaveInfo info;
+	info.ID = -1;
+	info.GroupID = -1;
+	info.Progress = -1;
+	info.State = -1;
+	info.Creation = 0;
+	return info;
+}
+
+TravelLogTaskSaveInfo PlayerInfo::GetPennyTaskSaveInfo(int i_id)
+{
+	for (size_t i = 0; i < m_pennyTaskInfos.size(); i++)
+	{
+		if (m_pennyTaskInfos[i].ID == i_id)
+			return m_pennyTaskInfos[i];
+	}
+	TravelLogTaskSaveInfo info;
+	info.ID = -1;
+	info.GroupID = -1;
+	info.Progress = -1;
+	info.State = -1;
+	info.Creation = 0;
+	return info;
+}
+
+TravelLogTaskSaveInfo PlayerInfo::GetTravelLogSaveInfo(int i_id)
+{
+	for (size_t i = 0; i < m_travelLogTaskInfos.size(); i++)
+	{
+		if (m_travelLogTaskInfos[i].ID == i_id)
+			return m_travelLogTaskInfos[i];
+	}
+	TravelLogTaskSaveInfo info;
+	info.ID = -1;
+	info.GroupID = -1;
+	info.Progress = -1;
+	info.State = -1;
+	info.Creation = 0;
+	return info;
+}
+
+TravelLogTaskSaveInfo PlayerInfo::GetPvZ1AchievementInfo(int i_id)
+{
+	for (size_t i = 0; i < m_pvz1AchievementInfos.size(); i++)
+	{
+		if (m_pvz1AchievementInfos[i].ID == i_id)
+			return m_pvz1AchievementInfos[i];
+	}
+	TravelLogTaskSaveInfo info;
+	info.ID = -1;
+	info.GroupID = -1;
+	info.Progress = -1;
+	info.State = -1;
+	info.Creation = 0;
+	return info;
+}
+
+void PlayerInfo::UpdateDaveTaskSaveInfo(TravelLogTaskSaveInfo i_param)
+{
+	for (size_t i = 0; i < m_daveTaskInfos.size(); i++)
+	{
+		TravelLogTaskSaveInfo* info = &m_daveTaskInfos[i];
+		if (info->ID == i_param.ID)
+		{
+			*info = i_param;
+			SAVE_PROFILE();
+			ProfileMgr::GetInstance().Save(false, false);
+			return;
+		}
+	}
+	m_daveTaskInfos.push_back(i_param);
+	SAVE_PROFILE();
+	ProfileMgr::GetInstance().Save(false, false);
+}
+
+void PlayerInfo::UpdatePennyTaskSaveInfo(TravelLogTaskSaveInfo i_param)
+{
+	for (size_t i = 0; i < m_pennyTaskInfos.size(); i++)
+	{
+		TravelLogTaskSaveInfo* info = &m_pennyTaskInfos[i];
+		if (info->ID == i_param.ID)
+		{
+			*info = i_param;
+			SAVE_PROFILE();
+			ProfileMgr::GetInstance().Save(false, false);
+			return;
+		}
+	}
+	m_pennyTaskInfos.push_back(i_param);
+	SAVE_PROFILE();
+	ProfileMgr::GetInstance().Save(false, false);
+}
+
+void PlayerInfo::UpdateTravelLogSaveInfo(TravelLogTaskSaveInfo i_param)
+{
+	for (size_t i = 0; i < m_travelLogTaskInfos.size(); i++)
+	{
+		TravelLogTaskSaveInfo* info = &m_travelLogTaskInfos[i];
+		if (info->ID == i_param.ID)
+		{
+			*info = i_param;
+			SAVE_PROFILE();
+			ProfileMgr::GetInstance().Save(false, false);
+			return;
+		}
+	}
+	m_travelLogTaskInfos.push_back(i_param);
+	SAVE_PROFILE();
+	ProfileMgr::GetInstance().Save(false, false);
+}
+
+void PlayerInfo::UpdatePvZ1AchievementInfo(TravelLogTaskSaveInfo i_param)
+{
+	for (size_t i = 0; i < m_pvz1AchievementInfos.size(); i++)
+	{
+		TravelLogTaskSaveInfo* info = &m_pvz1AchievementInfos[i];
+		if (info->ID == i_param.ID)
+		{
+			*info = i_param;
+			SAVE_PROFILE();
+			ProfileMgr::GetInstance().Save(false, false);
+			return;
+		}
+	}
+	m_pvz1AchievementInfos.push_back(i_param);
+	SAVE_PROFILE();
+	ProfileMgr::GetInstance().Save(false, false);
+}
