@@ -20,6 +20,14 @@
 
 /////////////// Basic info ///////////////
 
+__attribute__((noclone, noinline)) static DString FormatLocalTime(time_t i_time)
+{
+	tm* aTime = localtime(&i_time);
+	DString aResult;
+	aResult.format("%d-%02d-%02d %02d:%02d:%02d", aTime->tm_year + 1900, aTime->tm_mon + 1, aTime->tm_mday, aTime->tm_hour, aTime->tm_min, aTime->tm_sec);
+	return aResult;
+}
+
 std::string PublicBasicInfo::getDefineID()
 {
 	return LazySingleton<DefineIDMgr>::GetInstance().GetNewUserDefineID();
@@ -184,4 +192,9 @@ PublicBasicInfo& PublicBasicInfo::getBasicInfo(OUT_PARAM DValue& value)
 
 PublicBasicInfo& PublicBasicInfo::getBehavior(OUT_PARAM DValue & i_arg)
 {
+}
+
+std::string PublicBasicInfo::getClientTime()
+{
+	return FormatLocalTime(time(NULL)).c_str();
 }

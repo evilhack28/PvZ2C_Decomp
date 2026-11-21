@@ -17,3 +17,83 @@
 // TODO      8 B  Sexy::CompiledMap::Find                              _ZN4Sexy11CompiledMap4FindEPKw
 // TODO      4 B  Sexy::CompiledMap::CompiledMap                       _ZN4Sexy11CompiledMapC2EPhj
 // TODO      4 B  Sexy::CompiledMap::CompiledMap                       _ZN4Sexy11CompiledMapC1EPhj
+
+#include "SexyAppFramework/Common.h"
+
+#include "SexyAppFramework/CompiledMap.h"
+
+namespace Sexy
+{
+
+/////////////// Lifecycle ///////////////
+
+CompiledMap::CompiledMap()
+	: mNodes(NULL)
+	, mNumNodes(0)
+{
+}
+
+CompiledMap::CompiledMap(uint8* theBuffer, uint32 theSize)
+{
+	Init(theBuffer, theSize);
+}
+
+void CompiledMap::Init(uint8* theBuffer, uint32 theSize)
+{
+	mNodes = (Node*)theBuffer;
+	mNumNodes = theSize / sizeof(Node);
+}
+
+/////////////// Accessors ///////////////
+
+bool CompiledMap::Initialized()
+{
+	return mNodes != NULL;
+}
+
+/////////////// Lookup ///////////////
+
+uint8* CompiledMap::Find(const char* theString)
+{
+	if (mNumNodes == 0)
+		return NULL;
+
+	return FindFast((const char_t*)theString);
+}
+
+uint8* CompiledMap::Find(const wchar_t* theString)
+{
+	return NULL;
+}
+
+uint8* CompiledMap::FindFast(const char_t* word)
+{
+	Node* node = mNodes;
+	if (node == NULL)
+		return NULL;
+
+	while (node != NULL)
+	{
+		char_t c = toupper(*word);
+		if (c == node->ch())
+		{
+			if (c == 0)
+				return (uint8*)(node + 1);
+			node++;
+			word++;
+		}
+		else if (c < node->ch())
+			return NULL;
+		else
+		{
+			index_t alt = node->alt();
+			node = mNodes + alt;
+			if (alt == 0)
+				return NULL;
+		}
+	}
+
+	return NULL;
+}
+
+} // namespace Sexy

@@ -12,3 +12,10 @@
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(PVPShopConfigData);
+
+void PVPShopConfigData::clear()
+{
+	m_baseList.clear();
+	m_randomList.clear();
+	m_padList.clear();
+}

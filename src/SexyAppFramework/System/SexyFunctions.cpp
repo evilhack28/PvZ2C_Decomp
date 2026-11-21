@@ -6,6 +6,7 @@
 //
 
 #include "SexyAppFramework/Common.h"
+#include "SexyAppFramework/MTRand.h"
 
 bool isws(wchar_t theChar);
 
@@ -157,6 +158,33 @@ std::wstring UTF8StringToWString(const std::string& theString)
 	}
 
 	return aString;
+}
+
+/////////////// Random ///////////////
+
+int Rand()
+{
+	return gCommonMTRand.Next();
+}
+
+int Rand(int range)
+{
+	return gCommonMTRand.Next((ulong)range);
+}
+
+float Rand(float range)
+{
+	return gCommonMTRand.Next(range);
+}
+
+void SRand(ulong theSeed)
+{
+	gCommonMTRand.SRand(theSeed);
+}
+
+bool IsNear(float a, float b, float tolerance)
+{
+	return fabsf(a - b) < tolerance;
 }
 
 } // namespace Sexy

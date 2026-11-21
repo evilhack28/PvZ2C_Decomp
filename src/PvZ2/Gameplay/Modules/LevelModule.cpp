@@ -25,3 +25,8 @@ void LevelModuleProperties::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(RtId, DifficultyProps);
 	REFLECTION_CLASSBUILDER_END(LevelModuleProperties);
 }
+
+RtClass* LevelModuleProperties::GetModuleClass() const
+{
+	return NULL;
+}

@@ -24,3 +24,30 @@
 // TODO     44 B  TutorialEffectMgr::GetSpecialIconType                _ZN17TutorialEffectMgr18GetSpecialIconTypeE16TutorialIconType
 // TODO     36 B  TutorialEffectMgr::~TutorialEffectMgr                _ZN17TutorialEffectMgrD0Ev
 // TODO     32 B  TutorialEffectMgr::NotifyTutorialEffectEnd           _ZN17TutorialEffectMgr23NotifyTutorialEffectEndEv
+
+#include "SexyAppFramework/Common.h"
+
+#include "LawnApp.h"
+#include "TutorialEffectMgr.h"
+
+/////////////// Update ///////////////
+
+void TutorialEffectMgr::Update()
+{
+	if (m_icon)
+		m_icon->onUpdate();
+
+	m_actionRunner.Update();
+	m_animationMgr.Update();
+}
+
+void TutorialEffectMgr::Draw(Graphics* i_g)
+{
+	if (m_darkenBg)
+		gLawnApp->DrawDarkeningLayer(i_g);
+
+	if (m_icon)
+		m_icon->onDraw(i_g);
+
+	m_animationMgr.InnerDraw(i_g);
+}

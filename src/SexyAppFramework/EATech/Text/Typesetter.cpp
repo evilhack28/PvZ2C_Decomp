@@ -72,3 +72,24 @@
 // TODO      8 B  EA::Text::Typesetter::SetFontServer                  _ZN2EA4Text10Typesetter13SetFontServerEPNS0_10FontServerE
 // TODO      8 B  EA::Text::Typesetter::EllipsizeLine                  _ZN2EA4Text10Typesetter13EllipsizeLineEb
 // TODO      4 B  EA::Text::Typesetter::ShapeIndic                     _ZN2EA4Text10Typesetter10ShapeIndicEmm
+
+#include "SexyAppFramework/Common.h"
+
+#include <EAText/EATextTypesetter.h>
+
+namespace EA
+{
+namespace Text
+{
+
+/////////////// Accessors ///////////////
+
+void Typesetter::SetLayoutSpace(float fSpace, float fPenX, float fPenY)
+{
+	mfLayoutSpace = fSpace;
+	mfLayoutPenX = fPenX;
+	mfLayoutPenY = fPenY;
+}
+
+} // namespace Text
+} // namespace EA

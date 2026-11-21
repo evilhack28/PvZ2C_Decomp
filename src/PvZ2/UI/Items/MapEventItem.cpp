@@ -26,3 +26,12 @@ void MapEventItem::ResetPointers()
 	m_worldDataPtr = NULL;
 	m_children.clear();
 }
+
+void MapEventItem::SetParentEventPtr(MapEventItem* i_ptr)
+{
+	if (m_parent)
+		m_parent->RemoveChild(this);
+	m_parent = i_ptr;
+	if (m_parent)
+		m_parent->AddChild(this);
+}

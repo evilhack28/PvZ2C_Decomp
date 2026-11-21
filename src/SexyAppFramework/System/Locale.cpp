@@ -17,3 +17,24 @@
 // TODO     56 B  Sexy::Locale::SetSeperators                          _ZN4Sexy6Locale13SetSeperatorsERKSbIwSt11char_traitsIwESaIwEES6_
 // TODO     24 B  Sexy::Locale::isalnum                                _ZN4Sexy6Locale7isalnumEc
 // TODO     24 B  Sexy::Locale::isalnum                                _ZN4Sexy6Locale7isalnumEw
+
+#include "SexyAppFramework/Common.h"
+
+namespace Sexy
+{
+namespace Locale
+{
+
+extern SexyString gGrouping;
+extern SexyString gThousandSep;
+
+/////////////// Settings ///////////////
+
+void SetSeperators(const SexyString& theGrouping, const SexyString& theSeperator)
+{
+	gGrouping = theGrouping;
+	gThousandSep = theSeperator;
+}
+
+} // namespace Locale
+} // namespace Sexy

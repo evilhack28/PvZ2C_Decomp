@@ -1522,7 +1522,7 @@ INetworkMsgProcess::INetworkMsgProcess()
 	m_nCloudLoginCount = 0;
 	m_waitingPurgeResponse = 0;
 	m_waitingPVPResponse = 0;
-	m_ICIoudState = 0;
+	m_ICIoudState = INIT;
 	m_random = 0;
 }
 

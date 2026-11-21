@@ -50,3 +50,42 @@ void DangerRoomPropertySheet::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(PlantRestrictionSet, PlantStoredType);
 	REFLECTION_CLASSBUILDER_END(DangerRoomPropertySheet);
 }
+
+void DangerRoomPropertySheet::Copy(const DangerRoomPropertySheet& src)
+{
+	LevelDatas = src.LevelDatas;
+	FlagWaveSetupList = src.FlagWaveSetupList;
+	PlantfoodSetupList = src.PlantfoodSetupList;
+	MinWaveCount = src.MinWaveCount;
+	MaxWaveCount = src.MaxWaveCount;
+	WaveAddEach = src.WaveAddEach;
+	WaveAddInterval = src.WaveAddInterval;
+	MinFlagWaveCount = src.MinFlagWaveCount;
+	MaxFlagWaveCount = src.MaxFlagWaveCount;
+	MinLevelFlagWaveAdd = src.MinLevelFlagWaveAdd;
+	ZombieLevelBase = src.ZombieLevelBase;
+	ZombieLevelAdd = src.ZombieLevelAdd;
+	ZombieTypeCount = src.ZombieTypeCount;
+	BigZombieSureExistLevel = src.BigZombieSureExistLevel;
+	LeaderMinWaveCost = src.LeaderMinWaveCost;
+	LeaderProbability = src.LeaderProbability;
+	LeaderStrengthenRate = src.LeaderStrengthenRate;
+	WealthGodProbability = src.WealthGodProbability;
+	SunLimit = src.SunLimit;
+	SunAddBase = src.SunAddBase;
+	SunAddEachLevel = src.SunAddEachLevel;
+	SunAddBossBase = src.SunAddBossBase;
+	SunAddBossEach = src.SunAddBossEach;
+	BossInterval = src.BossInterval;
+	BossHpBaseFactor = src.BossHpBaseFactor;
+	BossHpAddFactor = src.BossHpAddFactor;
+	PlantPacketLimit = src.PlantPacketLimit;
+	PlantPacketStart = src.PlantPacketStart;
+	PlantPacketAddEachLevel = src.PlantPacketAddEachLevel;
+	ZombieLevelStats = src.ZombieLevelStats;
+	StartingPoints = src.StartingPoints;
+	BasePointIncrementPerWave = src.BasePointIncrementPerWave;
+	BasePointIncrementPerLevel = src.BasePointIncrementPerLevel;
+	PlantStoredType = src.PlantStoredType;
+	MaxSelectedPlant = src.MaxSelectedPlant;
+}

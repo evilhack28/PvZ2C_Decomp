@@ -15,3 +15,20 @@ bool JavaMethodBase::valid()
 {
 	return mID != NULL;
 }
+
+/////////////// Lifecycle ///////////////
+
+bool JavaMethodBase::init(JNIEnv* env, const JavaClass& javaClass, const char* name, const char* signature)
+{
+	mEnv = env;
+	if (javaClass)
+	{
+		mID = env->GetMethodID(javaClass, name, signature);
+		JavaException::CheckAndClear(env);
+		mDebugName = javaClass.name();
+		mDebugName += ".";
+		mDebugName += name;
+		mDebugName += signature;
+	}
+	return mID != NULL;
+}

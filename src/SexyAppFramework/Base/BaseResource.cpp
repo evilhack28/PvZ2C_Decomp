@@ -29,3 +29,18 @@ BaseResource::EResourceRegistrationType BaseResource::GetRegistrationType()
 	}
 	return type;
 }
+
+static RtId GetResourceRtId(RtObject* inObject)
+{
+	BaseResource* resource = inObject->Cast<BaseResource>();
+	if (resource)
+		return resource->GetRtId();
+	return RtId();
+}
+
+void BaseResource::StaticClassInit()
+{
+	RtIdProtocol* protocol = new RtIdProtocol;
+	protocol->SetDelegate(MakeDelegate(&GetResourceRtId));
+	StaticGetClass()->AddProtocol(protocol);
+}

@@ -8,6 +8,7 @@
 #include "NetworkServiceManager.h"
 #include "AsyncTaskManager.h"
 #include "ResumeRequestInfo.h"
+#include "SexyAppFramework/SexyAppBase.h"
 
 using namespace Sexy;
 
@@ -76,6 +77,96 @@ void NetworkServiceManager::ConfigureChannel( StructuredData::String channelName
 void NetworkServiceManager::SetLogLevel( LogLevel level )
 {
 	mLogLevel = level;
+}
+
+/////////////// Requests ///////////////
+
+NetworkServiceManager::RequestId NetworkServiceManager::MakeRequest( const StructuredData* request, const NetworkServiceProfile* profile, NetworkServiceListener* listener, const void* context )
+{
+	const char* path = request->StringForPath( "$.path", 0 );
+	const StructuredData::Value* params = request->ObjectForPath( "$.params" );
+	std::string url = profile->uri;
+	if ( path )
+		AppendPathComponent( url, path );
+	std::string query;
+	if ( profile->params.Readable() )
+		profile->params.AppendToQueryString( query );
+	if ( params )
+		params->AppendToQueryString( query );
+	url += query;
+	return MakeRequest( request, url, listener, context );
+}
+
+NetworkServiceManager::RequestId NetworkServiceManager::MakeRequest( const StructuredData* request, NetworkServiceListener* listener, const void* context )
+{
+	return MakeRequest( request, -1, listener, context );
+}
+
+NetworkServiceManager::RequestId NetworkServiceManager::MakeRequest( const StructuredData* request, const std::string& url, NetworkServiceListener* listener, const void* context )
+{
+	return MakeRequest( request, -1, url, listener, context );
+}
+
+bool NetworkServiceManager::DeleteOldPartialFiles( void )
+{
+	bool result = true;
+	IFileDriver* driver = gSexyAppBase->mFileDriver;
+	FileSearchInfo info;
+	IFileSearch* search = driver->FileSearchStart( ResumableRequestInfo::GetResumeCachedFolder(), &info );
+	do
+	{
+		if ( !info.is_directory && IsPartialFile( info.file_name ) && IsOlderThan( 1209600, ResumableRequestInfo::GetResumeCachedFolder() + info.file_name ) )
+		{
+			std::string path = ResumableRequestInfo::GetResumeCachedFolder() + info.file_name;
+			if ( result )
+				result = driver->DeleteFile( path );
+		}
+	} while ( driver->FileSearchNext( search, &info ) );
+	driver->FileSearchEnd( search );
+	return result;
+}
+
+void NetworkServiceManager::EncodeFormData( const StructuredData::Value* formData, NetworkServiceRequest& request )
+{
+	std::string boundary = "_{{}}_";
+	std::string startBoundary = "--" + boundary;
+	std::string endBoundary = "--" + boundary + "--";
+	std::string contentType = "multipart/form-data; boundary=" + boundary;
+	request.requestBody = new Buffer;
+	for ( const StructuredData::Value* it = formData->ChildrenBegin(); it != formData->ChildrenEnd(); it = it->Next() )
+	{
+		std::string value = it->StringValue();
+		if ( !value.empty() )
+		{
+			request.requestBody->WriteLine( startBoundary );
+			request.requestBody->WriteLine( StrFormat( "Content-Disposition: form-data; name=\"%s\"", it->Name() ) );
+			request.requestBody->WriteLine( "" );
+			request.requestBody->WriteLine( value );
+		}
+	}
+	request.requestBody->WriteLine( endBoundary );
+	request.httpTransaction->SetRequestHeader( "Content-Type", contentType );
+	request.httpTransaction->SetRequestHeader( "Content-Length", StrFormat( "%d", request.requestBody->GetDataLen() ) );
+	request.httpTransaction->SetRequestBody( request.requestBody->GetDataPtr(), request.requestBody->GetDataLen() );
+}
+
+NetworkServiceManager::RequestId NetworkServiceManager::MakeRequest( const StructuredData* request, RequestId inUseRequestId, NetworkServiceListener* listener, const void* context )
+{
+	const char* path = request->StringForPath( "$.path", 0 );
+	const StructuredData::Value* params = request->ObjectForPath( "$.params" );
+	const char* baseUrl = request->StringForPath( "$.url", 0 );
+	if ( !baseUrl )
+		return -1;
+	std::string url = baseUrl;
+	if ( path )
+		AppendPathComponent( url, path );
+	if ( params )
+	{
+		std::string query;
+		params->AppendToQueryString( query );
+		url += query;
+	}
+	return MakeRequest( request, inUseRequestId, url, listener, context );
 }
 
 /////////////// Cancellation ///////////////

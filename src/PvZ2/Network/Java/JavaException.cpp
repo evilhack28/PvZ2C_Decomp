@@ -6,3 +6,19 @@
 // classes: JavaException
 //
 // TODO     56 B  JavaException::CheckAndClear                         _ZN13JavaException13CheckAndClearEP7_JNIEnv
+
+#include "SexyAppFramework/Common.h"
+
+#include "SexyAppFramework/drivers/app/android/JavaBound.h"
+
+/////////////// Exceptions ///////////////
+
+bool JavaException::CheckAndClear(JNIEnv* env)
+{
+	if (env->ExceptionCheck())
+	{
+		env->ExceptionDescribe();
+		return true;
+	}
+	return false;
+}

@@ -18,3 +18,12 @@ float TitleScreen::GetSecondDecompressTotalAmount()
 {
 	return 0.8f;
 }
+
+void TitleScreen::SetState(TitleState i_titleState)
+{
+	if (m_titleState != i_titleState)
+	{
+		m_titleState = i_titleState;
+		m_stateEnterTime = PVZ_T();
+	}
+}

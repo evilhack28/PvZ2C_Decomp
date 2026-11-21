@@ -12,3 +12,30 @@
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(NewPVPPropertySheet);
+
+void NewPVPPropertySheet::Copy(const NewPVPPropertySheet& src)
+{
+	CommonZombieCreatedCD = src.CommonZombieCreatedCD;
+	CommonPlantLevelUpValue = src.CommonPlantLevelUpValue;
+	CommonMaxZombieCacheSize = src.CommonMaxZombieCacheSize;
+	StartingSun = src.StartingSun;
+	SunLimit = src.SunLimit;
+	SunAddBase = src.SunAddBase;
+	SunAddEachTurn = src.SunAddEachTurn;
+	ZombieLevelStats = src.ZombieLevelStats;
+	ZombiePacketInfos = src.ZombiePacketInfos;
+	PlantPacketInfos = src.PlantPacketInfos;
+	MaxHealthAmount = src.MaxHealthAmount;
+	DealtDamage = src.DealtDamage;
+	SunCostMultiplier = src.SunCostMultiplier;
+	ZombieSkillInfos = src.ZombieSkillInfos;
+	ZombieUpgradeInfos = src.ZombieUpgradeInfos;
+	SunUpgradeInfos = src.SunUpgradeInfos;
+	AreaHowToPlayData = src.AreaHowToPlayData;
+	ChooserPlantBlacklist = src.ChooserPlantBlacklist;
+	NewPVPZombieLevelUpSheet = src.NewPVPZombieLevelUpSheet;
+	UnsyncPlantBlacklist = src.UnsyncPlantBlacklist;
+	CPULevelInfos = src.CPULevelInfos;
+	TutorialPlantList = src.TutorialPlantList;
+	TutorialInfo = src.TutorialInfo;
+}

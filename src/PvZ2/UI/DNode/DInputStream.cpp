@@ -126,3 +126,30 @@ double DInputStream::readDouble()
 		value = __builtin_bswap64(value);
 	return *(double*)&value;
 }
+
+bool DInputStream::readFromFullPathFile(const std::string& fullPathFileName)
+{
+	Sexy::OutputDebugStrF("ReadFileFromFullPath : %s", fullPathFileName.c_str());
+	length = 0;
+	if (pBuff)
+	{
+		free(pBuff);
+		pBuff = NULL;
+	}
+
+	{
+		std::string path = fullPathFileName;
+		FILE* fp = fopen(path.c_str(), "rb");
+		if (!fp)
+			goto done;
+
+		fseek(fp, 0, SEEK_END);
+		length = ftell(fp);
+		fseek(fp, 0, SEEK_SET);
+		pBuff = (unsigned char*)malloc(length);
+		length = fread(pBuff, 1, length, fp);
+		fclose(fp);
+	}
+done:
+	return pBuff != NULL;
+}

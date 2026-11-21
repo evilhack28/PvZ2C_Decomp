@@ -16,6 +16,16 @@
 #include "PlayerInfo.h"
 #include "StateMachineTableBuilder.h"
 #include "ReflectionBuilder.h"
+#include "PVZDB.h"
+
+namespace Lua
+{
+class CLuaEngine : public Sexy::LazySingleton<CLuaEngine>
+{
+public:
+	void ExecuteTableFunction(const char* i_table, const char* i_function);
+};
+}
 
 /////////////// Lifecycle ///////////////
 
@@ -413,4 +423,17 @@ bool UIWidget::ProcessedMouseDown(const int i_mouseX, const int i_mouseY, const 
 	widget->OnMouseDown(i_mouseX, i_mouseY);
 	m_mouseFocusWidget = widget->GetPtr();
 	return true;
+}
+
+void UIWidget::ResetUI()
+{
+	m_mouseFocusWidget = NULL;
+	for (Sexy::RtDbTable::Iterator it = PVZDB::GetInstance().GetObjectIteratorForTable(PVZDB::TABLE_UIWIDGETS); it; ++it)
+	{
+		Sexy::RtWeakPtr<UIWidget> widget = *it;
+		if (UIWidget* w = widget)
+			w->CastChecked<UIWidget>()->Destroy();
+	}
+	PVZDB::GetInstance().RunDeferredDeletions();
+	Sexy::LazySingleton<Lua::CLuaEngine>::GetInstancePtr()->ExecuteTableFunction("luaApp", "ResetUIWidget");
 }

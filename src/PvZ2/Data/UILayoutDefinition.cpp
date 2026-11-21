@@ -11,9 +11,13 @@
 
 #include "ReflectionBuilder.h"
 
-RT_CLASS_IMPLEMENT(UILayoutDefinition);
+/////////////// Logic ///////////////
 
 bool UILayoutDefinition::NeedAttachLawnApp(void) const
 {
 	return m_bNeedAttachLawnApp;
 }
+
+/////////////// Reflection ///////////////
+
+RT_CLASS_IMPLEMENT(UILayoutDefinition);

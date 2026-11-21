@@ -102,3 +102,19 @@ void EditWidget::SetFont(Font* theFont, Font* theWidthCheckFont)
     if (theWidthCheckFont != NULL)
         AddWidthCheckFont(theWidthCheckFont);
 }
+
+void EditWidget::SetFont(PrimeTypeface* theFont, PrimeTypeface* theWidthCheckFont)
+{
+	mPrimeFont = theFont;
+	ClearWidthCheckFonts();
+	if (theWidthCheckFont)
+		AddWidthCheckFont(theWidthCheckFont);
+}
+
+void EditWidget::ClearWidthCheckFonts()
+{
+	for (WidthCheckList::iterator anItr = mWidthCheckList.begin(); anItr != mWidthCheckList.end(); ++anItr)
+		delete anItr->mFont;
+
+	mWidthCheckList.clear();
+}

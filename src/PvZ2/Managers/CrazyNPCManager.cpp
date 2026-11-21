@@ -8,6 +8,7 @@
 #include "SexyAppFramework/Common.h"
 
 #include "CrazyNPCManager.h"
+#include "CrazyNPC.h"
 
 void CrazyNPCManager::initLoadingResourcesGroupList()
 {
@@ -42,5 +43,24 @@ void CrazyNPCManager::setStateHelper(const StateDefinition<CrazyNPCManagerState>
 	if (m_stateMachine.SetState(i_newStateDefinition))
 	{
 		m_stateEnterTime = PVZ_T();
+	}
+}
+
+void CrazyNPCManager::stopAllTalking()
+{
+	for (size_t i = 0; i < m_activeNPCs.size(); i++)
+	{
+		m_activeNPCs[i]->StopTalking();
+	}
+}
+
+void CrazyNPCManager::finishNarrative()
+{
+	for (size_t i = 0; i < m_activeNPCs.size(); i++)
+	{
+		if (!m_activeNPCs[i]->IsLeaving())
+		{
+			m_activeNPCs[i]->Leave();
+		}
 	}
 }

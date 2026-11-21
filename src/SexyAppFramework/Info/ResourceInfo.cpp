@@ -10,4 +10,22 @@
 #include "ResourceManager.h"
 #include "ReflectionBuilder.h"
 
+/////////////// Logic ///////////////
+
+void ResourceInfo::DeleteResource()
+{
+	if (!mInstanceRtId || mSrcRefResInfo)
+		return;
+
+	if (RtDb::GetDb()->GetObjectDeletionMode(mInstanceRtId) != RtDbTable::ODM_Never)
+		delete RtDb::GetDb()->GetObjectForId(mInstanceRtId)->Cast<BaseResource>();
+
+	RtDb::GetDb()->ReplaceObjectForId(mInstanceRtId, NULL);
+	if (mInstanceRtId.GetTableIndex() == RtDb::SYSTEMTABLE_ResourceInstancesHidden)
+		RtDb::GetDb()->ReleaseId(mInstanceRtId);
+	mInstanceRtId = RtId();
+}
+
+/////////////// Reflection ///////////////
+
 RT_CLASS_IMPLEMENT_ABSTRACT(ResourceInfo);
