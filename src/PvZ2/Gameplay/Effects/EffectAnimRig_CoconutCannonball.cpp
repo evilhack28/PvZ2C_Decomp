@@ -20,3 +20,18 @@ EffectAnimRig_CoconutCannonball::~EffectAnimRig_CoconutCannonball()
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(EffectAnimRig_CoconutCannonball);
+
+bool EffectAnimRig_CoconutCannonball::PlayNormalFlightLooped()
+{
+	return PlayAndContinue("coconut_projectile") != -1;
+}
+
+bool EffectAnimRig_CoconutCannonball::PlayPlantFoodFlightLooped()
+{
+	return PlayAndContinue("coconut_projectile_plantfood") != -1;
+}
+
+bool EffectAnimRig_CoconutCannonball::PlayStarPlantFoodFlightLooped()
+{
+	return PlayAndContinue("coconut_projectile_plantfood2") != -1;
+}

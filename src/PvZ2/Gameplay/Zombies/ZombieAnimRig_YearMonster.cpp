@@ -30,3 +30,8 @@ void ZombieAnimRig_YearMonster::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_YearMonster);
 }
+
+bool ZombieAnimRig_YearMonster::PlayDeparture()
+{
+	return PlayAndContinue("departure") != -1;
+}

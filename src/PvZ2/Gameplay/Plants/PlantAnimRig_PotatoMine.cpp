@@ -31,3 +31,8 @@ void PlantAnimRig_PotatoMine::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(bool, m_submerged);
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_PotatoMine);
 }
+
+bool PlantAnimRig_PotatoMine::PlaySpinningPotato()
+{
+	return PlayAndContinue("plantfood3") != -1;
+}

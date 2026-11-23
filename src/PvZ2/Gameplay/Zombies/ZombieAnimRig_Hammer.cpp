@@ -36,3 +36,8 @@ void ZombieAnimRig_Hammer::onPopAnimInitialized()
 {
 	 ZombieAnimRig::onPopAnimInitialized();
 }
+
+void ZombieAnimRig_Hammer::PlayBlock()
+{
+	PlayAndContinue("attack3_attack");
+}

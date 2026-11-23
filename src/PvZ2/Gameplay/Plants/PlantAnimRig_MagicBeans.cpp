@@ -31,3 +31,8 @@ void PlantAnimRig_MagicBeans::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(bool, m_submerged);
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_MagicBeans);
 }
+
+bool PlantAnimRig_MagicBeans::PlaySpinningBeans()
+{
+	return PlayAndContinue("plantfood3") != -1;
+}

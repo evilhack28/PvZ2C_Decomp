@@ -30,3 +30,8 @@ void ZombieAnimRig_ModernAllStar::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_ModernAllStar);
 }
+
+bool ZombieAnimRig_ModernAllStar::PlayRunning()
+{
+	return PlayAndContinue("run") != -1;
+}

@@ -30,3 +30,8 @@ void ZombieAnimRig_MonkImp::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_MonkImp);
 }
+
+bool ZombieAnimRig_MonkImp::PlayFlying()
+{
+	return PlayAndContinue("fly") != -1;
+}

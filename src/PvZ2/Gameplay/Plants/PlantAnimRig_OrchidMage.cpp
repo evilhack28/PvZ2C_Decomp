@@ -30,3 +30,23 @@ void PlantAnimRig_OrchidMage::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_OrchidMage);
 }
+
+bool PlantAnimRig_OrchidMage::PlayAttack()
+{
+	return PlayAndContinue("attack") != -1;
+}
+
+bool PlantAnimRig_OrchidMage::PlayAttackIdle()
+{
+	return PlayAndContinue("attack_idle") != -1;
+}
+
+bool PlantAnimRig_OrchidMage::PlayInitialFrame()
+{
+	return PlayAndContinue("idle") != -1;
+}
+
+bool PlantAnimRig_OrchidMage::PlayPassive()
+{
+	return PlayAndContinue("passive") != -1;
+}

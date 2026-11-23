@@ -27,3 +27,13 @@ void ZombieAnimRig_ZombossMech_Dark::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(bool, m_playingIdle);
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_ZombossMech_Dark);
 }
+
+bool ZombieAnimRig_ZombossMech_Dark::PlayFireBreathLoop()
+{
+	return PlayAndContinue("fire_attack_idle") != -1;
+}
+
+bool ZombieAnimRig_ZombossMech_Dark::PlayMagnettedLoop()
+{
+	return PlayAndContinue("vulnerable_loop") != -1;
+}

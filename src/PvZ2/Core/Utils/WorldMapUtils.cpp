@@ -10,6 +10,41 @@
 #include "WorldData.h"
 #include "WorldMapUtils.h"
 
+void loadWorldMapData();
+
+__attribute__((visibility("hidden"))) WorldMapList* sWorldMapList;
+__attribute__((visibility("hidden"))) WorldDataManager* sWorldData;
+
+/////////////// World data ///////////////
+
+void WorldMapUtils::LoadWorldMapData()
+{
+	loadWorldMapData();
+	sWorldData->RebuildWorldData();
+}
+
+WorldMapList* WorldMapUtils::GetWorldMapListForEdit()
+{
+	if (!sWorldMapList)
+		LoadWorldMapData();
+	return sWorldMapList;
+}
+
+const WorldMapList* WorldMapUtils::GetWorldMapList()
+{
+	return GetWorldMapListForEdit();
+}
+
+WorldDataManager* WorldMapUtils::GetWorldDataForEdit()
+{
+	return sWorldData;
+}
+
+const WorldDataManager* WorldMapUtils::GetWorldData()
+{
+	return sWorldData;
+}
+
 /////////////// World queries ///////////////
 
 bool WorldMapUtils::IsRiftWorld(const std::string& i_worldName)

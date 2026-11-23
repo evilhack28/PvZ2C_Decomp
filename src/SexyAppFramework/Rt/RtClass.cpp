@@ -92,3 +92,24 @@ RtClass::RtClass()
 	}
 	mClassRtId = table->AllocId(this, RtDbTable::ODM_Never);
 }
+
+void RtClass::AddProtocol(RtProtocol* inProtocol)
+{
+	mClassProtocolVector.push_back(inProtocol);
+}
+
+bool RtClass::Serialize(const RtSerializeContext& inContext)
+{
+	RtSerialRtonSync* sync = inContext.GetSync();
+	bool writing = sync->IsWriting();
+	if (writing)
+	{
+		RtSerialRtonWriter* writer = sync->GetWriter();
+		writer->BeginObject(inContext.GetKey());
+		writer->WriteString(RtSerialRtonKey("name"), GetName());
+		if (GetSuper())
+			writer->WriteString(RtSerialRtonKey("super"), GetSuper()->GetName());
+		writer->EndObject();
+	}
+	return writing;
+}

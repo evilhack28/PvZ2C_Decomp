@@ -20,3 +20,8 @@ ZombieAnimRig_BullRider::~ZombieAnimRig_BullRider()
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(ZombieAnimRig_BullRider);
+
+bool ZombieAnimRig_BullRider::PlayFalling()
+{
+	return PlayAndContinue("imp fall") != -1;
+}

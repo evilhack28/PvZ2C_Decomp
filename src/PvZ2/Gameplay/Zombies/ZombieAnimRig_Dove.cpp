@@ -30,3 +30,18 @@ void ZombieAnimRig_Dove::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_Dove);
 }
+
+bool ZombieAnimRig_Dove::PlayCarry()
+{
+	return PlayAndContinue("fly") != -1;
+}
+
+bool ZombieAnimRig_Dove::PlayFly()
+{
+	return PlayAndContinue("fly") != -1;
+}
+
+bool ZombieAnimRig_Dove::PlayFlyBack()
+{
+	return PlayAndContinue("fly_back") != -1;
+}

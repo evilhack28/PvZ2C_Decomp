@@ -36,3 +36,8 @@ void ZombieAnimRig_RenaiCarver::onPopAnimInitialized()
 {
 	 ZombieAnimRig::onPopAnimInitialized();
 }
+
+void ZombieAnimRig_RenaiCarver::PlayCarve()
+{
+	PlayAndContinue("carve");
+}

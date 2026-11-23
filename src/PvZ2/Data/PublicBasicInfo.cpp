@@ -13,6 +13,8 @@
 #include "ProfileMgr.h"
 #include "DNode/DString.h"
 #include "DefineIDMgr.h"
+#include "IdentifierMgr.h"
+#include "gameNetWork/NetworkMgr.h"
 #include "SexyAppFramework/IDiagDriver.h"
 #include <GLES2/gl2.h>
 #include <sstream>
@@ -192,6 +194,29 @@ PublicBasicInfo& PublicBasicInfo::getBasicInfo(OUT_PARAM DValue& value)
 
 PublicBasicInfo& PublicBasicInfo::getBehavior(OUT_PARAM DValue & i_arg)
 {
+}
+
+std::string PublicBasicInfo::getCharacterID()
+{
+	std::stringstream aStream(std::ios::out | std::ios::in);
+	aStream.str("");
+	INetworkMsgProcess* aProcess = NetworkMgr::Instance()->GetNewNetWorkProcess();
+	if (aProcess)
+		aStream << aProcess->INetworkMsgProcess::GetPlayUserId();
+	return aStream.str();
+}
+
+static std::string sUserID;
+
+std::string PublicBasicInfo::getUserID()
+{
+	if (sUserID.size() == 0)
+	{
+		sUserID = Sexy::LazySingleton<IdentifierMgr>::GetInstance().GetUUID();
+		if (bNeedUserID && sUserID.size() == 0)
+			sUserID = Sexy::LazySingleton<IdentifierMgr>::GetInstance().GenerateLocalUUID();
+	}
+	return sUserID;
 }
 
 std::string PublicBasicInfo::getClientTime()

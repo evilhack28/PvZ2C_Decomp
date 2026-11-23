@@ -9,6 +9,11 @@
 
 using namespace Sexy;
 
+static void __attribute__((noinline)) StrCopy( char* dst, const char* src )
+{
+	strcpy( dst, src );
+}
+
 
 /////////////// Lifecycle ///////////////
 
@@ -215,4 +220,11 @@ void ResStreamsGroup::operator=(ResStreamsGroup& right)
         mFileIndexPtr = NULL;
     }
     mFileIndex = right.mFileIndex;
+}
+
+uint8* ResStreamsGroup::GetFileIndexData( const std::string& theFileName )
+{
+	char aBuf[1024];
+	StrCopy( aBuf, theFileName.c_str() );
+	return mFileIndex.Find( aBuf );
 }

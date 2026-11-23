@@ -27,3 +27,13 @@ void ZombieAnimRig_ZombossMech_Beach::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(bool, m_playingIdle);
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_ZombossMech_Beach);
 }
+
+bool ZombieAnimRig_ZombossMech_Beach::PlayFanPullLoop()
+{
+	return PlayAndContinue("suction_loop") != -1;
+}
+
+bool ZombieAnimRig_ZombossMech_Beach::PlayTangleKelpStunLoop()
+{
+	return PlayAndContinue("tangled_loop") != -1;
+}

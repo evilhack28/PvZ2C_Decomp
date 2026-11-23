@@ -31,3 +31,38 @@ void PlantAnimRig_Dartichoke::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_Dartichoke);
 }
+
+std::string PlantAnimRig_Dartichoke::getExhaustedAnimName()
+{
+	return "reload_loop";
+}
+
+std::string PlantAnimRig_Dartichoke::getAttackAnimationName()
+{
+	return "attack1";
+}
+
+std::string PlantAnimRig_Dartichoke::getExhaustedOnAnimName()
+{
+	return "reload_start";
+}
+
+std::string PlantAnimRig_Dartichoke::getPlantFoodOnAnimName()
+{
+	return "plantfood";
+}
+
+std::string PlantAnimRig_Dartichoke::getExhaustedOffAnimName()
+{
+	return "reload_end";
+}
+
+std::string PlantAnimRig_Dartichoke::getPlantFoodOffAnimName()
+{
+	return "plantfood_end";
+}
+
+std::string PlantAnimRig_Dartichoke::getPlantFoodMainAnimName()
+{
+	return "plantfood_loop";
+}

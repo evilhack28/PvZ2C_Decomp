@@ -20,3 +20,18 @@ EffectAnimRig_Plantainball::~EffectAnimRig_Plantainball()
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(EffectAnimRig_Plantainball);
+
+bool EffectAnimRig_Plantainball::PlayNormalFlightLooped()
+{
+	return PlayAndContinue("animation") != -1;
+}
+
+bool EffectAnimRig_Plantainball::PlayPlantFoodFlightLooped()
+{
+	return PlayAndContinue("animation") != -1;
+}
+
+bool EffectAnimRig_Plantainball::PlayStarPlantFoodFlightLooped()
+{
+	return PlayAndContinue("animation") != -1;
+}

@@ -9,12 +9,29 @@
 #include "AsyncTaskManager.h"
 #include "ResumeRequestInfo.h"
 #include "SexyAppFramework/SexyAppBase.h"
+#include "JsonWriter.h"
+#include "JsonReader.h"
 
 using namespace Sexy;
 
 namespace Sexy { extern CritSect gNetworkServiceRequestLock; }
 
 /////////////// Lifecycle ///////////////
+
+static NetworkServiceManager* sDefaultNetworkServiceManager;
+static DummyNetworkServiceListener sDummyNetworkServiceListener;
+
+NetworkServiceManager* NetworkServiceManager::DefaultNetworkServiceManager()
+{
+	if ( sDefaultNetworkServiceManager == NULL )
+		sDefaultNetworkServiceManager = new NetworkServiceManager();
+	return sDefaultNetworkServiceManager;
+}
+
+NetworkServiceManager* NetworkServiceManager::TryDefaultNetworkServiceManager()
+{
+	return sDefaultNetworkServiceManager;
+}
 
 NetworkServiceManager::NetworkServiceManager()
 	: mLogLevel(LOG_NONE)
@@ -167,6 +184,187 @@ NetworkServiceManager::RequestId NetworkServiceManager::MakeRequest( const Struc
 		url += query;
 	}
 	return MakeRequest( request, inUseRequestId, url, listener, context );
+}
+
+NetworkServiceManager::RequestId NetworkServiceManager::MakeRequest( const StructuredData* request, RequestId inUseRequestId, const std::string& url, NetworkServiceListener* listener, const void* context )
+{
+	if ( !listener )
+		listener = &sDummyNetworkServiceListener;
+	const StructuredData::Value* postData = request->ObjectForPath( "$.postData" );
+	const StructuredData::Value* formData = request->ObjectForPath( "$.formData" );
+	const char* method = request->StringForPath( "$.method", ( postData || formData ) ? "POST" : "GET" );
+	const char* channel = request->StringForPath( "$.channel", defaultChannel );
+	int priority = request->IntegerForPath( "$.priority", defaultPriority );
+	const char* schema = request->StringForPath( "$.schema", 0 );
+	int timeout = request->IntegerForPath( "$.timeout", defaultTimeout );
+	const char* trace = request->StringForPath( "$.trace", 0 );
+	bool slackCerts = request->BooleanForPath( "$.slackCerts", false );
+	const char* username = request->StringForPath( "$.basicAuth.username", 0 );
+	const char* password = request->StringForPath( "$.basicAuth.password", 0 );
+	bool resumable = request->BooleanForPath( "$.resumable", false );
+	const char* targetFilePath = request->StringForPath( "$.targetFilePath", 0 );
+	request->BooleanForPath( "$.reRequest", false );
+	int resumePos = request->IntegerForPath( "$.resumePos", defaultResumePos );
+	StructuredData::Integer responseBufferSize = request->IntegerForPath( "$.responseBufferSize", 2048 );
+	int diskBufferSize = request->IntegerForPath( "$.diskBufferSize", 1048576 );
+	bool disableIfRangeHeader = request->BooleanForPath( "$.disableIfRangeHeader", true );
+	const char* req = formData ? formData->StringForName( "req", "" ) : NULL;
+	if ( inUseRequestId == -1 )
+		inUseRequestId = GetNextRequestId();
+	ResumableRequestInfo* resumableInfo = NULL;
+	if ( resumable )
+	{
+		if ( !targetFilePath )
+			targetFilePath = "";
+		if ( responseBufferSize == 2048 )
+			responseBufferSize = 15360;
+		resumableInfo = new ResumableRequestInfo( *request, diskBufferSize, targetFilePath, resumePos, !disableIfRangeHeader );
+	}
+	NetworkServiceRequest serviceRequest( resumableInfo, inUseRequestId );
+	serviceRequest.httpTransaction = gSexyAppBase->mHttpDriver->CreateHttpTransaction( method, url, responseBufferSize );
+	serviceRequest.httpTransaction->SetTimeout( timeout );
+	serviceRequest.httpTransaction->SetSlackCertificateValidation( slackCerts );
+	serviceRequest.context = context;
+	serviceRequest.listener = listener;
+	serviceRequest.schema = NULL;
+	serviceRequest.priority = priority;
+	if ( serviceRequest.IsResumableRequest() )
+		serviceRequest.GetResumableRequestInfo()->Prepare( this, url );
+	if ( trace )
+		serviceRequest.trace = trace;
+	else if ( mLogLevel > 0 )
+		serviceRequest.trace = StrFormat( "%s:%p", channel ? channel : "default", context );
+	if ( username && password )
+		serviceRequest.httpTransaction->SetBasicAuth( username, password );
+	if ( postData )
+	{
+		serviceRequest.requestBody = new Buffer;
+		JsonWriter writer( JsonWriter::COMPACT );
+		writer.Write( serviceRequest.requestBody, postData );
+		serviceRequest.httpTransaction->SetRequestHeader( "Content-Type", "application/json" );
+		serviceRequest.httpTransaction->SetRequestBody( serviceRequest.requestBody->GetDataPtr(), serviceRequest.requestBody->GetDataLen() );
+	}
+	else if ( formData )
+		EncodeFormData( formData, serviceRequest );
+	if ( schema )
+	{
+		Schemata::iterator it = mSchemata.find( schema );
+		if ( it != mSchemata.end() )
+			serviceRequest.schema = it->second;
+	}
+	if ( req )
+		serviceRequest.req = req;
+	if ( serviceRequest.GetCancelState() != NetworkServiceRequest::CancelState_NotCanceled )
+		inUseRequestId = -1;
+	else
+		EnqueueRequest( channel, serviceRequest );
+	return inUseRequestId;
+}
+
+void NetworkServiceManager::HttpReceivedData( IHttpTransaction* http, void* data, size_t length )
+{
+	Slot* slot = (Slot*)http->GetUserData();
+	if ( UpdateRequestsPendingCancel( slot ) )
+		return;
+	if ( slot->request.IsResumableRequest() )
+	{
+		if ( slot->request.GetResumableRequestInfo() )
+		{
+			slot->request.GetResumableRequestInfo()->DispatchProgressNotification( slot->request.listener, slot->request.context );
+			slot->request.GetResumableRequestInfo()->HandleReceivedData( data, length );
+		}
+		UpdateRequestsPendingCancel( slot );
+	}
+	else
+		slot->responseBuffer->WriteBytes( (const uint8*)data, length );
+}
+
+void NetworkServiceManager::HttpTransactionError( IHttpTransaction* http )
+{
+	Slot* slot = (Slot*)http->GetUserData();
+	NetworkServiceRequest& request = slot->request;
+	request.AbortCancelRequest();
+	Channel* channel = slot->channel;
+	StructuredData& response = slot->response;
+	std::string error = http->GetErrorMessage();
+	if ( !request.trace.empty() )
+		OutputDebugStrF( "xxxxx\n[%s]\n%s\nxxxxx\n\n", request.trace.c_str(), error.c_str() );
+	response.Clear();
+	response.BeginObject();
+	response.AddString( "error", error );
+	response.AddString( "req", request.req );
+	response.EndObject();
+	request.MarkForCancellation( false );
+	request.CancelHttpTransactionAndEnterPendingCancel( slot );
+	request.listener->ServiceRequestFailed( &response, request.context );
+	SlotNextRequest( channel );
+}
+
+void NetworkServiceManager::CancelRequest( RequestId inRequestToCancel )
+{
+	if ( inRequestToCancel != InvalidRequestId )
+	{
+		ChannelPtrs channels;
+		FillWithChannels( channels );
+		ChannelPtrs::iterator it;
+		for ( it = channels.begin(); it != channels.end(); ++it )
+		{
+			if ( CancelRequest( it->second, inRequestToCancel ) )
+				break;
+		}
+	}
+}
+
+bool NetworkServiceManager::CancelRequest( Channel* channel, RequestId inRequestToCancel )
+{
+	for ( Queue::iterator it = channel->requests.begin(); it != channel->requests.end(); ++it )
+	{
+		if ( it->requestId == inRequestToCancel )
+		{
+			it->MarkForCancellation( true );
+			it->CancelImmediate();
+			channel->requests.erase( it );
+			return true;
+		}
+	}
+	for ( Slots::iterator it = channel->slots.begin(); it != channel->slots.end(); ++it )
+	{
+		Slot& slot = *it;
+		if ( !slot.IsFree() && slot.request.requestId == inRequestToCancel )
+		{
+			slot.request.MarkForCancellation( true );
+			if ( !slot.request.IsResumableRequest() )
+			{
+				slot.request.CancelImmediate();
+				SlotNextRequest( slot.channel );
+			}
+			return true;
+		}
+	}
+	return false;
+}
+
+void NetworkServiceManager::CancelRequests( StructuredData::String channelName )
+{
+	CancelRequests( GetChannel( channelName ) );
+}
+
+void NetworkServiceManager::DumpChannelState()
+{
+	ChannelPtrs channels;
+	FillWithChannels( channels );
+	ChannelPtrs::iterator it;
+	for ( it = channels.begin(); it != channels.end(); ++it )
+	{
+		Channel* channel = it->second;
+		for ( Queue::iterator requestIt = channel->requests.begin(); requestIt != channel->requests.end(); ++requestIt )
+		{
+		}
+		for ( Slots::iterator slotIt = channel->slots.begin(); slotIt != channel->slots.end(); ++slotIt )
+		{
+			( *slotIt ).IsFree();
+		}
+	}
 }
 
 /////////////// Cancellation ///////////////

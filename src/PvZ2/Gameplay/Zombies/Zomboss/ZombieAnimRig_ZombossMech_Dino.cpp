@@ -27,3 +27,8 @@ void ZombieAnimRig_ZombossMech_Dino::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(bool, m_playingIdle);
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_ZombossMech_Dino);
 }
+
+bool ZombieAnimRig_ZombossMech_Dino::PlayLaserLoop()
+{
+	return PlayAndContinue("lazer_loop") != -1;
+}

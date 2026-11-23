@@ -42,3 +42,7 @@ bool ZombieAnimRig_Parkour::PlayTackling(std::string animation, PopAnimRig::Anim
 	return PlayAndStop(animation, SELECT_EXACT, i_onAnimStopped) != -1;
 }
 
+bool ZombieAnimRig_Parkour::PlayRunning()
+{
+	return PlayAndContinue("run") != -1;
+}

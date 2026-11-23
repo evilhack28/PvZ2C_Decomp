@@ -20,3 +20,13 @@ PlantAnimRig_Turnip::~PlantAnimRig_Turnip()
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(PlantAnimRig_Turnip);
+
+bool PlantAnimRig_Turnip::PlayDefend()
+{
+	return PlayAndContinue("idle3") != -1;
+}
+
+bool PlantAnimRig_Turnip::PlaySpinningTurnip()
+{
+	return PlayAndContinue("plantfood3") != -1;
+}

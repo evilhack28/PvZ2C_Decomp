@@ -11,6 +11,7 @@
 
 #include "CustomLevelMgr.h"
 #include "CustomLevelMgr.h"
+#include "ProfileMgr.h"
 
 /////////////// Accessors ///////////////
 
@@ -234,4 +235,25 @@ void CustomLevelMgr::UploadCurrentLevelData()
 void CustomLevelMgr::UpdateMoldGrid(int i_x, int i_y, bool i_add)
 {
 	m_currentLevelData.LevelParams.Challenge.ChallengeData.Molds.MoldGrids[i_y][i_x] = i_add;
+}
+
+bool CustomLevelMgr::CheckInTutorial()
+{
+	PlayerInfo* profile = ProfileMgr::GetInstance().GetCurrentProfile();
+	if (!profile)
+		return false;
+	int tutorial = profile->GetActiveTutorial();
+	return tutorial == TUTORIAL_CUSTOM_LEVEL_CREATOR || tutorial == TUTORIAL_CUSTOM_LEVEL_PLAY;
+}
+
+void CustomLevelMgr::Update(float dt)
+{
+	if (!CheckInTutorial())
+		return;
+	if (!(m_skipTutorialTimer <= 0))
+	{
+		m_skipTutorialTimer -= dt;
+		if (m_skipTutorialTimer <= 0)
+			CreateTutorialSkipMenu();
+	}
 }

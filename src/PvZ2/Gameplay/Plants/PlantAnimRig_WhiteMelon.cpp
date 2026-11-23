@@ -30,3 +30,8 @@ void PlantAnimRig_WhiteMelon::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_WhiteMelon);
 }
+
+bool PlantAnimRig_WhiteMelon::PlayAttackStorage()
+{
+	return PlayAndContinue("attack_storage") != -1;
+}

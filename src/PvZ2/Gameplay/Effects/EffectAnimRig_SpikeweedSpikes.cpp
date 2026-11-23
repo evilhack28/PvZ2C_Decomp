@@ -20,3 +20,8 @@ EffectAnimRig_SpikeweedSpikes::~EffectAnimRig_SpikeweedSpikes()
 #include "ReflectionBuilder.h"
 
 RT_CLASS_IMPLEMENT(EffectAnimRig_SpikeweedSpikes);
+
+bool EffectAnimRig_SpikeweedSpikes::PlayEffectLooped()
+{
+	return PlayAndContinue("action") != -1;
+}

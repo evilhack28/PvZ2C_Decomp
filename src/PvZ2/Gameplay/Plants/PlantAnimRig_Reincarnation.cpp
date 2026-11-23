@@ -48,3 +48,7 @@ std::string PlantAnimRig_Reincarnation::getPlantFoodMainAnimName()
 	return m_bAvatar ? "plantfood2" : "plantfood";
 }
 
+bool PlantAnimRig_Reincarnation::PlayInitialFrame()
+{
+	return PlayAndContinue("idle1") != -1;
+}

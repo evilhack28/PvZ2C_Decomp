@@ -17,3 +17,15 @@
 // TODO      4 B  EA::Text::LineBreakIterator::~LineBreakIterator      _ZN2EA4Text17LineBreakIteratorD2Ev
 // TODO      4 B  EA::Text::LineBreakIterator::~LineBreakIterator      _ZN2EA4Text17LineBreakIteratorD1Ev
 // TODO      4 B  EA::Text::LineBreakIterator::~LineBreakIterator      _ZN2EA4Text17LineBreakIteratorD0Ev
+
+#include "SexyAppFramework/Common.h"
+
+#include <EAText/EATextBreak.h>
+
+namespace EA
+{
+namespace Text
+{
+
+} // namespace Text
+} // namespace EA

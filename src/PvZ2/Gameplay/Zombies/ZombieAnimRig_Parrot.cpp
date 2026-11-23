@@ -36,3 +36,18 @@ void ZombieAnimRig_Parrot::onNeedsToDie()
 {
 	 ZombieAnimRig::setReadyToDie();
 }
+
+bool ZombieAnimRig_Parrot::PlayFly()
+{
+	return PlayAndContinue("fly") != -1;
+}
+
+bool ZombieAnimRig_Parrot::PlayFlyBack()
+{
+	return PlayAndContinue("fly back") != -1;
+}
+
+bool ZombieAnimRig_Parrot::PlayCarry()
+{
+	return PlayAndContinue("carry") != -1;
+}

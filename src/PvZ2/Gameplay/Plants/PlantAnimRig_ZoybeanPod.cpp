@@ -33,3 +33,23 @@ void PlantAnimRig_ZoybeanPod::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(RtWeakPtr<Effect_ZoybeanPodSmoke>, m_smokeMachine);
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_ZoybeanPod);
 }
+
+bool PlantAnimRig_ZoybeanPod::PlayCharging()
+{
+	return PlayAndContinue("idle2") != -1;
+}
+
+bool PlantAnimRig_ZoybeanPod::PlayFullyCharged()
+{
+	return PlayAndContinue("idle3") != -1;
+}
+
+bool PlantAnimRig_ZoybeanPod::PlayInitialFrame()
+{
+	return PlayAndContinue("idle") != -1;
+}
+
+bool PlantAnimRig_ZoybeanPod::PlayRecovery()
+{
+	return PlayAndContinue("idle4") != -1;
+}

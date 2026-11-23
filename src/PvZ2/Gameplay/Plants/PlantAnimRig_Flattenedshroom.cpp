@@ -32,3 +32,8 @@ void PlantAnimRig_Flattenedshroom::StaticClassInit()
 
 	REFLECTION_CLASSBUILDER_END(PlantAnimRig_Flattenedshroom);
 }
+
+bool PlantAnimRig_Flattenedshroom::PlaySpinningPotato()
+{
+	return PlayAndContinue("plantfood3") != -1;
+}

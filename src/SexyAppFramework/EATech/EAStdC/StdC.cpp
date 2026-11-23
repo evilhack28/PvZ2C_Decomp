@@ -54,7 +54,6 @@
 // TODO    220 B  EA::StdC::SplitTokenDelimited                        _ZN2EA4StdC19SplitTokenDelimitedEPKDimDiPDimPS2_
 // TODO    216 B  EA::StdC::Strlcpy                                    _ZN2EA4StdC7StrlcpyEPcPKDsmm
 // TODO    216 B  EA::StdC::SplitTokenDelimited                        _ZN2EA4StdC19SplitTokenDelimitedEPKcmcPcmPS2_
-// TODO    212 B  EA::StdC::FNV64_String8                              _ZN2EA4StdC13FNV64_String8EPKcmNS0_8CharCaseE
 // TODO    212 B  EA::StdC::FNV1_String8                               _ZN2EA4StdC12FNV1_String8EPKcjNS0_8CharCaseE
 // TODO    212 B  EA::StdC::FNV1_String16                              _ZN2EA4StdC13FNV1_String16EPKDsjNS0_8CharCaseE
 // TODO    212 B  EA::StdC::FNV64_String16                             _ZN2EA4StdC14FNV64_String16EPKDsmNS0_8CharCaseE
@@ -86,3 +85,78 @@
 // TODO    192 B  EA::StdC::Sprintf                                    _ZN2EA4StdC7SprintfEPDsPKDsz
 // TODO    192 B  EA::StdC::Sprintf                                    _ZN2EA4StdC7SprintfEPDiPKDiz
 // ... and 293 more (units.json)
+
+#include "SexyAppFramework/Common.h"
+
+#include <EAStdC/EACType.h>
+#include <EAStdC/EAHashString.h>
+
+namespace EA
+{
+namespace StdC
+{
+
+/////////////// Hashing ///////////////
+
+uint64_t FNV64_String8(const char8_t* pData, uint64_t nInitialValue, CharCase charCase)
+{
+	uint64_t nHash = nInitialValue;
+	uint8_t c;
+	switch (charCase)
+	{
+	case kCharCaseAny:
+		{
+			uint64_t n;
+			while ((n = (uint8_t)*pData++) != 0)
+				nHash = (nHash * UINT64_C(1099511628211)) ^ n;
+		}
+		break;
+	case kCharCaseLower:
+		while ((c = (uint8_t)*pData++) != 0)
+			nHash = (nHash * UINT64_C(1099511628211)) ^ (uint8_t)Tolower((char)c);
+		break;
+	case kCharCaseUpper:
+		while ((c = (uint8_t)*pData++) != 0)
+			nHash = (nHash * UINT64_C(1099511628211)) ^ (uint8_t)Toupper((char)c);
+		break;
+	}
+	return nHash;
+}
+
+char* Strcpy(char* pDestination, const char* pSource)
+{
+	size_t i = 0;
+	char c;
+	do
+	{
+		c = pSource[i];
+		pDestination[i] = c;
+		++i;
+	} while (c);
+	return pDestination;
+}
+
+size_t Strlcpy(char* pDestination, const char* pSource, size_t nDestCapacity)
+{
+	const char* s = pSource;
+	size_t n = nDestCapacity;
+	if (n && --n)
+	{
+		do
+		{
+			if ((*pDestination++ = *s++) == 0)
+				break;
+		} while (--n);
+	}
+	if (!n)
+	{
+		if (nDestCapacity)
+			*pDestination = 0;
+		while (*s++)
+			;
+	}
+	return (size_t)(s - pSource - 1);
+}
+
+} // namespace StdC
+} // namespace EA

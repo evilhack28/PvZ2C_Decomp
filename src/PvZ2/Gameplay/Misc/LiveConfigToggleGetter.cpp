@@ -10,3 +10,14 @@
 // TODO      4 B  LiveConfigToggleGetter::~LiveConfigToggleGetter      _ZN22LiveConfigToggleGetterD2Ev
 // TODO      4 B  LiveConfigToggleGetter::~LiveConfigToggleGetter      _ZN22LiveConfigToggleGetterD1Ev
 // TODO      4 B  LiveConfigToggleGetter::~LiveConfigToggleGetter      _ZN22LiveConfigToggleGetterD0Ev
+
+#include "SexyAppFramework/Common.h"
+#include "Toggles.h"
+#include "PVZLiveConfig.h"
+
+/////////////// Accessors ///////////////
+
+std::vector<Toggle> LiveConfigToggleGetter::GetLiveConfigToggles()
+{
+	return LiveConfig::Get().Toggles;
+}

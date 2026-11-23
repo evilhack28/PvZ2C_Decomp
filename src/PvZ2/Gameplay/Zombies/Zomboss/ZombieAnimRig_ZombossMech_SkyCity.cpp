@@ -27,3 +27,8 @@ void ZombieAnimRig_ZombossMech_SkyCity::StaticClassInit()
 		REFLECTION_CLASSBUILDER_FIELD(bool, m_playingIdle);
 	REFLECTION_CLASSBUILDER_END(ZombieAnimRig_ZombossMech_SkyCity);
 }
+
+bool ZombieAnimRig_ZombossMech_SkyCity::PlayBarrage()
+{
+	return PlayAndContinue("danmo") != -1;
+}

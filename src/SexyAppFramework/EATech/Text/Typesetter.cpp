@@ -8,6 +8,8 @@
 #include "SexyAppFramework/Common.h"
 
 #include <EAText/EATextTypesetter.h>
+#include <EAText/EATextBreak.h>
+#include <EAText/EATextIterator.h>
 
 namespace EA
 {
@@ -256,6 +258,279 @@ Typesetter::Item* Typesetter::GetScheduleItemFromCharIndex(index_t charIndex, bo
 	ScheduleLocation scheduleLocation;
 	GetScheduleLocationFromCharIndex(charIndex, scheduleLocation, bCharIndexIsLineRelative);
 	return &mSchedule[scheduleLocation.mnScheduleIndex];
+}
+
+/////////////// Accessors ///////////////
+
+LayoutSettings& Typesetter::GetLayoutSettings()
+{
+	return mLayoutSettings;
+}
+
+const LayoutSettings& Typesetter::GetLayoutSettings() const
+{
+	return mLayoutSettings;
+}
+
+void Typesetter::SetLayoutSpace(float fSpace, float fPenX, float fPenY)
+{
+	mfLayoutSpace = fSpace;
+	mfLayoutPenX = fPenX;
+	mfLayoutPenY = fPenY;
+}
+
+void Typesetter::GetLayoutSpace(float& fSpace, float& fPenX, float& fPenY) const
+{
+	fSpace = mfLayoutSpace;
+	fPenX = mfLayoutPenX;
+	fPenY = mfLayoutPenY;
+}
+
+void Typesetter::SetFontServer(FontServer* pFontServer)
+{
+	mpFontServer = pFontServer;
+}
+
+const TextStyle& Typesetter::GetDefaultTextStyle() const
+{
+	return mLayoutSettings.mTextStyleDefault;
+}
+
+index_t Typesetter::GetEndCharIndex() const
+{
+	return mScheduleEnd.mnCharBase;
+}
+
+Typesetter::LineState Typesetter::GetLineState() const
+{
+	return mLineState;
+}
+
+void Typesetter::EllipsizeLine(bool bEnable)
+{
+	mbEllipsize = bEnable;
+}
+
+LineLayout& Typesetter::GetLineLayout()
+{
+	return mLineLayout;
+}
+
+bool Typesetter::IsScheduleEmpty() const
+{
+	return mAnalysisEnd.mnScheduleIndex == mScheduleEnd.mnScheduleIndex;
+}
+
+void Typesetter::AddStyleChange(const TextStyle* pStyle)
+{
+	mpCurrentTextStyle = AddTextStyle(pStyle);
+}
+
+void Typesetter::AddLineBreak()
+{
+	Validate();
+	mSchedule.push_back();
+	Item& item = mSchedule.back();
+	item.mType = kItemTypeLineBreak;
+	item.mIndex = mScheduleEnd.mnCharBase;
+	item.mCount = 1;
+	item.mpStyle = mpCurrentTextStyle;
+	mScheduleEnd.mnScheduleIndex++;
+	mScheduleEnd.mnCharBase++;
+	if (mLineState == kLineStateComplete)
+		mLineState = kLineStatePartial;
+	Validate();
+}
+
+void Typesetter::AddParagraphBreak()
+{
+	Validate();
+	mSchedule.push_back();
+	Item& item = mSchedule.back();
+	item.mType = kItemTypeParagraphBreak;
+	item.mIndex = mScheduleEnd.mnCharBase;
+	item.mCount = 1;
+	item.mpStyle = mpCurrentTextStyle;
+	mScheduleEnd.mnScheduleIndex++;
+	mScheduleEnd.mnCharBase++;
+	if (mLineState == kLineStateComplete)
+		mLineState = kLineStatePartial;
+	Validate();
+}
+
+void Typesetter::ShapeIndic(eastl_size_t iCharBegin, eastl_size_t iCharEnd)
+{
+	ShapeGeneral(iCharBegin, iCharEnd);
+}
+
+void Typesetter::ShapeThai(eastl_size_t iCharBegin, eastl_size_t iCharEnd)
+{
+	while (iCharBegin < iCharEnd)
+	{
+		Char charCluster[32];
+		eastl_size_t clusterSize;
+		eastl_size_t charCount = GetThaiCharCluster(iCharBegin, iCharEnd, charCluster, clusterSize);
+		AppendThaiCharCluster(iCharBegin, charCount, charCluster, clusterSize);
+		iCharBegin += charCount;
+	}
+}
+
+void Typesetter::ShapeHebrew(eastl_size_t iCharBegin, eastl_size_t iCharEnd)
+{
+	while (iCharBegin < iCharEnd)
+	{
+		Char charCluster[32];
+		eastl_size_t clusterSize;
+		eastl_size_t charCount = GetHebrewCharCluster(iCharBegin, iCharEnd, charCluster, clusterSize);
+		AppendHebrewCharCluster(iCharBegin, charCount, charCluster, clusterSize);
+		iCharBegin += charCount;
+	}
+}
+
+void Typesetter::ShapeHangul(eastl_size_t iCharBegin, eastl_size_t iCharEnd)
+{
+	int nState = 0;
+	while (iCharBegin < iCharEnd)
+	{
+		Char charCluster[32];
+		eastl_size_t clusterSize;
+		eastl_size_t charCount = GetHangulCharCluster(iCharBegin, iCharEnd, charCluster, clusterSize, nState);
+		AppendHangulCharCluster(iCharBegin, charCount, charCluster, clusterSize, nState);
+		iCharBegin += charCount;
+	}
+}
+
+index_t Typesetter::LayoutLine(const Char* pText, index_t nTextSize, float x, float y, const TextStyle* pTextStyle)
+{
+	Reset(true);
+	SetLayoutSpace(100000.f, x, y);
+	SetDefaultTextStyle(pTextStyle);
+	mLayoutSettings.mTextStyleDefault.mHAlignment = kHALeft;
+	AddTextRun(pText, nTextSize);
+	FinalizeLine();
+	mLineLayout.Offset(0, 0);
+	return mLineLayout.mGlyphArray.size();
+}
+
+void Typesetter::AddObject(void* pObject, GlyphMetrics& glyphMetrics, bool bBindPrev, bool bBindNext)
+{
+	Validate();
+	mSchedule.push_back();
+	Item& item = mSchedule.back();
+	item.mType = kItemTypeObject;
+	item.mIndex = mScheduleEnd.mnCharBase;
+	item.mCount = (bBindPrev ? 2 : 1) + bBindNext;
+	item.mpStyle = mpCurrentTextStyle;
+	item.mObject.mpObjectPtr = pObject;
+	item.mObject.mGlyphMetrics = glyphMetrics;
+	item.mObject.mbBindPrev = bBindPrev;
+	item.mObject.mbBindNext = bBindNext;
+	mScheduleEnd.mnScheduleIndex++;
+	mScheduleEnd.mnCharBase += item.mCount;
+	if (mLineState == kLineStateComplete)
+		mLineState = kLineStatePartial;
+	Validate();
+}
+
+const TextStyle* Typesetter::AddTextStyle(const TextStyle* textStyle)
+{
+	const eastl_size_t count = mTextStyleArray.size();
+	for (eastl_size_t i = 0; i < count; i++)
+	{
+		if (mTextStyleArray[i] && *textStyle == *mTextStyleArray[i])
+			return mTextStyleArray[i];
+	}
+	mTextStyleArray.push_back(textStyle);
+	return mTextStyleArray.back();
+}
+
+eastl_size_t Typesetter::GetHangulCharCluster(eastl_size_t i, eastl_size_t iCharEnd, Char* pCharCluster, eastl_size_t& clusterSize, int& nState)
+{
+	nState = 3;
+	pCharCluster[0] = mLineLayout.mCharArray[i];
+	clusterSize = 1;
+	return 1;
+}
+
+eastl_size_t Typesetter::GetUnicodeLigatureGlyph(const Char* pChar, eastl_size_t count, Font* pFont, GlyphId& glyphId)
+{
+	pFont->GetGlyphIds(pChar, 1, &glyphId, true, sizeof(GlyphId), false);
+	return 1;
+}
+
+Typesetter::ScheduleLocation::ScheduleLocation()
+  : mnScheduleIndex(0), mnCharBase(0), mnCharOffset(0)
+{
+}
+
+bool Typesetter::ScheduleLocation::operator==(const ScheduleLocation& x)
+{
+	return mnScheduleIndex == x.mnScheduleIndex && mnCharBase == x.mnCharBase && mnCharOffset == x.mnCharOffset;
+}
+
+index_t Typesetter::ScheduleLocation::GetCharIndex() const
+{
+	return mnCharBase + mnCharOffset;
+}
+
+void Typesetter::GetScheduleLocationFromCharIndex(index_t charIndex, ScheduleLocation& scheduleLocation, bool bCharIndexIsLineRelative) const
+{
+	if (bCharIndexIsLineRelative)
+		charIndex += mLineLayout.mCharScheduleIndex;
+	index_t charBase = 0;
+	for (eastl_size_t i = 0, count = mSchedule.size(); i < count; i++)
+	{
+		if (charIndex < charBase + mSchedule[i].mCount)
+		{
+			scheduleLocation.mnScheduleIndex = i;
+			scheduleLocation.mnCharBase = charBase;
+			scheduleLocation.mnCharOffset = charIndex - charBase;
+			return;
+		}
+		charBase += mSchedule[i].mCount;
+	}
+	scheduleLocation = mScheduleEnd;
+}
+
+void Typesetter::Reset(bool bClearSchedule)
+{
+	Validate();
+	if (bClearSchedule)
+	{
+		mSchedule.clear();
+		mScheduleEnd.mnScheduleIndex = 0;
+		mScheduleEnd.mnCharOffset = 0;
+		mScheduleEnd.mnCharBase = 0;
+		mLineBegin = mScheduleEnd;
+		mnLastLineEndIndex = 0;
+	}
+	mLineEnd = mLineBegin;
+	mAnalysisEnd = mLineBegin;
+	mTextStyleArray.resize(1);
+	mpCurrentTextStyle = &mLayoutSettings.mTextStyleDefault;
+	mbNonGeneralScriptPresent = false;
+	mLineState = kLineStateComplete;
+	NextLine(false);
+	mLineLayout.mCharScheduleIndex = 0;
+	Validate();
+}
+
+eastl_size_t Typesetter::AppendGeneralCharCluster(eastl_size_t i, eastl_size_t charCount, const Char* charCluster, eastl_size_t clusterSize)
+{
+	GlyphId glyphIdArray[32];
+	eastl_size_t iGlyph = 0;
+	const AnalysisInfo* pAnalysisInfo = &mLineLayout.mAnalysisInfoArray[i];
+	eastl_size_t iChar = 0;
+	eastl_size_t glyphIdCount = 0;
+	while (iChar < clusterSize)
+	{
+		const eastl_size_t n = GetGlyphsForChar(charCluster + iChar, clusterSize - iChar, pAnalysisInfo, glyphIdArray + iGlyph, glyphIdCount);
+		AppendGeneralGlyphCluster(i, charCount, charCluster + iChar, n, glyphIdArray + iGlyph, glyphIdCount - iGlyph, pAnalysisInfo->mnBidiLevel);
+		PlaceGeneralGlyphCluster(i + iChar, n);
+		iChar += n;
+		iGlyph = glyphIdCount;
+	}
+	return glyphIdCount;
 }
 
 } // namespace Text
