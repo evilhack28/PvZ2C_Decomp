@@ -62,7 +62,7 @@ bool Typesetter::IsScheduleEmpty() const
 void Typesetter::GetScheduleLocationFromCharIndex(index_t iChar, ScheduleLocation& scheduleLocation, bool bCharIndexIsLineRelative) const
 {
 	if (bCharIndexIsLineRelative)
-		iChar += mnLastLineEndIndex;
+		iChar += mLineLayout.mCharScheduleIndex;
 
 	index_t nCharBase = 0;
 	for (eastl_size_t i = 0, iEnd = mSchedule.size(); i != iEnd; i++)

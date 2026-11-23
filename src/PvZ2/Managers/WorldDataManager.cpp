@@ -9,6 +9,7 @@
 
 #include "WorldData.h"
 #include "WorldMapUtils.h"
+#include "LawnApp.h"
 
 /////////////// Lookup ///////////////
 
@@ -47,4 +48,30 @@ bool WorldDataManager::IsValidWorldId(int i_worldID)
 
 WorldDataManager::WorldDataManager()
 {
+}
+
+/////////////// Data ///////////////
+
+void WorldDataManager::RebuildWorldData()
+{
+	clearData();
+	const WorldMapList* worldMapList = WorldMapUtils::GetWorldMapList();
+	std::vector<MapListNode>::const_iterator it = worldMapList->MapList.begin();
+	std::vector<MapListNode>::const_iterator end = worldMapList->MapList.end();
+	for (; it != end; ++it)
+	{
+		const std::string& worldName = (*it).MapName;
+		if (worldMapList->IsWorldEnabled(worldName))
+		{
+			std::string groupName = Sexy::StrFormat("WorldPackages_%s", worldName.c_str());
+			if (gLawnApp->mResourceManager->GetResourceGroupNamed(groupName))
+			{
+				gLawnApp->LoadGroup(groupName);
+				m_loadedWorldMapPackageGroups.push_back(groupName);
+			}
+			WorldData* worldData = WorldMapUtils::LoadSerializedMapData(worldName, WorldMapUtils::FILTER_Active);
+			m_worldDataList.push_back(worldData);
+		}
+	}
+	RemapWorldMapEvents();
 }

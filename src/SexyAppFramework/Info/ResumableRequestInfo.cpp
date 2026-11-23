@@ -34,3 +34,335 @@
 // TODO     36 B  Sexy::ResumableRequestInfo::IsValidResumableDownloadHttpStatus _ZN4Sexy20ResumableRequestInfo34IsValidResumableDownloadHttpStatusEi
 // TODO     36 B  Sexy::ResumableRequestInfo::~ResumableRequestInfo    _ZN4Sexy20ResumableRequestInfoD0Ev
 // TODO     28 B  Sexy::ResumableRequestInfo::RemakeRequest            _ZN4Sexy20ResumableRequestInfo13RemakeRequestEPNS_21NetworkServiceManagerEPNS_22NetworkServiceListenerEPKv
+
+#include "SexyAppFramework/Common.h"
+
+#include "SexyAppFramework/ResumeRequestInfo.h"
+#include "SexyAppFramework/SexyAppBase.h"
+#include "SexyAppFramework/IFileDriver.h"
+#include "SexyAppFramework/AsyncTaskManager.h"
+#include "SexyAppFramework/NetworkServiceManager.h"
+
+using namespace Sexy;
+
+/////////////// Paths ///////////////
+
+const std::string ResumableRequestInfo::GetResumeCachedFolder()
+{
+	std::string folder;
+	if (gSexyAppBase->mResumeCachedFolder.size() != 0)
+		folder = gSexyAppBase->mResumeCachedFolder + "resumableDownload/cacheArea/";
+	else
+		folder = gSexyAppBase->mFileDriver->GetDataPath(IFileDriver::PathType_NoBackup) + "resumableDownload/cacheArea/";
+	return folder;
+}
+
+/////////////// Accessors ///////////////
+
+int ResumableRequestInfo::GetPos()
+{
+	AutoCrit aCrit(mLock);
+	return mPos;
+}
+
+void ResumableRequestInfo::IncrPos(int inDelta)
+{
+	AutoCrit aCrit(mLock);
+	mPos += inDelta;
+}
+
+void ResumableRequestInfo::ClearPos()
+{
+	AutoCrit aCrit(mLock);
+	mPos = 0;
+}
+
+std::string ResumableRequestInfo::GetTargetFilePath() const
+{
+	AutoCrit aCrit(mLock);
+	return mTargetFilePath;
+}
+
+std::string ResumableRequestInfo::GetCachedFileName() const
+{
+	AutoCrit aCrit(mLock);
+	return mCachedFileName;
+}
+
+std::string ResumableRequestInfo::getQueueName() const
+{
+	AutoCrit aCrit(mLock);
+	return mQueueName;
+}
+
+std::string ResumableRequestInfo::getLastModifiedTimeStamp() const
+{
+	AutoCrit aCrit(mLock);
+	return mLastModifiedTimeStamp;
+}
+
+void ResumableRequestInfo::setLastModifiedTimeStamp(const std::string& inLastModifiedTimestamp)
+{
+	AutoCrit aCrit(mLock);
+	mLastModifiedTimeStamp = inLastModifiedTimestamp;
+}
+
+NetworkServiceRequest* ResumableRequestInfo::getParentRequest() const
+{
+	AutoCrit aCrit(mLock);
+	return mParentRequest;
+}
+
+void ResumableRequestInfo::SetParentRequest(NetworkServiceRequest* inParentRequest)
+{
+	AutoCrit aCrit(mLock);
+	mParentRequest = inParentRequest;
+	if (inParentRequest)
+		mRequestId = inParentRequest->requestId;
+}
+
+bool ResumableRequestInfo::IsQueueEmpty() const
+{
+	return AsyncTaskManager::DefaultAsyncTaskManager()->IsQueueEmpty(getQueueName());
+}
+
+/////////////// Buffers ///////////////
+
+bool ResumableRequestInfo::IsBufferWriting(const Buffer* inBuffer)
+{
+	AutoCrit aCrit(mLock);
+	bool isWriting = false;
+	if (mBuffer1 == inBuffer)
+		isWriting = mIsWritingBuffer1;
+	else if (mBuffer2 == inBuffer)
+		isWriting = mIsWritingBuffer2;
+	return isWriting;
+}
+
+void ResumableRequestInfo::SetIsBufferWriting(const Buffer* inBuffer, bool inIsWriting)
+{
+	AutoCrit aCrit(mLock);
+	if (mBuffer1 == inBuffer)
+		mIsWritingBuffer1 = inIsWriting;
+	else if (mBuffer2 == inBuffer)
+		mIsWritingBuffer2 = inIsWriting;
+}
+
+bool ResumableRequestInfo::SwapBuffers()
+{
+	mCurrBuffer = (mCurrBuffer == mBuffer1) ? mBuffer2 : mBuffer1;
+	if (IsBufferWriting(mCurrBuffer))
+	{
+		mCurrBuffer = NULL;
+		return false;
+	}
+	return true;
+}
+
+/////////////// Requests ///////////////
+
+bool ResumableRequestInfo::IsValidResumableDownloadHttpStatus(int inHttpStatusCode)
+{
+	return inHttpStatusCode == 200 || inHttpStatusCode == 203 || inHttpStatusCode == 206;
+}
+
+void ResumableRequestInfo::RemakeRequest(NetworkServiceManager* inNetworkManager, NetworkServiceListener* inListener, const void* inContext)
+{
+	inNetworkManager->MakeRequest(&mRequestParams, mRequestId, inListener, inContext);
+}
+
+/////////////// Lifecycle ///////////////
+
+ResumableRequestInfo::ResumableRequestInfo(const StructuredData& inHttpRequestData, uint32 inDiskBufferSize, const std::string& inTargetFilePath, int inResumePosm, bool inUseIfRangeHeader)
+	: mRequestParams(inHttpRequestData)
+	, mUseIfRangeHeader(inUseIfRangeHeader)
+	, mLength(-1)
+	, mTotalBytesRecieved(0)
+	, mDiskBufferSize(inDiskBufferSize)
+	, mBuffer1(NULL)
+	, mBuffer2(NULL)
+	, mCurrBuffer(NULL)
+	, mPos(inResumePosm)
+	, mTargetFilePath(inTargetFilePath)
+	, mCachedFileName("")
+	, mLastModifiedTimeStamp("")
+	, mIsWritingBuffer1(false)
+	, mIsWritingBuffer2(false)
+{
+	MkDir(GetResumeCachedFolder());
+}
+
+ResumableRequestInfo::~ResumableRequestInfo()
+{
+	delete mBuffer1;
+	delete mBuffer2;
+	mBuffer1 = NULL;
+	mBuffer2 = NULL;
+	mCurrBuffer = NULL;
+	mRequestParams.Clear();
+}
+
+void ResumableRequestInfo::AllocateBuffers(unsigned long bufferSize)
+{
+	mBuffer1 = new Buffer();
+	mBuffer2 = new Buffer();
+	mBuffer1->Reserve(bufferSize);
+	mBuffer2->Reserve(bufferSize);
+	mCurrBuffer = mBuffer1;
+}
+
+void ResumableRequestInfo::MarkQueueForDelete()
+{
+	AsyncTaskQueue* queue = AsyncTaskManager::DefaultAsyncTaskManager()->GetQueueByName(getQueueName());
+	if (queue->GetState() != IAsyncNetworkTask::State_ErrorComplete && queue->GetState() != IAsyncNetworkTask::State_SuccessComplete)
+		queue->QueueFinished();
+}
+
+ResumableRequestInfo* ResumableRequestInfo::TakeResumableInfoAndMarkForCancellation(bool inShouldNotifyListenerOnCancel)
+{
+	AutoCrit aCrit(mLock);
+	ResumableRequestInfo* info = NULL;
+	if (mParentRequest)
+		info = mParentRequest->TakeResumableInfoAndMarkForCancellation(inShouldNotifyListenerOnCancel);
+	return info;
+}
+
+/////////////// Errors ///////////////
+
+void ResumableRequestInfo::ResumeRequestError(NetworkServiceListener* nsl, const void* context, const int inErrorNumEnum)
+{
+	std::string errorString("ResumeRequestError: ");
+	StructuredData errorData;
+	errorData.Clear();
+	errorData.BeginObject();
+	errorData.AddInteger("errorID", inErrorNumEnum);
+	errorData.AddString("error", nsl->ToString((NetworkServiceListener::ErrorNum)inErrorNumEnum).c_str());
+	errorData.EndObject();
+	nsl->ServiceRequestFailed(&errorData, context);
+}
+
+/////////////// Resume files ///////////////
+
+bool ResumableRequestInfo::SaveResumeRequestData()
+{
+	std::string infoFilePath = GetResumeCachedFolder() + GetCachedFileName() + ".txt";
+	std::string fixedPath = gSexyAppBase->mFileDriver->FixPath(infoFilePath);
+	bool saved = false;
+	FILE* fp = fopen(fixedPath.c_str(), "w+b");
+	if (fp)
+	{
+		saved = true;
+		fprintf(fp, "%u\n", GetPos());
+		fprintf(fp, "%s\n", getLastModifiedTimeStamp().c_str());
+		fclose(fp);
+	}
+	return saved;
+}
+
+bool ResumableRequestInfo::ReadResumeFile(const std::string& requestInfoFilename, int& fileResumePos, std::string& fileLastModified)
+{
+	IFileDriver* fileDriver = gSexyAppBase->mFileDriver;
+	std::string fixedPath = fileDriver->FixPath(requestInfoFilename);
+	if (!fileDriver->FileExists(fixedPath, NULL))
+		return false;
+	FILE* fp = fopen(fixedPath.c_str(), "rb");
+	if (!fp)
+		return false;
+	unsigned int resumePos;
+	if (fscanf(fp, "%u", &resumePos) != 1)
+	{
+		fclose(fp);
+		return false;
+	}
+	fgetc(fp);
+	char buffer[64];
+	if (!fgets(buffer, 64, fp))
+	{
+		fclose(fp);
+		return false;
+	}
+	fileResumePos = resumePos;
+	fileLastModified = buffer;
+	fileLastModified.erase(fileLastModified.size() - 1);
+	fclose(fp);
+	return true;
+}
+
+bool ResumableRequestInfo::FinalizeResumeRequest(NetworkServiceListener* nsl, const void* context)
+{
+	gSexyAppBase->mFileDriver->DeleteFile(GetTargetFilePath());
+	MkDir(GetFileDir(GetTargetFilePath(), false));
+	bool renamed = gSexyAppBase->RenameFile(GetResumeCachedFolder() + GetCachedFileName(), GetTargetFilePath());
+	if (renamed)
+		DeletePartialFiles();
+	else
+		ResumeRequestError(nsl, context, NetworkServiceListener::ErrorNum_FailedToCopyFile);
+	return renamed;
+}
+
+/////////////// Http ///////////////
+
+void ResumableRequestInfo::HandleReceivedResponse(NetworkServiceListener* listener, const void* context, std::string& RH_contentRange, std::string& RH_lastModified, int statusCode, int responseLength)
+{
+	AllocateBuffers(mDiskBufferSize);
+	if (RH_contentRange.empty())
+	{
+		if (statusCode == 200)
+			DeletePartialFiles();
+		setLastModifiedTimeStamp(RH_lastModified);
+		mLength = responseLength;
+		ClearPos();
+		mTotalBytesRecieved = 0;
+		AsyncCreateFileOfSizeTask* task = new AsyncCreateFileOfSizeTask(this, listener, context, GetResumeCachedFolder() + GetCachedFileName(), mLength);
+		AsyncTaskManager::DefaultAsyncTaskManager()->AddTaskToQueue(task, getQueueName());
+		mCurrBuffer = mBuffer1;
+	}
+	else
+	{
+		mTotalBytesRecieved = GetPos();
+	}
+}
+
+void ResumableRequestInfo::HandleReceivedData(void* data, size_t dataLength)
+{
+	NetworkServiceRequest* request = getParentRequest();
+	if (request)
+	{
+		int dataLen = mCurrBuffer->GetDataLen();
+		Buffer* buffer = mCurrBuffer;
+		if ((int)buffer->mData.capacity() - dataLen < dataLength)
+		{
+			AsyncWriteBytesToFileAtTask* writeTask = new AsyncWriteBytesToFileAtTask(this, request->listener, request->context, GetResumeCachedFolder() + GetCachedFileName(), mCurrBuffer);
+			AsyncTaskManager::DefaultAsyncTaskManager()->AddTaskToQueue(writeTask, getQueueName());
+			if (!SwapBuffers())
+			{
+				AsyncRemakeRequestTask* remakeTask = new AsyncRemakeRequestTask(request->TakeResumableInfoAndMarkForCancellation(false), request->listener, request->context);
+				AsyncTaskManager::DefaultAsyncTaskManager()->AddTaskToQueue(remakeTask, getQueueName());
+				return;
+			}
+			buffer = mCurrBuffer;
+		}
+		mTotalBytesRecieved += dataLength;
+		buffer->WriteBytes((const uchar*)data, dataLength);
+	}
+}
+
+bool ResumableRequestInfo::HandleHttpComplete(NetworkServiceManager* inNetworkManager)
+{
+	NetworkServiceRequest* request = getParentRequest();
+	if (!request)
+		return true;
+	mCurrBuffer->GetDataLen();
+	if (mLength != mTotalBytesRecieved)
+		return false;
+	if (mCurrBuffer->GetDataLen() > 0)
+	{
+		AsyncWriteBytesToFileAtTask* writeTask = new AsyncWriteBytesToFileAtTask(this, request->listener, request->context, GetResumeCachedFolder() + GetCachedFileName(), mCurrBuffer);
+		AsyncTaskManager::DefaultAsyncTaskManager()->AddTaskToQueue(writeTask, getQueueName());
+	}
+	AsyncFinalizeResumeRequestTask* finalizeTask = new AsyncFinalizeResumeRequestTask(inNetworkManager, this, request->listener, request->context);
+	AsyncTaskManager::DefaultAsyncTaskManager()->AddTaskToQueue(finalizeTask, getQueueName());
+	AsyncQueueCompletedSuccessfullyTask* completedTask = new AsyncQueueCompletedSuccessfullyTask(request->TakeResumableInfoAndMarkForCancellation(false), request->listener, request->context);
+	AsyncTaskManager::DefaultAsyncTaskManager()->AddTaskToQueue(completedTask, getQueueName());
+	return true;
+}

@@ -1,18 +1,18 @@
 {
-  "generated": "2026-11-21T16:28:32+00:00",
+  "generated": "2026-11-23T00:56:10+00:00",
   "measures": {
-    "total_functions": 154276,
-    "matched_functions": 41383,
-    "matched_functions_percent": 26.82,
-    "total_code": 23472196,
-    "matched_code": 3290108,
-    "matched_code_percent": 14.02,
-    "fuzzy_match_percent": 14.98,
-    "started_units": 2753,
+    "total_functions": 154308,
+    "matched_functions": 41641,
+    "matched_functions_percent": 26.99,
+    "total_code": 23470496,
+    "matched_code": 3316812,
+    "matched_code_percent": 14.13,
+    "fuzzy_match_percent": 15.08,
+    "started_units": 2764,
     "total_units": 8277,
-    "started_code": 11491828,
-    "started_matched_code": 3290108,
-    "started_percent": 28.63,
+    "started_code": 11582364,
+    "started_matched_code": 3316812,
+    "started_percent": 28.64,
     "unplaced_functions": 0,
     "unplaced_code": 0,
     "compile_failures": 0
@@ -30009,12 +30009,12 @@
     {
       "name": "src/PvZ2/Core/Prime/PrimeText_PotentialTypeface.cpp",
       "total_code": 2428,
-      "matched_code": 616,
-      "matched_code_percent": 25.37,
+      "matched_code": 944,
+      "matched_code_percent": 38.88,
       "total_functions": 11,
-      "matched_functions": 9,
-      "matched_functions_percent": 81.82,
-      "fuzzy_match_percent": 25.37,
+      "matched_functions": 10,
+      "matched_functions_percent": 90.91,
+      "fuzzy_match_percent": 38.88,
       "functions": [
         {
           "name": "PrimeText_PotentialTypeface::StaticClassInit",
@@ -30025,8 +30025,8 @@
         {
           "name": "PrimeText_PotentialTypeface::Typeface",
           "size": 328,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PrimeText_PotentialTypeface::PrimeText_PotentialTypeface",
@@ -35042,12 +35042,12 @@
     {
       "name": "src/PvZ2/Core/Utils/LevelUtils.cpp",
       "total_code": 5900,
-      "matched_code": 456,
-      "matched_code_percent": 7.73,
+      "matched_code": 1088,
+      "matched_code_percent": 18.44,
       "total_functions": 41,
-      "matched_functions": 10,
-      "matched_functions_percent": 24.39,
-      "fuzzy_match_percent": 7.73,
+      "matched_functions": 12,
+      "matched_functions_percent": 29.27,
+      "fuzzy_match_percent": 18.44,
       "functions": [
         {
           "name": "LevelUtils::readLevelMetaData",
@@ -35070,14 +35070,14 @@
         {
           "name": "LevelUtils::loadLevelDefinitionFromResource",
           "size": 336,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LevelUtils::UnloadLevelDefinition",
           "size": 296,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "LevelUtils::SimpleLoadLevelDefinition",
@@ -40266,13 +40266,13 @@
     },
     {
       "name": "src/PvZ2/Core/Utils/StringHelper.cpp",
-      "total_code": 8028,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 39,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 7964,
+      "matched_code": 572,
+      "matched_code_percent": 7.18,
+      "total_functions": 35,
+      "matched_functions": 3,
+      "matched_functions_percent": 8.57,
+      "fuzzy_match_percent": 7.18,
       "functions": [
         {
           "name": "StringHelper::ToTimeString",
@@ -40319,8 +40319,8 @@
         {
           "name": "StringHelper::ReadJson",
           "size": 264,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "StringHelper::GetJsonFromPackage",
@@ -40391,8 +40391,8 @@
         {
           "name": "StringHelper::ToStringValue",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "StringHelper::ToAnimRig",
@@ -40403,8 +40403,8 @@
         {
           "name": "StringHelper::ToImage",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "StringHelper::ReplaceNumberString",
@@ -40481,30 +40481,6 @@
         {
           "name": "StringHelper::ToString",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "UI::UDim::UDim",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "UI::UDim::UDim",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "UI::UDim::UDim",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "UI::UDim::UDim",
-          "size": 12,
           "matched": false,
           "fuzzy_match_percent": 0.0
         }
@@ -78690,12 +78666,12 @@
     {
       "name": "src/PvZ2/Data/Player/PlayerInfo.cpp",
       "total_code": 223044,
-      "matched_code": 49208,
-      "matched_code_percent": 22.06,
+      "matched_code": 51428,
+      "matched_code_percent": 23.06,
       "total_functions": 1425,
-      "matched_functions": 886,
-      "matched_functions_percent": 62.18,
-      "fuzzy_match_percent": 22.77,
+      "matched_functions": 888,
+      "matched_functions_percent": 62.32,
+      "fuzzy_match_percent": 23.77,
       "functions": [
         {
           "name": "PlayerInfo::unlockPurchasedItem",
@@ -78742,8 +78718,8 @@
         {
           "name": "PlayerInfo::InitializeSavedValues",
           "size": 2048,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerInfo::UpdateForDelta",
@@ -81124,8 +81100,8 @@
         {
           "name": "PlayerInfo::ClearLevelOfTheDayInfo",
           "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PlayerInfo::GetPurchasedWorldMapInfo",
@@ -382613,12 +382589,12 @@
     {
       "name": "src/PvZ2/Gameplay/Misc/Universe/UniverseMap.cpp",
       "total_code": 40564,
-      "matched_code": 280,
-      "matched_code_percent": 0.69,
+      "matched_code": 324,
+      "matched_code_percent": 0.8,
       "total_functions": 167,
-      "matched_functions": 21,
-      "matched_functions_percent": 12.57,
-      "fuzzy_match_percent": 0.69,
+      "matched_functions": 24,
+      "matched_functions_percent": 14.37,
+      "fuzzy_match_percent": 0.8,
       "functions": [
         {
           "name": "UniverseMap::onEnterState_TransitionToUniverseWaiting",
@@ -383283,8 +383259,8 @@
         {
           "name": "UniverseMap::IsLoaded",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "SnapHandler::SnapHandler",
@@ -383343,8 +383319,8 @@
         {
           "name": "UniverseMap::GetHasEnteredUniverseFlag",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UniverseMap::IsAbstract",
@@ -383361,8 +383337,8 @@
         {
           "name": "UniverseMap::getState",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "UniverseMap::onEnterState_Winnie_Moving",
@@ -545229,23 +545205,17 @@
     },
     {
       "name": "src/PvZ2/Gameplay/Projectiles/Projectile.cpp",
-      "total_code": 18672,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 117,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 14784,
+      "matched_code": 232,
+      "matched_code_percent": 1.57,
+      "total_functions": 101,
+      "matched_functions": 12,
+      "matched_functions_percent": 11.88,
+      "fuzzy_match_percent": 1.57,
       "functions": [
         {
           "name": "Projectile::onDraw",
           "size": 1552,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProjectilePropertySheet::StaticClassInit",
-          "size": 1336,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -545264,18 +545234,6 @@
         {
           "name": "Projectile::fillDamageInfo",
           "size": 812,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProjectilePropertySheet::ProjectilePropertySheet",
-          "size": 712,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProjectilePropertySheet::ProjectilePropertySheet",
-          "size": 712,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -545376,12 +545334,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "ProjectilePropertySheet::postLoadFixup",
-          "size": 224,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Projectile::SetPosition",
           "size": 208,
           "matched": false,
@@ -545407,18 +545359,6 @@
         },
         {
           "name": "Projectile::damageEntity",
-          "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProjectilePropertySheet::~ProjectilePropertySheet",
-          "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "ProjectilePropertySheet::~ProjectilePropertySheet",
           "size": 200,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -545484,12 +545424,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "ProjectilePropertySheet::StaticGetClass",
-          "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Projectile::RemoveAttachedEffect",
           "size": 120,
           "matched": false,
@@ -545538,12 +545472,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "ProjectilePropertySheet::Serialize",
-          "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Projectile::OnCollideRoof",
           "size": 80,
           "matched": false,
@@ -545564,24 +545492,12 @@
         {
           "name": "Projectile::getProps",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::GetDamageAmount",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "StarLevelConditionEntry::StarLevelConditionEntry",
-          "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "StarLevelConditionEntry::StarLevelConditionEntry",
-          "size": 56,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -545610,28 +545526,10 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "ProjectilePropertySheet::StaticNew",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "StarLevelConditionEntry::StarLevelConditionEntry",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "StarLevelConditionEntry::StarLevelConditionEntry",
-          "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Projectile::CollidesWithType",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::GetDamageConditions",
@@ -545658,12 +545556,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "ProjectilePropertySheet::~ProjectilePropertySheet",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "Projectile::CanBeBlocked",
           "size": 32,
           "matched": false,
@@ -545678,20 +545570,20 @@
         {
           "name": "Projectile::IsHeadShot",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::IsSkipAdditionalAngularVelocity",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::SetShadow",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::SetAcceleration",
@@ -545708,8 +545600,8 @@
         {
           "name": "Projectile::SetPaused",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::SetPosition",
@@ -545756,8 +545648,8 @@
         {
           "name": "Projectile::GetOrCreateAttachedBoardEntity",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::GetPreviousPosition",
@@ -545798,8 +545690,8 @@
         {
           "name": "Projectile::SetCollideType",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::SetDamageConditions",
@@ -545816,8 +545708,8 @@
         {
           "name": "Projectile::SetShouldKeepRoofZ",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::SetTarget",
@@ -545828,8 +545720,8 @@
         {
           "name": "Projectile::SetUpdateTimeOverride",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::SetVelocity",
@@ -545852,23 +545744,11 @@
         {
           "name": "Projectile::clearAttachedEffects",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::ignoreDeathBox",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "StarLevelConditionEntry::~StarLevelConditionEntry",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "StarLevelConditionEntry::~StarLevelConditionEntry",
           "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -545882,8 +545762,8 @@
         {
           "name": "Projectile::GetProps",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Projectile::OnHeadShot",
@@ -687190,12 +687070,12 @@
     {
       "name": "src/PvZ2/Managers/CustomLevel/CustomLevelMgr.cpp",
       "total_code": 42508,
-      "matched_code": 56,
-      "matched_code_percent": 0.13,
+      "matched_code": 648,
+      "matched_code_percent": 1.52,
       "total_functions": 266,
-      "matched_functions": 4,
-      "matched_functions_percent": 1.5,
-      "fuzzy_match_percent": 0.13,
+      "matched_functions": 44,
+      "matched_functions_percent": 16.54,
+      "fuzzy_match_percent": 1.52,
       "functions": [
         {
           "name": "CustomLevelMgr::CustomLevelMgr",
@@ -687896,8 +687776,8 @@
         {
           "name": "CustomLevelMgr::GetMoldGrid",
           "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetSummonZombieColumnRange",
@@ -687926,8 +687806,8 @@
         {
           "name": "CustomLevelMgr::IsCustomLevel",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::LoadLevelData",
@@ -687938,8 +687818,8 @@
         {
           "name": "CustomLevelMgr::UpdateMoldGrid",
           "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::UpdateMyFavourite",
@@ -687956,14 +687836,14 @@
         {
           "name": "CustomLevelMgr::GetConveyorSeedBankPlantData",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetPresetSeedBankPlant",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetStageByCurrentWorldType",
@@ -688328,8 +688208,8 @@
         {
           "name": "CustomLevelMgr::GetSetSize",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetSingleHandedWavePlantfood",
@@ -688502,62 +688382,62 @@
         {
           "name": "CustomLevelMgr::AddStartingPlant",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::ClearSeedBankPlantBlackList",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetCanBuyMower",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetCanBuyPlantfood",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetCanBuySunmoney",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetConveyorSeedBankPlants",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetEvilDavePlantDistance",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetExtraData",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetLastStandPlantfood",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetLevelName",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetLogData",
@@ -688604,26 +688484,26 @@
         {
           "name": "CustomLevelMgr::GetPresetSeedBankPlants",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetSeedBankGlobalLevel",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetSeedBankPlantBlackList",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetSeedBankType",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetServerPlantBanList",
@@ -688634,20 +688514,20 @@
         {
           "name": "CustomLevelMgr::GetStartingPlant",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetStartingSun",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetTowerDefendStartingSun",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetTutorialDownloadURL",
@@ -688658,38 +688538,38 @@
         {
           "name": "CustomLevelMgr::GetWorldType",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::IsLastStandValid",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::IsLevelDownloaded",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetCanBuyMower",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetCanBuyPlantfood",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetCanBuySunmoney",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetCurrentSelfDownloadData",
@@ -688700,32 +688580,32 @@
         {
           "name": "CustomLevelMgr::SetEvilDavePlantDistance",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetExtraData",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetLastStandPlantfood",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetLastStandStartingSun",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetLevelName",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetLogData",
@@ -688736,20 +688616,20 @@
         {
           "name": "CustomLevelMgr::SetSeedBankGlobalLevel",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetSeedBankType",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetStartingSun",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetTutorialDownloadURL",
@@ -688760,8 +688640,8 @@
         {
           "name": "CustomLevelMgr::UploadCurrentLevelData",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::GetConfig",
@@ -688778,8 +688658,8 @@
         {
           "name": "CustomLevelMgr::SetEvilDaveStartingSun",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "CustomLevelMgr::SetTowerDefendPlantfood",
@@ -688790,8 +688670,8 @@
         {
           "name": "CustomLevelMgr::SetTowerDefendStartingSun",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -688942,18 +688822,18 @@
     {
       "name": "src/PvZ2/Managers/DActionManager.cpp",
       "total_code": 1760,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 812,
+      "matched_code_percent": 46.14,
       "total_functions": 19,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 9,
+      "matched_functions_percent": 47.37,
+      "fuzzy_match_percent": 46.14,
       "functions": [
         {
           "name": "DActionManager::update",
           "size": 564,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DActionManager::removeAction",
@@ -688982,14 +688862,14 @@
         {
           "name": "DActionManager::DActionDelay::DActionDelay",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DActionManager::DActionDelay::DActionDelay",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DActionManager::DActionManager",
@@ -689018,26 +688898,26 @@
         {
           "name": "DActionManager::DActionDelay::DActionDelay",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DActionManager::DActionDelay::DActionDelay",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DActionManager::DActionDelay::~DActionDelay",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DActionManager::DActionDelay::~DActionDelay",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DActionManager::DActionElement::DActionElement",
@@ -689054,14 +688934,14 @@
         {
           "name": "DActionManager::DActionElement::~DActionElement",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DActionManager::DActionElement::~DActionElement",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -689187,13 +689067,13 @@
     },
     {
       "name": "src/PvZ2/Managers/DangerRoom/DangerRoomManager.cpp",
-      "total_code": 19988,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 119,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 18804,
+      "matched_code": 160,
+      "matched_code_percent": 0.85,
+      "total_functions": 113,
+      "matched_functions": 17,
+      "matched_functions_percent": 15.04,
+      "fuzzy_match_percent": 0.85,
       "functions": [
         {
           "name": "DangerRoomManager::OnNotifyRefreshActivityList",
@@ -689305,18 +689185,6 @@
         },
         {
           "name": "DangerRoomManager::GetMainDialog",
-          "size": 328,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogEndlessData::TGALogEndlessData",
-          "size": 328,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogEndlessData::TGALogEndlessData",
           "size": 328,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -689448,18 +689316,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "TGALogEndlessData::TGALogEndlessData",
-          "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogEndlessData::TGALogEndlessData",
-          "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "DangerRoomManager::PlayerReachRequiredPlantNum",
           "size": 140,
           "matched": false,
@@ -689479,18 +689335,6 @@
         },
         {
           "name": "DangerRoomManager::GetHighestTrainingRecord",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogEndlessData::~TGALogEndlessData",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "TGALogEndlessData::~TGALogEndlessData",
           "size": 112,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -689726,8 +689570,8 @@
         {
           "name": "DangerRoomManager::GetNextLevel",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::GetNextTrainingLevel",
@@ -689744,8 +689588,8 @@
         {
           "name": "DangerRoomManager::GetArtifactUsedTimes",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::GetMaxSelectedPlant",
@@ -689756,14 +689600,14 @@
         {
           "name": "DangerRoomManager::GetArtifactLeftTimes",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::GetArtifactMaxTimes",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::GetCachePlantNumList",
@@ -689774,8 +689618,8 @@
         {
           "name": "DangerRoomManager::GetCurrentLevel",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::GetLevelPlantsAdd",
@@ -689786,26 +689630,26 @@
         {
           "name": "DangerRoomManager::GetMaxLastWeekLevel",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::GetMaxLevel",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::GetPlantFoodBuyCount",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::GetPlantFoodPrice",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::GetPlantNumList",
@@ -689816,8 +689660,8 @@
         {
           "name": "DangerRoomManager::GetProps",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::GetRecord",
@@ -689840,14 +689684,14 @@
         {
           "name": "DangerRoomManager::SetArtifactLeftTimes",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::SetArtifactMaxTimes",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::SetCachePlantNumList",
@@ -689858,8 +689702,8 @@
         {
           "name": "DangerRoomManager::SetCurrentLevel",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::SetLevelPlantsAdd",
@@ -689870,26 +689714,26 @@
         {
           "name": "DangerRoomManager::SetMaxLastWeekLevel",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::SetMaxLevel",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::SetMedal",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::SetPlantFoodBuyCount",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DangerRoomManager::SetPlantNumList",
@@ -696598,12 +696442,12 @@
     {
       "name": "src/PvZ2/Managers/NewPVP/NewPVPMgr.cpp",
       "total_code": 23648,
-      "matched_code": 416,
-      "matched_code_percent": 1.76,
+      "matched_code": 756,
+      "matched_code_percent": 3.2,
       "total_functions": 168,
-      "matched_functions": 6,
-      "matched_functions_percent": 3.57,
-      "fuzzy_match_percent": 1.76,
+      "matched_functions": 20,
+      "matched_functions_percent": 11.9,
+      "fuzzy_match_percent": 3.2,
       "functions": [
         {
           "name": "NewPVPMgr::InitProps",
@@ -697178,14 +697022,14 @@
         {
           "name": "NewPVPMgr::GetCurrentTurn",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::GetMaxTurn",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::GetSafeCost",
@@ -697196,8 +697040,8 @@
         {
           "name": "NewPVPMgr::GetSunAdd",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::StartFrameCalc",
@@ -697262,14 +697106,14 @@
         {
           "name": "NewPVPMgr::GetMaxEstimitedMatchingTime",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::GetMinEstimitedMatchingTime",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::IsCurrentMatchingTimeout",
@@ -697310,20 +697154,20 @@
         {
           "name": "NewPVPMgr::IsLastGameReachFPSLimit",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::IsSeasonEnd",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::IsThirdSeason",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::GetAreaHowToPlayData",
@@ -697388,20 +697232,20 @@
         {
           "name": "NewPVPMgr::GetSyncGameInterval",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::GetSyncPlayerInterval",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::GetSyncQueueInterval",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::GetTutorialPlantInfo",
@@ -697448,8 +697292,8 @@
         {
           "name": "NewPVPMgr::GetCurrentBattleIndex",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::GetCurrentEndPlayData",
@@ -697466,8 +697310,8 @@
         {
           "name": "NewPVPMgr::GetCurrentMaxPlantNum",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::GetCurrentRank",
@@ -697490,8 +697334,8 @@
         {
           "name": "NewPVPMgr::GetEstimatedQueueingTime",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "NewPVPMgr::GetFPSBlockStart",
@@ -699028,12 +698872,12 @@
     {
       "name": "src/PvZ2/Managers/PVPManager.cpp",
       "total_code": 17980,
-      "matched_code": 592,
-      "matched_code_percent": 3.29,
+      "matched_code": 788,
+      "matched_code_percent": 4.38,
       "total_functions": 126,
-      "matched_functions": 7,
-      "matched_functions_percent": 5.56,
-      "fuzzy_match_percent": 3.29,
+      "matched_functions": 16,
+      "matched_functions_percent": 12.7,
+      "fuzzy_match_percent": 4.38,
       "functions": [
         {
           "name": "PVPManager::onEditPlayerPlant",
@@ -699446,8 +699290,8 @@
         {
           "name": "PVPManager::TimeToGem",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVPZombieData::PVPZombieData",
@@ -699488,8 +699332,8 @@
         {
           "name": "PVPManager::ClearRankList",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVPManager::GetCurrentDefenderInfo",
@@ -699548,14 +699392,14 @@
         {
           "name": "PVPManager::GetRankMaxCount",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVPManager::IsInPlaybackMode",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVPManager::SetChangedCurrency",
@@ -699572,8 +699416,8 @@
         {
           "name": "PVPManager::GetRankList",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVPManager::IsInPVPMap",
@@ -699614,8 +699458,8 @@
         {
           "name": "PVPManager::GetEvilDavidMaxChallengingTimes",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVPManager::GetGardenRewardInfoList",
@@ -699716,8 +699560,8 @@
         {
           "name": "PVPManager::GetZombieCamp",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVPManager::GetZombieDatas",
@@ -699734,8 +699578,8 @@
         {
           "name": "PVPManager::SetEvilDavidMaxChallengingTimes",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVPManager::SetGemToday",
@@ -699746,8 +699590,8 @@
         {
           "name": "PVPManager::SetLeagueId",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "PVPManager::SetOldNameStatus",
@@ -710758,12 +710602,12 @@
     {
       "name": "src/PvZ2/Managers/WorldDataManager.cpp",
       "total_code": 4396,
-      "matched_code": 256,
-      "matched_code_percent": 5.82,
+      "matched_code": 612,
+      "matched_code_percent": 13.92,
       "total_functions": 32,
-      "matched_functions": 8,
-      "matched_functions_percent": 25.0,
-      "fuzzy_match_percent": 5.82,
+      "matched_functions": 9,
+      "matched_functions_percent": 28.12,
+      "fuzzy_match_percent": 13.92,
       "functions": [
         {
           "name": "WorldDataManager::RemapWorldMapEvents",
@@ -710774,8 +710618,8 @@
         {
           "name": "WorldDataManager::RebuildWorldData",
           "size": 356,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "WorldDataManager::FindEventsUnlockedByEvent",
@@ -725638,72 +725482,72 @@
     {
       "name": "src/PvZ2/Network/Java/JavaBase.cpp",
       "total_code": 832,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 832,
+      "matched_code_percent": 100.0,
       "total_functions": 10,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 10,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "JavaBase::ConstructJavaObject",
           "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "JavaBase::InitJava",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "JavaBase::AttachJavaObject",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "JavaBase::~JavaBase",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "JavaBase::~JavaBase",
           "size": 72,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "JavaBase::~JavaBase",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "JavaBase::JavaBase",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "JavaBase::JavaBase",
           "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "JavaBase::BindJavaMethods",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "JavaBase::BindNativeMethods",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -726406,36 +726250,36 @@
     {
       "name": "src/PvZ2/Network/Log/Log_TGA.cpp",
       "total_code": 1576,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 1480,
+      "matched_code_percent": 93.91,
       "total_functions": 6,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 4,
+      "matched_functions_percent": 66.67,
+      "fuzzy_match_percent": 93.91,
       "functions": [
         {
           "name": "Log_TGA::getBasicInfo",
           "size": 520,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Log_TGA::getBasicInfoForLogin",
           "size": 520,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Log_TGA::getLogInfo",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Log_TGA::getOtherInfo",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Log_TGA::Log_TGA",
@@ -785926,12 +785770,12 @@
     {
       "name": "src/PvZ2/UI/DNode/DString.cpp",
       "total_code": 11940,
-      "matched_code": 3292,
-      "matched_code_percent": 27.57,
+      "matched_code": 3604,
+      "matched_code_percent": 30.18,
       "total_functions": 137,
-      "matched_functions": 53,
-      "matched_functions_percent": 38.69,
-      "fuzzy_match_percent": 27.57,
+      "matched_functions": 55,
+      "matched_functions_percent": 40.15,
+      "fuzzy_match_percent": 30.18,
       "functions": [
         {
           "name": "DString::setWithTime",
@@ -786050,14 +785894,14 @@
         {
           "name": "DString::makeLower",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DString::makeUpper",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DString::CreateWithTime",
@@ -787209,13 +787053,13 @@
     },
     {
       "name": "src/PvZ2/UI/DNode/DTransformNode.cpp",
-      "total_code": 11812,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 128,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 10696,
+      "matched_code": 392,
+      "matched_code_percent": 3.66,
+      "total_functions": 111,
+      "matched_functions": 31,
+      "matched_functions_percent": 27.93,
+      "fuzzy_match_percent": 3.66,
       "functions": [
         {
           "name": "DTransformNode::getChildRecursionByName",
@@ -787410,18 +787254,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "DMatrix::Concat2",
-          "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DMatrix::SetMatrix",
-          "size": 132,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "DTransformNode::visit",
           "size": 132,
           "matched": false,
@@ -787452,18 +787284,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "DMatrix::DMatrix",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DMatrix::DMatrix",
-          "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "DTransformNode::setRGB",
           "size": 104,
           "matched": false,
@@ -787488,18 +787308,6 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "DMatrix::DMatrix",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DMatrix::DMatrix",
-          "size": 88,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "DTransformNode::setZOrder",
           "size": 88,
           "matched": false,
@@ -787518,44 +787326,14 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "DMatrix",
-          "size": 64,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "DTransformNode::getAlign",
           "size": 64,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "DColor::DColor",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DColor::DColor",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "DTransformNode::setName",
           "size": 56,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DMatrix::Scale2",
-          "size": 52,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DMatrix::Translate2",
-          "size": 52,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -787610,30 +787388,18 @@
         {
           "name": "DTransformNode::setPosition",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::setScale",
           "size": 48,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::scaleToSize",
           "size": 44,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DColor::operator=",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DColor::setColor",
-          "size": 36,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -787662,70 +787428,52 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "DColor::setRGB",
-          "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "DTransformNode::ignoreAnchorPointForPosition",
           "size": 32,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "DColor::setColor",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "DColor::setAlpha",
-          "size": 24,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "DTransformNode::setPosition",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::setScale",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::setPositionX",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::setPositionY",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::setRotation",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::setScaleX",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::setScaleY",
           "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getActionNumber",
@@ -787746,28 +787494,22 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "DColor::getColor",
-          "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
           "name": "DTransformNode::addComponent",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getAnchorPoint",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getAnchorPointSize",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getChildren",
@@ -787790,20 +787532,20 @@
         {
           "name": "DTransformNode::getComponent",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getContextRect",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getName",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getParent",
@@ -787814,50 +787556,50 @@
         {
           "name": "DTransformNode::getPosition",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getPositionX",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getPositionY",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getRotation",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getScale",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getScaleX",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getScaleXY",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getScaleY",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getTag",
@@ -787868,8 +787610,8 @@
         {
           "name": "DTransformNode::getTouchDispatcher",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::getZOrder",
@@ -787904,26 +787646,26 @@
         {
           "name": "DTransformNode::isVisible",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::removeAllComponents",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::removeComponent",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::removeComponent",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::setNoCast",
@@ -787940,8 +787682,8 @@
         {
           "name": "DTransformNode::setRenderEffect",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::setTag",
@@ -787952,14 +787694,14 @@
         {
           "name": "DTransformNode::setTouchDispatcher",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::setVisible",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "DTransformNode::stopAction",
@@ -924507,13 +924249,13 @@
     },
     {
       "name": "src/SexyAppFramework/EATech/Text/Layout/Layout.cpp",
-      "total_code": 8404,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 28,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 9396,
+      "matched_code": 2140,
+      "matched_code_percent": 22.78,
+      "total_functions": 33,
+      "matched_functions": 18,
+      "matched_functions_percent": 54.55,
+      "fuzzy_match_percent": 22.78,
       "functions": [
         {
           "name": "EA::Text::Layout::LayoutTextParagraph",
@@ -924566,20 +924308,32 @@
         {
           "name": "EA::Text::Layout::GetTextProperties",
           "size": 356,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EA::Text::Layout::GetNominalDescent",
+          "size": 328,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Text::Layout::GetNominalBaseline",
+          "size": 316,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
           "name": "EA::Text::Layout::GetParagraphBoundary",
           "size": 316,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Layout::PlaceGlyphs",
           "size": 216,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Layout::GetTextLayoutMetrics",
@@ -924590,41 +924344,53 @@
         {
           "name": "EA::Text::TextRunIterator::SetPosition",
           "size": 180,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EA::Text::TextRunIterator",
+          "size": 176,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::TextRunIterator::SetTextRunArray",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Layout::AnalyzeText",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Layout::DisplayPositionToTextPosition",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Layout::SetLayoutFonts",
           "size": 140,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Layout::SetLayoutSettings",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Layout::TextPositionToDisplayPosition",
+          "size": 112,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EA::Text::TextRunIterator",
           "size": 112,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -924642,46 +924408,52 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "EA::Text::Layout::Layout",
-          "size": 4,
+          "name": "EA::Text::TextRunIterator::operator=",
+          "size": 60,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
           "name": "EA::Text::Layout::Layout",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EA::Text::Layout::Layout",
+          "size": 4,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Layout::OrderText",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Layout::~Layout",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Layout::~Layout",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::TextRunIterator::TextRunIterator",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::TextRunIterator::TextRunIterator",
           "size": 4,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -924735,17 +924507,23 @@
     },
     {
       "name": "src/SexyAppFramework/EATech/Text/LineLayout.cpp",
-      "total_code": 4436,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 17,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 7396,
+      "matched_code": 1540,
+      "matched_code_percent": 20.82,
+      "total_functions": 29,
+      "matched_functions": 6,
+      "matched_functions_percent": 20.69,
+      "fuzzy_match_percent": 20.82,
       "functions": [
         {
           "name": "EA::Text::LineLayout::Append",
           "size": 956,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EA::Text::LineLayout::GetGlyphDecoration",
+          "size": 656,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -924756,6 +924534,18 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Text::LineLayout::GetGlyphSelection",
+          "size": 536,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Text::LineLayout::GetTextPositionFromDisplayPosition",
+          "size": 520,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Text::LineLayout::LineLayout",
           "size": 404,
           "matched": false,
@@ -924764,6 +924554,12 @@
         {
           "name": "EA::Text::LineLayout::LineLayout",
           "size": 404,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Text::LineLayout::GetDisplayPositionFromTextPosition",
+          "size": 396,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -924794,12 +924590,24 @@
         {
           "name": "EA::Text::LineLayout::CalculateVisibleSpace",
           "size": 220,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::LineLayout::OffsetSegment",
           "size": 192,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EA::Text::LineLayout::operator=",
+          "size": 168,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Text::LineLayout::GetFontSelection",
+          "size": 164,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -924810,12 +924618,30 @@
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "EA::Text::LineLayout::NewGlyphs",
+          "name": "EA::Text::LineLayout::GetDisplayPositionFromTextPosition",
+          "size": 136,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Text::LineLayout::GetCharIndexFromGlyphIndex",
           "size": 104,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Text::LineLayout::GetGlyphIndexFromCharIndex",
+          "size": 104,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Text::LineLayout::NewGlyphs",
+          "size": 104,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
           "name": "EA::Text::LineLayout::~LineLayout",
           "size": 80,
           "matched": false,
@@ -924824,6 +924650,18 @@
         {
           "name": "EA::Text::LineLayout::~LineLayout",
           "size": 80,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Text::LineLayout::GetCharRangeFromGlyphRange",
+          "size": 76,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Text::LineLayout::GetGlyphRangeFromCharRange",
+          "size": 76,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -924836,14 +924674,20 @@
         {
           "name": "EA::Text::LineLayout::NewLine",
           "size": 56,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EA::Text::LineLayout::GetLineHeight",
+          "size": 24,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
           "name": "EA::Text::LineLayout::Clear",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -929572,12 +929416,12 @@
     {
       "name": "src/SexyAppFramework/EATech/Text/Typesetter.cpp",
       "total_code": 22468,
-      "matched_code": 16,
-      "matched_code_percent": 0.07,
+      "matched_code": 2400,
+      "matched_code_percent": 10.68,
       "total_functions": 79,
-      "matched_functions": 1,
-      "matched_functions_percent": 1.27,
-      "fuzzy_match_percent": 0.07,
+      "matched_functions": 15,
+      "matched_functions_percent": 18.99,
+      "fuzzy_match_percent": 10.68,
       "functions": [
         {
           "name": "EA::Text::Typesetter::GetThaiGlyphs",
@@ -929672,8 +929516,8 @@
         {
           "name": "EA::Text::Typesetter::FinalizeLine",
           "size": 464,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::CompleteLineLayoutArrays",
@@ -929720,8 +929564,8 @@
         {
           "name": "EA::Text::Typesetter::GetParagraphSize",
           "size": 336,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::AppendArabicGlyphCluster",
@@ -929744,8 +929588,8 @@
         {
           "name": "EA::Text::Typesetter::AdjustWhitespaceEmbedding",
           "size": 288,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::GetHebrewGlyphsForChars",
@@ -929756,8 +929600,8 @@
         {
           "name": "EA::Text::Typesetter::NextLine",
           "size": 268,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::GetGlyphsForChar",
@@ -929816,8 +929660,8 @@
         {
           "name": "EA::Text::Typesetter::ShapeGeneral",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::ShapeHebrew",
@@ -929840,14 +929684,14 @@
         {
           "name": "EA::Text::Typesetter::AddTextRun",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::Validate",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::AddLineBreak",
@@ -929864,26 +929708,26 @@
         {
           "name": "EA::Text::Typesetter::GetScheduleItemFromCharIndex",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::ShapeText",
           "size": 108,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::ProcessLine",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::ReverseGlyphs",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::SetGlyphLayoutInfo",
@@ -929894,8 +929738,8 @@
         {
           "name": "EA::Text::Typesetter::GetTextWidth",
           "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::SetDefaultTextStyle",
@@ -929906,8 +929750,8 @@
         {
           "name": "EA::Text::Typesetter::GetObjectMetrics",
           "size": 76,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::GetHangulCharCluster",
@@ -929966,14 +929810,14 @@
         {
           "name": "EA::Text::Typesetter::RunInfo::RunInfo",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::RunInfo::RunInfo",
           "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "EA::Text::Typesetter::ScheduleLocation::GetCharIndex",
@@ -929996,8 +929840,8 @@
         {
           "name": "EA::Text::Typesetter::SetLayoutSpace",
           "size": 16,
-          "matched": true,
-          "fuzzy_match_percent": 100.0
+          "matched": false,
+          "fuzzy_match_percent": 0.0
         },
         {
           "name": "EA::Text::Typesetter::EllipsizeLine",
@@ -930357,13 +930201,13 @@
     },
     {
       "name": "src/SexyAppFramework/EATech/Thread/Thread.cpp",
-      "total_code": 4736,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
-      "total_functions": 78,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "total_code": 9416,
+      "matched_code": 132,
+      "matched_code_percent": 1.4,
+      "total_functions": 161,
+      "matched_functions": 3,
+      "matched_functions_percent": 1.86,
+      "fuzzy_match_percent": 1.4,
       "functions": [
         {
           "name": "EA::Thread::Thread::WaitForEnd",
@@ -930372,8 +930216,26 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::Semaphore::Wait",
+          "size": 308,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Mutex::Lock",
+          "size": 304,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::AssertionFailureV",
           "size": 272,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Futex::Lock",
+          "size": 240,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -930386,6 +930248,12 @@
         {
           "name": "EA::Thread::EnumerateThreads",
           "size": 196,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Mutex::Init",
+          "size": 188,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -930408,6 +930276,18 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::Semaphore::Init",
+          "size": 164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Semaphore::Post",
+          "size": 164,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::Thread::SetPriority",
           "size": 164,
           "matched": false,
@@ -930416,6 +930296,42 @@
         {
           "name": "EA::Thread::GetThreadStackBase",
           "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Mutex::Mutex",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Mutex::Mutex",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Semaphore::Semaphore",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Semaphore::Semaphore",
+          "size": 144,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::MutexFactory::CreateMutex",
+          "size": 136,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SemaphoreFactory::CreateSemaphore",
+          "size": 136,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -930434,6 +930350,18 @@
         {
           "name": "EA::Thread::GetStackBase",
           "size": 120,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Semaphore::Semaphore",
+          "size": 116,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Semaphore::Semaphore",
+          "size": 116,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -930468,14 +930396,68 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::FutexFactory::CreateFutex",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::FutexFactory::DestroyFutex",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::MutexFactory::DestroyMutex",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SemaphoreFactory::DestroySemaphore",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadFactory::CreateThread",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadFactory::DestroyThread",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadLocalStorageFactory::CreateThreadLocalStorage",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadLocalStorageFactory::DestroyThreadLocalStorage",
+          "size": 100,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::GetStackLimit",
+          "size": 92,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EA::Thread::android_fake_atomic_swap_64",
           "size": 92,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
-          "name": "EA::Thread::android_fake_atomic_swap_64",
-          "size": 92,
+          "name": "EA::Thread::Futex::Unlock",
+          "size": 88,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -930504,6 +930486,24 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::Futex::Futex",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Futex::Futex",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Futex::WaitFSemaphore",
+          "size": 72,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::android_fake_atomic_read_64",
           "size": 72,
           "matched": false,
@@ -930528,6 +930528,18 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::ThreadTime::ThreadTime",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadTime::ThreadTime",
+          "size": 68,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::FindThreadDynamicData",
           "size": 60,
           "matched": false,
@@ -930540,7 +930552,25 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::MutexFactory::ConstructMutex",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SemaphoreFactory::ConstructSemaphore",
+          "size": 52,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::AssertionFailure",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Mutex::Unlock",
           "size": 48,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -930548,6 +930578,54 @@
         {
           "name": "EA::Thread::Thread::GetStatus",
           "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadEnumData::Release",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadLocalStorage::ThreadLocalStorage",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadLocalStorage::ThreadLocalStorage",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadParameters::ThreadParameters",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadParameters::ThreadParameters",
+          "size": 48,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::FutexFactory::ConstructFutex",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadFactory::ConstructThread",
+          "size": 44,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadLocalStorageFactory::ConstructThreadLocalStorage",
+          "size": 44,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -930571,6 +930649,12 @@
         },
         {
           "name": "EA::Thread::SetStackBase",
+          "size": 32,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadLocalStorage::SetValue",
           "size": 32,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -930624,6 +930708,12 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::Futex::WaitFSemaphore",
+          "size": 24,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::GetProcessorCount",
           "size": 24,
           "matched": false,
@@ -930672,6 +930762,18 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::SemaphoreParameters::SemaphoreParameters",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SemaphoreParameters::SemaphoreParameters",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::Thread::SetAffinityMask",
           "size": 20,
           "matched": false,
@@ -930680,6 +930782,36 @@
         {
           "name": "EA::Thread::Thread::SetProcessor",
           "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadLocalStorage::~ThreadLocalStorage",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadLocalStorage::~ThreadLocalStorage",
+          "size": 20,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadTime::ThreadTime",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EA::Thread::ThreadTime::ThreadTime",
+          "size": 20,
+          "matched": true,
+          "fuzzy_match_percent": 100.0
+        },
+        {
+          "name": "EA::Thread::Futex::CreateFSemaphore",
+          "size": 16,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -930744,6 +930876,42 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::detail::SysThreadIdToStringBuffer::SysThreadIdToStringBuffer",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::detail::SysThreadIdToStringBuffer::SysThreadIdToStringBuffer",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::detail::ThreadIdToStringBuffer::ThreadIdToStringBuffer",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::detail::ThreadIdToStringBuffer::ThreadIdToStringBuffer",
+          "size": 16,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::AutoFutex::AutoFutex",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::AutoFutex::AutoFutex",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::EAThreadGlobalVars::~EAThreadGlobalVars",
           "size": 12,
           "matched": false,
@@ -930752,6 +930920,48 @@
         {
           "name": "EA::Thread::EAThreadGlobalVars::~EAThreadGlobalVars",
           "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadTime::ThreadTime",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadTime::ThreadTime",
+          "size": 12,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::AutoFutex::~AutoFutex",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::AutoFutex::~AutoFutex",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Futex::DestroyFSemaphore",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Futex::SignalFSemaphore",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::FutexFactory::GetFutexSize",
+          "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -930774,12 +930984,36 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::MutexFactory::GetMutexSize",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::MutexParameters::MutexParameters",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::MutexParameters::MutexParameters",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::Semaphore::GetCount",
           "size": 8,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::SemaphoreFactory::GetSemaphoreSize",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::Thread::Thread",
           "size": 8,
           "matched": false,
@@ -930788,6 +931022,54 @@
         {
           "name": "EA::Thread::Thread::Thread",
           "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadEnumData::ThreadEnumData",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadEnumData::ThreadEnumData",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadFactory::GetThreadSize",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadLocalStorage::GetValue",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadLocalStorageFactory::GetThreadLocalStorageSize",
+          "size": 8,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Futex::~Futex",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Futex::~Futex",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::FutexFactory::DestructFutex",
+          "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
         },
@@ -930816,6 +931098,42 @@
           "fuzzy_match_percent": 0.0
         },
         {
+          "name": "EA::Thread::Mutex::~Mutex",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Mutex::~Mutex",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::MutexFactory::DestructMutex",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Semaphore::~Semaphore",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::Semaphore::~Semaphore",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::SemaphoreFactory::DestructSemaphore",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
           "name": "EA::Thread::SetThreadProcessor",
           "size": 4,
           "matched": false,
@@ -930829,6 +931147,30 @@
         },
         {
           "name": "EA::Thread::Thread::Wake",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadEnumData::~ThreadEnumData",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadEnumData::~ThreadEnumData",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadFactory::DestructThread",
+          "size": 4,
+          "matched": false,
+          "fuzzy_match_percent": 0.0
+        },
+        {
+          "name": "EA::Thread::ThreadLocalStorageFactory::DestructThreadLocalStorage",
           "size": 4,
           "matched": false,
           "fuzzy_match_percent": 0.0
@@ -936832,12 +937174,12 @@
     {
       "name": "src/SexyAppFramework/Info/ResumableRequestInfo.cpp",
       "total_code": 7912,
-      "matched_code": 0,
-      "matched_code_percent": 0.0,
+      "matched_code": 6016,
+      "matched_code_percent": 76.04,
       "total_functions": 39,
-      "matched_functions": 0,
-      "matched_functions_percent": 0.0,
-      "fuzzy_match_percent": 0.0,
+      "matched_functions": 36,
+      "matched_functions_percent": 92.31,
+      "fuzzy_match_percent": 76.04,
       "functions": [
         {
           "name": "Sexy::ResumableRequestInfo::Prepare",
@@ -936848,38 +937190,38 @@
         {
           "name": "Sexy::ResumableRequestInfo::HandleHttpComplete",
           "size": 488,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::HandleReceivedData",
           "size": 452,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::FinalizeResumeRequest",
           "size": 372,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::SaveResumeRequestData",
           "size": 372,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::HandleReceivedResponse",
           "size": 368,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::ReadResumeFile",
           "size": 360,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::DeletePartialFiles",
@@ -936890,140 +937232,140 @@
         {
           "name": "Sexy::ResumableRequestInfo::ResumeRequestError",
           "size": 308,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::ResumableRequestInfo",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::ResumableRequestInfo",
           "size": 276,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::GetResumeCachedFolder",
           "size": 248,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::MarkQueueForDelete",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::IsBufferWriting",
           "size": 160,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::SetIsBufferWriting",
           "size": 156,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::~ResumableRequestInfo",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::~ResumableRequestInfo",
           "size": 152,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::TakeResumableInfoAndMarkForCancellation",
           "size": 136,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::IsQueueEmpty",
           "size": 124,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::SetParentRequest",
           "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::GetCachedFileName",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::GetTargetFilePath",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::getLastModifiedTimeStamp",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::getQueueName",
           "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::AllocateBuffers",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::IncrPos",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::setLastModifiedTimeStamp",
           "size": 112,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::GetPos",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::getParentRequest",
           "size": 104,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::ClearPos",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::SwapBuffers",
           "size": 84,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::DispatchProgressNotification",
@@ -937034,44 +937376,44 @@
         {
           "name": "Sexy::ResumableRequestInfo::IsValidResumableDownloadHttpStatus",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::~ResumableRequestInfo",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::ResumableRequestInfo::RemakeRequest",
           "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AutoCrit::AutoCrit",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AutoCrit::AutoCrit",
           "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AutoCrit::~AutoCrit",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::AutoCrit::~AutoCrit",
           "size": 8,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         }
       ]
     },
@@ -943149,129 +943491,14 @@
     },
     {
       "name": "src/SexyAppFramework/Parsing/EncodingParser.cpp",
-      "total_code": 3628,
+      "total_code": 0,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 19,
+      "total_functions": 0,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::EncodingParser::GetUTF8Char",
-          "size": 624,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::OpenFile",
-          "size": 608,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::GetUTF16Char",
-          "size": 384,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::GetUTF16BEChar",
-          "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::GetChar",
-          "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::GetUTF16LEChar",
-          "size": 240,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::PutString",
-          "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::SetEncodingType",
-          "size": 172,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::SetStringSource",
-          "size": 148,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::GetAsciiChar",
-          "size": 120,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::SetStringSource",
-          "size": 116,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::EndOfFile",
-          "size": 92,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::EncodingParser",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::EncodingParser",
-          "size": 80,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::CloseFile",
-          "size": 68,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::~EncodingParser",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::~EncodingParser",
-          "size": 60,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::~EncodingParser",
-          "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::EncodingParser::PutChar",
-          "size": 28,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
+      "functions": []
     },
     {
       "name": "src/SexyAppFramework/Parsing/JsonReader.cpp",
@@ -944746,18 +944973,18 @@
     {
       "name": "src/SexyAppFramework/PrimeText/PrimeText_SimpleFormatter.cpp",
       "total_code": 1336,
-      "matched_code": 568,
-      "matched_code_percent": 42.51,
+      "matched_code": 1336,
+      "matched_code_percent": 100.0,
       "total_functions": 3,
-      "matched_functions": 2,
-      "matched_functions_percent": 66.67,
-      "fuzzy_match_percent": 98.8,
+      "matched_functions": 3,
+      "matched_functions_percent": 100.0,
+      "fuzzy_match_percent": 100.0,
       "functions": [
         {
           "name": "Sexy::PrimeText_SimpleFormatter::PrepareFormattedText",
           "size": 768,
-          "matched": false,
-          "fuzzy_match_percent": 97.92
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeText_SimpleFormatter::ProcessFormatter",
@@ -944776,24 +945003,24 @@
     {
       "name": "src/SexyAppFramework/PrimeText/PrimeTypeface.cpp",
       "total_code": 5020,
-      "matched_code": 2524,
-      "matched_code_percent": 50.28,
+      "matched_code": 4532,
+      "matched_code_percent": 90.28,
       "total_functions": 33,
-      "matched_functions": 25,
-      "matched_functions_percent": 75.76,
-      "fuzzy_match_percent": 92.03,
+      "matched_functions": 31,
+      "matched_functions_percent": 93.94,
+      "fuzzy_match_percent": 94.66,
       "functions": [
         {
           "name": "Sexy::PrimeTypeface::PrepareString_Paragraph",
           "size": 544,
-          "matched": false,
-          "fuzzy_match_percent": 96.32
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::PrepareString_Line",
           "size": 432,
-          "matched": false,
-          "fuzzy_match_percent": 95.37
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::DrawString_Paragraph",
@@ -944804,8 +945031,8 @@
         {
           "name": "Sexy::PrimeTypeface::PrepareString_Simple",
           "size": 324,
-          "matched": false,
-          "fuzzy_match_percent": 95.06
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::DrawString_Paragraph",
@@ -944817,7 +945044,7 @@
           "name": "Sexy::PrimeTypeface::FitString_Paragraph",
           "size": 276,
           "matched": false,
-          "fuzzy_match_percent": 36.23
+          "fuzzy_match_percent": 42.03
         },
         {
           "name": "Sexy::PrimeTypeface::DrawString_Line",
@@ -944828,8 +945055,8 @@
         {
           "name": "Sexy::PrimeTypeface::SizeString_Paragraph",
           "size": 272,
-          "matched": false,
-          "fuzzy_match_percent": 94.12
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::DrawString_Simple",
@@ -944840,20 +945067,20 @@
         {
           "name": "Sexy::PrimeTypeface::SizeString_Line",
           "size": 236,
-          "matched": false,
-          "fuzzy_match_percent": 93.22
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::FitString_Line",
           "size": 212,
           "matched": false,
-          "fuzzy_match_percent": 43.4
+          "fuzzy_match_percent": 49.06
         },
         {
           "name": "Sexy::PrimeTypeface::PrepareString_Typesetter",
           "size": 200,
-          "matched": false,
-          "fuzzy_match_percent": 92.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::PrimeTypeface::PrepareTypesetter",
@@ -950337,12 +950564,12 @@
     {
       "name": "src/SexyAppFramework/Rt/RtClass.cpp",
       "total_code": 2880,
-      "matched_code": 180,
-      "matched_code_percent": 6.25,
+      "matched_code": 1868,
+      "matched_code_percent": 64.86,
       "total_functions": 23,
-      "matched_functions": 4,
-      "matched_functions_percent": 17.39,
-      "fuzzy_match_percent": 6.25,
+      "matched_functions": 15,
+      "matched_functions_percent": 65.22,
+      "fuzzy_match_percent": 64.86,
       "functions": [
         {
           "name": "Sexy::RtClass::Serialize",
@@ -950353,32 +950580,32 @@
         {
           "name": "Sexy::RtClass::RtClass",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RtClass::RtClass",
           "size": 292,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RtClass::StaticGetClassNamed",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RtClass::~RtClass",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RtClass::~RtClass",
           "size": 188,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RtClass::FindProtocol",
@@ -950389,14 +950616,14 @@
         {
           "name": "Sexy::RtClass::ClassInit",
           "size": 168,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RtClass::StaticCleanup",
           "size": 164,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RtClass::StaticClassInit",
@@ -950425,8 +950652,8 @@
         {
           "name": "Sexy::RtClass::IsDerivedFrom",
           "size": 100,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RtClass::GetBoundReflectionClass",
@@ -950449,8 +950676,8 @@
         {
           "name": "Sexy::RtClass::StaticGetClassIndexed",
           "size": 40,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RtClass::AddProtocol",
@@ -950461,14 +950688,14 @@
         {
           "name": "Sexy::RtClass::~RtClass",
           "size": 36,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RtClass::StaticGetClassCount",
           "size": 32,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::RtClass::IsAbstract",
@@ -953894,12 +954121,12 @@
     {
       "name": "src/SexyAppFramework/StructuredData/StructuredData.cpp",
       "total_code": 13116,
-      "matched_code": 7540,
-      "matched_code_percent": 57.49,
+      "matched_code": 8068,
+      "matched_code_percent": 61.51,
       "total_functions": 113,
-      "matched_functions": 89,
-      "matched_functions_percent": 78.76,
-      "fuzzy_match_percent": 57.49,
+      "matched_functions": 92,
+      "matched_functions_percent": 81.42,
+      "fuzzy_match_percent": 61.51,
       "functions": [
         {
           "name": "Sexy::StructuredData::ReplaceChild",
@@ -953994,8 +954221,8 @@
         {
           "name": "Sexy::StructuredData::IntegerForPath",
           "size": 256,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::StructuredData::WriteToConsole",
@@ -954060,8 +954287,8 @@
         {
           "name": "Sexy::StructuredData::Value::ValueForName",
           "size": 144,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::StructuredData::EraseValue",
@@ -954090,8 +954317,8 @@
         {
           "name": "Sexy::StructuredData::ValueForPath",
           "size": 128,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
+          "matched": true,
+          "fuzzy_match_percent": 100.0
         },
         {
           "name": "Sexy::StructuredData::Clone",
@@ -954691,51 +954918,14 @@
     },
     {
       "name": "src/SexyAppFramework/StructuredData/Value.cpp",
-      "total_code": 452,
+      "total_code": 0,
       "matched_code": 0,
       "matched_code_percent": 0.0,
-      "total_functions": 6,
+      "total_functions": 0,
       "matched_functions": 0,
       "matched_functions_percent": 0.0,
       "fuzzy_match_percent": 0.0,
-      "functions": [
-        {
-          "name": "Sexy::StructuredData::Value::ReadFromBuffer",
-          "size": 376,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::StructuredData::Value::StringOffset",
-          "size": 20,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::StructuredData::Value::Value",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::StructuredData::Value::Value",
-          "size": 16,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtSerialRtonReader::Value::Value",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        },
-        {
-          "name": "Sexy::RtSerialRtonReader::Value::Value",
-          "size": 12,
-          "matched": false,
-          "fuzzy_match_percent": 0.0
-        }
-      ]
+      "functions": []
     },
     {
       "name": "src/SexyAppFramework/System/Debug.cpp",

@@ -8,6 +8,22 @@
 #include "SexyAppFramework/Common.h"
 
 #include "UniverseMap.h"
+#include "ReflectionBuilder.h"
+#include "UniverseMap.h"
+
+/////////////// Accessors ///////////////
+
+bool UniverseMap::GetHasEnteredUniverseFlag() const
+{
+	return m_hasEnteredUniverse;
+}
+
+bool UniverseMap::IsLoaded()
+{
+	return getState() != UM_Loading;
+}
+
+/////////////// Logic ///////////////
 
 void UniverseMap::SlideInWorldBank()
 {
@@ -21,10 +37,6 @@ void UniverseMap::initLoadingResourcesGroupList()
 {
 }
 
-#include "ReflectionBuilder.h"
-
-RT_CLASS_IMPLEMENT(UniverseMap);
-
 void UniverseMap::DrawOverlay(Graphics* i_g)
 {
 }
@@ -37,7 +49,6 @@ void UniverseMap::ScrollTargetReached(Sexy::ScrollWidget* i_scrollWidget)
 {
 }
 
-#include "UniverseMap.h"
 void UniverseMap::onStargatePurchased(const MapEventItem* i_props)
 {
 	 UniverseMap::syncButtonStates();
@@ -63,3 +74,12 @@ void UniverseMap::KeyDown(KeyCode i_key)
 void UniverseMap::MouseMove(const int i_mouseX, const int i_mouseY)
 {
 }
+
+UniverseMapState UniverseMap::getState() const
+{
+	return m_stateMachine.GetState();
+}
+
+/////////////// Reflection ///////////////
+
+RT_CLASS_IMPLEMENT(UniverseMap);

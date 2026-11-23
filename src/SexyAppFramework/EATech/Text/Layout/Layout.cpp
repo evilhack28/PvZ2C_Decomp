@@ -27,3 +27,207 @@
 // TODO      4 B  EA::Text::Layout::Layout                             _ZN2EA4Text6LayoutC2Ev
 // TODO      4 B  EA::Text::Layout::OrderText                          _ZN2EA4Text6Layout9OrderTextEPKNS0_8AnalysisEjPS2_
 // TODO      4 B  EA::Text::Layout::~Layout                            _ZN2EA4Text6LayoutD2Ev
+
+#include "SexyAppFramework/Common.h"
+
+#include <EAText/EATextLayout.h>
+#include <EAText/EATextIterator.h>
+#include <EAText/EATextFontServer.h>
+
+/////////////// Logic ///////////////
+
+namespace EA
+{
+namespace Text
+{
+
+void Layout::SetLayoutSettings(const LayoutSettings* pLayoutSettings)
+{
+	if (pLayoutSettings)
+		mLayoutSettings = *pLayoutSettings;
+	else
+		mLayoutSettings = LayoutSettings();
+}
+
+void Layout::SetLayoutFonts(const TextStyle* pTextStyle, LayoutSettings* pLayoutSettings, FontServer* pFontServer)
+{
+	if (!pLayoutSettings)
+		pLayoutSettings = &mLayoutSettings;
+	if (!pTextStyle)
+		pTextStyle = &pLayoutSettings->mTextStyleDefault;
+	if (!pFontServer)
+		pFontServer = GetFontServer(true);
+	pLayoutSettings->mFontSelection.clear();
+	pFontServer->GetFont(pTextStyle, pLayoutSettings->mFontSelection, 30, 1, (Script)-1, true);
+}
+
+bool Layout::TextPositionToDisplayPosition(uint32_t nTextPosition, bool bTrueIfLeadingFalseIfTrailing, const uint32_t* pGlyphIndexArray, uint32_t nGlyphIndexArraySize, const GlyphAttributes* pGlyphAttributesArray, uint32_t nGlyphAttributesArraySize, Point& ptDisplayPosition)
+{
+	if (bTrueIfLeadingFalseIfTrailing)
+		nTextPosition++;
+	if (nTextPosition < nGlyphIndexArraySize)
+	{
+		const GlyphAttributes& ga = pGlyphAttributesArray[pGlyphIndexArray[nTextPosition]];
+		ptDisplayPosition.mX = ga.mfPenX;
+		ptDisplayPosition.mY = ga.mfPenY;
+	}
+	else
+	{
+		const GlyphAttributes& ga = pGlyphAttributesArray[pGlyphIndexArray[nGlyphIndexArraySize - 1]];
+		ptDisplayPosition.mX = ga.mfAdvance + ga.mfPenX;
+		ptDisplayPosition.mY = ga.mfPenY;
+	}
+	return nTextPosition < nGlyphIndexArraySize;
+}
+
+uint32_t Layout::AnalyzeText(const TextRun* pTextRunArray, uint32_t nTextRunArraySize, AnalysisArray& analysisArray, const TextState* pTextState)
+{
+	analysisArray.resize(analysisArray.size() + 1);
+	Analysis& analysis = analysisArray.back();
+	for (const TextRun* p = pTextRunArray; p < pTextRunArray + nTextRunArraySize; ++p)
+		analysis.mnLength += pTextRunArray->mnTextSize;
+	analysis.mnPosition = 0;
+	analysis.mTextState.mnLevel = 0;
+	analysis.mTextState.mbForcedDirection = 0;
+	analysis.mTextState.mbSwapInhibited = 0;
+	analysis.mTextState.mbDisableNationalDigits = 0;
+	analysis.mScript = (Script)30;
+	analysis.mnParity = 0;
+	analysis.mnParentParity = 0;
+	analysis.mbJoinBefore = 0;
+	analysis.mbJoinAfter = 0;
+	return 1;
+}
+
+Layout::Layout()
+{
+}
+
+Layout::~Layout()
+{
+}
+
+void Layout::OrderText(const Analysis* pAnalysisArrayInput, uint32_t nAnalysisArrayInputSize, Analysis* pAnalysisArrayOutput)
+{
+}
+
+bool Layout::DisplayPositionToTextPosition(const Point& ptDisplayPosition, const uint32_t* pTextIndexArray, uint32_t nTextIndexArraySize, GlyphAttributes* pGlyphAttributesArray, uint32_t nGlyphAttributesArraySize, uint32_t& nTextPosition, bool& bTrueIfLeadingFalseIfTrailing)
+{
+	for (uint32_t i = 0; i < nGlyphAttributesArraySize; i++)
+	{
+		const float fDelta = pGlyphAttributesArray[i].mfPenX - ptDisplayPosition.mX;
+		if (fDelta > 0)
+		{
+			if (i == 0)
+			{
+				bTrueIfLeadingFalseIfTrailing = true;
+				nTextPosition = 0;
+			}
+			else if (fDelta < ptDisplayPosition.mX - pGlyphAttributesArray[i - 1].mfPenX)
+			{
+				bTrueIfLeadingFalseIfTrailing = true;
+				nTextPosition = pTextIndexArray[i];
+			}
+			else
+			{
+				bTrueIfLeadingFalseIfTrailing = false;
+				nTextPosition = pTextIndexArray[i];
+			}
+		}
+	}
+	return true;
+}
+
+uint32_t Layout::PlaceGlyphs(const Analysis* pAnalysisArray, uint32_t nAnalysisArraySize, const uint32_t* pGlyphIndexArray, const GlyphAttributes* pGlyphAttributesArray, uint32_t nGlyphAttributesArraySize, float x, float y, GlyphDisplayEntry* pGlyphDisplayEntryArray)
+{
+	GlyphDisplayEntry* pEntry = pGlyphDisplayEntryArray;
+	for (uint32_t i = 0; i < nAnalysisArraySize; i++)
+	{
+		const Analysis* pAnalysis = pAnalysisArray + i;
+		const uint32_t nBegin = pGlyphIndexArray[pAnalysis->mnPosition];
+		const uint32_t nEnd = pGlyphIndexArray[pAnalysis->mnPosition + pAnalysis->mnLength];
+		for (const GlyphAttributes* pGlyph = pGlyphAttributesArray + nBegin, *pGlyphEnd = pGlyphAttributesArray + nEnd; pGlyph < pGlyphEnd; ++pGlyph, ++pEntry)
+		{
+			pEntry->mpFont = pGlyph->mpFont;
+			pEntry->mfPenX = x;
+			pEntry->mfPenY = y;
+			pEntry->mfX1 = pGlyph->mfX1 + x;
+			pEntry->mfY1 = pGlyph->mfY1 + y;
+			pEntry->mfX2 = pGlyph->mfX2 + x;
+			pEntry->mfY2 = pGlyph->mfY2 + y;
+			pEntry->mfAdvance = pGlyph->mfAdvance;
+			pEntry->mGLA = pGlyph->mGLA;
+			pEntry->mGlyphId = pGlyph->mGlyphId;
+			x += pGlyph->mfAdvance;
+		}
+	}
+	return (uint32_t)(pEntry - pGlyphDisplayEntryArray);
+}
+
+uint32_t Layout::GetParagraphBoundary(const TextRun* pTextRunArray, uint32_t nTextRunArraySize, uint32_t* pParagraphDelimiterIndex, uint32_t* pParagraphEndIndex)
+{
+	TextRunIterator it(pTextRunArray, nTextRunArraySize);
+	uint32_t nDelimiterIndex = 0;
+	uint32_t nEndIndex = 0;
+	if (!it.Empty())
+	{
+		Char c = *it;
+		for (;;)
+		{
+			nEndIndex = nDelimiterIndex + 1;
+			if (c == 0xd)
+			{
+				++it;
+				if (*it == 0xa)
+					nEndIndex = nDelimiterIndex + 2;
+				break;
+			}
+			if (c == 0xa || c == 0x2029)
+				break;
+			nDelimiterIndex = nEndIndex;
+			++it;
+			c = *it;
+			if (c == kCharInvalid)
+				break;
+		}
+	}
+	if (pParagraphDelimiterIndex)
+		*pParagraphDelimiterIndex = nDelimiterIndex;
+	if (pParagraphEndIndex)
+		*pParagraphEndIndex = nEndIndex;
+	return nEndIndex;
+}
+
+void Layout::GetTextProperties(const TextRun* pTextRunArray, uint32_t nTextRunArraySize, TextProperties& textProperties)
+{
+	memset(&textProperties, 0, sizeof(textProperties));
+	TextRunIterator it(pTextRunArray, nTextRunArraySize);
+	if (!it.Empty())
+	{
+		do
+		{
+			ScriptProperties sp;
+			GetScriptProperties(GetScriptFromChar(*it), &sp, true);
+			if (sp.mbNumericChars)
+				textProperties.mbNumericChars = true;
+			if (sp.mbControlChars)
+				textProperties.mbControlChars = true;
+			if (sp.mbAmbiguousChars)
+				textProperties.mbAmbiguousChars = true;
+			if (sp.mbPrivateChars)
+				textProperties.mbPrivateChars = true;
+			if (sp.mbComplex)
+				textProperties.mbComplex = true;
+			if (sp.mbRTL)
+				textProperties.mbRTLChars = true;
+			else
+				textProperties.mbLTRChars = true;
+			if (sp.mbComplex)
+				textProperties.mbClusters = true;
+			++it;
+		} while (*it != kCharInvalid);
+	}
+}
+
+}
+}

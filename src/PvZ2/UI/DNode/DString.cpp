@@ -372,3 +372,39 @@ DString DString::subString(ssize_t start) const
 	}
 	return aResult;
 }
+
+DString DString::makeUpper() const
+{
+	char* aBuffer = (char*)DStackAllocator::getInstance()->push(size());
+	const char* aSrc = ((DString*)this)->c_str();
+	size_t i = 0;
+	for (; aSrc[i]; i++)
+	{
+		char c = aSrc[i];
+		if (c >= 'a' && c <= 'z')
+			c -= 0x20;
+		aBuffer[i] = c;
+	}
+	aBuffer[i] = 0;
+	DString aResult(aBuffer);
+	DStackAllocator::getInstance()->pop();
+	return aResult;
+}
+
+DString DString::makeLower() const
+{
+	char* aBuffer = (char*)DStackAllocator::getInstance()->push(size());
+	const char* aSrc = ((DString*)this)->c_str();
+	size_t i = 0;
+	for (; aSrc[i]; i++)
+	{
+		char c = aSrc[i];
+		if (c >= 'A' && c <= 'Z')
+			c += 0x20;
+		aBuffer[i] = c;
+	}
+	aBuffer[i] = 0;
+	DString aResult(aBuffer);
+	DStackAllocator::getInstance()->pop();
+	return aResult;
+}

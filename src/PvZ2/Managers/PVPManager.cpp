@@ -10,6 +10,7 @@
 #include "PVPManager.h"
 #include "BoardDlg.h"
 #include "TrainingCamp.h"
+#include "PVP/PlaybackManager.h"
 #include "LawnApp.h"
 
 /////////////// Accessors ///////////////
@@ -88,4 +89,52 @@ std::string PVPManager::GetProductVersion()
 void PVPManager::OnCloseDialog()
 {
 	gLawnApp->KillPVZ2Dialog();
+}
+
+void PVPManager::SetLeagueId(int iVal)
+{
+	m_leagueId = iVal;
+}
+
+void PVPManager::SetEvilDavidMaxChallengingTimes(int nCount)
+{
+	m_iEvilDavidMaxChallengingTimes = nCount;
+}
+
+int PVPManager::GetEvilDavidMaxChallengingTimes(void) const
+{
+	return m_iEvilDavidMaxChallengingTimes;
+}
+
+const std::vector<S2C_PVP_RankInfo>& PVPManager::GetRankList(int rankType)
+{
+	return rankType == 1 ? m_gardenRankInfoList : m_leagueRankInfoList;
+}
+
+int PVPManager::GetRankMaxCount(int rankType)
+{
+	if (rankType == 1)
+		return m_gardenMaxCount;
+	return m_leagueMaxCount;
+}
+
+void PVPManager::ClearRankList()
+{
+	m_gardenRankInfoList.clear();
+	m_leagueRankInfoList.clear();
+}
+
+int PVPManager::TimeToGem(int seconds)
+{
+	return pow(seconds * 3.4722223e-05f, 0.7f) * 50.0 + 1.0;
+}
+
+bool PVPManager::IsInPlaybackMode()
+{
+	return gPlaybackMgr->IsPlaying();
+}
+
+TrainingCamp* PVPManager::GetZombieCamp()
+{
+	return m_pZombieCamp;
 }
