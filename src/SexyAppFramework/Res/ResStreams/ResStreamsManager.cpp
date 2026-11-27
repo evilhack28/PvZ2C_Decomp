@@ -143,6 +143,44 @@ void ResStreamsManager::ForceLoadGPUData(int theGroupId)
 	mIsIdle = false;
 }
 
+void ResStreamsManager::GotFocus()
+{
+	if (mbShouldForceReloadOnFocus)
+	{
+		for (std::list<RSBDesc*>::iterator anItr = mRsbList.begin(); anItr != mRsbList.end(); ++anItr)
+		{
+			RSBDesc* aDesc = *anItr;
+			for (uint32 i = 0; i < aDesc->mNumGroups; i++)
+			{
+				if (GetGroupStatus(aDesc->mBaseIndex + i) == PREPARING)
+				{
+					DeleteGroup(aDesc->mBaseIndex + i);
+					ForceLoadGroup(aDesc->mBaseIndex + i, "Preparing group");
+				}
+			}
+
+			std::vector<bool> aValidGroups;
+			aValidGroups.resize(aDesc->mNumGroups);
+			for (uint32 i = 0; i < aDesc->mNumGroups; i++)
+			{
+				if (IsGroupLoaded(aDesc->mBaseIndex + i) && ValidateGroupResources(aDesc->mBaseIndex + i))
+					aValidGroups[i] = true;
+			}
+			for (uint32 i = 0; i < aDesc->mNumGroups; i++)
+			{
+				if (aValidGroups[i])
+					ForceLoadGPUData(aDesc->mBaseIndex + i);
+			}
+		}
+		while (true)
+		{
+			if (mIsIdle)
+				break;
+			Update();
+		}
+	}
+}
+
 bool ResStreamsManager::IsCompositeChildActive(ResStreamCompositeDescriptor::Child& theChildGroup)
 {
 	if (theChildGroup.resolution != 0 && theChildGroup.resolution != mApp->mResourceManager->mCurArtRes)

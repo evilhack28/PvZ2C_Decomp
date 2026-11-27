@@ -7,6 +7,7 @@
 #include "SexyAppFramework/Common.h"
 #include "SexyAppFramework/drivers/resstreams/android/AndroidResStreamsDriver.h"
 #include "SexyAppFramework/drivers/graphics/android/AndroidGraphicsDriver.h"
+#include "SexyAppFramework/drivers/resstreams/android/AndroidDecodeTask.h"
 #include "SexyAppFramework/DeviceImage.h"
 #include "SexyAppFramework/SexyMath.h"
 #include "SexyAppFramework/drivers/app/android/AndroidAppDriver.h"
@@ -205,6 +206,11 @@ void AndroidResStreamsDriver::ConfigureGroupTextures(ResStreamsGroup* theGroup) 
 		}
 		glTexImage2D(GL_TEXTURE_2D, 0, aInternalFormat, aWidth, aHeight, 0, aFormat, aType, NULL);
 	}
+}
+
+IResStreamsDriver::Task* AndroidResStreamsDriver::CreateDecodeTask(TaskResource* theInBuffer, uint32 theByteOffset, ResStreamTextureDescriptor* theTextureDesc, GLuint theTextureRef, GLuint theTextureRefMulti, uint32 theTileOffset, uint32 theNumTiles)
+{
+	return new AndroidDecodeTask(this, theInBuffer, theByteOffset, theTextureDesc, theTextureRef, theTextureRefMulti, theTileOffset, theNumTiles);
 }
 
 bool AndroidResStreamsDriver::IsPoolInstanceBusy(ResStreamsPool* thePool, int theInstanceId)

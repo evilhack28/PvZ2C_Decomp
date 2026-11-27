@@ -13,3 +13,44 @@
 // TODO     72 B  ConfirmUrlButton::~ConfirmUrlButton                  _ZN16ConfirmUrlButtonD2Ev
 // TODO     72 B  ConfirmUrlButton::~ConfirmUrlButton                  _ZN16ConfirmUrlButtonD1Ev
 // TODO     36 B  ConfirmUrlButton::~ConfirmUrlButton                  _ZN16ConfirmUrlButtonD0Ev
+
+#include "SexyAppFramework/Common.h"
+
+#include "ConfirmUrlButton.h"
+#include "StringHelper.h"
+#include "LawnApp.h"
+
+void ConfirmUrlButton::InitView()
+{
+	m_confirmText = StringHelper::ToStringValue("[HEALTH_NOTICE_CONTENT_5]");
+}
+
+ConfirmUrlButton::ConfirmUrlButton(int i_id)
+: PVZ2UIButton(i_id, this, L"")
+{
+	InitView();
+}
+
+void ConfirmUrlButton::ButtonDepress(int i_id)
+{
+	if (mId == i_id)
+	{
+		bool aIsHuawei = gLawnApp->GetPlatform() == PLATFORM_HUAWEI_TV_HD;
+		gLawnApp->OpenURL(aIsHuawei ? "http://115.182.216.157/user/start.html" : "https://beian.miit.gov.cn", false);
+	}
+}
+
+ConfirmUrlButton::~ConfirmUrlButton()
+{
+}
+
+static CachedUIResourcePtr<Sexy::Image> sConfirmUrlButtonHuaweiImage("");
+static CachedUIResourcePtr<Sexy::Image> sConfirmUrlButtonImage("");
+
+void ConfirmUrlButton::Draw(Sexy::Graphics* i_g)
+{
+	if (gLawnApp->GetPlatform() == PLATFORM_HUAWEI_TV_HD)
+		i_g->DrawImage(sConfirmUrlButtonHuaweiImage, Sexy::Rect(0, 0, mWidth, mHeight), Sexy::Rect(0, 0, sConfirmUrlButtonHuaweiImage->GetWidth(), sConfirmUrlButtonHuaweiImage->GetHeight()));
+	else
+		i_g->DrawImage(sConfirmUrlButtonImage, Sexy::Rect(0, 0, mWidth, mHeight), Sexy::Rect(0, 0, sConfirmUrlButtonImage->GetWidth(), sConfirmUrlButtonImage->GetHeight()));
+}

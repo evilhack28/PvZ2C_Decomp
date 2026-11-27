@@ -56,10 +56,73 @@ void DValue::reset(Type type)
 
 /////////////// Assignment ///////////////
 
+DValue& DValue::operator=(unsigned char v)
+{
+	reset(Type::BYTE);
+	_field.byteVal = v;
+	return *this;
+}
+
+DValue& DValue::operator=(int v)
+{
+	reset(Type::INTEGER);
+	_field.intVal = v;
+	return *this;
+}
+
+DValue& DValue::operator=(unsigned long long v)
+{
+	reset(Type::INTEGER64);
+	_field.int64Val = v;
+	return *this;
+}
+
+DValue& DValue::operator=(float v)
+{
+	reset(Type::FLOAT);
+	_field.floatVal = v;
+	return *this;
+}
+
+DValue& DValue::operator=(double v)
+{
+	reset(Type::DOUBLE);
+	_field.doubleVal = v;
+	return *this;
+}
+
+DValue& DValue::operator=(bool v)
+{
+	reset(Type::BOOLEAN);
+	_field.boolVal = v;
+	return *this;
+}
+
+DValue& DValue::operator=(const char* v)
+{
+	reset(Type::STRING);
+	*_field.strVal = v ? v : "";
+	return *this;
+}
+
 DValue& DValue::operator=(const std::string& v)
 {
 	reset(Type::STRING);
 	*_field.strVal = v;
+	return *this;
+}
+
+DValue& DValue::operator=(const DValueVector& v)
+{
+	reset(Type::VECTOR);
+	*_field.vectorVal = v;
+	return *this;
+}
+
+DValue& DValue::operator=(DValueVector&& v)
+{
+	reset(Type::VECTOR);
+	*_field.vectorVal = std::move(v);
 	return *this;
 }
 
@@ -70,10 +133,24 @@ DValue& DValue::operator=(const DValueMap& v)
 	return *this;
 }
 
+DValue& DValue::operator=(DValueMap&& v)
+{
+	reset(Type::MAP);
+	*_field.mapVal = std::move(v);
+	return *this;
+}
+
 DValue& DValue::operator=(const DValueMapIntKey& v)
 {
 	reset(Type::INT_KEY_MAP);
 	*_field.intKeyMapVal = v;
+	return *this;
+}
+
+DValue& DValue::operator=(DValueMapIntKey&& v)
+{
+	reset(Type::INT_KEY_MAP);
+	*_field.intKeyMapVal = std::move(v);
 	return *this;
 }
 

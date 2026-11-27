@@ -13,3 +13,42 @@
 // TODO     72 B  ConfirmUrlButtonExtra::ButtonDepress                 _ZN21ConfirmUrlButtonExtra13ButtonDepressEi
 // TODO     44 B  ConfirmUrlButtonExtra::InitView                      _ZN21ConfirmUrlButtonExtra8InitViewEv
 // TODO     36 B  ConfirmUrlButtonExtra::~ConfirmUrlButtonExtra        _ZN21ConfirmUrlButtonExtraD0Ev
+
+#include "SexyAppFramework/Common.h"
+
+#include "ConfirmUrlButtonExtra.h"
+#include "StringHelper.h"
+#include "LawnApp.h"
+
+/////////////// Lifecycle ///////////////
+
+ConfirmUrlButtonExtra::ConfirmUrlButtonExtra(int i_id, std::string i_url, std::string i_imageName)
+: ConfirmUrlButton(i_id)
+{
+	m_url = i_url;
+	m_imageName = i_imageName;
+	InitView();
+}
+
+ConfirmUrlButtonExtra::~ConfirmUrlButtonExtra()
+{
+}
+
+/////////////// Logic ///////////////
+
+void ConfirmUrlButtonExtra::InitView()
+{
+	m_image = StringHelper::ToImage(m_imageName, false);
+}
+
+void ConfirmUrlButtonExtra::ButtonDepress(int i_id)
+{
+	if (mId == i_id)
+		gLawnApp->OpenURL(m_url, false);
+}
+
+void ConfirmUrlButtonExtra::Draw(Sexy::Graphics* i_g)
+{
+	if (m_image)
+		i_g->DrawImage(m_image, Sexy::Rect(0, 0, mWidth, mHeight), Sexy::Rect(0, 0, m_image->GetWidth(), m_image->GetHeight()));
+}

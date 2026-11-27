@@ -1884,6 +1884,7 @@ NESTED_ELSEWHERE = {
     'IResStreamsDriver.cpp': ('_ZN4Sexy17IResStreamsDriver4Task', '_ZN4Sexy17IResStreamsDriver12TaskResource'),
     'RtSerialRtonReader.cpp': ('_ZN4Sexy18RtSerialRtonReader3Key',),
     'AndroidGraphicsDriver.cpp': ('_ZN4Sexy12MeshListener14MeshPreDeleted',),
+    'SexyGraphics.cpp': ('_ZN4Sexy8GraphicsnwEm',),  # header-inline; emitted and scored in ScratchImage.cpp (units.json move, 2026-11-25)
 }
 
 

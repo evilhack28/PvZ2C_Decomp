@@ -20,6 +20,9 @@
 #include "iosExtras.h"
 #include "UIPrivacyDialog.h"
 #include "GameCommon.h"
+#include "StringHelper.h"
+#include "ConfirmUrlButtonExtra.h"
+#include "PrimeText_Game.h"
 #include "IdentityMessages.h"
 #include "OfflineBoard.h"
 #include "AccountRemove.h"
@@ -461,3 +464,140 @@ void MainMenu::onNetworkProfileSyncFinish(bool i_success)
 		gLawnApp->ShowMessageDialog("[NETWORK_PROFILE_SYNC_FAILED_TITLE]", "[NETWORK_PROFILE_SYNC_FAILED_DESC]", Sexy::Delegate0(Sexy::MakeDelegate(*gLawnApp, &LawnApp::KillPVZ2Dialog)));
 }
 
+static CachedUIResourcePtr<Sexy::Image> sAgeTipsButtonImage("");
+
+PVZ2UIButton* MainMenu::createAgeTipsButton(const int i_xPos, const MainMenuButtons i_button, Image* i_buttonIcon, const bool i_fromLeft)
+{
+	PVZ2UIButton* button = new PVZ2UIButton(i_button, this, L"");
+	button->SetDialogStates(PVZ2UIImage(sAgeTipsButtonImage, PVZ2UIIMAGE_SINGLE_STRETCHED), PVZ2UIImage(sAgeTipsButtonImage, PVZ2UIIMAGE_SINGLE_STRETCHED));
+	button->Resize(mWidth - sAgeTipsButtonImage->GetWidth() / 5 * 1.5, sAgeTipsButtonImage->GetHeight() / 5 * 0.5, sAgeTipsButtonImage->GetWidth() / 5, sAgeTipsButtonImage->GetHeight() / 5);
+	i_buttonIcon->GetWidth();
+	i_buttonIcon->GetHeight();
+	button->mClip = false;
+	AddWidget(button);
+	return button;
+}
+
+static CachedUIResourcePtr<Sexy::Image> sRedeemButtonDownImage("");
+static CachedUIResourcePtr<Sexy::Image> sRedeemButtonImage("");
+
+void MainMenu::CreateComplainButton()
+{
+	if (!gLawnApp->IsServiceAvailable(Service_ShowGMInfoComplain))
+		return;
+	PVZ2UIButton* button = new PVZ2UIButton(MAINMENUBUTTON_COMPLAIN, this, L"[COMPLAIN_TITLE]");
+	button->SetDialogStates(PVZ2UIImage(sRedeemButtonImage, PVZ2UIIMAGE_3SLICE_SINGLE_IMAGE), PVZ2UIImage(sRedeemButtonDownImage, PVZ2UIIMAGE_3SLICE_SINGLE_IMAGE));
+	int aWidth = ::UIScaleNum(118);
+	int aHeight = sRedeemButtonImage->GetHeight();
+	button->Resize(mWidth - aWidth - ::UIScaleNum(20), ::UIScaleNum(412), aWidth, aHeight);
+	AddWidget(button);
+	if (gLawnApp->GetPlatform() == 27 || gLawnApp->GetPlatform() == 79)
+		button->SetVisible(false);
+}
+
+void MainMenu::CreateRedeemButton()
+{
+	if (NeedCreateRedeemButton())
+	{
+		m_redeemButton = new PVZ2UIButton(MAINMENUBUTTON_REDEEM, this, L"[REDEEM_TITLE]");
+		m_redeemButton->SetDialogStates(PVZ2UIImage(sRedeemButtonImage, PVZ2UIIMAGE_3SLICE_SINGLE_IMAGE), PVZ2UIImage(sRedeemButtonDownImage, PVZ2UIIMAGE_3SLICE_SINGLE_IMAGE));
+		int aWidth = ::UIScaleNum(84);
+		int aHeight = sRedeemButtonImage->GetHeight();
+		m_redeemButton->Resize(mWidth - aWidth - ::UIScaleNum(240), ::UIScaleNum(412), aWidth, aHeight);
+		AddWidget(m_redeemButton);
+	}
+}
+
+PVZ2UIButton* MainMenu::createBottomButton(const int i_xPos, const MainMenuButtons i_button, Image* i_buttonIcon, const bool i_fromLeft)
+{
+	PVZ2UIButton* button = new PVZ2UIButton(i_button, this, L"");
+	button->SetDialogStates(PVZ2UIImage(sRedeemButtonImage, PVZ2UIIMAGE_3SLICE_SINGLE_IMAGE), PVZ2UIImage(sRedeemButtonDownImage, PVZ2UIIMAGE_3SLICE_SINGLE_IMAGE));
+	if (i_fromLeft)
+		button->Resize(i_xPos + (i_buttonIcon->GetWidth() - ::UIScaleNum(68)) / 2, ::UIScaleNum(412), ::UIScaleNum(68), sRedeemButtonImage->GetHeight());
+	else
+		button->Resize(mWidth - i_xPos + (-i_buttonIcon->GetWidth() - ::UIScaleNum(68)) / 2, ::UIScaleNum(412), ::UIScaleNum(68), sRedeemButtonImage->GetHeight());
+	int aX = (button->mWidth - i_buttonIcon->GetWidth()) / 2;
+	int aY = (button->mHeight - i_buttonIcon->GetHeight()) / 2;
+	PVZ2UIImage aIcon(i_buttonIcon, PVZ2UIIMAGE_SINGLE);
+	button->AddImage(aIcon, Sexy::Rect(aX, aY, i_buttonIcon->GetWidth() / 2, i_buttonIcon->GetHeight() / 2));
+	button->mClip = false;
+	AddWidget(button);
+	return button;
+}
+
+void MainMenu::InitDecompressImage()
+{
+	int aWidth = ::UIScaleNum(720);
+	int aHeight = ::UIScaleNum(35);
+	int aX = (mWidth - aWidth) / 2 - ::UIScaleNum(45);
+	int aY = ::UIScaleNum(491);
+	m_meterRect = Rect(aX, aY, aWidth, aHeight);
+	m_meterImg = StringHelper::ToImage("IMAGE_UI_MAINMENU_LOADER_METER_DECOMPRESS");
+	m_fillImg = StringHelper::ToImage("IMAGE_UI_MAINMENU_LOADER_METER_DECOMPRESS_FILL");
+	int aOffsetX, aOffsetY, aShrinkX, aShrinkY;
+	if (!m_meterImg || !m_fillImg)
+	{
+		aOffsetX = 30;
+		aOffsetY = 30;
+		aShrinkX = -60;
+		aShrinkY = -60;
+	}
+	else
+	{
+		aOffsetX = (m_meterImg->GetWidth() - m_fillImg->GetWidth()) / 2;
+		aOffsetY = (m_meterImg->GetHeight() - m_fillImg->GetHeight()) / 2;
+		aShrinkX = aOffsetX * -2;
+		aShrinkY = aOffsetY * -2;
+	}
+	m_fillRect = Rect(aX + aOffsetX, aY + aOffsetY, aWidth + aShrinkX, aHeight + aShrinkY);
+	m_tips1Rect = Rect(::UIScaleNum(0), ::UIScaleNum(441), mWidth, ::UIScaleNum(55));
+	m_tips2Rect = Rect(::UIScaleNum(0), ::UIScaleNum(531), mWidth, ::UIScaleNum(55));
+	m_tipsPercentRect = Rect(m_meterRect.mX + m_meterRect.mWidth + ::UIScaleNum(0), ::UIScaleNum(489), ::UIScaleNum(60), ::UIScaleNum(55));
+}
+
+static CachedUIResourcePtr<Sexy::Image> sPlayButtonDownImage("");
+static CachedUIResourcePtr<Sexy::Image> sChangeNameButtonImage("");
+static CachedUIResourcePtr<Sexy::Image> sBottomButtonIconImage("");
+static CachedUIResourcePtr<Sexy::Image> sChangeNameButtonIconImage("");
+static CachedUIResourcePtr<Sexy::Image> sPlayButtonImage("");
+
+void MainMenu::createMainButtons()
+{
+	if (NetworkItemMgr::GetInstance().HasNetworkCacheSyncComplete())
+		NetworkItemMgr::GetInstance().SetAutoSyncComplete(true);
+	m_startGameButton = new PVZ2UIButton(MAINMENUBUTTON_STARTGAME, this, L"[MAINMENU_PLAY]");
+	m_startGameButton->SetDialogStates(PVZ2UIImage(sPlayButtonImage, PVZ2UIIMAGE_3SLICE_SINGLE_IMAGE), PVZ2UIImage(sPlayButtonDownImage, PVZ2UIIMAGE_3SLICE_SINGLE_IMAGE));
+	int aPlayWidth = ::UIScaleNum(144);
+	m_startGameButton->Resize((mWidth - aPlayWidth) / 2, ::UIScaleNum(412), aPlayWidth, sPlayButtonImage->GetHeight());
+	AddWidget(m_startGameButton);
+	ConfirmUrlButton* aConfirmUrlButton = new ConfirmUrlButton(19);
+	float aScale = ::UIScaleNum(110);
+	aConfirmUrlButton->Resize((mWidth - (int)(aScale * 2.93475f)) / 2, mHeight - aScale * 0.3875f, aScale * 2.93475f, aScale * 0.175f);
+	AddWidget(aConfirmUrlButton);
+	ConfirmUrlButtonExtra* aConfirmUrlButtonExtra = new ConfirmUrlButtonExtra(20, "http://filead.talkyun.com.cn/tw/twys.htm", "IMAGE_UI_GENERIC_URL_EXTRA");
+	aConfirmUrlButtonExtra->Resize(::UIScaleNum(5), ::UIScaleNum(5), ::UIScaleNum(455), ::UIScaleNum(26));
+	AddWidget(aConfirmUrlButtonExtra);
+	CreateBindUniqueIDButton();
+	int aNameWidth = ::UIScaleNum(292);
+	std::wstring aProfileName = L"-Invalid-";
+	if (ProfileMgr::GetInstance().GetCurrentProfile())
+	{
+		Sexy::OutputDebugStrF("ACLog - createMainButtons, profile name");
+		aProfileName = ProfileMgr::GetInstance().GetCurrentProfile()->GetName();
+	}
+	else
+		Sexy::OutputDebugStrF("ACLog - createMainButtons, profile name -Invalid-");
+	m_changeNameButton = new PVZ2UIButton(MAINMENUBUTTON_CHANGENAME, this, aProfileName, Sexy::Color::Black);
+	m_changeNameButton->SetFont(PrimeText_Game::Typeface_FZCuYuan_28->Typeface());
+	PVZ2UIButton* aNameButton = m_changeNameButton;
+	aNameButton->SetNormalStates(PVZ2UIImage(sChangeNameButtonImage, PVZ2UIIMAGE_3SLICE_SINGLE_IMAGE), PVZ2UIImage((Sexy::Image*)NULL, PVZ2UIIMAGE_SINGLE));
+	aNameButton = m_changeNameButton;
+	aNameButton->AddImage(PVZ2UIImage(sChangeNameButtonIconImage, PVZ2UIIMAGE_SINGLE), Sexy::Rect(aNameWidth - ::UIScaleNum(6) - sChangeNameButtonIconImage->GetWidth(), (::UIScaleNum(45) - sChangeNameButtonIconImage->GetHeight()) / 2, sChangeNameButtonIconImage->GetWidth(), sChangeNameButtonIconImage->GetHeight()));
+	m_changeNameButton->Resize((mWidth - aNameWidth) / 2, ::UIScaleNum(354), aNameWidth, ::UIScaleNum(45));
+	AddWidget(m_changeNameButton);
+	createBottomButton(::UIScaleNum(148), MAINMENUBUTTON_SETTINGS, sBottomButtonIconImage, false);
+	createAgeTipsButton(::UIScaleNum(160), MAINMENUBUTTON_AGE_TIP, sAgeTipsButtonImage, false);
+	CreateComplainButton();
+	CreateRedeemButton();
+	checkOfflineNotice();
+}

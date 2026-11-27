@@ -16,3 +16,28 @@
 // TODO      8 B  PVZ1KlotskiModuleMinigameProperties::IsAbstract      _ZNK35PVZ1KlotskiModuleMinigameProperties10IsAbstractEv
 // TODO      4 B  PVZ1KlotskiModuleMinigameProperties::GetModuleClass  _ZNK35PVZ1KlotskiModuleMinigameProperties14GetModuleClassEv
 // TODO      4 B  PVZ1KlotskiModuleMinigameProperties::GetClass        _ZNK35PVZ1KlotskiModuleMinigameProperties8GetClassEv
+
+#include "SexyAppFramework/Common.h"
+
+#include "PVZ1KlotskiModule.h"
+#include "ReflectionBuilder.h"
+
+PVZ1KlotskiModuleMinigameProperties::PVZ1KlotskiModuleMinigameProperties()
+{
+}
+
+PVZ1KlotskiModuleMinigameProperties::~PVZ1KlotskiModuleMinigameProperties()
+{
+}
+
+RT_CLASS_IMPLEMENT(PVZ1KlotskiModuleMinigameProperties);
+
+void PVZ1KlotskiModuleMinigameProperties::StaticClassInit()
+{
+	REFLECTION_CLASSBUILDER_BEGIN(PVZ1KlotskiModuleMinigameProperties);
+	REFLECTION_CLASSBUILDER_RTCLASS_BIND;
+
+		REFLECTION_CLASSBUILDER_ANCESTOR(LevelModuleProperties);
+
+	REFLECTION_CLASSBUILDER_END(PVZ1KlotskiModuleMinigameProperties);
+}

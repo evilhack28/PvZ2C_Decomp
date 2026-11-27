@@ -277,6 +277,12 @@ DString::DString(const DString& s)
 	str = DStringBlockRetain(s.str);
 }
 
+DString::DString(DString&& s)
+	: str(s.str)
+{
+	s.str = NULL;
+}
+
 DString& DString::operator=(const DString& s)
 {
 	DStringBlockRetain(s.str);
@@ -407,4 +413,359 @@ DString DString::makeLower() const
 	DString aResult(aBuffer);
 	DStackAllocator::getInstance()->pop();
 	return aResult;
+}
+
+/////////////// Compare ///////////////
+
+__attribute__((noclone, noinline)) static bool DStringBlockEqual(const char* i_data, const char* i_src)
+{
+	if (i_src == i_data)
+		return true;
+	if (!i_data)
+		return false;
+	return strcmp(i_src, i_data) == 0;
+}
+
+__attribute__((noclone, noinline)) static bool DStringBlockLess(const char* i_data, const char* i_src)
+{
+	if (i_src == i_data)
+		return false;
+	if (!i_data)
+		return true;
+	return strcmp(i_src, i_data) < 0;
+}
+
+__attribute__((noclone, noinline)) static bool DStringBlockGreater(const char* i_data, const char* i_src)
+{
+	if (i_src == i_data || !i_data)
+		return false;
+	return strcmp(i_src, i_data) > 0;
+}
+
+bool DString::camp(const char* src) const
+{
+	if (str)
+		return DStringBlockEqual(str->m_data, src);
+	return false;
+}
+
+/////////////// Operators ///////////////
+
+DString& DString::operator=(const std::string& src)
+{
+	newString(src.c_str());
+	return *this;
+}
+
+DString& DString::operator=(std::string&& src)
+{
+	newString(src.c_str());
+	return *this;
+}
+
+DString& DString::operator=(const int src)
+{
+	format("%d", src);
+	return *this;
+}
+
+DString& DString::operator=(const float src)
+{
+	format("%f", src);
+	return *this;
+}
+
+DString& DString::operator=(const long src)
+{
+	format("%ld", src);
+	return *this;
+}
+
+DString& DString::operator=(const double src)
+{
+	format("%lf", src);
+	return *this;
+}
+
+DString& DString::operator=(const long long src)
+{
+	format("%lld", src);
+	return *this;
+}
+
+DString& DString::operator=(char* src)
+{
+	newString(src);
+	return *this;
+}
+
+DString& DString::operator=(const char* src)
+{
+	newString(src);
+	return *this;
+}
+
+DString& DString::operator=(DString&& s)
+{
+	if (str)
+		str->release();
+	str = s.str;
+	s.str = NULL;
+	return *this;
+}
+
+__attribute__((noclone, noinline)) static char DStringBlockCharAt(DStringBlock* i_block, int i_index)
+{
+	if (i_block)
+		return DStringBlockData(i_block->m_data)[i_index];
+	return 0;
+}
+
+__attribute__((noclone, noinline)) static char& DStringBlockCharRef(DStringBlock* i_block, int i_index)
+{
+	return DStringBlockData(i_block->m_data)[i_index];
+}
+
+const char DString::operator[](int index) const
+{
+	return DStringBlockCharAt(str, index);
+}
+
+char& DString::operator[](int index)
+{
+	return DStringBlockCharRef(str, index);
+}
+
+bool DString::operator==(char* src) const
+{
+	return camp(src);
+}
+
+bool DString::operator==(const char* src) const
+{
+	return camp(src);
+}
+
+bool DString::operator==(const DString& s) const
+{
+	return camp(s.c_str());
+}
+
+bool DString::operator==(const std::string& s) const
+{
+	return camp(s.c_str());
+}
+
+bool DString::operator!=(char* src) const
+{
+	return !camp(src);
+}
+
+bool DString::operator!=(const char* src) const
+{
+	return !camp(src);
+}
+
+bool DString::operator!=(const DString& s) const
+{
+	return !camp(s.c_str());
+}
+
+bool DString::operator!=(const std::string& s) const
+{
+	return !camp(s.c_str());
+}
+
+bool DString::operator>(char* src) const
+{
+	if (str)
+		return DStringBlockGreater(str->m_data, src);
+	return false;
+}
+
+bool DString::operator>(const char* src) const
+{
+	if (str)
+		return DStringBlockGreater(str->m_data, src);
+	return false;
+}
+
+bool DString::operator>(const DString& src) const
+{
+	DStringBlock* aBlock = str;
+	if (aBlock)
+	{
+		const char* aSrc = src.c_str();
+		return DStringBlockGreater(aBlock->m_data, aSrc);
+	}
+	return false;
+}
+
+bool DString::operator>=(char* src) const
+{
+	if (str)
+		return !DStringBlockLess(str->m_data, src);
+	return false;
+}
+
+bool DString::operator>=(const char* src) const
+{
+	if (str)
+		return !DStringBlockLess(str->m_data, src);
+	return false;
+}
+
+bool DString::operator>=(const DString& src) const
+{
+	DStringBlock* aBlock = str;
+	if (aBlock)
+	{
+		const char* aSrc = src.c_str();
+		return !DStringBlockLess(aBlock->m_data, aSrc);
+	}
+	return false;
+}
+
+DString& DString::operator+=(const char* src)
+{
+	addString(src);
+	return *this;
+}
+
+DString& DString::operator+=(char* src)
+{
+	addString(src);
+	return *this;
+}
+
+DString& DString::operator+=(char src)
+{
+	addChar(src);
+	return *this;
+}
+
+DString& DString::operator+=(DString* s)
+{
+	addDString(s);
+	return *this;
+}
+
+DString& DString::operator+=(const DString& s)
+{
+	addDString(s);
+	return *this;
+}
+
+DString& DString::operator+=(DString&& s)
+{
+	if (str)
+		str = str->addString(s.c_str());
+	else
+	{
+		str = s.str;
+		s.str = NULL;
+	}
+	return *this;
+}
+
+DString& DString::operator+=(const std::string& s)
+{
+	addString(s.c_str());
+	return *this;
+}
+
+DString& DString::operator+=(const int s)
+{
+	*this += DString(s);
+	return *this;
+}
+
+DString& DString::operator+=(const float s)
+{
+	*this += DString(s);
+	return *this;
+}
+
+DString& DString::operator+=(const double s)
+{
+	*this += DString(s);
+	return *this;
+}
+
+DString& DString::operator+=(const long s)
+{
+	*this += DString(s);
+	return *this;
+}
+
+DString& DString::operator+=(const long long s)
+{
+	*this += DString(s);
+	return *this;
+}
+
+DString& DString::operator-=(const char* src)
+{
+	replace(src, "");
+	return *this;
+}
+
+DString& DString::operator-=(char* src)
+{
+	replace(src, "");
+	return *this;
+}
+
+DString& DString::operator-=(char src)
+{
+	replace(&src, "");
+	return *this;
+}
+
+DString& DString::operator-=(DString* s)
+{
+	replace(s ? s->c_str() : NULL, "");
+	return *this;
+}
+
+DString& DString::operator-=(const DString& s)
+{
+	replace(s.c_str(), "");
+	return *this;
+}
+
+DString& DString::operator-=(const std::string& s)
+{
+	replace(s.c_str(), "");
+	return *this;
+}
+
+DString::operator int() const
+{
+	return toInt();
+}
+
+DString::operator float() const
+{
+	return toFloat();
+}
+
+DString::operator char*()
+{
+	return c_str();
+}
+
+DString::operator const char*() const
+{
+	return c_str();
+}
+
+DString::operator long() const
+{
+	return toLong();
+}
+
+DString::operator long long() const
+{
+	return toInt64();
 }

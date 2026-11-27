@@ -169,6 +169,45 @@ void BaseGLResStreamsDriver::AllocateMultiTexture(ResStreamsGroup* theNewGroup, 
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
 }
 
+void BaseGLResStreamsDriver::PushCompressedTexture(ResStreamTextureDescriptor& textureDesc, uint aColorType, uint aTex, uint aMultiTex, uint bytesTextureTotal, uchar* buffer)
+{
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+	glBindTexture(GL_TEXTURE_2D, aTex);
+	glGetError();
+	if (aColorType == GL_RGBA)
+	{
+		glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, textureDesc.width, textureDesc.height, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+	}
+	else
+	{
+		if (bytesTextureTotal == 76797)
+			bytesTextureTotal = 77760;
+		glCompressedTexImage2D(GL_TEXTURE_2D, 0, aColorType, textureDesc.width, textureDesc.height, 0, bytesTextureTotal, buffer);
+	}
+	GLenum anError = glGetError();
+	if (anError != GL_NO_ERROR)
+		OutputDebugStrF("==> GL Error %d in glCompressedTexSubImage2D push of compressed texture id %d : bytes=%d colorType=%d", anError, aTex, bytesTextureTotal, aColorType);
+}
+
+void BaseGLResStreamsDriver::LoadMultiTexture(int texID, void* data, ResStreamTextureDescriptor& theTextureDesc)
+{
+	int aHeight, aWidth, aBytes;
+	GetAttachedTextureSize(theTextureDesc, aHeight, aWidth, aBytes);
+	uchar* anAlphaData = ExtractAlphaTextureData((const uchar*)data, aWidth * aHeight);
+	if (anAlphaData == NULL)
+		return;
+	glGetError();
+	glActiveTexture(GL_TEXTURE1);
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+	glBindTexture(GL_TEXTURE_2D, texID);
+	glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, aWidth, aHeight, GL_ALPHA, GL_UNSIGNED_BYTE, anAlphaData);
+	GLenum anError = glGetError();
+	if (anError != GL_NO_ERROR)
+		OutputDebugStrF("==> GL Error %d in glTexSubImage2D push of alpha uncompressed texture id %d : bytes=%d", anError, texID, aBytes);
+	glActiveTexture(GL_TEXTURE0);
+	delete[] anAlphaData;
+}
+
 void BaseGLResStreamsDriver::LoadMultiTexture2(int texID, uint aColorType, uint bytesTextureTotal, void* data, ResStreamTextureDescriptor& theTextureDesc) const
 {
 	int aHeight, aWidth, aBytes;
@@ -184,7 +223,73 @@ void BaseGLResStreamsDriver::LoadMultiTexture2(int texID, uint aColorType, uint 
 	glActiveTexture(GL_TEXTURE0);
 }
 
+void BaseGLResStreamsDriver::PushCompressedTextureMulti(ResStreamTextureDescriptor& textureDesc, uint aColorType, uint aTex, uint aMultiTex, uint bytesTextureTotal, uint bytesFileTotal, uchar* buffer)
+{
+	PushCompressedTexture(textureDesc, aColorType, aTex, aMultiTex, bytesTextureTotal, buffer);
+	if (bytesTextureTotal < bytesFileTotal)
+	{
+		uchar* anAlphaData = buffer + bytesTextureTotal;
+		switch (textureDesc.format)
+		{
+		case RSB_TEXTURE_FORMAT_COMPRESSED_ETC1_ALPHA_SPLIT:
+		case RSB_TEXTURE_FORMAT_COMPRESSED_PVR_4BIT_ALPHA_SPLIT:
+		case RSB_TEXTURE_FORMAT_COMPRESSED_RGBA_ALPHA_SPLIT:
+			LoadMultiTexture(aMultiTex, anAlphaData, textureDesc);
+			break;
+		case RSB_TEXTURE_FORMAT_COMPRESSED_ETC1_COMPRESS_ALPHA_SPLIT:
+			LoadMultiTexture2(aMultiTex, aColorType, bytesTextureTotal, anAlphaData, textureDesc);
+			break;
+		default:
+			OutputDebugStrF("Invalid packed multi texture format");
+			break;
+		}
+	}
+}
+
+void BaseGLResStreamsDriver::DecodeCompressedTextureBlock(ResStreamTextureDescriptor& textureDesc, uint aColorType, uint aTex, uint aMultiTex, uchar* buffer, uint bytesToDecode, uint bytesTextureTotal, uint bytesFileTotal)
+{
+	if (mTextureRestitchBuffer.IsTextureInProgress())
+	{
+		mTextureRestitchBuffer.Add(mCurrentCompressedTextureID, buffer, bytesToDecode);
+	}
+	else
+	{
+		if (bytesToDecode >= bytesFileTotal)
+		{
+			PushCompressedTextureMulti(textureDesc, aColorType, aTex, aMultiTex, bytesTextureTotal, bytesFileTotal, buffer);
+			return;
+		}
+		mCurrentCompressedTextureID++;
+		mTextureRestitchBuffer.Initialize(bytesFileTotal);
+		mTextureRestitchBuffer.Add(mCurrentCompressedTextureID, buffer, bytesToDecode);
+	}
+	if (mTextureRestitchBuffer.GetBytesInBuffer() >= bytesFileTotal)
+	{
+		PushCompressedTextureMulti(textureDesc, aColorType, aTex, aMultiTex, bytesTextureTotal, bytesFileTotal, mTextureRestitchBuffer.GetTextureBuffer());
+		mTextureRestitchBuffer.Clear(true);
+	}
+}
+
 /////////////// Alpha extraction ///////////////
+
+void BaseGLResStreamsDriver::ExtractNonPalletAlphaTextureData(const uchar* pCompressDataPtr, uchar* pAlphaDataPtr, int pixels)
+{
+	if (pCompressDataPtr == NULL || pAlphaDataPtr == NULL || pixels <= 0)
+		return;
+	int anIndex = 0;
+	int aBit = 0;
+	for (int i = 0; i < pixels; i++)
+	{
+		int aMask = 1 << (7 - aBit);
+		pAlphaDataPtr[i] = (pCompressDataPtr[anIndex] & aMask) ? 0xff : 0;
+		aBit++;
+		if (aBit == 8)
+		{
+			anIndex++;
+			aBit = 0;
+		}
+	}
+}
 
 uchar* BaseGLResStreamsDriver::ExtractAlphaTextureData(const uchar* pCompressAlphaData, int pixels)
 {

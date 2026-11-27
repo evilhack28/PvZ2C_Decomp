@@ -223,6 +223,22 @@ void GameStateTransitionController::Update()
 	m_transitionState.UpdateState();
 }
 
+void GameStateTransitionController::Draw(Graphics* i_g)
+{
+	if (m_fullScreenTransitionEffect)
+	{
+		const PopAnim* aPam = m_fullScreenTransitionEffect->GetPAM();
+		SexyVector2 aSize(aPam->mAnimRect.mWidth, aPam->mAnimRect.mHeight);
+		aSize = aSize * aPam->mDrawScale;
+		SexyTransform2D aTransform;
+		float aScale = std::max(1.0f, gLawnApp->mWidth / aSize.x);
+		aTransform.Translate(-aSize.x * 0.5f, -aSize.y * 0.5f);
+		aTransform.Scale(aScale, aScale);
+		aTransform.Translate(gLawnApp->mWidth / 2, gLawnApp->mHeight / 2);
+		m_fullScreenTransitionEffect->Draw(i_g, aTransform);
+	}
+}
+
 void GameStateTransitionController::onEnterState_TransitionOut(GameTransitionState i_oldState)
 {
 	m_finalFrameDrawn = false;

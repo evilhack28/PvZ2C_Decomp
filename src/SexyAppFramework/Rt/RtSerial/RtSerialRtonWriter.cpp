@@ -229,34 +229,3 @@ void RtSerialRtonWriter::WriteRtId(const RtSerialRtonKey& inKey, const RtId::Off
 
 /////////////// Tracked strings ///////////////
 
-void RtSerialRtonWriter::WriteTrackedString(const std::string& inStr)
-{
-	DTrackedAnsiStringMap::iterator anIt = mTrackedAnsiStringMap.find(inStr);
-	if (anIt != mTrackedAnsiStringMap.end())
-	{
-		WriteTag(RtSerialRtonTag::TrackedAnsiStringExisting);
-		mBuffer->WriteInt32VarU(anIt->second);
-	}
-	else
-	{
-		WriteTag(RtSerialRtonTag::TrackedAnsiStringNew);
-		mBuffer->WriteString(inStr);
-		mTrackedAnsiStringMap[inStr] = mTrackedAnsiStringCount++;
-	}
-}
-
-void RtSerialRtonWriter::WriteTrackedUTF8String(const std::wstring& inStr)
-{
-	DTrackedUTF8StringMap::iterator anIt = mTrackedUTF8StringMap.find(inStr);
-	if (anIt != mTrackedUTF8StringMap.end())
-	{
-		WriteTag(RtSerialRtonTag::TrackedUTF8StringExisting);
-		mBuffer->WriteInt32VarU(anIt->second);
-	}
-	else
-	{
-		WriteTag(RtSerialRtonTag::TrackedUTF8StringNew);
-		mBuffer->WriteUTF8String(inStr);
-		mTrackedUTF8StringMap[inStr] = mTrackedUTF8StringCount++;
-	}
-}

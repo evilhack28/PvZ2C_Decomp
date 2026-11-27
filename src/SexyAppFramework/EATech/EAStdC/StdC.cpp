@@ -136,6 +136,24 @@ char* Strcpy(char* pDestination, const char* pSource)
 	return pDestination;
 }
 
+char16_t* Strcpy(char16_t* pDestination, const char16_t* pSource)
+{
+	const char16_t* s = pSource;
+	char16_t* d = pDestination;
+	while ((*d++ = *s++) != 0)
+		;
+	return pDestination;
+}
+
+char32_t* Strcpy(char32_t* pDestination, const char32_t* pSource)
+{
+	const char32_t* s = pSource;
+	char32_t* d = pDestination;
+	while ((*d++ = *s++) != 0)
+		;
+	return pDestination;
+}
+
 size_t Strlcpy(char* pDestination, const char* pSource, size_t nDestCapacity)
 {
 	const char* s = pSource;
@@ -156,6 +174,73 @@ size_t Strlcpy(char* pDestination, const char* pSource, size_t nDestCapacity)
 			;
 	}
 	return (size_t)(s - pSource - 1);
+}
+
+size_t Strlcpy(char16_t* pDestination, const char16_t* pSource, size_t nDestCapacity)
+{
+	const char16_t* s = pSource;
+	size_t n = nDestCapacity;
+	if (n && --n)
+	{
+		do
+		{
+			if ((*pDestination++ = *s++) == 0)
+				break;
+		} while (--n);
+	}
+	if (!n)
+	{
+		if (nDestCapacity)
+			*pDestination = 0;
+		while (*s++)
+			;
+	}
+	return (size_t)(s - pSource - 1);
+}
+
+size_t Strlcpy(char32_t* pDestination, const char32_t* pSource, size_t nDestCapacity)
+{
+	const char32_t* s = pSource;
+	size_t n = nDestCapacity;
+	if (n && --n)
+	{
+		do
+		{
+			if ((*pDestination++ = *s++) == 0)
+				break;
+		} while (--n);
+	}
+	if (!n)
+	{
+		if (nDestCapacity)
+			*pDestination = 0;
+		while (*s++)
+			;
+	}
+	return (size_t)(s - pSource - 1);
+}
+
+int Strlcpy(char16_t* pDest, const char32_t* pSource, size_t nDestCapacity, size_t nSourceLength)
+{
+	size_t destCount = 0;
+
+	while (nSourceLength-- > 0)
+	{
+		const uint32_t c = (uint32_t)*pSource++;
+
+		if (c == 0)
+			break;
+
+		if (pDest && ((destCount + 1) < nDestCapacity))
+			*pDest++ = static_cast<char16_t>(c);
+
+		destCount++;
+	}
+
+	if (pDest && nDestCapacity)
+		*pDest = 0;
+
+	return (int)destCount;
 }
 
 } // namespace StdC

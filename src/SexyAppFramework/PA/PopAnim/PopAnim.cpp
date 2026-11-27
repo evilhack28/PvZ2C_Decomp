@@ -27,26 +27,6 @@ struct BlendSrcData
 
 /////////////// Lifecycle ///////////////
 
-PopAnim::PopAnim(int theId, PopAnimListener* theListener)
-	: mAdditive(false)
-{
-	mId = theId;
-	mListener = theListener;
-	mColor = Color(Color::White);
-	mAnimRate = 0;
-	mAnimRunning = false;
-	mMainSpriteInst = NULL;
-	mMainAnimDef = NULL;
-	Clear();
-	mPaused = false;
-	mTransDirty = true;
-	mImgScale = 1.0f;
-	mDrawScale = 1.0f;
-	mBlendTicksTotal = 0.0f;
-	mBlendTicksCur = 0.0f;
-	mBlendDelay = 0.0f;
-}
-
 PopAnim::PopAnim(const PopAnim& rhs)
 {
 	*this = rhs;
@@ -731,84 +711,6 @@ bool PopAnim::Play(const std::string& theFrameLabel, bool resetAnim)
 	return Play(mMainSpriteInst->mDef->mWorkAreaStart, resetAnim);
 }
 
-void PopAnim::FrameHit(PASpriteInst* theSpriteInst, PAFrame* theFrame, PAObjectPos* theObjectPos)
-{
-	theSpriteInst->mOnNewFrame = false;
-
-	for (int aCommandNum = 0; aCommandNum < (int)theFrame->mCommandVector.size(); aCommandNum++)
-	{
-		PACommand* aCommand = &theFrame->mCommandVector[aCommandNum];
-		if (aCommand == NULL)
-			continue;
-		if (mListener != NULL && mListener->PopAnimCommand(mId, theSpriteInst, aCommand->mCommand, aCommand->mParam))
-			continue;
-
-		bool isDelay = Lower(aCommand->mCommand) == "delay";
-		if (isDelay)
-		{
-			const std::string& aParam = aCommand->mParam;
-			int aCommaPos = (int)aParam.find(',');
-			if (aCommaPos == -1)
-			{
-				int aDelay = atoi(Trim(aParam).c_str());
-				theSpriteInst->mDelayFrames = (int16)aDelay;
-			}
-			else
-			{
-				int aMin = atoi(Trim(aParam.substr(0, aCommaPos)).c_str());
-				int aMax = atoi(Trim(aParam.substr(aCommaPos + 1)).c_str());
-				if (aMax <= aMin)
-					aMax = aMin + 1;
-				theSpriteInst->mDelayFrames = (int16)(Rand() % (aMax - aMin) + aMin);
-			}
-		}
-		else if (Lower(aCommand->mCommand) == "playsample")
-		{
-			bool isFirst = true;
-			std::string aParams = aCommand->mParam;
-			double aVolume = 1.0;
-			int aPan = 0;
-			double aSteps = 0.0;
-			std::string aSampleName;
-			while (aParams.size() != 0)
-			{
-				std::string aCurParam;
-				int aCommaPos = (int)aParams.find(',');
-				if (aCommaPos == -1)
-					aCurParam = aParams;
-				else
-					aCurParam = aParams.substr(0, aCommaPos);
-
-				if (isFirst)
-				{
-					aSampleName = aCurParam;
-				}
-				else
-				{
-					int aSpacePos;
-					while ((aSpacePos = (int)aCurParam.find(' ')) != -1)
-						aCurParam.erase(aCurParam.begin() + aSpacePos);
-
-					if (strncasecmp(aCurParam.c_str(), "volume=", 7) == 0)
-						StringToDouble(aCurParam.substr(7), &aVolume);
-					else if (strncasecmp(aCurParam.c_str(), "pan=", 4) == 0)
-						StringToInt(aCurParam.substr(4), &aPan);
-					else if (strncasecmp(aCurParam.c_str(), "steps=", 6) == 0)
-						StringToDouble(aCurParam.substr(6), &aSteps);
-				}
-
-				if (aCommaPos == -1)
-					break;
-				isFirst = false;
-				aParams = aParams.substr(aCommaPos + 1);
-			}
-
-			if (mListener != NULL)
-				mListener->PopAnimPlaySample(aSampleName, aPan, aVolume, aSteps);
-		}
-	}
-}
-
 void PopAnim::DoFramesHit(PASpriteInst* theSpriteInst, PAObjectPos* theObjectPos)
 {
 	PAFrame* aCurFrame = &theSpriteInst->mDef->mFrames[(int)theSpriteInst->mFrameNum];
@@ -832,27 +734,6 @@ void PopAnim::DrawDebugOverlay(Graphics* g)
 }
 
 /////////////// Transforms ///////////////
-
-void PopAnim::CalcObjectPos(const PASpriteInst* theSpriteInst, const PAObjectPos* objPos, PATransform* theTransform, Color* theColor)
-{
-	*theTransform = objPos->mTransform;
-	*theColor = Color(objPos->mRed, objPos->mGreen, objPos->mBlue, objPos->mAlpha);
-
-	if (mBlendTicksTotal != 0 && mMainSpriteInst == theSpriteInst)
-	{
-		const PAObjectInst* anObjectInst = &theSpriteInst->mChildren[objPos->mObjectNum];
-		if (anObjectInst->mIsBlending)
-		{
-			float aBlendPct = mBlendTicksCur / mBlendTicksTotal;
-			*theTransform = anObjectInst->mBlendSrcTransform.InterpolateTo(*theTransform, aBlendPct);
-			*theColor = Color(
-				(int)(theColor->mRed * aBlendPct + 0.5f + anObjectInst->mBlendSrcColor.mRed * (1.0f - aBlendPct)),
-				(int)(theColor->mGreen * aBlendPct + 0.5f + anObjectInst->mBlendSrcColor.mGreen * (1.0f - aBlendPct)),
-				(int)(theColor->mBlue * aBlendPct + 0.5f + anObjectInst->mBlendSrcColor.mBlue * (1.0f - aBlendPct)),
-				(int)(theColor->mAlpha * aBlendPct + 0.5f + anObjectInst->mBlendSrcColor.mAlpha * (1.0f - aBlendPct)));
-		}
-	}
-}
 
 void PopAnim::UpdateTransforms()
 {
@@ -1112,85 +993,6 @@ void PopAnim::Draw(Graphics* g)
 }
 
 /////////////// Animation update ///////////////
-
-void PopAnim::IncSpriteInstFrame(PASpriteInst* i_spriteInst, PAObjectPos* i_objectPos, float i_increment)
-{
-	int aLastFrameNum = (int)i_spriteInst->mFrameNum;
-	PAFrame* aLastFrame = &i_spriteInst->mDef->mFrames[aLastFrameNum];
-	if (aLastFrame->mHasStop)
-		return;
-
-	i_spriteInst->mFrameNum = i_increment + i_spriteInst->mFrameNum;
-	int aNewFrameNum = (int)i_spriteInst->mFrameNum;
-	if (aNewFrameNum - aLastFrameNum > 1)
-		i_spriteInst->mFrameNum = aLastFrameNum + 1.9f;
-
-	if (i_spriteInst == mMainSpriteInst)
-	{
-		if (!i_spriteInst->mDef->mFrames.back().mHasStop)
-		{
-			if (i_spriteInst->mDef->mWorkAreaStart + i_spriteInst->mDef->mWorkAreaDuration < (int)i_spriteInst->mFrameNum)
-			{
-				i_spriteInst->mFrameRepeats++;
-				i_spriteInst->mFrameNum -= i_spriteInst->mDef->mWorkAreaDuration + 1;
-				aNewFrameNum = (int)i_spriteInst->mFrameNum;
-			}
-			else
-				aNewFrameNum = (int)mMainSpriteInst->mFrameNum;
-		}
-		else if ((int)i_spriteInst->mFrameNum < i_spriteInst->mDef->mWorkAreaStart + i_spriteInst->mDef->mWorkAreaDuration)
-		{
-			aNewFrameNum = (int)mMainSpriteInst->mFrameNum;
-		}
-		else
-		{
-			i_spriteInst->mOnNewFrame = true;
-			i_spriteInst->mFrameNum = i_spriteInst->mDef->mWorkAreaStart + i_spriteInst->mDef->mWorkAreaDuration;
-			if (i_spriteInst->mDef->mWorkAreaDuration != 0)
-			{
-				if (mAnimRunning)
-				{
-					mAnimRunning = false;
-					if (mListener != NULL)
-						mListener->PopAnimStopped(mId);
-				}
-				return;
-			}
-			i_spriteInst->mFrameRepeats++;
-			aNewFrameNum = (int)i_spriteInst->mFrameNum;
-		}
-	}
-	else
-	{
-		aNewFrameNum = (int)i_spriteInst->mFrameNum;
-		if (aNewFrameNum >= (int)i_spriteInst->mDef->mFrames.size())
-		{
-			i_spriteInst->mFrameRepeats++;
-			do
-			{
-				i_spriteInst->mFrameNum -= (int)i_spriteInst->mDef->mFrames.size();
-				aNewFrameNum = (int)i_spriteInst->mFrameNum;
-			} while (aNewFrameNum >= (int)i_spriteInst->mDef->mFrames.size());
-		}
-	}
-
-	i_spriteInst->mOnNewFrame = aLastFrameNum != aNewFrameNum;
-	if (i_spriteInst->mOnNewFrame && i_spriteInst->mDelayFrames > 0)
-	{
-		i_spriteInst->mDelayFrames--;
-		i_spriteInst->mOnNewFrame = false;
-		i_spriteInst->mFrameNum = aLastFrameNum;
-		return;
-	}
-
-	for (int i = 0; i < (int)aLastFrame->mFrameObjectPosIndexVector.size(); i++)
-	{
-		int anObjectPosIndex = aLastFrame->mFrameObjectPosIndexVector[i];
-		PAObjectPos* anObjectPos = &i_spriteInst->mDef->mObjectPosVector[anObjectPosIndex];
-		if (anObjectPos->mIsSprite)
-			IncSpriteInstFrame(i_spriteInst->mChildren[anObjectPos->mObjectNum].mSpriteInst, anObjectPos, i_increment);
-	}
-}
 
 bool PopAnim::Load_GetImage(PAImage* theImage, const std::string& theFileDir, const std::string& theOrigName)
 {

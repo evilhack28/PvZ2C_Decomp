@@ -70,7 +70,79 @@ bool RtSerialBuffer::InternalMaybeWrite(const void* inPtr, uint32 inSize)
 	return true;
 }
 
+void RtSerialBuffer::InternalWrite(const void* inPtr, uint32 inSize)
+{
+	if (mWriteCalcSizeOnly)
+	{
+		mCurOffset += inSize;
+		return;
+	}
+	uchar* aDest;
+	if (mFixedData)
+		aDest = mFixedData + mCurOffset;
+	else
+	{
+		if (mCurOffset + inSize > (uint32)mDynData.size())
+			mDynData.resize(mCurOffset + inSize);
+		aDest = &mDynData[mCurOffset];
+	}
+	memcpy(aDest, inPtr, inSize);
+	mCurOffset += inSize;
+}
+
 /////////////// Varints ///////////////
+
+int32 RtSerialBuffer::ReadInt32VarU()
+{
+	uint32 x = 0;
+	uint32 aShift = 0;
+	uint8 aByte;
+	do
+	{
+		aByte = ReadInt8Fixed();
+		x |= (aByte & 0x7f) << aShift;
+		aShift += 7;
+	}
+	while (aByte & 0x80);
+	return x;
+}
+
+int64 RtSerialBuffer::ReadInt64VarU()
+{
+	uint64 x = 0;
+	uint64 aShift = 0;
+	uint8 aByte;
+	do
+	{
+		aByte = ReadInt8Fixed();
+		x |= (uint64)(aByte & 0x7f) << aShift;
+		aShift += 7;
+	}
+	while (aByte & 0x80);
+	return x;
+}
+
+int32 RtSerialBuffer::ReadInt32VarS()
+{
+	uint32 x = ReadInt32VarU();
+	return (x >> 1) ^ -(x & 1);
+}
+
+int64 RtSerialBuffer::ReadInt64VarS()
+{
+	uint64 x = ReadInt64VarU();
+	return (x >> 1) ^ -(x & 1);
+}
+
+void RtSerialBuffer::WriteInt32VarS(int32 inX)
+{
+	WriteInt32VarU((inX << 1) ^ (inX >> 31));
+}
+
+void RtSerialBuffer::WriteInt64VarS(int64 inX)
+{
+	WriteInt64VarU((inX << 1) ^ (inX >> 63));
+}
 
 void RtSerialBuffer::WriteInt32VarU(int32 inX)
 {
@@ -101,6 +173,30 @@ void RtSerialBuffer::WriteInt64VarU(int64 inX)
 }
 
 /////////////// Strings ///////////////
+
+void RtSerialBuffer::ReadString(std::string& outStr)
+{
+	uint32 aLen = ReadInt32VarU();
+	if (aLen > 0)
+	{
+		outStr.resize(aLen, 0);
+		Read((void*)outStr.data(), aLen);
+	}
+	else
+		outStr.clear();
+}
+
+void RtSerialBuffer::ReadWString(std::wstring& outStr)
+{
+	uint32 aLen = ReadInt32VarU();
+	if (aLen > 0)
+	{
+		outStr.resize(aLen, 0);
+		Read((void*)outStr.data(), aLen * sizeof(wchar_t));
+	}
+	else
+		outStr.clear();
+}
 
 void RtSerialBuffer::WriteString(const std::string& inStr)
 {
@@ -148,6 +244,18 @@ void RtSerialBuffer::ReadUTF8String(std::wstring& outStr)
 	outStr.reserve(aLen);
 	for (uint32 i = 0; i < aLen; i++)
 		outStr.push_back(ReadUTF8Char());
+}
+
+wchar_t RtSerialBuffer::ReadUTF8Char()
+{
+	uint32 aLen = GetDataSize() - Tell();
+	const char* aStart = (const char*)GetDataPtr() + Tell();
+	const char* aPtr = aStart;
+	wchar_t aChar;
+	if (!GetNextUTF8CharFromStream(&aPtr, aLen, &aChar))
+		return 0;
+	SeekCurrent(aPtr - aStart);
+	return aChar;
 }
 
 uint32 RtSerialBuffer::InternalGetUTF8EncodedLengthForChar(uint32 inChar)
@@ -206,3 +314,16 @@ void RtSerialBuffer::WriteUTF8String(const std::wstring& inStr)
 		WriteInt32VarU(0);
 }
 
+void RtSerialBuffer::WriteUTF8String(const wchar_t* inStr)
+{
+	uint32 aLen = 0;
+	if (inStr && *inStr)
+		aLen = (uint32)wcslen(inStr);
+	WriteInt32VarU(aLen);
+	uint32 aByteLen = 0;
+	for (uint32 i = 0; i < aLen; i++)
+		aByteLen += InternalGetUTF8EncodedLengthForChar(inStr[i]);
+	WriteInt32VarU(aByteLen);
+	for (uint32 i = 0; i < aLen; i++)
+		WriteUTF8Char(inStr[i]);
+}
